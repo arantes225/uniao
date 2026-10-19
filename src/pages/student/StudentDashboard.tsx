@@ -23,9 +23,17 @@ export const StudentDashboard: React.FC = () => {
             </p>
           </div>
 
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-bold bg-uniao-500/10 border border-uniao-500/30 text-uniao-400">
-            <ShieldCheck className="w-4 h-4 text-uniao-400" />
-            <span>Etapa Online em Andamento</span>
+          <div className="flex flex-wrap items-center gap-2">
+            {/* Countdown de Dias Restantes de Acesso */}
+            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-bold bg-amber-500/10 border border-amber-500/30 text-amber-300">
+              <Clock className="w-4 h-4 text-amber-400" />
+              <span>Acesso à plataforma: <strong className="text-white">89 dias restantes</strong></span>
+            </div>
+
+            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-bold bg-uniao-500/10 border border-uniao-500/30 text-uniao-400">
+              <ShieldCheck className="w-4 h-4 text-uniao-400" />
+              <span>Etapa Online em Andamento</span>
+            </div>
           </div>
         </div>
 
