@@ -3,9 +3,13 @@ import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 import { LandingPage } from './pages/landing/LandingPage';
 import { LoginPage } from './pages/auth/LoginPage';
 import { CertificateValidationPage } from './pages/public/CertificateValidationPage';
+import { StudentLayout } from './components/layout/StudentLayout';
 import { StudentDashboard } from './pages/student/StudentDashboard';
 import { IntegratedLessonPage } from './pages/student/IntegratedLessonPage';
 import { ClinicalSimulatorPage } from './pages/student/ClinicalSimulatorPage';
+import { MaterialsPage } from './pages/student/MaterialsPage';
+import { ExamsPage } from './pages/student/ExamsPage';
+import { CertificatesPage } from './pages/student/CertificatesPage';
 import { AdminDashboard } from './pages/admin/AdminDashboard';
 
 import { ThemeProvider } from './context/ThemeContext';
@@ -25,10 +29,18 @@ export const App: React.FC = () => {
         {/* Autenticação (Acesso Privado sem cadastro público) */}
         <Route path="/login" element={<LoginPage />} />
 
-        {/* Ambiente de Aprendizagem do Aluno */}
-        <Route path="/aluno/dashboard" element={<StudentDashboard />} />
-        <Route path="/aluno/aula/:lessonSlug" element={<IntegratedLessonPage />} />
-        <Route path="/aluno/simulador" element={<ClinicalSimulatorPage />} />
+        {/* Ambiente de Aprendizagem do Aluno com Layout e Sidebar */}
+        <Route path="/aluno" element={<StudentLayout />}>
+          <Route index element={<Navigate to="/aluno/dashboard" replace />} />
+          <Route path="dashboard" element={<StudentDashboard />} />
+          <Route path="aula/:lessonSlug" element={<IntegratedLessonPage />} />
+          <Route path="simulador" element={<ClinicalSimulatorPage />} />
+          <Route path="materiais" element={<MaterialsPage />} />
+          <Route path="videos" element={<StudentDashboard />} />
+          <Route path="provas" element={<ExamsPage />} />
+          <Route path="certificados" element={<CertificatesPage />} />
+          <Route path="frequencia" element={<StudentDashboard />} />
+        </Route>
 
         {/* Painel Administrativo Protegido */}
         <Route path="/admin" element={<AdminDashboard />} />

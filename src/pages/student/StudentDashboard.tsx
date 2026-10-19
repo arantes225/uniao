@@ -4,25 +4,13 @@ import {
   PlayCircle, CheckCircle, Clock, 
   ArrowRight, ShieldCheck, Compass, Stethoscope
 } from 'lucide-react';
-import { StudentNavbar } from '../../components/layout/StudentNavbar';
 import { useTheme } from '../../context/ThemeContext';
 
 export const StudentDashboard: React.FC = () => {
   const { theme } = useTheme();
 
   return (
-    <div className={`min-h-screen flex flex-col font-sans transition-colors duration-200 ${
-      theme === 'dark' ? 'bg-slate-950 text-white' : 'bg-slate-50 text-slate-900'
-    }`}>
-      
-      {/* Top Header Unificado com Dropdown de Perfil, Tema e Logout */}
-      <StudentNavbar 
-        studentName="Dr. Lucas Arantes" 
-        turma="Turma APH & Stop the Bleed — 2026" 
-      />
-
-      {/* Main Student Body */}
-      <main className="flex-1 max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-8 space-y-8">
+    <div className="p-6 sm:p-10 space-y-8 max-w-7xl mx-auto w-full">
         
         {/* Saudação e Contexto da Jornada Blended */}
         <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
@@ -237,8 +225,6 @@ export const StudentDashboard: React.FC = () => {
           </div>
 
         </div>
-
-      </main>
 
     </div>
   );
