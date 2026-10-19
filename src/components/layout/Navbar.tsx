@@ -6,34 +6,36 @@ export const Navbar: React.FC = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   const navLinks = [
-    { label: 'Início', href: '#inicio' },
-    { label: 'Sobre nós', href: '#sobre' },
-    { label: 'Cursos', href: '#cursos' },
-    { label: 'Para quem é', href: '#publico' },
-    { label: 'Metodologia', href: '#metodologia' },
-    { label: 'Instrutores', href: '#instrutores' },
+    { label: 'Por que a USM', href: '#urgencia' },
+    { label: 'Cursos & Prática', href: '#cursos' },
+    { label: 'Fotos Reais', href: '#galeria' },
+    { label: 'Para Quem É', href: '#publico' },
+    { label: 'Método', href: '#metodologia' },
     { label: 'Contato', href: '#contato' },
   ];
 
   return (
-    <header className="sticky top-0 z-50 glass-nav border-b border-slate-200/80 transition-all duration-200">
+    <header className="fixed top-0 inset-x-0 z-50 transition-all duration-300 bg-slate-950/80 backdrop-blur-xl border-b border-white/10">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
           
-          {/* Logomarca Oficial */}
+          {/* Nova Logomarca com o Ícone Oficial Solicitado */}
           <Link to="/" className="flex items-center gap-3.5 group">
-            <div className="w-12 h-12 rounded-xl bg-white shadow-sm border border-slate-100 flex items-center justify-center p-2 group-hover:border-uniao-500/30 transition-all">
-              <img 
-                src="/brand/logo-uniao.png" 
-                alt="União Serviços Médicos" 
-                className="w-full h-full object-contain"
-              />
+            <div className="relative w-11 h-11 rounded-2xl bg-gradient-to-br from-uniao-600 via-uniao-500 to-teal-400 p-[1px] shadow-[0_0_20px_rgba(20,184,166,0.35)] group-hover:shadow-[0_0_30px_rgba(20,184,166,0.5)] transition-all">
+              <div className="w-full h-full bg-slate-950 rounded-[15px] p-2 flex items-center justify-center">
+                <img 
+                  src="/brand/simbolo-cruz-uniao.png" 
+                  alt="Ícone Cruz União" 
+                  className="w-full h-full object-contain filter drop-shadow-[0_0_8px_rgba(255,255,255,0.7)] group-hover:scale-110 transition-transform duration-300"
+                />
+              </div>
             </div>
             <div className="flex flex-col">
-              <span className="font-extrabold text-xl tracking-tight text-slate-900 group-hover:text-uniao-700 transition-colors">
+              <span className="font-black text-xl tracking-wider text-white font-sans flex items-center gap-1.5">
                 UNIÃO
+                <span className="w-1.5 h-1.5 rounded-full bg-uniao-400 animate-pulse" />
               </span>
-              <span className="text-[10px] font-semibold tracking-widest text-uniao-600 uppercase">
+              <span className="text-[10px] font-bold tracking-[0.25em] text-uniao-400 uppercase">
                 Serviços Médicos
               </span>
             </div>
@@ -45,22 +47,26 @@ export const Navbar: React.FC = () => {
               <a
                 key={link.label}
                 href={link.href}
-                className="text-sm font-medium text-slate-600 hover:text-uniao-600 transition-colors"
+                className="text-sm font-medium text-slate-300 hover:text-white transition-colors relative py-1 group"
               >
-                {link.label}
+                <span>{link.label}</span>
+                <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-uniao-400 to-teal-300 group-hover:w-full transition-all duration-300" />
               </a>
             ))}
           </nav>
 
-          {/* Action CTA: Área do Aluno */}
+          {/* Action CTA: Área do Aluno com Design Moderno */}
           <div className="hidden sm:flex items-center gap-4">
             <Link
               to="/login"
-              className="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg text-sm font-semibold text-white bg-uniao-600 hover:bg-uniao-700 shadow-sm hover:shadow transition-all duration-200"
+              className="relative group overflow-hidden rounded-xl p-[1px] font-semibold text-xs transition-all shadow-lg hover:shadow-[0_0_25px_rgba(20,184,166,0.35)]"
             >
-              <GraduationCap className="w-4 h-4" />
-              <span>Área do Aluno</span>
-              <ArrowRight className="w-4 h-4" />
+              <span className="absolute inset-0 bg-gradient-to-r from-uniao-500 via-teal-400 to-uniao-600 rounded-xl" />
+              <span className="relative flex items-center gap-2 px-5 py-2.5 rounded-[11px] bg-slate-950 text-white group-hover:bg-opacity-80 transition-all font-bold">
+                <GraduationCap className="w-4 h-4 text-uniao-400" />
+                <span>Área do Aluno</span>
+                <ArrowRight className="w-3.5 h-3.5 text-uniao-400 group-hover:translate-x-1 transition-transform" />
+              </span>
             </Link>
           </div>
 
@@ -69,7 +75,7 @@ export const Navbar: React.FC = () => {
             <button
               type="button"
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="p-2 rounded-lg text-slate-600 hover:text-slate-900 hover:bg-slate-100 focus:outline-none"
+              className="p-2.5 rounded-xl text-slate-300 hover:text-white hover:bg-white/5 border border-white/10"
               aria-label="Abrir menu"
             >
               {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
@@ -81,25 +87,25 @@ export const Navbar: React.FC = () => {
 
       {/* Mobile Menu dropdown */}
       {mobileMenuOpen && (
-        <div className="lg:hidden border-b border-slate-200 bg-white/95 backdrop-blur-md px-4 pt-2 pb-6 space-y-3">
+        <div className="lg:hidden border-b border-white/10 bg-slate-950/95 backdrop-blur-2xl px-6 pt-3 pb-8 space-y-4">
           {navLinks.map((link) => (
             <a
               key={link.label}
               href={link.href}
               onClick={() => setMobileMenuOpen(false)}
-              className="block px-3 py-2 rounded-md text-base font-medium text-slate-700 hover:text-uniao-700 hover:bg-uniao-50 transition-colors"
+              className="block px-3 py-2.5 rounded-xl text-base font-semibold text-slate-300 hover:text-white hover:bg-white/5 transition-colors"
             >
               {link.label}
             </a>
           ))}
-          <div className="pt-2 border-t border-slate-100">
+          <div className="pt-3 border-t border-white/10">
             <Link
               to="/login"
               onClick={() => setMobileMenuOpen(false)}
-              className="w-full flex items-center justify-center gap-2 px-4 py-3 rounded-lg text-base font-semibold text-white bg-uniao-600 hover:bg-uniao-700 shadow"
+              className="w-full flex items-center justify-center gap-2.5 px-5 py-3.5 rounded-xl font-bold text-slate-950 bg-gradient-to-r from-uniao-400 to-teal-300 shadow"
             >
               <GraduationCap className="w-5 h-5" />
-              <span>Acessar Área do Aluno</span>
+              <span>Acessar Plataforma</span>
             </Link>
           </div>
         </div>

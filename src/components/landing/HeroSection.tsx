@@ -1,122 +1,142 @@
 import React from 'react';
-import { ArrowRight, ShieldCheck, HeartPulse, Activity, PhoneCall, Award } from 'lucide-react';
+import { ArrowRight, ShieldAlert, PhoneCall, Zap, HeartPulse, Clock, Sparkles } from 'lucide-react';
 
 export const HeroSection: React.FC = () => {
-  const whatsappUrl = "https://wa.me/5500000000000?text=Ol%C3%A1!%20Gostaria%20de%20solicitar%20informa%C3%A7%C3%B5es%20sobre%20os%20treinamentos%20da%20Uni%C3%A3o%20Servi%C3%A7os%20M%C3%A9dicos.";
+  const whatsappUrl = "https://wa.me/5500000000000?text=Ol%C3%A1!%20Gostaria%20de%20solicitar%20informa%C3%A7%C3%B5es%20urgentes%20sobre%20capacita%C3%A7%C3%B5es%20da%20Uni%C3%A3o%20Servi%C3%A7os%20M%C3%A9dicos.";
 
   return (
-    <section id="inicio" className="relative pt-12 pb-20 lg:pt-20 lg:pb-32 overflow-hidden gradient-hero">
-      {/* Background soft glow elements */}
-      <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[350px] bg-uniao-200/40 rounded-full blur-3xl pointer-events-none" />
+    <section className="relative pt-32 pb-24 lg:pt-40 lg:pb-36 bg-slate-950 text-white overflow-hidden">
       
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
-          
-          {/* Left Column: Headlines & Action */}
-          <div className="lg:col-span-7 space-y-6 text-center lg:text-left">
-            
-            {/* Trust badge */}
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-uniao-50 border border-uniao-200/80 text-uniao-800 text-xs font-semibold tracking-wide">
-              <ShieldCheck className="w-4 h-4 text-uniao-600" />
-              <span>Capacitações Médicas e Treinamentos em Emergências</span>
-            </div>
+      {/* Background Cyber-Medical Mesh & Gradients */}
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-7xl h-full pointer-events-none">
+        <div className="absolute top-10 left-1/4 w-[500px] h-[500px] bg-uniao-600/20 rounded-full blur-[140px] animate-pulse" />
+        <div className="absolute top-40 right-10 w-[400px] h-[400px] bg-teal-500/15 rounded-full blur-[120px]" />
+        <div className="absolute inset-0 bg-[radial-gradient(rgba(20,184,166,0.12)_1px,transparent_1px)] [background-size:28px_28px] opacity-40" />
+      </div>
 
-            {/* Title */}
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-slate-900 tracking-tight leading-[1.15]">
-              Conhecimento que prepara. <br />
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-uniao-700 via-uniao-600 to-teal-500">
-                Treinamento que salva vidas.
-              </span>
-            </h1>
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        
+        {/* Top Urgency Capsule */}
+        <div className="flex justify-center mb-8">
+          <div className="inline-flex items-center gap-2.5 px-4 py-2 rounded-full bg-slate-900/90 border border-uniao-500/40 text-uniao-300 shadow-[0_0_20px_rgba(20,184,166,0.2)]">
+            <span className="flex h-2 w-2 relative">
+              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-400 opacity-75"></span>
+              <span className="relative inline-flex rounded-full h-2 w-2 bg-red-500"></span>
+            </span>
+            <span className="text-xs font-bold tracking-wide uppercase">
+              Em emergências, o socorro especializado leva de 10 a 20 minutos.
+            </span>
+          </div>
+        </div>
 
-            {/* Description */}
-            <p className="text-lg sm:text-xl text-slate-600 max-w-2xl leading-relaxed">
-              A <strong>União Serviços Médicos</strong> promove capacitações especializadas em atendimento pré-hospitalar, primeiros socorros e controle de hemorragias, com treinamentos adaptados às necessidades de escolas, academias, empresas e instituições.
-            </p>
+        {/* Impactful Heading */}
+        <div className="max-w-4xl mx-auto text-center space-y-6">
+          <h1 className="text-4xl sm:text-6xl lg:text-7xl font-black tracking-tight leading-[1.08] font-sans">
+            Quando cada segundo importa, <br />
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-teal-300 via-uniao-400 to-emerald-400 drop-shadow-[0_0_35px_rgba(20,184,166,0.4)]">
+              sua equipe sabe exatamente o que fazer?
+            </span>
+          </h1>
 
-            {/* CTA Buttons */}
-            <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-2">
-              <a
-                href={whatsappUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 px-7 py-4 rounded-xl text-base font-bold text-white bg-uniao-600 hover:bg-uniao-700 shadow-md hover:shadow-lg transition-all transform hover:-translate-y-0.5"
-              >
-                <PhoneCall className="w-5 h-5" />
-                <span>Solicitar treinamento</span>
-              </a>
+          <p className="text-lg sm:text-xl text-slate-300 max-w-2xl mx-auto leading-relaxed font-light">
+            Uma hemorragia grave mata em <strong>3 a 5 minutos</strong>. Uma parada cardíaca causa danos cerebrais irreversíveis em <strong>4 minutos</strong>. A <strong className="text-white font-semibold">União Serviços Médicos</strong> transforma professores, instrutores e colaboradores em socorristas preparados para intervir com maestria.
+          </p>
 
-              <a
-                href="#cursos"
-                className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-7 py-4 rounded-xl text-base font-semibold text-slate-700 bg-white hover:bg-slate-50 border border-slate-200 shadow-sm transition-all"
-              >
-                <span>Conhecer nossos cursos</span>
-                <ArrowRight className="w-4 h-4 text-slate-400" />
-              </a>
-            </div>
+          {/* CTAs */}
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4">
+            <a
+              href={whatsappUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-full sm:w-auto inline-flex items-center justify-center gap-3 px-8 py-4 rounded-2xl text-base font-extrabold text-slate-950 bg-gradient-to-r from-uniao-400 via-teal-300 to-emerald-300 hover:brightness-110 shadow-[0_0_30px_rgba(20,184,166,0.4)] transition-all transform hover:-translate-y-1"
+            >
+              <PhoneCall className="w-5 h-5 text-slate-950" />
+              <span>Solicitar Treinamento Agora</span>
+            </a>
 
-            {/* Key Value Highlights */}
-            <div className="grid grid-cols-3 gap-4 pt-8 border-t border-slate-200/70 max-w-xl mx-auto lg:mx-0 text-left">
-              <div>
-                <div className="text-2xl font-bold text-slate-900">100%</div>
-                <div className="text-xs text-slate-500 font-medium">Protocolos atualizados</div>
-              </div>
-              <div>
-                <div className="text-2xl font-bold text-slate-900">Prático</div>
-                <div className="text-xs text-slate-500 font-medium">Simulações reais</div>
-              </div>
-              <div>
-                <div className="text-2xl font-bold text-slate-900">Certificado</div>
-                <div className="text-xs text-slate-500 font-medium">Autenticação digital</div>
-              </div>
-            </div>
-
+            <a
+              href="#galeria"
+              className="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 px-8 py-4 rounded-2xl text-base font-semibold text-white bg-white/5 hover:bg-white/10 border border-white/10 backdrop-blur-md transition-all"
+            >
+              <Sparkles className="w-4 h-4 text-uniao-400" />
+              <span>Ver Fotos dos Treinamentos Reais</span>
+              <ArrowRight className="w-4 h-4 text-slate-400" />
+            </a>
           </div>
 
-          {/* Right Column: Visual Component with Brand Identity */}
-          <div className="lg:col-span-5 relative">
-            <div className="relative mx-auto max-w-md lg:max-w-none">
+        </div>
+
+        {/* Hero Interactive Proof Display (com a Cruz Oficial Fluida) */}
+        <div className="mt-16 lg:mt-24 max-w-5xl mx-auto">
+          <div className="relative rounded-3xl p-1 bg-gradient-to-b from-uniao-500/40 via-slate-800/60 to-transparent shadow-2xl">
+            <div className="rounded-[23px] bg-slate-900/95 backdrop-blur-2xl p-6 sm:p-10 border border-white/5">
               
-              {/* Card Container */}
-              <div className="relative rounded-3xl overflow-hidden bg-slate-900 shadow-2xl border border-slate-800 p-8 text-white">
-                <div className="absolute inset-0 opacity-15 bg-[radial-gradient(#14b8a6_1px,transparent_1px)] [background-size:16px_16px]" />
+              <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
                 
-                {/* Brand Cross Icon Overlay */}
-                <div className="relative z-10 flex flex-col items-center text-center space-y-6">
+                {/* Lado Esquerdo: O Ícone Oficial em Grande Destaque */}
+                <div className="lg:col-span-5 flex flex-col items-center justify-center text-center p-6 rounded-2xl bg-slate-950/80 border border-white/5 relative overflow-hidden group">
+                  <div className="absolute inset-0 bg-gradient-to-tr from-uniao-600/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
                   
-                  <div className="w-28 h-28 p-4 rounded-2xl bg-slate-800/80 border border-uniao-500/30 shadow-inner flex items-center justify-center">
+                  {/* Glow Box com o Ícone Solicitado */}
+                  <div className="relative w-40 h-40 sm:w-48 sm:h-48 p-4 flex items-center justify-center">
+                    <div className="absolute inset-0 bg-uniao-500/20 rounded-full blur-2xl animate-pulse" />
                     <img 
-                      src="/brand/logo-uniao.png" 
-                      alt="Símbolo Cruz União" 
-                      className="w-full h-full object-contain filter drop-shadow-[0_4px_12px_rgba(20,184,166,0.35)]"
+                      src="/brand/simbolo-cruz-uniao.png" 
+                      alt="Cruz União Serviços Médicos" 
+                      className="w-full h-full object-contain filter drop-shadow-[0_0_20px_rgba(20,184,166,0.7)] group-hover:scale-105 transition-transform duration-500"
                     />
                   </div>
 
-                  <div>
-                    <span className="inline-block px-3 py-1 rounded-full text-xs font-semibold bg-uniao-500/20 text-uniao-300 border border-uniao-500/30 mb-2">
-                      Excelência Pedagógica em Saúde
-                    </span>
-                    <h3 className="text-2xl font-bold text-white">
-                      Treinamentos que preparam para o imprevisto
-                    </h3>
-                    <p className="text-sm text-slate-400 mt-2 leading-relaxed">
-                      Equipes capacitadas com tomada de decisão rápida, segurança de cena e procedimentos técnicos eficazes.
-                    </p>
+                  <span className="text-xs font-black tracking-widest text-uniao-400 uppercase mt-4">
+                    Padrão Internacional de Resposta
+                  </span>
+                  <div className="text-sm font-semibold text-white mt-1">
+                    Atendimento Pré-Hospitalar & SBV
                   </div>
+                </div>
 
-                  {/* Micro features list */}
-                  <div className="w-full space-y-2.5 text-left text-xs text-slate-300 pt-2">
-                    <div className="flex items-center gap-2.5 bg-slate-800/60 p-2.5 rounded-lg border border-slate-700/60">
-                      <HeartPulse className="w-4 h-4 text-uniao-400 shrink-0" />
-                      <span>Reconhecimento imediato de emergências cardiorrespiratórias</span>
+                {/* Lado Direito: Por que você precisa agora? (Números Incontestáveis) */}
+                <div className="lg:col-span-7 space-y-4">
+                  <h3 className="text-xl sm:text-2xl font-bold text-white flex items-center gap-2">
+                    <ShieldAlert className="w-6 h-6 text-uniao-400" />
+                    <span>A diferença entre o desespero e o salvamento</span>
+                  </h3>
+
+                  <div className="space-y-3 pt-2">
+                    <div className="p-4 rounded-xl bg-slate-950/60 border border-white/5 flex items-start gap-3.5">
+                      <div className="w-8 h-8 rounded-lg bg-red-500/20 text-red-400 flex items-center justify-center shrink-0 font-bold text-xs mt-0.5">
+                        <Clock className="w-4 h-4" />
+                      </div>
+                      <div>
+                        <h4 className="text-sm font-bold text-white">A Janela de Ouro do Primeiro Socorrista</h4>
+                        <p className="text-xs text-slate-400 leading-relaxed mt-0.5">
+                          Quem está presente no local é quem decide se a vítima sobrevive. Nossos cursos eliminam o pânico e treinam reflexos automáticos.
+                        </p>
+                      </div>
                     </div>
-                    <div className="flex items-center gap-2.5 bg-slate-800/60 p-2.5 rounded-lg border border-slate-700/60">
-                      <Activity className="w-4 h-4 text-uniao-400 shrink-0" />
-                      <span>Aplicação correta de torniquetes e curativos compressivos</span>
+
+                    <div className="p-4 rounded-xl bg-slate-950/60 border border-white/5 flex items-start gap-3.5">
+                      <div className="w-8 h-8 rounded-lg bg-uniao-500/20 text-uniao-400 flex items-center justify-center shrink-0 font-bold text-xs mt-0.5">
+                        <HeartPulse className="w-4 h-4" />
+                      </div>
+                      <div>
+                        <h4 className="text-sm font-bold text-white">Treinamento 100% Prático e Realístico</h4>
+                        <p className="text-xs text-slate-400 leading-relaxed mt-0.5">
+                          Torniquetes reais, manequins com feedback de compressão e DEA com cenários imersivos no próprio ambiente da sua instituição.
+                        </p>
+                      </div>
                     </div>
-                    <div className="flex items-center gap-2.5 bg-slate-800/60 p-2.5 rounded-lg border border-slate-700/60">
-                      <Award className="w-4 h-4 text-uniao-400 shrink-0" />
-                      <span>Plataforma educacional com apostilas e certificação</span>
+
+                    <div className="p-4 rounded-xl bg-slate-950/60 border border-white/5 flex items-start gap-3.5">
+                      <div className="w-8 h-8 rounded-lg bg-teal-500/20 text-teal-300 flex items-center justify-center shrink-0 font-bold text-xs mt-0.5">
+                        <Zap className="w-4 h-4" />
+                      </div>
+                      <div>
+                        <h4 className="text-sm font-bold text-white">Em Conformidade com a Lei Lucas</h4>
+                        <p className="text-xs text-slate-400 leading-relaxed mt-0.5">
+                          Certificação oficial válida para escolas e creches, resguardando legalmente a sua diretoria e salvaguardando seus alunos.
+                        </p>
+                      </div>
                     </div>
                   </div>
 
@@ -126,8 +146,8 @@ export const HeroSection: React.FC = () => {
 
             </div>
           </div>
-
         </div>
+
       </div>
     </section>
   );

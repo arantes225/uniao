@@ -1,25 +1,103 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { 
-  ShieldAlert, School, 
-  Upload, LogOut 
+  ShieldAlert, School, Upload, LogOut, Camera, 
+  Trash2, CheckCircle2, RefreshCw 
 } from 'lucide-react';
+import { supabase } from '../../services/supabase/client';
 
 export const AdminDashboard: React.FC = () => {
-  // Controle de Acesso por Dupla Camada (RBAC + PIN de Segurança, Seção 16 do Prompt Mestre)
+  // Controle de Acesso por PIN de Segurança
   const [pinEntered, setPinEntered] = useState('');
   const [pinAuthorized, setPinAuthorized] = useState(false);
   const [pinError, setPinError] = useState(false);
 
+  // Módulo de Gerenciamento da Galeria de Treinamentos
+  const [galleryImages, setGalleryImages] = useState<any[]>([]);
+  const [uploading, setUploading] = useState(false);
+  const [newTitle, setNewTitle] = useState('');
+  const [newCategory, setNewCategory] = useState('Atendimento Pré-Hospitalar');
+  const [newDescription, setNewDescription] = useState('');
+  const [selectedFile, setSelectedFile] = useState<File | null>(null);
+  const [uploadSuccess, setUploadSuccess] = useState(false);
+
   const handlePinSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // Em produção validado via Edge Function com taxa de limite e salt seguro
     if (pinEntered === '1926') {
       setPinAuthorized(true);
       setPinError(false);
     } else {
       setPinError(true);
     }
+  };
+
+  const loadGallery = async () => {
+    const { data } = await supabase
+      .from('training_gallery')
+      .select('*')
+      .order('created_at', { ascending: false });
+    if (data) setGalleryImages(data);
+  };
+
+  useEffect(() => {
+    if (pinAuthorized) {
+      loadGallery();
+    }
+  }, [pinAuthorized]);
+
+  const handleUploadImage = async (e: React.FormEvent) => {
+    e.preventDefault();
+    if (!selectedFile || !newTitle) return;
+
+    setUploading(true);
+    setUploadSuccess(false);
+
+    try {
+      // 1. Upload do arquivo para o bucket gallery do Supabase União
+      const fileExt = selectedFile.name.split('.').pop();
+      const fileName = `${Date.now()}_${Math.random().toString(36).substring(7)}.${fileExt}`;
+      const filePath = `trainings/${fileName}`;
+
+      const { error: storageError } = await supabase.storage
+        .from('gallery')
+        .upload(filePath, selectedFile);
+
+      if (storageError) throw storageError;
+
+      // 2. Obter URL pública
+      const { data: urlData } = supabase.storage
+        .from('gallery')
+        .getPublicUrl(filePath);
+
+      // 3. Salvar registro na tabela training_gallery
+      const { error: dbError } = await supabase.from('training_gallery').insert([
+        {
+          title: newTitle,
+          category: newCategory,
+          description: newDescription,
+          image_url: urlData.publicUrl,
+        }
+      ]);
+
+      if (dbError) throw dbError;
+
+      setUploadSuccess(true);
+      setNewTitle('');
+      setNewDescription('');
+      setSelectedFile(null);
+      await loadGallery();
+    } catch (err: any) {
+      console.error('Erro ao enviar imagem de treinamento:', err);
+      alert('Falha ao enviar imagem: ' + (err.message || 'Erro desconhecido'));
+    } finally {
+      setUploading(false);
+    }
+  };
+
+  const handleDeleteImage = async (id: string) => {
+    if (!confirm('Deseja realmente remover esta foto da landing page?')) return;
+    await supabase.from('training_gallery').delete().eq('id', id);
+    await loadGallery();
   };
 
   if (!pinAuthorized) {
@@ -33,7 +111,7 @@ export const AdminDashboard: React.FC = () => {
           <div>
             <h2 className="text-xl font-bold text-white">Confirmação de Segurança Administrativa</h2>
             <p className="text-xs text-slate-400 mt-1.5 leading-relaxed">
-              O acesso aos módulos de gestão acadêmica e dados de alunos requer autenticação de segundo fator com PIN administrativo.
+              O acesso aos módulos de gestão acadêmica, upload de fotos e dados de alunos requer PIN administrativo.
             </p>
           </div>
 
@@ -72,24 +150,25 @@ export const AdminDashboard: React.FC = () => {
   }
 
   return (
-    <div className="min-h-screen bg-slate-100 flex flex-col">
+    <div className="min-h-screen bg-slate-950 text-slate-100 flex flex-col font-sans">
+      
       {/* Top Admin Header */}
-      <header className="bg-slate-900 text-white h-16 px-6 flex items-center justify-between border-b border-slate-800">
+      <header className="bg-slate-900/90 backdrop-blur-md text-white h-16 px-6 flex items-center justify-between border-b border-white/10 sticky top-0 z-40">
         <div className="flex items-center gap-3">
-          <div className="w-8 h-8 rounded-lg bg-white p-1">
-            <img src="/brand/logo-uniao.png" alt="USM" className="w-full h-full object-contain" />
+          <div className="w-8 h-8 rounded-lg bg-slate-950 p-1 border border-white/10">
+            <img src="/brand/simbolo-cruz-uniao.png" alt="USM" className="w-full h-full object-contain" />
           </div>
           <div>
-            <span className="font-bold text-sm tracking-tight">Painel de Gestão USM</span>
-            <span className="ml-2 text-[10px] px-2 py-0.5 rounded bg-uniao-900 text-uniao-300 border border-uniao-700">
-              Administrador Autorizado
+            <span className="font-extrabold text-sm tracking-tight">Painel de Gestão USM</span>
+            <span className="ml-2 text-[10px] px-2 py-0.5 rounded bg-uniao-950 text-uniao-400 border border-uniao-500/40">
+              Administração Ativa
             </span>
           </div>
         </div>
 
         <button
           onClick={() => setPinAuthorized(false)}
-          className="text-xs text-slate-400 hover:text-white flex items-center gap-1.5"
+          className="text-xs text-slate-400 hover:text-white flex items-center gap-1.5 px-3 py-1.5 rounded-lg hover:bg-white/5 transition-colors"
         >
           <LogOut className="w-4 h-4" />
           <span>Bloquear Painel</span>
@@ -97,88 +176,188 @@ export const AdminDashboard: React.FC = () => {
       </header>
 
       {/* Admin Content */}
-      <main className="max-w-7xl mx-auto w-full p-6 sm:p-8 space-y-8">
+      <main className="max-w-7xl mx-auto w-full p-6 sm:p-8 space-y-10">
         
-        {/* KPI Indicators */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-          <div className="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm">
-            <span className="text-xs font-semibold text-slate-500">Total de Alunos</span>
-            <div className="text-2xl font-bold text-slate-900">128</div>
-            <div className="text-[11px] text-emerald-600 font-medium">100% com matrícula ativa</div>
-          </div>
-          <div className="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm">
-            <span className="text-xs font-semibold text-slate-500">Turmas em Andamento</span>
-            <div className="text-2xl font-bold text-slate-900">6</div>
-            <div className="text-[11px] text-uniao-700 font-medium">Escolas & Academias</div>
-          </div>
-          <div className="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm">
-            <span className="text-xs font-semibold text-slate-500">Cursos Ativos</span>
-            <div className="text-2xl font-bold text-slate-900">4</div>
-            <div className="text-[11px] text-slate-500">Módulos customizáveis</div>
-          </div>
-          <div className="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm">
-            <span className="text-xs font-semibold text-slate-500">Certificados Emitidos</span>
-            <div className="text-2xl font-bold text-slate-900">42</div>
-            <div className="text-[11px] text-emerald-600 font-medium">Com QR Code ativo</div>
-          </div>
-        </div>
+        {/* REQUISITO SOLICITADO: ÁREA DEDICADA PARA SUBIR FOTOS DOS TREINAMENTOS */}
+        <section className="bg-slate-900 border border-white/10 rounded-3xl p-6 sm:p-8 space-y-6 shadow-2xl">
+          <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-white/10 pb-5">
+            <div className="flex items-center gap-3">
+              <div className="w-12 h-12 rounded-2xl bg-uniao-500/10 border border-uniao-500/30 text-uniao-400 flex items-center justify-center">
+                <Camera className="w-6 h-6" />
+              </div>
+              <div>
+                <h2 className="text-xl font-bold text-white">Galeria de Fotos dos Treinamentos Reais</h2>
+                <p className="text-xs text-slate-400">
+                  Suba fotos práticas que serão exibidas automaticamente no campo dedicado da Landing Page.
+                </p>
+              </div>
+            </div>
 
-        {/* Gestão Rápida: Importação em Lote & Criação de Turmas */}
+            <button
+              onClick={loadGallery}
+              className="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-slate-800 hover:bg-slate-700 text-xs text-slate-300 transition-colors"
+            >
+              <RefreshCw className="w-3.5 h-3.5" />
+              <span>Atualizar Fotos</span>
+            </button>
+          </div>
+
+          {/* Form de Upload */}
+          <form onSubmit={handleUploadImage} className="grid grid-cols-1 md:grid-cols-12 gap-4 bg-slate-950/60 p-5 rounded-2xl border border-white/5">
+            <div className="md:col-span-4 space-y-1.5">
+              <label className="text-xs font-semibold text-slate-300 uppercase">Título da Ação Prática</label>
+              <input
+                type="text"
+                required
+                value={newTitle}
+                onChange={(e) => setNewTitle(e.target.value)}
+                placeholder="Ex: Treinamento de RCP com DEA"
+                className="w-full px-3.5 py-2.5 rounded-xl bg-slate-900 border border-white/10 text-white text-xs focus:outline-none focus:border-uniao-500"
+              />
+            </div>
+
+            <div className="md:col-span-3 space-y-1.5">
+              <label className="text-xs font-semibold text-slate-300 uppercase">Categoria</label>
+              <select
+                value={newCategory}
+                onChange={(e) => setNewCategory(e.target.value)}
+                className="w-full px-3.5 py-2.5 rounded-xl bg-slate-900 border border-white/10 text-white text-xs focus:outline-none focus:border-uniao-500"
+              >
+                <option value="Suporte Básico de Vida">Suporte Básico de Vida (SBV)</option>
+                <option value="Stop the Bleed">Stop the Bleed (Hemorragias)</option>
+                <option value="Atendimento Pré-Hospitalar">Atendimento Pré-Hospitalar (APH)</option>
+                <option value="Lei Lucas (Escolas)">Lei Lucas (Escolas)</option>
+                <option value="Simulação Corporativa">Simulação Corporativa</option>
+              </select>
+            </div>
+
+            <div className="md:col-span-3 space-y-1.5">
+              <label className="text-xs font-semibold text-slate-300 uppercase">Arquivo de Foto (JPG/PNG)</label>
+              <input
+                type="file"
+                required
+                accept="image/*"
+                onChange={(e) => setSelectedFile(e.target.files?.[0] || null)}
+                className="w-full text-xs text-slate-400 file:mr-2 file:py-2 file:px-3 file:rounded-lg file:border-0 file:text-xs file:font-semibold file:bg-uniao-600 file:text-white hover:file:bg-uniao-500 cursor-pointer"
+              />
+            </div>
+
+            <div className="md:col-span-2 flex items-end">
+              <button
+                type="submit"
+                disabled={uploading || !selectedFile}
+                className="w-full py-2.5 px-4 rounded-xl font-bold text-xs text-slate-950 bg-gradient-to-r from-uniao-400 to-teal-300 hover:brightness-110 disabled:opacity-40 transition-all shadow"
+              >
+                {uploading ? 'Enviando...' : '+ Publicar Foto'}
+              </button>
+            </div>
+
+            <div className="md:col-span-12 space-y-1.5">
+              <label className="text-xs font-semibold text-slate-300 uppercase">Descrição Opcional</label>
+              <input
+                type="text"
+                value={newDescription}
+                onChange={(e) => setNewDescription(e.target.value)}
+                placeholder="Breve comentário explicativo sobre o treinamento na foto..."
+                className="w-full px-3.5 py-2 rounded-xl bg-slate-900 border border-white/10 text-white text-xs focus:outline-none focus:border-uniao-500"
+              />
+            </div>
+          </form>
+
+          {uploadSuccess && (
+            <div className="p-3.5 rounded-xl bg-emerald-500/10 border border-emerald-500/30 text-emerald-300 text-xs flex items-center gap-2">
+              <CheckCircle2 className="w-4 h-4 text-emerald-400" />
+              <span>Foto salva no Supabase Storage e publicada com sucesso na Landing Page!</span>
+            </div>
+          )}
+
+          {/* Grid de Fotos já cadastradas */}
+          <div className="space-y-3">
+            <h4 className="text-xs font-bold uppercase tracking-wider text-slate-400">
+              Fotos Publicadas Atualmente ({galleryImages.length})
+            </h4>
+
+            {galleryImages.length === 0 ? (
+              <div className="p-8 text-center text-xs text-slate-500 border border-white/5 rounded-2xl bg-slate-950/40">
+                Nenhuma foto customizada enviada ainda. As fotos padrão demonstrativas estão sendo exibidas.
+              </div>
+            ) : (
+              <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
+                {galleryImages.map((img) => (
+                  <div key={img.id} className="relative group rounded-xl overflow-hidden border border-white/10 bg-slate-950">
+                    <img src={img.image_url} alt={img.title} className="w-full h-28 object-cover" />
+                    <div className="p-2 space-y-0.5">
+                      <div className="text-[11px] font-bold text-white truncate">{img.title}</div>
+                      <div className="text-[10px] text-uniao-400">{img.category}</div>
+                    </div>
+                    <button
+                      onClick={() => handleDeleteImage(img.id)}
+                      className="absolute top-2 right-2 p-1.5 rounded-lg bg-red-600/90 text-white opacity-0 group-hover:opacity-100 transition-opacity hover:bg-red-500"
+                      title="Excluir foto"
+                    >
+                      <Trash2 className="w-3.5 h-3.5" />
+                    </button>
+                  </div>
+                ))}
+              </div>
+            )}
+          </div>
+        </section>
+
+        {/* Gestão de Turmas e Importação de Alunos */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           
-          {/* Card Importação em Lote (Seção 19.2 do Prompt Mestre) */}
-          <div className="bg-white rounded-2xl border border-slate-200 p-6 shadow-sm space-y-4">
+          <div className="bg-slate-900 rounded-3xl border border-white/10 p-6 space-y-4">
             <div className="flex items-center gap-3">
-              <div className="w-10 h-10 rounded-xl bg-uniao-50 text-uniao-700 flex items-center justify-center">
+              <div className="w-10 h-10 rounded-xl bg-uniao-500/10 text-uniao-400 flex items-center justify-center">
                 <Upload className="w-5 h-5" />
               </div>
               <div>
-                <h3 className="font-bold text-slate-900 text-base">Importação de Alunos em Lote</h3>
-                <p className="text-xs text-slate-500">Importe planilhas CSV/XLSX com validação prévia</p>
+                <h3 className="font-bold text-white text-base">Importação de Alunos em Lote</h3>
+                <p className="text-xs text-slate-400">Planilhas CSV/XLSX com validação prévia</p>
               </div>
             </div>
 
-            <p className="text-xs text-slate-600 leading-relaxed">
+            <p className="text-xs text-slate-400 leading-relaxed">
               O fluxo de importação executa conferência de duplicidade, sanitização de CPF conforme a LGPD e disparo automático de convites com link seguro.
             </p>
 
-            <div className="border-2 border-dashed border-slate-200 rounded-xl p-6 text-center space-y-2 hover:border-uniao-400 transition-colors cursor-pointer bg-slate-50/50">
-              <Upload className="w-8 h-8 text-slate-400 mx-auto" />
-              <div className="text-xs font-semibold text-slate-700">Clique para selecionar CSV ou XLSX</div>
-              <div className="text-[11px] text-slate-400">Colunas esperadas: Nome Completo, CPF, E-mail</div>
+            <div className="border-2 border-dashed border-white/10 rounded-2xl p-6 text-center space-y-2 hover:border-uniao-500/50 transition-colors cursor-pointer bg-slate-950/40">
+              <Upload className="w-8 h-8 text-slate-500 mx-auto" />
+              <div className="text-xs font-semibold text-slate-300">Clique para selecionar CSV ou XLSX</div>
+              <div className="text-[11px] text-slate-500">Colunas esperadas: Nome Completo, CPF, E-mail</div>
             </div>
           </div>
 
-          {/* Card Gestão de Turmas e Customização de Módulos (Seção 20 do Prompt Mestre) */}
-          <div className="bg-white rounded-2xl border border-slate-200 p-6 shadow-sm space-y-4">
+          <div className="bg-slate-900 rounded-3xl border border-white/10 p-6 space-y-4">
             <div className="flex items-center gap-3">
-              <div className="w-10 h-10 rounded-xl bg-uniao-50 text-uniao-700 flex items-center justify-center">
+              <div className="w-10 h-10 rounded-xl bg-uniao-500/10 text-uniao-400 flex items-center justify-center">
                 <School className="w-5 h-5" />
               </div>
               <div>
-                <h3 className="font-bold text-slate-900 text-base">Montagem de Planos Customizados</h3>
-                <p className="text-xs text-slate-500">Personalize a grade curricular de cada instituição</p>
+                <h3 className="font-bold text-white text-base">Montagem de Planos Customizados</h3>
+                <p className="text-xs text-slate-400">Personalize a grade curricular de cada instituição</p>
               </div>
             </div>
 
-            <p className="text-xs text-slate-600 leading-relaxed">
+            <p className="text-xs text-slate-400 leading-relaxed">
               Vincule módulos específicos para cada cliente (ex: Primeiros Socorros Pediátricos para Escolas; SBV + DEA para Academias) sem duplicar código.
             </p>
 
             <div className="space-y-2 pt-2">
-              <div className="flex items-center justify-between p-3 rounded-lg border border-slate-200 text-xs">
+              <div className="flex items-center justify-between p-3 rounded-xl border border-white/5 bg-slate-950/50 text-xs">
                 <div>
-                  <span className="font-semibold text-slate-800">Turma Escola Modelo (Lei Lucas)</span>
-                  <div className="text-[11px] text-slate-500">3 módulos ativos • 24 alunos</div>
+                  <span className="font-semibold text-white">Turma Escola Modelo (Lei Lucas)</span>
+                  <div className="text-[11px] text-slate-400">3 módulos ativos • 24 alunos</div>
                 </div>
-                <button className="text-uniao-700 font-bold hover:underline">Configurar</button>
+                <button className="text-uniao-400 font-bold hover:underline">Configurar</button>
               </div>
-              <div className="flex items-center justify-between p-3 rounded-lg border border-slate-200 text-xs">
+              <div className="flex items-center justify-between p-3 rounded-xl border border-white/5 bg-slate-950/50 text-xs">
                 <div>
-                  <span className="font-semibold text-slate-800">Turma CrossFit Arena (SBV + DEA)</span>
-                  <div className="text-[11px] text-slate-500">2 módulos ativos • 15 alunos</div>
+                  <span className="font-semibold text-white">Turma CrossFit Arena (SBV + DEA)</span>
+                  <div className="text-[11px] text-slate-400">2 módulos ativos • 15 alunos</div>
                 </div>
-                <button className="text-uniao-700 font-bold hover:underline">Configurar</button>
+                <button className="text-uniao-400 font-bold hover:underline">Configurar</button>
               </div>
             </div>
 
