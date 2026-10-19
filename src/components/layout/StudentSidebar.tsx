@@ -75,12 +75,16 @@ export const StudentSidebar: React.FC<StudentSidebarProps> = () => {
           : 'bg-white border-slate-200 text-slate-700'
       }`}
     >
-      {/* Header do Menu Lateral (Apenas controle de recolher/expandir, SEM logo duplicada) */}
-      <div className={`h-12 flex items-center border-b border-white/10 px-3 ${
+      {/* Header do Menu Lateral (Apenas controle de recolher/expandir) */}
+      <div className={`h-12 flex items-center border-b px-3 ${
+        theme === 'dark' ? 'border-white/10' : 'border-slate-200 bg-slate-50/50'
+      } ${
         collapsed ? 'justify-center' : 'justify-between'
       }`}>
         {!collapsed && (
-          <span className="text-[11px] font-black uppercase tracking-wider text-slate-400">
+          <span className={`text-[11px] font-black uppercase tracking-wider ${
+            theme === 'dark' ? 'text-slate-400' : 'text-slate-500'
+          }`}>
             Navegação
           </span>
         )}
@@ -89,7 +93,11 @@ export const StudentSidebar: React.FC<StudentSidebarProps> = () => {
         <button
           type="button"
           onClick={() => setCollapsed(!collapsed)}
-          className="p-1.5 rounded-lg text-slate-400 hover:text-white hover:bg-white/5 transition-colors flex items-center justify-center"
+          className={`p-1.5 rounded-lg transition-colors flex items-center justify-center ${
+            theme === 'dark' 
+              ? 'text-slate-400 hover:text-white hover:bg-white/5' 
+              : 'text-slate-500 hover:text-slate-900 hover:bg-slate-100'
+          }`}
           title={collapsed ? 'Expandir menu' : 'Recolher menu'}
         >
           {collapsed ? <ChevronRight className="w-4 h-4" /> : <ChevronLeft className="w-4 h-4" />}
@@ -98,7 +106,9 @@ export const StudentSidebar: React.FC<StudentSidebarProps> = () => {
 
       {/* Navigation List */}
       <nav className="flex-1 overflow-y-auto p-3 space-y-1.5">
-        <div className="px-3 py-1.5 text-[10px] font-black uppercase tracking-widest text-slate-500">
+        <div className={`px-3 py-1.5 text-[10px] font-black uppercase tracking-widest ${
+          theme === 'dark' ? 'text-slate-500' : 'text-slate-400'
+        }`}>
           {!collapsed ? 'Menu Acadêmico' : '•••'}
         </div>
 
@@ -113,8 +123,12 @@ export const StudentSidebar: React.FC<StudentSidebarProps> = () => {
                   isActive
                     ? 'bg-uniao-600 text-white shadow-md shadow-uniao-600/30'
                     : item.highlight
-                    ? 'text-uniao-400 bg-uniao-500/10 hover:bg-uniao-500/20 border border-uniao-500/30'
-                    : 'text-slate-400 hover:text-white hover:bg-white/5'
+                    ? theme === 'dark'
+                      ? 'text-uniao-400 bg-uniao-500/10 hover:bg-uniao-500/20 border border-uniao-500/30'
+                      : 'text-teal-700 bg-teal-50 hover:bg-teal-100/80 border border-teal-200 font-bold'
+                    : theme === 'dark'
+                    ? 'text-slate-400 hover:text-white hover:bg-white/5'
+                    : 'text-slate-600 hover:text-slate-950 hover:bg-slate-100'
                 }`
               }
               title={collapsed ? item.label : undefined}
@@ -127,7 +141,9 @@ export const StudentSidebar: React.FC<StudentSidebarProps> = () => {
                 <span className={`text-[9px] font-bold px-1.5 py-0.5 rounded uppercase ${
                   item.highlight
                     ? 'bg-uniao-400 text-slate-950 font-black'
-                    : 'bg-white/10 text-slate-300'
+                    : theme === 'dark'
+                    ? 'bg-white/10 text-slate-300'
+                    : 'bg-slate-200 text-slate-700'
                 }`}>
                   {item.badge}
                 </span>
@@ -138,13 +154,17 @@ export const StudentSidebar: React.FC<StudentSidebarProps> = () => {
       </nav>
 
       {/* Admin Quick Shortcut */}
-      <div className="p-3 border-t border-white/10">
+      <div className={`p-3 border-t ${theme === 'dark' ? 'border-white/10' : 'border-slate-200'}`}>
         <Link
           to="/admin"
-          className="flex items-center gap-3 px-3 py-2.5 rounded-xl text-xs font-medium text-slate-400 hover:text-white hover:bg-white/5 transition-colors"
+          className={`flex items-center gap-3 px-3 py-2.5 rounded-xl text-xs font-medium transition-colors ${
+            theme === 'dark'
+              ? 'text-slate-400 hover:text-white hover:bg-white/5'
+              : 'text-slate-600 hover:text-slate-950 hover:bg-slate-100'
+          }`}
           title={collapsed ? 'Acesso Administrativo' : undefined}
         >
-          <ShieldAlert className="w-5 h-5 shrink-0 text-amber-400" />
+          <ShieldAlert className="w-5 h-5 shrink-0 text-amber-500" />
           {!collapsed && <span>Acesso Admin</span>}
         </Link>
       </div>
