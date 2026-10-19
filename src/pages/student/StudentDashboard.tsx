@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { 
   PlayCircle, CheckCircle, Clock, 
@@ -9,28 +9,92 @@ import { useTheme } from '../../context/ThemeContext';
 export const StudentDashboard: React.FC = () => {
   const { theme } = useTheme();
 
+  // Suporte a múltiplas turmas por aluno com switch
+  const studentCohorts = [
+    {
+      id: 'aph-2026',
+      name: 'Atendimento Pré-Hospitalar (APH) & Controle de Hemorragias',
+      cohortCode: 'Turma de Capacitação APH 2026',
+      currentModule: 'Módulo 01 — Fundamentos do APH',
+      currentLesson: 'Aula 02 — Avaliação e Segurança da Cena',
+      lessonUrl: '/aluno/aula/aph-mod1-aula2',
+      progress: 40,
+      daysRemaining: 89,
+      lessonsCompleted: 4,
+      totalLessons: 12,
+      score: 95,
+      simReady: true,
+      practicalReady: false,
+    },
+    {
+      id: 'stb-tatico',
+      name: 'Stop the Bleed — Controle Tático de Grandes Hemorragias',
+      cohortCode: 'Turma Stop the Bleed Tático',
+      currentModule: 'Módulo 02 — Torniquetes e Curativos Hemostáticos',
+      currentLesson: 'Aula 01 — Aplicação Rápida de Torniquetes em Extremidades',
+      lessonUrl: '/aluno/aula/aph-mod1-aula2',
+      progress: 70,
+      daysRemaining: 45,
+      lessonsCompleted: 7,
+      totalLessons: 10,
+      score: 98,
+      simReady: true,
+      practicalReady: true,
+    },
+  ];
+
+  const [activeCohortId, setActiveCohortId] = useState('aph-2026');
+  const activeCohort = studentCohorts.find(c => c.id === activeCohortId) || studentCohorts[0];
+
   return (
     <div className="p-6 sm:p-10 space-y-8 max-w-7xl mx-auto w-full">
         
-        {/* Saudação e Contexto da Jornada Blended */}
-        <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
-          <div>
-            <h1 className="text-2xl sm:text-3xl font-black tracking-tight">
-              Olá, Dr. Lucas Arantes
-            </h1>
-            <p className={`text-sm ${theme === 'dark' ? 'text-slate-400' : 'text-slate-600'}`}>
-              Trilha ativa: <strong className="text-uniao-400">Atendimento Pré-Hospitalar (APH) & Controle de Hemorragias</strong>
-            </p>
+        {/* Saudação e Seletor/Switch de Turma Ativa */}
+        <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-6 bg-slate-900/60 p-6 rounded-3xl border border-white/10 shadow-lg">
+          <div className="space-y-2">
+            <div className="flex items-center gap-3">
+              <h1 className="text-2xl sm:text-3xl font-black tracking-tight">
+                Olá, Dr. Lucas Arantes
+              </h1>
+              {studentCohorts.length > 1 && (
+                <span className="text-[10px] font-black uppercase px-2 py-0.5 rounded-full bg-uniao-500/20 text-uniao-300 border border-uniao-500/30">
+                  {studentCohorts.length} Turmas Matriculadas
+                </span>
+              )}
+            </div>
+            
+            {/* SWITCH DE TURMA */}
+            <div className="flex flex-wrap items-center gap-3">
+              <span className={`text-xs font-bold uppercase tracking-wider ${theme === 'dark' ? 'text-slate-400' : 'text-slate-600'}`}>
+                Visualizando Conteúdo da Turma:
+              </span>
+              <div className="inline-flex items-center gap-1.5 p-1 bg-slate-950 rounded-xl border border-white/10 shadow-inner">
+                {studentCohorts.map((coh) => (
+                  <button
+                    key={coh.id}
+                    type="button"
+                    onClick={() => setActiveCohortId(coh.id)}
+                    className={`px-3 py-1.5 rounded-lg text-xs font-bold transition-all ${
+                      activeCohortId === coh.id
+                        ? 'bg-uniao-600 text-white shadow-md'
+                        : 'text-slate-400 hover:text-white hover:bg-white/5'
+                    }`}
+                  >
+                    {coh.cohortCode}
+                  </button>
+                ))}
+              </div>
+            </div>
           </div>
 
-          <div className="flex flex-wrap items-center gap-2">
-            {/* Countdown de Dias Restantes de Acesso */}
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-bold bg-amber-500/10 border border-amber-500/30 text-amber-300">
+          <div className="flex flex-wrap items-center gap-3">
+            {/* Countdown de Dias Restantes de Acesso da Turma Ativa */}
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-2xl text-xs font-bold bg-amber-500/10 border border-amber-500/30 text-amber-300 shadow">
               <Clock className="w-4 h-4 text-amber-400" />
-              <span>Acesso à plataforma: <strong className="text-white">89 dias restantes</strong></span>
+              <span>Acesso a esta turma: <strong className="text-white font-mono text-sm">{activeCohort.daysRemaining} dias restantes</strong></span>
             </div>
 
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-bold bg-uniao-500/10 border border-uniao-500/30 text-uniao-400">
+            <div className="inline-flex items-center gap-2 px-3.5 py-2 rounded-2xl text-xs font-bold bg-uniao-500/10 border border-uniao-500/30 text-uniao-400">
               <ShieldCheck className="w-4 h-4 text-uniao-400" />
               <span>Etapa Online em Andamento</span>
             </div>
@@ -64,10 +128,10 @@ export const StudentDashboard: React.FC = () => {
 
             <div className="space-y-1">
               <span className="text-xs uppercase tracking-wider text-slate-400 font-semibold">
-                Módulo 01 — Fundamentos do APH
+                {activeCohort.currentModule}
               </span>
               <h2 className="text-2xl sm:text-3xl font-black text-white tracking-tight">
-                Aula 02 — Avaliação e Segurança da Cena
+                {activeCohort.currentLesson}
               </h2>
             </div>
 
@@ -79,17 +143,20 @@ export const StudentDashboard: React.FC = () => {
             <div className="space-y-2 pt-2">
               <div className="flex justify-between text-xs text-slate-300 font-medium">
                 <span>Progresso das etapas online</span>
-                <span className="text-uniao-400 font-bold">40% concluído</span>
+                <span className="text-uniao-400 font-bold">{activeCohort.progress}% concluído</span>
               </div>
               <div className="w-full bg-slate-800 rounded-full h-2.5 overflow-hidden">
-                <div className="bg-gradient-to-r from-uniao-500 to-teal-300 h-2.5 rounded-full transition-all duration-500" style={{ width: '40%' }} />
+                <div 
+                  className="bg-gradient-to-r from-uniao-500 to-teal-300 h-2.5 rounded-full transition-all duration-500" 
+                  style={{ width: `${activeCohort.progress}%` }} 
+                />
               </div>
             </div>
 
             {/* Ações */}
             <div className="pt-3 flex flex-wrap gap-3">
               <Link
-                to="/aluno/aula/aph-mod1-aula2"
+                to={activeCohort.lessonUrl}
                 className="inline-flex items-center gap-2.5 px-7 py-3.5 rounded-xl font-bold text-slate-950 bg-gradient-to-r from-uniao-400 to-teal-300 hover:brightness-110 shadow-[0_0_25px_rgba(20,184,166,0.3)] transition-all transform hover:-translate-y-0.5 text-sm"
               >
                 <PlayCircle className="w-5 h-5 text-slate-950" />
@@ -114,7 +181,7 @@ export const StudentDashboard: React.FC = () => {
             theme === 'dark' ? 'bg-slate-900 border-white/10' : 'bg-white border-slate-200'
           }`}>
             <span className="text-xs font-semibold text-slate-400">Aulas Concluídas</span>
-            <div className="text-2xl font-black">4 / 12</div>
+            <div className="text-2xl font-black">{activeCohort.lessonsCompleted} / {activeCohort.totalLessons}</div>
             <div className="text-[11px] text-uniao-400 font-medium">1 em andamento</div>
           </div>
 
@@ -123,23 +190,25 @@ export const StudentDashboard: React.FC = () => {
           }`}>
             <span className="text-xs font-semibold text-slate-400">Questões Respondidas</span>
             <div className="text-2xl font-black">20 / 20</div>
-            <div className="text-[11px] text-emerald-400 font-medium">95% de aproveitamento</div>
+            <div className="text-[11px] text-emerald-400 font-medium">{activeCohort.score}% de aproveitamento</div>
           </div>
 
           <div className={`p-5 rounded-2xl border shadow-sm space-y-1 ${
             theme === 'dark' ? 'bg-slate-900 border-white/10' : 'bg-white border-slate-200'
           }`}>
             <span className="text-xs font-semibold text-slate-400">Simulador Clínico</span>
-            <div className="text-2xl font-black text-uniao-400">Disponível</div>
-            <div className="text-[11px] text-slate-400">Caso 01: Hemorragias</div>
+            <div className="text-2xl font-black text-uniao-400">{activeCohort.simReady ? 'Disponível' : 'Bloqueado'}</div>
+            <div className="text-[11px] text-slate-400">Casos Clínicos Reais</div>
           </div>
 
           <div className={`p-5 rounded-2xl border shadow-sm space-y-1 ${
             theme === 'dark' ? 'bg-slate-900 border-white/10' : 'bg-white border-slate-200'
           }`}>
             <span className="text-xs font-semibold text-slate-400">Prática Presencial</span>
-            <div className="text-2xl font-black text-amber-400">Pendente</div>
-            <div className="text-[11px] text-slate-400">Libera após simulador</div>
+            <div className={`text-2xl font-black ${activeCohort.practicalReady ? 'text-emerald-400' : 'text-amber-400'}`}>
+              {activeCohort.practicalReady ? 'Autorizada' : 'Pendente'}
+            </div>
+            <div className="text-[11px] text-slate-400">{activeCohort.practicalReady ? 'Presença confirmada' : 'Libera após simulador'}</div>
           </div>
         </div>
 

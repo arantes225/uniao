@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { 
   ShieldAlert, School, LogOut, Camera, 
   Trash2, CheckCircle2, RefreshCw, Award, Users, 
-  Settings, Clock, BookOpen, FileText, Check,
+  Settings, Clock, BookOpen, FileText, Check, Plus,
   UserPlus, UserMinus, Eye, Filter, Sparkles, X,
   GraduationCap
 } from 'lucide-react';
@@ -239,12 +239,31 @@ export const AdminDashboard: React.FC = () => {
     },
   ]);
 
+  // Modal para Criar Nova Turma
+  const [isCreateCohortOpen, setIsCreateCohortOpen] = useState(false);
+  const [newCohortName, setNewCohortName] = useState('');
+  const [newCohortDays, setNewCohortDays] = useState(90);
+  const [newCohortCapacity, setNewCohortCapacity] = useState(30);
+  const [newCohortLocation, setNewCohortLocation] = useState('Centro de Treinamento USM');
+  const [cohortCreationMode, setCohortCreationMode] = useState<'empty' | 'manual' | 'import'>('empty');
+  const [cohortImportFile, setCohortImportFile] = useState<File | null>(null);
+
   // Modal para Adicionar Aluno a uma Turma
   const [isAddStudentOpen, setIsAddStudentOpen] = useState(false);
+  const [studentAddMode, setStudentAddMode] = useState<'single' | 'import'>('single');
   const [newStudentName, setNewStudentName] = useState('');
   const [newStudentEmail, setNewStudentEmail] = useState('');
   const [newStudentCpf, setNewStudentCpf] = useState('');
   const [newStudentCohortId, setNewStudentCohortId] = useState('');
+  const [studentImportFile, setStudentImportFile] = useState<File | null>(null);
+
+  // Modal para Editar Aluno
+  const [isEditStudentOpen, setIsEditStudentOpen] = useState(false);
+  const [editingStudent, setEditingStudent] = useState<StudentRecord | null>(null);
+  const [editStudentName, setEditStudentName] = useState('');
+  const [editStudentEmail, setEditStudentEmail] = useState('');
+  const [editStudentCpf, setEditStudentCpf] = useState('');
+  const [editStudentCohortId, setEditStudentCohortId] = useState('');
 
   // =========================================================================
   // MÓDULO DE CERTIFICADOS & EMENTAS
@@ -433,7 +452,122 @@ export const AdminDashboard: React.FC = () => {
     setNewStudentName('');
     setNewStudentEmail('');
     setNewStudentCpf('');
+    setStudentImportFile(null);
     setIsAddStudentOpen(false);
+  };
+
+  // Importar Alunos em Lote via PDF / Excel
+  const handleImportStudents = (cohortId: string) => {
+    const cohort = cohorts.find(c => c.id === cohortId);
+    // Simula importação automatizada de 3 alunos da planilha/documento
+    const importedEntries: StudentRecord[] = [
+      {
+        id: Date.now().toString() + '-1',
+        name: 'Dra. Beatriz Santos Nogueira',
+        email: 'beatriz.santos@hospitaluniao.med.br',
+        cpf: '789.012.345-55',
+        cohortId: cohortId,
+        cohortName: cohort ? cohort.name : 'Turma Importada',
+        progress: 0,
+        lessonsCompleted: 0,
+        totalLessons: 12,
+        scoreQuiz: 0,
+        simFinished: false,
+        practicalAuthorized: false,
+        daysRemaining: cohort ? (cohort.access_days_limit || 90) : 90,
+      },
+      {
+        id: Date.now().toString() + '-2',
+        name: 'Socorrista Thiago Lemos Ramos',
+        email: 'thiago.lemos@resgateurgente.com.br',
+        cpf: '890.123.456-66',
+        cohortId: cohortId,
+        cohortName: cohort ? cohort.name : 'Turma Importada',
+        progress: 0,
+        lessonsCompleted: 0,
+        totalLessons: 12,
+        scoreQuiz: 0,
+        simFinished: false,
+        practicalAuthorized: false,
+        daysRemaining: cohort ? (cohort.access_days_limit || 90) : 90,
+      },
+    ];
+
+    setStudents([...importedEntries, ...students]);
+    alert(`Sucesso! ${importedEntries.length} alunos importados e matriculados na turma.`);
+    setIsAddStudentOpen(false);
+    setIsCreateCohortOpen(false);
+    setStudentImportFile(null);
+    setCohortImportFile(null);
+  };
+
+  // Criar Nova Turma
+  const handleCreateCohort = async (e: React.FormEvent) => {
+    e.preventDefault();
+    if (!newCohortName.trim()) return;
+
+    const newId = crypto.randomUUID ? crypto.randomUUID() : (Date.now() + '-cohort');
+    const newCohortObj = {
+      id: newId,
+      name: newCohortName.trim(),
+      access_days_limit: Number(newCohortDays),
+      max_students: Number(newCohortCapacity),
+      status: 'active',
+      practical_location: newCohortLocation.trim() || 'Centro de Treinamento USM',
+      created_at: new Date().toISOString(),
+    };
+
+    // Insere no banco
+    await supabase.from('cohorts').insert([newCohortObj]);
+
+    setCohorts([newCohortObj, ...cohorts]);
+    setSelectedCohort(newCohortObj);
+
+    // Se optou por importar logo na criação
+    if (cohortCreationMode === 'import' && cohortImportFile) {
+      handleImportStudents(newId);
+    }
+
+    setNewCohortName('');
+    setIsCreateCohortOpen(false);
+    setCohortCreationMode('empty');
+    setCohortImportFile(null);
+    alert('Nova turma cadastrada com sucesso!');
+  };
+
+  // Abrir Edição de Aluno
+  const handleOpenEditStudent = (st: StudentRecord) => {
+    setEditingStudent(st);
+    setEditStudentName(st.name);
+    setEditStudentEmail(st.email);
+    setEditStudentCpf(st.cpf);
+    setEditStudentCohortId(st.cohortId);
+    setIsEditStudentOpen(true);
+  };
+
+  // Salvar Edição do Aluno
+  const handleSaveEditStudent = (e: React.FormEvent) => {
+    e.preventDefault();
+    if (!editingStudent) return;
+
+    const targetCohort = cohorts.find(c => c.id === editStudentCohortId);
+
+    setStudents(students.map(s => {
+      if (s.id === editingStudent.id) {
+        return {
+          ...s,
+          name: editStudentName,
+          email: editStudentEmail,
+          cpf: editStudentCpf,
+          cohortId: editStudentCohortId,
+          cohortName: targetCohort ? targetCohort.name : s.cohortName,
+        };
+      }
+      return s;
+    }));
+
+    setIsEditStudentOpen(false);
+    setEditingStudent(null);
   };
 
   // Remover Aluno de uma Turma
@@ -825,16 +959,32 @@ export const AdminDashboard: React.FC = () => {
                   </div>
                 </div>
 
-                <button
-                  onClick={() => {
-                    setNewStudentCohortId(cohorts[0]?.id || '');
-                    setIsAddStudentOpen(true);
-                  }}
-                  className="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl font-bold text-xs text-slate-950 bg-gradient-to-r from-uniao-400 to-teal-300 hover:brightness-110 shadow"
-                >
-                  <UserPlus className="w-4 h-4" />
-                  <span>+ Adicionar Aluno a uma Turma</span>
-                </button>
+                <div className="flex items-center gap-3">
+                  {/* REQUISITO: BOTÃO DE CRIAR TURMA */}
+                  <button
+                    onClick={() => {
+                      setNewCohortName('');
+                      setCohortCreationMode('empty');
+                      setIsCreateCohortOpen(true);
+                    }}
+                    className="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl font-bold text-xs text-white bg-slate-800 hover:bg-slate-700 border border-white/10 transition-colors shadow"
+                  >
+                    <Plus className="w-4 h-4 text-uniao-400" />
+                    <span>+ Criar Nova Turma</span>
+                  </button>
+
+                  <button
+                    onClick={() => {
+                      setNewStudentCohortId(cohorts[0]?.id || '');
+                      setStudentAddMode('single');
+                      setIsAddStudentOpen(true);
+                    }}
+                    className="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl font-bold text-xs text-slate-950 bg-gradient-to-r from-uniao-400 to-teal-300 hover:brightness-110 shadow"
+                  >
+                    <UserPlus className="w-4 h-4" />
+                    <span>+ Matricular Aluno</span>
+                  </button>
+                </div>
               </div>
 
               {cohortSaveSuccess && (
@@ -946,14 +1096,24 @@ export const AdminDashboard: React.FC = () => {
                                   <div className="text-[10px] text-slate-400 truncate">{st.email}</div>
                                   <div className="text-[10px] text-uniao-400">Progresso: {st.progress}% • {st.daysRemaining}d restantes</div>
                                 </div>
-                                <button
-                                  type="button"
-                                  onClick={() => handleRemoveStudent(st.id, st.name)}
-                                  className="p-1.5 rounded-lg text-slate-500 hover:text-red-400 hover:bg-red-500/10 transition-colors shrink-0"
-                                  title="Remover da Turma"
-                                >
-                                  <UserMinus className="w-4 h-4" />
-                                </button>
+                                <div className="flex items-center gap-1 shrink-0">
+                                  <button
+                                    type="button"
+                                    onClick={() => handleOpenEditStudent(st)}
+                                    className="p-1.5 rounded-lg text-slate-400 hover:text-uniao-300 hover:bg-uniao-500/10 transition-colors"
+                                    title="Editar Dados / Turma do Aluno"
+                                  >
+                                    <Settings className="w-3.5 h-3.5" />
+                                  </button>
+                                  <button
+                                    type="button"
+                                    onClick={() => handleRemoveStudent(st.id, st.name)}
+                                    className="p-1.5 rounded-lg text-slate-500 hover:text-red-400 hover:bg-red-500/10 transition-colors"
+                                    title="Remover da Turma"
+                                  >
+                                    <UserMinus className="w-4 h-4" />
+                                  </button>
+                                </div>
                               </div>
                             ))}
                           </div>
@@ -1453,7 +1613,154 @@ export const AdminDashboard: React.FC = () => {
       </main>
 
       {/* ========================================================================= */}
-      {/* MODAL 1: MATRICULAR ALUNO EM TURMA ESPECÍFICA */}
+      {/* MODAL: CRIAR NOVA TURMA (OPÇÃO DE TURMA VAZIA, MANUAL OU IMPORTAR PDF/EXCEL) */}
+      {/* ========================================================================= */}
+      {isCreateCohortOpen && (
+        <div className="fixed inset-0 z-50 bg-slate-950/80 backdrop-blur-sm flex items-center justify-center p-4">
+          <div className="bg-slate-900 border border-white/10 rounded-2xl p-6 sm:p-8 max-w-lg w-full space-y-5 shadow-2xl">
+            <div className="flex items-center justify-between border-b border-white/10 pb-4">
+              <div className="flex items-center gap-2.5">
+                <School className="w-5 h-5 text-uniao-400" />
+                <h3 className="font-bold text-white text-base">Cadastrar Nova Turma</h3>
+              </div>
+              <button 
+                onClick={() => setIsCreateCohortOpen(false)}
+                className="text-slate-400 hover:text-white"
+              >
+                <X className="w-5 h-5" />
+              </button>
+            </div>
+
+            <form onSubmit={handleCreateCohort} className="space-y-4">
+              <div className="space-y-1">
+                <label className="text-xs font-semibold text-slate-300">Nome da Turma</label>
+                <input
+                  type="text"
+                  required
+                  value={newCohortName}
+                  onChange={(e) => setNewCohortName(e.target.value)}
+                  placeholder="Ex: Turma Hospital Santa Cruz — SBV & DEA"
+                  className="w-full px-3 py-2.5 rounded-xl bg-slate-950 border border-white/10 text-white text-xs focus:outline-none focus:border-uniao-500"
+                />
+              </div>
+
+              <div className="grid grid-cols-2 gap-4">
+                <div className="space-y-1">
+                  <label className="text-xs font-semibold text-slate-300">Prazo de Acesso (Dias)</label>
+                  <input
+                    type="number"
+                    min={1}
+                    required
+                    value={newCohortDays}
+                    onChange={(e) => setNewCohortDays(Number(e.target.value))}
+                    className="w-full px-3 py-2.5 rounded-xl bg-slate-950 border border-white/10 text-white text-xs font-mono text-amber-300 font-bold focus:outline-none focus:border-uniao-500"
+                  />
+                </div>
+                <div className="space-y-1">
+                  <label className="text-xs font-semibold text-slate-300">Vagas / Capacidade</label>
+                  <input
+                    type="number"
+                    min={1}
+                    required
+                    value={newCohortCapacity}
+                    onChange={(e) => setNewCohortCapacity(Number(e.target.value))}
+                    className="w-full px-3 py-2.5 rounded-xl bg-slate-950 border border-white/10 text-white text-xs font-mono focus:outline-none focus:border-uniao-500"
+                  />
+                </div>
+              </div>
+
+              <div className="space-y-1">
+                <label className="text-xs font-semibold text-slate-300">Local da Aula Prática Presencial</label>
+                <input
+                  type="text"
+                  value={newCohortLocation}
+                  onChange={(e) => setNewCohortLocation(e.target.value)}
+                  placeholder="Ex: Base Central USM ou In Company"
+                  className="w-full px-3 py-2.5 rounded-xl bg-slate-950 border border-white/10 text-white text-xs focus:outline-none focus:border-uniao-500"
+                />
+              </div>
+
+              {/* OPÇÕES DE ALUNOS NA CRIAÇÃO: APENAS CRIAR TURMA, MANUAL OU IMPORTAR PDF/EXCEL */}
+              <div className="pt-2 space-y-2 border-t border-white/10">
+                <label className="text-xs font-bold uppercase tracking-wider text-slate-400 block">
+                  Matrícula de Alunos Inicial:
+                </label>
+                <div className="grid grid-cols-3 gap-2 text-xs">
+                  <button
+                    type="button"
+                    onClick={() => setCohortCreationMode('empty')}
+                    className={`p-2.5 rounded-xl border text-center transition-all ${
+                      cohortCreationMode === 'empty'
+                        ? 'bg-uniao-600 text-white border-uniao-500 font-bold'
+                        : 'bg-slate-950 text-slate-400 border-white/10 hover:text-white'
+                    }`}
+                  >
+                    Apenas Criar Turma
+                  </button>
+                  <button
+                    type="button"
+                    onClick={() => setCohortCreationMode('manual')}
+                    className={`p-2.5 rounded-xl border text-center transition-all ${
+                      cohortCreationMode === 'manual'
+                        ? 'bg-uniao-600 text-white border-uniao-500 font-bold'
+                        : 'bg-slate-950 text-slate-400 border-white/10 hover:text-white'
+                    }`}
+                  >
+                    Manual Depois
+                  </button>
+                  <button
+                    type="button"
+                    onClick={() => setCohortCreationMode('import')}
+                    className={`p-2.5 rounded-xl border text-center transition-all ${
+                      cohortCreationMode === 'import'
+                        ? 'bg-uniao-600 text-white border-uniao-500 font-bold'
+                        : 'bg-slate-950 text-slate-400 border-white/10 hover:text-white'
+                    }`}
+                  >
+                    Importar PDF/Excel
+                  </button>
+                </div>
+
+                {cohortCreationMode === 'import' && (
+                  <div className="p-4 rounded-xl bg-slate-950 border border-white/10 space-y-2 animate-fadeIn">
+                    <span className="text-[11px] text-slate-300 block font-semibold">
+                      Selecione a lista em PDF ou planilha Excel (.xlsx, .csv):
+                    </span>
+                    <input
+                      type="file"
+                      accept=".pdf,.xlsx,.xls,.csv"
+                      onChange={(e) => setCohortImportFile(e.target.files?.[0] || null)}
+                      className="w-full text-xs text-slate-400 file:mr-2 file:py-1.5 file:px-3 file:rounded-lg file:border-0 file:text-xs file:font-semibold file:bg-uniao-600 file:text-white hover:file:bg-uniao-500 cursor-pointer"
+                    />
+                    <span className="text-[10px] text-slate-500 block">
+                      A plataforma extrai Nome, E-mail e CPF automaticamente para a matrícula.
+                    </span>
+                  </div>
+                )}
+              </div>
+
+              <div className="pt-3 flex justify-end gap-3">
+                <button
+                  type="button"
+                  onClick={() => setIsCreateCohortOpen(false)}
+                  className="px-4 py-2.5 rounded-xl text-xs text-slate-400 hover:text-white"
+                >
+                  Cancelar
+                </button>
+                <button
+                  type="submit"
+                  className="px-6 py-2.5 rounded-xl font-bold text-xs text-slate-950 bg-gradient-to-r from-uniao-400 to-teal-300 hover:brightness-110 shadow"
+                >
+                  Confirmar e Criar Turma
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      )}
+
+      {/* ========================================================================= */}
+      {/* MODAL: ADICIONAR ALUNO (SOMENTE UM OU IMPORTAR PDF/EXCEL) */}
       {/* ========================================================================= */}
       {isAddStudentOpen && (
         <div className="fixed inset-0 z-50 bg-slate-950/80 backdrop-blur-sm flex items-center justify-center p-4">
@@ -1461,7 +1768,7 @@ export const AdminDashboard: React.FC = () => {
             <div className="flex items-center justify-between border-b border-white/10 pb-4">
               <div className="flex items-center gap-2.5">
                 <UserPlus className="w-5 h-5 text-uniao-400" />
-                <h3 className="font-bold text-white text-base">Matricular Novo Aluno</h3>
+                <h3 className="font-bold text-white text-base">Matricular Aluno na Turma</h3>
               </div>
               <button 
                 onClick={() => setIsAddStudentOpen(false)}
@@ -1471,61 +1778,206 @@ export const AdminDashboard: React.FC = () => {
               </button>
             </div>
 
-            <form onSubmit={handleAddStudent} className="space-y-4">
+            {/* Alternador de Modo: Somente Um vs Importar PDF/Excel */}
+            <div className="grid grid-cols-2 gap-2 bg-slate-950 p-1 rounded-xl border border-white/10 text-xs">
+              <button
+                type="button"
+                onClick={() => setStudentAddMode('single')}
+                className={`py-2 rounded-lg font-bold transition-all ${
+                  studentAddMode === 'single'
+                    ? 'bg-uniao-600 text-white shadow'
+                    : 'text-slate-400 hover:text-white'
+                }`}
+              >
+                Adicionar Somente Um
+              </button>
+              <button
+                type="button"
+                onClick={() => setStudentAddMode('import')}
+                className={`py-2 rounded-lg font-bold transition-all ${
+                  studentAddMode === 'import'
+                    ? 'bg-uniao-600 text-white shadow'
+                    : 'text-slate-400 hover:text-white'
+                }`}
+              >
+                Importar PDF / Excel
+              </button>
+            </div>
+
+            <div className="space-y-1">
+              <label className="text-xs font-semibold text-slate-300">Turma de Matrícula</label>
+              <select
+                required
+                value={newStudentCohortId}
+                onChange={(e) => setNewStudentCohortId(e.target.value)}
+                className="w-full px-3 py-2.5 rounded-xl bg-slate-950 border border-white/10 text-white text-xs focus:outline-none focus:border-uniao-500"
+              >
+                {cohorts.map((c) => (
+                  <option key={c.id} value={c.id}>{c.name}</option>
+                ))}
+              </select>
+            </div>
+
+            {studentAddMode === 'single' ? (
+              <form onSubmit={handleAddStudent} className="space-y-4">
+                <div className="space-y-1">
+                  <label className="text-xs font-semibold text-slate-300">Nome Completo</label>
+                  <input
+                    type="text"
+                    required
+                    value={newStudentName}
+                    onChange={(e) => setNewStudentName(e.target.value)}
+                    placeholder="Ex: Dra. Ana Paula Ramos"
+                    className="w-full px-3 py-2.5 rounded-xl bg-slate-950 border border-white/10 text-white text-xs focus:outline-none focus:border-uniao-500"
+                  />
+                </div>
+
+                <div className="space-y-1">
+                  <label className="text-xs font-semibold text-slate-300">E-mail de Acesso</label>
+                  <input
+                    type="email"
+                    required
+                    value={newStudentEmail}
+                    onChange={(e) => setNewStudentEmail(e.target.value)}
+                    placeholder="aluno@exemplo.com"
+                    className="w-full px-3 py-2.5 rounded-xl bg-slate-950 border border-white/10 text-white text-xs focus:outline-none focus:border-uniao-500"
+                  />
+                </div>
+
+                <div className="space-y-1">
+                  <label className="text-xs font-semibold text-slate-300">CPF (Opcional)</label>
+                  <input
+                    type="text"
+                    value={newStudentCpf}
+                    onChange={(e) => setNewStudentCpf(e.target.value)}
+                    placeholder="000.000.000-00"
+                    className="w-full px-3 py-2.5 rounded-xl bg-slate-950 border border-white/10 text-white text-xs focus:outline-none focus:border-uniao-500"
+                  />
+                </div>
+
+                <div className="pt-2 flex justify-end gap-3">
+                  <button
+                    type="button"
+                    onClick={() => setIsAddStudentOpen(false)}
+                    className="px-4 py-2.5 rounded-xl text-xs text-slate-400 hover:text-white"
+                  >
+                    Cancelar
+                  </button>
+                  <button
+                    type="submit"
+                    className="px-6 py-2.5 rounded-xl font-bold text-xs text-slate-950 bg-gradient-to-r from-uniao-400 to-teal-300 hover:brightness-110 shadow"
+                  >
+                    Matricular Aluno
+                  </button>
+                </div>
+              </form>
+            ) : (
+              <div className="space-y-4">
+                <div className="border-2 border-dashed border-white/10 rounded-2xl p-6 text-center space-y-2 bg-slate-950/60">
+                  <input
+                    type="file"
+                    accept=".pdf,.xlsx,.xls,.csv"
+                    onChange={(e) => setStudentImportFile(e.target.files?.[0] || null)}
+                    className="w-full text-xs text-slate-400 file:mr-2 file:py-2 file:px-3 file:rounded-lg file:border-0 file:text-xs file:font-semibold file:bg-uniao-600 file:text-white hover:file:bg-uniao-500 cursor-pointer"
+                  />
+                  <div className="text-[11px] text-slate-400">
+                    Formatos aceitos: PDF oficial de lista ou Planilha Excel (.xlsx, .csv).
+                  </div>
+                </div>
+
+                <div className="pt-2 flex justify-end gap-3">
+                  <button
+                    type="button"
+                    onClick={() => setIsAddStudentOpen(false)}
+                    className="px-4 py-2.5 rounded-xl text-xs text-slate-400 hover:text-white"
+                  >
+                    Cancelar
+                  </button>
+                  <button
+                    type="button"
+                    disabled={!studentImportFile}
+                    onClick={() => handleImportStudents(newStudentCohortId || cohorts[0]?.id)}
+                    className="px-6 py-2.5 rounded-xl font-bold text-xs text-slate-950 bg-gradient-to-r from-uniao-400 to-teal-300 hover:brightness-110 disabled:opacity-40 shadow"
+                  >
+                    Processar e Importar
+                  </button>
+                </div>
+              </div>
+            )}
+          </div>
+        </div>
+      )}
+
+      {/* ========================================================================= */}
+      {/* MODAL: EDITAR DADOS E TURMA DO ALUNO */}
+      {/* ========================================================================= */}
+      {isEditStudentOpen && editingStudent && (
+        <div className="fixed inset-0 z-50 bg-slate-950/80 backdrop-blur-sm flex items-center justify-center p-4">
+          <div className="bg-slate-900 border border-white/10 rounded-2xl p-6 sm:p-8 max-w-md w-full space-y-5 shadow-2xl">
+            <div className="flex items-center justify-between border-b border-white/10 pb-4">
+              <div className="flex items-center gap-2.5">
+                <Settings className="w-5 h-5 text-uniao-400" />
+                <h3 className="font-bold text-white text-base">Editar Aluno</h3>
+              </div>
+              <button 
+                onClick={() => setIsEditStudentOpen(false)}
+                className="text-slate-400 hover:text-white"
+              >
+                <X className="w-5 h-5" />
+              </button>
+            </div>
+
+            <form onSubmit={handleSaveEditStudent} className="space-y-4">
               <div className="space-y-1">
-                <label className="text-xs font-semibold text-slate-300">Turma de Destino</label>
+                <label className="text-xs font-semibold text-slate-300">Nome Completo</label>
+                <input
+                  type="text"
+                  required
+                  value={editStudentName}
+                  onChange={(e) => setEditStudentName(e.target.value)}
+                  className="w-full px-3 py-2.5 rounded-xl bg-slate-950 border border-white/10 text-white text-xs focus:outline-none focus:border-uniao-500"
+                />
+              </div>
+
+              <div className="space-y-1">
+                <label className="text-xs font-semibold text-slate-300">E-mail</label>
+                <input
+                  type="email"
+                  required
+                  value={editStudentEmail}
+                  onChange={(e) => setEditStudentEmail(e.target.value)}
+                  className="w-full px-3 py-2.5 rounded-xl bg-slate-950 border border-white/10 text-white text-xs focus:outline-none focus:border-uniao-500"
+                />
+              </div>
+
+              <div className="space-y-1">
+                <label className="text-xs font-semibold text-slate-300">CPF</label>
+                <input
+                  type="text"
+                  value={editStudentCpf}
+                  onChange={(e) => setEditStudentCpf(e.target.value)}
+                  className="w-full px-3 py-2.5 rounded-xl bg-slate-950 border border-white/10 text-white text-xs focus:outline-none focus:border-uniao-500"
+                />
+              </div>
+
+              <div className="space-y-1">
+                <label className="text-xs font-semibold text-slate-300">Turma Vinculada</label>
                 <select
                   required
-                  value={newStudentCohortId}
-                  onChange={(e) => setNewStudentCohortId(e.target.value)}
+                  value={editStudentCohortId}
+                  onChange={(e) => setEditStudentCohortId(e.target.value)}
                   className="w-full px-3 py-2.5 rounded-xl bg-slate-950 border border-white/10 text-white text-xs focus:outline-none focus:border-uniao-500"
                 >
-                  <option value="">Selecione uma Turma</option>
                   {cohorts.map((c) => (
                     <option key={c.id} value={c.id}>{c.name}</option>
                   ))}
                 </select>
               </div>
 
-              <div className="space-y-1">
-                <label className="text-xs font-semibold text-slate-300">Nome Completo</label>
-                <input
-                  type="text"
-                  required
-                  value={newStudentName}
-                  onChange={(e) => setNewStudentName(e.target.value)}
-                  placeholder="Ex: Dra. Ana Paula Ramos"
-                  className="w-full px-3 py-2.5 rounded-xl bg-slate-950 border border-white/10 text-white text-xs focus:outline-none focus:border-uniao-500"
-                />
-              </div>
-
-              <div className="space-y-1">
-                <label className="text-xs font-semibold text-slate-300">E-mail de Acesso</label>
-                <input
-                  type="email"
-                  required
-                  value={newStudentEmail}
-                  onChange={(e) => setNewStudentEmail(e.target.value)}
-                  placeholder="aluno@exemplo.com"
-                  className="w-full px-3 py-2.5 rounded-xl bg-slate-950 border border-white/10 text-white text-xs focus:outline-none focus:border-uniao-500"
-                />
-              </div>
-
-              <div className="space-y-1">
-                <label className="text-xs font-semibold text-slate-300">CPF (Opcional)</label>
-                <input
-                  type="text"
-                  value={newStudentCpf}
-                  onChange={(e) => setNewStudentCpf(e.target.value)}
-                  placeholder="000.000.000-00"
-                  className="w-full px-3 py-2.5 rounded-xl bg-slate-950 border border-white/10 text-white text-xs focus:outline-none focus:border-uniao-500"
-                />
-              </div>
-
               <div className="pt-2 flex justify-end gap-3">
                 <button
                   type="button"
-                  onClick={() => setIsAddStudentOpen(false)}
+                  onClick={() => setIsEditStudentOpen(false)}
                   className="px-4 py-2.5 rounded-xl text-xs text-slate-400 hover:text-white"
                 >
                   Cancelar
@@ -1534,7 +1986,7 @@ export const AdminDashboard: React.FC = () => {
                   type="submit"
                   className="px-6 py-2.5 rounded-xl font-bold text-xs text-slate-950 bg-gradient-to-r from-uniao-400 to-teal-300 hover:brightness-110 shadow"
                 >
-                  Concluir Matrícula
+                  Salvar Alterações
                 </button>
               </div>
             </form>
