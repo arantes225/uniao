@@ -40,12 +40,12 @@ export const StudentNavbar: React.FC<StudentNavbarProps> = ({
 
   return (
     <>
-      <header className={`sticky top-0 z-40 transition-colors duration-200 border-b w-full shadow-sm ${
+      <header className={`sticky top-0 z-50 transition-colors duration-200 border-b w-full shadow-sm ${
         theme === 'dark' 
           ? 'bg-slate-900 border-white/10 text-white' 
           : 'bg-white border-slate-200 text-slate-800 shadow-slate-100'
       }`}>
-        <div className="w-full px-4 sm:px-6 h-16 flex items-center justify-between">
+        <div className="w-full px-4 sm:px-6 h-16 flex items-center justify-between relative">
           
           {/* Brand - UNIÃO SERVIÇOS MÉDICOS alinhado à esquerda */}
           <Link to="/aluno/dashboard" className="flex items-center gap-3.5 group text-left">

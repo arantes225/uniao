@@ -4,6 +4,7 @@ import {
   ArrowLeft, Video, BookOpen, HelpCircle, CheckCircle2, 
   XCircle, ChevronRight, Play, ZoomIn, ZoomOut
 } from 'lucide-react';
+import { useTheme } from '../../context/ThemeContext';
 
 interface Question {
   id: number;
@@ -15,6 +16,7 @@ interface Question {
 
 export const IntegratedLessonPage: React.FC = () => {
   const navigate = useNavigate();
+  const { theme } = useTheme();
 
   // Abas integradas conforme Prompt Mestre (Videoaula | Apostila | 5 Questões)
   const [activeTab, setActiveTab] = useState<'video' | 'material' | 'questions'>('video');
@@ -105,23 +107,35 @@ export const IntegratedLessonPage: React.FC = () => {
   const isCompleted = submitted && calculateScore() >= 4;
 
   return (
-    <div className="min-h-screen bg-slate-900 text-white flex flex-col">
+    <div className={`min-h-screen flex flex-col transition-colors duration-200 ${
+      theme === 'dark' ? 'bg-slate-900 text-white' : 'bg-slate-50 text-slate-900'
+    }`}>
       
       {/* Top Bar da Aula */}
-      <header className="bg-slate-950 border-b border-slate-800 px-4 sm:px-6 h-16 flex items-center justify-between sticky top-0 z-50">
+      <header className={`border-b px-4 sm:px-6 h-16 flex items-center justify-between sticky top-0 z-30 transition-colors ${
+        theme === 'dark' ? 'bg-slate-950 border-slate-800' : 'bg-white border-slate-200 shadow-xs'
+      }`}>
         <div className="flex items-center gap-4">
           <Link
             to="/aluno/dashboard"
-            className="p-2 rounded-lg bg-slate-800 text-slate-300 hover:text-white hover:bg-slate-700 transition-colors flex items-center gap-1.5 text-xs font-semibold"
+            className={`p-2 rounded-lg transition-colors flex items-center gap-1.5 text-xs font-semibold ${
+              theme === 'dark'
+                ? 'bg-slate-800 text-slate-300 hover:text-white hover:bg-slate-700'
+                : 'bg-slate-100 text-slate-700 hover:text-slate-950 hover:bg-slate-200'
+            }`}
           >
             <ArrowLeft className="w-4 h-4" />
             <span className="hidden sm:inline">Voltar à Trilha</span>
           </Link>
-          <div className="border-l border-slate-800 pl-4">
-            <span className="text-[11px] font-bold text-uniao-400 uppercase tracking-wider block">
+          <div className={`border-l pl-4 ${theme === 'dark' ? 'border-slate-800' : 'border-slate-200'}`}>
+            <span className={`text-[11px] font-bold uppercase tracking-wider block ${
+              theme === 'dark' ? 'text-uniao-400' : 'text-teal-700'
+            }`}>
               Módulo 01 • Aula 02
             </span>
-            <h1 className="text-sm sm:text-base font-bold text-white truncate max-w-xs sm:max-w-md">
+            <h1 className={`text-sm sm:text-base font-bold truncate max-w-xs sm:max-w-md ${
+              theme === 'dark' ? 'text-white' : 'text-slate-900'
+            }`}>
               Avaliação e Segurança da Cena
             </h1>
           </div>
@@ -129,12 +143,20 @@ export const IntegratedLessonPage: React.FC = () => {
 
         <div className="flex items-center gap-3">
           {isCompleted ? (
-            <div className="flex items-center gap-1.5 text-xs font-bold text-emerald-400 bg-emerald-950/80 border border-emerald-500/40 px-3 py-1.5 rounded-full">
-              <CheckCircle2 className="w-4 h-4 text-emerald-400" />
+            <div className={`flex items-center gap-1.5 text-xs font-bold px-3 py-1.5 rounded-full border ${
+              theme === 'dark'
+                ? 'text-emerald-400 bg-emerald-950/80 border-emerald-500/40'
+                : 'text-emerald-800 bg-emerald-50 border-emerald-200'
+            }`}>
+              <CheckCircle2 className="w-4 h-4 text-emerald-500" />
               <span>Aula Concluída</span>
             </div>
           ) : (
-            <div className="flex items-center gap-1.5 text-xs font-semibold text-amber-400 bg-amber-950/60 border border-amber-500/30 px-3 py-1.5 rounded-full">
+            <div className={`flex items-center gap-1.5 text-xs font-semibold px-3 py-1.5 rounded-full border ${
+              theme === 'dark'
+                ? 'text-amber-400 bg-amber-950/60 border-amber-500/30'
+                : 'text-amber-800 bg-amber-50 border-amber-200'
+            }`}>
               <span>Em andamento</span>
             </div>
           )}
@@ -142,45 +164,53 @@ export const IntegratedLessonPage: React.FC = () => {
       </header>
 
       {/* Navegação Interna: 3 Abas Integradas (Videoaula | Apostila | 5 Questões) */}
-      <div className="bg-slate-950/90 border-b border-slate-800 px-4 sm:px-8">
+      <div className={`border-b px-4 sm:px-8 transition-colors ${
+        theme === 'dark' ? 'bg-slate-950/90 border-slate-800' : 'bg-white border-slate-200'
+      }`}>
         <div className="max-w-6xl mx-auto flex gap-2 sm:gap-6">
           <button
             onClick={() => setActiveTab('video')}
             className={`flex items-center gap-2 py-3.5 px-4 text-xs sm:text-sm font-bold border-b-2 transition-all ${
               activeTab === 'video'
-                ? 'border-uniao-500 text-uniao-400'
-                : 'border-transparent text-slate-400 hover:text-slate-200'
+                ? theme === 'dark' ? 'border-uniao-500 text-uniao-400' : 'border-teal-600 text-teal-700'
+                : theme === 'dark' ? 'border-transparent text-slate-400 hover:text-slate-200' : 'border-transparent text-slate-500 hover:text-slate-900'
             }`}
           >
             <Video className="w-4 h-4" />
             <span>Videoaula</span>
-            {videoWatched && <CheckCircle2 className="w-3.5 h-3.5 text-emerald-400 ml-1" />}
+            {videoWatched && <CheckCircle2 className="w-3.5 h-3.5 text-emerald-500 ml-1" />}
           </button>
 
           <button
             onClick={() => setActiveTab('material')}
             className={`flex items-center gap-2 py-3.5 px-4 text-xs sm:text-sm font-bold border-b-2 transition-all ${
               activeTab === 'material'
-                ? 'border-uniao-500 text-uniao-400'
-                : 'border-transparent text-slate-400 hover:text-slate-200'
+                ? theme === 'dark' ? 'border-uniao-500 text-uniao-400' : 'border-teal-600 text-teal-700'
+                : theme === 'dark' ? 'border-transparent text-slate-400 hover:text-slate-200' : 'border-transparent text-slate-500 hover:text-slate-900'
             }`}
           >
             <BookOpen className="w-4 h-4" />
             <span>Apostila (PDF)</span>
-            {readingConfirmed && <CheckCircle2 className="w-3.5 h-3.5 text-emerald-400 ml-1" />}
+            {readingConfirmed && <CheckCircle2 className="w-3.5 h-3.5 text-emerald-500 ml-1" />}
           </button>
 
           <button
             onClick={() => setActiveTab('questions')}
             className={`flex items-center gap-2 py-3.5 px-4 text-xs sm:text-sm font-bold border-b-2 transition-all ${
               activeTab === 'questions'
-                ? 'border-uniao-500 text-uniao-400'
-                : 'border-transparent text-slate-400 hover:text-slate-200'
+                ? theme === 'dark' ? 'border-uniao-500 text-uniao-400' : 'border-teal-600 text-teal-700'
+                : theme === 'dark' ? 'border-transparent text-slate-400 hover:text-slate-200' : 'border-transparent text-slate-500 hover:text-slate-900'
             }`}
           >
             <HelpCircle className="w-4 h-4" />
             <span>5 Questões</span>
-            {submitted && <span className="text-[10px] px-1.5 py-0.5 rounded bg-uniao-900 text-uniao-300 ml-1">{calculateScore()}/5</span>}
+            {submitted && (
+              <span className={`text-[10px] px-1.5 py-0.5 rounded ml-1 font-bold ${
+                theme === 'dark' ? 'bg-uniao-900 text-uniao-300' : 'bg-teal-100 text-teal-800'
+              }`}>
+                {calculateScore()}/5
+              </span>
+            )}
           </button>
         </div>
       </div>
@@ -215,14 +245,18 @@ export const IntegratedLessonPage: React.FC = () => {
               </div>
             </div>
 
-            <div className="bg-slate-800/60 rounded-2xl p-6 border border-slate-700/60 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+            <div className={`rounded-2xl p-6 border flex flex-col sm:flex-row sm:items-center justify-between gap-4 transition-colors ${
+              theme === 'dark'
+                ? 'bg-slate-800/60 border-slate-700/60'
+                : 'bg-white border-slate-200/90 shadow-sm'
+            }`}>
               <div>
-                <h4 className="text-base font-bold text-white">Próximo passo recomendado:</h4>
-                <p className="text-xs text-slate-400">Consulte a apostila didática e em seguida resolva as 5 questões para concluir a aula.</p>
+                <h4 className={`text-base font-bold ${theme === 'dark' ? 'text-white' : 'text-slate-900'}`}>Próximo passo recomendado:</h4>
+                <p className={`text-xs ${theme === 'dark' ? 'text-slate-400' : 'text-slate-500'}`}>Consulte a apostila didática e em seguida resolva as 5 questões para concluir a aula.</p>
               </div>
               <button
                 onClick={() => setActiveTab('material')}
-                className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl font-bold text-slate-900 bg-uniao-400 hover:bg-uniao-300 text-xs transition-all"
+                className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl font-bold text-slate-900 bg-uniao-400 hover:bg-uniao-300 text-xs transition-all shadow-sm"
               >
                 <span>Abrir Apostila</span>
                 <ChevronRight className="w-4 h-4" />
@@ -234,36 +268,50 @@ export const IntegratedLessonPage: React.FC = () => {
         {/* ABA 2: APOSTILA (Visualizador PDF Integrado) */}
         {activeTab === 'material' && (
           <div className="space-y-6">
-            <div className="bg-slate-800 rounded-2xl border border-slate-700 overflow-hidden shadow-2xl">
+            <div className={`rounded-2xl border overflow-hidden shadow-2xl transition-colors ${
+              theme === 'dark'
+                ? 'bg-slate-800 border-slate-700'
+                : 'bg-white border-slate-200 shadow-slate-200/80'
+            }`}>
               {/* Barra de Ferramentas da Apostila */}
-              <div className="bg-slate-900/90 border-b border-slate-700 p-3 px-6 flex items-center justify-between text-xs">
-                <div className="flex items-center gap-2 font-semibold text-slate-300">
-                  <BookOpen className="w-4 h-4 text-uniao-400" />
+              <div className={`border-b p-3 px-6 flex items-center justify-between text-xs transition-colors ${
+                theme === 'dark'
+                  ? 'bg-slate-900/90 border-slate-700 text-slate-300'
+                  : 'bg-slate-50 border-slate-200 text-slate-700'
+              }`}>
+                <div className="flex items-center gap-2 font-semibold">
+                  <BookOpen className="w-4 h-4 text-uniao-600 dark:text-uniao-400" />
                   <span>Apostila_USM_Mod01_Aula02_Seguranca_Cena.pdf</span>
                 </div>
                 <div className="flex items-center gap-3">
-                  <button className="p-1.5 rounded hover:bg-slate-800 text-slate-400 hover:text-white" title="Reduzir Zoom">
+                  <button className={`p-1.5 rounded transition-colors ${
+                    theme === 'dark' ? 'hover:bg-slate-800 text-slate-400 hover:text-white' : 'hover:bg-slate-200 text-slate-500 hover:text-slate-900'
+                  }`} title="Reduzir Zoom">
                     <ZoomOut className="w-4 h-4" />
                   </button>
-                  <span className="text-slate-400 font-mono">Página 1 de 6</span>
-                  <button className="p-1.5 rounded hover:bg-slate-800 text-slate-400 hover:text-white" title="Aumentar Zoom">
+                  <span className={`font-mono ${theme === 'dark' ? 'text-slate-400' : 'text-slate-500'}`}>Página 1 de 6</span>
+                  <button className={`p-1.5 rounded transition-colors ${
+                    theme === 'dark' ? 'hover:bg-slate-800 text-slate-400 hover:text-white' : 'hover:bg-slate-200 text-slate-500 hover:text-slate-900'
+                  }`} title="Aumentar Zoom">
                     <ZoomIn className="w-4 h-4" />
                   </button>
                 </div>
               </div>
 
               {/* Área de Leitura Renderizada */}
-              <div className="p-8 sm:p-14 bg-white text-slate-900 max-w-3xl mx-auto my-6 rounded-xl shadow-lg space-y-6 font-serif">
-                <div className="border-b border-slate-200 pb-4 text-center">
-                  <span className="text-[10px] font-sans font-bold tracking-widest text-uniao-700 uppercase">
+              <div className={`p-8 sm:p-14 max-w-3xl mx-auto my-6 rounded-xl border shadow-lg space-y-6 font-serif transition-colors ${
+                theme === 'dark' ? 'bg-slate-900 text-slate-100 border-slate-700' : 'bg-white text-slate-900 border-slate-200/80'
+              }`}>
+                <div className="border-b border-slate-200 dark:border-slate-800 pb-4 text-center">
+                  <span className="text-[10px] font-sans font-bold tracking-widest text-uniao-600 dark:text-uniao-400 uppercase">
                     União Serviços Médicos • Material Didático Oficial
                   </span>
-                  <h2 className="text-2xl font-bold font-sans text-slate-900 mt-1">
+                  <h2 className="text-2xl font-bold font-sans text-slate-900 dark:text-white mt-1">
                     Aula 02: Segurança da Cena e Biossegurança
                   </h2>
                 </div>
 
-                <div className="text-sm leading-relaxed space-y-4 font-sans text-slate-700">
+                <div className="text-sm leading-relaxed space-y-4 font-sans text-slate-700 dark:text-slate-300">
                   <p>
                     <strong>1. Introdução e Princípio Fundamental:</strong> No atendimento pré-hospitalar (APH), a regra absoluta e primária é: <em>a segurança do socorrista sempre vem em primeiro lugar</em>. Uma vítima a mais na ocorrência não resolve a emergência e consome recursos vitais.
                   </p>
@@ -282,11 +330,15 @@ export const IntegratedLessonPage: React.FC = () => {
               </div>
 
               {/* Rodapé da Apostila */}
-              <div className="bg-slate-900/90 border-t border-slate-700 p-4 px-6 flex items-center justify-between text-xs">
-                <span className="text-slate-400">Leitura obrigatória para fixação do conteúdo</span>
+              <div className={`border-t p-4 px-6 flex items-center justify-between text-xs transition-colors ${
+                theme === 'dark'
+                  ? 'bg-slate-900/90 border-slate-700 text-slate-400'
+                  : 'bg-slate-50 border-slate-200 text-slate-600'
+              }`}>
+                <span>Leitura obrigatória para fixação do conteúdo</span>
                 <button
                   onClick={() => { setReadingConfirmed(true); setActiveTab('questions'); }}
-                  className="px-4 py-2 rounded-lg bg-uniao-600 hover:bg-uniao-500 text-white font-bold transition-colors"
+                  className="px-4 py-2 rounded-lg bg-uniao-600 hover:bg-uniao-500 text-white font-bold transition-colors shadow-sm"
                 >
                   Confirmar Leitura e Ir para as Questões →
                 </button>
@@ -299,13 +351,13 @@ export const IntegratedLessonPage: React.FC = () => {
         {activeTab === 'questions' && (
           <div className="max-w-3xl mx-auto space-y-8">
             <div className="space-y-2">
-              <span className="text-xs font-bold text-uniao-400 uppercase tracking-wider">
+              <span className="text-xs font-bold text-uniao-600 dark:text-uniao-400 uppercase tracking-wider">
                 Avaliação Formativa • Aula 02
               </span>
-              <h2 className="text-2xl font-extrabold text-white">
+              <h2 className={`text-2xl font-extrabold ${theme === 'dark' ? 'text-white' : 'text-slate-900'}`}>
                 5 Questões de Fixação
               </h2>
-              <p className="text-xs text-slate-400">
+              <p className={`text-xs ${theme === 'dark' ? 'text-slate-400' : 'text-slate-500'}`}>
                 Responda com atenção. Para concluir a aula e liberar o próximo módulo, obtenha pelo menos 80% de aproveitamento (4/5 acertos).
               </p>
             </div>
@@ -322,16 +374,24 @@ export const IntegratedLessonPage: React.FC = () => {
                     className={`rounded-2xl p-6 border transition-all ${
                       submitted
                         ? isCorrect
-                          ? 'bg-slate-800/80 border-emerald-500/50'
-                          : 'bg-slate-800/80 border-red-500/50'
-                        : 'bg-slate-800/70 border-slate-700/80 hover:border-slate-600'
+                          ? theme === 'dark' ? 'bg-slate-800/80 border-emerald-500/50' : 'bg-emerald-50/70 border-emerald-300'
+                          : theme === 'dark' ? 'bg-slate-800/80 border-red-500/50' : 'bg-red-50/70 border-red-300'
+                        : theme === 'dark'
+                          ? 'bg-slate-800/70 border-slate-700/80 hover:border-slate-600'
+                          : 'bg-white border-slate-200/90 shadow-sm hover:border-slate-300'
                     }`}
                   >
                     <div className="flex items-start gap-3 mb-4">
-                      <span className="w-7 h-7 rounded-lg bg-uniao-500/20 text-uniao-400 border border-uniao-500/30 flex items-center justify-center text-xs font-bold shrink-0">
+                      <span className={`w-7 h-7 rounded-lg flex items-center justify-center text-xs font-bold shrink-0 ${
+                        theme === 'dark'
+                          ? 'bg-uniao-500/20 text-uniao-400 border border-uniao-500/30'
+                          : 'bg-teal-50 text-teal-700 border border-teal-200'
+                      }`}>
                         0{idx + 1}
                       </span>
-                      <h3 className="text-sm sm:text-base font-semibold text-slate-100 leading-snug">
+                      <h3 className={`text-sm sm:text-base font-semibold leading-snug ${
+                        theme === 'dark' ? 'text-slate-100' : 'text-slate-800'
+                      }`}>
                         {q.stem}
                       </h3>
                     </div>
@@ -340,18 +400,28 @@ export const IntegratedLessonPage: React.FC = () => {
                     <div className="space-y-2.5">
                       {q.options.map((opt, oIdx) => {
                         const isChosen = selectedOpt === oIdx;
-                        let optionStyle = 'bg-slate-900/60 border-slate-700/70 text-slate-300 hover:bg-slate-700/60';
+                        let optionStyle = theme === 'dark'
+                          ? 'bg-slate-900/60 border-slate-700/70 text-slate-300 hover:bg-slate-700/60'
+                          : 'bg-slate-50 border-slate-200 text-slate-700 hover:bg-slate-100';
 
                         if (submitted) {
                           if (oIdx === q.correct) {
-                            optionStyle = 'bg-emerald-950/80 border-emerald-500 text-emerald-200 font-semibold';
+                            optionStyle = theme === 'dark'
+                              ? 'bg-emerald-950/80 border-emerald-500 text-emerald-200 font-semibold'
+                              : 'bg-emerald-100 border-emerald-500 text-emerald-900 font-semibold';
                           } else if (isChosen && !isCorrect) {
-                            optionStyle = 'bg-red-950/80 border-red-500 text-red-200';
+                            optionStyle = theme === 'dark'
+                              ? 'bg-red-950/80 border-red-500 text-red-200'
+                              : 'bg-red-100 border-red-500 text-red-900 font-semibold';
                           } else {
-                            optionStyle = 'bg-slate-900/40 border-slate-800 text-slate-500 opacity-60';
+                            optionStyle = theme === 'dark'
+                              ? 'bg-slate-900/40 border-slate-800 text-slate-500 opacity-60'
+                              : 'bg-slate-50/60 border-slate-200 text-slate-400 opacity-50';
                           }
                         } else if (isChosen) {
-                          optionStyle = 'bg-uniao-950/90 border-uniao-500 text-uniao-200 font-semibold shadow-sm';
+                          optionStyle = theme === 'dark'
+                            ? 'bg-uniao-950/90 border-uniao-500 text-uniao-200 font-semibold shadow-sm'
+                            : 'bg-teal-50 border-teal-600 text-teal-900 font-semibold shadow-xs';
                         }
 
                         return (
@@ -364,10 +434,10 @@ export const IntegratedLessonPage: React.FC = () => {
                           >
                             <span>{opt}</span>
                             {submitted && oIdx === q.correct && (
-                              <CheckCircle2 className="w-4 h-4 text-emerald-400 shrink-0 ml-2" />
+                              <CheckCircle2 className="w-4 h-4 text-emerald-500 shrink-0 ml-2" />
                             )}
                             {submitted && isChosen && !isCorrect && (
-                              <XCircle className="w-4 h-4 text-red-400 shrink-0 ml-2" />
+                              <XCircle className="w-4 h-4 text-red-500 shrink-0 ml-2" />
                             )}
                           </button>
                         );
@@ -376,11 +446,17 @@ export const IntegratedLessonPage: React.FC = () => {
 
                     {/* Justificativa Pedagógica após envio */}
                     {submitted && (
-                      <div className="mt-4 pt-4 border-t border-slate-700/60 text-xs space-y-1">
-                        <span className="font-bold text-slate-400 uppercase tracking-wider block">
+                      <div className={`mt-4 pt-4 border-t text-xs space-y-1 ${
+                        theme === 'dark' ? 'border-slate-700/60' : 'border-slate-200'
+                      }`}>
+                        <span className={`font-bold uppercase tracking-wider block ${
+                          theme === 'dark' ? 'text-slate-400' : 'text-slate-600'
+                        }`}>
                           Comentário do Instrutor:
                         </span>
-                        <p className="text-slate-300 leading-relaxed">
+                        <p className={`leading-relaxed ${
+                          theme === 'dark' ? 'text-slate-300' : 'text-slate-700'
+                        }`}>
                           {q.explanation}
                         </p>
                       </div>
@@ -391,10 +467,14 @@ export const IntegratedLessonPage: React.FC = () => {
             </div>
 
             {/* Painel de Submissão e Ação Final */}
-            <div className="p-6 rounded-2xl bg-slate-800 border border-slate-700 flex flex-col sm:flex-row items-center justify-between gap-4">
+            <div className={`p-6 rounded-2xl border flex flex-col sm:flex-row items-center justify-between gap-4 transition-colors ${
+              theme === 'dark'
+                ? 'bg-slate-800 border-slate-700'
+                : 'bg-white border-slate-200 shadow-sm'
+            }`}>
               {!submitted ? (
                 <>
-                  <div className="text-xs text-slate-400">
+                  <div className={`text-xs ${theme === 'dark' ? 'text-slate-400' : 'text-slate-500'}`}>
                     Respondidas: {Object.keys(answers).length} de 5 questões
                   </div>
                   <button
@@ -408,10 +488,10 @@ export const IntegratedLessonPage: React.FC = () => {
               ) : (
                 <>
                   <div>
-                    <div className="text-base font-bold text-white">
+                    <div className={`text-base font-bold ${theme === 'dark' ? 'text-white' : 'text-slate-900'}`}>
                       Resultado: {calculateScore()} de 5 acertos ({Math.round((calculateScore() / 5) * 100)}%)
                     </div>
-                    <div className="text-xs text-slate-400">
+                    <div className={`text-xs ${theme === 'dark' ? 'text-slate-400' : 'text-slate-500'}`}>
                       {calculateScore() >= 4 
                         ? 'Parabéns! Critérios de aprovação da aula atingidos.' 
                         : 'Aproveitamento abaixo de 80%. Recomendamos revisar os materiais antes de refazer.'}
@@ -429,7 +509,11 @@ export const IntegratedLessonPage: React.FC = () => {
                   ) : (
                     <button
                       onClick={() => { setSubmitted(false); setAnswers({}); }}
-                      className="px-6 py-3.5 rounded-xl font-bold text-white bg-slate-700 hover:bg-slate-600 text-sm transition-all"
+                      className={`px-6 py-3.5 rounded-xl font-bold text-sm transition-all ${
+                        theme === 'dark'
+                          ? 'text-white bg-slate-700 hover:bg-slate-600'
+                          : 'text-slate-700 bg-slate-200 hover:bg-slate-300'
+                      }`}
                     >
                       Tentar Novamente
                     </button>
