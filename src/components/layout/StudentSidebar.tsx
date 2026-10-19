@@ -77,8 +77,8 @@ export const StudentSidebar: React.FC<StudentSidebarProps> = () => {
     >
       {/* Brand Header */}
       <div className="h-16 flex items-center justify-between px-4 border-b border-white/10">
-        <Link to="/aluno/dashboard" className="flex items-center gap-3 overflow-hidden">
-          <div className="w-9 h-9 rounded-xl flex items-center justify-center p-1 shrink-0">
+        <Link to="/aluno/dashboard" className="flex items-center gap-3.5 overflow-hidden">
+          <div className="w-12 h-12 rounded-xl flex items-center justify-center p-1 shrink-0">
             <img 
               src={theme === 'light' ? "/brand/simbolo-cruz-uniao-verde.png" : "/brand/simbolo-cruz-uniao.png"} 
               alt="USM" 
@@ -87,8 +87,8 @@ export const StudentSidebar: React.FC<StudentSidebarProps> = () => {
           </div>
           {!collapsed && (
             <div className="flex flex-col truncate">
-              <span className={`font-black text-sm tracking-wider ${theme === 'dark' ? 'text-white' : 'text-slate-900'}`}>UNIÃO</span>
-              <span className="text-[9px] font-bold text-uniao-500 tracking-widest uppercase">LMS Educacional</span>
+              <span className={`font-black text-base tracking-wider ${theme === 'dark' ? 'text-white' : 'text-slate-900'}`}>UNIÃO</span>
+              <span className="text-[10px] font-bold text-uniao-500 tracking-widest uppercase">LMS Educacional</span>
             </div>
           )}
         </Link>

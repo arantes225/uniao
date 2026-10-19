@@ -9,10 +9,10 @@ export const Footer: React.FC = () => {
         
         <div className="grid grid-cols-1 md:grid-cols-4 gap-10">
           
-          {/* Brand info com o ícone branco puro */}
+          {/* Brand info com o ícone branco puro em escala generosa */}
           <div className="md:col-span-2 space-y-4">
-            <div className="flex items-center gap-3">
-              <div className="w-9 h-9 flex items-center justify-center">
+            <div className="flex items-center gap-3.5">
+              <div className="w-13 h-13 sm:w-14 sm:h-14 flex items-center justify-center shrink-0">
                 <img 
                   src="/brand/simbolo-cruz-uniao.png" 
                   alt="União Serviços Médicos" 
@@ -20,10 +20,10 @@ export const Footer: React.FC = () => {
                 />
               </div>
               <div className="flex flex-col">
-                <span className="font-extrabold text-lg tracking-tight text-white leading-none">
+                <span className="font-extrabold text-2xl tracking-tight text-white leading-none">
                   UNIÃO
                 </span>
-                <span className="text-[9px] font-semibold tracking-widest text-slate-400 uppercase mt-1">
+                <span className="text-[10px] font-semibold tracking-widest text-slate-400 uppercase mt-1">
                   Serviços Médicos
                 </span>
               </div>

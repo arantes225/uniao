@@ -19,21 +19,21 @@ export const Navbar: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
           
-          {/* Nova Logomarca Oficial Integrada de Forma Limpa */}
-          <Link to="/" className="flex items-center gap-3.5 group">
-            <div className="w-9 h-9 flex items-center justify-center shrink-0">
+          {/* Nova Logomarca Oficial Integrada de Forma Limpa e com Destaque Maior */}
+          <Link to="/" className="flex items-center gap-4 group">
+            <div className="w-13 h-13 sm:w-14 sm:h-14 flex items-center justify-center shrink-0">
               <img 
                 src="/brand/simbolo-cruz-uniao.png" 
                 alt="Cruz União Serviços Médicos" 
-                className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-300"
+                className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-300 filter drop-shadow-[0_0_10px_rgba(255,255,255,0.25)]"
               />
             </div>
             <div className="flex flex-col">
-              <span className="font-black text-xl tracking-wider text-white font-sans flex items-center gap-1.5 leading-none">
+              <span className="font-black text-2xl tracking-wider text-white font-sans flex items-center gap-1.5 leading-none">
                 UNIÃO
-                <span className="w-1.5 h-1.5 rounded-full bg-uniao-400" />
+                <span className="w-2 h-2 rounded-full bg-uniao-400" />
               </span>
-              <span className="text-[10px] font-bold tracking-[0.25em] text-slate-400 uppercase mt-1">
+              <span className="text-[11px] font-bold tracking-[0.25em] text-slate-300 uppercase mt-1">
                 Serviços Médicos
               </span>
             </div>

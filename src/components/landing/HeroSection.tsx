@@ -73,15 +73,15 @@ export const HeroSection: React.FC = () => {
               
               <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
                 
-                {/* Lado Esquerdo: Aplicação Inteligente e Minimalista do Ícone Branco */}
-                <div className="lg:col-span-5 flex flex-col items-center justify-center text-center p-8 rounded-2xl bg-slate-950/40 border border-white/5 relative overflow-hidden group">
+                {/* Lado Esquerdo: Aplicação Inteligente e Minimalista do Ícone Branco em Maior Escala */}
+                <div className="lg:col-span-5 flex flex-col items-center justify-center text-center p-8 sm:p-10 rounded-2xl bg-slate-950/40 border border-white/5 relative overflow-hidden group">
                   
-                  {/* Ícone Branco Puro sobre o Fundo Escuro */}
-                  <div className="relative w-36 h-36 sm:w-44 sm:h-44 flex items-center justify-center">
+                  {/* Ícone Branco Puro em Destaque Imponente */}
+                  <div className="relative w-48 h-48 sm:w-60 sm:h-60 flex items-center justify-center">
                     <img 
                       src="/brand/simbolo-cruz-uniao.png" 
                       alt="Cruz União Serviços Médicos" 
-                      className="w-full h-full object-contain filter group-hover:scale-105 transition-transform duration-500"
+                      className="w-full h-full object-contain filter group-hover:scale-105 transition-transform duration-500 drop-shadow-[0_4px_20px_rgba(255,255,255,0.15)]"
                     />
                   </div>
 
