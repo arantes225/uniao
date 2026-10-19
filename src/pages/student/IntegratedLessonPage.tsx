@@ -104,7 +104,7 @@ export const IntegratedLessonPage: React.FC = () => {
     return correct;
   };
 
-  const isCompleted = submitted && calculateScore() >= 4;
+  const isCompleted = submitted && calculateScore() >= 2;
 
   return (
     <div className={`min-h-screen flex flex-col transition-colors duration-200 ${
@@ -358,7 +358,7 @@ export const IntegratedLessonPage: React.FC = () => {
                 5 Questões de Fixação
               </h2>
               <p className={`text-xs ${theme === 'dark' ? 'text-slate-400' : 'text-slate-500'}`}>
-                Responda com atenção. Para concluir a aula e liberar o próximo módulo, obtenha pelo menos 80% de aproveitamento (4/5 acertos).
+                Responda com atenção. Para avançar para a próxima aula ou módulo, você precisa acertar <strong>pelo menos 2 das 5 questões</strong> desta atividade.
               </p>
             </div>
 
@@ -475,7 +475,7 @@ export const IntegratedLessonPage: React.FC = () => {
               {!submitted ? (
                 <>
                   <div className={`text-xs ${theme === 'dark' ? 'text-slate-400' : 'text-slate-500'}`}>
-                    Respondidas: {Object.keys(answers).length} de 5 questões
+                    Respondidas: {Object.keys(answers).length} de 5 questões • Mínimo para avançar: 2 acertos
                   </div>
                   <button
                     onClick={() => setSubmitted(true)}
@@ -492,18 +492,18 @@ export const IntegratedLessonPage: React.FC = () => {
                       Resultado: {calculateScore()} de 5 acertos ({Math.round((calculateScore() / 5) * 100)}%)
                     </div>
                     <div className={`text-xs ${theme === 'dark' ? 'text-slate-400' : 'text-slate-500'}`}>
-                      {calculateScore() >= 4 
-                        ? 'Parabéns! Critérios de aprovação da aula atingidos.' 
-                        : 'Aproveitamento abaixo de 80%. Recomendamos revisar os materiais antes de refazer.'}
+                      {calculateScore() >= 2 
+                        ? 'Parabéns! Você acertou pelo menos 2 questões e liberou o próximo conteúdo.' 
+                        : 'Você acertou menos de 2 questões. É necessário acertar pelo menos 2 para avançar.'}
                     </div>
                   </div>
 
-                  {calculateScore() >= 4 ? (
+                  {calculateScore() >= 2 ? (
                     <button
                       onClick={() => navigate('/aluno/dashboard')}
-                      className="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl font-bold text-slate-900 bg-uniao-400 hover:bg-uniao-300 text-sm shadow transition-all"
+                      className="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl font-bold text-slate-950 bg-uniao-400 hover:bg-uniao-300 text-sm shadow transition-all"
                     >
-                      <span>Avançar para a Próxima Aula</span>
+                      <span>Avançar para o Próximo Conteúdo</span>
                       <ChevronRight className="w-4 h-4" />
                     </button>
                   ) : (
@@ -515,7 +515,7 @@ export const IntegratedLessonPage: React.FC = () => {
                           : 'text-slate-700 bg-slate-200 hover:bg-slate-300'
                       }`}
                     >
-                      Tentar Novamente
+                      Tentar Novamente (Requer 2 acertos)
                     </button>
                   )}
                 </>

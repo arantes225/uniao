@@ -21,19 +21,17 @@ export const StudentSidebar: React.FC<StudentSidebarProps> = () => {
       label: 'Dashboard / Trilha',
       path: '/aluno/dashboard',
       icon: LayoutDashboard,
-      badge: 'Principal'
     },
     {
       label: 'Aula Integrada',
       path: '/aluno/aula/aph-mod1-aula2',
       icon: Video,
-      badge: 'Em curso'
+      badge: 'Obrigatório'
     },
     {
       label: 'Materiais & Apostilas',
       path: '/aluno/materiais',
       icon: BookOpen,
-      badge: 'PDF'
     },
     {
       label: 'Biblioteca de Vídeos',
@@ -50,7 +48,6 @@ export const StudentSidebar: React.FC<StudentSidebarProps> = () => {
       label: 'Simulador Clínico',
       path: '/aluno/simulador',
       icon: Stethoscope,
-      badge: 'Pré-Requisito',
       highlight: true
     },
     {
