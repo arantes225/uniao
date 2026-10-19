@@ -9,21 +9,21 @@ export const Footer: React.FC = () => {
         
         <div className="grid grid-cols-1 md:grid-cols-4 gap-10">
           
-          {/* Brand info */}
+          {/* Brand info com o ícone branco puro */}
           <div className="md:col-span-2 space-y-4">
             <div className="flex items-center gap-3">
-              <div className="w-10 h-10 rounded-lg bg-white p-1.5 flex items-center justify-center">
+              <div className="w-9 h-9 flex items-center justify-center">
                 <img 
-                  src="/brand/logo-uniao.png" 
+                  src="/brand/simbolo-cruz-uniao.png" 
                   alt="União Serviços Médicos" 
                   className="w-full h-full object-contain"
                 />
               </div>
               <div className="flex flex-col">
-                <span className="font-extrabold text-lg tracking-tight text-white">
+                <span className="font-extrabold text-lg tracking-tight text-white leading-none">
                   UNIÃO
                 </span>
-                <span className="text-[9px] font-semibold tracking-widest text-uniao-400 uppercase">
+                <span className="text-[9px] font-semibold tracking-widest text-slate-400 uppercase mt-1">
                   Serviços Médicos
                 </span>
               </div>

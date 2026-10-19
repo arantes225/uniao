@@ -73,25 +73,23 @@ export const HeroSection: React.FC = () => {
               
               <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
                 
-                {/* Lado Esquerdo: O Ícone Oficial em Grande Destaque */}
-                <div className="lg:col-span-5 flex flex-col items-center justify-center text-center p-6 rounded-2xl bg-slate-950/80 border border-white/5 relative overflow-hidden group">
-                  <div className="absolute inset-0 bg-gradient-to-tr from-uniao-600/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
+                {/* Lado Esquerdo: Aplicação Inteligente e Minimalista do Ícone Branco */}
+                <div className="lg:col-span-5 flex flex-col items-center justify-center text-center p-8 rounded-2xl bg-slate-950/40 border border-white/5 relative overflow-hidden group">
                   
-                  {/* Glow Box com o Ícone Solicitado */}
-                  <div className="relative w-40 h-40 sm:w-48 sm:h-48 p-4 flex items-center justify-center">
-                    <div className="absolute inset-0 bg-uniao-500/20 rounded-full blur-2xl animate-pulse" />
+                  {/* Ícone Branco Puro sobre o Fundo Escuro */}
+                  <div className="relative w-36 h-36 sm:w-44 sm:h-44 flex items-center justify-center">
                     <img 
                       src="/brand/simbolo-cruz-uniao.png" 
                       alt="Cruz União Serviços Médicos" 
-                      className="w-full h-full object-contain filter drop-shadow-[0_0_20px_rgba(20,184,166,0.7)] group-hover:scale-105 transition-transform duration-500"
+                      className="w-full h-full object-contain filter group-hover:scale-105 transition-transform duration-500"
                     />
                   </div>
 
-                  <span className="text-xs font-black tracking-widest text-uniao-400 uppercase mt-4">
-                    Padrão Internacional de Resposta
+                  <span className="text-[11px] font-bold tracking-[0.2em] text-slate-400 uppercase mt-5">
+                    União Serviços Médicos
                   </span>
-                  <div className="text-sm font-semibold text-white mt-1">
-                    Atendimento Pré-Hospitalar & SBV
+                  <div className="text-sm font-semibold text-white mt-0.5">
+                    Capacitação & Prontidão Operacional
                   </div>
                 </div>
 

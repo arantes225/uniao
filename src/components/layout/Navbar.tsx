@@ -19,23 +19,21 @@ export const Navbar: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
           
-          {/* Nova Logomarca com o Ícone Oficial Solicitado */}
+          {/* Nova Logomarca Oficial Integrada de Forma Limpa */}
           <Link to="/" className="flex items-center gap-3.5 group">
-            <div className="relative w-11 h-11 rounded-2xl bg-gradient-to-br from-uniao-600 via-uniao-500 to-teal-400 p-[1px] shadow-[0_0_20px_rgba(20,184,166,0.35)] group-hover:shadow-[0_0_30px_rgba(20,184,166,0.5)] transition-all">
-              <div className="w-full h-full bg-slate-950 rounded-[15px] p-2 flex items-center justify-center">
-                <img 
-                  src="/brand/simbolo-cruz-uniao.png" 
-                  alt="Ícone Cruz União" 
-                  className="w-full h-full object-contain filter drop-shadow-[0_0_8px_rgba(255,255,255,0.7)] group-hover:scale-110 transition-transform duration-300"
-                />
-              </div>
+            <div className="w-9 h-9 flex items-center justify-center shrink-0">
+              <img 
+                src="/brand/simbolo-cruz-uniao.png" 
+                alt="Cruz União Serviços Médicos" 
+                className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-300"
+              />
             </div>
             <div className="flex flex-col">
-              <span className="font-black text-xl tracking-wider text-white font-sans flex items-center gap-1.5">
+              <span className="font-black text-xl tracking-wider text-white font-sans flex items-center gap-1.5 leading-none">
                 UNIÃO
-                <span className="w-1.5 h-1.5 rounded-full bg-uniao-400 animate-pulse" />
+                <span className="w-1.5 h-1.5 rounded-full bg-uniao-400" />
               </span>
-              <span className="text-[10px] font-bold tracking-[0.25em] text-uniao-400 uppercase">
+              <span className="text-[10px] font-bold tracking-[0.25em] text-slate-400 uppercase mt-1">
                 Serviços Médicos
               </span>
             </div>
