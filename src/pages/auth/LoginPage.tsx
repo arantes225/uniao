@@ -316,7 +316,7 @@ export const LoginPage: React.FC = () => {
                 <button
                   type="button"
                   onClick={() => {
-                    setEmail('admin@uniao.med.br');
+                    setEmail('aluno.uniao@gmail.com');
                     setPassword('Uniao2026!');
                   }}
                   className="px-2.5 py-1 rounded-lg font-black uppercase text-[10px] bg-uniao-500 hover:bg-uniao-400 text-slate-950 transition-all shadow"
@@ -325,7 +325,7 @@ export const LoginPage: React.FC = () => {
                 </button>
               </div>
               <div className="font-mono text-[11px] text-slate-300 space-y-0.5">
-                <div>E-mail: <strong className="text-white">admin@uniao.med.br</strong></div>
+                <div>E-mail: <strong className="text-white">aluno.uniao@gmail.com</strong></div>
                 <div>Senha: <strong className="text-white">Uniao2026!</strong></div>
               </div>
             </div>
