@@ -40,11 +40,11 @@ export const StudentNavbar: React.FC<StudentNavbarProps> = ({
 
   return (
     <>
-      <header className="sticky top-0 z-40 transition-colors duration-200 border-b bg-slate-900 border-white/10 text-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+      <header className="sticky top-0 z-40 transition-colors duration-200 border-b bg-slate-900 border-white/10 text-white w-full">
+        <div className="w-full px-4 sm:px-6 h-16 flex items-center justify-between">
           
-          {/* Brand - UNIÃO SERVIÇOS MÉDICOS */}
-          <Link to="/aluno/dashboard" className="flex items-center gap-3.5 group">
+          {/* Brand - UNIÃO SERVIÇOS MÉDICOS alinhado à esquerda */}
+          <Link to="/aluno/dashboard" className="flex items-center gap-3 group text-left">
             <div className="w-10 h-10 rounded-xl flex items-center justify-center p-1 shrink-0">
               <img 
                 src={theme === 'light' ? "/brand/simbolo-cruz-uniao-verde.png" : "/brand/simbolo-cruz-uniao.png"} 
