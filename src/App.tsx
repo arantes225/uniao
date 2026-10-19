@@ -8,10 +8,13 @@ import { IntegratedLessonPage } from './pages/student/IntegratedLessonPage';
 import { ClinicalSimulatorPage } from './pages/student/ClinicalSimulatorPage';
 import { AdminDashboard } from './pages/admin/AdminDashboard';
 
+import { ThemeProvider } from './context/ThemeContext';
+
 export const App: React.FC = () => {
   return (
-    <BrowserRouter>
-      <Routes>
+    <ThemeProvider>
+      <BrowserRouter>
+        <Routes>
         {/* Site Institucional Público */}
         <Route path="/" element={<LandingPage />} />
         
@@ -34,6 +37,7 @@ export const App: React.FC = () => {
         <Route path="*" element={<Navigate to="/" replace />} />
       </Routes>
     </BrowserRouter>
+  </ThemeProvider>
   );
 };
 
