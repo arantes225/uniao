@@ -41,7 +41,7 @@ export const StudentSidebar: React.FC<StudentSidebarProps> = () => {
       icon: Video,
     },
     {
-      label: 'Banco de Provas',
+      label: 'Prova',
       path: '/aluno/provas',
       icon: HelpCircle,
       badge: 'Obrigatório'
