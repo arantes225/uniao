@@ -1120,103 +1120,106 @@ export const AdminDashboard: React.FC = () => {
                         )}
                       </div>
 
+                      {/* Card de Edição dos Prazos/Parâmetros logo abaixo do card da turma sendo editada */}
+                      {isEditingCohort && selectedCohort?.id === cohort.id && (
+                        <div className="mt-5 p-6 rounded-2xl bg-slate-900/90 border-2 border-uniao-500/60 shadow-2xl space-y-4 animate-fadeIn">
+                          <div className="flex items-center justify-between border-b border-white/10 pb-3">
+                            <div className="flex items-center gap-2">
+                              <Settings className="w-4 h-4 text-uniao-400" />
+                              <h3 className="font-bold text-white text-sm">
+                                Editar Prazos e Parâmetros: {cohort.name}
+                              </h3>
+                            </div>
+                            <button 
+                              onClick={() => setIsEditingCohort(false)} 
+                              className="text-xs text-slate-400 hover:text-white px-2.5 py-1 rounded-lg hover:bg-white/5 transition-colors"
+                            >
+                              ✕ Fechar
+                            </button>
+                          </div>
+
+                          <form onSubmit={handleSaveCohort} className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            <div className="space-y-1">
+                              <label className="text-xs font-semibold text-slate-300">Nome da Turma</label>
+                              <input
+                                type="text"
+                                value={editCohortName}
+                                onChange={(e) => setEditCohortName(e.target.value)}
+                                className="w-full px-3 py-2 rounded-xl bg-slate-950 border border-white/10 text-white text-xs focus:outline-none focus:border-uniao-500"
+                              />
+                            </div>
+
+                            <div className="space-y-1">
+                              <label className="text-xs font-semibold text-slate-300">
+                                Limite de Acesso em Dias (Countdown do Aluno)
+                              </label>
+                              <input
+                                type="number"
+                                min={1}
+                                max={730}
+                                value={editCohortDays}
+                                onChange={(e) => setEditCohortDays(Number(e.target.value))}
+                                className="w-full px-3 py-2 rounded-xl bg-slate-950 border border-white/10 text-white text-xs focus:outline-none focus:border-uniao-500 font-mono text-amber-300 font-bold"
+                              />
+                            </div>
+
+                            <div className="space-y-1">
+                              <label className="text-xs font-semibold text-slate-300">Capacidade Máxima de Alunos</label>
+                              <input
+                                type="number"
+                                min={1}
+                                value={editCohortMaxStudents}
+                                onChange={(e) => setEditCohortMaxStudents(Number(e.target.value))}
+                                className="w-full px-3 py-2 rounded-xl bg-slate-950 border border-white/10 text-white text-xs focus:outline-none focus:border-uniao-500"
+                              />
+                            </div>
+
+                            <div className="space-y-1">
+                              <label className="text-xs font-semibold text-slate-300">Status Operacional</label>
+                              <select
+                                value={editCohortStatus}
+                                onChange={(e) => setEditCohortStatus(e.target.value)}
+                                className="w-full px-3 py-2 rounded-xl bg-slate-950 border border-white/10 text-white text-xs focus:outline-none focus:border-uniao-500"
+                              >
+                                <option value="active">Ativa (Inscrições e Aulas Abertas)</option>
+                                <option value="finished">Finalizada (Somente Consulta)</option>
+                                <option value="paused">Pausada</option>
+                              </select>
+                            </div>
+
+                            <div className="md:col-span-2 space-y-1">
+                              <label className="text-xs font-semibold text-slate-300">Local do Treinamento Prático Presencial</label>
+                              <input
+                                type="text"
+                                value={editCohortLocation}
+                                onChange={(e) => setEditCohortLocation(e.target.value)}
+                                className="w-full px-3 py-2 rounded-xl bg-slate-950 border border-white/10 text-white text-xs focus:outline-none focus:border-uniao-500"
+                              />
+                            </div>
+
+                            <div className="md:col-span-2 pt-2 flex justify-end gap-3">
+                              <button
+                                type="button"
+                                onClick={() => setIsEditingCohort(false)}
+                                className="px-4 py-2 rounded-xl text-xs text-slate-400 hover:text-white"
+                              >
+                                Cancelar
+                              </button>
+                              <button
+                                type="submit"
+                                className="px-6 py-2 rounded-xl text-xs font-bold text-slate-950 bg-gradient-to-r from-uniao-400 to-teal-300 hover:brightness-110 shadow"
+                              >
+                                Salvar Prazos / Parâmetros
+                              </button>
+                            </div>
+                          </form>
+                        </div>
+                      )}
+
                     </div>
                   );
                 })}
               </div>
-
-              {/* Modal de Edição dos Prazos da Turma */}
-              {isEditingCohort && selectedCohort && (
-                <div className="p-6 rounded-2xl bg-slate-950 border border-uniao-500/40 space-y-4">
-                  <div className="flex items-center justify-between border-b border-white/10 pb-3">
-                    <h3 className="font-bold text-white text-sm">
-                      Configurar Parâmetros: {selectedCohort.name}
-                    </h3>
-                    <button 
-                      onClick={() => setIsEditingCohort(false)} 
-                      className="text-xs text-slate-400 hover:text-white"
-                    >
-                      Fechar
-                    </button>
-                  </div>
-
-                  <form onSubmit={handleSaveCohort} className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                    <div className="space-y-1">
-                      <label className="text-xs font-semibold text-slate-300">Nome da Turma</label>
-                      <input
-                        type="text"
-                        value={editCohortName}
-                        onChange={(e) => setEditCohortName(e.target.value)}
-                        className="w-full px-3 py-2 rounded-xl bg-slate-900 border border-white/10 text-white text-xs focus:outline-none focus:border-uniao-500"
-                      />
-                    </div>
-
-                    <div className="space-y-1">
-                      <label className="text-xs font-semibold text-slate-300">
-                        Limite de Acesso em Dias (Countdown do Aluno)
-                      </label>
-                      <input
-                        type="number"
-                        min={1}
-                        max={730}
-                        value={editCohortDays}
-                        onChange={(e) => setEditCohortDays(Number(e.target.value))}
-                        className="w-full px-3 py-2 rounded-xl bg-slate-900 border border-white/10 text-white text-xs focus:outline-none focus:border-uniao-500 font-mono text-amber-300 font-bold"
-                      />
-                    </div>
-
-                    <div className="space-y-1">
-                      <label className="text-xs font-semibold text-slate-300">Capacidade Máxima</label>
-                      <input
-                        type="number"
-                        min={1}
-                        value={editCohortMaxStudents}
-                        onChange={(e) => setEditCohortMaxStudents(Number(e.target.value))}
-                        className="w-full px-3 py-2 rounded-xl bg-slate-900 border border-white/10 text-white text-xs focus:outline-none focus:border-uniao-500"
-                      />
-                    </div>
-
-                    <div className="space-y-1">
-                      <label className="text-xs font-semibold text-slate-300">Status Operacional</label>
-                      <select
-                        value={editCohortStatus}
-                        onChange={(e) => setEditCohortStatus(e.target.value)}
-                        className="w-full px-3 py-2 rounded-xl bg-slate-900 border border-white/10 text-white text-xs focus:outline-none focus:border-uniao-500"
-                      >
-                        <option value="active">Ativa (Inscrições e Aulas Abertas)</option>
-                        <option value="finished">Finalizada (Somente Consulta)</option>
-                        <option value="paused">Pausada</option>
-                      </select>
-                    </div>
-
-                    <div className="md:col-span-2 space-y-1">
-                      <label className="text-xs font-semibold text-slate-300">Local do Treinamento Prático</label>
-                      <input
-                        type="text"
-                        value={editCohortLocation}
-                        onChange={(e) => setEditCohortLocation(e.target.value)}
-                        className="w-full px-3 py-2 rounded-xl bg-slate-900 border border-white/10 text-white text-xs focus:outline-none focus:border-uniao-500"
-                      />
-                    </div>
-
-                    <div className="md:col-span-2 pt-2 flex justify-end gap-3">
-                      <button
-                        type="button"
-                        onClick={() => setIsEditingCohort(false)}
-                        className="px-4 py-2 rounded-xl text-xs text-slate-400 hover:text-white"
-                      >
-                        Cancelar
-                      </button>
-                      <button
-                        type="submit"
-                        className="px-6 py-2 rounded-xl text-xs font-bold text-slate-950 bg-gradient-to-r from-uniao-400 to-teal-300 hover:brightness-110 shadow"
-                      >
-                        Salvar Alterações
-                      </button>
-                    </div>
-                  </form>
-                </div>
-              )}
 
             </div>
           </div>
