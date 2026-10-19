@@ -75,29 +75,21 @@ export const StudentSidebar: React.FC<StudentSidebarProps> = () => {
           : 'bg-white border-slate-200 text-slate-700'
       }`}
     >
-      {/* Brand Header */}
-      <div className="h-16 flex items-center justify-between px-4 border-b border-white/10">
-        <Link to="/aluno/dashboard" className="flex items-center gap-3.5 overflow-hidden">
-          <div className="w-12 h-12 rounded-xl flex items-center justify-center p-1 shrink-0">
-            <img 
-              src={theme === 'light' ? "/brand/simbolo-cruz-uniao-verde.png" : "/brand/simbolo-cruz-uniao.png"} 
-              alt="USM" 
-              className="w-full h-full object-contain" 
-            />
-          </div>
-          {!collapsed && (
-            <div className="flex flex-col truncate">
-              <span className={`font-black text-base tracking-wider ${theme === 'dark' ? 'text-white' : 'text-slate-900'}`}>UNIÃO</span>
-              <span className="text-[10px] font-bold text-uniao-500 tracking-widest uppercase">LMS Educacional</span>
-            </div>
-          )}
-        </Link>
+      {/* Header do Menu Lateral (Apenas controle de recolher/expandir, SEM logo duplicada) */}
+      <div className={`h-12 flex items-center border-b border-white/10 px-3 ${
+        collapsed ? 'justify-center' : 'justify-between'
+      }`}>
+        {!collapsed && (
+          <span className="text-[11px] font-black uppercase tracking-wider text-slate-400">
+            Navegação
+          </span>
+        )}
 
         {/* Toggle Button */}
         <button
           type="button"
           onClick={() => setCollapsed(!collapsed)}
-          className="p-1.5 rounded-lg text-slate-400 hover:text-white hover:bg-white/5 transition-colors hidden sm:flex items-center justify-center"
+          className="p-1.5 rounded-lg text-slate-400 hover:text-white hover:bg-white/5 transition-colors flex items-center justify-center"
           title={collapsed ? 'Expandir menu' : 'Recolher menu'}
         >
           {collapsed ? <ChevronRight className="w-4 h-4" /> : <ChevronLeft className="w-4 h-4" />}

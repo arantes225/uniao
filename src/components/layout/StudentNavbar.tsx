@@ -43,24 +43,26 @@ export const StudentNavbar: React.FC<StudentNavbarProps> = ({
       <header className="sticky top-0 z-40 transition-colors duration-200 border-b bg-slate-900 border-white/10 text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
           
-          {/* Brand */}
-          <Link to="/aluno/dashboard" className="flex items-center gap-3 group">
+          {/* Brand - UNIÃO SERVIÇOS MÉDICOS */}
+          <Link to="/aluno/dashboard" className="flex items-center gap-3.5 group">
             <div className="w-10 h-10 rounded-xl flex items-center justify-center p-1 shrink-0">
               <img 
                 src={theme === 'light' ? "/brand/simbolo-cruz-uniao-verde.png" : "/brand/simbolo-cruz-uniao.png"} 
-                alt="USM" 
+                alt="União Serviços Médicos" 
                 className="w-full h-full object-contain group-hover:scale-105 transition-transform" 
               />
             </div>
             <div className="flex flex-col">
-              <span className={`font-extrabold text-sm tracking-wider flex items-center gap-1 ${theme === 'dark' ? 'text-white' : 'text-slate-900'}`}>
-                UNIÃO
-                <span className="text-[10px] font-bold px-1.5 py-0.2 rounded bg-uniao-500/20 text-uniao-400 border border-uniao-500/30">
+              <div className="flex items-center gap-2">
+                <span className={`font-black text-base tracking-wider ${theme === 'dark' ? 'text-white' : 'text-slate-900'}`}>
+                  UNIÃO
+                </span>
+                <span className="text-[10px] font-bold px-1.5 py-0.5 rounded bg-uniao-500/20 text-uniao-400 border border-uniao-500/30">
                   LMS
                 </span>
-              </span>
-              <span className={`text-[9px] font-semibold tracking-widest uppercase ${theme === 'dark' ? 'text-slate-400' : 'text-slate-500'}`}>
-                Área de Aprendizagem
+              </div>
+              <span className={`text-[10px] font-bold tracking-widest uppercase ${theme === 'dark' ? 'text-slate-400' : 'text-slate-500'}`}>
+                SERVIÇOS MÉDICOS
               </span>
             </div>
           </Link>
