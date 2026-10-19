@@ -7,24 +7,24 @@ export const HeroSection: React.FC = () => {
   return (
     <section className="relative pt-32 pb-24 lg:pt-40 lg:pb-36 bg-slate-950 text-white overflow-hidden">
       
-      {/* Background Cyber-Medical Mesh & Gradients */}
+      {/* Background Animated Gradients & Mesh */}
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-7xl h-full pointer-events-none">
-        <div className="absolute top-10 left-1/4 w-[500px] h-[500px] bg-uniao-600/20 rounded-full blur-[140px] animate-pulse" />
-        <div className="absolute top-40 right-10 w-[400px] h-[400px] bg-teal-500/15 rounded-full blur-[120px]" />
-        <div className="absolute inset-0 bg-[radial-gradient(rgba(20,184,166,0.12)_1px,transparent_1px)] [background-size:28px_28px] opacity-40" />
+        <div className="absolute top-10 left-1/4 w-[600px] h-[600px] bg-uniao-600/20 rounded-full blur-[150px] animate-pulse" />
+        <div className="absolute top-40 right-10 w-[500px] h-[500px] bg-teal-500/15 rounded-full blur-[130px] animate-pulse" style={{ animationDuration: '4s' }} />
+        <div className="absolute inset-0 bg-[radial-gradient(rgba(20,184,166,0.15)_1px,transparent_1px)] [background-size:24px_24px] opacity-50" />
       </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
-        {/* Top Urgency Capsule */}
+        {/* Dynamic Sales Urgency Capsule */}
         <div className="flex justify-center mb-8">
-          <div className="inline-flex items-center gap-2.5 px-4 py-2 rounded-full bg-slate-900/90 border border-uniao-500/40 text-uniao-300 shadow-[0_0_20px_rgba(20,184,166,0.2)]">
-            <span className="flex h-2 w-2 relative">
+          <div className="inline-flex items-center gap-2.5 px-5 py-2 rounded-full bg-slate-900/90 border border-uniao-500/40 text-uniao-300 shadow-[0_0_25px_rgba(20,184,166,0.25)] hover:border-uniao-400 transition-all">
+            <span className="flex h-2.5 w-2.5 relative">
               <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-400 opacity-75"></span>
-              <span className="relative inline-flex rounded-full h-2 w-2 bg-red-500"></span>
+              <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-red-500"></span>
             </span>
-            <span className="text-xs font-bold tracking-wide uppercase">
-              Em emergências, o socorro especializado leva de 10 a 20 minutos.
+            <span className="text-xs font-black tracking-wide uppercase">
+              Plantão de Agendamento Aberto para Turmas Institucionais
             </span>
           </div>
         </div>
