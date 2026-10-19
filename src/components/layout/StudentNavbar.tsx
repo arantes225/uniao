@@ -170,37 +170,9 @@ export const StudentNavbar: React.FC<StudentNavbarProps> = ({
                     <span>Editar Dados de Perfil</span>
                   </button>
 
-                  {/* 2. Botão de Trocar de Tema */}
-                  <button
-                    type="button"
-                    onClick={() => {
-                      toggleTheme();
-                      setDropdownOpen(false);
-                    }}
-                    className={`w-full px-4 py-2.5 text-left flex items-center justify-between transition-colors ${
-                      theme === 'dark'
-                        ? 'text-slate-300 hover:text-white hover:bg-white/5'
-                        : 'text-slate-700 hover:text-slate-950 hover:bg-slate-50'
-                    }`}
-                  >
-                    <div className="flex items-center gap-2.5">
-                      {theme === 'dark' ? (
-                        <Sun className="w-4 h-4 text-amber-400" />
-                      ) : (
-                        <Moon className="w-4 h-4 text-teal-600" />
-                      )}
-                      <span>Alternar Tema</span>
-                    </div>
-                    <span className={`text-[10px] px-2 py-0.5 rounded uppercase font-mono ${
-                      theme === 'dark' ? 'bg-white/5 text-slate-400' : 'bg-slate-100 text-slate-600'
-                    }`}>
-                      {theme === 'dark' ? 'Escuro' : 'Claro'}
-                    </span>
-                  </button>
-
                   <div className={`my-1 border-t ${theme === 'dark' ? 'border-white/10' : 'border-slate-100'}`} />
 
-                  {/* 3. Botão de Sair */}
+                  {/* 2. Botão de Sair */}
                   <button
                     type="button"
                     onClick={handleLogout}
