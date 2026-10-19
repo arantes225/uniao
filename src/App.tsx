@@ -5,6 +5,7 @@ import { LoginPage } from './pages/auth/LoginPage';
 import { CertificateValidationPage } from './pages/public/CertificateValidationPage';
 import { StudentDashboard } from './pages/student/StudentDashboard';
 import { IntegratedLessonPage } from './pages/student/IntegratedLessonPage';
+import { ClinicalSimulatorPage } from './pages/student/ClinicalSimulatorPage';
 import { AdminDashboard } from './pages/admin/AdminDashboard';
 
 export const App: React.FC = () => {
@@ -24,6 +25,7 @@ export const App: React.FC = () => {
         {/* Ambiente de Aprendizagem do Aluno */}
         <Route path="/aluno/dashboard" element={<StudentDashboard />} />
         <Route path="/aluno/aula/:lessonSlug" element={<IntegratedLessonPage />} />
+        <Route path="/aluno/simulador" element={<ClinicalSimulatorPage />} />
 
         {/* Painel Administrativo Protegido */}
         <Route path="/admin" element={<AdminDashboard />} />
