@@ -45,21 +45,21 @@ export const StudentNavbar: React.FC<StudentNavbarProps> = ({
           
           {/* Brand */}
           <Link to="/aluno/dashboard" className="flex items-center gap-3 group">
-            <div className="w-10 h-10 rounded-xl bg-slate-950 border border-white/10 flex items-center justify-center p-1.5 shadow-[0_0_15px_rgba(20,184,166,0.3)]">
+            <div className="w-10 h-10 rounded-xl flex items-center justify-center p-1 shrink-0">
               <img 
-                src="/brand/simbolo-cruz-uniao.png" 
+                src={theme === 'light' ? "/brand/simbolo-cruz-uniao-verde.png" : "/brand/simbolo-cruz-uniao.png"} 
                 alt="USM" 
-                className="w-full h-full object-contain filter drop-shadow-[0_0_6px_rgba(255,255,255,0.7)] group-hover:scale-105 transition-transform" 
+                className="w-full h-full object-contain group-hover:scale-105 transition-transform" 
               />
             </div>
             <div className="flex flex-col">
-              <span className="font-extrabold text-sm tracking-wider text-white flex items-center gap-1">
+              <span className={`font-extrabold text-sm tracking-wider flex items-center gap-1 ${theme === 'dark' ? 'text-white' : 'text-slate-900'}`}>
                 UNIÃO
                 <span className="text-[10px] font-bold px-1.5 py-0.2 rounded bg-uniao-500/20 text-uniao-400 border border-uniao-500/30">
                   LMS
                 </span>
               </span>
-              <span className="text-[9px] font-semibold text-slate-400 tracking-widest uppercase">
+              <span className={`text-[9px] font-semibold tracking-widest uppercase ${theme === 'dark' ? 'text-slate-400' : 'text-slate-500'}`}>
                 Área de Aprendizagem
               </span>
             </div>
