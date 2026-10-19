@@ -3,9 +3,132 @@ import { Link } from 'react-router-dom';
 import { 
   ShieldAlert, School, LogOut, Camera, 
   Trash2, CheckCircle2, RefreshCw, Award, Users, 
-  Settings, Clock, BookOpen, FileText, Check, Plus
+  Settings, Clock, BookOpen, FileText, Check,
+  UserPlus, UserMinus, Eye, Filter, Sparkles, X,
+  GraduationCap
 } from 'lucide-react';
 import { supabase } from '../../services/supabase/client';
+
+// Modelos Pré-definidos para Treinamentos Médicos da União
+interface CertificatePreset {
+  id: string;
+  name: string;
+  category: string;
+  courseSlug: string;
+  title: string;
+  workloadHours: number;
+  validityMonths: number;
+  legalFramework: string;
+  instructorName: string;
+  instructorRole: string;
+  technicalDirector: string;
+  modules: string[];
+}
+
+const PRESET_MODELS: CertificatePreset[] = [
+  {
+    id: 'aph-padrao',
+    name: 'Atendimento Pré-Hospitalar (APH) & Suporte Básico',
+    category: 'Emergência & Trauma',
+    courseSlug: 'aph',
+    title: 'Certificado de Capacitação em Atendimento Pré-Hospitalar (APH) & Controle de Hemorragias',
+    workloadHours: 40,
+    validityMonths: 24,
+    legalFramework: 'Portaria GM/MS nº 2048/2002, Diretrizes Internacionais PHTLS 10ª Edição e Resoluções CFM/COFEN.',
+    instructorName: 'Dr. Lucas Arantes',
+    instructorRole: 'Instrutor Chefe & Médico Regulador (CRM-SP)',
+    technicalDirector: 'Dr. Lucas Arantes - Diretor Técnico Médico USM',
+    modules: [
+      'Cinemática do Trauma e Avaliação da Cena com Segurança Operacional',
+      'Protocolo X-A-B-C-D-E no Trauma Grave: Abordagem Sistemática',
+      'Controle de Hemorragias Exsanguinantes: Curativos e Torniquete Tático',
+      'Manejo de Vias Aéreas e Ventilação de Resgate (BVM/Ambu)',
+      'Suporte Básico de Vida (SBV) e Desfibrilação Externa Automática (DEA)',
+      'Imobilização Espinhal Seletiva, Colar Cervical e Pranchamento Seguro',
+      'Simulação Prática Realística de Alta Fidelidade com Debriefing Clínico',
+    ],
+  },
+  {
+    id: 'lei-lucas',
+    name: 'Lei Lucas nº 13.722/18 — Escolas e Ambientes Pedagógicos',
+    category: 'Escolar / Pediátrico',
+    courseSlug: 'treinamentos-personalizados',
+    title: 'Certificado de Capacitação em Primeiros Socorros Escolares (Lei Lucas Federal 13.722/18)',
+    workloadHours: 20,
+    validityMonths: 12,
+    legalFramework: 'Lei Federal nº 13.722/2018 (Lei Lucas), Ministério da Educação e Diretrizes Pediátricas AHA.',
+    instructorName: 'Dr. Lucas Arantes',
+    instructorRole: 'Instrutor Chefe & Especialista em Urgência Pediátrica',
+    technicalDirector: 'Dr. Lucas Arantes - Diretor Técnico Médico USM',
+    modules: [
+      'Engasgo Pediátrico: Manobra de Heimlich em Bebês, Crianças e Adultos',
+      'Prevenção de Acidentes em Pátios, Refeitórios e Salas de Aula',
+      'Parada Cardiorrespiratória Pediátrica e Uso do DEA Escolar',
+      'Convulsões Febris e Epilepsia no Ambiente Escolar',
+      'Fraturas, Entorses e Traumatismo Cranioencefálico (TCE) em Recreio',
+      'Choque Anafilático e Alergias Alimentares Graves',
+      'Simulado Prático com Equipe Escolar e Simulação de Emergência',
+    ],
+  },
+  {
+    id: 'stop-the-bleed',
+    name: 'Stop the Bleed — Controle Tático de Grandes Hemorragias',
+    category: 'Tático / Corporativo',
+    courseSlug: 'stop-the-bleed',
+    title: 'Certificado de Qualificação Internacional — Stop the Bleed & Hemorragias Graves',
+    workloadHours: 16,
+    validityMonths: 24,
+    legalFramework: 'American College of Surgeons Committee on Trauma, Protocolo TECC e Diretrizes Militares TCCC.',
+    instructorName: 'Dr. Lucas Arantes',
+    instructorRole: 'Instrutor Credenciado Stop the Bleed & Cirurgião',
+    technicalDirector: 'Dr. Lucas Arantes - Diretor Técnico Médico USM',
+    modules: [
+      'Reconhecimento Imediato de Hemorragias Críticas Exsanguinantes',
+      'Aplicação Rápida de Torniquetes Táticos em Extremidades (< 30s)',
+      'Preenchimento de Feridas Juncionais e Curativos Hemostáticos',
+      'Uso de Ataduras de Emergência (Bandagens Israelenses)',
+      'Prevenção da Tríade Letal: Hipotermia, Acidose e Coagulopatia',
+      'Evacuação Tática e Passagem de Plantão para Equipe de Suporte Avançado',
+    ],
+  },
+  {
+    id: 'sbv-dea-academias',
+    name: 'SBV + DEA para Academias e Clubes Esportivos',
+    category: 'Esportivo / Fitness',
+    courseSlug: 'primeiros-socorros-sbv',
+    title: 'Certificado de Capacitação em Suporte Básico de Vida & Morte Súbita no Esporte',
+    workloadHours: 16,
+    validityMonths: 24,
+    legalFramework: 'Diretrizes AHA 2025/2026, Sociedade Brasileira de Cardiologia e Leis Estaduais de DEA.',
+    instructorName: 'Dr. Lucas Arantes',
+    instructorRole: 'Instrutor Chefe & Médico Regulador (CRM-SP)',
+    technicalDirector: 'Dr. Lucas Arantes - Diretor Técnico Médico USM',
+    modules: [
+      'Morte Súbita no Esporte: Identificação Precoce de Colapso',
+      'Ressuscitação Cardiopulmonar (RCP) de Alta Qualidade',
+      'Manuseio Rápido e Seguro do Desfibrilador Externo Automático (DEA)',
+      'Síncope, Desidratação Grave e Rabdomiólise no Treino Intenso',
+      'Traumatismo Torácico (Commotio Cordis) e Acidentes com Cargas',
+      'Protocolo de Emergência e Acionamento de Resgate SAMU 192',
+    ],
+  },
+];
+
+interface StudentRecord {
+  id: string;
+  name: string;
+  email: string;
+  cpf: string;
+  cohortId: string;
+  cohortName: string;
+  progress: number;
+  lessonsCompleted: number;
+  totalLessons: number;
+  scoreQuiz: number;
+  simFinished: boolean;
+  practicalAuthorized: boolean;
+  daysRemaining: number;
+}
 
 export const AdminDashboard: React.FC = () => {
   // Controle de Acesso por PIN de Segurança
@@ -36,14 +159,16 @@ export const AdminDashboard: React.FC = () => {
   const [editCohortLocation, setEditCohortLocation] = useState('');
   const [cohortSaveSuccess, setCohortSaveSuccess] = useState(false);
 
-  // Módulo de Alunos e Progresso
-  const [students] = useState<any[]>([
+  // Alunos e Filtro por Turma
+  const [cohortFilter, setCohortFilter] = useState<string>('all');
+  const [students, setStudents] = useState<StudentRecord[]>([
     {
       id: '1',
       name: 'Dr. Lucas Arantes',
       email: 'aluno.uniao@gmail.com',
       cpf: '123.456.789-00',
-      cohort: 'Capacitação APH 2026',
+      cohortId: '22222222-2222-2222-2222-222222222222',
+      cohortName: 'Turma de Capacitação APH 2026',
       progress: 40,
       lessonsCompleted: 4,
       totalLessons: 12,
@@ -57,7 +182,8 @@ export const AdminDashboard: React.FC = () => {
       name: 'Dra. Mariana Costa Silva',
       email: 'mariana.costa@samu.sp.gov.br',
       cpf: '234.567.890-11',
-      cohort: 'Capacitação APH 2026',
+      cohortId: '22222222-2222-2222-2222-222222222222',
+      cohortName: 'Turma de Capacitação APH 2026',
       progress: 75,
       lessonsCompleted: 9,
       totalLessons: 12,
@@ -71,7 +197,8 @@ export const AdminDashboard: React.FC = () => {
       name: 'Enf. Roberto Albuquerque',
       email: 'roberto.albuquerque@hospital.med.br',
       cpf: '345.678.901-22',
-      cohort: 'Capacitação APH 2026',
+      cohortId: '22222222-2222-2222-2222-222222222222',
+      cohortName: 'Turma de Capacitação APH 2026',
       progress: 20,
       lessonsCompleted: 2,
       totalLessons: 12,
@@ -85,7 +212,8 @@ export const AdminDashboard: React.FC = () => {
       name: 'Bombeiro Carlos Eduardo',
       email: 'carlos.edu@resgate.gov.br',
       cpf: '456.789.012-33',
-      cohort: 'Turma Stop the Bleed Tático',
+      cohortId: '33333333-3333-3333-3333-333333333333',
+      cohortName: 'Turma Stop the Bleed Tático',
       progress: 100,
       lessonsCompleted: 8,
       totalLessons: 8,
@@ -94,20 +222,52 @@ export const AdminDashboard: React.FC = () => {
       practicalAuthorized: true,
       daysRemaining: 45,
     },
+    {
+      id: '5',
+      name: 'Profa. Fernanda Oliveira',
+      email: 'fernanda.oliveira@escolaobjetivo.com.br',
+      cpf: '567.890.123-44',
+      cohortId: '44444444-4444-4444-4444-444444444444',
+      cohortName: 'Turma Colégio Objetivo (Lei Lucas 13.722)',
+      progress: 60,
+      lessonsCompleted: 6,
+      totalLessons: 10,
+      scoreQuiz: 88,
+      simFinished: true,
+      practicalAuthorized: true,
+      daysRemaining: 115,
+    },
   ]);
 
-  // Módulo de Certificados e Conteúdo Programático
-  const [certificateTemplate, setCertificateTemplate] = useState<any>({
-    title: 'Certificado de Capacitação em Atendimento Pré-Hospitalar (APH) & Controle de Hemorragias',
-    workloadHours: 40,
-    validityMonths: 24,
-    legalFramework: 'Portaria GM/MS nº 2048/2002, Diretrizes Internacionais PHTLS (Prehospital Trauma Life Support 10ª Ed.) e Lei Lucas nº 13.722/2018.',
-    syllabus: `1. Cinemática do Trauma e Avaliação da Cena com Segurança Operacional\n2. Protocolo X-A-B-C-D-E no Trauma Grave: Abordagem Sistemática\n3. Controle de Hemorragias Exsanguinantes: Curativos Compressivos e Torniquete Tático\n4. Manejo de Vias Aéreas e Ventilação com Pressão Positiva (BVM/Ambu)\n5. Suporte Básico de Vida (SBV) e Desfibrilação Externa Automática (DEA em adultos e crianças)\n6. Imobilização Espinhal Seletiva, Colar Cervical e Pranchamento Seguro\n7. Simulação Prática Realística de Alta Fidelidade com Debriefing Clínico Estruturado`,
-    instructorName: 'Dr. Lucas Arantes',
-    instructorRole: 'Instrutor Chefe & Médico Regulador (CRM-SP)',
-    technicalDirector: 'Dr. Lucas Arantes - Diretor Técnico Médico USM',
-  });
+  // Modal para Adicionar Aluno a uma Turma
+  const [isAddStudentOpen, setIsAddStudentOpen] = useState(false);
+  const [newStudentName, setNewStudentName] = useState('');
+  const [newStudentEmail, setNewStudentEmail] = useState('');
+  const [newStudentCpf, setNewStudentCpf] = useState('');
+  const [newStudentCohortId, setNewStudentCohortId] = useState('');
+
+  // =========================================================================
+  // MÓDULO DE CERTIFICADOS & EMENTAS
+  // =========================================================================
+  const [selectedCertCohortId, setSelectedCertCohortId] = useState<string>('22222222-2222-2222-2222-222222222222');
+  const [selectedPresetId, setSelectedPresetId] = useState<string>('aph-padrao');
+  
+  // Dados do Modelo Editável Atual
+  const [certTitle, setCertTitle] = useState(PRESET_MODELS[0].title);
+  const [certWorkload, setCertWorkload] = useState(PRESET_MODELS[0].workloadHours);
+  const [certValidity, setCertValidity] = useState(PRESET_MODELS[0].validityMonths);
+  const [certLegal, setCertLegal] = useState(PRESET_MODELS[0].legalFramework);
+  const [certInstructor, setCertInstructor] = useState(PRESET_MODELS[0].instructorName);
+  const [certInstructorRole, setCertInstructorRole] = useState(PRESET_MODELS[0].instructorRole);
+  const [certDirector, setCertDirector] = useState(PRESET_MODELS[0].technicalDirector);
+  const [certModules, setCertModules] = useState<string[]>(PRESET_MODELS[0].modules);
+  const [newCustomModule, setNewCustomModule] = useState('');
   const [certSavedSuccess, setCertSavedSuccess] = useState(false);
+
+  // Modal de Prévia Visual do Certificado
+  const [isPreviewOpen, setIsPreviewOpen] = useState(false);
+  const [previewStudentName, setPreviewStudentName] = useState('Dr. Lucas Arantes');
+  const [previewSide, setPreviewSide] = useState<'front' | 'back'>('front');
 
   const handlePinSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -140,25 +300,9 @@ export const AdminDashboard: React.FC = () => {
       setEditCohortName(coh[0].name || '');
       setEditCohortStatus(coh[0].status || 'active');
       setEditCohortLocation(coh[0].practical_location || 'Centro de Treinamento USM');
-    }
-
-    // 3. Carregar modelo de certificado do DB se existir
-    const { data: cert } = await supabase
-      .from('certificate_templates')
-      .select('*')
-      .limit(1)
-      .maybeSingle();
-    if (cert) {
-      setCertificateTemplate({
-        title: cert.title,
-        workloadHours: cert.workload_hours,
-        validityMonths: cert.validity_months,
-        legalFramework: cert.legal_framework,
-        syllabus: cert.syllabus,
-        instructorName: cert.instructor_name,
-        instructorRole: cert.instructor_role,
-        technicalDirector: cert.technical_director,
-      });
+      if (!selectedCertCohortId) {
+        setSelectedCertCohortId(coh[0].id);
+      }
     }
   };
 
@@ -168,6 +312,23 @@ export const AdminDashboard: React.FC = () => {
     }
   }, [pinAuthorized]);
 
+  // Aplicar Preset de Certificado
+  const handleApplyPreset = (presetId: string) => {
+    setSelectedPresetId(presetId);
+    const found = PRESET_MODELS.find(p => p.id === presetId);
+    if (found) {
+      setCertTitle(found.title);
+      setCertWorkload(found.workloadHours);
+      setCertValidity(found.validityMonths);
+      setCertLegal(found.legalFramework);
+      setCertInstructor(found.instructorName);
+      setCertInstructorRole(found.instructorRole);
+      setCertDirector(found.technicalDirector);
+      setCertModules([...found.modules]);
+    }
+  };
+
+  // Upload da Galeria
   const handleUploadImage = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!selectedFile || !newTitle) return;
@@ -220,6 +381,7 @@ export const AdminDashboard: React.FC = () => {
     await loadData();
   };
 
+  // Salvar Parâmetros da Turma
   const handleSaveCohort = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!selectedCohort) return;
@@ -245,6 +407,55 @@ export const AdminDashboard: React.FC = () => {
     }
   };
 
+  // Adicionar Aluno a uma Turma
+  const handleAddStudent = (e: React.FormEvent) => {
+    e.preventDefault();
+    if (!newStudentName || !newStudentEmail || !newStudentCohortId) return;
+
+    const cohort = cohorts.find(c => c.id === newStudentCohortId);
+    const newEntry: StudentRecord = {
+      id: Date.now().toString(),
+      name: newStudentName,
+      email: newStudentEmail,
+      cpf: newStudentCpf || '000.000.000-00',
+      cohortId: newStudentCohortId,
+      cohortName: cohort ? cohort.name : 'Turma Selecionada',
+      progress: 0,
+      lessonsCompleted: 0,
+      totalLessons: 12,
+      scoreQuiz: 0,
+      simFinished: false,
+      practicalAuthorized: false,
+      daysRemaining: cohort ? (cohort.access_days_limit || 90) : 90,
+    };
+
+    setStudents([newEntry, ...students]);
+    setNewStudentName('');
+    setNewStudentEmail('');
+    setNewStudentCpf('');
+    setIsAddStudentOpen(false);
+  };
+
+  // Remover Aluno de uma Turma
+  const handleRemoveStudent = (studentId: string, studentName: string) => {
+    if (confirm(`Deseja realmente desmatricular ${studentName}?`)) {
+      setStudents(students.filter(s => s.id !== studentId));
+    }
+  };
+
+  // Adicionar Tópico ao Conteúdo Programático
+  const handleAddModule = () => {
+    if (!newCustomModule.trim()) return;
+    setCertModules([...certModules, newCustomModule.trim()]);
+    setNewCustomModule('');
+  };
+
+  // Remover Tópico do Conteúdo Programático
+  const handleRemoveModule = (index: number) => {
+    setCertModules(certModules.filter((_, i) => i !== index));
+  };
+
+  // Salvar Modelo de Certificado no Banco
   const handleSaveCertificate = async (e: React.FormEvent) => {
     e.preventDefault();
     setCertSavedSuccess(false);
@@ -252,14 +463,14 @@ export const AdminDashboard: React.FC = () => {
     const { error } = await supabase
       .from('certificate_templates')
       .upsert({
-        title: certificateTemplate.title,
-        workload_hours: Number(certificateTemplate.workloadHours),
-        validity_months: Number(certificateTemplate.validityMonths),
-        legal_framework: certificateTemplate.legalFramework,
-        syllabus: certificateTemplate.syllabus,
-        instructor_name: certificateTemplate.instructorName,
-        instructor_role: certificateTemplate.instructorRole,
-        technical_director: certificateTemplate.technicalDirector,
+        title: certTitle,
+        workload_hours: Number(certWorkload),
+        validity_months: Number(certValidity),
+        legal_framework: certLegal,
+        syllabus: certModules.join('\n'),
+        instructor_name: certInstructor,
+        instructor_role: certInstructorRole,
+        technical_director: certDirector,
         updated_at: new Date().toISOString(),
       });
 
@@ -267,9 +478,17 @@ export const AdminDashboard: React.FC = () => {
       setCertSavedSuccess(true);
       setTimeout(() => setCertSavedSuccess(false), 4000);
     } else {
-      alert('Erro ao salvar modelo de certificado: ' + error.message);
+      alert('Erro ao salvar modelo: ' + error.message);
     }
   };
+
+  // Alunos Filtrados
+  const filteredStudents = cohortFilter === 'all'
+    ? students
+    : students.filter(s => s.cohortId === cohortFilter);
+
+  // Turma atual selecionada para Certificados
+  const currentCertCohort = cohorts.find(c => c.id === selectedCertCohortId);
 
   if (!pinAuthorized) {
     return (
@@ -379,7 +598,7 @@ export const AdminDashboard: React.FC = () => {
             }`}
           >
             <School className="w-4 h-4" />
-            <span>Gestão de Turmas</span>
+            <span>Gestão de Turmas & Matrículas</span>
           </button>
 
           <button
@@ -391,7 +610,7 @@ export const AdminDashboard: React.FC = () => {
             }`}
           >
             <Award className="w-4 h-4" />
-            <span>Editor de Certificados & Ementa</span>
+            <span>Editor de Certificados & Ementas</span>
           </button>
 
           <button
@@ -413,7 +632,7 @@ export const AdminDashboard: React.FC = () => {
       <main className="max-w-7xl mx-auto w-full p-6 sm:p-8 space-y-10 flex-1">
         
         {/* ========================================================================= */}
-        {/* ABA 1: DASHBOARD GERAL, ALUNOS ATUAIS E PROGRESSO */}
+        {/* ABA 1: DASHBOARD GERAL, ALUNOS ATUAIS COM FILTRO POR TURMA */}
         {/* ========================================================================= */}
         {activeTab === 'dashboard' && (
           <div className="space-y-8">
@@ -421,15 +640,15 @@ export const AdminDashboard: React.FC = () => {
             {/* Métricas do Dashboard */}
             <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
               <div className="p-5 rounded-2xl bg-slate-900 border border-white/10 space-y-1">
-                <span className="text-xs font-semibold text-slate-400">Total de Turmas Ativas</span>
-                <div className="text-2xl font-black text-white">{cohorts.length || 2} Turmas</div>
-                <div className="text-[11px] text-uniao-400 font-medium">Turma APH 2026 em vigor</div>
+                <span className="text-xs font-semibold text-slate-400">Total de Turmas</span>
+                <div className="text-2xl font-black text-white">{cohorts.length || 3} Turmas</div>
+                <div className="text-[11px] text-uniao-400 font-medium">Turmas ativas no sistema</div>
               </div>
 
               <div className="p-5 rounded-2xl bg-slate-900 border border-white/10 space-y-1">
-                <span className="text-xs font-semibold text-slate-400">Alunos Matriculados</span>
+                <span className="text-xs font-semibold text-slate-400">Total de Alunos</span>
                 <div className="text-2xl font-black text-white">{students.length} Alunos</div>
-                <div className="text-[11px] text-emerald-400 font-medium">100% de cadastros validados</div>
+                <div className="text-[11px] text-emerald-400 font-medium">Cadastros verificados</div>
               </div>
 
               <div className="p-5 rounded-2xl bg-slate-900 border border-white/10 space-y-1">
@@ -437,28 +656,56 @@ export const AdminDashboard: React.FC = () => {
                 <div className="text-2xl font-black text-white">
                   {students.filter(s => s.practicalAuthorized).length} Alunos
                 </div>
-                <div className="text-[11px] text-emerald-400 font-medium">Simulador online concluído</div>
+                <div className="text-[11px] text-emerald-400 font-medium">Com simulador concluído</div>
               </div>
 
               <div className="p-5 rounded-2xl bg-slate-900 border border-white/10 space-y-1">
-                <span className="text-xs font-semibold text-slate-400">Limite de Acesso Médio</span>
-                <div className="text-2xl font-black text-amber-400">90 Dias</div>
-                <div className="text-[11px] text-slate-400">Countdown ativo no aluno</div>
+                <span className="text-xs font-semibold text-slate-400">Countdown Ativo</span>
+                <div className="text-2xl font-black text-amber-400">Até 120 Dias</div>
+                <div className="text-[11px] text-slate-400">Visível no card do aluno</div>
               </div>
             </div>
 
-            {/* Tabela de Alunos e Progresso em Tempo Real */}
+            {/* Tabela de Alunos e Progresso com FILTRO POR TURMA */}
             <div className="bg-slate-900 border border-white/10 rounded-3xl p-6 sm:p-8 space-y-6 shadow-2xl">
+              
               <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-white/10 pb-5">
                 <div>
                   <h2 className="text-xl font-bold text-white">Alunos Matriculados & Progresso Pedagógico</h2>
                   <p className="text-xs text-slate-400 mt-1">
-                    Acompanhamento do cumprimento das videoaulas, provas e simulador clínico como pré-requisito para o prático.
+                    Filtre por turma para auditar notas, simuladores concluídos e autorizações práticas.
                   </p>
                 </div>
                 
+                {/* REQUISITO: FILTRO PARA DIFERENCIAR POR TURMA */}
                 <div className="flex items-center gap-3">
-                  <span className="text-xs text-slate-400">Filtrando por: <strong>Todas as Turmas</strong></span>
+                  <div className="flex items-center gap-2 bg-slate-950 px-3 py-1.5 rounded-xl border border-white/10 text-xs">
+                    <Filter className="w-4 h-4 text-uniao-400" />
+                    <span className="text-slate-400 text-xs">Turma:</span>
+                    <select
+                      value={cohortFilter}
+                      onChange={(e) => setCohortFilter(e.target.value)}
+                      className="bg-transparent text-white font-bold text-xs focus:outline-none cursor-pointer"
+                    >
+                      <option value="all" className="bg-slate-900 text-white">Todas as Turmas ({students.length})</option>
+                      {cohorts.map((c) => (
+                        <option key={c.id} value={c.id} className="bg-slate-900 text-white">
+                          {c.name}
+                        </option>
+                      ))}
+                    </select>
+                  </div>
+
+                  <button
+                    onClick={() => {
+                      setNewStudentCohortId(cohorts[0]?.id || '');
+                      setIsAddStudentOpen(true);
+                    }}
+                    className="inline-flex items-center gap-1.5 px-3 py-2 rounded-xl text-xs font-bold text-slate-950 bg-gradient-to-r from-uniao-400 to-teal-300 hover:brightness-110 shadow"
+                  >
+                    <UserPlus className="w-3.5 h-3.5 text-slate-950" />
+                    <span>Matricular Aluno</span>
+                  </button>
                 </div>
               </div>
 
@@ -470,67 +717,85 @@ export const AdminDashboard: React.FC = () => {
                       <th className="py-3 px-4">Turma Vinculada</th>
                       <th className="py-3 px-4">Progresso Online</th>
                       <th className="py-3 px-4">Aulas Concluídas</th>
-                      <th className="py-3 px-4">Média nas Provas</th>
+                      <th className="py-3 px-4">Média Provas</th>
                       <th className="py-3 px-4">Acesso Restante</th>
                       <th className="py-3 px-4">Simulado Prático</th>
+                      <th className="py-3 px-4 text-right">Ações</th>
                     </tr>
                   </thead>
                   <tbody className="divide-y divide-white/5">
-                    {students.map((student) => (
-                      <tr key={student.id} className="hover:bg-white/[0.02] transition-colors">
-                        <td className="py-3.5 px-4">
-                          <div className="font-bold text-white text-sm">{student.name}</div>
-                          <div className="text-[11px] text-slate-400">{student.email} • CPF: {student.cpf}</div>
-                        </td>
-                        <td className="py-3.5 px-4">
-                          <span className="inline-block px-2.5 py-1 rounded-lg bg-slate-950 border border-white/10 font-semibold text-slate-300">
-                            {student.cohort}
-                          </span>
-                        </td>
-                        <td className="py-3.5 px-4">
-                          <div className="w-36 space-y-1">
-                            <div className="flex justify-between text-[10px] font-bold">
-                              <span>{student.progress}%</span>
-                            </div>
-                            <div className="w-full bg-slate-800 rounded-full h-2">
-                              <div 
-                                className="bg-gradient-to-r from-uniao-500 to-teal-400 h-2 rounded-full" 
-                                style={{ width: `${student.progress}%` }}
-                              />
-                            </div>
-                          </div>
-                        </td>
-                        <td className="py-3.5 px-4 font-mono font-medium">
-                          {student.lessonsCompleted} / {student.totalLessons}
-                        </td>
-                        <td className="py-3.5 px-4">
-                          <span className={`font-bold font-mono px-2 py-0.5 rounded ${
-                            student.scoreQuiz >= 80 ? 'text-emerald-400 bg-emerald-500/10' : 'text-amber-400 bg-amber-500/10'
-                          }`}>
-                            {student.scoreQuiz}%
-                          </span>
-                        </td>
-                        <td className="py-3.5 px-4">
-                          <span className="inline-flex items-center gap-1 font-mono text-amber-300">
-                            <Clock className="w-3.5 h-3.5 text-amber-400" />
-                            <span>{student.daysRemaining} dias</span>
-                          </span>
-                        </td>
-                        <td className="py-3.5 px-4">
-                          {student.practicalAuthorized ? (
-                            <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-[10px] font-bold bg-emerald-500/10 text-emerald-400 border border-emerald-500/30">
-                              <Check className="w-3 h-3" />
-                              <span>Autorizado p/ Presencial</span>
-                            </span>
-                          ) : (
-                            <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-[10px] font-bold bg-amber-500/10 text-amber-400 border border-amber-500/30">
-                              <Clock className="w-3 h-3" />
-                              <span>Etapa Online Pendente</span>
-                            </span>
-                          )}
+                    {filteredStudents.length === 0 ? (
+                      <tr>
+                        <td colSpan={8} className="py-8 text-center text-slate-500">
+                          Nenhum aluno matriculado nesta turma ainda.
                         </td>
                       </tr>
-                    ))}
+                    ) : (
+                      filteredStudents.map((student) => (
+                        <tr key={student.id} className="hover:bg-white/[0.02] transition-colors">
+                          <td className="py-3.5 px-4">
+                            <div className="font-bold text-white text-sm">{student.name}</div>
+                            <div className="text-[11px] text-slate-400">{student.email} • CPF: {student.cpf}</div>
+                          </td>
+                          <td className="py-3.5 px-4">
+                            <span className="inline-block px-2.5 py-1 rounded-lg bg-slate-950 border border-white/10 font-semibold text-slate-300">
+                              {student.cohortName}
+                            </span>
+                          </td>
+                          <td className="py-3.5 px-4">
+                            <div className="w-36 space-y-1">
+                              <div className="flex justify-between text-[10px] font-bold">
+                                <span>{student.progress}%</span>
+                              </div>
+                              <div className="w-full bg-slate-800 rounded-full h-2">
+                                <div 
+                                  className="bg-gradient-to-r from-uniao-500 to-teal-400 h-2 rounded-full" 
+                                  style={{ width: `${student.progress}%` }}
+                                />
+                              </div>
+                            </div>
+                          </td>
+                          <td className="py-3.5 px-4 font-mono font-medium">
+                            {student.lessonsCompleted} / {student.totalLessons}
+                          </td>
+                          <td className="py-3.5 px-4">
+                            <span className={`font-bold font-mono px-2 py-0.5 rounded ${
+                              student.scoreQuiz >= 80 ? 'text-emerald-400 bg-emerald-500/10' : 'text-amber-400 bg-amber-500/10'
+                            }`}>
+                              {student.scoreQuiz}%
+                            </span>
+                          </td>
+                          <td className="py-3.5 px-4">
+                            <span className="inline-flex items-center gap-1 font-mono text-amber-300">
+                              <Clock className="w-3.5 h-3.5 text-amber-400" />
+                              <span>{student.daysRemaining} dias</span>
+                            </span>
+                          </td>
+                          <td className="py-3.5 px-4">
+                            {student.practicalAuthorized ? (
+                              <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-[10px] font-bold bg-emerald-500/10 text-emerald-400 border border-emerald-500/30">
+                                <Check className="w-3 h-3" />
+                                <span>Apto p/ Prático</span>
+                              </span>
+                            ) : (
+                              <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-[10px] font-bold bg-amber-500/10 text-amber-400 border border-amber-500/30">
+                                <Clock className="w-3 h-3" />
+                                <span>Pendente</span>
+                              </span>
+                            )}
+                          </td>
+                          <td className="py-3.5 px-4 text-right">
+                            <button
+                              onClick={() => handleRemoveStudent(student.id, student.name)}
+                              className="p-1.5 rounded-lg text-slate-500 hover:text-red-400 hover:bg-red-500/10 transition-colors"
+                              title="Remover Aluno da Turma"
+                            >
+                              <UserMinus className="w-4 h-4" />
+                            </button>
+                          </td>
+                        </tr>
+                      ))
+                    )}
                   </tbody>
                 </table>
               </div>
@@ -541,7 +806,7 @@ export const AdminDashboard: React.FC = () => {
         )}
 
         {/* ========================================================================= */}
-        {/* ABA 2: PÁGINA SÓ PRA TURMAS (ALTERAR LIMITE DE DIAS, VAGAS, DETALHES) */}
+        {/* ABA 2: GESTÃO DE TURMAS (LISTA DE ALUNOS, ADICIONAR/REMOVER, PARÂMETROS) */}
         {/* ========================================================================= */}
         {activeTab === 'turmas' && (
           <div className="space-y-8">
@@ -553,19 +818,22 @@ export const AdminDashboard: React.FC = () => {
                     <School className="w-6 h-6" />
                   </div>
                   <div>
-                    <h2 className="text-xl font-bold text-white">Gestão Central de Turmas</h2>
+                    <h2 className="text-xl font-bold text-white">Gestão Central de Turmas & Alunos</h2>
                     <p className="text-xs text-slate-400">
-                      Configure o prazo de acesso (countdown dos alunos), vagas disponíveis, data do prático e status.
+                      Veja alunos de cada turma, adicione ou remova inscrições e altere os prazos de acesso (countdown).
                     </p>
                   </div>
                 </div>
 
                 <button
-                  onClick={() => alert('Para criar uma nova turma personalizada, utilize a importação de alunos ou selecione um curso base.')}
+                  onClick={() => {
+                    setNewStudentCohortId(cohorts[0]?.id || '');
+                    setIsAddStudentOpen(true);
+                  }}
                   className="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl font-bold text-xs text-slate-950 bg-gradient-to-r from-uniao-400 to-teal-300 hover:brightness-110 shadow"
                 >
-                  <Plus className="w-4 h-4" />
-                  <span>Cadastrar Nova Turma</span>
+                  <UserPlus className="w-4 h-4" />
+                  <span>+ Adicionar Aluno a uma Turma</span>
                 </button>
               </div>
 
@@ -576,71 +844,128 @@ export const AdminDashboard: React.FC = () => {
                 </div>
               )}
 
-              {/* Lista de Turmas Cadastradas */}
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                
-                {cohorts.map((cohort) => (
-                  <div 
-                    key={cohort.id} 
-                    className={`p-6 rounded-2xl border transition-all ${
-                      selectedCohort?.id === cohort.id
-                        ? 'bg-slate-950 border-uniao-500/50 shadow-lg'
-                        : 'bg-slate-950/60 border-white/5 hover:border-white/10'
-                    }`}
-                  >
-                    <div className="flex items-start justify-between gap-3 mb-3">
-                      <div>
-                        <span className="text-[10px] font-bold uppercase tracking-wider text-uniao-400">
-                          Turma Registrada
-                        </span>
-                        <h3 className="text-base font-bold text-white">{cohort.name}</h3>
-                      </div>
-                      <span className={`px-2.5 py-0.5 rounded-full text-[10px] font-bold uppercase ${
-                        cohort.status === 'active' ? 'bg-emerald-500/10 text-emerald-400 border border-emerald-500/30' : 'bg-slate-800 text-slate-400'
-                      }`}>
-                        {cohort.status || 'Ativa'}
-                      </span>
-                    </div>
+              {/* Cards das Turmas com Lista Expandível de Alunos */}
+              <div className="space-y-6">
+                {cohorts.map((cohort) => {
+                  const cohortStudents = students.filter(s => s.cohortId === cohort.id);
+                  const isSelected = selectedCohort?.id === cohort.id;
 
-                    <div className="space-y-2 text-xs text-slate-400 border-t border-b border-white/5 py-3 my-3">
-                      <div className="flex justify-between">
-                        <span>Prazo de Acesso dos Alunos:</span>
-                        <strong className="text-amber-300 font-mono">{cohort.access_days_limit || 90} dias</strong>
-                      </div>
-                      <div className="flex justify-between">
-                        <span>Capacidade Máxima:</span>
-                        <strong className="text-white font-mono">{cohort.max_students || 30} alunos</strong>
-                      </div>
-                      <div className="flex justify-between">
-                        <span>Local do Treinamento Prático:</span>
-                        <strong className="text-slate-200">{cohort.practical_location || 'Centro de Treinamento USM'}</strong>
-                      </div>
-                    </div>
+                  return (
+                    <div 
+                      key={cohort.id} 
+                      className={`p-6 rounded-2xl border transition-all ${
+                        isSelected
+                          ? 'bg-slate-950 border-uniao-500/60 shadow-xl'
+                          : 'bg-slate-950/60 border-white/5 hover:border-white/10'
+                      }`}
+                    >
+                      <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-4">
+                        <div>
+                          <div className="flex items-center gap-2">
+                            <span className="text-[10px] font-bold uppercase tracking-wider text-uniao-400">
+                              Turma Ativa
+                            </span>
+                            <span className="px-2 py-0.5 rounded-full text-[10px] font-bold bg-emerald-500/10 text-emerald-400 border border-emerald-500/30">
+                              {cohort.status || 'Ativa'}
+                            </span>
+                          </div>
+                          <h3 className="text-lg font-bold text-white mt-0.5">{cohort.name}</h3>
+                        </div>
 
-                    <div className="pt-2 flex items-center justify-between">
-                      <button
-                        type="button"
-                        onClick={() => {
-                          setSelectedCohort(cohort);
-                          setEditCohortName(cohort.name);
-                          setEditCohortDays(cohort.access_days_limit || 90);
-                          setEditCohortMaxStudents(cohort.max_students || 30);
-                          setEditCohortStatus(cohort.status || 'active');
-                          setEditCohortLocation(cohort.practical_location || 'Centro de Treinamento USM');
-                          setIsEditingCohort(true);
-                        }}
-                        className="px-4 py-2 rounded-xl text-xs font-bold text-white bg-white/5 hover:bg-white/10 border border-white/10 transition-colors inline-flex items-center gap-1.5"
-                      >
-                        <Settings className="w-3.5 h-3.5 text-uniao-400" />
-                        <span>Editar Parâmetros & Limites</span>
-                      </button>
-                    </div>
-                  </div>
-                ))}
+                        <div className="flex items-center gap-3">
+                          <button
+                            type="button"
+                            onClick={() => {
+                              setSelectedCohort(cohort);
+                              setEditCohortName(cohort.name);
+                              setEditCohortDays(cohort.access_days_limit || 90);
+                              setEditCohortMaxStudents(cohort.max_students || 30);
+                              setEditCohortStatus(cohort.status || 'active');
+                              setEditCohortLocation(cohort.practical_location || 'Centro de Treinamento USM');
+                              setIsEditingCohort(true);
+                            }}
+                            className="px-3.5 py-1.5 rounded-xl text-xs font-bold text-white bg-white/5 hover:bg-white/10 border border-white/10 transition-colors inline-flex items-center gap-1.5"
+                          >
+                            <Settings className="w-3.5 h-3.5 text-uniao-400" />
+                            <span>Editar Prazos / Parâmetros</span>
+                          </button>
 
+                          <button
+                            type="button"
+                            onClick={() => {
+                              setNewStudentCohortId(cohort.id);
+                              setIsAddStudentOpen(true);
+                            }}
+                            className="px-3.5 py-1.5 rounded-xl text-xs font-bold text-slate-950 bg-uniao-400 hover:bg-uniao-300 transition-colors inline-flex items-center gap-1.5"
+                          >
+                            <UserPlus className="w-3.5 h-3.5" />
+                            <span>Matricular Aluno</span>
+                          </button>
+                        </div>
+                      </div>
+
+                      {/* Métricas da Turma */}
+                      <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 bg-slate-900/60 p-4 rounded-xl border border-white/5 text-xs text-slate-300 mb-4">
+                        <div>
+                          <span className="text-slate-500 block text-[11px]">Countdown de Acesso:</span>
+                          <strong className="text-amber-300 font-mono text-sm">{cohort.access_days_limit || 90} dias</strong>
+                        </div>
+                        <div>
+                          <span className="text-slate-500 block text-[11px]">Alunos Matriculados:</span>
+                          <strong className="text-white font-mono text-sm">{cohortStudents.length} / {cohort.max_students || 30}</strong>
+                        </div>
+                        <div>
+                          <span className="text-slate-500 block text-[11px]">Local do Treinamento:</span>
+                          <strong className="text-slate-200 text-xs truncate block">{cohort.practical_location || 'Base USM'}</strong>
+                        </div>
+                        <div>
+                          <span className="text-slate-500 block text-[11px]">Aptos p/ Presencial:</span>
+                          <strong className="text-emerald-400 font-mono text-sm">
+                            {cohortStudents.filter(s => s.practicalAuthorized).length} alunos
+                          </strong>
+                        </div>
+                      </div>
+
+                      {/* REQUISITO: LISTA DE ALUNOS DENTRO DA TURMA COM ADICIONAR / REMOVER */}
+                      <div className="space-y-2">
+                        <div className="flex items-center justify-between text-xs font-bold text-slate-400 uppercase tracking-wider">
+                          <span>Lista de Alunos Desta Turma ({cohortStudents.length})</span>
+                          <span className="text-[11px] text-slate-500 font-normal">Gerenciamento direto de matrícula</span>
+                        </div>
+
+                        {cohortStudents.length === 0 ? (
+                          <div className="p-4 text-center text-xs text-slate-500 bg-slate-900/30 rounded-xl border border-white/5">
+                            Nenhum aluno matriculado nesta turma ainda. Clique em "Matricular Aluno" acima.
+                          </div>
+                        ) : (
+                          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
+                            {cohortStudents.map((st) => (
+                              <div key={st.id} className="p-3 bg-slate-900 rounded-xl border border-white/5 flex items-center justify-between gap-3">
+                                <div className="space-y-0.5 truncate">
+                                  <div className="font-bold text-white text-xs truncate">{st.name}</div>
+                                  <div className="text-[10px] text-slate-400 truncate">{st.email}</div>
+                                  <div className="text-[10px] text-uniao-400">Progresso: {st.progress}% • {st.daysRemaining}d restantes</div>
+                                </div>
+                                <button
+                                  type="button"
+                                  onClick={() => handleRemoveStudent(st.id, st.name)}
+                                  className="p-1.5 rounded-lg text-slate-500 hover:text-red-400 hover:bg-red-500/10 transition-colors shrink-0"
+                                  title="Remover da Turma"
+                                >
+                                  <UserMinus className="w-4 h-4" />
+                                </button>
+                              </div>
+                            ))}
+                          </div>
+                        )}
+                      </div>
+
+                    </div>
+                  );
+                })}
               </div>
 
-              {/* Modal / Formulário de Edição de Turma */}
+              {/* Modal de Edição dos Prazos da Turma */}
               {isEditingCohort && selectedCohort && (
                 <div className="p-6 rounded-2xl bg-slate-950 border border-uniao-500/40 space-y-4">
                   <div className="flex items-center justify-between border-b border-white/10 pb-3">
@@ -678,13 +1003,10 @@ export const AdminDashboard: React.FC = () => {
                         onChange={(e) => setEditCohortDays(Number(e.target.value))}
                         className="w-full px-3 py-2 rounded-xl bg-slate-900 border border-white/10 text-white text-xs focus:outline-none focus:border-uniao-500 font-mono text-amber-300 font-bold"
                       />
-                      <span className="text-[10px] text-slate-400">
-                        Os alunos matriculados verão este prazo em contagem regressiva no dashboard.
-                      </span>
                     </div>
 
                     <div className="space-y-1">
-                      <label className="text-xs font-semibold text-slate-300">Capacidade de Alunos</label>
+                      <label className="text-xs font-semibold text-slate-300">Capacidade Máxima</label>
                       <input
                         type="number"
                         min={1}
@@ -713,7 +1035,6 @@ export const AdminDashboard: React.FC = () => {
                         type="text"
                         value={editCohortLocation}
                         onChange={(e) => setEditCohortLocation(e.target.value)}
-                        placeholder="Ex: Base Central USM ou In Company no cliente"
                         className="w-full px-3 py-2 rounded-xl bg-slate-900 border border-white/10 text-white text-xs focus:outline-none focus:border-uniao-500"
                       />
                     </div>
@@ -730,7 +1051,7 @@ export const AdminDashboard: React.FC = () => {
                         type="submit"
                         className="px-6 py-2 rounded-xl text-xs font-bold text-slate-950 bg-gradient-to-r from-uniao-400 to-teal-300 hover:brightness-110 shadow"
                       >
-                        Salvar Alterações da Turma
+                        Salvar Alterações
                       </button>
                     </div>
                   </form>
@@ -742,53 +1063,110 @@ export const AdminDashboard: React.FC = () => {
         )}
 
         {/* ========================================================================= */}
-        {/* ABA 3: ABA DEDICADA AOS CERTIFICADOS, MODELO E CONTEÚDO PROGRAMÁTICO */}
+        {/* ABA 3: ABA DEDICADA AOS CERTIFICADOS, MODELOS PRONTOS, SELETOR E PRÉVIA */}
         {/* ========================================================================= */}
         {activeTab === 'certificados' && (
           <div className="space-y-8">
-            <div className="bg-slate-900 border border-white/10 rounded-3xl p-6 sm:p-8 space-y-6 shadow-2xl">
+            <div className="bg-slate-900 border border-white/10 rounded-3xl p-6 sm:p-8 space-y-8 shadow-2xl">
               
+              {/* Header do Módulo de Certificados */}
               <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-white/10 pb-5">
                 <div className="flex items-center gap-3">
                   <div className="w-12 h-12 rounded-2xl bg-uniao-500/10 border border-uniao-500/30 text-uniao-400 flex items-center justify-center">
                     <Award className="w-6 h-6" />
                   </div>
                   <div>
-                    <h2 className="text-xl font-bold text-white">Editor de Modelos de Certificado & Conteúdo Programático</h2>
+                    <h2 className="text-xl font-bold text-white">Central de Certificação & Modelos de Ementa</h2>
                     <p className="text-xs text-slate-400">
-                      Personalize o layout de impressão, ementa curricular no verso, carga horária e respaldo legal.
+                      Escolha modelos prontos, vincule à turma, gerencie módulos ensinados e pré-visualize o certificado.
                     </p>
                   </div>
                 </div>
 
-                <span className="text-xs font-semibold px-3 py-1 rounded-full bg-emerald-500/10 text-emerald-400 border border-emerald-500/30">
-                  Modelo Oficial em Vigor
-                </span>
+                {/* BOTÃO DA PRÉVIA VISUAL DO CERTIFICADO */}
+                <button
+                  type="button"
+                  onClick={() => setIsPreviewOpen(true)}
+                  className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl font-bold text-xs text-slate-950 bg-gradient-to-r from-uniao-400 to-teal-300 hover:brightness-110 shadow-lg transition-all"
+                >
+                  <Eye className="w-4 h-4" />
+                  <span>Pré-visualizar Certificado (Frente & Verso)</span>
+                </button>
+              </div>
+
+              {/* SELETORES CENTRAIS: TURMA + MODELO PRONTO */}
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4 bg-slate-950/80 p-5 rounded-2xl border border-white/10">
+                
+                {/* 1. Seletor de Turma */}
+                <div className="space-y-1.5">
+                  <label className="text-xs font-bold uppercase tracking-wider text-uniao-400 flex items-center gap-1.5">
+                    <School className="w-3.5 h-3.5" />
+                    <span>1. Vincular à Turma para Emissão:</span>
+                  </label>
+                  <select
+                    value={selectedCertCohortId}
+                    onChange={(e) => setSelectedCertCohortId(e.target.value)}
+                    className="w-full px-3.5 py-2.5 rounded-xl bg-slate-900 border border-white/10 text-white text-xs font-bold focus:outline-none focus:border-uniao-500 cursor-pointer"
+                  >
+                    {cohorts.map((c) => (
+                      <option key={c.id} value={c.id}>
+                        {c.name} ({c.status || 'Ativa'})
+                      </option>
+                    ))}
+                  </select>
+                  <span className="text-[11px] text-slate-400 block">
+                    Os alunos formados desta turma receberão este modelo específico.
+                  </span>
+                </div>
+
+                {/* 2. Seletor de Modelos Prontos */}
+                <div className="space-y-1.5">
+                  <label className="text-xs font-bold uppercase tracking-wider text-teal-300 flex items-center gap-1.5">
+                    <Sparkles className="w-3.5 h-3.5" />
+                    <span>2. Modelos Oficiais Prontos (Presets):</span>
+                  </label>
+                  <select
+                    value={selectedPresetId}
+                    onChange={(e) => handleApplyPreset(e.target.value)}
+                    className="w-full px-3.5 py-2.5 rounded-xl bg-slate-900 border border-teal-500/30 text-white text-xs font-bold focus:outline-none focus:border-teal-400 cursor-pointer"
+                  >
+                    {PRESET_MODELS.map((preset) => (
+                      <option key={preset.id} value={preset.id}>
+                        [{preset.category}] {preset.name}
+                      </option>
+                    ))}
+                  </select>
+                  <span className="text-[11px] text-teal-400 block">
+                    Carrega automaticamente carga horária, respaldo legal e os módulos ensinados.
+                  </span>
+                </div>
+
               </div>
 
               {certSavedSuccess && (
                 <div className="p-3.5 rounded-xl bg-emerald-500/10 border border-emerald-500/30 text-emerald-300 text-xs flex items-center gap-2">
                   <CheckCircle2 className="w-4 h-4 text-emerald-400" />
-                  <span>Modelo de certificado e conteúdo programático atualizados com sucesso no Supabase!</span>
+                  <span>Modelo de certificado e conteúdo programático vinculados e salvos com sucesso!</span>
                 </div>
               )}
 
-              <form onSubmit={handleSaveCertificate} className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              {/* FORMULÁRIO DO EDITOR */}
+              <form onSubmit={handleSaveCertificate} className="grid grid-cols-1 lg:grid-cols-12 gap-8">
                 
-                {/* Lado Esquerdo: Metadados do Certificado */}
-                <div className="space-y-4">
+                {/* LADO ESQUERDO: CAMPOS DE TEXTO E METADADOS DA FRENTE (Cols 7) */}
+                <div className="lg:col-span-7 space-y-4">
                   <h3 className="text-xs font-bold uppercase tracking-wider text-uniao-400 flex items-center gap-2">
                     <FileText className="w-4 h-4" />
-                    <span>Dados Oficiais da Frente do Certificado</span>
+                    <span>Frente do Certificado (Dados de Impressão)</span>
                   </h3>
 
                   <div className="space-y-1.5">
-                    <label className="text-xs font-semibold text-slate-300">Título Principal da Certificação</label>
+                    <label className="text-xs font-semibold text-slate-300">Título Oficial do Certificado</label>
                     <input
                       type="text"
                       required
-                      value={certificateTemplate.title}
-                      onChange={(e) => setCertificateTemplate({ ...certificateTemplate, title: e.target.value })}
+                      value={certTitle}
+                      onChange={(e) => setCertTitle(e.target.value)}
                       className="w-full px-3.5 py-2.5 rounded-xl bg-slate-950 border border-white/10 text-white text-xs focus:outline-none focus:border-uniao-500"
                     />
                   </div>
@@ -799,8 +1177,8 @@ export const AdminDashboard: React.FC = () => {
                       <input
                         type="number"
                         required
-                        value={certificateTemplate.workloadHours}
-                        onChange={(e) => setCertificateTemplate({ ...certificateTemplate, workloadHours: e.target.value })}
+                        value={certWorkload}
+                        onChange={(e) => setCertWorkload(Number(e.target.value))}
                         className="w-full px-3.5 py-2.5 rounded-xl bg-slate-950 border border-white/10 text-white text-xs font-mono focus:outline-none focus:border-uniao-500"
                       />
                     </div>
@@ -809,8 +1187,8 @@ export const AdminDashboard: React.FC = () => {
                       <input
                         type="number"
                         required
-                        value={certificateTemplate.validityMonths}
-                        onChange={(e) => setCertificateTemplate({ ...certificateTemplate, validityMonths: e.target.value })}
+                        value={certValidity}
+                        onChange={(e) => setCertValidity(Number(e.target.value))}
                         className="w-full px-3.5 py-2.5 rounded-xl bg-slate-950 border border-white/10 text-white text-xs font-mono focus:outline-none focus:border-uniao-500"
                       />
                     </div>
@@ -821,8 +1199,8 @@ export const AdminDashboard: React.FC = () => {
                     <input
                       type="text"
                       required
-                      value={certificateTemplate.legalFramework}
-                      onChange={(e) => setCertificateTemplate({ ...certificateTemplate, legalFramework: e.target.value })}
+                      value={certLegal}
+                      onChange={(e) => setCertLegal(e.target.value)}
                       className="w-full px-3.5 py-2.5 rounded-xl bg-slate-950 border border-white/10 text-white text-xs focus:outline-none focus:border-uniao-500"
                     />
                   </div>
@@ -833,66 +1211,102 @@ export const AdminDashboard: React.FC = () => {
                       <input
                         type="text"
                         required
-                        value={certificateTemplate.instructorName}
-                        onChange={(e) => setCertificateTemplate({ ...certificateTemplate, instructorName: e.target.value })}
+                        value={certInstructor}
+                        onChange={(e) => setCertInstructor(e.target.value)}
                         className="w-full px-3.5 py-2.5 rounded-xl bg-slate-950 border border-white/10 text-white text-xs focus:outline-none focus:border-uniao-500"
                       />
                     </div>
                     <div className="space-y-1.5">
-                      <label className="text-xs font-semibold text-slate-300">Cargo / Registro Profissional</label>
+                      <label className="text-xs font-semibold text-slate-300">Cargo / CRM</label>
                       <input
                         type="text"
                         required
-                        value={certificateTemplate.instructorRole}
-                        onChange={(e) => setCertificateTemplate({ ...certificateTemplate, instructorRole: e.target.value })}
+                        value={certInstructorRole}
+                        onChange={(e) => setCertInstructorRole(e.target.value)}
                         className="w-full px-3.5 py-2.5 rounded-xl bg-slate-950 border border-white/10 text-white text-xs focus:outline-none focus:border-uniao-500"
                       />
                     </div>
                   </div>
 
-                </div>
-
-                {/* Lado Direito: Editor de Conteúdo Programático (Verso) */}
-                <div className="space-y-4">
-                  <h3 className="text-xs font-bold uppercase tracking-wider text-teal-300 flex items-center gap-2">
-                    <BookOpen className="w-4 h-4" />
-                    <span>Conteúdo Programático & Ementa do Verso</span>
-                  </h3>
-
                   <div className="space-y-1.5">
-                    <label className="text-xs font-semibold text-slate-300">
-                      Módulos e Tópicos Ensinados (1 por linha)
-                    </label>
-                    <textarea
-                      rows={9}
+                    <label className="text-xs font-semibold text-slate-300">Diretor Técnico Médico</label>
+                    <input
+                      type="text"
                       required
-                      value={certificateTemplate.syllabus}
-                      onChange={(e) => setCertificateTemplate({ ...certificateTemplate, syllabus: e.target.value })}
-                      className="w-full px-3.5 py-2.5 rounded-xl bg-slate-950 border border-white/10 text-white text-xs font-mono focus:outline-none focus:border-uniao-500 leading-relaxed"
+                      value={certDirector}
+                      onChange={(e) => setCertDirector(e.target.value)}
+                      className="w-full px-3.5 py-2.5 rounded-xl bg-slate-950 border border-white/10 text-white text-xs focus:outline-none focus:border-uniao-500"
                     />
-                    <span className="text-[11px] text-slate-500">
-                      Este conteúdo é impresso no verso do PDF oficial de certificação dos formandos.
-                    </span>
                   </div>
 
-                  {/* Preview Visual Rápido do Certificado */}
-                  <div className="p-4 rounded-2xl bg-slate-950 border border-white/5 space-y-2">
-                    <span className="text-[10px] font-bold uppercase tracking-wider text-slate-400">
-                      Pré-visualização da Validação
-                    </span>
-                    <div className="text-xs text-slate-300 space-y-1">
-                      <div>Documento: <strong>{certificateTemplate.title}</strong></div>
-                      <div>Carga Horária: <strong>{certificateTemplate.workloadHours} horas</strong> • Validade: <strong>{certificateTemplate.validityMonths} meses</strong></div>
-                      <div className="text-[11px] text-uniao-400">Assinatura Digital com Hash Criptográfico e QR Code Ativo</div>
+                </div>
+
+                {/* LADO DIREITO: MÓDULOS E TÓPICOS ENSINADOS (CLICÁVEIS E CUSTOMIZÁVEIS) (Cols 5) */}
+                <div className="lg:col-span-5 space-y-4">
+                  <div className="flex items-center justify-between">
+                    <h3 className="text-xs font-bold uppercase tracking-wider text-teal-300 flex items-center gap-2">
+                      <BookOpen className="w-4 h-4" />
+                      <span>Módulos do Verso ({certModules.length})</span>
+                    </h3>
+                    <span className="text-[10px] text-slate-400">Clicável para remover</span>
+                  </div>
+
+                  {/* Lista de Módulos Clicáveis */}
+                  <div className="space-y-2 max-h-72 overflow-y-auto pr-1">
+                    {certModules.map((mod, idx) => (
+                      <div
+                        key={idx}
+                        className="group p-2.5 rounded-xl bg-slate-950 border border-white/10 hover:border-red-500/50 flex items-center justify-between gap-3 text-xs text-slate-200 transition-colors"
+                      >
+                        <div className="flex items-center gap-2 truncate">
+                          <span className="w-5 h-5 rounded-full bg-uniao-500/20 text-uniao-400 text-[10px] font-bold flex items-center justify-center shrink-0">
+                            {idx + 1}
+                          </span>
+                          <span className="truncate">{mod}</span>
+                        </div>
+                        <button
+                          type="button"
+                          onClick={() => handleRemoveModule(idx)}
+                          className="text-slate-500 hover:text-red-400 p-1 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity"
+                          title="Remover módulo deste certificado"
+                        >
+                          <X className="w-3.5 h-3.5" />
+                        </button>
+                      </div>
+                    ))}
+                  </div>
+
+                  {/* REQUISITO: CAMPO PARA ADICIONAR MAIS MÓDULOS SE QUISER */}
+                  <div className="pt-2 space-y-2">
+                    <label className="text-xs font-semibold text-slate-300">
+                      Adicionar Tópico Personalizado à Ementa:
+                    </label>
+                    <div className="flex gap-2">
+                      <input
+                        type="text"
+                        value={newCustomModule}
+                        onChange={(e) => setNewCustomModule(e.target.value)}
+                        onKeyDown={(e) => { if (e.key === 'Enter') { e.preventDefault(); handleAddModule(); } }}
+                        placeholder="Ex: Treinamento em Afogamento e Hipotermia..."
+                        className="flex-1 px-3 py-2 rounded-xl bg-slate-950 border border-white/10 text-white text-xs focus:outline-none focus:border-uniao-500"
+                      />
+                      <button
+                        type="button"
+                        onClick={handleAddModule}
+                        className="px-3.5 py-2 rounded-xl text-xs font-bold text-slate-950 bg-uniao-400 hover:bg-uniao-300 transition-colors"
+                      >
+                        + Adicionar
+                      </button>
                     </div>
                   </div>
 
-                  <div className="pt-2 flex justify-end">
+                  {/* Ação de Salvar Modelo para a Turma */}
+                  <div className="pt-4 border-t border-white/10">
                     <button
                       type="submit"
-                      className="w-full py-3 px-6 rounded-xl font-bold text-xs text-slate-950 bg-gradient-to-r from-uniao-400 to-teal-300 hover:brightness-110 shadow-lg transition-all"
+                      className="w-full py-3.5 px-6 rounded-xl font-bold text-xs text-slate-950 bg-gradient-to-r from-uniao-400 to-teal-300 hover:brightness-110 shadow-lg transition-all"
                     >
-                      Salvar Modelo de Certificado & Ementa
+                      Salvar Modelo de Certificado para a Turma Selecionada
                     </button>
                   </div>
 
@@ -1037,6 +1451,292 @@ export const AdminDashboard: React.FC = () => {
         )}
 
       </main>
+
+      {/* ========================================================================= */}
+      {/* MODAL 1: MATRICULAR ALUNO EM TURMA ESPECÍFICA */}
+      {/* ========================================================================= */}
+      {isAddStudentOpen && (
+        <div className="fixed inset-0 z-50 bg-slate-950/80 backdrop-blur-sm flex items-center justify-center p-4">
+          <div className="bg-slate-900 border border-white/10 rounded-2xl p-6 sm:p-8 max-w-md w-full space-y-5 shadow-2xl">
+            <div className="flex items-center justify-between border-b border-white/10 pb-4">
+              <div className="flex items-center gap-2.5">
+                <UserPlus className="w-5 h-5 text-uniao-400" />
+                <h3 className="font-bold text-white text-base">Matricular Novo Aluno</h3>
+              </div>
+              <button 
+                onClick={() => setIsAddStudentOpen(false)}
+                className="text-slate-400 hover:text-white"
+              >
+                <X className="w-5 h-5" />
+              </button>
+            </div>
+
+            <form onSubmit={handleAddStudent} className="space-y-4">
+              <div className="space-y-1">
+                <label className="text-xs font-semibold text-slate-300">Turma de Destino</label>
+                <select
+                  required
+                  value={newStudentCohortId}
+                  onChange={(e) => setNewStudentCohortId(e.target.value)}
+                  className="w-full px-3 py-2.5 rounded-xl bg-slate-950 border border-white/10 text-white text-xs focus:outline-none focus:border-uniao-500"
+                >
+                  <option value="">Selecione uma Turma</option>
+                  {cohorts.map((c) => (
+                    <option key={c.id} value={c.id}>{c.name}</option>
+                  ))}
+                </select>
+              </div>
+
+              <div className="space-y-1">
+                <label className="text-xs font-semibold text-slate-300">Nome Completo</label>
+                <input
+                  type="text"
+                  required
+                  value={newStudentName}
+                  onChange={(e) => setNewStudentName(e.target.value)}
+                  placeholder="Ex: Dra. Ana Paula Ramos"
+                  className="w-full px-3 py-2.5 rounded-xl bg-slate-950 border border-white/10 text-white text-xs focus:outline-none focus:border-uniao-500"
+                />
+              </div>
+
+              <div className="space-y-1">
+                <label className="text-xs font-semibold text-slate-300">E-mail de Acesso</label>
+                <input
+                  type="email"
+                  required
+                  value={newStudentEmail}
+                  onChange={(e) => setNewStudentEmail(e.target.value)}
+                  placeholder="aluno@exemplo.com"
+                  className="w-full px-3 py-2.5 rounded-xl bg-slate-950 border border-white/10 text-white text-xs focus:outline-none focus:border-uniao-500"
+                />
+              </div>
+
+              <div className="space-y-1">
+                <label className="text-xs font-semibold text-slate-300">CPF (Opcional)</label>
+                <input
+                  type="text"
+                  value={newStudentCpf}
+                  onChange={(e) => setNewStudentCpf(e.target.value)}
+                  placeholder="000.000.000-00"
+                  className="w-full px-3 py-2.5 rounded-xl bg-slate-950 border border-white/10 text-white text-xs focus:outline-none focus:border-uniao-500"
+                />
+              </div>
+
+              <div className="pt-2 flex justify-end gap-3">
+                <button
+                  type="button"
+                  onClick={() => setIsAddStudentOpen(false)}
+                  className="px-4 py-2.5 rounded-xl text-xs text-slate-400 hover:text-white"
+                >
+                  Cancelar
+                </button>
+                <button
+                  type="submit"
+                  className="px-6 py-2.5 rounded-xl font-bold text-xs text-slate-950 bg-gradient-to-r from-uniao-400 to-teal-300 hover:brightness-110 shadow"
+                >
+                  Concluir Matrícula
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      )}
+
+      {/* ========================================================================= */}
+      {/* MODAL 2: PRÉ-VISUALIZAÇÃO COMPLETA DO CERTIFICADO (FRENTE & VERSO) */}
+      {/* ========================================================================= */}
+      {isPreviewOpen && (
+        <div className="fixed inset-0 z-50 bg-slate-950/90 backdrop-blur-md flex items-center justify-center p-4 overflow-y-auto">
+          <div className="bg-slate-900 border border-white/10 rounded-3xl max-w-4xl w-full p-6 sm:p-8 space-y-6 shadow-2xl my-8">
+            
+            {/* Header da Prévia */}
+            <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-white/10 pb-4">
+              <div className="flex items-center gap-3">
+                <div className="w-10 h-10 rounded-xl bg-uniao-500/10 text-uniao-400 flex items-center justify-center">
+                  <GraduationCap className="w-5 h-5" />
+                </div>
+                <div>
+                  <h3 className="font-bold text-white text-base">Pré-visualização Oficial do Certificado Digital</h3>
+                  <p className="text-xs text-slate-400">
+                    Turma Vinculada: <strong className="text-uniao-400">{currentCertCohort?.name || 'Turma Selecionada'}</strong>
+                  </p>
+                </div>
+              </div>
+
+              <div className="flex items-center gap-3">
+                {/* Alternador Frente / Verso */}
+                <div className="bg-slate-950 p-1 rounded-xl border border-white/10 flex items-center gap-1">
+                  <button
+                    type="button"
+                    onClick={() => setPreviewSide('front')}
+                    className={`px-3 py-1.5 rounded-lg text-xs font-bold transition-all ${
+                      previewSide === 'front' ? 'bg-uniao-600 text-white' : 'text-slate-400 hover:text-white'
+                    }`}
+                  >
+                    Frente
+                  </button>
+                  <button
+                    type="button"
+                    onClick={() => setPreviewSide('back')}
+                    className={`px-3 py-1.5 rounded-lg text-xs font-bold transition-all ${
+                      previewSide === 'back' ? 'bg-uniao-600 text-white' : 'text-slate-400 hover:text-white'
+                    }`}
+                  >
+                    Verso (Ementa)
+                  </button>
+                </div>
+
+                <button 
+                  onClick={() => setIsPreviewOpen(false)}
+                  className="p-2 rounded-xl text-slate-400 hover:text-white hover:bg-white/5"
+                >
+                  <X className="w-5 h-5" />
+                </button>
+              </div>
+            </div>
+
+            {/* Controle de Nome do Aluno na Prévia */}
+            <div className="flex items-center gap-3 bg-slate-950 p-3 rounded-xl border border-white/5 text-xs">
+              <span className="text-slate-400">Nome para teste na prévia:</span>
+              <input
+                type="text"
+                value={previewStudentName}
+                onChange={(e) => setPreviewStudentName(e.target.value)}
+                className="bg-slate-900 px-3 py-1 rounded-lg border border-white/10 text-white font-bold text-xs focus:outline-none focus:border-uniao-500"
+              />
+            </div>
+
+            {/* ============================================================= */}
+            {/* O CERTIFICADO EM SI (DESIGN DE ALTA FIDELIDADE) */}
+            {/* ============================================================= */}
+            <div className="bg-white text-slate-900 rounded-2xl p-8 sm:p-12 shadow-2xl border-8 border-slate-900 relative overflow-hidden font-serif">
+              
+              {/* Borda Dourada Interna de Diploma */}
+              <div className="border-2 border-amber-600/40 p-6 sm:p-10 relative">
+                
+                {previewSide === 'front' ? (
+                  /* ===================================================== */
+                  /* FRENTE DO CERTIFICADO */
+                  /* ===================================================== */
+                  <div className="text-center space-y-6">
+                    
+                    {/* Topo: Logo União e Cruz */}
+                    <div className="flex items-center justify-center gap-4">
+                      <div className="w-12 h-12">
+                        <img src="/brand/simbolo-cruz-uniao-verde.png" alt="Cruz USM" className="w-full h-full object-contain" />
+                      </div>
+                      <div className="text-left font-sans">
+                        <div className="text-xl font-black text-slate-950 tracking-tight leading-none">UNIÃO</div>
+                        <div className="text-[10px] font-bold text-teal-700 tracking-[0.25em] uppercase">SERVIÇOS MÉDICOS</div>
+                      </div>
+                    </div>
+
+                    <div className="space-y-1 font-sans">
+                      <span className="text-[11px] font-black uppercase tracking-[0.3em] text-amber-700">
+                        CERTIFICADO DE FORMAÇÃO PROFISSIONAL
+                      </span>
+                      <h2 className="text-2xl sm:text-3xl font-black text-slate-900 tracking-tight font-serif">
+                        {certTitle}
+                      </h2>
+                    </div>
+
+                    <p className="text-sm text-slate-700 leading-relaxed max-w-2xl mx-auto font-sans">
+                      Certificamos que <strong className="text-slate-950 font-bold underline decoration-amber-600 decoration-2 underline-offset-4 text-base">{previewStudentName}</strong> concluiu com aproveitamento integral a capacitação teórica, simulador clínico e treinamento prático presencial de alta fidelidade com carga horária de <strong className="font-bold text-slate-950">{certWorkload} horas</strong>.
+                    </p>
+
+                    <div className="text-xs text-slate-600 max-w-xl mx-auto italic font-sans">
+                      Fundamentação Legal: {certLegal}
+                    </div>
+
+                    {/* Assinaturas */}
+                    <div className="grid grid-cols-2 gap-8 pt-8 font-sans border-t border-slate-200 mt-6">
+                      <div className="text-center space-y-1">
+                        <div className="font-serif italic text-lg text-slate-800 font-bold border-b border-slate-400 pb-1 w-48 mx-auto">
+                          {certInstructor}
+                        </div>
+                        <div className="text-[11px] font-bold text-slate-900">{certInstructor}</div>
+                        <div className="text-[10px] text-slate-500">{certInstructorRole}</div>
+                      </div>
+
+                      <div className="text-center space-y-1">
+                        <div className="font-serif italic text-lg text-slate-800 font-bold border-b border-slate-400 pb-1 w-48 mx-auto">
+                          {certDirector.split('-')[0]}
+                        </div>
+                        <div className="text-[11px] font-bold text-slate-900">{certDirector}</div>
+                        <div className="text-[10px] text-slate-500">União Serviços Médicos • CRM-SP</div>
+                      </div>
+                    </div>
+
+                    {/* Rodapé com Hash e Autenticidade */}
+                    <div className="pt-4 flex items-center justify-between text-[10px] text-slate-500 font-sans border-t border-slate-100">
+                      <div>Código Autenticador: <strong>USM-2026-X89A-99F</strong></div>
+                      <div>Validade: <strong>{certValidity} meses</strong></div>
+                      <div>Emissão: <strong>{new Date().toLocaleDateString('pt-BR')}</strong></div>
+                    </div>
+
+                  </div>
+                ) : (
+                  /* ===================================================== */
+                  /* VERSO DO CERTIFICADO (EMENTA E CONTEÚDO PROGRAMÁTICO) */
+                  /* ===================================================== */
+                  <div className="space-y-6 font-sans">
+                    <div className="flex items-center justify-between border-b-2 border-slate-900 pb-3">
+                      <div>
+                        <h4 className="font-black text-sm uppercase tracking-wider text-slate-900">
+                          Conteúdo Programático & Ementa do Treinamento
+                        </h4>
+                        <span className="text-xs text-slate-600">{certTitle}</span>
+                      </div>
+                      <span className="text-xs font-bold px-3 py-1 bg-slate-100 rounded-lg text-slate-800 font-mono">
+                        Carga Horária: {certWorkload} horas
+                      </span>
+                    </div>
+
+                    <div className="space-y-2.5">
+                      <div className="text-xs font-bold text-slate-800 uppercase tracking-wider">
+                        Módulos Teórico-Práticos Ministrados:
+                      </div>
+
+                      <ol className="list-decimal pl-5 space-y-1.5 text-xs text-slate-700 leading-relaxed">
+                        {certModules.map((item, i) => (
+                          <li key={i} className="pl-1">
+                            <strong>{item}</strong>
+                          </li>
+                        ))}
+                      </ol>
+                    </div>
+
+                    <div className="p-4 bg-slate-50 rounded-xl border border-slate-200 text-xs text-slate-600 space-y-1">
+                      <strong className="text-slate-900 block">Metodologia Blended Learning USM:</strong>
+                      <p>
+                        Etapa 1: Videoaulas teóricas e estudos de caso • Etapa 2: Simulações Clínicas Interativas em Sistema de Decisão de Trauma • Etapa 3: Estação Prática Presencial Hands-on com manequins de RCP e torniquetes homologados.
+                      </p>
+                    </div>
+
+                    <div className="flex items-center justify-between pt-4 border-t border-slate-200 text-[10px] text-slate-500">
+                      <div>Registro Nacional de Capacitação Médica USM</div>
+                      <div>Documento Válido em Todo Território Nacional</div>
+                    </div>
+                  </div>
+                )}
+
+              </div>
+            </div>
+
+            <div className="flex justify-end gap-3 pt-2">
+              <button
+                type="button"
+                onClick={() => setIsPreviewOpen(false)}
+                className="px-5 py-2.5 rounded-xl text-xs font-bold text-white bg-slate-800 hover:bg-slate-700"
+              >
+                Fechar Prévia
+              </button>
+            </div>
+
+          </div>
+        </div>
+      )}
+
     </div>
   );
 };
