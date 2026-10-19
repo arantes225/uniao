@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { HelpCircle, Clock, Award, CheckCircle2, ChevronRight, AlertTriangle, RotateCcw, XCircle, ArrowLeft } from 'lucide-react';
+import React, { useState, useEffect, useRef } from 'react';
+import { HelpCircle, Clock, Award, CheckCircle2, ChevronRight, AlertTriangle, RotateCcw, XCircle, ArrowLeft, ShieldAlert } from 'lucide-react';
 import { useTheme } from '../../context/ThemeContext';
 
 interface Question {
@@ -130,6 +130,126 @@ const mockQuestions: Question[] = [
     ],
     correct: 1,
     explanation: 'Os cuidados pós-PCR visam prevenir a recorrência da parada, otimizar a hemodinâmica, oxigenação, ventilação e assegurar o encaminhamento imediato para UTI/hemodinâmica.'
+  },
+  {
+    id: 11,
+    stem: 'Ao suspeitar de pneumotórax hipertensivo em paciente traumatizado com instabilidade hemodinâmica, qual o procedimento de alívio emergencial indicado?',
+    options: [
+      'Toracocentese descompressiva com agulha/cateter calibroso no 2º espaço intercostal na linha hemiclavicular ou 4º/5º espaço na linha axilar anterior',
+      'Intubação orotraqueal imediata com pressão positiva sem descompressão',
+      'Aplicação de torniquete torácico',
+      'Administração exclusiva de broncodilatador inalatório'
+    ],
+    correct: 0,
+    explanation: 'O pneumotórax hipertensivo é emergência clínica extrema resolvida com descompressão torácica imediata por agulha calibrosa para aliviar o colapso hemodinâmico.'
+  },
+  {
+    id: 12,
+    stem: 'Qual a conduta indicada para o curativo de ferimento torácico aspirante (pneumotórax aberto) no APH?',
+    options: [
+      'Oclusão total e hermética dos quatro lados sem válvula',
+      'Curativo oclusivo de 3 pontas (três lados fixados, funcionando como válvula unidirecional)',
+      'Manter a ferida totalmente aberta sem curativo',
+      'Tamponamento profundo com algodão seco'
+    ],
+    correct: 1,
+    explanation: 'O curativo de 3 pontas permite a saída de ar acumulado durante a expiração e impede a entrada de ar atmosférico durante a inspiração, prevenindo a hipertensão pleural.'
+  },
+  {
+    id: 13,
+    stem: 'Qual o ritmo cardíaco de parada que NÃO responde a choque elétrico no Desfibrilador Externo Automático (DEA)?',
+    options: [
+      'Fibrilação Ventricular (FV)',
+      'Taquicardia Ventricular sem Pulso (TVSP)',
+      'Assistolia e Atividade Elétrica Sem Pulso (AESP)',
+      'Taquicardia Ventricular Polimórfica (Torsades)'
+    ],
+    correct: 2,
+    explanation: 'Assistolia e AESP são ritmos não chocáveis. A conduta é RCP imediata contínua, identificação e tratamento rápido das causas reversíveis (5H e 5T) e adrenalina precoce.'
+  },
+  {
+    id: 14,
+    stem: 'Em um quadro suspeito de Acidente Vascular Cerebral (AVC), qual escala de triagem rápida é amplamente empregada no APH avaliando fraqueza facial, debilidade nos braços e alteração na fala?',
+    options: [
+      'Escala Pré-Hospitalar de Cincinnati',
+      'Escala de Aldrete e Kroulik',
+      'Escala de Ramsay',
+      'Escore de Apgar'
+    ],
+    correct: 0,
+    explanation: 'A Escala de Cincinnati avalia assimetria facial, queda do membro superior e fala anormal. A positividade de 1 sinal confere alta probabilidade de AVC isquêmico agudo.'
+  },
+  {
+    id: 15,
+    stem: 'Qual o tempo máximo recomendado (Golden Hour / Janela Terapêutica) para condução de um paciente com infarto agudo do miocárdio com supra de ST (IAMCSST) ou AVC isquêmico até um centro de referência hemodinâmica/trombólise?',
+    options: [
+      'O mais breve possível, respeitando a janela crítica de até 60 minutos porta-balão e até 4.5 horas para trombólise venosa no AVC',
+      'Dentro de 24 horas sem urgência',
+      'Apenas após o término de todos os exames laboratoriais no domicílio',
+      'Até 48 horas após o início dos sintomas'
+    ],
+    correct: 0,
+    explanation: 'Tempo é músculo cardíaco e tempo é cérebro. O transporte ágil com aviso prévio ao hospital salva vidas e viabiliza a desobstrução arterial em tempo hábil.'
+  },
+  {
+    id: 16,
+    stem: 'Qual conduta é CONTRAINDICADA no atendimento inicial à vítima de convulsão tônico-clônica generalizada em ambiente extra-hospitalar?',
+    options: [
+      'Afastar objetos cortantes e proteger a cabeça da vítima com superfície acolchoada',
+      'Introduzir os dedos, colher ou panos na boca da vítima para segurar a língua',
+      'Lateralizar a cabeça da vítima após a crise para evitar broncoaspiração de saliva/vômito',
+      'Cronometrar o tempo de duração da crise epiléptica'
+    ],
+    correct: 1,
+    explanation: 'Nunca se deve colocar nada na boca do paciente durante uma convulsão. Isso gera risco grave de quebra dentária, lesão nas mãos do socorrista e obstrução de via aérea.'
+  },
+  {
+    id: 17,
+    stem: 'No afogamento, qual a prioridade primordial na ressuscitação cardiopulmonar quando a vítima está em parada cardiorrespiratória?',
+    options: [
+      'Ventilações de resgate precoces (5 ventilações iniciais), pois a causa primária da parada é a hipóxia/asfixia',
+      'Compressões contínuas isoladas sem ventilação',
+      'Compressão abdominal para retirar a água do pulmão',
+      'Torniquete em membros'
+    ],
+    correct: 0,
+    explanation: 'Diferente da PCR por etiologia cardíaca, o afogamento é causado por hipóxia pura. A reanimação exige ventilações de resgate precoces associadas a compressões.'
+  },
+  {
+    id: 18,
+    stem: 'Ao encontrar um objeto empalado (transfixado) no abdômen de uma vítima consciente, qual o manejo correto?',
+    options: [
+      'Remover o objeto imediatamente no local',
+      'Estabilizar o objeto no lugar com compressas e ataduras sem removê-lo, prevenindo hemorragia maciça adicional',
+      'Empurrar o objeto para dentro da cavidade para evitar exposição',
+      'Girar o objeto em 360 graus para descompressão'
+    ],
+    correct: 1,
+    explanation: 'Objetos empalados tamponam grandes vasos. A sua remoção só pode ser realizada em centro cirúrgico hospitalar estruturado; no APH, apenas estabiliza-se o objeto.'
+  },
+  {
+    id: 19,
+    stem: 'Qual a técnica recomendada de abertura de via aérea em vítimas de trauma com suspeita de lesão da coluna cervical?',
+    options: [
+      'Hiperextensão forçada da cabeça (Head-tilt)',
+      'Tração da mandíbula (Jaw-thrust) com alinhamento e estabilização cervical manual neutra',
+      'Flexão anterior máxima do queixo contra o esterno',
+      'Rotação lateral da cabeça em 90 graus'
+    ],
+    correct: 1,
+    explanation: 'A manobra de Jaw-thrust (anteriorização mandibular) abre as vias aéreas sem exigir hiperextensão da coluna cervical, preservando a medula espinhal.'
+  },
+  {
+    id: 20,
+    stem: 'Em um acidente com múltiplas vítimas (Método START), como deve ser classificada uma vítima que não respira após uma tentativa simples de abertura de vias aéreas?',
+    options: [
+      'Verde (leve / deambula)',
+      'Amarela (urgente / aguarda transporte)',
+      'Preta (óbito / inviável no método START)',
+      'Vermelha (imediata prioritária)'
+    ],
+    correct: 2,
+    explanation: 'No método START de triagem para catástrofes, se a vítima permanece sem respirar mesmo após o alinhamento da via aérea, é classificada com a lona/cartão preto (óbito).'
   }
 ];
 
@@ -145,21 +265,115 @@ export const ExamsPage: React.FC = () => {
   const [examFinished, setExamFinished] = useState<boolean>(false);
   const [lastScore, setLastScore] = useState<number>(0);
 
+  // Regras de Tempo (45 min = 2700 seg) e Segurança (Anti-cola: inatividade 45s ou troca de aba)
+  const [secondsRemaining, setSecondsRemaining] = useState<number>(45 * 60);
+  const [securityAlert, setSecurityAlert] = useState<string | null>(null);
+  const lastActiveTimestamp = useRef<number>(Date.now());
+
   const maxAttempts = 3;
-  const minPassingScore = 70; // 70% de acertos para ser aprovado
+  const minPassingScore = 70; // 70% de acertos para ser aprovado (14 de 20 questões)
   const isApproved = bestScore !== null && bestScore >= minPassingScore;
   const attemptsRemaining = Math.max(0, maxAttempts - attemptsUsed);
   const canAttempt = !isApproved && attemptsRemaining > 0;
+
+  // Temporizador Geral de 45 minutos da Prova
+  useEffect(() => {
+    let timer: any = null;
+    if (isExamRunning && !examFinished) {
+      timer = setInterval(() => {
+        setSecondsRemaining((prev) => {
+          if (prev <= 1) {
+            clearInterval(timer!);
+            handleSubmitExam();
+            return 0;
+          }
+          return prev - 1;
+        });
+      }, 1000);
+    }
+    return () => {
+      if (timer) clearInterval(timer);
+    };
+  }, [isExamRunning, examFinished]);
+
+  // Monitoramento de Inatividade (45s) e Troca de Aba/Tela (Visibilitychange / Blur)
+  useEffect(() => {
+    if (!isExamRunning || examFinished) return;
+
+    const resetActivity = () => {
+      lastActiveTimestamp.current = Date.now();
+    };
+
+    // Ação: Cancelar resposta selecionada devido a infração de segurança
+    const triggerDeselect = (reason: string) => {
+      setAnswers((prev) => {
+        const questionKeys = Object.keys(prev);
+        if (questionKeys.length === 0) return prev;
+        // Identifica última questão respondida ou desmarca a questão corrente
+        const lastQId = Number(questionKeys[questionKeys.length - 1]);
+        const nextAnswers = { ...prev };
+        delete nextAnswers[lastQId];
+        return nextAnswers;
+      });
+      setSecurityAlert(reason);
+      // Auto limpa alerta após 7 segundos
+      setTimeout(() => setSecurityAlert(null), 7000);
+    };
+
+    // 1. Troca de aba ou perda de foco da janela
+    const handleVisibilityChange = () => {
+      if (document.hidden) {
+        triggerDeselect('⚠️ Troca de tela/aba detectada! A sua última alternativa marcada foi cancelada por segurança.');
+      }
+    };
+
+    const handleWindowBlur = () => {
+      triggerDeselect('⚠️ Perda de foco da janela da prova detectada! A sua alternativa foi cancelada por segurança.');
+    };
+
+    // 2. Verificação de Inatividade a cada 2 segundos
+    const inactivityInterval = setInterval(() => {
+      const elapsedInactiveMs = Date.now() - lastActiveTimestamp.current;
+      if (elapsedInactiveMs >= 45000) { // 45 segundos inativo
+        triggerDeselect('⚠️ Inatividade superior a 45 segundos detectada! A sua última alternativa marcada foi cancelada.');
+        lastActiveTimestamp.current = Date.now(); // reseta ciclo
+      }
+    }, 2000);
+
+    // Eventos de rastreamento de presença/atividade
+    window.addEventListener('mousemove', resetActivity);
+    window.addEventListener('keydown', resetActivity);
+    window.addEventListener('click', resetActivity);
+    window.addEventListener('scroll', resetActivity);
+    window.addEventListener('touchstart', resetActivity);
+    document.addEventListener('visibilitychange', handleVisibilityChange);
+    window.addEventListener('blur', handleWindowBlur);
+
+    return () => {
+      clearInterval(inactivityInterval);
+      window.removeEventListener('mousemove', resetActivity);
+      window.removeEventListener('keydown', resetActivity);
+      window.removeEventListener('click', resetActivity);
+      window.removeEventListener('scroll', resetActivity);
+      window.removeEventListener('touchstart', resetActivity);
+      document.removeEventListener('visibilitychange', handleVisibilityChange);
+      window.removeEventListener('blur', handleWindowBlur);
+    };
+  }, [isExamRunning, examFinished]);
 
   const handleStartExam = () => {
     if (!canAttempt) return;
     setAnswers({});
     setExamFinished(false);
+    setSecondsRemaining(45 * 60); // 45 minutos cravados
+    lastActiveTimestamp.current = Date.now();
+    setSecurityAlert(null);
     setIsExamRunning(true);
   };
 
   const handleSelectOption = (qId: number, oIdx: number) => {
     if (examFinished) return;
+    lastActiveTimestamp.current = Date.now();
     setAnswers((prev) => ({ ...prev, [qId]: oIdx }));
   };
 
@@ -194,6 +408,13 @@ export const ExamsPage: React.FC = () => {
     setIsExamRunning(false);
   };
 
+  // Formatação do tempo restante (mm:ss)
+  const formatTime = (secs: number) => {
+    const m = Math.floor(secs / 60);
+    const s = secs % 60;
+    return `${m.toString().padStart(2, '0')}:${s.toString().padStart(2, '0')}`;
+  };
+
   return (
     <div className="p-6 sm:p-10 space-y-8 max-w-7xl mx-auto w-full transition-colors">
       {/* Cabeçalho Oficial */}
@@ -211,15 +432,15 @@ export const ExamsPage: React.FC = () => {
         <p className={`text-xs sm:text-sm ${
           theme === 'dark' ? 'text-slate-400' : 'text-slate-600'
         }`}>
-          Avaliação formal de conhecimentos pré-hospitalares. Você terá <strong>3 chances</strong> para acertar pelo menos <strong>70% da prova</strong> para ser aprovado e liberar a etapa presencial.
+          Avaliação formal composta por <strong>20 questões de múltipla escolha</strong>. Tempo máximo de <strong>45 minutos</strong> por tentativa. Você terá <strong>3 chances</strong> para acertar pelo menos <strong>70% da prova</strong> para ser aprovado.
         </p>
       </div>
 
       {/* TELA DE REALIZAÇÃO DA PROVA (QUANDO EM EXECUÇÃO) */}
       {isExamRunning ? (
         <div className="space-y-6">
-          {/* Barra Superior da Prova em Andamento */}
-          <div className={`p-5 rounded-2xl border flex flex-col sm:flex-row sm:items-center justify-between gap-4 sticky top-16 z-20 backdrop-blur-md shadow-lg ${
+          {/* Barra Superior Fixa da Prova com Temporizador e Contador */}
+          <div className={`p-4 sm:p-5 rounded-2xl border flex flex-col sm:flex-row sm:items-center justify-between gap-4 sticky top-16 z-20 backdrop-blur-md shadow-lg ${
             theme === 'dark'
               ? 'bg-slate-900/95 border-slate-700 text-white'
               : 'bg-white/95 border-slate-200 text-slate-900'
@@ -237,15 +458,29 @@ export const ExamsPage: React.FC = () => {
                 <ArrowLeft className="w-4 h-4" />
               </button>
               <div>
-                <h2 className="text-base font-bold">Prova Geral de Certificação Pré-Hospitalar</h2>
+                <h2 className="text-base font-bold">Prova Geral de Certificação Pré-Hospitalar (20 Questões)</h2>
                 <span className={`text-xs ${theme === 'dark' ? 'text-slate-400' : 'text-slate-500'}`}>
-                  Chance {examFinished ? attemptsUsed : attemptsUsed + 1} de {maxAttempts} • Meta de aprovação: {minPassingScore}%
+                  Tentativa {examFinished ? attemptsUsed : attemptsUsed + 1} de {maxAttempts} • Meta de aprovação: {minPassingScore}% (14 acertos)
                 </span>
               </div>
             </div>
 
-            <div className="flex items-center gap-4 text-xs font-bold">
-              <span className={`px-3 py-1.5 rounded-xl border ${
+            <div className="flex flex-wrap items-center gap-3 text-xs font-bold">
+              {/* Temporizador de 45 minutos */}
+              {!examFinished && (
+                <div className={`inline-flex items-center gap-2 px-3.5 py-2 rounded-xl border ${
+                  secondsRemaining < 300
+                    ? 'bg-red-500/10 border-red-500/40 text-red-500 animate-pulse'
+                    : theme === 'dark'
+                    ? 'bg-slate-800 border-slate-700 text-amber-400'
+                    : 'bg-amber-50 border-amber-200 text-amber-900'
+                }`}>
+                  <Clock className="w-4 h-4" />
+                  <span className="font-mono text-sm tracking-wider">{formatTime(secondsRemaining)}</span>
+                </div>
+              )}
+
+              <span className={`px-3 py-2 rounded-xl border ${
                 theme === 'dark' ? 'bg-slate-800 border-slate-700 text-slate-300' : 'bg-slate-100 border-slate-200 text-slate-700'
               }`}>
                 Respondidas: {Object.keys(answers).length} de {mockQuestions.length}
@@ -269,6 +504,16 @@ export const ExamsPage: React.FC = () => {
               )}
             </div>
           </div>
+
+          {/* Alerta de Segurança Anti-fraude (Inatividade ou Troca de Tela) */}
+          {securityAlert && (
+            <div className="p-4 rounded-2xl bg-amber-500/15 border-2 border-amber-500 text-amber-900 dark:text-amber-200 flex items-center gap-3 animate-bounce">
+              <ShieldAlert className="w-6 h-6 text-amber-500 shrink-0" />
+              <div className="text-xs font-bold">
+                {securityAlert}
+              </div>
+            </div>
+          )}
 
           {/* Banner de Resultado se Prova Finalizada */}
           {examFinished && (
@@ -324,7 +569,7 @@ export const ExamsPage: React.FC = () => {
             </div>
           )}
 
-          {/* Lista de Questões da Prova */}
+          {/* Lista das 20 Questões da Prova */}
           <div className="space-y-6">
             {mockQuestions.map((q, idx) => {
               const selectedOpt = answers[q.id];
@@ -349,7 +594,7 @@ export const ExamsPage: React.FC = () => {
                         ? 'bg-uniao-500/20 text-uniao-400 border border-uniao-500/30'
                         : 'bg-teal-50 text-teal-700 border border-teal-200'
                     }`}>
-                      {idx + 1}
+                      {idx + 1 < 10 ? `0${idx + 1}` : idx + 1}
                     </span>
                     <h3 className={`text-sm sm:text-base font-semibold leading-snug ${
                       theme === 'dark' ? 'text-slate-100' : 'text-slate-800'
@@ -468,26 +713,30 @@ export const ExamsPage: React.FC = () => {
 
               <div>
                 <h2 className={`text-xl font-black ${theme === 'dark' ? 'text-white' : 'text-slate-900'}`}>
-                  Prova Teórica Geral de Certificação Pré-Hospitalar
+                  Prova Teórica Geral de Certificação Pré-Hospitalar (20 Questões)
                 </h2>
                 <p className={`text-xs sm:text-sm mt-1 leading-relaxed ${theme === 'dark' ? 'text-slate-400' : 'text-slate-600'}`}>
-                  Contém 10 questões de casos clínicos de urgência e emergência pré-hospitalar. O aluno dispõe de <strong>3 chances</strong> para atingir <strong>pelo menos 70%</strong> de acertos e garantir a aprovação.
+                  Contém <strong>20 questões de múltipla escolha</strong> de casos clínicos de urgência e emergência pré-hospitalar. O aluno dispõe de <strong>45 minutos</strong> por tentativa e <strong>3 chances</strong> para atingir <strong>pelo menos 70%</strong> de acertos (14 acertos) e garantir a aprovação.
                 </p>
               </div>
 
-              {/* Métricas e Regras */}
-              <div className="flex flex-wrap items-center gap-5 text-xs pt-1">
+              {/* Regras Críticas em Destaque */}
+              <div className="flex flex-wrap items-center gap-4 text-xs pt-1">
                 <span className={`flex items-center gap-1.5 ${theme === 'dark' ? 'text-slate-400' : 'text-slate-600'}`}>
                   <HelpCircle className="w-4 h-4 text-uniao-600 dark:text-uniao-400" />
-                  <span><strong>{mockQuestions.length} questões</strong> de múltipla escolha</span>
+                  <span><strong>20 questões</strong> objetivas</span>
                 </span>
                 <span className={`flex items-center gap-1.5 ${theme === 'dark' ? 'text-slate-400' : 'text-slate-600'}`}>
                   <Clock className="w-4 h-4 text-uniao-600 dark:text-uniao-400" />
-                  <span><strong>30 minutos</strong> recomendados</span>
+                  <span>Máximo <strong>45 minutos</strong></span>
                 </span>
                 <span className={`flex items-center gap-1.5 ${theme === 'dark' ? 'text-slate-400' : 'text-slate-600'}`}>
                   <Award className="w-4 h-4 text-uniao-600 dark:text-uniao-400" />
-                  <span>Aprovação: <strong>mínimo 70%</strong> ({Math.ceil((minPassingScore / 100) * mockQuestions.length)} acertos)</span>
+                  <span>Aprovação: <strong>mínimo 70%</strong> (14 acertos)</span>
+                </span>
+                <span className="flex items-center gap-1.5 text-amber-600 dark:text-amber-400 font-semibold">
+                  <ShieldAlert className="w-4 h-4" />
+                  <span>Segurança: alternativa cancelada se trocar de tela ou inativo por &gt; 45s</span>
                 </span>
               </div>
             </div>
@@ -520,7 +769,7 @@ export const ExamsPage: React.FC = () => {
                   onClick={handleStartExam}
                   className="w-full md:w-auto inline-flex items-center justify-center gap-2.5 px-8 py-4 rounded-2xl font-bold text-slate-950 bg-gradient-to-r from-uniao-400 to-teal-300 hover:brightness-110 text-sm shadow-lg transition-all transform hover:-translate-y-0.5"
                 >
-                  <span>{attemptsUsed === 0 ? 'Iniciar Prova Agora' : `Tentar Novamente (Chance ${attemptsUsed + 1}/3)`}</span>
+                  <span>{attemptsUsed === 0 ? 'Iniciar Prova Agora (45 min)' : `Tentar Novamente (Chance ${attemptsUsed + 1}/3)`}</span>
                   <ChevronRight className="w-4 h-4" />
                 </button>
               )}
@@ -537,7 +786,7 @@ export const ExamsPage: React.FC = () => {
                   Suas 3 Chances da Prova
                 </h3>
                 <p className={`text-xs ${theme === 'dark' ? 'text-slate-400' : 'text-slate-500'}`}>
-                  Para aprovação é necessário atingir 70% ou mais em pelo menos uma das três chances.
+                  Para aprovação é necessário atingir 70% ou mais (14 acertos em 20 questões) em pelo menos uma das três chances.
                 </p>
               </div>
               <span className={`text-xs font-bold px-3 py-1 rounded-full border ${
@@ -603,24 +852,46 @@ export const ExamsPage: React.FC = () => {
             </div>
           </div>
 
-          {/* Informativo de Aprovação & Pré-Requisito Presencial */}
-          <div className={`rounded-2xl p-4 sm:p-5 border flex items-center gap-4 ${
-            theme === 'dark'
-              ? 'bg-slate-900/50 border-slate-700 text-slate-300'
-              : 'bg-slate-50 border-slate-200 text-slate-700'
-          }`}>
-            <div className={`w-10 h-10 rounded-xl flex items-center justify-center shrink-0 border ${
-              theme === 'dark' ? 'bg-slate-800 border-slate-700 text-uniao-400' : 'bg-white border-slate-200 text-teal-700 shadow-xs'
+          {/* Informativo de Segurança & Pré-Requisito Presencial */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div className={`rounded-2xl p-4 sm:p-5 border flex items-center gap-4 ${
+              theme === 'dark'
+                ? 'bg-slate-900/50 border-slate-700 text-slate-300'
+                : 'bg-slate-50 border-slate-200 text-slate-700'
             }`}>
-              <Award className="w-5 h-5" />
+              <div className={`w-10 h-10 rounded-xl flex items-center justify-center shrink-0 border ${
+                theme === 'dark' ? 'bg-slate-800 border-slate-700 text-uniao-400' : 'bg-white border-slate-200 text-teal-700 shadow-xs'
+              }`}>
+                <ShieldAlert className="w-5 h-5 text-amber-500" />
+                </div>
+              <div className="text-xs space-y-0.5">
+                <strong className={`block text-sm ${theme === 'dark' ? 'text-white' : 'text-slate-900'}`}>
+                  Diretrizes de Integridade e Foco
+                </strong>
+                <p>
+                  Caso troque de tela, minimize a janela ou permaneça inativo por mais de <strong>45 segundos</strong>, a alternativa selecionada será <strong>automaticamente cancelada</strong>.
+                </p>
+              </div>
             </div>
-            <div className="text-xs space-y-0.5">
-              <strong className={`block text-sm ${theme === 'dark' ? 'text-white' : 'text-slate-900'}`}>
-                Passaporte para a Etapa Presencial
-              </strong>
-              <p>
-                A nota mínima de 70% na Prova Teórica comprova a fundamentação necessária para os simulados e práticas presenciais com os instrutores.
-              </p>
+
+            <div className={`rounded-2xl p-4 sm:p-5 border flex items-center gap-4 ${
+              theme === 'dark'
+                ? 'bg-slate-900/50 border-slate-700 text-slate-300'
+                : 'bg-slate-50 border-slate-200 text-slate-700'
+            }`}>
+              <div className={`w-10 h-10 rounded-xl flex items-center justify-center shrink-0 border ${
+                theme === 'dark' ? 'bg-slate-800 border-slate-700 text-uniao-400' : 'bg-white border-slate-200 text-teal-700 shadow-xs'
+              }`}>
+                <Award className="w-5 h-5" />
+              </div>
+              <div className="text-xs space-y-0.5">
+                <strong className={`block text-sm ${theme === 'dark' ? 'text-white' : 'text-slate-900'}`}>
+                  Passaporte para a Etapa Presencial
+                </strong>
+                <p>
+                  Atingir pelo menos 70% (14 de 20 acertos) dentro dos 45 minutos valida a fundamentação técnica para a liberação da aula prática presencial.
+                </p>
+              </div>
             </div>
           </div>
         </div>
@@ -628,4 +899,5 @@ export const ExamsPage: React.FC = () => {
     </div>
   );
 };
+
 
