@@ -8,6 +8,7 @@ import {
   GraduationCap
 } from 'lucide-react';
 import { supabase } from '../../services/supabase/client';
+import { ContentManagerTab } from './ContentManagerTab';
 
 // Modelos Pré-definidos para Treinamentos Médicos da União
 interface CertificatePreset {
@@ -137,7 +138,7 @@ export const AdminDashboard: React.FC = () => {
   const [pinError, setPinError] = useState(false);
 
   // Navegação Interna por Abas
-  const [activeTab, setActiveTab] = useState<'dashboard' | 'turmas' | 'certificados' | 'galeria'>('dashboard');
+  const [activeTab, setActiveTab] = useState<'dashboard' | 'turmas' | 'conteudos' | 'certificados' | 'galeria'>('dashboard');
 
   // Módulo de Gerenciamento da Galeria de Treinamentos
   const [galleryImages, setGalleryImages] = useState<any[]>([]);
@@ -736,6 +737,18 @@ export const AdminDashboard: React.FC = () => {
           </button>
 
           <button
+            onClick={() => setActiveTab('conteudos')}
+            className={`flex items-center gap-2 px-4 py-2.5 rounded-xl text-xs font-bold transition-all whitespace-nowrap ${
+              activeTab === 'conteudos'
+                ? 'bg-uniao-600 text-white shadow-md'
+                : 'text-slate-400 hover:text-white hover:bg-white/5'
+            }`}
+          >
+            <BookOpen className="w-4 h-4" />
+            <span>Gestão de Conteúdos (40 Módulos)</span>
+          </button>
+
+          <button
             onClick={() => setActiveTab('certificados')}
             className={`flex items-center gap-2 px-4 py-2.5 rounded-xl text-xs font-bold transition-all whitespace-nowrap ${
               activeTab === 'certificados'
@@ -1223,6 +1236,13 @@ export const AdminDashboard: React.FC = () => {
 
             </div>
           </div>
+        )}
+
+        {/* ========================================================================= */}
+        {/* ABA: GESTÃO CENTRAL DE CONTEÚDOS CURRICULARES (40 MÓDULOS, DRIVE, PDF, QUESTÕES) */}
+        {/* ========================================================================= */}
+        {activeTab === 'conteudos' && (
+          <ContentManagerTab />
         )}
 
         {/* ========================================================================= */}
