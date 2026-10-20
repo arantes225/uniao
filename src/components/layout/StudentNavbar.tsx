@@ -2,7 +2,7 @@ import React, { useState, useRef, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { 
   Sun, Moon, User, LogOut, ChevronDown, 
-  ShieldCheck 
+  ShieldCheck, HelpCircle, AlertCircle, X, ChevronRight, MessageSquare
 } from 'lucide-react';
 import { useTheme } from '../../context/ThemeContext';
 import { ProfileModal } from '../common/ProfileModal';
@@ -20,7 +20,33 @@ export const StudentNavbar: React.FC<StudentNavbarProps> = ({
   const { theme, toggleTheme } = useTheme();
   const [dropdownOpen, setDropdownOpen] = useState(false);
   const [profileModalOpen, setProfileModalOpen] = useState(false);
+  const [faqModalOpen, setFaqModalOpen] = useState(false);
+  const [expandedFaq, setExpandedFaq] = useState<number | null>(0);
   const dropdownRef = useRef<HTMLDivElement>(null);
+
+  // 5 Principais Dúvidas e Respostas dos Alunos
+  const studentFaqs = [
+    {
+      q: '1. Quais são os critérios para a emissão do certificado oficial?',
+      a: 'Para desbloquear seu certificado com código autenticador, você precisa: 1) Assistir a todas as videoaulas teóricas; 2) Acertar ao menos 2 das 5 questões formativas de cada aula; 3) Atingir 70% de aproveitamento na Prova Avaliativa Obrigatória (14/20 acertos); 4) Obter aprovação no Simulador Clínico e confirmar sua presença presencial com o código em sala.'
+    },
+    {
+      q: '2. Como funciona a verificação de presença na atividade presencial?',
+      a: 'No dia da aula prática presencial, o instrutor projeta ou informa um código dinâmico exclusivo da turma (ex: APH-2026). Você acessa o menu "Presencial (Presença)" no portal, insere esse código e sua frequência é homologada em tempo real.'
+    },
+    {
+      q: '3. E se eu não atingir os 70% na Prova Avaliativa?',
+      a: 'Você dispõe de até 3 tentativas completas para a prova teórica. A plataforma salva automaticamente a sua maior nota obtida entre todas as tentativas realizadas. Caso atinja os 70% em qualquer tentativa, a etapa teórica é considerada aprovada.'
+    },
+    {
+      q: '4. Como faço para baixar e validar o meu certificado?',
+      a: 'Assim que todos os requisitos estiverem cumpridos, o botão "Baixar Certificado em PDF" é liberado no menu "Meus Certificados". Cada documento possui uma chave única (ex: USM-2026-X89A-99F) e um link clicável que direciona para a validação oficial do nosso site.'
+    },
+    {
+      q: '5. Meu acesso às aulas tem prazo de validade?',
+      a: 'Sim, o countdown de dias restantes da sua turma fica visível no topo do seu Dashboard. Em geral, o período é de 90 dias a contar da matrícula institucional, permitindo rever aulas, apostilas e simulados quantas vezes desejar dentro desse prazo.'
+    }
+  ];
 
   // Fecha o dropdown ao clicar fora
   useEffect(() => {
@@ -169,6 +195,37 @@ export const StudentNavbar: React.FC<StudentNavbarProps> = ({
                     <span>Editar Dados de Perfil</span>
                   </button>
 
+                  {/* 2. Botão de Principais Dúvidas (FAQ) */}
+                  <button
+                    type="button"
+                    onClick={() => {
+                      setDropdownOpen(false);
+                      setFaqModalOpen(true);
+                    }}
+                    className={`w-full px-4 py-2.5 text-left flex items-center gap-2.5 transition-colors ${
+                      theme === 'dark'
+                        ? 'text-slate-300 hover:text-white hover:bg-white/5'
+                        : 'text-slate-700 hover:text-slate-950 hover:bg-slate-50'
+                    }`}
+                  >
+                    <HelpCircle className="w-4 h-4 text-teal-400" />
+                    <span>Principais Dúvidas</span>
+                  </button>
+
+                  {/* 3. Botão de Reportar Erro (E-mail direto para uniaoservicosmedicos@gmail.com) */}
+                  <a
+                    href="mailto:uniaoservicosmedicos@gmail.com?subject=Relato%20de%20Erro%20-%20Plataforma%20do%20Aluno%20USM&body=Ol%C3%A1%2C%20equipe%20Uni%C3%A3o%20Servi%C3%A7os%20M%C3%A9dicos.%0A%0AEstou%20enfrentando%20a%20seguinte%20dificuldade%20na%20plataforma%3A%0A%0A-%20Descri%C3%A7%C3%A3o%20do%20problema%3A%20%0A-%20P%C3%A1gina%2FAula%3A%20%0A-%20Nome%20do%20Aluno%3A%20"
+                    onClick={() => setDropdownOpen(false)}
+                    className={`w-full px-4 py-2.5 text-left flex items-center gap-2.5 transition-colors ${
+                      theme === 'dark'
+                        ? 'text-amber-300 hover:text-amber-200 hover:bg-white/5'
+                        : 'text-amber-700 hover:text-amber-800 hover:bg-amber-50'
+                    }`}
+                  >
+                    <AlertCircle className="w-4 h-4 text-amber-400" />
+                    <span>Reportar Erro</span>
+                  </a>
+
                   <div className={`my-1 border-t ${theme === 'dark' ? 'border-white/10' : 'border-slate-100'}`} />
 
                   {/* 2. Botão de Sair */}
@@ -201,6 +258,111 @@ export const StudentNavbar: React.FC<StudentNavbarProps> = ({
           email: 'aluno@uniaoservicosmedicos.com.br'
         }}
       />
+
+      {/* Modal Popup de Principais Dúvidas (5 Dúvidas e 5 Respostas) */}
+      {faqModalOpen && (
+        <div className="fixed inset-0 z-50 bg-slate-950/80 backdrop-blur-sm flex items-center justify-center p-4 overflow-y-auto">
+          <div className={`border rounded-3xl p-6 sm:p-8 max-w-2xl w-full my-auto space-y-6 shadow-2xl animate-fadeIn ${
+            theme === 'dark' ? 'bg-slate-900 border-white/10 text-white' : 'bg-white border-slate-200 text-slate-900'
+          }`}>
+            
+            {/* Header do Modal de Dúvidas */}
+            <div className="flex items-center justify-between border-b pb-4 border-white/10">
+              <div className="flex items-center gap-3">
+                <div className="w-10 h-10 rounded-2xl bg-teal-500/10 border border-teal-500/30 text-teal-400 flex items-center justify-center">
+                  <HelpCircle className="w-5 h-5" />
+                </div>
+                <div>
+                  <h3 className="font-bold text-base sm:text-lg">Principais Dúvidas dos Alunos</h3>
+                  <p className={`text-xs ${theme === 'dark' ? 'text-slate-400' : 'text-slate-500'}`}>
+                    Respostas rápidas sobre certificação, provas, simulador e aula presencial.
+                  </p>
+                </div>
+              </div>
+
+              <button 
+                onClick={() => setFaqModalOpen(false)}
+                className="p-1.5 rounded-xl text-slate-400 hover:text-white hover:bg-white/5 transition-colors"
+              >
+                <X className="w-5 h-5" />
+              </button>
+            </div>
+
+            {/* Lista das 5 Dúvidas com Acordeão Interativo */}
+            <div className="space-y-3">
+              {studentFaqs.map((faq, idx) => {
+                const isOpen = expandedFaq === idx;
+
+                return (
+                  <div
+                    key={idx}
+                    className={`rounded-2xl border transition-all overflow-hidden ${
+                      isOpen
+                        ? theme === 'dark'
+                          ? 'bg-slate-950/90 border-teal-500/40'
+                          : 'bg-teal-50/50 border-teal-300'
+                        : theme === 'dark'
+                        ? 'bg-slate-950/40 border-white/5 hover:border-white/10'
+                        : 'bg-slate-50 border-slate-200 hover:border-slate-300'
+                    }`}
+                  >
+                    <button
+                      type="button"
+                      onClick={() => setExpandedFaq(isOpen ? null : idx)}
+                      className="w-full p-4 text-left flex items-center justify-between gap-3"
+                    >
+                      <span className={`text-xs sm:text-sm font-bold ${
+                        isOpen 
+                          ? 'text-teal-400' 
+                          : theme === 'dark' ? 'text-slate-200' : 'text-slate-800'
+                      }`}>
+                        {faq.q}
+                      </span>
+                      <ChevronRight className={`w-4 h-4 text-teal-400 shrink-0 transition-transform ${
+                        isOpen ? 'rotate-90' : ''
+                      }`} />
+                    </button>
+
+                    {isOpen && (
+                      <div className={`px-4 pb-4 text-xs leading-relaxed border-t pt-3 ${
+                        theme === 'dark' ? 'border-white/5 text-slate-300' : 'border-slate-200/80 text-slate-600'
+                      }`}>
+                        {faq.a}
+                      </div>
+                    )}
+                  </div>
+                );
+              })}
+            </div>
+
+            {/* Rodapé com Botão Direto para Contato de Suporte */}
+            <div className="flex flex-col sm:flex-row items-center justify-between pt-4 border-t border-white/10 gap-3 text-xs">
+              <span className={theme === 'dark' ? 'text-slate-400' : 'text-slate-500'}>
+                Não encontrou o que procurava?
+              </span>
+
+              <div className="flex items-center gap-2">
+                <a
+                  href="mailto:uniaoservicosmedicos@gmail.com?subject=Duvida%20do%20Aluno%20USM"
+                  className="px-4 py-2 rounded-xl border border-teal-500/30 text-teal-400 hover:bg-teal-500/10 font-bold transition-colors flex items-center gap-1.5"
+                >
+                  <MessageSquare className="w-3.5 h-3.5" />
+                  <span>Falar com Coordenação</span>
+                </a>
+
+                <button
+                  type="button"
+                  onClick={() => setFaqModalOpen(false)}
+                  className="px-5 py-2 rounded-xl font-bold text-slate-950 bg-gradient-to-r from-teal-400 to-emerald-300 hover:brightness-110 shadow"
+                >
+                  Entendi
+                </button>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      )}
     </>
   );
 };
