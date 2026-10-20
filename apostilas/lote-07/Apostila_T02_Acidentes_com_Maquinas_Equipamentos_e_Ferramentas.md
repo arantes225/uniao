@@ -1,0 +1,327 @@
+# UNIÃO SERVIÇOS MÉDICOS
+## DIRETORIA DE ENSINO, PESQUISA E INSTRUÇÃO PRÉ-HOSPITALAR
+
+---
+
+**MÓDULO T02 — ACIDENTES COM MÁQUINAS, EQUIPAMENTOS E FERRAMENTAS**
+*Biblioteca Curricular: Primeiros Socorros em Empresas (Corporate & Industrial Safety)*
+*Versão Editorial: 1.0.0 — Padrão Editorial USM*
+*Carga Horária Teórica: 1 hora | Público-alvo: Operadores de máquinas, manutentores, eletromecânicos, técnicos de segurança (TST) e socorristas industriais*
+
+---
+
+## SUMÁRIO
+
+- [Seção 1 — Em 30 Segundos](#seção-1--em-30-segundos)
+- [Seção 2 — Objetivos de Aprendizagem](#seção-2--objetivos-de-aprendizagem)
+- [Seção 3 — Introdução e a Severidade Cinemática do Trauma Mecânico Industrial](#seção-3--introdução-e-a-severidade-cinemática-do-trauma-mecânico-industrial)
+- [Seção 4 — Fisiopatologia do Esmagamento, Síndrome de Esmagamento e Isquemia](#seção-4--fisiopatologia-do-esmagamento-síndrome-de-esmagamento-e-isquemia)
+- [Seção 5 — Desenvolvimento dos Subtemas](#seção-5--desenvolvimento-dos-subtemas)
+  - [5.1 Mecanismos de Lesão Mecânica: Cisalhamento, Aprisionamento e Prensagem](#51-mecanismos-de-lesão-mecânica-cisalhamento-aprisionamento-e-prensagem)
+  - [5.2 Cortes Profundos e Lacerações Extensas por Serras e Ferramentas Cortantes](#52-cortes-profundos-e-lacerações-extensas-por-serras-e-ferramentas-cortantes)
+  - [5.3 Esmagamentos Mecânicos e a Trágica Síndrome de Esmagamento (*Crush Syndrome*)](#53-esmagamentos-mecânicos-e-a-trágica-síndrome-de-esmagamento-crush-syndrome)
+  - [5.4 Amputações Traumáticas Industriais: Controle do Coto e Resgate do Membro](#54-amputações-traumáticas-industriais-controle-do-coto-e-resgate-do-membro)
+  - [5.5 Hemorragias Graves em Fábricas: A Doutrina do Torniquete Industrial](#55-hemorragias-graves-em-fábricas-a-doutrina-do-torniquete-industrial)
+  - [5.6 Segurança da Cena, Desenergização e Organização do Socorro Integrado](#56-segurança-da-cena-desenergização-e-organização-do-socorro-integrado)
+- [Seção 6 — Quadros Práticos, Algoritmos de Desencarceramento e Matrizes de Risco](#seção-6--quadros-práticos-algoritmos-de-desencarceramento-e-matrizes-de-risco)
+- [Seção 7 — Erros Críticos e Práticas Proibidas no Resgate com Máquinas](#seção-7--erros-críticos-e-práticas-proibidas-no-resgate-com-máquinas)
+- [Seção 8 — Estudo de Caso Prático Contextualizado (Aprisionamento em Prensa Hidráulica)](#seção-8--estudo-de-caso-prático-contextualizado-aprisionamento-em-prensa-hidráulica)
+- [Seção 9 — Pulo do Gato](#seção-9--pulo-do-gato)
+- [Seção 10 — Mapa Mental de Acidentes com Máquinas e Ferramentas](#seção-10--mapa-mental-de-acidentes-com-máquinas-e-ferramentas)
+- [Seção 11 — O Que Você Precisa Lembrar](#seção-11--o-que-você-precisa-lembrar)
+- [Seção 12 — Referências Bibliográficas e Metadados Editoriais](#seção-12--referências-bibliográficas-e-metadados-editoriais)
+
+---
+
+## SEÇÃO 1 — EM 30 SEGUNDOS
+
+> **VISÃO RÁPIDA DE SOBREVIVÊNCIA EM ACIDENTES MECÂNICOS**
+> 1. **Desenergize antes de tocar na vítima:** NUNCA tente puxar um trabalhador preso em correias, engrenagens ou prensas sem antes acionar o botão de parada de emergência e bloquear a fonte de energia (sistema LOTO - *Lockout/Tagout*). O maquinário pode acionar um novo ciclo e esmagar o socorrista [1, 2].
+> 2. **O perigo invisível da Síndrome de Esmagamento (*Crush Syndrome*):** Quando um membro fica prensado por mais de 15 a 30 minutos sob carga pesada, as células musculares morrem e liberam **Potássio tóxico e Mioglobina**. Levantar a máquina de repente sem preparo médico libera essa enxurrada de toxinas para o coração, causando **arritmia fatal e parada cardíaca instantânea pós-descompressão** [3, 4].
+> 3. **Torniquete salva o operário com amputação:** O membro esmagado ou decepado por torno mecânico, guilhotina ou serra exige **aplicação imediata de torniquete comercial 5 a 7 cm acima do corte**. O sangramento arterial femoral ou braquial mata em menos de 180 segundos [2, 5].
+> 4. **Membro amputado não vai no gelo direto:** Limpe com soro estéril, envolva em gaze seca, feche em saco plástico vedado e coloque o saco em uma caixa com gelo e água. Congelar o membro destrói as artérias microscópicas e inviabiliza o reimplante [2, 6].
+> 5. **Ferramenta empalada no corpo:** NUNCA remova discos de corte, brocas de furadeira ou peças de aço cravadas no corpo do trabalhador. Estabilize o objeto com panos e ataduras ao redor; a remoção é exclusiva do centro cirúrgico [3, 5].
+> 6. **Conformidade estrita com a NR-12:** Máquinas sem sensores ópticos, enclausuramento ou comando bimanual são armadilhas letais ilegais que geram responsabilidade penal direta à diretoria da fábrica [1, 7].
+
+---
+
+## SEÇÃO 2 — OBJETIVOS DE APRENDIZAGEM
+
+Ao concluir o estudo detalhado deste módulo técnico, o socorrista industrial, líder de produção e técnico de segurança serão capazes de:
+
+1. **Reconhecer a cinemática e as forças mecânicas destrutivas** geradas por equipamentos industriais rotativos, prensas e sistemas de transmissão de potência.
+2. **Dominar o protocolo de desenergização e segurança da cena (LOTO)** antes de qualquer aproximação física do trabalhador acidentado.
+3. **Compreender a fisiopatologia da Síndrome de Esmagamento e da Lesão por Isquemia-Reperfusão**, identificando o momento seguro para a liberação da carga mecânica.
+4. **Executar intervenções imediatas de controle de hemorragia exsanguinante em canteiros industriais**, aplicando torniquetes e curativos hemostáticos.
+5. **Realizar o acondicionamento e conservação técnica de membros e dedos amputados**, maximizando as chances de sucesso em cirurgias de reimplante microvascular.
+6. **Coordenar o fluxo integrado de resgate industrial**, articulando a brigada interna da fábrica, equipes de manutenção mecânica e as viaturas de Suporte Avançado do SAMU 192 e Bombeiros 193.
+
+---
+
+## SEÇÃO 3 — INTRODUÇÃO E A SEVERIDADE CINEMÁTICA DO TRAUMA MECÂNICO INDUSTRIAL
+
+As plantas fabris, canteiros de obras da construção civil, oficinas metalúrgicas e centros logísticos utilizam diariamente máquinas de altíssima potência mecânica: prensas hidráulicas e excêntricas que exercem pressões de dezenas a centenas de toneladas, tornos mecânicos com eixos girando a milhares de rotações por minuto, serras circulares industriais, laminadoras e pontes rolantes de grande porte [1, 7].
+
+Diferente dos acidentes domésticos convencionais, **a transferência de energia cinética em um acidente com maquinário industrial é devastadora para os tecidos humanos**. O osso humano não apenas quebra, mas sofre cominuição (estilhaçamento em dezenas de fragmentos); os vasos sanguíneos não sofrem cortes limpos, mas sim avulsão e esgarçamento de suas túnicas elásticas, e a musculatura é submetida a forças de esmagamento contínuo [2, 3].
+
+A Norma Regulamentadora nº 12 (NR-12) do MTE estabelece parâmetros técnicos rígidos para que nenhuma máquina opere sem zonas de perigo protegidas por enclausuramento, cortinas de luz infravermelha de segurança e botões de desligamento de emergência. Contudo, desvios operacionais, falhas em manutenções preventivas ou atos negligentes de desativação de travas de segurança continuam provocando amputações, esmagamentos e óbitos chocantes em indústrias de todo o país. O socorrista de empresa precisa estar preparado para atuar com sangue-frio, técnica cirúrgica pré-hospitalar e absoluto rigor de autoproteção [1, 2, 7].
+
+---
+
+## SEÇÃO 4 — FISIOPATOLOGIA DO ESMAGAMENTO, SÍNDROME DE ESMAGAMENTO E ISQUEMIA
+
+Para salvar o operário preso em maquinário, o socorrista deve dominar a complexa bioquímica celular do esmagamento muscular prolongado [3, 4]:
+
+```
++---------------------------------------------------------------------------------+
+|               A BIOQUÍMICA MORTAL DA SÍNDROME DE ESMAGAMENTO                    |
+|                                                                                 |
+|  [ MEMBRO PRENSADO POR MAIS DE 15-30 MINUTOS ]                                  |
+|  - Isquemia total: As células musculares ficam sem oxigênio e glicose.          |
+|  - Falência da bomba de Sódio/Potássio da membrana celular.                     |
+|  - Miócitos rompem-se (Rabdomiólise traumática local maciça).                   |
+|                                                                                 |
+|  [ SUBSTÂNCIAS TÓXICAS ACUMULADAS NO MEMBRO PRENSADO ]:                         |
+|  1. POTÁSSIO ($K^+$): O potássio intracelular vaza aos milhões para o tecido.    |
+|  2. MIOGLOBINA: Proteína muscular pesada que precipita nos rins.                |
+|  3. ÁCIDO LÁTICO: Acidose metabólica severa local (pH < 6,8).                   |
+|  4. TROMBOPLASTINA E HISTAMINA: Mediadores inflamatórios de choque.             |
+|                                                                                 |
+|  [ O MOMENTO DA DESCOMPRESSÃO BRUSCA (SEM PREPARO MÉDICO) ]:                    |
+|  - A máquina é levantada de repente -> O sangue central desce e lava o membro.  |
+|  - UMA ENXURRADA DE POTÁSSIO E ÁCIDO LÁTICO ATINGE O CORAÇÃO EM 10 SEGUNDOS.    |
+|  - O Potássio alto despolariza o miocárdio -> FIBRILAÇÃO VENTRICULAR INSTANTÂNEA|
+|  - "SÍNDROME DA DESCOMPRESSÃO FATAL": O trabalhador conversava lúcido preso na  |
+|    máquina e MORRE nos primeiros 60 segundos após ser solto!                    |
++---------------------------------------------------------------------------------+
+```
+
+---
+
+## SEÇÃO 5 — DESENVOLVIMENTO DOS SUBTEMAS
+
+### 5.1 Mecanismos de Lesão Mecânica: Cisalhamento, Aprisionamento e Prensagem
+
+As máquinas industriais produzem lesões através de quatro vetores cinemáticos fundamentais [1, 7]:
+- **Ponto de Agarramento e Aprisionamento (*Nip Points*):** Cilindros rotativos paralelos (laminadoras, esteiras, correias transportadoras e rolos impressores) que tracionam luvas, mangas de camisa, cabelos compridos ou ferramentas, puxando o membro da vítima para o interior das engrenagens.
+- **Força de Cisalhamento e Guilhotinamento:** Duas lâminas metálicas afiadas ou bordas de matrizes de corte que se cruzam em alta velocidade, decepando membros, mãos ou dedos com secção vascular arterial direta.
+- **Força de Esmagamento Estático ou Dinâmico:** Prensas de forja, pistões pneumáticos ou pesos de matrizes que fecham contra uma mesa fixa de aço, provocando destruição muscular e fraturas cominutivas graves.
+- **Perfuração e Avulsão:** Brocas industriais, fresas rotativas e parafusos sem-fim que perfuram tecidos moles e arrancam blocos musculares ou couro cabeludo (*escalpelamento*) [2, 3].
+
+---
+
+### 5.2 Cortes Profundos e Lacerações Extensas por Serras e Ferramentas Cortantes
+
+Serras circulares de madeira, esmerilhadeiras com disco abrasivo, serras de fita de corte de carne e estiletes industriais provocam ferimentos com bordas irregulares e dano extenso a planos profundos [2, 5]:
+- **Características Clínicas:** Secção de tendões com retração elástica para o interior da bainha muscular, lesões nervosas com perda de sensibilidade distal e ruptura de artérias profundas com sangramento arterial em jato.
+- **Conduta Imediata:** Se o corte for em extremidade com sangramento grave, **aplique torniquete comercial imediatamente**. Se o sangramento for moderado sem jato, aplique gaze hemostática com quitosana ou gaze estéril sob compressão manual focal potente por 10 minutos e estabilize com bandagem elástica [1, 5].
+
+---
+
+### 5.3 Esmagamentos Mecânicos e a Trágica Síndrome de Esmagamento (*Crush Syndrome*)
+
+A abordagem a vítimas presas sob estruturas pesadas ou prensas exige um protocolo pré-hospitalar sincronizado entre o socorrista e a equipe médica do SAMU [3, 4]:
+
+#### O Protocolo de Prevenção da Morte por Descompressão:
+1. **Identificação do Tempo de Aprisionamento:**
+   - Se o membro estiver preso há **menos de 15 minutos**: desative e levante a máquina imediatamente para interromper a isquemia em curso.
+   - Se o membro estiver preso há **mais de 15 a 30 minutos sob grande peso**: **NÃO LEVANTE A MÁQUINA DE FORMA ABRUPTA ANTES DA CHEGADA DA UTI MÓVEL DO SAMU 192** [3, 4].
+2. **Ação Médica Pré-Descompressão:**
+   - A equipe do SAMU deve canular dois acessos venosos periféricos calibrosos na vítima antes da remoção do peso, infundindo grandes volumes de soro fisiológico e bicarbonato de sódio para alcalinizar o sangue e proteger os rins, além de administrar gluconato de cálcio para estabilizar o miocárdio contra a hipercalemia (excesso de potássio).
+3. **Aplicação Tática de Torniquete Pré-Descompressão:** Se for estritamente necessário liberar a máquina antes da chegada do médico para evitar desabamento ou risco de incêndio, **aplique um torniquete comercial na raiz do membro esmagado ANTES de levantar a máquina**. O torniquete impedirá fisicamente que o sangue tóxico e o potássio subam para a circulação central no momento em que o peso for aliviado [3, 4].
+
+---
+
+### 5.4 Amputações Traumáticas Industriais: Controle do Coto e Resgate do Membro
+
+As amputações em indústrias atingem frequentemente dedos, mãos e antebraços. O sucesso do reimplante microvascular depende dos procedimentos adotados nos primeiros 10 minutos [2, 6]:
+
+#### Protocolo de Ouro no Coto e na Peça Amputada:
+- **No Trabalhador:**
+  - Aplique torniquete comercial de 5 a 7 cm acima da amputação (ou alto no braço se a decepação for proximal).
+  - Cubra o coto com gaze estéril umedecida em soro fisiológico e envolva com atadura limpa sem apertar.
+  - Aqueça o operário com manta térmica aluminizada (combate à Tríade Letal).
+- **Na Peça Decepada (Dedo, Mão ou Braço):**
+  - Desligue e bloqueie a máquina antes de recuperar o membro na engrenagem.
+  - Limpe suavemente serragem ou graxa grossa externa com jato de soro estéril (não esfregue nem raspe).
+  - Envolva o segmento em gaze estéril seca.
+  - Coloque dentro de um **saco plástico impermeável vedado**.
+  - Mergulhe o saco plástico lacrado em uma caixa térmica contendo **mistura de gelo triturado e água líquida (proporção 50/50)**.
+  - Identifique o saco com o nome do trabalhador e o horário exato do acondicionamento [2, 6].
+
+---
+
+### 5.5 Hemorragias Graves em Fábricas: A Doutrina do Torniquete Industrial
+
+O ambiente industrial exige que o torniquete esteja acessível e pronto para uso em pontos estratégicos de risco elevado [1, 5]:
+- Em indústrias metalúrgicas, madeireiras, frigoríficos e papel e celulose, o torniquete comercial não pode ficar guardado apenas no ambulatório central a 500 metros do galpão de máquinas.
+- **Kits de Resgate em Zonas de Risco:** Toda linha com prensas, serras ou tornos deve dispor de uma caixa de trauma de parede com torniquete CAT, bandagem israelense e luvas a menos de **30 segundos de caminhada** dos operadores [1, 5].
+
+---
+
+### 5.6 Segurança da Cena, Desenergização e Organização do Socorro Integrado
+
+O socorro em acidentes com maquinário segue o rigoroso fluxo de comando de cena industrial [1, 2, 7]:
+
+```
++---------------------------------------------------------------------------------+
+|               FLUXO OPERACIONAL DE RESGATE EM MÁQUINAS INDUSTRIAIS              |
+|                                                                                 |
+|  [ 1. ALARME E PARADA DE EMERGÊNCIA ]:                                          |
+|  - Bater o botão de emergência ("cogumelo") da máquina.                        |
+|                                                                                 |
+|  [ 2. DESENERGIZAÇÃO TOTAL E BLOQUEIO LOTO (LOCKOUT/TAGOUT) ]:                  |
+|  - Desligar disjuntor geral da máquina; travar com cadeado físico de segurança. |
+|  - Despressurizar cilindros pneumáticos e hidráulicos residuais.                |
+|                                                                                 |
+|  [ 3. ABORDAGEM CLÍNICA DA VÍTIMA ]:                                            |
+|  - Controlar sangramento arterial imediato (X: Torniquete se amputação).        |
+|  - Avaliar tempo de prensagem (Síndrome de Esmagamento).                        |
+|                                                                                 |
+|  [ 4. ACIONAMENTO ESPECIALIZADO ]:                                              |
+|  - SAMU 192 (USA com médico) + Corpo de Bombeiros 193 (Desencarceramento).      |
+|                                                                                 |
+|  [ 5. DESENCARCERAMENTO MECÂNICO CONTROLADO ]:                                  |
+|  - Operação técnica por equipe de manutenção ou Bombeiros (sem tracionar).      |
++---------------------------------------------------------------------------------+
+```
+
+---
+
+## SEÇÃO 6 — QUADROS PRÁTICOS, ALGORITMOS DE DESENCARCERAMENTO E MATRIZES DE RISCO
+
+### Matriz Decisória em Acidentes Mecânicos Industriais
+
+| NATUREZA DA LESÃO | FISIOPATOLOGIA PRINCIPAL | CONDUTA DE EMERGÊNCIA PRIORITÁRIA | AÇÃO RIGOROSAMENTE PROIBIDA |
+| :--- | :--- | :--- | :--- |
+| **Amputação Traumática** | Hemorragia arterial grave de grande vaso. | **Torniquete de molinete 5 cm acima** + acondicionar membro em saco em gelo/água. | Tentar lavar o coto com álcool ou colocar membro direto no gelo seco. |
+| **Prensagem > 30 minutos** | Síndrome de esmagamento; rabdomiólise local. | **Aguardar médico do SAMU para descompressão** ou aplicar torniquete antes de soltar. | Levantar a prensa abruptamente sem preparo venoso ou torniquete. |
+| **Corte Profundo sem Amputação**| Laceração tendínea e vascular pulsátil. | Compressão direta focal com gaze hemostática por 3 min ou torniquete se falhar. | Fazer garrote frouxo com barbante ou arame de solda. |
+| **Objeto Empalado (Disco/Broca)**| Perfuração mecânica tamponada pelo objeto. | **Imobilizar o objeto cravado no lugar** com ataduras volumosas ao redor. | Puxar o disco ou broca para fora da carne no local da fábrica. |
+
+---
+
+## SEÇÃO 7 — ERROS CRÍTICOS E PRÁTICAS PROIBIDAS NO RESGATE COM MÁQUINAS
+
+1. **Tentar retirar o trabalhador sem desenergizar e bloquear a máquina:** É a causa número um de morte de socorristas industriais. O sistema hidráulico desce subitamente ou um colega desavisado aperta o botão de rearme, esmagando quem está tentando ajudar [1, 7].
+2. **Reverter a máquina no modo reverso (marcha a ré) para soltar o membro:** Passar o membro prensado novamente entre cilindros girando ao contrário duplica o esmagamento tecidual e amputa o que ainda estava vascularizado. A máquina deve ser desmontada lateralmente ou ter seus cilindros calçados e expandidos com desencarcerador hidráulico [1, 2].
+3. **Puxar a vítima presa pela força física:** Tracionar o tronco de alguém com a mão presa em engrenagens lacera nervos, arranca músculos da inserção óssea e converte uma lesão reparável em amputação total [2, 3].
+4. **Remover a proteção do membro amputado para mostrar aos curiosos:** A cada abertura do saco plástico, introduz-se contaminação bacteriana e perde-se o controle térmico do segmento [2, 6].
+5. **Esquecer de despressurizar o circuito hidráulico:** Mesmo com o motor elétrico desligado na chave geral, cilindros hidráulicos mantêm pressões residuais de até 200 bar que podem descer a prensa subitamente [1, 7].
+
+---
+
+## SEÇÃO 8 — ESTUDO DE CASO PRÁTICO CONTEXTUALIZADO (APRISIONAMENTO EM PRENSA HIDRÁULICA)
+
+### Cenário: Acidente em Linha de Estamparia Pesada
+Na Fábrica de Implementos Rodoviários Carretas União, às 10h15min, o operário Ademir, 34 anos, realizava a conformação a frio de perfis estruturais de aço em uma prensa dobradeira hidráulica de 120 toneladas. A máquina operava sem cortina de luz intertravada de segurança (infração à NR-12). Ao posicionar uma chapa com as mãos enluvadas, Ademir acionou acidentalmente o pedal elétrico no solo.
+
+O martelo hidráulico desceu instantaneamente, esmagando sua mão e os dois terços distais do antebraço direito contra a matriz inferior de aço endurecido sob pressão contínua. A lâmina superior prensou o membro com força de 80 toneladas, parando travada no curso inferior.
+
+Ademir solta um grito estarrecedor de dor que ecoa por todo o galpão industrial, caindo de joelhos com o braço preso dentro da máquina.
+
+### Execução da Doutrina de Resgate e Socorro USM:
+1. **Comando de Cena e Bloqueio Energético Imediato (0 a 20 segundos):**
+   - O operador vizinho bate no botão cogumelo de parada de emergência.
+   - O líder da brigada industrial Jorge chega ao local em 15 segundos: *"Ninguém toca na máquina! Manutenção, executem o bloqueio LOTO da chave geral número 8 agora!"*.
+   - O eletromecânico coloca o cadeado de segurança e a etiqueta de travamento no painel elétrico principal e calça os cilindros hidráulicos com cunhas de aço para impedir qualquer descida residual.
+2. **Avaliação Clínica e Manejo do Pânico (30 a 60 segundos):**
+   - Jorge calça luvas de nitrilo e ajoelha-se ao lado de Ademir.
+   - Ademir está consciente, taquicárdico (FC 135 bpm), suando frio, mas orientado.
+   - Jorge apoia as costas do operário e instrui: *"Ademir, olhe para mim, respire fundo. A máquina está desenergizada e travada, você está seguro. Não puxe o braço de jeito nenhum"*.
+3. **Decisão Técnica sobre o Esmagamento:**
+   - O membro está preso há apenas 2 minutos. Não se trata ainda de síndrome de esmagamento instalada (que exigiria preparo venoso prévio), mas a remoção da máquina precisa ser mecânica e controlada.
+   - Jorge aciona o engenheiro de manutenção: *"Vamos aliviar a pressão da válvula manual de retorno lentamente para erguer o martelo 5 centímetros, sem acionar o motor elétrico"*.
+4. **Acionamento Estruturado do SAMU 192 e Bombeiros 193:**
+   - O socorrista da portaria telefona informando: *"Temos um trabalhador com esmagamento grave de antebraço em prensa hidráulica, desencarceramento em andamento na fábrica, enviem suporte avançado com médico e resgate!"*.
+5. **Prevenção da Hemorragia Exsanguinante Pós-Liberação:**
+   - Sabendo que ao erguer o martelo da prensa as artérias esmagadas poderiam abrir em sangramento fulminante, Jorge **posiciona previamente um torniquete comercial CAT no terço superior do braço direito de Ademir (próximo à axila)**, deixando a fita passada e pronta para o aperto imediato.
+6. **Desencarceramento e Aplicação do Torniquete:**
+   - A manutenção alivia a pressão hidráulica e ergue o martelo em 4 centímetros. O braço é liberado suavemente sem tração forçada.
+   - Imediatamente, ao cessar a pressão do aço, sangue arterial vermelho-vivo jorra em jato da laceração profunda do antebraço.
+   - Jorge puxa a fita do torniquete que já estava posicionada no braço com força máxima e gira o molinete por duas voltas completas aos **15 segundos pós-liberação**: o sangramento estanca 100%! Trava no clipe e anota o horário: "10h21min".
+7. **Curativo Protetor e Conforto Térmico:**
+   - O antebraço esmagado apresenta fraturas cominutivas e lacerações musculares, mas a mão permanece conectada. Jorge envolve o membro em compressas de gaze estéril embebidas em soro e imobiliza com tala moldável de alumínio.
+   - Cobre Ademir com manta térmica aluminizada.
+8. **Desfecho:** A viatura de Suporte Avançado do SAMU chega em 8 minutos, assume o paciente estável e o conduz diretamente para o centro de trauma ortopédico e microcirurgia vascular. Ademir foi submetido a osteossíntese, fasciotomia descompressiva para prevenção de síndrome compartimental e reparo arterial, preservando a mão e o antebraço graças à desenergização segura e ao preparo do torniquete pré-liberação.
+
+---
+
+## SEÇÃO 9 — PULO DO GATO
+
+> **MACETES OPERACIONAIS DE RESGATE EM MÁQUINAS INDUSTRIAIS**
+>
+> 1. **O Torniquete "Pré-Posicionado" no Esmagamento:** Se uma vítima estiver presa em uma prensa ou cilindro, **coloque a fita do torniquete aberta na raiz do membro ferido ENQUANTO ele ainda está preso na máquina**. Deixe a fita ajustada e a haste do molinete na sua mão. No segundo exato em que a máquina for levantada pelos mecânicos, aperte o torniquete. Isso evita que a vítima perca 500 ml de sangue no chão antes que você consiga pegar o dispositivo na maleta [2, 5].
+> 2. **O Calço de Madeira nos Cilindros Hidráulicos:** Ao resgatar alguém preso sob uma prensa hidráulica, nunca confie apenas nas válvulas manuais de alívio: o peso do martelo pode descer por gravidade caso uma mangueira se rompa. Insira **vigas de madeira maciça de peroba ou calços metálicos de segurança** entre a mesa inferior e o martelo superior antes de colocar as mãos para retirar a vítima [1, 7].
+> 3. **A Marcação da Peça Decepada na Máquina:** Em amputações com engrenagens complexas, se a parte do membro decepada estiver enroscada no maquinário, desligue tudo e solicite que a própria equipe de manutenção desmonte as engrenagens com chaves de boca para retirar o segmento intacto. **Nunca use alavancas de ferro ou maçaricos perto do tecido biológico**, pois o calor queima os vasos microscópicos e inviabiliza o reimplante [2, 6].
+
+---
+
+## SEÇÃO 10 — MAPA MENTAL DE ACIDENTES COM MÁQUINAS E FERRAMENTAS
+
+```
+                        ACIDENTES COM MÁQUINAS INDUSTRIAIS
+                                         │
+        ┌────────────────────────────────┴────────────────────────────────┐
+        │                                                                 │
+  [ SEGURANÇA DA CENA ]                                            [ MANEJO DA LESÃO ]
+  1. Botão de emergência                                                  │
+  2. Bloqueio LOTO total                                           ┌──────┴──────┐
+  3. Calçar cilindros                                              ▼             ▼
+        │                                                     AMPUTAÇÃO     ESMAGAMENTO
+        │                                                     TRAUMÁTICA    PROLONGADO
+        ▼                                                          │             │
+  NUNCA reverter motor                                        Torniquete    Avaliar tempo:
+  NUNCA puxar por tração                                      na raiz       - Se > 15-30 min:
+                                                              em < 30 seg   NÃO soltar de
+                                                                   │        repente sem SAMU
+                                                                   ▼        ou torniquete!
+                                                              Membro em     (Prevenir PCR por
+                                                              saco plástico hipercalemia)
+                                                              em gelo e água
+```
+
+---
+
+## SEÇÃO 11 — O QUE VOCÊ PRECisa LEMBRAR
+
+- Desenergize e execute o bloqueio LOTO da máquina antes de tocar na vítima; a autoproteção precede o resgate.
+- Nunca reverta o sentido de rotação de máquinas (*marcha a ré*) para soltar membros presos; isso agrava o esmagamento.
+- Síndrome de Esmagamento (*Crush Syndrome*) mata por parada cardíaca súbita pós-descompressão (hipercalemia); posicione o torniquete ou aguarde suporte médico antes de erguer cargas pesadas retidas por mais de 15 minutos.
+- Amputações traumáticas industriais exigem aplicação imediata de torniquete comercial 5 a 7 cm acima do coto.
+- Acondicione membros decepados em gaze estéril seca, lacre em saco plástico e coloque o saco em gelo com água líquida (nunca no gelo puro).
+- Objetos empalados no trabalhador nunca devem ser retirados no local da fábrica; estabilize no lugar e transporte com urgência.
+
+---
+
+## SEÇÃO 12 — REFERÊNCIAS BIBLIOGRÁFICAS E METADADOS EDITORIAIS
+
+### Referências Científicas e Normativas
+
+1. BRASIL. Ministério do Trabalho e Emprego (MTE). **Norma Regulamentadora nº 12: Segurança no Trabalho em Máquinas e Equipamentos**. Brasília, DF: MTE, 2022.
+2. NATIONAL ASSOCIATION OF EMERGENCY MEDICAL TECHNICIANS (NAEMT). **PHTLS: Prehospital Trauma Life Support**. 10. ed. Burlington, MA: Jones & Bartlett Learning, 2023.
+3. AMERICAN COLLEGE OF SURGEONS (ACS). **ATLS: Advanced Trauma Life Support — Student Course Manual**. 10. ed. Chicago, IL: ACS, 2018.
+4. GONZALEZ, D. **Crush syndrome: Pathophysiology and management**. *Critical Care Clinics*, v. 21, n. 4, p. 717-724, 2005. Reavaliado em 2021.
+5. AMERICAN COLLEGE OF SURGEONS (ACS). **STOP THE BLEED®: Bleeding Control Basic v. 2.0 Course Manual**. Chicago, IL: ACS Committee on Trauma, 2020.
+6. AMERICAN ACADEMY OF ORTHOPAEDIC SURGEONS (AAOS). **Care of the Amputated Part and Management of Traumatic Amputations**. Rosemont, IL: AAOS, 2021.
+7. FUNDACENTRO. **Segurança no Trabalho em Prensas e Similares: Manual Técnico de Proteção Mecânica**. São Paulo: Fundacentro, 2018.
+8. MINISTÉRIO DA SAÚDE (BRASIL). **Portaria GM/MS nº 2.048, de 5 de novembro de 2002**. Regulamento Técnico dos Sistemas Estaduais de Urgência e Emergência. Brasília, DF: Ministério da Saúde, 2002.
+9. COMMITTEE ON TACTICAL COMBAT CASUALTY CARE (CoTCCC). **Tactical Combat Casualty Care (TCCC) Guidelines for Medical Personnel**. Joint Trauma System, U.S. Department of Defense, 2021. Atualizado em 2023.
+10. ASSOCIAÇÃO BRASILEIRA DE NORMAS TÉCNICAS (ABNT). **ABNT NBR 14276:2020: Brigada de incêndio e emergência — Requisitos e procedimentos**. Rio de Janeiro: ABNT, 2020.
+11. BRASIL. **Decreto-Lei nº 2.848, de 7 de dezembro de 1940**. Código Penal Brasileiro (Art. 132 - Perigo para a vida; Art. 135 - Omissão de Socorro). Brasília, DF: Presidência da República, 1940.
+12. ROSSOUW, R. et al. **Tourniquet Use in Civilian Prehospital Trauma: A Systematic Review and Meta-Analysis**. *Prehospital Emergency Care*, v. 25, n. 3, p. 417-427, 2021.
+
+---
+
+### Metadados Editoriais Institucionais
+
+| CAMPO | ESPECIFICAÇÃO TÉCNICA |
+| :--- | :--- |
+| **Identificador do Módulo** | MÓDULO T02 — Acidentes com Máquinas, Equipamentos e Ferramentas |
+| **Biblioteca Curricular** | Primeiros Socorros em Empresas (*Corporate & Industrial Safety*) |
+| **Instituição Responsável** | União Serviços Médicos — Ensino e Instrução Pré-Hospitalar |
+| **Padrão Gráfico e Editorial** | Diretrizes Editoriais Integradas LURIA / USM |
+| **Status Editorial** | Aguardando Aprovação Científica |
+| **Data da Revisão Técnica** | Outubro de 2026 |
+| **Versão Curricular** | Versão 1.0.0 — Revisão Quinquenal Vigente |
+| **Classificação de Acesso** | Conteúdo Didático Restrito aos Treinamentos e Capacitações da União Serviços Médicos |

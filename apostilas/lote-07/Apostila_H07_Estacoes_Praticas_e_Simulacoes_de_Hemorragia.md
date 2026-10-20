@@ -1,0 +1,335 @@
+# UNIÃO SERVIÇOS MÉDICOS
+## DIRETORIA DE ENSINO, PESQUISA E INSTRUÇÃO PRÉ-HOSPITALAR
+
+---
+
+**MÓDULO H07 — ESTAÇÕES PRÁTICAS E SIMULAÇÕES DE HEMORRAGIA**
+*Biblioteca Curricular: Controle de Hemorragias Graves (Bleeding Control)*
+*Versão Editorial: 1.0.0 — Padrão Editorial USM*
+*Carga Horária: 1 hora teórica + 2 horas práticas | Público-alvo: Socorristas táticos, policiais, militares, bombeiros civis, brigadistas e instrutores*
+
+---
+
+## SUMÁRIO
+
+- [Seção 1 — Em 30 Segundos](#seção-1--em-30-segundos)
+- [Seção 2 — Objetivos de Aprendizagem](#seção-2--objetivos-de-aprendizagem)
+- [Seção 3 — Introdução e a Pedagogia da Simulação Realística sob Estresse](#seção-3--introdução-e-a-pedagogia-da-simulação-realística-sob-estresse)
+- [Seção 4 — Psicofisiologia do Desempenho Humano em Ambientes Críticos](#seção-4--psicofisiologia-do-desempenho-humano-em-ambientes-críticos)
+- [Seção 5 — Desenvolvimento dos Subtemas](#seção-5--desenvolvimento-dos-subtemas)
+  - [5.1 Estação Prática 1: Compressão Direta Focal de Alta Performance](#51-estação-prática-1-compressão-direta-focal-de-alta-performance)
+  - [5.2 Estação Prática 2: Curativos Compressivos e Bandagens de Emergência](#52-estação-prática-2-curativos-compressivos-e-bandagens-de-emergência)
+  - [5.3 Estação Prática 3: Preenchimento de Feridas Cavitárias (Wound Packing)](#53-estação-prática-3-preenchimento-de-feridas-cavitárias-wound-packing)
+  - [5.4 Estação Prática 4: Aplicação de Torniquetes Comerciais de Molinete](#54-estação-prática-4-aplicação-de-torniquetes-comerciais-de-molinete)
+  - [5.5 Cenários Simulados com Decisões Sequenciais e Pressão de Tempo](#55-cenários-simulados-com-decisões-sequenciais-e-pressão-de-tempo)
+  - [5.6 Avaliação Prática Baseada em Competências (OSCE) e Debriefing Pedagógico](#56-avaliação-prática-baseada-em-competências-osce-e-debriefing-pedagógico)
+- [Seção 6 — Quadros Práticos, Rubricas de Avaliação e Checklists de Habilidades](#seção-6--quadros-práticos-rubricas-de-avaliação-e-checklists-de-habilidades)
+- [Seção 7 — Falhas Operacionais Frequentes Observadas em Simulações](#seção-7--falhas-operacionais-frequentes-observadas-em-simulações)
+- [Seção 8 — Estudo de Caso Prático Contextualizado (Simulado Integrado em Fábrica)](#seção-8--estudo-de-caso-prático-contextualizado-simulado-integrado-em-fábrica)
+- [Seção 9 — Pulo do Gato](#seção-9--pulo-do-gato)
+- [Seção 10 — Mapa Mental das Estações Práticas de Controle de Hemorragia](#seção-10--mapa-mental-das-estações-práticas-de-controle-de-hemorragia)
+- [Seção 11 — O Que Você Precisa Lembrar](#seção-11--o-que-você-precisa-lembrar)
+- [Seção 12 — Referências Bibliográficas e Metadados Editoriais](#seção-12--referências-bibliográficas-e-metadados-editoriais)
+
+---
+
+## SEÇÃO 1 — EM 30 SEGUNDOS
+
+> **VISÃO RÁPIDA DE DESEMPENHO PRÁTICO EM HEMORRAGIA**
+> 1. **Teoria sem prática mecânica é ilusão:** Em uma ocorrência real com sangue arterial espirrando nos olhos e gritos de dor, a frequência cardíaca do socorrista ultrapassa 150 bpm. O cérebro só executa o que foi gravado na **memória muscular motora em treinos repetitivos** [1, 2].
+> 2. **Metas de tempo universais USM:**
+>    - Aplicação de torniquete em membro sob estresse: **Menos de 30 segundos** [1, 3].
+>    - Preenchimento cavitário (*wound packing*) com inserção completa: **Menos de 60 segundos** [2, 4].
+>    - Compressão direta focal sustentada: **3 minutos com hemostático / 10 minutos com gaze comum** [1, 4].
+> 3. **As quatro estações de habilidades:** Estação 1 (Compressão Direta); Estação 2 (Curativos e Bandagem Israelense); Estação 3 (Wound Packing em simulador juncional); Estação 4 (Torniquetes em braço e perna) [1, 2].
+> 4. **Uso de simuladores com fluxo pulsátil:** O treinamento de excelência utiliza manequins e membros simulados (*task trainers*) conectados a bombas hidráulicas com sangue artificial cenográfico sob pressão real para testar o estancamento físico [2, 5].
+> 5. **O Debriefing é onde o aprendizado se consolida:** Reunião estruturada pós-exercício focada no "porquê" das falhas, sem punição e com reforço positivo das ações corretivas imediatas [5, 6].
+> 6. **Conclusão da Biblioteca de Hemorragias:** Este módulo consolida todas as técnicas de H01 a H06 em competências práticas definitivas de sobrevivência no APH [1, 2].
+
+---
+
+## SEÇÃO 2 — OBJETIVOS DE APRENDIZAGEM
+
+Ao concluir o treinamento prático e a avaliação simulada deste módulo, o operador será capaz de:
+
+1. **Executar a montagem e organização de estações de habilidades práticas**, garantindo a segurança de biossegurança e a integridade de equipamentos de treino.
+2. **Aplicar a compressão direta focal com o vetor de peso corporal correto** em simuladores de tecido mole com feedback de pressão.
+3. **Manejar bandagens de emergência tipo israelense em diferentes relevos anatômicos**, operando a barra de pressão mecânica com inversão de vetor em menos de 45 segundos.
+4. **Realizar o empacotamento profundo (*wound packing*) com gaze sanfonada Z-fold** em modelos juncionais de virilha e axila sob vazamento de sangue artificial pressurizado.
+5. **Autoaplicar e aplicar em terceiros torniquetes de molinete (CAT / SOFTT)** em membros superiores e inferiores em menos de 30 segundos, sob cronômetro e ruído ambiente.
+6. **Integrar as habilidades isoladas em cenários dinâmicos de múltiplas vítimas**, aplicando o método de debriefing reflexivo com base em rubricas de competência do OSCE.
+
+---
+
+## SEÇÃO 3 — INTRODUÇÃO E A PEDAGOGIA DA SIMULAÇÃO REALÍSTICA SOB ESTRESSE
+
+A instrução teórica sobre anatomia vascular, fisiopatologia do choque e mecanismos de coagulação fornece o embasamento cognitivo indispensável para que o socorrista entenda o propósito biológico de suas ações. Contudo, a medicina de emergência e as ciências militares comprovaram que **o conhecimento puramente teórico não se traduz automaticamente em destreza psicomotora sob estresse de combate ou catástrofe** [1, 2].
+
+Quando confrontado com uma cena real de mutilação corporal com sangue quente jorrando em alta pressão, o sistema nervoso simpático do socorrista deflagra uma descarga maciça de adrenalina:
+- Ocorre vasoconstrição periférica nas mãos do socorrista (perda da coordenação motora fina e tato nos dedos);
+- Instala-se o fenômeno da visão em túnel (*tunnel vision*) e da exclusão auditiva;
+- O córtex pré-frontal perde a capacidade de raciocínio abstrato complexo, e o cérebro passa a operar exclusivamente por padrões motores automáticos previamente gravados no cerebelo e gânglios da base [2, 5].
+
+Se o profissional apenas leu sobre o torniquete ou assistiu a vídeos na internet sem manusear fisicamente a fita, puxar o velcro com força total e girar o molinete até a dor do colega, ele invariavelmente congelará ou cometerá erros primários no momento da tragédia. A metodologia de estações práticas e simulações sequenciais da União Serviços Médicos foi desenhada para criar reflexos condicionados inquebráveis, transformando o socorrista em uma máquina calma de preservação da vida [1, 3, 5].
+
+---
+
+## SEÇÃO 4 — PSICOFISIOLOGIA DO DESEMPENHO HUMANO EM AMBIENTES CRÍTICOS
+
+Compreender o estresse agudo permite modular os treinamentos para atingir a zona de performance ótima [2, 5]:
+
+```
++---------------------------------------------------------------------------------+
+|                       LEI DE YERKES-DODSON NO RESGATE                           |
+|                                                                                 |
+|  [ ZONA 1: BAIXO ESTRESSE (SALA DE AULA TEÓRICA) ]                              |
+|  - Raciocínio cognitivo alto; destreza motora fina preservada; tempo relaxado.  |
+|                                                                                 |
+|  [ ZONA 2: ESTRESSE ÓTIMO (SIMULAÇÃO PRÁTICA CRONOMETRADA) ]                    |
+|  - Frequência Cardíaca entre 115 e 145 bpm.                                     |
+|  - Ponto de performance máxima: reflexos motores rápidos, foco aguçado e        |
+|    tomada de decisão mecânica instantânea.                                      |
+|                                                                                 |
+|  [ ZONA 3: SOBRECARGA DE PÂNICO (CENA REAL CAÓTICA DESPREPARADA) ]              |
+|  - FC > 175 bpm. Paralisia motora, hiperventilação, tremores incontroláveis.    |
+|  - O treinamento em estações práticas treina o cérebro a permanecer na ZONA 2. |
++---------------------------------------------------------------------------------+
+```
+
+---
+
+## SEÇÃO 5 — DESENVOLVIMENTO DOS SUBTEMAS
+
+### 5.1 Estação Prática 1: Compressão Direta Focal de Alta Performance
+
+A primeira estação consolida a biomecânica da força manual focal sobre bases ósseas simuladas [1, 2]:
+- **Montagem da Estação:** Manequim ou simulador de coxa/antebraço com bomba peristáltica manual alimentando sangue artificial cenográfico vermelho sob pressão sistólica de 120 mmHg.
+- **Roteiro de Treinamento do Aluno:**
+  1. Calçar luvas de nitrilo em menos de 5 segundos.
+  2. Identificar visualmente o ponto exato da fenda de onde o jato arterial está emergindo.
+  3. Ajoelhar-se rente ao simulador, estender os braços retos a 90 graus bloqueando os cotovelos.
+  4. Descarregar o peso do tronco sobre os polegares ou a eminência hipotenar da mão, esmagando o conduto vascular contra a base rígida de poliuretano.
+  5. Manter a pressão contínua ininterrupta por 3 minutos verificando o manômetro de pressão (a meta é manter a pressão de contato acima de 200 mmHg) [2, 4].
+
+---
+
+### 5.2 Estação Prática 2: Curativos Compressivos e Bandagens de Emergência
+
+A segunda estação foca na conversão da compressão manual em estabilização mecânica portátil [2, 7]:
+- **Materiais:** Bandagens elásticas de emergência tipo israelense (4 e 6 polegadas), ataduras de crepom de alta elasticidade e compressas de gaze estéreis.
+- **Habilidades a Desenvolver:**
+  1. Aplicação da compressa almofadada sobre a ferida sem desalinhar os tecidos.
+  2. Passagem da fita elástica pela fenda da barra de pressão plástica (*pressure bar*).
+  3. **Inversão da Direção de Tração em 180 Graus:** Manobra crítica que projeta a barra contra a ferida com força mecânica focal.
+  4. Enfaixamento concêntrico espiralado no sentido distal para proximal.
+  5. Fixação final com a presilha de engate (*closure bar*) sem uso de esparadrapo [2, 7].
+- **Métrica de Tempo:** Aplicação completa e travamento da bandagem em menos de **45 segundos**.
+
+---
+
+### 5.3 Estação Prática 3: Preenchimento de Feridas Cavitárias (Wound Packing)
+
+Esta é a estação de maior exigência técnica e tática do programa de controle de hemorragias [1, 4]:
+- **Montagem da Estação:** Simuladores de ferida em bloco de silicone denso (*Wound Packing Trainers*) com cavidades profundas irregulares reproduzindo o trajeto de projéteis em virilhas e axilas, acoplados a tubos de fluido sob pressão.
+- **Roteiro da Habilidade:**
+  1. Inserir a ponta do indicador/médio até o fundo ósseo da cavidade para cessar o fluxo hidráulico.
+  2. Com a mão livre, abrir o pacote de gaze *Z-fold* (QuikClot ou Celox simulados).
+  3. Aplicar a técnica **"dedo sobre dedo" (*finger-over-finger*)**, alimentando a fita sanfonada centímetro por centímetro sem permitir alívio de pressão no fundo.
+  4. Preencher todos os recessos laterais da cavidade até formar um montículo externo firme de 2 a 3 cm acima da borda da pele.
+  5. Descarregar o peso do corpo sobre o montículo por **3 minutos cronometrados** [1, 4].
+- **Métrica de Desempenho:** Inserção completa de 3 metros de gaze na cavidade em menos de **60 segundos**, com estancamento total do vazamento.
+
+---
+
+### 5.4 Estação Prática 4: Aplicação de Torniquetes Comerciais de Molinete
+
+A estação de torniquetes desenvolve a memória muscular em membros superiores e inferiores [1, 3]:
+- **Modalidades de Treino:**
+  - **Autoaplicação em Braço Próprio:** Simulação de ferimento no membro superior dominante; o operador deve abrir, posicionar, apertar o velcro com uma mão e dentes, girar o molinete e travar em **menos de 30 segundos**.
+  - **Aplicação em Terceiros na Coxa:** O operador deve passar o torniquete na perna de um colega, eliminar 100% da folga do velcro com força máxima, girar o molinete por 2 a 3 voltas e travar no clipe em **menos de 25 segundos**.
+  - **Instalação do Segundo Torniquete:** Cenário de simulação de coxa obesa ou falha do primeiro aparelho: aplicação do segundo torniquete colado imediatamente acima do primeiro em menos de **20 segundos adicionais** [1, 3].
+
+---
+
+### 5.5 Cenários Simulados com Decisões Sequenciais e Pressão de Tempo
+
+Após o domínio de cada estação isolada, os alunos são submetidos a **Cenários de Síntese Dinâmica** [2, 5]:
+- **Estrutura do Cenário:** Sala escura com luzes estroboscópicas, som ambiente de sirenes ou máquinas industriais em volume elevado, fumaça cenográfica e instrutores gritando ordens sob cronômetro regressivo na parede.
+- **Exemplo de Cenário Sequencial:**
+  - O aluno entra na sala e depara-se com duas vítimas simuladas:
+    - Vítima A (operário gritando com coto de braço amputado jorrando sangue arterial);
+    - Vítima B (trabalhadora silenciosa, pálida, com ferimento perfurante na virilha).
+  - O operador deve triar a cena, conter a hemorragia de membro da Vítima A com torniquete em 25 segundos e transitar imediatamente para a Vítima B para realizar *wound packing* profundo na virilha, operando sob estresse temporal estrito [1, 5].
+
+---
+
+### 5.6 Avaliação Prática Baseada em Competências (OSCE) e Debriefing Pedagógico
+
+O fechamento pedagógico do módulo segue o modelo internacional de Exame Clínico Objetivo Estruturado (OSCE - *Objective Structured Clinical Examination*) [5, 6]:
+- **Avaliação por Rubrica Objetiva:** O instrutor avalia o aluno com prancheta padronizada pontuando itens críticos binários (Conseguiu eliminar a folga do velcro? Sim/Não; Demorou menos de 30 segundos? Sim/Não; Anotou o horário? Sim/Não). Qualquer erro crítico que comprometa a vida da vítima reprova a estação.
+- **O Debriefing Reflexivo Estruturado:** Reunião de 20 minutos em círculo com a turma após a simulação:
+  - *Fase 1 (Descarga Emocional):* "Como vocês se sentiram ao entrar na sala sob fumaça e gritaria?".
+  - *Fase 2 (Análise Técnica):* "Por que o torniquete da Vítima A demorou 5 voltas para estancar? (Porque a fita estava frouxa antes de girar)".
+  - *Fase 3 (Generalização para a Vida Real):* "O que levaremos para o nosso cotidiano de trabalho a partir deste erro?" [5, 6].
+
+---
+
+## SEÇÃO 6 — QUADROS PRÁTICOS, RUBRICAS DE AVALIAÇÃO E CHECKLISTS DE HABILIDADES
+
+### Rubrica de Avaliação de Desempenho Prático (Padrão USM / OSCE)
+
+| ETAPA AVALIADA | CRITÉRIO DE EXCELÊNCIA (10 PONTOS) | FALHA CRÍTICA GRAVE (REPROVAÇÃO) |
+| :--- | :--- | :--- |
+| **1. Biossegurança** | Calça luvas de nitrilo antes de tocar no sangue artificial em < 5 seg. | Toca no sangue de terceiros desprotegido sem luvas. |
+| **2. Eliminação de Folga do Torniquete**| Puxa a fita de velcro com força total; não cabe nem a ponta do dedo sob a fita. | Deixa folga na fita; precisa de mais de 4 voltas no molinete. |
+| **3. Tempo de Aplicação do Torniquete** | Sangramento estancado e haste travada no clipe em **menos de 30 segundos**. | Demora mais de 45 segundos para concluir a aplicação. |
+| **4. Técnica de Wound Packing** | Introduz dedo até o fundo ósseo e alimenta a gaze por técnica dedo sobre dedo contínua. | Coloca gaze superficialmente sem preencher a profundidade cavitária. |
+| **5. Tempo de Compressão Corporal** | Mantém peso do tronco sobre os braços retos por **3 min (hemostático) ou 10 min (comum)**. | Alivia a pressão manual antes do término do tempo no relógio. |
+| **6. Registro de Horário e Manta** | Anota hora e minuto na fita e cobre a vítima com manta térmica aluminizada. | Não anota horário; deixa a vítima exposta ao frio no asfalto. |
+
+---
+
+### Checklist de Materiais para Estações Práticas de Hemorragia
+
+```
+[ ] Simuladores de membros sangrantes com bomba hidráulica manual ou elétrica
+[ ] Simuladores em bloco de silicone para Wound Packing de virilha e axila
+[ ] Sangue artificial cenográfico hidrossolúvel de alta viscosidade (não tóxico)
+[ ] Torniquetes comerciais de treino homologados (CAT Gen 7 e SOFTT-W de treinamento)
+[ ] Pacotes de gaze Z-fold de treinamento (sanfonadas sem princípio ativo químico)
+[ ] Bandagens de emergência tipo israelense de 4 e 6 polegadas
+[ ] Caixas de luvas de nitrilo de tamanhos P, M e G
+[ ] Tesouras de ponta romba tipo corta-vestes
+[ ] Mantas térmicas aluminizadas de mylar
+[ ] Marcadores permanentes pretos de ponta grossa
+[ ] Cronômetros digitais de contagem regressiva e sistema de som para simulação
+```
+
+---
+
+## SEÇÃO 7 — FALHAS OPERACIONAIS FREQUENTES OBSERVADAS EM SIMULAÇÕES
+
+1. **Paralisia por Sobrecarga Sensorial:** Alunos que dominam a técnica sentados na cadeira entram em colapso motor quando expostos a fumaça, gritos e pressão de tempo. A dessensibilização exige repetição do exercício sob estresse progressivo [2, 5].
+2. **Girar o Molinete sem Puxar o Velcro:** É a falha mecânica número um do planeta. O aluno coloca a fita frouxa e tenta compensar girando o molinete: a haste quebra ou o velcro enrola como um cordão fino sem ocluir a artéria [1, 3].
+3. **Abandonar o Dedo que Segura a Artéria no Wound Packing:** O aluno encontra o vaso no fundo, mas ao pegar a gaze com a mão livre, solta o ponto de pressão para rasgar o pacote com as duas mãos. O sangue volta a jorrar e a vítima "morre" no simulador [2, 4].
+4. **Aliviar a Pressão aos 2 Minutos para Conferir:** No teste prático de 3 minutos, a ansiedade faz o aluno espiar a ferida aos 2 minutos e meio. Qualquer alívio anula o coágulo e zera o cronômetro [1, 4].
+5. **Esquecer de Destravar as Vias de Acesso da Maca:** Focar 100% no torniquete e não designar ninguém para liberar o portão e aguardar a ambulância [2, 6].
+
+---
+
+## SEÇÃO 8 — ESTUDO DE CASO PRÁTICO CONTEXTUALIZADO (SIMULADO INTEGRADO EM FÁBRICA)
+
+### Cenário: Exercício Simulado Geral em Planta Metalúrgica
+Na Metalúrgica Aço Forte, a Diretoria de Segurança do Trabalho realizou um simulado surpresa de grande escala às 14h30min de uma quinta-feira. Um estrondo cenográfico disparou uma fumaça densa na linha de prensas hidráulicas. Dois figurantes com maquiagem de efeitos especiais e simuladores corporais sangrantes estavam posicionados:
+- Figurante 1: Operário com amputação traumática de antebraço esquerdo por prensa mecânica, com sangue artificial pressurizado jorrando a 60 cm de altura.
+- Figurante 2: Almoxarife com perfuração penetrante juncional profunda na axila direita por barra de perfilado metálico pontiagudo caído da ponte rolante.
+
+A sirene de emergência soou e a brigada industrial voluntária foi acionada.
+
+### Desempenho e Execução Técnica da Brigada USM:
+1. **Entrada e Divisão da Brigada em Duplas (15 segundos):**
+   - O líder da brigada Carlos avalia a cena segura e divide os 4 brigadistas em duas duplas operacionais imediatas chamando pelo nome: *"Dupla 1 (Marcos e Fernanda), assumam o operário da prensa com o torniquete! Dupla 2 (Juliana e Roberto), assumam o almoxarife com wound packing na axila! Eu aciono o 192 e libero o portão 3 para a ambulância!"*.
+2. **Atuação da Dupla 1 (Amputação de Antebraço):**
+   - Marcos apoia o membro amputado e aplica o torniquete CAT Gen 7 no terço médio do braço, 7 cm acima do cotovelo.
+   - Puxa o velcro com força máxima, eliminando 100% da folga.
+   - Gira a haste do molinete por 2,5 voltas: o fluxo de sangue artificial da bomba peristáltica estanca totalmente aos **22 segundos** da abordagem!
+   - Trava a haste no clipe, fecha a fita branca e Fernanda anota o horário no relógio com marcador indelével: "14h32min".
+   - Fernanda recolhe o segmento decepado simulado, coloca em saco plástico vedado e acondiciona em caixa térmica com gelo e água.
+3. **Atuação da Dupla 2 (Ferimento Juncional de Axila):**
+   - Juliana calça as luvas e introduz os dedos no fundo da fossa axilar do Figurante 2, localizando o ponto de sangramento vascular contra o osso úmero. O vazamento é interrompido pela força digital.
+   - Roberto abre a gaze *Z-fold* impregnada com hemostático e auxilia na alimentação contínua pela técnica dedo sobre dedo.
+   - Toda a fita de gaze é empacotada em 45 segundos, formando uma almofada firme de 3 cm acima da linha da pele da axila.
+   - Juliana descarrega o peso do tronco sobre a axila com braços estendidos a 90 graus e comprime continuamente por **3 minutos ininterruptos no cronômetro digital**.
+   - Ao término do tempo, aplicam a bandagem israelense cruzada sobre o ombro e peito, travando a barra de pressão plástica. O curativo permanece limpo e seco.
+4. **Logística e Debriefing (18 minutos pós-início):**
+   - O portão de carga da fábrica foi aberto em 60 segundos com o líder Carlos aguardando a viatura na guia da calçada.
+   - A avaliação do instrutor externo da USM concedeu nota 9,8 à brigada pelo cumprimento rigoroso de todas as métricas de tempo e ausência de falhas críticas.
+   - No debriefing, os brigadistas relataram que o treinamento repetitivo prévio nas estações isoladas fez com que os movimentos saíssem de forma automática e serena, mesmo sob o ruído estridente da sirene industrial.
+
+---
+
+## SEÇÃO 9 — PULO DO GATO
+
+> **MACETES OPERACIONAIS PARA ESTAÇÕES PRÁTICAS E SIMULAÇÕES**
+>
+> 1. **O Treino do Torniquete "De Olhos Fechados":** Uma das melhores técnicas para consolidar a memória muscular do torniquete é treinar a aplicação no braço com os olhos vendados ou completamente fechados. Isso força o operador a sentir a folga do velcro com o tato e a encaixar o molinete no clipe de retenção por geometria tátil, preparando-o para emergências noturnas com iluminação zero [2, 3].
+> 2. **O Teste da Balança no Wound Packing:** Para treinar a sensação física do peso corporal na compressão contínua, posicione uma balança mecânica de banheiro no chão, coloque uma toalha dobrada sobre ela e apoie as duas mãos como se estivesse comprimindo uma ferida. Descarregue o peso do tronco até a balança marcar **pelo menos 25 a 30 kgf sustentados**. Mantenha esse peso por 3 minutos para que seu corpo memorize o esforço muscular exato necessário [2, 4].
+> 3. **A Falsa Sensação de Conforto do Manequim Macio:** Em treinamentos, manequins velhos com silicone desgastado oferecem pouca resistência à penetração da gaze. Lembre-se sempre de que o corpo de um ser humano adulto real vivo tem tônus muscular tenso e espasmo de dor. Na vida real, empacotar a gaze exige **força física consideravelmente maior** para vencer os músculos contraídos [1, 4].
+
+---
+
+## SEÇÃO 10 — MAPA MENTAL DAS ESTAÇÕES PRÁTICAS DE CONTROLE DE HEMORRAGIA
+
+```
+                        ESTAÇÕES PRÁTICAS DE CONTROLE DE SANGRAMENTO
+                                             │
+        ┌────────────────────────────┬───────┴───────┬────────────────────────────┐
+        │                            │               │                            │
+   [ ESTAÇÃO 1 ]               [ ESTAÇÃO 2 ]   [ ESTAÇÃO 3 ]                [ ESTAÇÃO 4 ]
+   Compressão                  Bandagens e     Wound Packing                Torniquetes
+   Direta Focal                Israelense      Cavitário                    de Molinete
+        │                            │               │                            │
+ ┌──────┴──────┐              ┌──────┴──────┐ ┌──────┴──────┐              ┌──────┴──────┐
+ │ Vetor de    │              │ Inversão da │ │ Ir ao fundo │              │ Eliminar    │
+ │ peso 90º    │              │ barra a     │ │ Dedo sobre  │              │ 100% folga  │
+ │ Braços      │              │ 180 graus   │ │ dedo        │              │ do velcro   │
+ │ retos       │              └──────┬──────┘ └──────┬──────┘              └──────┬──────┘
+ └──────┬──────┘                     │               │                            │
+        │                            ▼               ▼                            ▼
+        ▼                      Pressão focal   3 min pressão                Girar até parar
+  Manter o tempo               mecânica em     corporal no                  e travar clipe
+  sem aliviar                  < 45 segundos   montículo                    em < 30 seg!
+        │                            │               │                            │
+        └────────────────────────────┼───────────────┴────────────────────────────┘
+                                     │
+                                     ▼
+                        [ SIMULAÇÃO INTEGRADA SOB ESTRESSE ]
+                        - Múltiplas vítimas
+                        - Pressão de tempo regressiva
+                        - Avaliação OSCE + Debriefing
+```
+
+---
+
+## SEÇÃO 11 — O QUE VOCÊ PRECISA LEMBRAR
+
+- A simulação prática repetitiva é a única ferramenta pedagógica capaz de converter conhecimento teórico em memória muscular motora sob estresse agudo.
+- A aplicação do torniquete comercial de molinete em extremidades deve ser concluída em menos de 30 segundos.
+- O empacotamento profundo (*wound packing*) em simuladores juncionais deve ser finalizado em menos de 60 segundos com a técnica dedo sobre dedo.
+- A compressão direta manual com gaze hemostática exige 3 minutos ininterruptos de descarregamento do peso corporal com braços estendidos a 90 graus.
+- Toda simulação de emergência deve ser seguida de debriefing estruturado para identificação e correção imediata de falhas procedimentais.
+- A conclusão bem-sucedida deste módulo encerra a Biblioteca de Controle de Hemorragias Graves da União Serviços Médicos, certificando o operador para intervenções de alta complexidade.
+
+---
+
+## SEÇÃO 12 — REFERÊNCIAS BIBLIOGRÁFICAS E METADADOS EDITORIAIS
+
+### Referências Científicas e Normativas
+
+1. AMERICAN COLLEGE OF SURGEONS (ACS). **STOP THE BLEED®: Bleeding Control Basic v. 2.0 Course Manual**. Chicago, IL: ACS Committee on Trauma, 2020.
+2. NATIONAL ASSOCIATION OF EMERGENCY MEDICAL TECHNICIANS (NAEMT). **PHTLS: Prehospital Trauma Life Support**. 10. ed. Burlington, MA: Jones & Bartlett Learning, 2023.
+3. COMMITTEE ON TACTICAL COMBAT CASUALTY CARE (CoTCCC). **Tactical Combat Casualty Care (TCCC) Guidelines for Medical Personnel**. Joint Trauma System, U.S. Department of Defense, 2021. Atualizado em 2023.
+4. BULGER, E. M. et al. **An Evidence-Based Prehospital Guideline for External Hemorrhage Control: American College of Surgeons Committee on Trauma**. *Prehospital Emergency Care*, v. 18, n. 2, p. 163-173, 2014.
+5. DIEKMANN, P. et al. **Simulation-based training in emergency medicine: Current concepts, best practices, and future directions**. *Emergency Medicine Journal*, v. 37, n. 8, p. 504-511, 2020.
+6. HARDEN, R. M. et al. **Assessment of Clinical Competence using an Objective Structured Clinical Examination (OSCE)**. *Medical Education*, v. 13, n. 1, p. 39-54, 1979. Atualizado pelo AMEE Guide 2021.
+7. BAR-EL, Y. et al. **The Emergency Bandage: An Advanced Hemostatic Device for Prehospital and Mass Casualty Trauma**. *Military Medicine*, v. 168, n. 1, p. 32-35, 2003.
+8. MINISTÉRIO DA SAÚDE (BRASIL). **Portaria GM/MS nº 2.048, de 5 de novembro de 2002**. Regulamento Técnico dos Sistemas Estaduais de Urgência e Emergência. Brasília, DF: Ministério da Saúde, 2002.
+9. ASSOCIAÇÃO BRASILEIRA DE NORMAS TÉCNICAS (ABNT). **ABNT NBR 14276:2020: Brigada de incêndio e emergência — Requisitos e procedimentos**. Rio de Janeiro: ABNT, 2020.
+10. BRASIL. **Decreto-Lei nº 2.848, de 7 de dezembro de 1940**. Código Penal Brasileiro (Art. 135 - Omissão de Socorro). Brasília, DF: Presidência da República, 1940.
+11. AMERICAN COLLEGE OF SURGEONS (ACS). **ATLS: Advanced Trauma Life Support — Student Course Manual**. 10. ed. Chicago, IL: ACS, 2018.
+12. ROSSOUW, R. et al. **Tourniquet Use in Civilian Prehospital Trauma: A Systematic Review and Meta-Analysis**. *Prehospital Emergency Care*, v. 25, n. 3, p. 417-427, 2021.
+
+---
+
+### Metadados Editoriais Institucionais
+
+| CAMPO | ESPECIFICAÇÃO TÉCNICA |
+| :--- | :--- |
+| **Identificador do Módulo** | MÓDULO H07 — Estações Práticas e Simulações de Hemorragia |
+| **Biblioteca Curricular** | Controle de Hemorragias Graves (*Bleeding Control*) |
+| **Instituição Responsável** | União Serviços Médicos — Ensino e Instrução Pré-Hospitalar |
+| **Padrão Gráfico e Editorial** | Diretrizes Editoriais Integradas LURIA / USM |
+| **Status Editorial** | Aguardando Aprovação Científica |
+| **Data da Revisão Técnica** | Outubro de 2026 |
+| **Versão Curricular** | Versão 1.0.0 — Revisão Quinquenal Vigente |
+| **Classificação de Acesso** | Conteúdo Didático Restrito aos Treinamentos e Capacitações da União Serviços Médicos |
