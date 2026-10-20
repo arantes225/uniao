@@ -1867,13 +1867,23 @@ export const AdminDashboard: React.FC = () => {
 
                         </div>
 
-                        {/* Rodapé com Código de Autenticidade e QR Code */}
+                        {/* Rodapé com Código de Autenticidade, Link de Verificação e QR Code */}
                         <div className="pt-4 flex flex-col sm:flex-row items-center justify-between text-[11px] text-slate-400 border-t border-white/10 gap-2 font-mono">
-                          <div className="flex items-center gap-1.5">
-                            <span className="text-slate-500">Chave de Autenticação:</span>
+                          <div className="flex flex-wrap items-center gap-2">
+                            <span className="text-slate-500">Chave:</span>
                             <strong className="text-teal-400 font-bold">USM-2026-X89A-99F</strong>
+                            <span className="text-slate-600">•</span>
+                            <a
+                              href="#/validar-certificado/USM-2026-X89A-99F"
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="text-teal-400 hover:text-teal-300 underline font-sans font-semibold transition-colors flex items-center gap-1"
+                              title="Verificar autenticidade digital"
+                            >
+                              Link para autenticação
+                            </a>
                           </div>
-                          <div>Validade Técnica Recomendada: <strong className="text-white">{certValidity} meses</strong></div>
+                          <div>Validade Técnica: <strong className="text-white">{certValidity} meses</strong></div>
                           <div>Emissão: <strong className="text-white">{new Date().toLocaleDateString('pt-BR')}</strong></div>
                         </div>
 
@@ -2621,13 +2631,23 @@ export const AdminDashboard: React.FC = () => {
                       </div>
                     </div>
 
-                    {/* Rodapé com Código de Autenticidade e QR Code */}
+                    {/* Rodapé com Código de Autenticidade, Link de Verificação e QR Code */}
                     <div className="pt-4 flex flex-col sm:flex-row items-center justify-between text-[11px] text-slate-400 border-t border-white/10 gap-2 font-mono">
-                      <div className="flex items-center gap-1.5">
-                        <span className="text-slate-500">Chave de Autenticação:</span>
+                      <div className="flex flex-wrap items-center gap-2">
+                        <span className="text-slate-500">Chave:</span>
                         <strong className="text-teal-400 font-bold">USM-2026-X89A-99F</strong>
+                        <span className="text-slate-600">•</span>
+                        <a
+                          href="#/validar-certificado/USM-2026-X89A-99F"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="text-teal-400 hover:text-teal-300 underline font-sans font-semibold transition-colors flex items-center gap-1"
+                          title="Verificar autenticidade digital"
+                        >
+                          Link para autenticação
+                        </a>
                       </div>
-                      <div>Validade Técnica Recomendada: <strong className="text-white">{certValidity} meses</strong></div>
+                      <div>Validade Técnica: <strong className="text-white">{certValidity} meses</strong></div>
                       <div>Emissão: <strong className="text-white">{new Date().toLocaleDateString('pt-BR')}</strong></div>
                     </div>
 
