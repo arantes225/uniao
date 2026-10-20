@@ -216,11 +216,14 @@ A teoria só se transforma em reflexo motor se for praticada fisicamente em simu
 
 ### Figuras de Apoio
 
-![Figura 1 - Maleta e estaÃ§Ã£o de primeiros socorros sinalizada.](../imagens/First_aid_kit_on_wall.png)
-*Figura 1 - Maleta e estaÃ§Ã£o de primeiros socorros sinalizada. CrÃ©dito: Leigh Blackall. LicenÃ§a: CC BY 2.0 (https://creativecommons.org/licenses/by/2.0/). Fonte: Wikimedia Commons.*
+![Figura 1 - Maleta e estaÃ§Ã£o de primeiros socorros sinalizada e acessÃ­vel.](../imagens/First_aid_kit_on_wall.png)
+*Figura 1 - Maleta e estaÃ§Ã£o de primeiros socorros sinalizada e acessÃ­vel. CrÃ©dito: Leigh Blackall. LicenÃ§a: CC BY 2.0 (https://creativecommons.org/licenses/by/2.0/). Fonte: Wikimedia Commons.*
 
 ![Figura 2 - Sinal ISO 7010 E010: localizaÃ§Ã£o do DEA.](../imagens/ISO_7010_E010.png)
 *Figura 2 - Sinal ISO 7010 E010: localizaÃ§Ã£o do DEA. CrÃ©dito: M!dgard. LicenÃ§a: CC0. Fonte: Wikimedia Commons.*
+
+![Figura 3 - Transporte de apoio por dois socorristas para remoÃ§Ã£o controlada da zona de risco.](../imagens/Two-person-carry.png)
+*Figura 3 - Transporte de apoio por dois socorristas para remoÃ§Ã£o controlada da zona de risco. CrÃ©dito: Baedr-9439. LicenÃ§a: CC0. Fonte: Wikimedia Commons.*
 
 ---
 

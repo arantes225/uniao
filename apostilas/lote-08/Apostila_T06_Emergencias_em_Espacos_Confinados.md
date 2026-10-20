@@ -240,11 +240,17 @@ Assim que a vítima for extraída para a atmosfera livre:
 
 ### Figuras de Apoio
 
-![Figura 1 - TripÃ© de extraÃ§Ã£o para espaÃ§o confinado.](../imagens/Confined_Space_Entry_32884133734_.jpg)
-*Figura 1 - TripÃ© de extraÃ§Ã£o para espaÃ§o confinado. CrÃ©dito: Georgia National Guard. LicenÃ§a: CC BY 2.0 (https://creativecommons.org/licenses/by/2.0/). Fonte: Wikimedia Commons.*
+![Figura 1 - TripÃ© de iÃ§amento e linha de vida para resgate em espaÃ§o confinado (NR-33).](../imagens/Confined_Space_Entry_32884133734_.jpg)
+*Figura 1 - TripÃ© de iÃ§amento e linha de vida para resgate em espaÃ§o confinado (NR-33). CrÃ©dito: Georgia National Guard. LicenÃ§a: CC BY 2.0 (https://creativecommons.org/licenses/by/2.0/). Fonte: Wikimedia Commons.*
 
-![Figura 2 - Bolsa-vÃ¡lvula-mÃ¡scara (ambu).](../imagens/Bag-valve-mask.jpg)
-*Figura 2 - Bolsa-vÃ¡lvula-mÃ¡scara (ambu). CrÃ©dito: Another-anon-artist-234. LicenÃ§a: CC0. Fonte: Wikimedia Commons.*
+![Figura 2 - MÃ¡scara respiratÃ³ria facial inteira com filtro quÃ­mico para ambientes contaminados.](../imagens/Full-face-respirator.jpg)
+*Figura 2 - MÃ¡scara respiratÃ³ria facial inteira com filtro quÃ­mico para ambientes contaminados. CrÃ©dito: Another-anon-artist-234. LicenÃ§a: CC0. Fonte: Wikimedia Commons.*
+
+![Figura 3 - Dispositivo bolsa-vÃ¡lvula-mÃ¡scara (ambu) para ventilaÃ§Ã£o de resgate.](../imagens/Bag-valve-mask.jpg)
+*Figura 3 - Dispositivo bolsa-vÃ¡lvula-mÃ¡scara (ambu) para ventilaÃ§Ã£o de resgate. CrÃ©dito: Another-anon-artist-234. LicenÃ§a: CC0. Fonte: Wikimedia Commons.*
+
+![Figura 4 - Manobra de Rautek para extraÃ§Ã£o rÃ¡pida de vÃ­tima inconsciente em risco iminente.](../imagens/Rautek-maneuver.png)
+*Figura 4 - Manobra de Rautek para extraÃ§Ã£o rÃ¡pida de vÃ­tima inconsciente em risco iminente. CrÃ©dito: Baedr-9439. LicenÃ§a: CC0. Fonte: Wikimedia Commons.*
 
 ---
 

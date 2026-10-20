@@ -183,11 +183,17 @@ A NR-35 exige que toda empresa que atue em altura possua uma equipe de emergênc
 
 ### Figuras de Apoio
 
-![Figura 1 - CinturÃ£o de seguranÃ§a tipo paraquedista para trabalho em altura (NR-35).](../imagens/Worker_with_safety_harness_9248564334_.jpg)
-*Figura 1 - CinturÃ£o de seguranÃ§a tipo paraquedista para trabalho em altura (NR-35). CrÃ©dito: National Institute for Occupational Safety and Health (NIOSH). LicenÃ§a: DomÃ­nio pÃºblico. Fonte: Wikimedia Commons.*
+![Figura 1 - CinturÃ£o paraquedista e ancoragem para prevenÃ§Ã£o de quedas em altura (NR-35).](../imagens/Worker_with_safety_harness_9248564334_.jpg)
+*Figura 1 - CinturÃ£o paraquedista e ancoragem para prevenÃ§Ã£o de quedas em altura (NR-35). CrÃ©dito: National Institute for Occupational Safety and Health (NIOSH). LicenÃ§a: DomÃ­nio pÃºblico. Fonte: Wikimedia Commons.*
 
-![Figura 2 - ColocaÃ§Ã£o de colar cervical.](../imagens/Cervical-collar-application.png)
-*Figura 2 - ColocaÃ§Ã£o de colar cervical. CrÃ©dito: Baedr-9439. LicenÃ§a: CC0. Fonte: Wikimedia Commons.*
+![Figura 2 - EstabilizaÃ§Ã£o manual alinhada (in-line) da cabeÃ§a e coluna cervical no trauma.](../imagens/In-line-traction.png)
+*Figura 2 - EstabilizaÃ§Ã£o manual alinhada (in-line) da cabeÃ§a e coluna cervical no trauma. CrÃ©dito: Baedr-9439. LicenÃ§a: CC0. Fonte: Wikimedia Commons.*
+
+![Figura 3 - AplicaÃ§Ã£o tÃ©cnica de colar cervical para restriÃ§Ã£o de movimento.](../imagens/Cervical-collar-application.png)
+*Figura 3 - AplicaÃ§Ã£o tÃ©cnica de colar cervical para restriÃ§Ã£o de movimento. CrÃ©dito: Baedr-9439. LicenÃ§a: CC0. Fonte: Wikimedia Commons.*
+
+![Figura 4 - Manobra de rolamento em bloco mantendo o alinhamento do eixo cranioespinal.](../imagens/Rolling-a-patient.jpg)
+*Figura 4 - Manobra de rolamento em bloco mantendo o alinhamento do eixo cranioespinal. CrÃ©dito: Another-anon-artist-234. LicenÃ§a: CC0. Fonte: Wikimedia Commons.*
 
 ---
 

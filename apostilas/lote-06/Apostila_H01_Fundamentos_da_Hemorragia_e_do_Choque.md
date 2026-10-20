@@ -190,8 +190,17 @@ Em pacientes traumatizados com perda sanguínea maciça, três desordens metabó
 
 ### Figuras de Apoio
 
-![Figura 1 - Estrutura anatÃ´mica comparativa entre artÃ©rias e veias.](../imagens/2102_Comparison_of_Artery_and_Vein.jpg)
-*Figura 1 - Estrutura anatÃ´mica comparativa entre artÃ©rias e veias. CrÃ©dito: OpenStax College. LicenÃ§a: CC BY 3.0 (https://creativecommons.org/licenses/by/3.0/). Fonte: Wikimedia Commons.*
+![Figura 1 - ComparaÃ§Ã£o histolÃ³gica e pressÃ³rica entre artÃ©rias e veias.](../imagens/2102_Comparison_of_Artery_and_Vein.jpg)
+*Figura 1 - ComparaÃ§Ã£o histolÃ³gica e pressÃ³rica entre artÃ©rias e veias. CrÃ©dito: OpenStax College. LicenÃ§a: CC BY 3.0 (https://creativecommons.org/licenses/by/3.0/). Fonte: Wikimedia Commons.*
+
+![Figura 2 - Pele mosqueada (livedo/vasoconstriÃ§Ã£o perifÃ©rica) como sinal clÃ­nico precoce de hipoperfusÃ£o e choque.](../imagens/Mottled-skin.jpg)
+*Figura 2 - Pele mosqueada (livedo/vasoconstriÃ§Ã£o perifÃ©rica) como sinal clÃ­nico precoce de hipoperfusÃ£o e choque. CrÃ©dito: Another-anon-artist-234. LicenÃ§a: CC0. Fonte: Wikimedia Commons.*
+
+![Figura 3 - EnvoltÃ³rio de isolamento tÃ©rmico passivo e ativo para prevenÃ§Ã£o da hipotermia no trauma.](../imagens/Hypothermia-wrap.png)
+*Figura 3 - EnvoltÃ³rio de isolamento tÃ©rmico passivo e ativo para prevenÃ§Ã£o da hipotermia no trauma. CrÃ©dito: Baedr-9439. LicenÃ§a: CC0. Fonte: Wikimedia Commons.*
+
+![Figura 4 - Mecanismo de bomba cardÃ­aca e ejeÃ§Ã£o sanguÃ­nea durante a compressÃ£o torÃ¡cica externa.](../imagens/CPR-heart-compression.png)
+*Figura 4 - Mecanismo de bomba cardÃ­aca e ejeÃ§Ã£o sanguÃ­nea durante a compressÃ£o torÃ¡cica externa. CrÃ©dito: Baedr-9439. LicenÃ§a: CC0. Fonte: Wikimedia Commons.*
 
 ---
 

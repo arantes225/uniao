@@ -197,14 +197,17 @@ A crise convulsiva decorre de uma descarga elétrica neuronal hipersincrônica, 
 
 ### Figuras de Apoio
 
-![Figura 1 - Reconhecimento do AVC pelo mÃ©todo FAST.](../imagens/Identify_the_symptoms_of_a_stroke_using_the_FAST_method.png)
-*Figura 1 - Reconhecimento do AVC pelo mÃ©todo FAST. CrÃ©dito: U.S. Food and Drug Administration (vetor: Fvasconcellos). LicenÃ§a: DomÃ­nio pÃºblico. Fonte: Wikimedia Commons.*
+![Figura 1 - Reconhecimento precoce do AVC pelo mÃ©todo FAST.](../imagens/Identify_the_symptoms_of_a_stroke_using_the_FAST_method.png)
+*Figura 1 - Reconhecimento precoce do AVC pelo mÃ©todo FAST. CrÃ©dito: U.S. Food and Drug Administration (vetor: Fvasconcellos). LicenÃ§a: DomÃ­nio pÃºblico. Fonte: Wikimedia Commons.*
 
-![Figura 2 - Act FAST: sinais de alerta do AVC.](../imagens/Act_FAST.png)
-*Figura 2 - Act FAST: sinais de alerta do AVC. CrÃ©dito: U.S. CDC, NCCDPHP. LicenÃ§a: DomÃ­nio pÃºblico. Fonte: Wikimedia Commons.*
+![Figura 2 - Sinais de alerta do Acidente Vascular Cerebral (Act FAST).](../imagens/Act_FAST.png)
+*Figura 2 - Sinais de alerta do Acidente Vascular Cerebral (Act FAST). CrÃ©dito: U.S. CDC, NCCDPHP. LicenÃ§a: DomÃ­nio pÃºblico. Fonte: Wikimedia Commons.*
 
-![Figura 3 - Infarto agudo do miocÃ¡rdio.](../imagens/Blausen_0463_HeartAttack.png)
-*Figura 3 - Infarto agudo do miocÃ¡rdio. CrÃ©dito: Blausen Medical Communications, Inc.. LicenÃ§a: CC BY 3.0 (https://creativecommons.org/licenses/by/3.0/). Fonte: Wikimedia Commons.*
+![Figura 3 - Assimetria facial aguda (queda da rima labial) caracterÃ­stica de Acidente Vascular Cerebral.](../imagens/Stroke-facial-droop.jpg)
+*Figura 3 - Assimetria facial aguda (queda da rima labial) caracterÃ­stica de Acidente Vascular Cerebral. CrÃ©dito: Another-anon-artist-234. LicenÃ§a: CC0. Fonte: Wikimedia Commons.*
+
+![Figura 4 - Fisiopatologia do Infarto Agudo do MiocÃ¡rdio por oclusÃ£o coronariana.](../imagens/Blausen_0463_HeartAttack.png)
+*Figura 4 - Fisiopatologia do Infarto Agudo do MiocÃ¡rdio por oclusÃ£o coronariana. CrÃ©dito: Blausen Medical Communications, Inc.. LicenÃ§a: CC BY 3.0 (https://creativecommons.org/licenses/by/3.0/). Fonte: Wikimedia Commons.*
 
 ---
 

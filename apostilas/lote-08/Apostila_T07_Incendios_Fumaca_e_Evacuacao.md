@@ -214,8 +214,20 @@ A interface entre a resposta corporativa interna e as forças públicas de socor
 
 ### Figuras de Apoio
 
-![Figura 1 - Extintor de incÃªndio.](../imagens/Fire_extinguisher.png)
-*Figura 1 - Extintor de incÃªndio. CrÃ©dito: OpenClipart. LicenÃ§a: CC0. Fonte: Wikimedia Commons.*
+![Figura 1 - Extintor portÃ¡til para combate inicial a princÃ­pios de incÃªndio.](../imagens/Fire_extinguisher.png)
+*Figura 1 - Extintor portÃ¡til para combate inicial a princÃ­pios de incÃªndio. CrÃ©dito: OpenClipart. LicenÃ§a: CC0. Fonte: Wikimedia Commons.*
+
+![Figura 2 - Queimadura de segundo grau superficial com formaÃ§Ã£o de flictenas (bolhas).](../imagens/Superficial-partial-thickness-burn.png)
+*Figura 2 - Queimadura de segundo grau superficial com formaÃ§Ã£o de flictenas (bolhas). CrÃ©dito: Baedr-9439. LicenÃ§a: CC0. Fonte: Wikimedia Commons.*
+
+![Figura 3 - Queimadura de terceiro grau (espessura total) com destruiÃ§Ã£o epidÃ©rmica e dÃ©rmica.](../imagens/Full-thickness-burn.png)
+*Figura 3 - Queimadura de terceiro grau (espessura total) com destruiÃ§Ã£o epidÃ©rmica e dÃ©rmica. CrÃ©dito: Baedr-9439. LicenÃ§a: CC0. Fonte: Wikimedia Commons.*
+
+![Figura 4 - Regra dos Nove de Wallace para estimativa da SuperfÃ­cie Corporal Queimada (SCQ).](../imagens/Wallace-rule-of-nines.jpg)
+*Figura 4 - Regra dos Nove de Wallace para estimativa da SuperfÃ­cie Corporal Queimada (SCQ). CrÃ©dito: Another-anon-artist-234. LicenÃ§a: CC0. Fonte: Wikimedia Commons.*
+
+![Figura 5 - Arrasto de emergÃªncia sobre manta para evacuaÃ§Ã£o rÃ¡pida por Ãºnico socorrista.](../imagens/Blanket-drag.png)
+*Figura 5 - Arrasto de emergÃªncia sobre manta para evacuaÃ§Ã£o rÃ¡pida por Ãºnico socorrista. CrÃ©dito: Baedr-9439. LicenÃ§a: CC0. Fonte: Wikimedia Commons.*
 
 ---
 

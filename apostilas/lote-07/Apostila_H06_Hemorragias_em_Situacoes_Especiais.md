@@ -197,11 +197,20 @@ Ao chegar a equipe de Suporte Avançado do SAMU 192 ou ao desembarcar na sala de
 
 ### Figuras de Apoio
 
-![Figura 1 - Curativo oclusivo em ferimento abdominal complexo (evisceraÃ§Ã£o).](../imagens/Open-abdominal-wound-dressed.png)
-*Figura 1 - Curativo oclusivo em ferimento abdominal complexo (evisceraÃ§Ã£o). CrÃ©dito: Baedr-9439. LicenÃ§a: CC0. Fonte: Wikimedia Commons.*
+![Figura 1 - Selo de tÃ³rax valvulado aplicado em ferimento torÃ¡cico penetrante (pneumotÃ³rax aberto).](../imagens/Vented-chest-seal.png)
+*Figura 1 - Selo de tÃ³rax valvulado aplicado em ferimento torÃ¡cico penetrante (pneumotÃ³rax aberto). CrÃ©dito: Baedr-9439. LicenÃ§a: CC0. Fonte: Wikimedia Commons.*
 
-![Figura 2 - ColocaÃ§Ã£o de colar cervical.](../imagens/Cervical-collar-application.png)
-*Figura 2 - ColocaÃ§Ã£o de colar cervical. CrÃ©dito: Baedr-9439. LicenÃ§a: CC0. Fonte: Wikimedia Commons.*
+![Figura 2 - Fisiopatologia do pneumotÃ³rax hipertensivo com colapso pulmonar e desvio mediastinal.](../imagens/Tension-pneumothorax.png)
+*Figura 2 - Fisiopatologia do pneumotÃ³rax hipertensivo com colapso pulmonar e desvio mediastinal. CrÃ©dito: Baedr-9439. LicenÃ§a: CC0. Fonte: Wikimedia Commons.*
+
+![Figura 3 - ApresentaÃ§Ã£o clÃ­nica de trauma abdominal aberto com evisceraÃ§Ã£o antes da proteÃ§Ã£o Ãºmida.](../imagens/Open-abdominal-wound-exposed.png)
+*Figura 3 - ApresentaÃ§Ã£o clÃ­nica de trauma abdominal aberto com evisceraÃ§Ã£o antes da proteÃ§Ã£o Ãºmida. CrÃ©dito: Baedr-9439. LicenÃ§a: CC0. Fonte: Wikimedia Commons.*
+
+![Figura 4 - ProteÃ§Ã£o com curativo Ãºmido e oclusivo em ferimento abdominal aberto.](../imagens/Open-abdominal-wound-dressed.png)
+*Figura 4 - ProteÃ§Ã£o com curativo Ãºmido e oclusivo em ferimento abdominal aberto. CrÃ©dito: Baedr-9439. LicenÃ§a: CC0. Fonte: Wikimedia Commons.*
+
+![Figura 5 - AplicaÃ§Ã£o tÃ©cnica de colar cervical para restriÃ§Ã£o de movimento.](../imagens/Cervical-collar-application.png)
+*Figura 5 - AplicaÃ§Ã£o tÃ©cnica de colar cervical para restriÃ§Ã£o de movimento. CrÃ©dito: Baedr-9439. LicenÃ§a: CC0. Fonte: Wikimedia Commons.*
 
 ---
 

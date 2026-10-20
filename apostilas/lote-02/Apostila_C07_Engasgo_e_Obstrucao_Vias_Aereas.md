@@ -208,8 +208,14 @@ A prevenção é o pilar mais eficiente da segurança da vida. Conforme preconiz
 
 ### Figuras de Apoio
 
-![Figura 1 - CompressÃµes abdominais (manobra de Heimlich).](../imagens/Abdominal_thrusts_against_choking_cropped_.jpg)
-*Figura 1 - CompressÃµes abdominais (manobra de Heimlich). CrÃ©dito: US Army Medical Department Center and School. LicenÃ§a: DomÃ­nio pÃºblico. Fonte: Wikimedia Commons.*
+![Figura 1 - CompressÃµes abdominais em vÃ­tima consciente (manobra de Heimlich).](../imagens/Abdominal_thrusts_against_choking_cropped_.jpg)
+*Figura 1 - CompressÃµes abdominais em vÃ­tima consciente (manobra de Heimlich). CrÃ©dito: US Army Medical Department Center and School. LicenÃ§a: DomÃ­nio pÃºblico. Fonte: Wikimedia Commons.*
+
+![Figura 2 - CompressÃµes em vÃ­tima de engasgo que evolui para inconsciÃªncia em decÃºbito dorsal.](../imagens/Supine-abdominal-thrust.jpg)
+*Figura 2 - CompressÃµes em vÃ­tima de engasgo que evolui para inconsciÃªncia em decÃºbito dorsal. CrÃ©dito: Another-anon-artist-234. LicenÃ§a: CC0. Fonte: Wikimedia Commons.*
+
+![Figura 3 - Manobra de inclinaÃ§Ã£o da cabeÃ§a e elevaÃ§Ã£o do mento (head-tilt/chin-lift).](../imagens/Head-tilt-chin-lift-maneuver.jpg)
+*Figura 3 - Manobra de inclinaÃ§Ã£o da cabeÃ§a e elevaÃ§Ã£o do mento (head-tilt/chin-lift). CrÃ©dito: Another-anon-artist-234. LicenÃ§a: CC0. Fonte: Wikimedia Commons.*
 
 ---
 

@@ -218,11 +218,20 @@ O atendimento pré-hospitalar ao acidentado elétrico deve seguir uma metodologi
 
 ### Figuras de Apoio
 
-![Figura 1 - SinalizaÃ§Ã£o internacional de perigo de alta tensÃ£o elÃ©trica.](../imagens/High_voltage_warning_sign_Beromuenster.JPG)
-*Figura 1 - SinalizaÃ§Ã£o internacional de perigo de alta tensÃ£o elÃ©trica. CrÃ©dito: Timberwind. LicenÃ§a: DomÃ­nio pÃºblico. Fonte: Wikimedia Commons.*
+![Figura 1 - SinalizaÃ§Ã£o de advertÃªncia para risco de choque elÃ©trico e arco voltaico.](../imagens/High_voltage_warning_sign_Beromuenster.JPG)
+*Figura 1 - SinalizaÃ§Ã£o de advertÃªncia para risco de choque elÃ©trico e arco voltaico. CrÃ©dito: Timberwind. LicenÃ§a: DomÃ­nio pÃºblico. Fonte: Wikimedia Commons.*
 
-![Figura 2 - Procedimento de bloqueio e etiquetagem (LOTO).](../imagens/Lockout_Tagout_14853353063_.jpg)
-*Figura 2 - Procedimento de bloqueio e etiquetagem (LOTO). CrÃ©dito: NAVFAC (U.S. Navy). LicenÃ§a: DomÃ­nio pÃºblico. Fonte: Wikimedia Commons.*
+![Figura 2 - Procedimento de bloqueio e etiquetagem de energias perigosas (LOTO).](../imagens/Lockout_Tagout_14853353063_.jpg)
+*Figura 2 - Procedimento de bloqueio e etiquetagem de energias perigosas (LOTO). CrÃ©dito: NAVFAC (U.S. Navy). LicenÃ§a: DomÃ­nio pÃºblico. Fonte: Wikimedia Commons.*
+
+![Figura 3 - Acometimento tecidual profundo nas queimaduras graves de espessura total.](../imagens/Fourth-degree-burn.png)
+*Figura 3 - Acometimento tecidual profundo nas queimaduras graves de espessura total. CrÃ©dito: Baedr-9439. LicenÃ§a: CC0. Fonte: Wikimedia Commons.*
+
+![Figura 4 - Regra dos Nove de Wallace para estimativa da SuperfÃ­cie Corporal Queimada (SCQ).](../imagens/Wallace-rule-of-nines.jpg)
+*Figura 4 - Regra dos Nove de Wallace para estimativa da SuperfÃ­cie Corporal Queimada (SCQ). CrÃ©dito: Another-anon-artist-234. LicenÃ§a: CC0. Fonte: Wikimedia Commons.*
+
+![Figura 5 - Posicionamento anterolateral padrÃ£o das pÃ¡s adesivas do DEA no tÃ³rax desnudo.](../imagens/Aed-electrode-placement.png)
+*Figura 5 - Posicionamento anterolateral padrÃ£o das pÃ¡s adesivas do DEA no tÃ³rax desnudo. CrÃ©dito: Baedr-9439. LicenÃ§a: CC0. Fonte: Wikimedia Commons.*
 
 ---
 

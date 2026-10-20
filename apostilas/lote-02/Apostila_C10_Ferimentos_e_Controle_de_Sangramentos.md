@@ -196,11 +196,20 @@ Diante desses sinais, acione imediatamente o SAMU 192, deite a vítima de costas
 
 ### Figuras de Apoio
 
-![Figura 1 - AplicaÃ§Ã£o de torniquete em treinamento TCCC.](../imagens/Tourniquet_application.jpg)
-*Figura 1 - AplicaÃ§Ã£o de torniquete em treinamento TCCC. CrÃ©dito: U.S. Navy, MC2 Barry R. Hirayama. LicenÃ§a: DomÃ­nio pÃºblico. Fonte: Wikimedia Commons.*
+![Figura 1 - AplicaÃ§Ã£o de torniquete tÃ¡tico em treinamento prÃ¡tico.](../imagens/Tourniquet_application.jpg)
+*Figura 1 - AplicaÃ§Ã£o de torniquete tÃ¡tico em treinamento prÃ¡tico. CrÃ©dito: U.S. Navy, MC2 Barry R. Hirayama. LicenÃ§a: DomÃ­nio pÃºblico. Fonte: Wikimedia Commons.*
 
-![Figura 2 - Gaze estÃ©ril para compressÃ£o direta e preenchimento de feridas.](../imagens/Gauze_bandage.png)
-*Figura 2 - Gaze estÃ©ril para compressÃ£o direta e preenchimento de feridas. CrÃ©dito: im_tau. LicenÃ§a: CC BY 4.0 (https://creativecommons.org/licenses/by/4.0/). Fonte: Wikimedia Commons.*
+![Figura 2 - Esquema tÃ©cnico de aplicaÃ§Ã£o circunferencial e ajuste do molinete do torniquete.](../imagens/Tourniquet.png)
+*Figura 2 - Esquema tÃ©cnico de aplicaÃ§Ã£o circunferencial e ajuste do molinete do torniquete. CrÃ©dito: Baedr-9439. LicenÃ§a: CC0. Fonte: Wikimedia Commons.*
+
+![Figura 3 - Rolo de gaze estÃ©ril para compressÃ£o direta e preenchimento de cavidades.](../imagens/Gauze_bandage.png)
+*Figura 3 - Rolo de gaze estÃ©ril para compressÃ£o direta e preenchimento de cavidades. CrÃ©dito: im_tau. LicenÃ§a: CC BY 4.0 (https://creativecommons.org/licenses/by/4.0/). Fonte: Wikimedia Commons.*
+
+![Figura 4 - Atadura autoaderente aplicada para fixaÃ§Ã£o de curativo compressivo hemostÃ¡tico.](../imagens/Self-adhering-bandage.png)
+*Figura 4 - Atadura autoaderente aplicada para fixaÃ§Ã£o de curativo compressivo hemostÃ¡tico. CrÃ©dito: Baedr-9439. LicenÃ§a: CC0. Fonte: Wikimedia Commons.*
+
+![Figura 5 - Tesoura ponta-romba de APH para exposiÃ§Ã£o rÃ¡pida e segura de lesÃµes graves.](../imagens/Trauma-shears.jpg)
+*Figura 5 - Tesoura ponta-romba de APH para exposiÃ§Ã£o rÃ¡pida e segura de lesÃµes graves. CrÃ©dito: Another-anon-artist-234. LicenÃ§a: CC0. Fonte: Wikimedia Commons.*
 
 ---
 

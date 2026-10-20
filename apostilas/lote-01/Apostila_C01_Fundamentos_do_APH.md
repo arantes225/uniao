@@ -172,11 +172,17 @@ A abordagem do socorrista obedece a uma ordem operacional clara:
 
 ### Figuras de Apoio
 
-![Figura 1 - Maleta e estaÃ§Ã£o de primeiros socorros sinalizada.](../imagens/First_aid_kit_on_wall.png)
-*Figura 1 - Maleta e estaÃ§Ã£o de primeiros socorros sinalizada. CrÃ©dito: Leigh Blackall. LicenÃ§a: CC BY 2.0 (https://creativecommons.org/licenses/by/2.0/). Fonte: Wikimedia Commons.*
+![Figura 1 - Maleta e estaÃ§Ã£o de primeiros socorros sinalizada e acessÃ­vel.](../imagens/First_aid_kit_on_wall.png)
+*Figura 1 - Maleta e estaÃ§Ã£o de primeiros socorros sinalizada e acessÃ­vel. CrÃ©dito: Leigh Blackall. LicenÃ§a: CC BY 2.0 (https://creativecommons.org/licenses/by/2.0/). Fonte: Wikimedia Commons.*
 
-![Figura 2 - InspeÃ§Ã£o ocular e abertura palpebral no atendimento inicial.](../imagens/Medic-open-patients-eye-1.png)
-*Figura 2 - InspeÃ§Ã£o ocular e abertura palpebral no atendimento inicial. CrÃ©dito: Baedr-9439. LicenÃ§a: CC0. Fonte: Wikimedia Commons.*
+![Figura 2 - Mochila padronizada de Atendimento PrÃ©-Hospitalar (APH) organizada por compartimentos.](../imagens/EMS-medic-backpack.png)
+*Figura 2 - Mochila padronizada de Atendimento PrÃ©-Hospitalar (APH) organizada por compartimentos. CrÃ©dito: Baedr-9439. LicenÃ§a: CC0. Fonte: Wikimedia Commons.*
+
+![Figura 3 - AvaliaÃ§Ã£o pupilar e inspeÃ§Ã£o ocular na abordagem primÃ¡ria.](../imagens/Medic-open-patients-eye-1.png)
+*Figura 3 - AvaliaÃ§Ã£o pupilar e inspeÃ§Ã£o ocular na abordagem primÃ¡ria. CrÃ©dito: Baedr-9439. LicenÃ§a: CC0. Fonte: Wikimedia Commons.*
+
+![Figura 4 - Tesoura ponta-romba de APH para exposiÃ§Ã£o rÃ¡pida e segura de lesÃµes graves.](../imagens/Trauma-shears.jpg)
+*Figura 4 - Tesoura ponta-romba de APH para exposiÃ§Ã£o rÃ¡pida e segura de lesÃµes graves. CrÃ©dito: Another-anon-artist-234. LicenÃ§a: CC0. Fonte: Wikimedia Commons.*
 
 ---
 

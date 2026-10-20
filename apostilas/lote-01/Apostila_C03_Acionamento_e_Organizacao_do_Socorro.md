@@ -176,8 +176,14 @@ Enquanto a ambulância desloca-se, o socorrista deve otimizar o ambiente:
 
 ### Figuras de Apoio
 
-![Figura 1 - MotolÃ¢ncias do SAMU 192 (Distrito Federal).](../imagens/Motolancias_SAMU_Distrito_Federal.jpg)
-*Figura 1 - MotolÃ¢ncias do SAMU 192 (Distrito Federal). CrÃ©dito: Antonio Cruz/AgÃªncia Brasil. LicenÃ§a: CC BY 3.0 BR (https://creativecommons.org/licenses/by/3.0/br/). Fonte: Wikimedia Commons.*
+![Figura 1 - Unidades de resposta rÃ¡pida (motolÃ¢ncias) do SAMU 192.](../imagens/Motolancias_SAMU_Distrito_Federal.jpg)
+*Figura 1 - Unidades de resposta rÃ¡pida (motolÃ¢ncias) do SAMU 192. CrÃ©dito: Antonio Cruz/AgÃªncia Brasil. LicenÃ§a: CC BY 3.0 BR (https://creativecommons.org/licenses/by/3.0/br/). Fonte: Wikimedia Commons.*
+
+![Figura 2 - Mochila padronizada de Atendimento PrÃ©-Hospitalar (APH) organizada por compartimentos.](../imagens/EMS-medic-backpack.png)
+*Figura 2 - Mochila padronizada de Atendimento PrÃ©-Hospitalar (APH) organizada por compartimentos. CrÃ©dito: Baedr-9439. LicenÃ§a: CC0. Fonte: Wikimedia Commons.*
+
+![Figura 3 - Manobra de Rautek para extraÃ§Ã£o rÃ¡pida de vÃ­tima inconsciente em risco iminente.](../imagens/Rautek-maneuver.png)
+*Figura 3 - Manobra de Rautek para extraÃ§Ã£o rÃ¡pida de vÃ­tima inconsciente em risco iminente. CrÃ©dito: Baedr-9439. LicenÃ§a: CC0. Fonte: Wikimedia Commons.*
 
 ---
 

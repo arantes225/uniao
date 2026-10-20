@@ -186,11 +186,29 @@ A movimentação de uma vítima de trauma só deve ser executada se houver perig
 
 ### Figuras de Apoio
 
-![Figura 1 - ImobilizaÃ§Ã£o de braÃ§o com tala moldÃ¡vel.](../imagens/Splinting-an-arm.png)
-*Figura 1 - ImobilizaÃ§Ã£o de braÃ§o com tala moldÃ¡vel. CrÃ©dito: Baedr-9439. LicenÃ§a: CC0. Fonte: Wikimedia Commons.*
+![Figura 1 - EstabilizaÃ§Ã£o manual alinhada (in-line) da cabeÃ§a e coluna cervical no trauma.](../imagens/In-line-traction.png)
+*Figura 1 - EstabilizaÃ§Ã£o manual alinhada (in-line) da cabeÃ§a e coluna cervical no trauma. CrÃ©dito: Baedr-9439. LicenÃ§a: CC0. Fonte: Wikimedia Commons.*
 
-![Figura 2 - ColocaÃ§Ã£o de colar cervical.](../imagens/Cervical-collar-application.png)
-*Figura 2 - ColocaÃ§Ã£o de colar cervical. CrÃ©dito: Baedr-9439. LicenÃ§a: CC0. Fonte: Wikimedia Commons.*
+![Figura 2 - AplicaÃ§Ã£o tÃ©cnica de colar cervical para restriÃ§Ã£o de movimento.](../imagens/Cervical-collar-application.png)
+*Figura 2 - AplicaÃ§Ã£o tÃ©cnica de colar cervical para restriÃ§Ã£o de movimento. CrÃ©dito: Baedr-9439. LicenÃ§a: CC0. Fonte: Wikimedia Commons.*
+
+![Figura 3 - Manobra de rolamento em bloco mantendo o alinhamento do eixo cranioespinal.](../imagens/Rolling-a-patient.jpg)
+*Figura 3 - Manobra de rolamento em bloco mantendo o alinhamento do eixo cranioespinal. CrÃ©dito: Another-anon-artist-234. LicenÃ§a: CC0. Fonte: Wikimedia Commons.*
+
+![Figura 4 - ImobilizaÃ§Ã£o de membro superior com tala moldÃ¡vel.](../imagens/Splinting-an-arm.png)
+*Figura 4 - ImobilizaÃ§Ã£o de membro superior com tala moldÃ¡vel. CrÃ©dito: Baedr-9439. LicenÃ§a: CC0. Fonte: Wikimedia Commons.*
+
+![Figura 5 - Enfaixamento compressivo funcional em entorse articular de tornozelo.](../imagens/Ankle-wrap.png)
+*Figura 5 - Enfaixamento compressivo funcional em entorse articular de tornozelo. CrÃ©dito: Baedr-9439. LicenÃ§a: CC0. Fonte: Wikimedia Commons.*
+
+![Figura 6 - Mecanismo de fratura craniana com afundamento em traumatismo cranioencefÃ¡lico (TCE).](../imagens/Depressed-skull-fracture.jpg)
+*Figura 6 - Mecanismo de fratura craniana com afundamento em traumatismo cranioencefÃ¡lico (TCE). CrÃ©dito: Another-anon-artist-234. LicenÃ§a: CC0. Fonte: Wikimedia Commons.*
+
+![Figura 7 - Equimose periorbitÃ¡ria bilateral (sinal do guaxinim) sugestiva de fratura de base de crÃ¢nio.](../imagens/Raccoon-eyes.jpg)
+*Figura 7 - Equimose periorbitÃ¡ria bilateral (sinal do guaxinim) sugestiva de fratura de base de crÃ¢nio. CrÃ©dito: Another-anon-artist-234. LicenÃ§a: CC0. Fonte: Wikimedia Commons.*
+
+![Figura 8 - Equimose retroauricular na regiÃ£o mastoidea (sinal de Battle) em trauma craniano grave.](../imagens/Battles-sign.jpg)
+*Figura 8 - Equimose retroauricular na regiÃ£o mastoidea (sinal de Battle) em trauma craniano grave. CrÃ©dito: Another-anon-artist-234. LicenÃ§a: CC0. Fonte: Wikimedia Commons.*
 
 ---
 

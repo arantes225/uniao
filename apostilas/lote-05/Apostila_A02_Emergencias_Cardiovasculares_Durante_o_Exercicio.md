@@ -236,8 +236,14 @@ A competência técnica sob estresse só se consolida mediante treinamentos real
 ![Figura 1 - Desfibrilador Externo AutomÃ¡tico (DEA).](../imagens/Modern_AED_Automated_external_defibrillator.png)
 *Figura 1 - Desfibrilador Externo AutomÃ¡tico (DEA). CrÃ©dito: VoLid27. LicenÃ§a: CC0. Fonte: Wikimedia Commons.*
 
-![Figura 2 - Infarto agudo do miocÃ¡rdio.](../imagens/Blausen_0463_HeartAttack.png)
-*Figura 2 - Infarto agudo do miocÃ¡rdio. CrÃ©dito: Blausen Medical Communications, Inc.. LicenÃ§a: CC BY 3.0 (https://creativecommons.org/licenses/by/3.0/). Fonte: Wikimedia Commons.*
+![Figura 2 - Posicionamento anterolateral padrÃ£o das pÃ¡s adesivas do DEA no tÃ³rax desnudo.](../imagens/Aed-electrode-placement.png)
+*Figura 2 - Posicionamento anterolateral padrÃ£o das pÃ¡s adesivas do DEA no tÃ³rax desnudo. CrÃ©dito: Baedr-9439. LicenÃ§a: CC0. Fonte: Wikimedia Commons.*
+
+![Figura 3 - Fisiopatologia do Infarto Agudo do MiocÃ¡rdio por oclusÃ£o coronariana.](../imagens/Blausen_0463_HeartAttack.png)
+*Figura 3 - Fisiopatologia do Infarto Agudo do MiocÃ¡rdio por oclusÃ£o coronariana. CrÃ©dito: Blausen Medical Communications, Inc.. LicenÃ§a: CC BY 3.0 (https://creativecommons.org/licenses/by/3.0/). Fonte: Wikimedia Commons.*
+
+![Figura 4 - Posicionamento correto das mÃ£os na metade inferior do esterno durante a RCP.](../imagens/Chest-compression-hand-placement.jpg)
+*Figura 4 - Posicionamento correto das mÃ£os na metade inferior do esterno durante a RCP. CrÃ©dito: Another-anon-artist-234. LicenÃ§a: CC0. Fonte: Wikimedia Commons.*
 
 ---
 

@@ -166,11 +166,14 @@ A atuação coordenada requer alinhamento contínuo:
 
 ### Figuras de Apoio
 
-![Figura 1 - Uso de autoinjetor de adrenalina.](../imagens/Epinephrine-injection.png)
-*Figura 1 - Uso de autoinjetor de adrenalina. CrÃ©dito: Baedr-9439. LicenÃ§a: CC0. Fonte: Wikimedia Commons.*
+![Figura 1 - AplicaÃ§Ã£o intramuscular de autoinjetor de adrenalina na face anterolateral da coxa.](../imagens/Epinephrine-injection.png)
+*Figura 1 - AplicaÃ§Ã£o intramuscular de autoinjetor de adrenalina na face anterolateral da coxa. CrÃ©dito: Baedr-9439. LicenÃ§a: CC0. Fonte: Wikimedia Commons.*
 
-![Figura 2 - Inalador dosimetrado para asma.](../imagens/AsthmaInhaler.jpg)
-*Figura 2 - Inalador dosimetrado para asma. CrÃ©dito: Wikimedia Commons (Mendel, assumido). LicenÃ§a: DomÃ­nio pÃºblico. Fonte: Wikimedia Commons.*
+![Figura 2 - Inalador pressurizado dosimetrado para crise de broncoespasmo.](../imagens/AsthmaInhaler.jpg)
+*Figura 2 - Inalador pressurizado dosimetrado para crise de broncoespasmo. CrÃ©dito: Wikimedia Commons (Mendel, assumido). LicenÃ§a: DomÃ­nio pÃºblico. Fonte: Wikimedia Commons.*
+
+![Figura 3 - Fisiopatologia da crise asmÃ¡tica: broncoespasmo, edema de mucosa e hipersecreÃ§Ã£o.](../imagens/Asthma-bronchial-tube-cross-section.png)
+*Figura 3 - Fisiopatologia da crise asmÃ¡tica: broncoespasmo, edema de mucosa e hipersecreÃ§Ã£o. CrÃ©dito: Baedr-9439. LicenÃ§a: CC0. Fonte: Wikimedia Commons.*
 
 ---
 

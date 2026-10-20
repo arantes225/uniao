@@ -227,11 +227,20 @@ A teoria sem treinamento sob estresse real é inútil em catástrofes:
 
 ### Figuras de Apoio
 
-![Figura 1 - Algoritmo visual de Triagem START para incidentes com mÃºltiplas vÃ­timas.](../imagens/START_Triage_algorithm.png)
-*Figura 1 - Algoritmo visual de Triagem START para incidentes com mÃºltiplas vÃ­timas. CrÃ©dito: HZS ÄŒR (Corpo de Bombeiros da RepÃºblica Tcheca). LicenÃ§a: DomÃ­nio pÃºblico. Fonte: Wikimedia Commons.*
+![Figura 1 - Fluxograma decisÃ³rio do protocolo START para incidentes com mÃºltiplas vÃ­timas.](../imagens/START_Triage_algorithm.png)
+*Figura 1 - Fluxograma decisÃ³rio do protocolo START para incidentes com mÃºltiplas vÃ­timas. CrÃ©dito: HZS ÄŒR (Corpo de Bombeiros da RepÃºblica Tcheca). LicenÃ§a: DomÃ­nio pÃºblico. Fonte: Wikimedia Commons.*
 
-![Figura 2 - TraÃ§Ã£o da mandÃ­bula (jaw thrust) para abertura de via aÃ©rea.](../imagens/Jaw_thrust.jpg)
-*Figura 2 - TraÃ§Ã£o da mandÃ­bula (jaw thrust) para abertura de via aÃ©rea. CrÃ©dito: Department of the Army (EUA). LicenÃ§a: DomÃ­nio pÃºblico. Fonte: Wikimedia Commons.*
+![Figura 2 - TraÃ§Ã£o da mandÃ­bula (jaw thrust) para abertura de via aÃ©rea no trauma.](../imagens/Jaw_thrust.jpg)
+*Figura 2 - TraÃ§Ã£o da mandÃ­bula (jaw thrust) para abertura de via aÃ©rea no trauma. CrÃ©dito: Department of the Army (EUA). LicenÃ§a: DomÃ­nio pÃºblico. Fonte: Wikimedia Commons.*
+
+![Figura 3 - Manobra de Rautek para extraÃ§Ã£o rÃ¡pida de vÃ­tima inconsciente em risco iminente.](../imagens/Rautek-maneuver.png)
+*Figura 3 - Manobra de Rautek para extraÃ§Ã£o rÃ¡pida de vÃ­tima inconsciente em risco iminente. CrÃ©dito: Baedr-9439. LicenÃ§a: CC0. Fonte: Wikimedia Commons.*
+
+![Figura 4 - Transporte de apoio por dois socorristas para remoÃ§Ã£o controlada da zona de risco.](../imagens/Two-person-carry.png)
+*Figura 4 - Transporte de apoio por dois socorristas para remoÃ§Ã£o controlada da zona de risco. CrÃ©dito: Baedr-9439. LicenÃ§a: CC0. Fonte: Wikimedia Commons.*
+
+![Figura 5 - AplicaÃ§Ã£o de torniquete tÃ¡tico em treinamento prÃ¡tico.](../imagens/Tourniquet_application.jpg)
+*Figura 5 - AplicaÃ§Ã£o de torniquete tÃ¡tico em treinamento prÃ¡tico. CrÃ©dito: U.S. Navy, MC2 Barry R. Hirayama. LicenÃ§a: DomÃ­nio pÃºblico. Fonte: Wikimedia Commons.*
 
 ---
 

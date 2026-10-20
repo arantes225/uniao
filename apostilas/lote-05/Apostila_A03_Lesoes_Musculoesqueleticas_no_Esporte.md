@@ -224,11 +224,20 @@ Pesquisas recentes em fisiologia tecidual comprovam que a inflamação inicial p
 
 ### Figuras de Apoio
 
-![Figura 1 - ImobilizaÃ§Ã£o de braÃ§o com tala moldÃ¡vel.](../imagens/Splinting-an-arm.png)
-*Figura 1 - ImobilizaÃ§Ã£o de braÃ§o com tala moldÃ¡vel. CrÃ©dito: Baedr-9439. LicenÃ§a: CC0. Fonte: Wikimedia Commons.*
+![Figura 1 - ImobilizaÃ§Ã£o de membro superior com tala moldÃ¡vel.](../imagens/Splinting-an-arm.png)
+*Figura 1 - ImobilizaÃ§Ã£o de membro superior com tala moldÃ¡vel. CrÃ©dito: Baedr-9439. LicenÃ§a: CC0. Fonte: Wikimedia Commons.*
 
-![Figura 2 - Enfaixamento funcional de contenÃ§Ã£o em entorse articular.](../imagens/Ankle-wrap.png)
-*Figura 2 - Enfaixamento funcional de contenÃ§Ã£o em entorse articular. CrÃ©dito: Baedr-9439. LicenÃ§a: CC0. Fonte: Wikimedia Commons.*
+![Figura 2 - Enfaixamento compressivo funcional em entorse articular de tornozelo.](../imagens/Ankle-wrap.png)
+*Figura 2 - Enfaixamento compressivo funcional em entorse articular de tornozelo. CrÃ©dito: Baedr-9439. LicenÃ§a: CC0. Fonte: Wikimedia Commons.*
+
+![Figura 3 - Bandagem de contenÃ§Ã£o e estabilizaÃ§Ã£o articular em trauma de joelho.](../imagens/Knee-wrap.png)
+*Figura 3 - Bandagem de contenÃ§Ã£o e estabilizaÃ§Ã£o articular em trauma de joelho. CrÃ©dito: Baedr-9439. LicenÃ§a: CC0. Fonte: Wikimedia Commons.*
+
+![Figura 4 - ImobilizaÃ§Ã£o funcional elÃ¡stica em entorse ou contusÃ£o de punho.](../imagens/Wrist-wrap.png)
+*Figura 4 - ImobilizaÃ§Ã£o funcional elÃ¡stica em entorse ou contusÃ£o de punho. CrÃ©dito: Baedr-9439. LicenÃ§a: CC0. Fonte: Wikimedia Commons.*
+
+![Figura 5 - ImobilizaÃ§Ã£o solidÃ¡ria (buddy taping) em trauma fechado de falanges.](../imagens/Buddy-taping-finger.png)
+*Figura 5 - ImobilizaÃ§Ã£o solidÃ¡ria (buddy taping) em trauma fechado de falanges. CrÃ©dito: Baedr-9439. LicenÃ§a: CC0. Fonte: Wikimedia Commons.*
 
 ---
 

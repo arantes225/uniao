@@ -189,8 +189,14 @@ A realização periódica de simulações com cenários realísticos é o coraç
 ![Figura 1 - Desfibrilador Externo AutomÃ¡tico (DEA).](../imagens/Modern_AED_Automated_external_defibrillator.png)
 *Figura 1 - Desfibrilador Externo AutomÃ¡tico (DEA). CrÃ©dito: VoLid27. LicenÃ§a: CC0. Fonte: Wikimedia Commons.*
 
-![Figura 2 - DEA de acesso pÃºblico em gabinete sinalizado.](../imagens/Public_access_AED_with_coded_lock.jpg)
-*Figura 2 - DEA de acesso pÃºblico em gabinete sinalizado. CrÃ©dito: Christian P. Nielsen. LicenÃ§a: CC0. Fonte: Wikimedia Commons.*
+![Figura 2 - Posicionamento anterolateral padrÃ£o das pÃ¡s adesivas do DEA no tÃ³rax desnudo.](../imagens/Aed-electrode-placement.png)
+*Figura 2 - Posicionamento anterolateral padrÃ£o das pÃ¡s adesivas do DEA no tÃ³rax desnudo. CrÃ©dito: Baedr-9439. LicenÃ§a: CC0. Fonte: Wikimedia Commons.*
+
+![Figura 3 - DEA de acesso pÃºblico em gabinete sinalizado.](../imagens/Public_access_AED_with_coded_lock.jpg)
+*Figura 3 - DEA de acesso pÃºblico em gabinete sinalizado. CrÃ©dito: Christian P. Nielsen. LicenÃ§a: CC0. Fonte: Wikimedia Commons.*
+
+![Figura 4 - TÃ©cnica de ventilaÃ§Ã£o com bolsa-vÃ¡lvula-mÃ¡scara executada por dois socorristas.](../imagens/Bvm-with-two-medics.png)
+*Figura 4 - TÃ©cnica de ventilaÃ§Ã£o com bolsa-vÃ¡lvula-mÃ¡scara executada por dois socorristas. CrÃ©dito: Baedr-9439. LicenÃ§a: CC0. Fonte: Wikimedia Commons.*
 
 ---
 

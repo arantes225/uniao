@@ -218,8 +218,14 @@ O profissional treinado e o cidadão socorrista devem conhecer com clareza a fro
 
 ### Figuras de Apoio
 
-![Figura 1 - Treinamento prÃ¡tico de controle de sangramentos ameaÃ§adores Ã  vida.](../imagens/STOP_THE_BLEED_Course_8209645_.jpg)
-*Figura 1 - Treinamento prÃ¡tico de controle de sangramentos ameaÃ§adores Ã  vida. CrÃ©dito: U.S. Air Force, Staff Sgt. Juan Paz. LicenÃ§a: DomÃ­nio pÃºblico. Fonte: Wikimedia Commons.*
+![Figura 1 - EstaÃ§Ã£o prÃ¡tica de controle de sangramentos ameaÃ§adores Ã  vida.](../imagens/STOP_THE_BLEED_Course_8209645_.jpg)
+*Figura 1 - EstaÃ§Ã£o prÃ¡tica de controle de sangramentos ameaÃ§adores Ã  vida. CrÃ©dito: U.S. Air Force, Staff Sgt. Juan Paz. LicenÃ§a: DomÃ­nio pÃºblico. Fonte: Wikimedia Commons.*
+
+![Figura 2 - Tesoura ponta-romba de APH para exposiÃ§Ã£o rÃ¡pida e segura de lesÃµes graves.](../imagens/Trauma-shears.jpg)
+*Figura 2 - Tesoura ponta-romba de APH para exposiÃ§Ã£o rÃ¡pida e segura de lesÃµes graves. CrÃ©dito: Another-anon-artist-234. LicenÃ§a: CC0. Fonte: Wikimedia Commons.*
+
+![Figura 3 - Pele mosqueada (livedo/vasoconstriÃ§Ã£o perifÃ©rica) como sinal clÃ­nico precoce de hipoperfusÃ£o e choque.](../imagens/Mottled-skin.jpg)
+*Figura 3 - Pele mosqueada (livedo/vasoconstriÃ§Ã£o perifÃ©rica) como sinal clÃ­nico precoce de hipoperfusÃ£o e choque. CrÃ©dito: Another-anon-artist-234. LicenÃ§a: CC0. Fonte: Wikimedia Commons.*
 
 ---
 

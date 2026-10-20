@@ -188,14 +188,23 @@ A gestão de sinistros químicos fundamenta-se na organização espacial rígida
 
 ### Figuras de Apoio
 
-![Figura 1 - Bolsa-vÃ¡lvula-mÃ¡scara (ambu).](../imagens/Bag-valve-mask.jpg)
-*Figura 1 - Bolsa-vÃ¡lvula-mÃ¡scara (ambu). CrÃ©dito: Another-anon-artist-234. LicenÃ§a: CC0. Fonte: Wikimedia Commons.*
+![Figura 1 - Sinal ISO 7010 E011: lava-olhos de emergÃªncia.](../imagens/ISO_7010_E011.png)
+*Figura 1 - Sinal ISO 7010 E011: lava-olhos de emergÃªncia. CrÃ©dito: MaxxL. LicenÃ§a: DomÃ­nio pÃºblico. Fonte: Wikimedia Commons.*
 
-![Figura 2 - Sinal ISO 7010 E011: lava-olhos de emergÃªncia.](../imagens/ISO_7010_E011.png)
-*Figura 2 - Sinal ISO 7010 E011: lava-olhos de emergÃªncia. CrÃ©dito: MaxxL. LicenÃ§a: DomÃ­nio pÃºblico. Fonte: Wikimedia Commons.*
+![Figura 2 - IrrigaÃ§Ã£o ocular imediata com frasco lava-olhos portÃ¡til em exposiÃ§Ã£o quÃ­mica.](../imagens/Eye-wash-with-pneumatic-bottle.png)
+*Figura 2 - IrrigaÃ§Ã£o ocular imediata com frasco lava-olhos portÃ¡til em exposiÃ§Ã£o quÃ­mica. CrÃ©dito: Baedr-9439. LicenÃ§a: CC0. Fonte: Wikimedia Commons.*
 
-![Figura 3 - Diamante de Hommel (NFPA 704).](../imagens/NFPA_704.png)
-*Figura 3 - Diamante de Hommel (NFPA 704). CrÃ©dito: Denelson83. LicenÃ§a: DomÃ­nio pÃºblico. Fonte: Wikimedia Commons.*
+![Figura 3 - TÃ©cnica bimanual de abertura palpebral para lavagem contÃ­nua da superfÃ­cie ocular.](../imagens/Open-eye-two-hands.png)
+*Figura 3 - TÃ©cnica bimanual de abertura palpebral para lavagem contÃ­nua da superfÃ­cie ocular. CrÃ©dito: Baedr-9439. LicenÃ§a: CC0. Fonte: Wikimedia Commons.*
+
+![Figura 4 - Diamante de Hommel (NFPA 704) para identificaÃ§Ã£o de risco quÃ­mico.](../imagens/NFPA_704.png)
+*Figura 4 - Diamante de Hommel (NFPA 704) para identificaÃ§Ã£o de risco quÃ­mico. CrÃ©dito: Denelson83. LicenÃ§a: DomÃ­nio pÃºblico. Fonte: Wikimedia Commons.*
+
+![Figura 5 - MÃ¡scara respiratÃ³ria facial inteira com filtro quÃ­mico para ambientes contaminados.](../imagens/Full-face-respirator.jpg)
+*Figura 5 - MÃ¡scara respiratÃ³ria facial inteira com filtro quÃ­mico para ambientes contaminados. CrÃ©dito: Another-anon-artist-234. LicenÃ§a: CC0. Fonte: Wikimedia Commons.*
+
+![Figura 6 - Dispositivo bolsa-vÃ¡lvula-mÃ¡scara (ambu) para ventilaÃ§Ã£o de resgate.](../imagens/Bag-valve-mask.jpg)
+*Figura 6 - Dispositivo bolsa-vÃ¡lvula-mÃ¡scara (ambu) para ventilaÃ§Ã£o de resgate. CrÃ©dito: Another-anon-artist-234. LicenÃ§a: CC0. Fonte: Wikimedia Commons.*
 
 ---
 
