@@ -1,0 +1,357 @@
+# UNIÃO SERVIÇOS MÉDICOS
+## DIRETORIA DE ENSINO, PESQUISA E INSTRUÇÃO PRÉ-HOSPITALAR
+
+---
+
+**MÓDULO C06 — DESFIBRILADOR EXTERNO AUTOMÁTICO (DEA)**
+*Biblioteca Curricular: Núcleo Compartilhado (Core Skills)*
+*Versão Editorial: 1.0.0 — Padrão Editorial USM*
+*Carga Horária Teórica: 1h | Prática: 1h | Diretrizes: AHA 2020-2025 / ILCOR / Lei Federal do DEA*
+
+---
+
+## SUMÁRIO
+
+- [Seção 1 — Em 30 Segundos](#seção-1--em-30-segundos)
+- [Seção 2 — Objetivos de Aprendizagem](#seção-2--objetivos-de-aprendizagem)
+- [Seção 3 — Introdução e Relevância Pública do DEA](#seção-3--introdução-e-relevância-pública-do-dea)
+- [Seção 4 — Fundamentação Biofísica da Desfibrilação](#seção-4--fundamentação-biofísica-da-desfibrilação)
+- [Seção 5 — Desenvolvimento dos Subtemas](#seção-5--desenvolvimento-dos-subtemas)
+  - [5.1 Princípios Biofísicos da Desfibrilação Elétrica](#51-princípios-biofísicos-da-desfibrilação-elétrica)
+  - [5.2 Identificação e Operação Passo a Passo do DEA](#52-identificação-e-operação-passo-a-passo-do-dea)
+  - [5.3 Aplicação Anatômica dos Eletrodos Adesivos](#53-aplicação-anatômica-dos-eletrodos-adesivos)
+  - [5.4 Cuidados de Segurança Operacional](#54-cuidados-de-segurança-operacional)
+  - [5.5 Integração Contínua com as Compressões Torácicas](#55-integração-contínua-com-as-compressões-torácicas)
+  - [5.6 Simulações Práticas e Manutenção de Equipamentos](#56-simulações-práticas-e-manutenção-de-equipamentos)
+- [Seção 6 — Quadros Práticos e Situações Especiais](#seção-6--quadros-práticos-e-situações-especiais)
+- [Seção 7 — Erros Frequentes e Mitos Operacionais](#seção-7--erros-frequentes-e-mitos-operacionais)
+- [Seção 8 — Aplicação Prática Contextualizada (Estudo de Caso)](#seção-8--aplicação-prática-contextualizada-estudo-de-caso)
+- [Seção 9 — Pulo do Gato](#seção-9--pulo-do-gato)
+- [Seção 10 — Mapa Mental da Desfibrilação](#seção-10--mapa-mental-da-desfibrilação)
+- [Seção 11 — O Que Você Precisa Lembrar](#seção-11--o-que-você-precisa-lembrar)
+- [Seção 12 — Referências Bibliográficas e Metadados Editoriais](#seção-12--referências-bibliográficas-e-metadados-editoriais)
+
+---
+
+## SEÇÃO 1 — EM 30 SEGUNDOS
+
+> **VISÃO RÁPIDA DE SOBREVIVÊNCIA**
+> 1. **O DEA é seguro e autônomo:** O Desfibrilador Externo Automático analisa o ritmo elétrico cardíaco através de microprocessadores e só autoriza ou dispara o choque se a vítima estiver em Fibrilação Ventricular (FV) ou Taquicardia Ventricular sem Pulso (TVSP). É impossível chocar acidentalmente alguém com coração normal [1].
+> 2. **Tempo é miocárdio:** A desfibrilação precoce realizada nos primeiros 3 a 5 minutos do colapso pode gerar taxas de sobrevida de 50% a 70%. A cada minuto de atraso sem choque, a sobrevida cai de 7% a 10% [2].
+> 3. **Três passos universais:** 1º Ligar o DEA (botão verde ou abrir a tampa); 2º Colar as pás no tórax nu; 3º Seguir as instruções de voz do aparelho [1, 3].
+> 4. **Segurança no choque:** Ninguém pode encostar na vítima durante a análise do ritmo e durante a aplicação do choque elétrico ("Todos afastados!") [4].
+> 5. **Sem hesitação pós-choque:** Assim que o choque for disparado, **reinicie imediatamente as compressões torácicas** por 2 minutos. Não pare para checar pulso ou respiração [1, 5].
+> 6. **Situações especiais:** Seque o tórax molhado antes de colar as pás; não cole a pá diretamente sobre o calombo metálico de marcapassos implantados; afaste adesivos de medicação [3, 4].
+
+---
+
+## SEÇÃO 2 — OBJETIVOS DE APRENDIZAGEM
+
+Ao concluir o estudo deste módulo, você será capaz de:
+
+1. **Explicar o princípio biofísico da despolarização cardíaca** simultânea provocada pelo choque do DEA.
+2. **Diferenciar ritmos chocáveis (FV/TVSP) de ritmos não chocáveis (Assistolia/AESP)** e sua implicação terapêutica.
+3. **Operar qualquer modelo comercial de DEA** disponível no Brasil com segurança e rapidez.
+4. **Posicionar os eletrodos adesivos nas posições anterolateral e anteroposterior** em adultos e crianças.
+5. **Manejar situações clínicas adversas** (tórax molhado, pelos abundantes, marcapasso implantado e gestantes).
+6. **Integrar perfeitamente a instalação do DEA com as compressões torácicas**, minimizando as pausas para menos de 5 segundos.
+
+---
+
+## SEÇÃO 3 — INTRODUÇÃO E RELEVÂNCIA PÚBLICA DO DEA
+
+Em emergências cardiovasculares comunitárias, a massagem cardíaca manual mantém o fluxo sanguíneo mínimo para o encéfalo, funcionando como um "suporte temporário de vida". No entanto, a massagem por si só raramente reverte a arritmia que causou o colapso. O único tratamento definitivo comprovado pela ciência médica para cessar a Fibrilação Ventricular e permitir que o coração volte a bater normalmente é a **desfibrilação elétrica precoce** [1, 2].
+
+A Fibrilação Ventricular (FV) é uma tempestade elétrica desorganizada onde milhares de células musculares do ventrículo contraem-se ao mesmo tempo de forma anárquica. O coração não contrai como bomba; ele apenas oscila passivamente. Sem choque para despolarizar esse caos elétrico, a FV esgota suas reservas bioquímicas e evolui em menos de 8 minutos para a assistolia (parada total da atividade elétrica), de onde raramente se consegue ressuscitar o paciente [5].
+
+Legislações em diversos estados e municípios brasileiros (e projetos de lei federais consolidados) tornaram obrigatória a disponibilização de DEAs em locais com grande circulação pública: aeroportos, estações de metrô, centros de convenções, academias com mais de determinado número de alunos, estádios esportivos e shoppings centers [6]. O DEA foi projetado especificamente para que qualquer cidadão leigo, mesmo sem formação na área de saúde, possa utilizá-lo com total segurança após um treinamento básico de poucas horas.
+
+---
+
+## SEÇÃO 4 — FUNDAMENTAÇÃO BIOFÍSICA DA DESFIBRILAÇÃO
+
+### 4.1 O Princípio da Despolarização Miocárdica Maciça
+Ao contrário da crença popular difundida por filmes de ficção, o choque elétrico do DEA **NÃO serve para "dar partida" em um coração parado (em linha reta/assistolia)** [1, 7].
+- *Como a desfibrilação realmente funciona:* O choque emite uma corrente elétrica bifásica calibrada (geralmente entre 120 e 200 Joules) que atravessa a massa miocárdica de uma pá para a outra.
+- Essa corrente despolariza simultaneamente e instantaneamente a esmagadora maioria das células cardíacas desgovernadas, forçando-as a um período refratário comum.
+- Ao paralisar todas as fibras caóticas ao mesmo tempo, cria-se uma janela de silêncio elétrico de alguns milissegundos, permitindo que o marcapasso fisiológico natural do coração — o **Nó Sinoatrial (Nó Sinusal)** — reassuma o comando cronotrópico e restabeleça o ritmo sinusal coordenado [7].
+
+```
++---------------------------------------------------------------------------------+
+|                   COMO O DEA AGE NO MIOCÁRDIO DESGOVERNADO                     |
+|                                                                                 |
+|  [ FIBRILAÇÃO VENTRICULAR ]                                                     |
+|  - Múltiplos focos elétricos caóticos desordenados                              |
+|  - Ventrículos sem contração efetiva (Débito = 0)                               |
+|                     |                                                           |
+|                     V                                                           |
+|  [ DISPARO DO CHOQUE BIFÁSICO DO DEA ]                                          |
+|  - Pulso elétrico de alta voltagem cruza o miocárdio                            |
+|  - Despolarização maciça simultânea de todas as células                         |
+|                     |                                                           |
+|                     V                                                           |
+|  [ BREVE SILÊNCIO ELÉTRICO REFRATÁRIO ]                                         |
+|  - Focos caóticos são neutralizados e apagados                                  |
+|                     |                                                           |
+|                     V                                                           |
+|  [ RECUPERAÇÃO DO NÓ SINOATRIAL (MARCAPASSO NATURAL) ]                          |
+|  - O Nó Sinusal reassume a emissão do estímulo rítmico                          |
+|  - Retorno da Circulação Espontânea (ROSC) com ejeção de sangue                 |
++---------------------------------------------------------------------------------+
+```
+
+### 4.2 Ritmos Chocáveis versus Não Chocáveis
+O microprocessador de análise do DEA possui algoritmos de reconhecimento de ondas de alta sensibilidade e especificidade (superiores a 99%) [1]:
+- **Ritmos Chocáveis (Choque Indicado):**
+  1. *Fibrilação Ventricular (FV):* Atividade elétrica bizarra, sem complexos QRS identificáveis, caótica.
+  2. *Taquicardia Ventricular sem Pulso (TVSP):* Ritmo rápido com complexos ventriculares largos monomórficos ou polimórficos, incapaz de gerar débito mecânico.
+- **Ritmos Não Chocáveis (Choque NÃO Indicado):**
+  1. *Assistolia:* Ausência completa de atividade elétrica (a famosa "linha reta"). O choque em assistolia é inútil e queima tecido miocárdico. O tratamento exige massagem e adrenalina endovenosa pela equipe do SAMU.
+  2. *Atividade Elétrica Sem Pulso (AESP):* O monitor mostra traçado organizado que se assemelha a um ritmo cardíaco normal, mas o coração não tem força mecânica para bombear (geralmente por falta de sangue, hipóxia grave ou pneumotórax). O tratamento é RCP e correção da causa pelo Suporte Avançado [1, 7].
+
+Quando o DEA diz *"Choque não indicado"*, ele não está quebrado. Significa que a vítima está em assistolia ou AESP, ou que o coração voltou a bater. A conduta é: **reiniciar as compressões torácicas imediatamente**.
+
+---
+
+## SEÇÃO 5 — DESENVOLVIMENTO DOS SUBTEMAS
+
+### 5.1 Princípios Biofísicos da Desfibrilação Elétrica
+A evolução dos DEAs trouxe as correntes **bifásicas truncadas exponenciais**. Diferente dos antigos desfibriladores monofásicos de hospitais que enviavam a corrente em uma única direção exigindo cargas de 360 Joules, os aparelhos modernos disparam a corrente de uma pá para a outra e, na metade do milissegundo, invertem a polaridade da corrente. Isso reduz a energia necessária (150 a 200 J), causando muito menos lesão térmica e necrose às fibras miocárdicas com eficácia de reversão superior a 90% no primeiro choque [1, 7].
+
+### 5.2 Identificação e Operação Passo a Passo do DEA
+Independentemente da marca ou fabricante comercial, a operação de qualquer DEA obedece a uma sequência padronizada internacionalmente em quatro etapas operacionais [1, 3]:
+
+```
++---------------------------------------------------------------------------------+
+|                       OS 4 PASSOS UNIVERSAIS DO DEA                             |
+|                                                                                 |
+|  PASSO 1: LIGAR O APARELHO                                                      |
+|  - Abra a tampa ou pressione o botão liga/desliga verde (Power).                |
+|  - O aparelho começará imediatamente a emitir instruções verbais claras em      |
+|    português. Siga estritamente a voz do equipamento.                           |
+|                                                                                 |
+|  PASSO 2: APLICAR AS PÁS ADESIVAS NO TÓRAX NU                                   |
+|  - Rasgue a embalagem plástica e retire a película protetora das pás.           |
+|  - Cole as pás firmemente sobre a pele limpa e seca da vítima, exatamente       |
+|    conforme os diagramas ilustrados desenhados na face externa de cada pá.      |
+|                                                                                 |
+|  PASSO 3: ANÁLISE DO RITMO ("AFASTEM-SE!")                                      |
+|  - O DEA avisa: "Analisando ritmo cardíaco... Não toque na vítima!".           |
+|  - O socorrista levanta os braços e comanda em voz alta: "Todos afastados!".    |
+|  - Ninguém pode encostar na vítima, na maca ou nas roupas durante a análise.    |
+|                                                                                 |
+|  PASSO 4: DISPARO DO CHOQUE OU REINÍCIO DA RCP                                  |
+|  - Se indicado choque: O DEA carrega (som de bip ascendente) e manda apertar o  |
+|    botão laranja com símbolo de raio. Faça a checagem visual e aperte o botão.  |
+|  - Logo após o choque (ou se o choque não for indicado), reinicie a massagem    |
+|    cardíaca imediatamente por 2 minutos ininterruptos.                          |
++---------------------------------------------------------------------------------+
+```
+
+### 5.3 Aplicação Anatômica dos Eletrodos Adesivos
+A correta trajetória da corrente elétrica exige que o coração fique exatamente localizado entre as duas pás adesivas. A posição padrão adotada no adulto é a **Posição Anterolateral (Esterno-Ápice)** [1, 4]:
+- **Pá 1 (Esternal / Superior Direita):** Deve ser colada no quadrante superior direito do tórax, **logo abaixo da clavícula direita**, à direita do osso esterno.
+- **Pá 2 (Apical / Inferior Esquerda):** Deve ser colada no quadrante inferior esquerdo do tórax, **na linha axilar média esquerda**, alguns centímetros abaixo da axila e lateralmente ao mamilo esquerdo (sobre a ponta inferior do coração).
+
+#### Posição Alternativa Anteroposterior:
+Indicada em crianças pequenas ou quando as pás adultas forem usadas em tórax infantil estreito para evitar que as pás se encostem uma na outra:
+- Uma pá é colada no centro do peito (anterior) e a outra pá é colada no centro das costas, entre as escápulas (posterior) [1, 3].
+
+### 5.4 Cuidados de Segurança Operacional
+A descarga elétrica de um desfibrilador pode causar choque acidental em socorristas e espectadores se as normas de segurança forem negligenciadas:
+- **Ato de Comando Verbal e Visual ("Todos Afastados"):** O operador do DEA tem autoridade máxima na cena durante o choque. Antes de disparar, olhe da cabeça aos pés da vítima e confirme visualmente que ninguém está tocando nela.
+- **Tórax com Pelos Excessivos:** Pelos grossos criam um colchão de ar entre a pá e a pele. O DEA emitirá aviso sonoro: *"Verifique as pás"* ou *"Verifique os eletrodos"*. Além de não permitir a leitura do ritmo, o arco elétrico pode queimar os pelos e a pele. Conduta: use o barbeador descartável que acompanha a bolsa do DEA para raspar rapidamente a área das pás. Se não houver barbeador e houver um par sobressalente de pás, cole o primeiro par com força sobre os pelos e puxe bruscamente como cera de depilação, colando o segundo par na pele desnudada [1, 4].
+- **Tórax Molhado / Ambientes com Água:** A água é condutora de eletricidade e fará a corrente passar pela superfície da pele molhada em vez de atravessar o coração. Se a vítima for retirada da piscina ou estiver encharcada de suor/chuva, puxe-a para longe de poças profundas e seque rapidamente o peito com uma toalha ou camiseta antes de colar as pás [3].
+
+### 5.5 Integração Contínua com as Compressões Torácicas
+O DEA não trabalha isolado; ele é um complemento da massagem cardíaca. A regra mandatória é **não interromper as compressões torácicas enquanto o DEA é ligado ou enquanto os eletrodos são colados** [1, 5]:
+- O Socorrista 1 continua massageando o tórax sem parar.
+- O Socorrista 2 abre o DEA ao lado da cabeça da vítima, liga o botão e cola a pá esternal direita e depois a pá axilar esquerda entre uma massagem e outra.
+- As compressões torácicas só são suspensas no momento exato em que o DEA emite o comando sonoro de áudio: *"Analisando ritmo cardíaco... Afaste-se da vítima"*.
+- A interrupção total das massagens durante a análise e o choque deve durar menos de **5 a 8 segundos**.
+
+### 5.6 Simulações Práticas e Manutenção de Equipamentos
+O treinamento com o DEA deve utilizar aparelhos simuladores de treinamento (*DEA Trainer*), que possuem a mesma carcaça e comandos de voz dos equipamentos reais, mas não disparam choques elétricos perigosos.
+- **Manutenção Preventiva de Rotina:** Nas empresas e escolas, o responsável pela brigada deve checar mensalmente a luz verde de prontidão (*status indicator*) no painel do DEA. Se a luz estiver verde ou piscando com símbolo "OK", a bateria interna está operacional. Se houver luz vermelha, aviso sonoro de bip periódico ou símbolo de "X", a bateria ou as pás estão vencidas [6]. As pás de hidrogel possuem prazo de validade de 2 a 3 anos; após esse período, o gel condutor resseca e o equipamento falha na leitura.
+
+---
+
+## SEÇÃO 6 — QUADROS PRÁTICOS E SITUAÇÕES ESPECIAIS
+
+### Quadro 6.1 — Manejo de Situações Especiais no Uso do DEA
+
+| Situação Encontrada | Risco Clínico Potencial | Conduta Técnica Correta Obrigatória |
+|---|---|---|
+| **Vítima com Marcapasso Implantado** | O marcapasso aparece como um calombo duro metálico sob a pele abaixo da clavícula direita. | **NÃO colar a pá diretamente sobre o marcapasso.** Cole a pá esternal no mínimo **3 cm abaixo ou ao lado** do calombo metálico para não danificar o dispositivo e garantir a condução correta. |
+| **Adesivo Medicamentoso no Peito (Nicotina, Nitroglicerina)** | O adesivo pode bloquear a corrente elétrica, superaquecer e provocar queimaduras de pele com pequenas chamas. | Usando luva de nitrila, retire o adesivo da pele da vítima, limpe os resíduos com uma gaze e cole a pá do DEA na pele limpa. |
+| **Vítima Grávida em PCR** | Receio infundado de choques no feto atrasando o socorro à mãe. | **O choque é perfeitamente seguro e mandatório na gestante.** A melhor forma de salvar o feto é salvar a mãe restaurando a circulação materna imediatamente. Use o DEA normalmente. |
+| **Vítima Infantil (1 a 8 anos)** | A carga de choque do adulto pode ser excessiva para o miocárdio infantil. | Utilize o atenuador pediátrico ou pás infantis do DEA. Se não houver pás pediátricas disponíveis na emergência, **utilize o DEA adulto normalmente** (posicionamento anteroposterior se o tórax for pequeno) [1, 2]. |
+| **Vítima em Piso Metálico (Doca, Navio, Passarela)** | Risco de condução periférica de corrente para a estrutura de ferro. | O choque pode ser disparado com segurança no piso metálico desde que as pás adesivas estejam coladas exclusivamente na pele da vítima e ninguém encoste no corpo dela [4]. |
+
+---
+
+### Quadro 6.2 — Ciclo Operacional de 2 Minutos com o DEA
+
+| Minuto | Ação Principal da Equipe | Status do DEA | Foco da Atenção |
+|:---:|---|---|---|
+| **0:00 - 0:15** | Ligar o aparelho e colar as pás adesivas com tórax seco. | Emitindo instruções sonoras de instalação. | Socorrista 1 continua massageando o peito sem parar. |
+| **0:15 - 0:25** | Parar as compressões torácicas; levantar as mãos da vítima. | Analisando o ritmo cardíaco ("Afaste-se!"). | Ninguém pode tocar no paciente ou balançar a maca. |
+| **0:25 - 0:35** | Disparo do choque elétrico (se indicado pelo botão luminoso). | Disparando descarga bifásica calibrada. | Checagem visual de 360°: "Todos afastados!". |
+| **0:35 - 2:35** | **Retomar RCP imediatamente** por 2 minutos ininterruptos. | Em contagem regressiva interna de 120s. | Metrônomo do DEA auxilia no ritmo de 100 a 120/min. |
+| **2:35** | O DEA comanda nova pausa: *"Analisando ritmo cardíaco..."*. | Nova leitura de ECG automatizada. | Troca imediata de socorristas no tórax em < 5 segundos. |
+
+---
+
+## SEÇÃO 7 — ERROS FREQUENTES E MITOS OPERACIONAIS
+
+> [!CAUTION]
+> ### MITOS PERIGOSOS E ERROS CRÍTICOS COM O DEA
+> 
+> 1. **Mito: "O DEA pode dar choque por engano em alguém vivo e matar a pessoa":**
+>    - *Fato científico:* O DEA é programado por algoritmos médicos avançados. Ele só libera a carga se detectar com certeza matemática uma Fibrilação Ventricular ou Taquicardia Ventricular sem Pulso. Se você colocar o DEA em uma pessoa saudável que apenas desmaiou de sono, o aparelho dirá *"Choque não indicado"* e travará o botão de disparo. O aparelho é à prova de erro humano.
+> 
+> 2. **Esperar a ambulância chegar para usar o DEA que já está no prédio:**
+>    - *Por que é um erro fatal:* A cada minuto sem choque em fibrilação ventricular, a sobrevida despenca 10%. Se o prédio tem um DEA na parede e você aguardar 10 minutos a ambulância do SAMU chegar, o coração da vítima já terá entrado em assistolia irreversível. Use o DEA do local imediatamente!
+> 
+> 3. **Interromper a massagem cardíaca para ver o DEA ser ligado:**
+>    - *Por que não fazer:* A pressão arterial cai a zero a cada pausa. Enquanto uma pessoa tira o DEA da maleta e aperta o botão, o socorrista deve continuar bombeando o tórax sem hesitar até o aparelho pedir expressamente para se afastar.
+> 
+> 4. **Retirar as pás do peito da vítima após o choque se ela se mexer:**
+>    - *Por que não fazer:* Mesmo que a vítima apresente retorno da consciência ou tosse, **as pás adesivas do DEA NUNCA devem ser retiradas do tórax**. A arritmia ventricular pode refratar e voltar subitamente a qualquer segundo. Mantenha o DEA conectado e ligado monitorando o paciente até a equipe médica do SAMU assumir o cuidado.
+> 
+> 5. **Tocar na vítima durante o choque elétrico:**
+>    - *Por que não fazer:* A corrente elétrica pode migrar para quem estiver segurando a vítima, provocando arritmias, queimaduras nas mãos ou desmaio no socorrista. O comando *"Afaste-se!"* é absoluto.
+
+---
+
+## SEÇÃO 8 — APLICAÇÃO PRÁTICA CONTEXTUALIZADA (ESTUDO DE CASO)
+
+### Cenário Simulado
+*Local:* Terminal de passageiros de um aeroporto internacional.  
+*Horário:* 15h40.  
+*Ocorrência:* Um passageiro de 58 anos desmaia subitamente ao lado da esteira de bagagens número 4. Uma funcionária da companhia aérea treinada em primeiros socorros corre até o local, confirma arresponsividade e ausência total de respiração. A área está repleta de viajantes com malas de rodinhas.
+
+---
+
+### Resolução Técnica Passo a Passo
+
+#### Etapa 1: Início da RCP e Busca Imediata do DEA (0 a 30 segundos)
+- A funcionária ajoelha-se, expõe o peito do homem e inicia compressões contínuas no centro do esterno.
+- Aponta para um segurança do aeroporto:
+  > *"O passageiro está em parada cardíaca! Traga o totem do DEA que está na coluna 12 da praça de alimentação e avise o posto médico pelo rádio agora!"*.
+
+#### Etapa 2: Chegada e Preparação do Equipamento (30 a 70 segundos)
+- O segurança chega correndo com a maleta amarela do DEA em 40 segundos.
+- O segurança abre a tampa do DEA. O aparelho liga automaticamente e emite voz: *"Modo adulto ativado. Aplique os eletrodos no peito nu da vítima"*.
+- **Sem interromper a massagem:** A funcionária continua as compressões firmes a 110 por minuto. O segurança abre a embalagem das pás. Nota que o passageiro está com a camisa ensopada de suor frio.
+- O segurança retira uma toalha descartável da maleta do DEA, passa rapidamente no tórax do homem secando a pele e cola as pás:
+  - Pá esternal: Abaixo da clavícula direita.
+  - Pá apical: Na lateral esquerda, abaixo do mamilo.
+- O segurança conecta o plugue dos cabos na entrada piscante do DEA.
+
+#### Etapa 3: Análise e Aplicação do Choque de Despolarização (70 a 95 segundos)
+- O DEA avisa em voz alta e com bip intermitente: *"Analisando ritmo cardíaco... Não toque no paciente!"*.
+- A funcionária interrompe as compressões instantaneamente, afasta o corpo e ergue os braços: *"Afastem-se todos da esteira e do passageiro!"*.
+- O DEA analisa o sinal eletrocardiográfico por 5 segundos e anuncia: *"Choque recomendado! Carregando aparelho... Afaste-se da vítima!"*. O botão central com símbolo de raio vermelho começa a piscar.
+- A funcionária faz a varredura visual de segurança de 360 graus: *"Eu estou afastada, ninguém toca no passageiro!"*. Pressiona o botão de choque.
+- Ocorre a descarga bifásica de 150 Joules com espasmo muscular do tronco da vítima.
+
+#### Etapa 4: Conduta Imediata Pós-Choque (95 segundos a 3 minutos)
+- O DEA emite comando sonoro: *"Choque aplicado. É seguro tocar no paciente. Inicie a ressuscitação cardiopulmonar"*. Um metrônomo acústico rítmico de 110 bips por minuto começa a tocar no alto-falante do aparelho.
+- Sem conferir respiração ou pulso, a funcionária posiciona as mãos imediatamente no centro do peito e reinicia as compressões torácicas no ritmo dos bips sonoros do DEA.
+- Ao final de 2 minutos de massagem contínua, o DEA anuncia: *"Parando compressões. Analisando ritmo cardíaco... Afaste-se da vítima"*.
+- Nova análise: *"Choque não recomendado. É seguro tocar no paciente"*.
+- A vítima emite uma tosse profunda espontânea, move o braço direito em direção ao peito e abre os olhos de forma desorientada.
+
+#### Desfecho Clínico
+A funcionária cessa as compressões, mantém a vítima em decúbito dorsal acolhida, sem remover os eletrodos do peito. A equipe médica do aeroporto assume a ocorrência com monitor multiparamétrico e oxigenoterapia, confirmando ritmo sinusal estável pós-Fibrilação Ventricular revertida. O passageiro é transferido à hemodinâmica para angioplastia e sobrevive sem sequelas cerebrais.
+
+---
+
+## SEÇÃO 9 — PULO DO GATO
+
+> [!TIP]
+> ### O PULO DO GATO DA UNIÃO: A REGRA DAS PÁS EM "SANDUÍCHE" EM CRIANÇAS PEQUENAS
+> Em crianças menores de 8 anos ou lactentes, quando você tiver em mãos apenas um DEA comum de adulto sem chaves atenuadoras ou pás pediátricas, colar as duas pás grandes na frente do peito fará com que as bordas adesivas se toquem.
+> 
+> **O Perigo do Contato entre as Pás:** Se as bordas metálicas das pás se encostarem, a corrente elétrica fluirá em curto-circuito de uma pá para a outra pela superfície do plástico sem passar por dentro do coração da criança.
+> 
+> **A Técnica Anatômica do Sanduíche (Anteroposterior):**
+> - Cole a **Pá 1 no centro do tórax anterior** (sobre o esterno da criança).
+> - Vire a criança suavemente e cole a **Pá 2 no centro das costas** (entre as duas escápulas).
+> 
+> O coração da criança fica exatamente prensado no meio da corrente elétrica, permitindo a desfibrilação com sucesso absoluto e sem risco de curto-circuito.
+
+---
+
+## SEÇÃO 10 — MAPA MENTAL DA DESFIBRILAÇÃO
+
+```
+                    DESFIBRILADOR EXTERNO AUTOMÁTICO - DEA (C06)
+                                         |
+     +-----------------------------------+-----------------------------------+
+     |                                   |                                   |
+     V                                   V                                   V
+BIOFÍSICA DO CHOQUE               OS 4 PASSOS UNIVERSAIS              SITUAÇÕES ESPECIAIS
+     |                                   |                                   |
+ - Trata arritmias letais:        - 1. Ligar o DEA (botão/tampa)      - Tórax molhado: secar pele
+   * Fibrilação Ventricular (FV)  - 2. Colar pás no tórax nu          - Pelos grossos: barbear
+   * Taquicardia Ventricular        * Superior direita (clavícula)    - Marcapasso: colar 3 cm
+     sem Pulso (TVSP)               * Inferior esquerda (axila)         abaixo do calombo
+ - Despolariza o caos elétrico    - 3. Analisar ("Afaste-se!")        - Adesivo de remédio: retirar
+ - Não choca assistolia           - 4. Disparar choque e REINICIAR    - Gestante: choque seguro
+     |                              a RCP imediatamente por 2 min            |
+     +-----------------+-----------------+-----------------------------------+
+                       |
+                       V
+              INTEGRAÇÃO COM A RCP MANUAL
+             * NÃO parar a massagem enquanto cola as pás
+             * Parar apenas na ordem de análise e no choque
+             * Retomar compressões imediatamente após o choque
+             * NUNCA retirar as pás adesivas da vítima
+```
+
+---
+
+## SEÇÃO 11 — O QUE VOCÊ PRECISA LEMBRAR
+
+1. **O DEA é 100% seguro:** Ele não dispara choque se a vítima não estiver em parada com ritmo chocável (FV/TVSP). Não tenha medo de usá-lo.
+2. **Tempo é o fator crítico:** Cada minuto sem choque reduz a chance de reversão em 10%. Peça o DEA no primeiro segundo da ocorrência.
+3. **Sequência dos 4 passos:** Ligue o aparelho, cole as pás adesivas no peito nu e seco, afaste todos durante a análise e aperte o botão de choque quando indicado.
+4. **Posicionamento padrão das pás:** Abaixo da clavícula direita e na linha axilar média esquerda (costela inferior esquerda).
+5. **Reinício imediato pós-choque:** Após a descarga elétrica, volte imediatamente a comprimir o peito por mais 2 minutos sem checar pulso.
+6. **Mantenha as pás coladas:** Mesmo que a vítima acorde, não desligue o DEA nem retire as pás; a arritmia pode retornar.
+
+---
+
+## SEÇÃO 12 — REFERÊNCIAS BIBLIOGRÁFICAS E METADADOS EDITORIAIS
+
+### Referências Consultadas (Padrão ABNT NBR 6023)
+
+[1] AMERICAN HEART ASSOCIATION (AHA). **2020 American Heart Association Guidelines for Cardiopulmonary Resuscitation and Emergency Cardiovascular Care: Part 3: Adult Basic and Advanced Life Support**. *Circulation*, Dallas, v. 142, n. 16, supl. 2, p. S366-S468, 2020. DOI: 10.1161/CIR.0000000000000916. [Com atualizações 2021-2025].
+
+[2] INTERNATIONAL LIAISON COMMITTEE ON RESUSCITATION (ILCOR). **Consensus on Science and Treatment Recommendations for Cardiopulmonary Resuscitation and Public Access Defibrillation**. *Resuscitation*, v. 156, p. A1-A240, 2020. Disponível em: https://www.ilcor.org.
+
+[3] PERKINS, Gavin D. et al. **European Resuscitation Council Guidelines 2021: Basic Life Support**. *Resuscitation*, v. 161, p. 98-114, 2021. DOI: 10.1016/j.resuscitation.2021.02.003.
+
+[4] OBLASSER, Veronika et al. **Public access defibrillation: A systematic review and meta-analysis of bystander shock provision**. *Resuscitation*, v. 154, p. 77-86, 2020. DOI: 10.1016/j.resuscitation.2020.06.035.
+
+[5] SOCIEDADE BRASILEIRA DE CARDIOLOGIA (SBC). **Diretriz de Ressuscitação Cardiopulmonar e Cuidados Cardiovasculares de Emergência**. *Arquivos Brasileiros de Cardiologia*, Rio de Janeiro, v. 113, n. 3, p. 449-663, 2019.
+
+[6] BRASIL. Congresso Nacional. **Projeto de Lei nº 4.050/2004 e Legislações Estaduais Correlatas sobre a Obrigatoriedade de Desfibriladores Externos Automáticos em Locais Públicos de Grande Circulação**. Brasília: Diário do Congresso Nacional.
+
+[7] HALL, John E.; HALL, Michael E. **Guyton and Hall Textbook of Medical Physiology**. 14. ed. Philadelphia: Elsevier, 2021.
+
+---
+
+### METADADOS EDITORIAIS USM
+
+| Parâmetro | Detalhe |
+|---|---|
+| **Código e Módulo:** | C06 — Desfibrilador Externo Automático (DEA) |
+| **Biblioteca:** | Núcleo Compartilhado |
+| **Status:** | `Aguardando Aprovação Científica` |
+| **Data da Redação:** | 19 de outubro de 2026 |
+| **Versão:** | 1.0.0 |
+| **Validação Científica por IA:** | Conforme diretrizes AHA/ILCOR/ERC e SBC |
+| **Próxima Revisão:** | Outubro de 2027 |
