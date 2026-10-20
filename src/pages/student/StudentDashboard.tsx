@@ -1,10 +1,13 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { 
   PlayCircle, CheckCircle, Clock, 
-  ArrowRight, ShieldCheck, Compass
+  ArrowRight, ShieldCheck, Compass, BookOpen,
+  ChevronDown, ChevronUp, Layers
 } from 'lucide-react';
 import { useTheme } from '../../context/ThemeContext';
+import { CurriculumService } from '../../services/CurriculumService';
+import { LearningModule } from '../../data/curriculumData';
 
 export const StudentDashboard: React.FC = () => {
   const { theme } = useTheme();
@@ -45,6 +48,24 @@ export const StudentDashboard: React.FC = () => {
 
   const [activeCohortId, setActiveCohortId] = useState('aph-2026');
   const activeCohort = studentCohorts.find(c => c.id === activeCohortId) || studentCohorts[0];
+
+  // Estado dos 40 módulos carregados para visualização do conteúdo programático
+  const [allModules, setAllModules] = useState<LearningModule[]>([]);
+  const [syllabusOpen, setSyllabusOpen] = useState(false);
+  const [expandedModuleId, setExpandedModuleId] = useState<string | null>(null);
+
+  useEffect(() => {
+    let isMounted = true;
+    CurriculumService.getModules().then(mods => {
+      if (isMounted) setAllModules(mods);
+    });
+    return () => { isMounted = false; };
+  }, []);
+
+  // Módulos pertencentes ao curso da turma ativa
+  const currentCohortModules = activeCohort.id === 'stb-tatico'
+    ? allModules.filter(m => m.libraryId === 'bleeding_control')
+    : allModules.filter(m => m.libraryId === 'core');
 
   return (
     <div className="p-6 sm:p-10 space-y-8 max-w-7xl mx-auto w-full">
@@ -181,9 +202,138 @@ export const StudentDashboard: React.FC = () => {
               >
                 <span>Acessar Prova</span>
               </Link>
+
+              <button
+                type="button"
+                onClick={() => setSyllabusOpen(!syllabusOpen)}
+                className="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl font-bold text-white bg-slate-800/80 hover:bg-slate-700/80 border border-uniao-500/40 text-sm transition-all shadow"
+              >
+                <BookOpen className="w-4 h-4 text-uniao-400" />
+                <span>Conteúdo Programático</span>
+                {syllabusOpen ? <ChevronUp className="w-4 h-4 text-slate-300" /> : <ChevronDown className="w-4 h-4 text-slate-300" />}
+              </button>
             </div>
           </div>
         </div>
+
+        {/* REQUISITO: PAINEL EXPANSÍVEL DO CONTEÚDO PROGRAMÁTICO COMPLETO */}
+        {syllabusOpen && (
+          <div className={`rounded-3xl border p-6 sm:p-8 space-y-6 shadow-xl transition-all animate-fadeIn ${
+            theme === 'dark' 
+              ? 'bg-slate-900 border-uniao-500/30' 
+              : 'bg-white border-teal-200 shadow-teal-50'
+          }`}>
+            <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b pb-4 border-slate-200 dark:border-slate-800">
+              <div className="space-y-1">
+                <div className="flex items-center gap-2">
+                  <Layers className="w-5 h-5 text-uniao-500" />
+                  <h3 className={`text-lg sm:text-xl font-black ${theme === 'dark' ? 'text-white' : 'text-slate-900'}`}>
+                    Conteúdo Programático Oficial da Turma
+                  </h3>
+                </div>
+                <p className={`text-xs ${theme === 'dark' ? 'text-slate-400' : 'text-slate-500'}`}>
+                  {activeCohort.name} • {currentCohortModules.length} Módulos completos com ementa e subtemas
+                </p>
+              </div>
+
+              <div className="flex items-center gap-2 text-xs">
+                <span className={`px-3 py-1 rounded-full font-bold border ${
+                  theme === 'dark' ? 'bg-uniao-500/10 border-uniao-500/30 text-uniao-300' : 'bg-teal-50 border-teal-200 text-teal-800'
+                }`}>
+                  {currentCohortModules.reduce((acc, m) => acc + (m.subtopics?.length || 0), 0)} tópicos cadastrados
+                </span>
+              </div>
+            </div>
+
+            {/* Lista dos Módulos do Conteúdo Programático */}
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              {currentCohortModules.map((mod) => {
+                const isExpanded = expandedModuleId === mod.id;
+                return (
+                  <div
+                    key={mod.id}
+                    className={`rounded-2xl border transition-all ${
+                      theme === 'dark'
+                        ? 'bg-slate-950/70 border-white/10 hover:border-uniao-500/40'
+                        : 'bg-slate-50/80 border-slate-200/90 hover:border-teal-300 shadow-xs'
+                    }`}
+                  >
+                    <button
+                      type="button"
+                      onClick={() => setExpandedModuleId(isExpanded ? null : mod.id)}
+                      className="w-full text-left p-4 flex items-start justify-between gap-3"
+                    >
+                      <div className="space-y-1 flex-1">
+                        <div className="flex items-center gap-2">
+                          <span className={`text-[10px] font-black uppercase px-2 py-0.5 rounded border ${
+                            theme === 'dark' 
+                              ? 'bg-uniao-500/20 text-uniao-300 border-uniao-500/30' 
+                              : 'bg-teal-50 text-teal-800 border-teal-200'
+                          }`}>
+                            {mod.code}
+                          </span>
+                          <span className={`text-[11px] font-mono ${theme === 'dark' ? 'text-slate-400' : 'text-slate-500'}`}>
+                            {mod.durationMinutes} min • {mod.subtopics?.length || 0} subtemas
+                          </span>
+                        </div>
+                        <h4 className={`text-sm font-bold ${theme === 'dark' ? 'text-white' : 'text-slate-900'}`}>
+                          {mod.title}
+                        </h4>
+                        <p className={`text-xs line-clamp-2 leading-relaxed ${theme === 'dark' ? 'text-slate-400' : 'text-slate-600'}`}>
+                          {mod.description}
+                        </p>
+                      </div>
+
+                      <div className={`p-1 rounded-lg border mt-1 shrink-0 ${
+                        theme === 'dark' ? 'border-white/10 text-slate-400' : 'border-slate-200 text-slate-500'
+                      }`}>
+                        {isExpanded ? <ChevronUp className="w-4 h-4" /> : <ChevronDown className="w-4 h-4" />}
+                      </div>
+                    </button>
+
+                    {/* Subtemas Detalhados do Módulo */}
+                    {isExpanded && (
+                      <div className={`px-4 pb-4 pt-2 border-t text-xs space-y-2.5 ${
+                        theme === 'dark' ? 'border-white/5 bg-slate-900/50' : 'border-slate-200 bg-white'
+                      }`}>
+                        <div className="font-bold text-[11px] uppercase tracking-wider text-uniao-500">
+                          Subtemas e Capítulos da Aula:
+                        </div>
+                        <ul className="space-y-1.5 pl-1">
+                          {mod.subtopics?.map((sub, sIdx) => (
+                            <li key={sub.id || sIdx} className="flex items-start gap-2 text-xs">
+                              <span className={`w-4 h-4 rounded-full flex items-center justify-center text-[10px] font-bold shrink-0 mt-0.5 ${
+                                theme === 'dark' ? 'bg-slate-800 text-slate-300' : 'bg-slate-200 text-slate-700'
+                              }`}>
+                                {sIdx + 1}
+                              </span>
+                              <span className={theme === 'dark' ? 'text-slate-300' : 'text-slate-700'}>
+                                {sub.title}
+                              </span>
+                            </li>
+                          ))}
+                        </ul>
+
+                        <div className="pt-2 flex items-center justify-between border-t border-slate-200 dark:border-slate-800 text-[11px]">
+                          <span className={theme === 'dark' ? 'text-slate-400' : 'text-slate-500'}>
+                            Videoaula + Apostila PDF + 5 Questões
+                          </span>
+                          <Link
+                            to={`/aluno/aula/${mod.id}`}
+                            className="font-bold text-uniao-500 hover:text-uniao-400 flex items-center gap-1"
+                          >
+                            <span>Ir para a Aula</span>
+                            <ArrowRight className="w-3.5 h-3.5" />
+                          </Link>
+                        </div>
+                      </div>
+                    )}
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+        )}
 
         {/* Trilha Pedagógica Completa com Bloqueio Sequencial de Módulos */}
         <div className="space-y-6">
