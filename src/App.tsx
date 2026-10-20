@@ -29,12 +29,14 @@ export const App: React.FC = () => {
         {/* Autenticação (Acesso Privado sem cadastro público) */}
         <Route path="/login" element={<LoginPage />} />
 
+        {/* Simulador Clínico com visual imersivo / Luria UI (Sem sidebar colidindo) */}
+        <Route path="/aluno/simulador" element={<ClinicalSimulatorPage />} />
+
         {/* Ambiente de Aprendizagem do Aluno com Layout e Sidebar */}
         <Route path="/aluno" element={<StudentLayout />}>
           <Route index element={<Navigate to="/aluno/dashboard" replace />} />
           <Route path="dashboard" element={<StudentDashboard />} />
           <Route path="aula/:lessonSlug" element={<IntegratedLessonPage />} />
-          <Route path="simulador" element={<ClinicalSimulatorPage />} />
           <Route path="materiais" element={<MaterialsPage />} />
           <Route path="videos" element={<StudentDashboard />} />
           <Route path="provas" element={<ExamsPage />} />
