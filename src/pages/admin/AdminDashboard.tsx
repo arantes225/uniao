@@ -1378,12 +1378,13 @@ export const AdminDashboard: React.FC = () => {
                   </div>
 
                   <div className="space-y-1.5">
-                    <label className="text-xs font-semibold text-slate-300">Fundamentação Legal e Portarias</label>
+                    <label className="text-xs font-semibold text-slate-300">Modalidade & Metodologia de Ensino</label>
                     <input
                       type="text"
                       required
                       value={certLegal}
                       onChange={(e) => setCertLegal(e.target.value)}
+                      placeholder="Ex: Teórico e Prático Presencial com Simulação Realística"
                       className="w-full px-3.5 py-2.5 rounded-xl bg-slate-950 border border-white/10 text-white text-xs focus:outline-none focus:border-uniao-500"
                     />
                   </div>
@@ -2082,71 +2083,100 @@ export const AdminDashboard: React.FC = () => {
             </div>
 
             {/* ============================================================= */}
-            {/* O CERTIFICADO EM SI (DESIGN DE ALTA FIDELIDADE) */}
+            {/* O CERTIFICADO EM SI (DESIGN OFICIAL UNIÃO SERVIÇOS MÉDICOS) */}
             {/* ============================================================= */}
-            <div className="bg-white text-slate-900 rounded-2xl p-8 sm:p-12 shadow-2xl border-8 border-slate-900 relative overflow-hidden font-serif">
+            <div className="bg-slate-950 text-slate-100 rounded-3xl p-6 sm:p-10 shadow-2xl border-4 border-teal-500/30 relative overflow-hidden font-sans">
               
-              {/* Borda Dourada Interna de Diploma */}
-              <div className="border-2 border-amber-600/40 p-6 sm:p-10 relative">
+              {/* Efeito de Marca d'água de Alta Resolução no Fundo */}
+              <div className="absolute right-0 bottom-0 opacity-5 translate-x-12 translate-y-12 pointer-events-none">
+                <img src="./brand/simbolo-cruz-uniao.png" alt="USM" className="w-[450px] h-[450px] object-contain" />
+              </div>
+
+              {/* Borda Dupla com Gradiente e Identidade Visual da União */}
+              <div className="border border-teal-500/40 rounded-2xl p-6 sm:p-10 relative bg-gradient-to-b from-slate-900/90 via-slate-950/90 to-slate-900/90 backdrop-blur-md shadow-inner">
                 
                 {previewSide === 'front' ? (
                   /* ===================================================== */
-                  /* FRENTE DO CERTIFICADO */
+                  /* FRENTE DO CERTIFICADO (IDENTIDADE USM) */
                   /* ===================================================== */
                   <div className="text-center space-y-6">
                     
-                    {/* Topo: Logo União e Cruz */}
-                    <div className="flex items-center justify-center gap-4">
-                      <div className="w-12 h-12">
-                        <img src="./brand/simbolo-cruz-uniao-verde.png" alt="Cruz USM" className="w-full h-full object-contain" />
+                    {/* Topo Oficial: Logomarca União Serviços Médicos */}
+                    <div className="flex flex-col sm:flex-row items-center justify-between gap-4 border-b border-white/10 pb-5">
+                      <div className="flex items-center gap-3.5">
+                        <div className="w-12 h-12 rounded-xl bg-teal-500/10 border border-teal-500/30 p-2 flex items-center justify-center shrink-0">
+                          <img src="./brand/simbolo-cruz-uniao.png" alt="Cruz USM" className="w-full h-full object-contain" />
+                        </div>
+                        <div className="text-left font-sans">
+                          <div className="text-xl font-black text-white tracking-wider flex items-center gap-1.5">
+                            UNIÃO
+                            <span className="w-2 h-2 rounded-full bg-teal-400" />
+                          </div>
+                          <div className="text-[10px] font-extrabold text-teal-400 tracking-[0.25em] uppercase">
+                            SERVIÇOS MÉDICOS
+                          </div>
+                        </div>
                       </div>
-                      <div className="text-left font-sans">
-                        <div className="text-xl font-black text-slate-950 tracking-tight leading-none">UNIÃO</div>
-                        <div className="text-[10px] font-bold text-teal-700 tracking-[0.25em] uppercase">SERVIÇOS MÉDICOS</div>
+
+                      {/* Selo Oficial de Capacitação em Saúde */}
+                      <div className="text-right text-xs">
+                        <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-teal-500/10 border border-teal-500/30 text-teal-300 font-bold text-[11px]">
+                          <Award className="w-3.5 h-3.5 text-teal-400" />
+                          <span>Capacitação Médica & APH</span>
+                        </div>
                       </div>
                     </div>
 
-                    <div className="space-y-1 font-sans">
-                      <span className="text-[11px] font-black uppercase tracking-[0.3em] text-amber-700">
-                        CERTIFICADO DE FORMAÇÃO PROFISSIONAL
+                    {/* Título de Concessão do Certificado */}
+                    <div className="space-y-1.5 pt-2">
+                      <span className="text-[11px] font-black uppercase tracking-[0.3em] text-teal-400 block">
+                        CERTIFICADO DE CAPACITAÇÃO E QUALIFICAÇÃO PROFISSIONAL
                       </span>
-                      <h2 className="text-2xl sm:text-3xl font-black text-slate-900 tracking-tight font-serif">
+                      <h2 className="text-2xl sm:text-3xl font-black text-white tracking-tight">
                         {certTitle}
                       </h2>
                     </div>
 
-                    <p className="text-sm text-slate-700 leading-relaxed max-w-2xl mx-auto font-sans">
-                      Certificamos que <strong className="text-slate-950 font-bold underline decoration-amber-600 decoration-2 underline-offset-4 text-base">{previewStudentName}</strong> concluiu com aproveitamento integral a capacitação teórica, simulador clínico e treinamento prático presencial de alta fidelidade com carga horária de <strong className="font-bold text-slate-950">{certWorkload} horas</strong>.
-                    </p>
-
-                    <div className="text-xs text-slate-600 max-w-xl mx-auto italic font-sans">
-                      Fundamentação Legal: {certLegal}
+                    {/* Texto Certificador */}
+                    <div className="max-w-2xl mx-auto py-2">
+                      <p className="text-sm sm:text-base text-slate-300 leading-relaxed font-light">
+                        Certificamos para todos os fins acadêmicos e profissionais que
+                      </p>
+                      <div className="my-2 py-1 text-xl sm:text-2xl font-black text-white underline decoration-teal-400 decoration-2 underline-offset-8 tracking-wide">
+                        {previewStudentName}
+                      </div>
+                      <p className="text-xs sm:text-sm text-slate-300 leading-relaxed font-light mt-3">
+                        concluiu com aproveitamento integral a formação técnica em saúde, compreendendo estudos teóricos dirigidos, avaliações formativas, simulação clínica de urgência e estação prática presencial, totalizando a carga horária de <strong className="text-teal-300 font-bold">{certWorkload} horas</strong>.
+                      </p>
                     </div>
 
-                    {/* Assinaturas */}
-                    <div className="grid grid-cols-2 gap-8 pt-8 font-sans border-t border-slate-200 mt-6">
+                    {/* Assinaturas dos Responsáveis */}
+                    <div className="grid grid-cols-2 gap-8 pt-6 border-t border-white/10 mt-6">
                       <div className="text-center space-y-1">
-                        <div className="font-serif italic text-lg text-slate-800 font-bold border-b border-slate-400 pb-1 w-48 mx-auto">
+                        <div className="font-serif italic text-base sm:text-lg text-teal-300 font-bold border-b border-white/20 pb-1 w-48 mx-auto">
                           {certInstructor}
                         </div>
-                        <div className="text-[11px] font-bold text-slate-900">{certInstructor}</div>
-                        <div className="text-[10px] text-slate-500">{certInstructorRole}</div>
+                        <div className="text-xs font-bold text-white">{certInstructor}</div>
+                        <div className="text-[10px] text-slate-400">{certInstructorRole}</div>
                       </div>
 
                       <div className="text-center space-y-1">
-                        <div className="font-serif italic text-lg text-slate-800 font-bold border-b border-slate-400 pb-1 w-48 mx-auto">
+                        <div className="font-serif italic text-base sm:text-lg text-teal-300 font-bold border-b border-white/20 pb-1 w-48 mx-auto">
                           {certDirector.split('-')[0]}
                         </div>
-                        <div className="text-[11px] font-bold text-slate-900">{certDirector}</div>
-                        <div className="text-[10px] text-slate-500">União Serviços Médicos • CRM-SP</div>
+                        <div className="text-xs font-bold text-white">{certDirector}</div>
+                        <div className="text-[10px] text-slate-400">Diretoria Técnica • CRM-SP</div>
                       </div>
                     </div>
 
-                    {/* Rodapé com Hash e Autenticidade */}
-                    <div className="pt-4 flex items-center justify-between text-[10px] text-slate-500 font-sans border-t border-slate-100">
-                      <div>Código Autenticador: <strong>USM-2026-X89A-99F</strong></div>
-                      <div>Validade: <strong>{certValidity} meses</strong></div>
-                      <div>Emissão: <strong>{new Date().toLocaleDateString('pt-BR')}</strong></div>
+                    {/* Rodapé com Código de Autenticidade e QR Code */}
+                    <div className="pt-4 flex flex-col sm:flex-row items-center justify-between text-[11px] text-slate-400 border-t border-white/10 gap-2 font-mono">
+                      <div className="flex items-center gap-1.5">
+                        <span className="text-slate-500">Chave de Autenticação:</span>
+                        <strong className="text-teal-400 font-bold">USM-2026-X89A-99F</strong>
+                      </div>
+                      <div>Validade Técnica Recomendada: <strong className="text-white">{certValidity} meses</strong></div>
+                      <div>Emissão: <strong className="text-white">{new Date().toLocaleDateString('pt-BR')}</strong></div>
                     </div>
 
                   </div>
@@ -2154,43 +2184,49 @@ export const AdminDashboard: React.FC = () => {
                   /* ===================================================== */
                   /* VERSO DO CERTIFICADO (EMENTA E CONTEÚDO PROGRAMÁTICO) */
                   /* ===================================================== */
-                  <div className="space-y-6 font-sans">
-                    <div className="flex items-center justify-between border-b-2 border-slate-900 pb-3">
+                  <div className="space-y-6">
+                    <div className="flex flex-col sm:flex-row sm:items-center justify-between border-b border-white/10 pb-4 gap-2">
                       <div>
-                        <h4 className="font-black text-sm uppercase tracking-wider text-slate-900">
-                          Conteúdo Programático & Ementa do Treinamento
-                        </h4>
-                        <span className="text-xs text-slate-600">{certTitle}</span>
+                        <div className="flex items-center gap-2">
+                          <BookOpen className="w-4 h-4 text-teal-400" />
+                          <h4 className="font-black text-sm uppercase tracking-wider text-white">
+                            Conteúdo Programático & Registro Curricular
+                          </h4>
+                        </div>
+                        <span className="text-xs text-teal-400 font-medium">{certTitle}</span>
                       </div>
-                      <span className="text-xs font-bold px-3 py-1 bg-slate-100 rounded-lg text-slate-800 font-mono">
-                        Carga Horária: {certWorkload} horas
+                      <span className="text-xs font-bold px-3 py-1 bg-teal-500/10 border border-teal-500/30 rounded-lg text-teal-300 font-mono self-start sm:self-auto">
+                        Carga Horária Total: {certWorkload} horas
                       </span>
                     </div>
 
-                    <div className="space-y-2.5">
-                      <div className="text-xs font-bold text-slate-800 uppercase tracking-wider">
-                        Módulos Teórico-Práticos Ministrados:
+                    <div className="space-y-3">
+                      <div className="text-xs font-bold text-slate-300 uppercase tracking-wider">
+                        Módulos e Competências Prático-Profissionais:
                       </div>
 
-                      <ol className="list-decimal pl-5 space-y-1.5 text-xs text-slate-700 leading-relaxed">
+                      <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs">
                         {certModules.map((item, i) => (
-                          <li key={i} className="pl-1">
-                            <strong>{item}</strong>
-                          </li>
+                          <div key={i} className="p-2.5 rounded-xl bg-slate-950/70 border border-white/5 flex items-start gap-2 text-slate-300">
+                            <span className="w-5 h-5 rounded-md bg-teal-500/20 text-teal-300 flex items-center justify-center font-mono text-[10px] font-bold shrink-0">
+                              {i + 1}
+                            </span>
+                            <span className="leading-snug">{item}</span>
+                          </div>
                         ))}
-                      </ol>
+                      </div>
                     </div>
 
-                    <div className="p-4 bg-slate-50 rounded-xl border border-slate-200 text-xs text-slate-600 space-y-1">
-                      <strong className="text-slate-900 block">Metodologia Blended Learning USM:</strong>
-                      <p>
-                        Etapa 1: Videoaulas teóricas e estudos de caso • Etapa 2: Simulações Clínicas Interativas em Sistema de Decisão de Trauma • Etapa 3: Estação Prática Presencial Hands-on com manequins de RCP e torniquetes homologados.
+                    <div className="p-4 bg-slate-950/80 rounded-2xl border border-teal-500/20 text-xs text-slate-300 space-y-1">
+                      <strong className="text-teal-400 block font-bold">Metodologia e Critérios de Aprovação:</strong>
+                      <p className="leading-relaxed">
+                        Formação estruturada com videoaulas técnicas, material didático referenciado, 5 questões por módulo (mínimo de aproveitamento formativo), avaliação teórica com 20 questões e simulação de resposta a emergências.
                       </p>
                     </div>
 
-                    <div className="flex items-center justify-between pt-4 border-t border-slate-200 text-[10px] text-slate-500">
-                      <div>Registro Nacional de Capacitação Médica USM</div>
-                      <div>Documento Válido em Todo Território Nacional</div>
+                    <div className="flex flex-col sm:flex-row items-center justify-between pt-4 border-t border-white/10 text-[10px] text-slate-500 gap-2 font-mono">
+                      <div>União Serviços Médicos • Registro Interno de Capacitação</div>
+                      <div>Documento com Verificação Eletrônica de Autenticidade</div>
                     </div>
                   </div>
                 )}
