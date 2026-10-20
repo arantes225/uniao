@@ -1,0 +1,357 @@
+# UNIÃO SERVIÇOS MÉDICOS
+## DIRETORIA DE ENSINO, PESQUISA E INSTRUÇÃO PRÉ-HOSPITALAR
+
+---
+
+**MÓDULO A04 — EMERGÊNCIAS METABÓLICAS E RELACIONADAS AO ESFORÇO**
+*Biblioteca Curricular: Emergências em Academias (Fitness & Sports Emergency)*
+*Versão Editorial: 1.0.0 — Padrão Editorial USM*
+*Carga Horária Teórica: 1 hora | Público-alvo: Educadores físicos, treinadores de crossfit, preparadores físicos, fisioterapeutas e gestores de academias*
+
+---
+
+## SUMÁRIO
+
+- [Seção 1 — Em 30 Segundos](#seção-1--em-30-segundos)
+- [Seção 2 — Objetivos de Aprendizagem](#seção-2--objetivos-de-aprendizagem)
+- [Seção 3 — Introdução e Relevância dos Desafios Homeostáticos no Esporte](#seção-3--introdução-e-relevância-dos-desafios-homeostáticos-no-esporte)
+- [Seção 4 — Fisiologia da Termorregulação e Equilíbrio Hidroeletrolítico no Exercício](#seção-4--fisiologia-da-termorregulação-e-equilíbrio-hidroeletrolítico-no-exercício)
+- [Seção 5 — Desenvolvimento dos Subtemas](#seção-5--desenvolvimento-dos-subtemas)
+  - [5.1 Hipoglicemia Induzida pelo Esforço e Jejum Inadequado](#51-hipoglicemia-induzida-pelo-esforço-e-jejum-inadequado)
+  - [5.2 Desidratação Aguda e Desequilíbrios Eletrolíticos no Salão](#52-desidratação-aguda-e-desequilíbrios-eletrolíticos-no-salão)
+  - [5.3 Cãibras por Calor e Exaustão Térmica: Mecanismos e Abordagem](#53-cãibras-por-calor-e-exaustão-térmica-mecanismos-e-abordagem)
+  - [5.4 Hipertermia Grave e Intermação (*Exertional Heat Stroke*): Emergência Letal](#54-hipertermia-grave-e-intermação-exertional-heat-stroke-emergência-letal)
+  - [5.5 Suspeita de Rabdomiólise Aguda de Esforço no Salão e Box](#55-suspeita-de-rabdomiólise-aguda-de-esforço-no-salão-e-box)
+  - [5.6 Reconhecimento Precoce de Sinais de Deterioração Clínica e Conduta](#56-reconhecimento-precoce-de-sinais-de-deterioração-clínica-e-conduta)
+- [Seção 6 — Quadros Práticos e Matrizes Decisórias de Descompensação Metabólica](#seção-6--quadros-práticos-e-matrizes-decisórias-de-descompensação-metabólica)
+- [Seção 7 — Erros Frequentes e Práticas Perigosas no Treinamento Físico](#seção-7--erros-frequentes-e-práticas-perigosas-no-treinamento-físico)
+- [Seção 8 — Estudo de Caso Prático Contextualizado (Colapso por Intermação em Box)](#seção-8--estudo-de-caso-prático-contextualizado-colapso-por-intermação-em-box)
+- [Seção 9 — Pulo do Gato](#seção-9--pulo-do-gato)
+- [Seção 10 — Mapa Mental das Emergências Metabólicas e Térmicas no Esporte](#seção-10--mapa-mental-das-emergências-metabólicas-e-térmicas-no-esporte)
+- [Seção 11 — O Que Você Precisa Lembrar](#seção-11--o-que-você-precisa-lembrar)
+- [Seção 12 — Referências Bibliográficas e Metadados Editoriais](#seção-12--referências-bibliográficas-e-metadados-editoriais)
+
+---
+
+## SEÇÃO 1 — EM 30 SEGUNDOS
+
+> **VISÃO RÁPIDA DE SOBREVIVÊNCIA METABÓLICA NO SALÃO**
+> 1. **Diferencie Exaustão Térmica de Intermação:** Na **Exaustão**, a pessoa está com muito suor, tontura e dor de cabeça, mas com a **mente lúcida** (temperatura < 40 ºC). Na **Intermação (*Heat Stroke*)**, a temperatura corporal central ultrapassa **40 ºC** e o indivíduo apresenta **confusão mental, delírio, convulsão ou desmaio**. A intermação mata se não for resfriada imediatamente [1, 2].
+> 2. **Intermação exige resfriamento rápido imediato:** *"Cool first, transport second"* (resfrie primeiro, transporte depois). Se não houver banheira de imersão em gelo, use toalhas molhadas em água gelada trocadas a cada 2 minutos no corpo todo e bolsas de gelo na nuca, axilas e virilhas antes e durante a remoção para o hospital [2, 3].
+> 3. **Rabdomiólise de esforço destrói os rins:** Treinos excêntricos extenuantes (crossfit, tiros pesados, agachamentos até a falha em iniciantes) rompem a membrana das fibras musculares esqueléticas. A mioglobina tóxica entra no sangue e atinge os rins. **Sinais clássicos:** dor muscular insuportável desproporcional, inchaço muscular duro e **urina escura cor de refrigerante de cola ou chá preto** [4, 5].
+> 4. **Hipoglicemia no treino:** Praticantes em jejum prolongado ou dietas restritivas extremas entram em hipoglicemia (< 70 mg/dL): tremores, suor frio, palidez e fraqueza súbita. Se consciente: forneça **15 a 20 g de carboidrato rápido** (150 ml de suco ou refrigerante comum). Se inconsciente: **nada na boca**, posição lateral e 192 (SAMU) [6, 7].
+> 5. **O perigo da Hiponatremia por excesso de água:** Beber galões de água pura sem eletrólitos durante treinos muito longos sob calor dilui o sódio sanguíneo (< 135 mEq/L), causando edema cerebral, confusão, convulsões e óbito [1, 8].
+> 6. **Cãibras intensas não são apenas falta de potássio:** Decorrem de fadiga neuromuscular associada à perda maciça de água e **cloreto de sódio (sal)** pelo suor profuso. A reposição com bebidas eletrolíticas isotônicas e alongamento passivo suave reverte a crise [1, 9].
+
+---
+
+## SEÇÃO 2 — OBJETIVOS DE APRENDIZAGEM
+
+Ao concluir o estudo deste módulo, o profissional de Educação Física e a gestão técnica esportiva serão capazes de:
+
+1. **Dominar os mecanismos fisiológicos da termorregulação e da dissipação de calor**, identificando os limites biológicos do estresse térmico em salões fechados.
+2. **Reconhecer e tratar episódios de hipoglicemia de esforço**, aplicando com precisão a regra dos carboidratos simples de rápida absorção.
+3. **Diferenciar clinicamente os estágios progressivos da doença do calor**: cãibras térmicas, exaustão pelo calor e o colapso fatal por intermação (*Exertional Heat Stroke*).
+4. **Executar métodos imediatos de resfriamento corporal ativo**, dominando as técnicas de imersão ou aplicação de crioterapia axial antes do transporte hospitalar.
+5. **Identificar os sinais precoces e laboratoriais sugestivos de Rabdomiólise Aguda de Esforço**, estabelecendo fluxos de suspensão de treinos e hidratação preventiva.
+6. **Reconhecer sinais de deterioração hemodinâmica e neurológica rápida**, acionando com precisão o Suporte Avançado de Vida do SAMU 192.
+
+---
+
+## SEÇÃO 3 — INTRODUÇÃO E RELEVÂNCIA DOS DESAFIOS HOMEOSTÁTICOS NO ESPORTE
+
+Durante o exercício físico de média e alta intensidade, a taxa metabólica basal do organismo humano pode aumentar de 15 a 20 vezes acima dos valores de repouso. Uma consequência termodinâmica inevitável dessa atividade muscular é que **mais de 75% a 80% de toda a energia química gasta pelas células musculares é liberada na forma de calor puro**, e apenas 20% a 25% é convertida em trabalho mecânico útil [1, 10].
+
+Em climas tropicais como o brasileiro, associados a academias com ventilação deficiente ou boxes de crossfit com coberturas metálicas sem isolamento térmico, o organismo humano atinge rapidamente a sua capacidade máxima de dissipação de calor. Concomitantemente, a busca por resultados estéticos imediatos tem impulsionado a adoção de práticas perigosas entre os frequentadores de academias: treinos em jejum prolongado sem periodização adequada, uso inadvertido de estimulantes termogênicos de ação adrenérgica (cafeína em megadoses, efedrina, pré-treinos importados ilegais) e restrição deliberada de hidratação para "secar o abdômen" [1, 4].
+
+Essa confluência de fatores gera descompensações metabólicas agudas gravíssimas que se instalam em questão de minutos: a hipoglicemia fulminante, o colapso por calor (intermação) com disfunção de múltiplos órgãos e a necrose muscular maciça com insuficiência renal aguda por rabdomiólise. O instrutor esportivo não pode ser um mero contador de repetições; ele deve atuar como o guardião da integridade fisiológica do atleta [1, 3, 5].
+
+---
+
+## SEÇÃO 4 — FISIOLOGIA DA TERMORREGULAÇÃO E EQUILÍBRIO HIDROELETROLÍTICO NO EXERCÍCIO
+
+Para prevenir e tratar emergências térmicas, é mandatório compreender a física da transferência de calor corporal [1, 2, 10]:
+
+```
++---------------------------------------------------------------------------------+
+|                     MECANISMOS DE TRANSFERÊNCIA DE CALOR                        |
+|                                                                                 |
+|  1. RADIAÇÃO: Emissão de ondas infravermelhas para o ambiente.                  |
+|  2. CONDUÇÃO: Transferência de calor por contato físico direto (ex.: gelo/água).|
+|  3. CONVECÇÃO: Circulação de moléculas de ar ou água sobre a pele (ventilador).  |
+|  4. EVAPORAÇÃO: DISSIPAÇÃO PRINCIPAL NO EXERCÍCIO (Conversão de suor em vapor). |
+|                                                                                 |
+|  [ PONTO CRÍTICO: UMIDADE RELATIVA DO AR ELEVADA (> 75%) ]                      |
+|  - O ar ambiente já está saturado de vapor d'água.                              |
+|  - O suor goteja da pele sem evaporar (não resfria o corpo).                    |
+|  - A temperatura central sobe exponencialmente em direção aos 40-42 ºC.         |
+|  - Falência dos centros termorreguladores do hipotálamo -> INTERMAÇÃO FATA L!   |
++---------------------------------------------------------------------------------+
+```
+
+### 4.1 A Dinâmica do Suor e a Desidratação Hiponatrêmica
+Em uma hora de treino vigoroso sob calor intenso, um adulto pode perder entre **1,0 a 2,5 litros de suor**. Juntamente com a água, o corpo excreta grandes quantidades de eletrólitos essenciais para a condução neuromuscular, predominantemente **Sódio ($Na^+$) e Cloro ($Cl^-$)**.
+- Se o atleta repuser apenas água mineral pura em volumes gigantescos sem eletrólitos, a concentração de sódio no plasma sanguíneo cai criticamente abaixo de 130–135 mEq/L (**Hiponatremia de Esforço**).
+- Pela lei da osmose, a água migra do sangue hipoosmolar para o interior das células cerebrais hipertônicas, provocando **edema cerebral agudo**, cefaleia latejante, desorientação temporal, convulsões generalizadas e herniação de tronco encefálico [1, 8].
+
+---
+
+## SEÇÃO 5 — DESENVOLVIMENTO DOS SUBTEMAS
+
+### 5.1 Hipoglicemia Induzida pelo Esforço e Jejum Inadequado
+
+A hipoglicemia no treino ocorre quando a concentração de glicose plasmática decai abaixo de **70 mg/dL**. É extremamente frequente em praticantes adeptos de jejum intermitente mal orientado, indivíduos com diabetes tipo 1 que aplicaram insulina sem ajuste alimentar ou usuários de dietas cetogênicas estritas [6, 7].
+
+#### Manifestações Clínicas da Hipoglicemia no Salão:
+- **Fase Adrenérgica (Liberação de catecolaminas para subir o açúcar):** Tremores finos nas mãos, sudorese fria profusa, palidez cutânea acentuada, coração disparado (taquicardia), fome súbita voraz, sensação de fraqueza nas pernas e ansiedade inexplicável.
+- **Fase Neuroglicopênica (Sofrimento direto do cérebro por falta de glicose):** Visão turva ou embaçada, fala pastosa e desconexa, tontura grave com desequilíbrio, sonolência súbita, perda de força muscular e, se não tratada, convulsão motora e coma hipoglicêmico [6, 7].
+
+#### Manejo Prático pelo Educador Físico:
+- **Aluno Consciente (Capaz de Deglutir com Segurança):**
+  - Aplicar a **Regra dos 15 a 20 g de Carboidrato de Rápida Absorção**:
+    - 150 a 200 ml de refrigerante comum (tradicional, NUNCA zero ou diet); OU
+    - 1 copo de suco de laranja ou uva integral; OU
+    - 1 colher de sopa cheia de açúcar diluída em meio copo d'água; OU
+    - 3 a 4 sachês de mel ou balas mastigáveis de glicose.
+  - Manter em repouso absoluto sentado. Aguardar 15 minutos. Se os sintomas persistirem, repetir a dose de carboidrato. Ao normalizar, oferecer um lanche sólido com carboidrato complexo (pão integral, frutas) [6, 7].
+- **Aluno com Rebaixamento de Consciência ou Inconsciente:**
+  - **PROIBIÇÃO ABSOLUTA DE LÍQUIDOS OU COMIDAS NA BOCA:** O reflexo de tosse e fechamento da laringe está inibido, provocando broncoaspiração fatal imediata.
+  - Deitar a vítima de lado (Posição Lateral de Segurança), ligar imediatamente para o **SAMU 192** e manter vigilância das vias aéreas até o resgate [6, 7].
+
+---
+
+### 5.2 Desidratação Aguda e Desequilíbrios Eletrolíticos no Salão
+
+A desidratação instala-se de forma progressiva durante a sessão de treinamento [1, 8]:
+
+| GRAU DE PERDA PONDERAL (% PESO) | MANIFESTAÇÕES CLÍNICAS | IMPACTO NA PERFORMANCE E SAÚDE |
+| :--- | :--- | :--- |
+| **Leve (1% a 2% do peso)** | Sede moderada, boca seca, urina concentrada amarelo-escuro. | Queda de 10% a 20% na força muscular e capacidade de foco. |
+| **Moderada (3% a 5% do peso)** | Sede intensa, apatia, dor de cabeça latejante, cãibras, taquicardia de repouso, tontura ao levantar (hipotensão ortostática). | Risco iminente de exaustão térmica; elevação acentuada da temperatura central. |
+| **Grave (> 6% do peso)** | Ausência de suor, confusão mental, olhos fundos, pulso fino e rápido, colapso circulatório. | **EMERGÊNCIA MÉDICA: Risco de choque hipovolêmico e falência renal aguda.** |
+
+- **Protocolo de Hidratação:** Para treinos com duração superior a 60 minutos sob calor, intercalar água mineral com **bebidas isotônicas comerciais ou soro de reidratação oral caseiro** (contendo sódio, potássio e glicose a 6%) [1, 9].
+
+---
+
+### 5.3 Cãibras por Calor e Exaustão Térmica: Mecanismos e Abordagem
+
+As doenças relacionadas ao calor representam um espectro contínuo de deterioração fisiológica [1, 2]:
+
+#### 1. Cãibras por Calor (*Heat Cramps*)
+Espasmos musculares involuntários, extremamente dolorosos, que afetam grupos musculares submetidos a esforço intenso sob calor (panturrilhas, quadríceps, abdominais).
+- **Causa:** Fadiga dos fusos neuromusculares combinada à depleção aguda de sódio e cloreto pela sudorese profusa.
+- **Conduta:** Interromper o treino, levar para ambiente ventilado, realizar **alongamento passivo suave e sustentado** do músculo espasmado (sem tracionar com violência) e administrar bebida hidroeletrolítica com sódio [1, 9].
+
+#### 2. Exaustão Térmica (*Heat Exhaustion*)
+Incapacidade do sistema cardiovascular de manter o débito cardíaco adequado para atender simultaneamente à demanda dos músculos em exercício e à circulação cutânea para dissipar calor.
+- **Sinais Clínicos:** Temperatura corporal moderadamente elevada (habitualmente entre **38 ºC e 39,9 ºC**), sudorese profusa empapando a roupa, palidez facial, pele fria e pegajosa, taquicardia acentuada, hipotensão arterial, cefaleia intensa, náuseas, vômitos e fraqueza incapacitante.
+- **Característica Diagnóstica Crítica:** **O ESTADO MENTAL ESTÁ PRESERVADO.** A vítima pode estar cansada ou ansiosa, mas está consciente, sabe onde está e responde com coerência [1, 2].
+- **Conduta:** Remover o atleta para ambiente climatizado ou sob sombra ventilada, retirar excesso de roupas pesadas, deitá-lo com as pernas elevadas a 30 graus, aplicar toalhas úmidas no corpo e oferecer líquidos frios se não houver náuseas. Se houver vômitos persistentes ou ausência de melhora em 30 minutos, encaminhar ao pronto-socorro [1, 3].
+
+---
+
+### 5.4 Hipertermia Grave e Intermação (*Exertional Heat Stroke*): Emergência Letal
+
+A **Intermação por Esforço (*Exertional Heat Stroke - EHS*)** é uma emergência médica de altíssima letalidade caracterizada por colapso catastrófico da termorregulação corporal [2, 3]:
+
+```
++---------------------------------------------------------------------------------+
+|                   CRITÉRIOS DIAGNÓSTICOS DA INTERMAÇÃO (EHS)                    |
+|                                                                                 |
+|  1. HIPERTERMIA EXTREMA: Temperatura corporal central > 40,0 ºC ou 40,5 ºC.     |
+|  2. DISFUNÇÃO DO SISTEMA NERVOSO CENTRAL (SNC):                                 |
+|     - Confusão mental grave, desorientação, agressividade bizarra;              |
+|     - Perda súbita de consciência, delírio, ataxia (marcha ébria cambaleante);  |
+|     - Convulsões motoras ou coma profundo.                                      |
+|                                                                                 |
+|  [ ATENÇÃO AO MITO DA PELE SECA ]: Na intermação clássica de idosos em ondas de|
+|  calor, a pele fica seca. NA INTERMAÇÃO POR ESFORÇO EM ATLETAS, A PELE          |
+|  FREQUENTEMENTE CONTINUA ENSOPADA DE SUOR! Não espere a pele secar para agir!  |
++---------------------------------------------------------------------------------+
+```
+
+#### Protocolo de Resfriamento Ultrarrápido no Salão (*Cool First, Transport Second*):
+O atraso no resfriamento corporal central na intermação provoca lesão térmica direta das proteínas celulares, necrose hepatocelular maciça, coagulação intravascular disseminada (CIVD) e morte por falência orgânica múltipla [2, 3].
+1. **Ligue imediatamente para o SAMU 192:** Informe: *"Vítima de colapso por calor com rebaixamento de consciência e hipertermia grave"*.
+2. **Resfriamento Ativo Agressivo Imediato:**
+   - **Padrão Ouro Internacional:** Imersão do corpo inteiro em banheira ou piscina de gelo e água fria (1 a 15 ºC) com agitação contínua da água até o nível do pescoço (*Cold Water Immersion*).
+   - **Técnica Alternativa para Salões sem Banheira:**
+     - Deite o atleta sobre lona plástica no chão em área ventilada com ar-condicionado no máximo.
+     - Aplique **toalhas ensopadas em água com gelo triturado cobrindo todo o tronco, coxas e abdômen**, trocando as toalhas a cada 2 a 3 minutos à medida que esquentam.
+     - Posicione bolsas de gelo nas regiões axilares, fossas supraclaviculares, virilhas e nuca.
+     - Borrife água gelada sobre a pele enquanto ventiladores industriais sopram ar diretamente sobre o corpo (resfriamento evaporativo convectivo forçado).
+3. **Mantenha as Vias Aéreas Desobstruídas:** Lateralize a vítima se houver vômitos e não ofereça água por via oral [2, 3].
+
+---
+
+### 5.5 Suspeita de Rabdomiólise Aguda de Esforço no Salão e Box
+
+A Rabdomiólise de Esforço (*Exertional Rhabdomyolysis*) é a síndrome clínico-laboratorial resultante da destruição e necrose rápida de células musculares esqueléticas sob sobrecarga biomecânica e metabólica severa [4, 5].
+
+#### Fatores Desencadeantes Comuns:
+- Praticantes sedentários submetidos a treinos de intensidade extrema no primeiro dia de aula (especialmente treinos de crossfit com alto volume de repetições excêntricas de flexões de braço, agachamentos ou *pull-ups* até a exaustão total).
+- Uso combinado de desidratação, privação calórica e substâncias ergogênicas estimulantes ou álcool na véspera do treino.
+- Calor ambiental sufocante [4, 5].
+
+#### Dinâmica Fisiopatológica e a "Urina Cor de Coca-Cola":
+Ao sofrer lise celular maciça, os miócitos liberam no sangue intracelular grandes quantidades de **Mioglobina** (uma proteína globular hemo com peso molecular de 17 kDa), enzimas musculares (**Creatina Quinase - CK**, que pode saltar de valores normais de 150 U/L para mais de 50.000 ou 100.000 U/L) e eletrólitos intracelulares (**Potássio**).
+- A mioglobina satura as proteínas carreadoras do plasma e passa para a urina através dos glomérulos renais.
+- Nos túbulos renais, a mioglobina precipita sob urina ácida, gerando cilindros obstrutivos e toxicidade direta nas células epiteliais tubulares.
+- **Resultado Clínico:** A urina adquire coloração escura característica (cor de chá preto, café ou refrigerante de cola) e o paciente desenvolve **Insuficiência Renal Aguda Oligúrica**, necessitando de hemodiálise de urgência [4, 5].
+
+```
++---------------------------------------------------------------------------------+
+|                   TRÍADE CLÁSSICA DA RABDOMIÓLISE DE ESFORÇO                    |
+|                                                                                 |
+|  1. DOR MUSCULAR EXTREMA: Desproporcional, muito além da dor tardia normal.      |
+|  2. EDEMA E RIGIDEZ: Músculo inchado, duro à palpação, com impotência funcional.|
+|  3. COLÚRIA / MIOGLOBINÚRIA: Urina cor de coca-cola ou chá preto 24-48h pós.    |
++---------------------------------------------------------------------------------+
+```
+
+#### Conduta e Prevenção pelo Educador Físico:
+- Ao identificar aluno com dor muscular intratável e urina escura nos dias seguintes ao treino, determine **proibição imediata de novos exercícios**, estimule ingestão oral abundante de água e encaminhe-o com urgência a um serviço hospitalar para dosagem sérica de CK e eletrólitos e hidratação venosa vigorosa [4, 5].
+
+---
+
+### 5.6 Reconhecimento Precoce de Sinais de Deterioração Clínica e Conduta
+
+O profissional de educação física deve saber reconhecer o momento exato em que o atleta está transitando do estresse físico compensado para a **falência metabólica descompensada** [1, 3]:
+
+#### Sinais de Alerta Vermelho de Deterioração Imediata:
+- Marcha ébria cambaleante (ataxia motora) no meio do salão;
+- Olhar vidrado, respostas com tempo de latência prolongado ou riso imotivado;
+- Vômitos repetidos e sudorese que cessa abruptamente na esteira rolante;
+- Temperatura da pele perceptivelmente fervendo ao toque;
+- Queda ao solo sem capacidade de sustentação do próprio tronco [1, 2].
+
+---
+
+## SEÇÃO 6 — QUADROS PRÁTICOS E MATRIZES DECISÓRIAS DE DESCOMPENSAÇÃO METABÓLICA
+
+### Matriz de Diferenciação das Emergências Térmicas e Metabólicas
+
+| PARÂMETRO | HIPOGLICEMIA | EXAUSTÃO PELO CALOR | INTERMAÇÃO (*HEAT STROKE*) | HIPONATREMIA |
+| :--- | :--- | :--- | :--- | :--- |
+| **Temperatura Central** | Normal (< 37,5 ºC). | Elevada (38 ºC a 39,9 ºC). | **Extrema (> 40,0 ºC).** | Normal ou levemente alta. |
+| **Pele e Suor** | Palidez, suor frio e pegajoso. | Suor profuso, pele fria e úmida. | Quente/ardente, suada ou seca. | Úmida, sem febre aparente. |
+| **Estado Mental** | Confuso ou lúcido com tremor. | **LÚCIDO E ORIENTADO.** | **DELÍRIO, CONFUSÃO, COMA.** | Cefaleia, confusão, delírio. |
+| **Glicemia Capilar** | **< 70 mg/dL.** | Normal (80–120 mg/dL). | Normal ou variável. | Normal (80–120 mg/dL). |
+| **CONDUTA IMEDIATA** | 15 g de açúcar se acordado; se inconsciente: 192 e lateralizar. | Repouso, sombra, elevar pernas, hidratação fria. | **RESFRIAMENTO ATIVO AGRESSIVO IMEDIATO + 192.** | **Restrição de água pura; pronto-socorro para sódio.** |
+
+---
+
+## SEÇÃO 7 — ERROS FREQUENTES E PRÁTICAS PERIGOSAS NO TREINAMENTO FÍSICO
+
+1. **Aguardar a ambulância chegar para começar a resfriar o paciente com intermação:** A mortalidade da intermação está diretamente ligada à duração da temperatura corporal acima de 40 ºC. Cada 10 minutos de atraso no resfriamento multiplicam a necrose cerebral e hepática [2, 3].
+2. **Forçar grandes volumes de água pura em atleta com delírio e dor de cabeça:** Se a causa for hiponatremia dilucional, inundar o organismo com água sem eletrólitos acelera o inchaço cerebral e desencadeia parada respiratória [1, 8].
+3. **Prescrever anti-inflamatórios para dores musculares intensas pós-treino suspeitas de rabdomiólise:** Medicamentos anti-inflamatórios (ibuprofeno, diclofenaco, cetoprofeno) inibem as prostaglandinas renais, reduzindo o fluxo sanguíneo nos rins. Administrar AINEs em paciente com rabdomiólise precipita insuficiência renal aguda terminal [4, 5].
+4. **Dar sal puro em colher para quem tem cãibra:** Administrar sal concentrado por via oral sem a devida diluição em água provoca vômitos incoercíveis, piorando a desidratação [1, 9].
+5. **Permitir que o aluno volte a treinar após crise de hipoglicemia rápida:** A ingestão de carboidrato alivia o sintoma momentaneamente, mas os depósitos musculares de glicogênio continuam exauridos. Retornar ao treino provocará novo colapso em poucos minutos [6, 7].
+
+---
+
+## SEÇÃO 8 — ESTUDO DE CASO PRÁTICO CONTEXTUALIZADO (COLAPSO POR INTERMAÇÃO EM BOX)
+
+### Cenário: Treino Extenuante em Dia de Calor Extremo
+Em uma tarde de verão com temperatura de 36 ºC e umidade relativa de 80% no Box Cross Treino Litoral (galpão fechado com telhado de zinco), o aluno Gustavo, 31 anos, iniciou um treino no estilo "Murph" (corrida de 1,6 km, 100 barras, 200 flexões, 300 agachamentos e mais 1,6 km de corrida) utilizando um colete de peso de 10 kg. Gustavo estava com poucas horas de sono e havia consumido cápsulas de termogênico com alta concentração de cafeína antes da aula.
+
+Nos últimos 400 metros da corrida final na rua, Gustavo começa a cambalear em zigue-zague. Ele entra no box com os olhos desorientados, profere palavras incompreensíveis, desaba de joelhos no piso emborrachado e deita de lado, desacordado e sem responder aos chamados.
+
+### Aplicação do Método de Resgate e Resfriamento USM:
+1. **Reconhecimento da Intermação:** O treinador Henrique corre até Gustavo. Nota que a respiração está acelerada (taquipneica), a pele está ardendo de calor ao toque e Gustavo apresenta rigidez com olhar vago, gemidos desconexos e desorientação espaço-temporal severa. Trata-se de uma **Intermação por Esforço (*Exertional Heat Stroke*)**.
+2. **Ativação da Equipe e Chamada do Resgate:**
+   - Henrique determina ao assistente: *"Ligue para o SAMU 192 agora! Diga que temos um caso grave de intermação por calor extremo, vítima inconsciente com hipertermia, e que estamos iniciando o resfriamento ativo imediatamente!"*.
+3. **Desnudamento Rápido:**
+   - Henrique remove o colete de peso de Gustavo, rasga a camiseta com a tesoura corta-vestes da maleta e retira tênis e meias para expor a máxima superfície corporal.
+4. **Execução do Resfriamento Ativo no Box:**
+   - O box não possui banheira de imersão. Henrique utiliza o protocolo de resfriamento evaporativo acelerado:
+   - Pede dois baldes com gelo e água do bar da recepção.
+   - Mergulha toalhas de banho na água com gelo e cobre o tronco, as coxas e a cabeça de Gustavo.
+   - Posiciona bolsas de gelo sob as axilas e nas duas virilhas.
+   - Liga dois ventiladores industriais do box voltados diretamente sobre o corpo úmido da vítima.
+   - Um ajudante borrifa água fria continuamente com um borrifador manual e troca as toalhas a cada 2 minutos.
+5. **Evolução e Chegada do Suporte Especializado:**
+   - Em 10 minutos de resfriamento vigoroso, a pele de Gustavo passa de fervendo a fresca ao toque. Gustavo começa a pestanejar e recobra a orientação básica.
+   - A equipe do SAMU chega em 14 minutos. O médico da viatura afere temperatura timpânica (já reduzida para 38,4 ºC) e parabeniza o treinador: o resfriamento rápido no local evitou o dano cerebral irreversível. Gustavo é conduzido ao hospital com hidratação venosa contínua e dosagem de enzimas musculares, evoluindo para alta hospitalar em 48 horas sem sequelas.
+
+---
+
+## SEÇÃO 9 — PULO DO GATO
+
+> **MACETES OPERACIONAIS DE SOBREVIVÊNCIA METABÓLICA NO SALÃO**
+>
+> 1. **O Teste da Turgência da Pele na Desidratação:** Pince levemente a pele do dorso da mão ou do antebraço do aluno entre o polegar e o indicador e solte. Em indivíduos bem hidratados, a dobra cutânea retorna instantaneamente à posição lisa original. Se a prega demorar mais de 2 segundos para desfazer-se ("pele em tenda"), há desidratação tecidual severa com perda acentuada de turgor [1, 8].
+> 2. **A "Cor da Urina" como Termômetro Preventivo:** Fixe no interior de todos os sanitários da academia a tabela visual colorimétrica de Armstrong da cor da urina (com tons de 1 a 8). Oriente os alunos: tons de 1 a 3 (amarelo claro palha) indicam boa hidratação; tons de 4 a 6 exigem hidratação imediata; tons de 7 a 8 (âmbar escuro a marrom) contraindicam treinos pesados sob calor [1, 8].
+> 3. **Bolsas de Gelo nos 4 Pontos Axiais:** Na ausência de banheira na intermação, não perca tempo colocando gelo nas mãos ou pés. O sangue circula em grandes volumes nas artérias carótidas, axilares e femorais. As 4 bolsas de gelo devem ir **obrigatoriamente nas duas axilas e nas duas virilhas**, além da nuca. Isso refrigera o sangue arterial que perfunde os órgãos vitais [2, 3].
+
+---
+
+## SEÇÃO 10 — MAPA MENTAL DAS EMERGÊNCIAS METABÓLICAS E TÉRMICAS NO ESPORTE
+
+```
+                           EMERGÊNCIAS METABÓLICAS NO TREINO
+                                           │
+         ┌─────────────────────────────────┴─────────────────────────────────┐
+         │                                                                   │
+  [ DESVIOS GLICÊMICOS ]                                            [ DESVIOS TÉRMICOS ]
+         │                                                                   │
+  ┌──────┴──────┐                                              ┌─────────────┴─────────────┐
+  ▼             ▼                                              ▼                           ▼
+Hipoglicemia  Hiperglicemia                              Exaustão Térmica            Intermação (EHS)
+(< 70 mg/dL)  (CAD crônica)                             (Temp 38-39,9 ºC)           (Temp > 40,0 ºC)
+  │             │                                              │                           │
+Tremores e    Polidipsia /                               Consciente e lúcido        Confusão mental,
+Suor frio     Poliúria                                   Suor profuso               delírio ou coma
+  │             │                                              │                           │
+Consciente:   Encaminhar                                 Repouso na sombra          RESFRIAMENTO
+15g açúcar    avaliação                                  Elevar pernas              AGRESSIVO IMEDIATO!
+Inconsciente: médica                                     Hidratação fria            Toalhas geladas /
+192 já!                                                                             Gelo axial + 192!
+```
+
+---
+
+## SEÇÃO 11 — O QUE VOCÊ PRECISA LEMBRAR
+
+- Intermação por esforço é fatal: temperatura central > 40 ºC associada a delírio ou confusão mental exige resfriamento imediato antes do transporte (*cool first, transport second*).
+- Na intermação de atletas, a pele pode continuar completamente suada; não espere a pele secar para diagnosticar.
+- Exaustão térmica cursa com sudorese e tontura, mas a mente permanece totalmente lúcida e orientada.
+- Hipoglicemia em indivíduo consciente deve ser revertida com 15 a 20 g de carboidrato simples; se inconsciente, nada por via oral.
+- Rabdomiólise de esforço provoca necrose muscular e urina cor de coca-cola; exige hidratação hospitalar e suspensão imediata de exercícios.
+- Hiponatremia dilucional decorre do excesso de água sem eletrólitos; requer restrição hídrica e pronto-socorro.
+
+---
+
+## SEÇÃO 12 — REFERÊNCIAS BIBLIOGRÁFICAS E METADADOS EDITORIAIS
+
+### Referências Científicas e Normativas
+
+1. AMERICAN COLLEGE OF SPORTS MEDICINE (ACSM). **Exertional Heat Illness during Training and Competition: Position Stand**. *Medicine & Science in Sports & Exercise*, v. 39, n. 3, p. 556-572, 2007. Reafirmado em 2021.
+2. CASA, D. J. et al. **National Athletic Trainers' Association Position Statement: Exertional Heat Illnesses**. *Journal of Athletic Training*, v. 50, n. 9, p. 986-1000, 2015. Atualizado em 2022.
+3. BELVAL, L. N. et al. **Practical Solutions for Serious Problems: Exertional Heat Illness in Athletes and Physical Laborers**. *Current Sports Medicine Reports*, v. 19, n. 10, p. 408-417, 2020.
+4. TIEPPO, F. et al. **Exertional Rhabdomyolysis in Crossfit and High-Intensity Interval Training: A Systematic Review**. *International Journal of Sports Medicine*, v. 42, n. 12, p. 1045-1053, 2021.
+5. CHAVEZ, L. O. et al. **Beyond Muscle Destruction: A Systematic Review on Exertional Rhabdomyolysis**. *Open Access Emergency Medicine*, v. 8, p. 17-32, 2016.
+6. AMERICAN DIABETES ASSOCIATION (ADA). **Standards of Care in Diabetes — 2024: Facilitating Positive Health Behaviors and Well-being to Improve Health Outcomes**. *Diabetes Care*, v. 47, suppl. 1, p. S77-S110, 2024.
+7. SOCIEDADE BRASILEIRA DE DIABETES (SBD). **Diretrizes da Sociedade Brasileira de Diabetes 2023-2024: Atividade Física e Exercício no Diabetes**. São Paulo: Clannad, 2023.
+8. HEW-BUTLER, T. et al. **Statement of the Third International Exercise-Associated Hyponatremia Consensus Development Conference, Carlsbad, California, 2015**. *British Journal of Sports Medicine*, v. 49, n. 22, p. 1432-1446, 2015.
+9. SCHWELLNUS, M. P. **Cause of exercise associated muscle cramping (EAMC)—altered neuromuscular control, dehydration or electrolyte depletion?**. *British Journal of Sports Medicine*, v. 43, n. 6, p. 401-408, 2009.
+10. MCARDLE, W. D.; KATCH, F. I.; KATCH, V. L. **Fisiologia do Exercício: Nutrição, Energia e Desempenho Humano**. 8. ed. Rio de Janeiro: Guanabara Koogan, 2016.
+11. CONSELHO FEDERAL DE EDUCAÇÃO FÍSICA (CONFEF). **Resolução CONFEF nº 307/2015: Código de Ética dos Profissionais de Educação Física**. Rio de Janeiro: CONFEF, 2015.
+12. MINISTÉRIO DA SAÚDE (BRASIL). **Portaria GM/MS nº 2.048, de 5 de novembro de 2002**. Regulamento Técnico dos Sistemas Estaduais de Urgência e Emergência. Brasília, DF: Ministério da Saúde, 2002.
+
+---
+
+### Metadados Editoriais Institucionais
+
+| CAMPO | ESPECIFICAÇÃO TÉCNICA |
+| :--- | :--- |
+| **Identificador do Módulo** | MÓDULO A04 — Emergências Metabólicas e Relacionadas ao Esforço |
+| **Biblioteca Curricular** | Emergências em Academias (*Fitness & Sports Emergency*) |
+| **Instituição Responsável** | União Serviços Médicos — Ensino e Instrução Pré-Hospitalar |
+| **Padrão Gráfico e Editorial** | Diretrizes Editoriais Integradas LURIA / USM |
+| **Status Editorial** | Aguardando Aprovação Científica |
+| **Data da Revisão Técnica** | Outubro de 2026 |
+| **Versão Curricular** | Versão 1.0.0 — Revisão Quinquenal Vigente |
+| **Classificação de Acesso** | Conteúdo Didático Restrito aos Treinamentos e Capacitações da União Serviços Médicos |

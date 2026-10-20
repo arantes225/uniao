@@ -1,0 +1,325 @@
+# UNIÃO SERVIÇOS MÉDICOS
+## DIRETORIA DE ENSINO, PESQUISA E INSTRUÇÃO PRÉ-HOSPITALAR
+
+---
+
+**MÓDULO A05 — EMERGÊNCIAS EM ATIVIDADES AQUÁTICAS E AO AR LIVRE**
+*Biblioteca Curricular: Emergências em Academias (Fitness & Sports Emergency)*
+*Versão Editorial: 1.0.0 — Padrão Editorial USM*
+*Carga Horária Teórica: 1 hora | Público-alvo: Professores de natação, guarda-vidas, treinadores de corrida de rua, guias de trilha e instrutores esportivos*
+
+---
+
+## SUMÁRIO
+
+- [Seção 1 — Em 30 Segundos](#seção-1--em-30-segundos)
+- [Seção 2 — Objetivos de Aprendizagem](#seção-2--objetivos-de-aprendizagem)
+- [Seção 3 — Introdução e a Singularidade do Meio Aquático e Natural](#seção-3--introdução-e-a-singularidade-do-meio-aquático-e-natural)
+- [Seção 4 — Fisiopatologia do Afogamento e da Exposição Térmica Ambiental](#seção-4--fisiopatologia-do-afogamento-e-da-exposição-térmica-ambiental)
+- [Seção 5 — Desenvolvimento dos Subtemas](#seção-5--desenvolvimento-dos-subtemas)
+  - [5.1 Segurança e Prevenção Ativa em Piscinas de Clubes e Academias](#51-segurança-e-prevenção-ativa-em-piscinas-de-clubes-e-academias)
+  - [5.2 Prevenção de Afogamentos e Ralos de Sucção em Ambientes Coletivos](#52-prevenção-de-afogamentos-e-ralos-de-sucção-em-ambientes-coletivos)
+  - [5.3 Resposta Inicial ao Afogamento: Cadeia de Sobrevivência e Ventilação](#53-resposta-inicial-ao-afogamento-cadeia-de-sobrevivência-e-ventilação)
+  - [5.4 Acidentes em Trilhas, Corridas Rústicas e Áreas Remotas](#54-acidentes-em-trilhas-corridas-rústicas-e-áreas-remotas)
+  - [5.5 Exposição a Temperaturas Extremas: Hipotermia e Insolação ao Ar Livre](#55-exposição-a-temperaturas-extremas-hipotermia-e-insolação-ao-ar-livre)
+  - [5.6 Organização do Resgate Seguro e Evacuação em Áreas Naturais](#56-organização-do-resgate-seguro-e-evacuação-em-áreas-naturais)
+- [Seção 6 — Quadros Práticos e Classificação Clínica do Afogamento (Szpilman)](#seção-6--quadros-práticos-e-classificação-clínica-do-afogamento-szpilman)
+- [Seção 7 — Erros Frequentes e Mitos no Resgate Aquático e em Trilhas](#seção-7--erros-frequentes-e-mitos-no-resgate-aquático-e-em-trilhas)
+- [Seção 8 — Estudo de Caso Prático Contextualizado (Afogamento em Piscina Térmica)](#seção-8--estudo-de-caso-prático-contextualizado-afogamento-em-piscina-térmica)
+- [Seção 9 — Pulo do Gato](#seção-9--pulo-do-gato)
+- [Seção 10 — Mapa Mental de Resgate Aquático e ao Ar Livre](#seção-10--mapa-mental-de-resgate-aquático-e-ao-ar-livre)
+- [Seção 11 — O Que Você Precisa Lembrar](#seção-11--o-que-você-precisa-lembrar)
+- [Seção 12 — Referências Bibliográficas e Metadados Editoriais](#seção-12--referências-bibliográficas-e-metadados-editoriais)
+
+---
+
+## SEÇÃO 1 — EM 30 SEGUNDOS
+
+> **VISÃO RÁPIDA DE SOBREVIVÊNCIA AQUÁTICA E EM TRILHAS**
+> 1. **Afogamento é primariamente um evento respiratório:** Diferente da PCR cardíaca de adultos no salão de musculação (onde as compressões vêm primeiro), **a PCR por afogamento exige o fornecimento imediato de ventilações de resgate (5 ventilações iniciais)** para reverter a hipóxia alveolar antes das compressões [1, 2].
+> 2. **Afogamento é silencioso:** A vítima em apuros aquáticos quase nunca grita por socorro nem acena com as mãos (mito do cinema). O instinto de sobrevivência força a boca a afundar e reaparecer apenas para tentar respirar, com braços batendo lateralmente na água de forma ineficaz [2, 3].
+> 3. **Prioridade do resgatador: autoproteção:** *"Vítima molhada, socorrista seco"*. Priorize resgate com alcance de vara, arremesso de boia ou corda. Nunca pule na água para abraçar uma pessoa em pânico se você não tiver treinamento e flutuador [2, 4].
+> 4. **Cuidado com o ralo da piscina:** A sucção mecânica de ralos de fundo sem grade anti-aprisionamento pode prender cabelos ou membros com força superior a 200 kg. O desligamento manual da bomba deve estar visível e acessível [5, 6].
+> 5. **Acidentes em trilhas exigem autossuficiência:** Em áreas remotas sem sinal de celular, uma entorse de tornozelo ou picada de animal peçonhento pode levar horas para receber resgate. Tenha sempre comunicação via rádio/satélite, kit de trauma e agasalho térmico [7, 8].
+> 6. **Hipotermia mata mesmo em água a 20 ºC:** A água conduz calor 25 vezes mais rápido que o ar. Nadadores exaustos ou vítimas de quedas em rios perdem temperatura corporal rapidamente, entrando em confusão mental e rigidez muscular [1, 9].
+
+---
+
+## SEÇÃO 2 — OBJETIVOS DE APRENDIZAGEM
+
+Ao concluir o estudo deste módulo, o instrutor aquático e o treinador ao ar livre serão capazes de:
+
+1. **Compreender a fisiopatologia da asfixia por submersão líquida**, identificando as alterações no surfactante pulmonar e a dinâmica da hipóxia.
+2. **Aplicar a Classificação de Afogamento de Szpilman (Graus 1 a 6)**, associando cada nível clínico à conduta terapêutica apropriada.
+3. **Executar a Cadeia de Sobrevivência do Afogamento e a reanimação respiratória primária**, operando o DEA com segurança em ambientes molhados.
+4. **Mapear e neutralizar riscos estruturais em parques aquáticos e piscinas**, com foco em sistemas anti-sucção de ralos e desníveis de profundidade.
+5. **Planejar expedições de trilha e eventos de corrida rústica**, estabelecendo rotas de fuga, pontos de corte e kits de primeiros socorros para áreas remotas.
+6. **Manejar quadros de hipotermia acidental e insolação ao ar livre**, executando o reaquecimento passivo e a evacuação de vítimas instáveis.
+
+---
+
+## SEÇÃO 3 — INTRODUÇÃO E A SINGULARIDADE DO MEIO AQUÁTICO E NATURAL
+
+As atividades esportivas praticadas em meios líquidos (natação, hidroginástica, polo aquático) e em ambientes abertos ao ar livre (corridas de rua, ultramaratonas, trilhas ecológicas e montanhismo) oferecem benefícios psicomotores incomparáveis, mas impõem desafios de segurança completamente distintos dos ambientes fechados de uma academia de musculação [1, 2].
+
+No ambiente aquático, a densidade do meio e a barreira líquida exigem que qualquer intervenção seja precedida de retirada segura da vítima para a borda seca antes que o suporte de vida convencional possa ser iniciado. Dados da Sociedade Brasileira de Salvamento Aquático (SOBRASA) revelam que o afogamento é responsável por mais de 5.700 mortes anuais no Brasil, sendo a segunda causa de morte acidental em crianças de 1 a 4 anos e a terceira entre jovens de 15 a 19 anos [2, 3].
+
+Nas atividades ao ar livre e em trilhas ecológicas, o fator complicador crítico é a **distância e o tempo de resposta das equipes públicas de resgate (SAMU 192 e Bombeiros 193)**. Se no centro da cidade a ambulância chega entre 8 e 15 minutos, em uma trilha florestal ou serra o resgate técnico pode demorar de 2 a 6 horas para acessar o local. Nesses cenários, a sobrevivência da vítima depende integralmente da autossuficiência técnica e dos suprimentos portados pelo guia esportivo e pela equipe de apoio [7, 8].
+
+---
+
+## SEÇÃO 4 — FISIOPATOLOGIA DO AFOGAMENTO E DA EXPOSIÇÃO TÉRMICA AMBIENTAL
+
+A fisiopatologia das emergências em meios naturais exige compreensão profunda dos impactos da água e do clima no corpo humano [1, 2, 9]:
+
+```
++---------------------------------------------------------------------------------+
+|                    FISIOPATOLOGIA DO PROCESSO DE AFOGAMENTO                     |
+|                                                                                 |
+|  [ SUBMERSÃO ACIDENTAL ] -> Luta na superfície com retenção voluntária da resp. |
+|            |                                                                    |
+|            V                                                                    |
+|  [ PONTO DE RUPTURA ] -> PCO2 sobe no sangue -> Estímulo respiratório forçado  |
+|            |                                                                    |
+|            V                                                                    |
+|  [ ASPIRAÇÃO DE LÍQUIDO ] -> Água penetra na laringe, traqueia e alvéolos       |
+|            |                                                                    |
+|            +--> Laringoespasmo reflexo temporário (< 10% dos casos)             |
+|            |                                                                    |
+|            +--> Destruição e Lavagem do Surfactante Pulmonar                    |
+|                 - Colapso alveolar maciço (atelectasia)                         |
+|                 - Shunt intrapulmonar grave (sangue passa sem oxigenar)         |
+|                 - Hipóxia cerebral e miocárdica severa                          |
+|                 - Bradicardia reflexa -> Fibrilação Ventricular / Assistolia   |
++---------------------------------------------------------------------------------+
+```
+
+### 4.1 Água Doce vs. Água Salgada: O Mito Histórico Superado
+Durante décadas, a literatura médica clássica postulava diferenças marcantes entre o afogamento em água doce (que teoricamente causaria hemodiluição e hemólise) e em água salgada (que causaria edema pulmonar por osmose).
+- **Consenso Científico Atual:** Pequenas quantidades aspiradas de líquido (menos de 1 a 3 ml/kg de peso corporal) são suficientes para destruir o surfactante pulmonar e provocar hipóxia letal, **independentemente da salinidade da água**.
+- O tratamento pré-hospitalar é rigorosamente idêntico: **foco total na oxigenação alveolar e ventilações de resgate precoces** [1, 2].
+
+### 4.2 O Choque Térmico e a Hipotermia Aquática
+A água possui capacidade térmica colossal: rouba calor do corpo humano **25 vezes mais rápido que o ar na mesma temperatura**.
+- A queda da temperatura corporal central abaixo de 35 ºC (**Hipotermia**) inibe a coordenação neuromuscular: os dedos endurecem, a força de nado decai para zero e a vítima afunda mesmo sabendo nadar perfeitamente (*Natação Inibida por Frio*).
+- Abaixo de 30 ºC de temperatura central, o coração torna-se eletricamente instável, podendo disparar Fibrilação Ventricular espontânea ao menor movimento brusco [1, 9].
+
+---
+
+## SEÇÃO 5 — DESENVOLVIMENTO DOS SUBTEMAS
+
+### 5.1 Segurança e Prevenção Ativa em Piscinas de Clubes e Academias
+
+A prevenção é o pilar que evita 99% dos óbitos em ambientes aquáticos de treinamento [2, 5]:
+- **A Regra do Alcance das Mãos para Crianças:** Em aulas infantis ou recreação aquática, a distância entre o instrutor ou responsável e a criança menor de 5 anos nunca deve exceder **o comprimento de um braço estendido**. Crianças afundam em silêncio absoluto em menos de 10 segundos.
+- **Sinalização Visual Obrigatória de Profundidade:** Bordas de piscinas devem exibir de forma indelével e contrastante a profundidade em metros em múltiplos pontos (ex.: "0,90 m", "1,40 m", "2,10 m").
+- **Proibição de Saltos de Cabeça em Áreas Rasas:** Mergulhar de ponta ("bico") em piscinas com menos de 1,80 m de profundidade é a causa número um de traumatismo raquimedular (TRM) esportivo com tetraplegia permanente por impacto do crânio contra o fundo da piscina [3, 5].
+
+---
+
+### 5.2 Prevenção de Afogamentos e Ralos de Sucção em Ambientes Coletivos
+
+O aprisionamento em ralos de fundo de piscinas é um mecanismo devastador de afogamento em academias e condomínios [5, 6]:
+- **Mecanismo da Sucção:** As bombas de circulação de água geram uma sucção de vácuo hidrodinâmico violenta no ralo de fundo. Quando o cabelo comprido de um aluno ou seu membro é sugado para o interior da tubulação, a força de retenção pode ultrapassar 200 a 300 kgf, tornando humanamente impossível desvencilhar a vítima puxando-a para cima.
+- **Requisitos Mandatórios da Lei Federal nº 14.327/2022 (Segurança em Piscinas):**
+  - **Tampas de Ralo Anti-Aprisionamento (Não Bloqueáveis):** Grades com desenho convexo que impedem o vácuo mesmo se um corpo cobrir parte da superfície.
+  - **Sistema de Ralos Múltiplos:** Mínimo de dois ralos de fundo interligados e espaçados por pelo menos 1,5 metro (se um for bloqueado, o fluxo desvia para o outro sem sucção).
+  - **Botão de Desligamento de Emergência da Bomba:** Botão do tipo "cogumelo" vermelho, de corte elétrico imediato, instalado na parede da piscina em local visível e acessível a qualquer pessoa [5, 6].
+
+---
+
+### 5.3 Resposta Inicial ao Afogamento: Cadeia de Sobrevivência e Ventilação
+
+A Cadeia de Sobrevivência do Afogamento da SOBRASA e Federação Internacional de Salvamento Aquático (ILS) estabelece 5 elos vitais [2, 3]:
+
+```
++---------------------------------------------------------------------------------+
+|                    CADEIA DE SOBREVIVÊNCIA DO AFOGAMENTO                        |
+|                                                                                 |
+|  1. PREVENÇÃO: Pratique natação segura; obedeça a regras e sinalizações.        |
+|  2. RECONHECER O AFOGAMENTO: Identifique a luta silenciosa na água.             |
+|  3. FORNECER FLUTUAÇÃO: Jogue boia, garrafa pet ou prancha; PARE O AFUNDAMENTO. |
+|  4. REMOVER DA ÁGUA: Retire a vítima de forma segura (sem virar nova vítima).   |
+|  5. SUPORTE MÉDICO: Ventile imediatamente se inconsciente; chame 192 / 193.     |
++---------------------------------------------------------------------------------+
+```
+
+#### A Grande Diferença na RCP do Afogado (As 5 Ventilações Iniciais):
+Na parada cardiorrespiratória clássica de adulto por infarto, o sangue possui oxigênio residual e o problema primário é a falta de bomba (compressão primeiro - C-A-B).
+- **NO AFOGAMENTO, O CORAÇÃO PAROU PORQUE FICOU SEM OXIGÊNIO (HIPÓXIA PURA):**
+- Ao retirar a vítima inconsciente da água para a borda seca, após constatar ausência de respiração normal, **FORNEÇA IMEDIATAMENTE 5 VENTILAÇÕES DE RESGATE** (utilizando máscara de bolso ou bolsa-válvula-máscara com filtro) [1, 2].
+- Em muitos casos de afogamento recente, as 5 ventilações oxigenam o sangue o suficiente para o coração retomar os batimentos espontâneos imediatamente!
+- Se a vítima permanecer sem pulso após as 5 ventilações, inicie ciclos de **30 compressões torácicas alternadas com 2 ventilações** [1, 2].
+
+#### Cuidados com o DEA em Vítimas Molhadas:
+- **Água conduz eletricidade:** Nunca dispare o choque com a vítima deitada em uma poça profunda de água ou com o tórax completamente molhado.
+- **Conduta Rápida:** Puxe a vítima para fora da borda molhada da piscina, passe uma toalha rapidamente para **secar a pele do peito** em 5 segundos, fixe as pás adesivas e opere o DEA normalmente [1, 2].
+
+---
+
+### 5.4 Acidentes em Trilhas, Corridas Rústicas e Áreas Remotas
+
+Atividades em áreas naturais expõem praticantes a terrenos irregulares e isolamento geográfico [7, 8]:
+- **Mapeamento Prévio e Janelas de Corte:** Definir horários máximos para atingir marcos na trilha. Se a equipe não atingir o ponto intermediário no horário previsto, abortar a subida e retornar antes do pôr do sol.
+- **Comunicação Redundante:** Onde não há sinal de telefonia celular (4G/5G), porte obrigatoriamente rádios comunicadores VHF/UHF de longo alcance e **dispositivos de mensagens via satélite** (tipo Garmin inReach ou SPOT) com botão de SOS georreferenciado [7].
+- **Kit de Suporte para Áreas Remotas (Wilderness First Aid):** Além de gazes e ataduras, incluir mantas térmicas aluminizadas para todos os membros da expedição, lanternas de cabeça com baterias extras, pastilhas de purificação de água e talas moldáveis leves [7, 8].
+
+---
+
+### 5.5 Exposição a Temperaturas Extremas: Hipotermia e Insolação ao Ar Livre
+
+Em ambientes externos, a termorregulação é desafiada pelo vento, umidade e radiação solar direta [1, 9]:
+
+#### Hipotermia ao Ar Livre:
+- Ocorre em noites frias, chuvas repentinas em trilhas ou imersão prolongada em rios e cachoeiras.
+- **Sinais Clínicos:** Tremores incontroláveis seguidos de fala arrastada, apatia, confusão mental e perda da capacidade de movimentar os dedos para abrir mochilas. Se a temperatura cair mais, os tremores cessam (sinal de esgotamento metabólico crítico).
+- **Manejo:** Trocar roupas molhadas por roupas secas imediatamente, envolver o corpo em **manta térmica aluminizada impermeável** (lado prateado voltado para o corpo para refletir a radiação infravermelha), proteger do vento e oferecer bebidas mornas açucaradas se a vítima estiver 100% consciente [1, 9].
+
+#### Insolação e Doenças do Calor em Corridas de Rua:
+- Hidratação planejada a cada 20 a 30 minutos em pontos de apoio com água e eletrólitos;
+- Uso de vestimentas técnicas respiráveis de cores claras e proteção solar com FPS elevado;
+- Monitoramento de atletas com marcha cambaleante nos quilômetros finais de maratonas [1].
+
+---
+
+### 5.6 Organização do Resgate Seguro e Evacuação em Áreas Naturais
+
+A evacuação de feridos em ambientes remotos é uma operação logística complexa [7, 8]:
+- **Sinalização do Ponto de Pouso de Helicóptero:** Em resgates aeromédicos em serras ou clareiras, escolha uma área plana de no mínimo 15 x 15 metros livre de árvores e fios de alta tensão. Remova objetos leves (mochilas, lonas) que possam ser sugados pelo rotor do helicóptero.
+- **Construção de Macas Improvisadas:** Utilização de bastões de caminhada resistentes transpassados pelas mangas invertidas de jaquetas corta-vento ou amarrados a lonas impermeáveis para transporte de vítimas que não conseguem caminhar [7, 8].
+
+---
+
+## SEÇÃO 6 — QUADROS PRÁTICOS E CLASSIFICAÇÃO CLÍNICA DO AFOGAMENTO (SZPILMAN)
+
+A SOBRASA e a literatura médica mundial adotam a **Classificação de Afogamento do Dr. David Szpilman**, que estratifica a gravidade do afogado e direciona o atendimento com precisão [2, 3]:
+
+| GRAU | QUADRO CLÍNICO APRESENTADO | CONDUTA DE PRIMEIROS SOCORROS | DESTINO DA VÍTIMA | MORTALIDADE |
+| :---: | :--- | :--- | :--- | :---: |
+| **Resgate** | Vítima tossindo, sem espuma na boca, consciente, sinais normais. | Repouso, aquecimento passivo, tranquilização. | Liberado no local com orientações. | 0% |
+| **Grau 1** | Tosse insistente, sem espuma na boca e nariz. Ausculta normal. | Aquecimento passivo, repouso sentado, conforto térmico. | Observação na borda; alta ou ambulatório. | 0% |
+| **Grau 2** | Pouca espuma na boca e nariz, respiração rápida. | Aquecimento passivo, oxigênio se disponível, decúbito elevado. | Internação hospitalar para observação. | 0,6% |
+| **Grau 3** | Muita espuma na boca e nariz; **PULSO RADIAL PALPÁVEL**. | Oxigênio em alto fluxo, posição lateral de segurança, 192. | **UTI Hospitalar urgente.** | 5,2% |
+| **Grau 4** | Muita espuma na boca e nariz; **SEM PULSO RADIAL** (hipotensão). | Oxigênio, posição lateral, vigilância estrita de PCR, 192. | **UTI Hospitalar com suporte avançado.** | 19,4% |
+| **Grau 5** | Parada respiratória isolada; **TEM PULSO CAROTÍDEO**. | **Ventilação de resgate imediata (boca-máscara) até voltar.** | **Suporte Avançado do SAMU 192.** | 44% |
+| **Grau 6** | **PARADA CARDIORRESPIRATÓRIA (SEM PULSO E SEM RESPIRAÇÃO).** | **5 Ventilações Iniciais + RCP 30:2 contínua + Uso do DEA.** | **SAMU 192 com transporte com manobras.** | 93% |
+
+---
+
+## SEÇÃO 7 — ERROS FREQUENTES E MITOS NO RESGATE AQUÁTICO E EM TRILHAS
+
+1. **Tentar retirar água dos pulmões apertando a barriga da vítima:** A manobra de comprimir o estômago ou virar a pessoa de cabeça para baixo para "escorrer água" é **completamente inútil e perigosa**. A água ingerida no estômago é vomitada, entra nas vias aéreas e bloqueia a ventilação. **Não tente drenar água; forneça ar!** [1, 2].
+2. **Pular na água para salvar alguém sem flutuador:** Vítimas em pânico possuem força descontrolada e afundam o socorrista para tentar manter a própria cabeça fora d'água. Ofereça boia, vara ou corda da borda seca [2, 4].
+3. **Não ventilar a vítima de PCR por afogamento:** Aplicar apenas massagem cardíaca sem respiração (*Hands-Only*) em afogados é erro grave: o miocárdio da vítima parou por hipóxia e não reanimará sem oxigênio nos alvéolos [1, 2].
+4. **Fazer torniquete ou sugar veneno em picadas de cobra na trilha:** Sugar veneno na boca é mito de cinema que infecta a ferida; fazer torniquete necrosa o membro. A conduta correta é lavar com água e sabão, manter o membro em repouso e evacuar para o hospital com soro antiofídico [7].
+5. **Permitir que o afogado de Grau 2 ou 3 vá embora para casa dirigindo:** Pacientes com água nos pulmões podem desenvolver edema pulmonar tardio e insuficiência respiratória fatal de 6 a 24 horas após o afogamento [2, 3].
+
+---
+
+## SEÇÃO 8 — ESTUDO DE CASO PRÁTICO CONTEXTUALIZADO (AFOGAMENTO EM PISCINA TÉRMICA)
+
+### Cenário: Submersão Silenciosa em Aula de Hidroginástica
+Na Academia Aquática Ondas, durante uma aula de hidroginástica às 10h da manhã em piscina semiolímpica aquecida (profundidade de 1,50 m), a aluna Dona Teresa, 68 anos, sofre um episódio de síncope súbita na água e submerge sem emitir nenhum ruído. Cerca de 40 segundos depois, o professor Marcos nota um vulto estático no fundo da raia 3.
+
+### Aplicação da Abordagem Integrada USM:
+1. **Entrada Segura e Retirada:** Marcos salta na água com um flutuador tipo *rescue tube*, alcança Dona Teresa, mantém sua cabeça para fora d'água e a conduz rapidamente até a borda da piscina. Com o auxílio do estagiário de natação que estava na borda, retiram a vítima horizontalmente para o piso antiderrapante seco.
+2. **Avaliação da Vítima:**
+   - Dona Teresa não responde aos chamados verbais nem a estímulos táteis.
+   - Presença de quantidade moderada de espuma esbranquiçada saindo pelas narinas e boca.
+   - Ausência de movimentos respiratórios regulares e ausência de pulso central (Grau 6 de Szpilman - Parada Cardiorrespiratória por Afogamento).
+3. **Execução da RCP Especializada de Afogamento:**
+   - Marcos posiciona a máscara de bolso (Pocket Mask) com válvula unidirecional sobre a face da vítima, veda com as duas mãos elevando o queixo e aplica **5 ventilações de resgate lentas e profundas**. Observa a expansão satisfatória do tórax.
+   - Imediatamente após a quinta ventilação, inicia ciclos de **30 compressões torácicas profundas seguidas de 2 ventilações**.
+4. **Instalação do DEA:**
+   - O estagiário corre à recepção e retorna com o DEA e toalhas secas.
+   - Seca o tórax de Dona Teresa em 4 segundos com a toalha de microfibra e afixa os eletrodos adesivos nas posições recomendadas.
+   - O DEA analisa o ritmo: *"Ritmo não chocável (Assistolia), continue a RCP"*.
+5. **Continuidade da Ressuscitação e Retorno:**
+   - Marcos mantém a RCP 30:2 com trocas a cada 2 minutos.
+   - Ao término do segundo ciclo de compressões, Dona Teresa tosse vigorosamente, expele secreção aquosa pela boca e apresenta respiração espontânea presente.
+   - É colocada na Posição Lateral de Segurança sobre uma toalha seca para drenagem de secreções, mantida aquecida com a manta térmica aluminizada.
+6. **Desfecho:** A equipe do SAMU 192 chega em 8 minutos, assume a paciente consciente com saturação de 92%, administra oxigenoterapia sob máscara com reservatório e a transporta ao hospital. Dona Teresa recuperou-se plenamente sem déficit cognitivo devido à oxigenação imediata com as 5 ventilações iniciais.
+
+---
+
+## SEÇÃO 9 — PULO DO GATO
+
+> **MACETES OPERACIONAIS DE RESGATE AQUÁTICO E AO AR LIVRE**
+>
+> 1. **A Garrafa PET de Emergência:** Se você estiver à beira de uma represa ou lago e avistar alguém afundando a 10 metros da margem sem ter uma boia profissional, pegue uma garrafa plástica PET de 2 litros vazia, feche bem a tampa, passe uma volta de barbante ou cadarço no gargalo e arremesse na direção da vítima. Uma simples garrafa de refrigerante vazia fornece mais de 2 kg de empuxo hidrostático flutuante, o suficiente para manter a cabeça de um adulto de 90 kg fora d'água por horas [2, 4].
+> 2. **O Teste da Válvula da Pocket Mask no Afogado:** Ao ventilar um afogado que possui água nas vias aéreas, a resistência ventilatória pulmonar é maior. Vede a máscara com força redobrada com as duas mãos e sopre de forma suave por 1 segundo inteiro. Não force como se estivesse estourando um balão, pois a pressão excessiva joga o ar para o estômago, provocando vômito de água gástrica para a máscara [1, 2].
+> 3. **O Saco Plástico Térmico em Trilhas Frias:** Em casos de hipotermia com pés congelados em trilhas encharcadas, retire a meia molhada, coloque uma sacola plástica seca sobre o pé limpo e calce a meia seca por cima antes do tênis. A barreira plástica bloqueia a evaporação convectiva do calor corporal da sola dos pés [7, 9].
+
+---
+
+## SEÇÃO 10 — MAPA MENTAL DE RESGATE AQUÁTICO E AO AR LIVRE
+
+```
+                        EMERGÊNCIAS AQUÁTICAS E AO AR LIVRE
+                                         │
+        ┌────────────────────────────────┴────────────────────────────────┐
+        │                                                                 │
+  [ MEIO AQUÁTICO / PISCINA ]                                      [ ÁREAS AO AR LIVRE ]
+        │                                                                 │
+  ┌─────┴─────┐                                                    ┌──────┴──────┐
+  │ Resgate   │                                                    │ Trilhas e   │
+  │ Seguro da │                                                    │ Corridas    │
+  │ Borda Seca│                                                    └──────┬──────┘
+  └─────┬─────┘                                                           │
+        │                                                    ┌────────────┴────────────┐
+        ▼                                                    ▼                         ▼
+  Avaliar Grau Szpilman                                 Hipotermia                  Insolação / Calor
+        │                                               Trocar roupas               Hidratação com
+  ┌─────┴─────────────────────────┐                     Manta térmica               eletrólitos e
+  ▼                               ▼                     aluminizada                 resfriamento
+Graus 1 a 5:                Grau 6: PCR Afogado         Bebidas mornas              sombra
+Oxigênio + PLS              5 Ventilações Iniciais!
+Aquecimento                 depois RCP 30:2
+Chamar 192                  Secar tórax + DEA
+```
+
+---
+
+## SEÇÃO 11 — O QUE VOCÊ PRECISA LEMBRAR
+
+- Na PCR por afogamento, forneça obrigatoriamente 5 ventilações de resgate iniciais antes das compressões torácicas.
+- O afogamento é silencioso; não espere pedidos de socorro extravagantes para identificar alguém em perigo na água.
+- Priorize sempre o resgate sem entrar na água (use varas, boias e cordas).
+- Piscinas coletivas devem possuir ralos anti-aprisionamento e botão de emergência da bomba de fácil acesso.
+- Em afogados, nunca tente retirar água dos pulmões com compressões no abdômen; isso provoca vômito e asfixia.
+- Para operar o DEA com segurança, puxe a vítima para fora da água e seque rapidamente a pele do tórax.
+- Expedições ao ar livre exigem comunicação redundante, rotas de fuga e kit para manejo de hipotermia e trauma.
+
+---
+
+## SEÇÃO 12 — REFERÊNCIAS BIBLIOGRÁFICAS E METADADOS EDITORIAIS
+
+### Referências Científicas e Normativas
+
+1. AMERICAN HEART ASSOCIATION (AHA). **2020 American Heart Association Guidelines for Cardiopulmonary Resuscitation and Emergency Cardiovascular Care: Special Circumstances of Resuscitation**. *Circulation*, v. 142, suppl. 2, p. S506-S532, 2020.
+2. SZPILMAN, D. et al. **Drowning**. *New England Journal of Medicine*, v. 366, n. 22, p. 2102-2110, 2012. Atualizado em 2022.
+3. SOCIEDADE BRASILEIRA DE SALVAMENTO AQUÁTICO (SOBRASA). **Manual de Emergências Aquáticas e Prevenção de Afogamentos**. Rio de Janeiro: SOBRASA, 2021.
+4. INTERNATIONAL LIFE SAVING FEDERATION (ILS). **Drowning Prevention and Water Safety Guidelines**. Leuven, Bélgica: ILS, 2020.
+5. BRASIL. **Lei Federal nº 14.327, de 14 de abril de 2022**. Dispõe sobre os requisitos de segurança para a fabricação, construção, instalação e operação de piscinas ou similares. Brasília, DF: Diário Oficial da União, 2022.
+6. ASSOCIAÇÃO BRASILEIRA DE NORMAS TÉCNICAS (ABNT). **ABNT NBR 10339:2018: Piscina — Projeto, execução e garantia da segurança no uso**. Rio de Janeiro: ABNT, 2018.
+7. WILDERNESS MEDICAL SOCIETY (WMS). **Wilderness Medical Society Clinical Practice Guidelines for the Prevention and Treatment of Heat Illness and Hypothermia**. *Wilderness & Environmental Medicine*, v. 30, suppl. 4, p. S47-S69, 2019.
+8. NATIONAL ASSOCIATION OF SEARCH AND RESCUE (NASAR). **Fundamentals of Search and Rescue**. 2. ed. Burlington, MA: Jones & Bartlett Learning, 2019.
+9. DOW, J. et al. **Wilderness Medical Society Clinical Practice Guidelines for the Out-of-Hospital Evaluation and Treatment of Accidental Hypothermia: 2019 Update**. *Wilderness & Environmental Medicine*, v. 30, suppl. 4, p. S47-S69, 2019.
+10. CONSELHO FEDERAL DE EDUCAÇÃO FÍSICA (CONFEF). **Resolução CONFEF nº 307/2015: Código de Ética dos Profissionais de Educação Física**. Rio de Janeiro: CONFEF, 2015.
+11. BRASIL. **Decreto-Lei nº 2.848, de 7 de dezembro de 1940**. Código Penal Brasileiro (Art. 135 - Omissão de Socorro). Brasília, DF: Presidência da República, 1940.
+12. MINISTÉRIO DA SAÚDE (BRASIL). **Portaria GM/MS nº 2.048, de 5 de novembro de 2002**. Regulamento Técnico dos Sistemas Estaduais de Urgência e Emergência. Brasília, DF: Ministério da Saúde, 2002.
+
+---
+
+### Metadados Editoriais Institucionais
+
+| CAMPO | ESPECIFICAÇÃO TÉCNICA |
+| :--- | :--- |
+| **Identificador do Módulo** | MÓDULO A05 — Emergências em Atividades Aquáticas e ao Ar Livre |
+| **Biblioteca Curricular** | Emergências em Academias (*Fitness & Sports Emergency*) |
+| **Instituição Responsável** | União Serviços Médicos — Ensino e Instrução Pré-Hospitalar |
+| **Padrão Gráfico e Editorial** | Diretrizes Editoriais Integradas LURIA / USM |
+| **Status Editorial** | Aguardando Aprovação Científica |
+| **Data da Revisão Técnica** | Outubro de 2026 |
+| **Versão Curricular** | Versão 1.0.0 — Revisão Quinquenal Vigente |
+| **Classificação de Acesso** | Conteúdo Didático Restrito aos Treinamentos e Capacitações da União Serviços Médicos |
