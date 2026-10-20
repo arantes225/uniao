@@ -15,5 +15,9 @@ export default defineConfig({
     host: '0.0.0.0',
     port: 3000,
     open: false,
+    watch: {
+      // Evita EBUSY ao monitorar arquivos pesados/bloqueados fora do código-fonte
+      ignored: ['**/apostilas/**', '**/dist/**'],
+    },
   },
 });
