@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useMemo } from 'react';
 import { BookOpen, FileDown, CheckCircle2, Eye, X, Search, Printer, Layers } from 'lucide-react';
 import { INITIAL_LIBRARIES, INITIAL_40_MODULES, LearningModule } from '../../data/curriculumData';
 import { BookletRenderer } from '../../components/common/BookletRenderer';
@@ -13,14 +13,28 @@ export const MaterialsPage: React.FC = () => {
   const [loadingMd, setLoadingMd] = useState<boolean>(false);
   const [studiedCodes, setStudiedCodes] = useState<string[]>(['C01', 'C02', 'H01']);
 
-  const filteredModules = INITIAL_40_MODULES.filter(mod => {
-    const matchesLib = selectedLibraryId === 'all' || mod.libraryId === selectedLibraryId;
-    const matchesSearch =
-      mod.code.toLowerCase().includes(searchTerm.toLowerCase()) ||
-      mod.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-      mod.description.toLowerCase().includes(searchTerm.toLowerCase());
-    return matchesLib && matchesSearch;
-  });
+  // Performance Optimization: O(1) Map lookup for library details instead of O(N) .find() inside map loops
+  const libraryMap = useMemo(() => {
+    const map = new Map<string, typeof INITIAL_LIBRARIES[0]>();
+    INITIAL_LIBRARIES.forEach(lib => map.set(lib.id, lib));
+    return map;
+  }, []);
+
+  // Performance Optimization: Memoize filtered modules list to prevent re-filtering
+  // on unrelated state updates (such as toggleStudied or activeModule change).
+  const filteredModules = useMemo(() => {
+    const term = searchTerm.toLowerCase().trim();
+    return INITIAL_40_MODULES.filter(mod => {
+      const matchesLib = selectedLibraryId === 'all' || mod.libraryId === selectedLibraryId;
+      if (!matchesLib) return false;
+      if (!term) return true;
+      return (
+        mod.code.toLowerCase().includes(term) ||
+        mod.title.toLowerCase().includes(term) ||
+        mod.description.toLowerCase().includes(term)
+      );
+    });
+  }, [selectedLibraryId, searchTerm]);
 
   const handleOpenBooklet = async (mod: LearningModule) => {
     setActiveModule(mod);
@@ -121,7 +135,7 @@ export const MaterialsPage: React.FC = () => {
                 : theme === 'dark'
                 ? 'bg-slate-900 text-slate-400 hover:text-white border border-white/10'
                 : 'bg-white text-slate-600 hover:text-slate-950 border border-slate-200'
-            }`}
+          }`}
           >
             {lib.name} ({lib.modulesCount})
           </button>
@@ -131,7 +145,7 @@ export const MaterialsPage: React.FC = () => {
       {/* Grid das 40 Apostilas */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {filteredModules.map(mod => {
-          const lib = INITIAL_LIBRARIES.find(l => l.id === mod.libraryId);
+          const lib = libraryMap.get(mod.libraryId);
           const isStudied = studiedCodes.includes(mod.code);
 
           return (
