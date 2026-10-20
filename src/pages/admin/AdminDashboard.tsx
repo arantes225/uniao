@@ -276,6 +276,7 @@ export const AdminDashboard: React.FC = () => {
   const [certTitle, setCertTitle] = useState(PRESET_MODELS[0].title);
   const [certWorkload, setCertWorkload] = useState(PRESET_MODELS[0].workloadHours);
   const [certValidity, setCertValidity] = useState(PRESET_MODELS[0].validityMonths);
+  const [certPracticalDate, setCertPracticalDate] = useState('24/10/2026');
   const [certLegal, setCertLegal] = useState(PRESET_MODELS[0].legalFramework);
   const [certInstructor, setCertInstructor] = useState(PRESET_MODELS[0].instructorName);
   const [certInstructorRole, setCertInstructorRole] = useState(PRESET_MODELS[0].instructorRole);
@@ -1354,9 +1355,9 @@ export const AdminDashboard: React.FC = () => {
                     />
                   </div>
 
-                  <div className="grid grid-cols-2 gap-4">
+                  <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
                     <div className="space-y-1.5">
-                      <label className="text-xs font-semibold text-slate-300">Carga Horária (Horas)</label>
+                      <label className="text-xs font-semibold text-slate-300">Carga Horária (h)</label>
                       <input
                         type="number"
                         required
@@ -1366,13 +1367,24 @@ export const AdminDashboard: React.FC = () => {
                       />
                     </div>
                     <div className="space-y-1.5">
-                      <label className="text-xs font-semibold text-slate-300">Validade da Recertificação (Meses)</label>
+                      <label className="text-xs font-semibold text-slate-300">Validade (Meses)</label>
                       <input
                         type="number"
                         required
                         value={certValidity}
                         onChange={(e) => setCertValidity(Number(e.target.value))}
                         className="w-full px-3.5 py-2.5 rounded-xl bg-slate-950 border border-white/10 text-white text-xs font-mono focus:outline-none focus:border-uniao-500"
+                      />
+                    </div>
+                    <div className="space-y-1.5">
+                      <label className="text-xs font-semibold text-slate-300">Data Atividade Presencial</label>
+                      <input
+                        type="text"
+                        required
+                        value={certPracticalDate}
+                        onChange={(e) => setCertPracticalDate(e.target.value)}
+                        placeholder="Ex: 24/10/2026"
+                        className="w-full px-3.5 py-2.5 rounded-xl bg-slate-950 border border-teal-500/30 text-teal-300 text-xs font-mono focus:outline-none focus:border-uniao-500"
                       />
                     </div>
                   </div>
@@ -2146,7 +2158,7 @@ export const AdminDashboard: React.FC = () => {
                         {previewStudentName}
                       </div>
                       <p className="text-xs sm:text-sm text-slate-300 leading-relaxed font-light mt-3">
-                        concluiu com aproveitamento integral a formação técnica em saúde, compreendendo estudos teóricos dirigidos, avaliações formativas, simulação clínica de urgência e estação prática presencial, totalizando a carga horária de <strong className="text-teal-300 font-bold">{certWorkload} horas</strong>.
+                        concluiu com aproveitamento integral a formação técnica em saúde, compreendendo estudos teóricos dirigidos, avaliações formativas, simulação clínica de urgência e estação prática presencial realizada em <strong className="text-teal-300 font-bold">{certPracticalDate}</strong>, totalizando a carga horária de <strong className="text-teal-300 font-bold">{certWorkload} horas</strong>.
                       </p>
                     </div>
 
