@@ -1,11 +1,12 @@
-import React, { useState } from 'react';
-import { NavLink } from 'react-router-dom';
+import React, { useState, useEffect } from 'react';
+import { NavLink, Link } from 'react-router-dom';
 import { 
   LayoutDashboard, Video, BookOpen, HelpCircle, 
   Stethoscope, Award, ChevronLeft, ChevronRight, 
-  CalendarCheck
+  CalendarCheck, ShieldAlert
 } from 'lucide-react';
 import { useTheme } from '../../context/ThemeContext';
+import { supabase } from '../../services/supabase/client';
 
 interface StudentSidebarProps {
   collapsed?: boolean;
@@ -14,7 +15,33 @@ interface StudentSidebarProps {
 
 export const StudentSidebar: React.FC<StudentSidebarProps> = () => {
   const [collapsed, setCollapsed] = useState(false);
+  const [isAdmin, setIsAdmin] = useState(false);
   const { theme } = useTheme();
+
+  // Verifica se o usuário autenticado atual possui perfil de administrador
+  useEffect(() => {
+    let isMounted = true;
+    async function checkAdminStatus() {
+      try {
+        const { data: { user } } = await supabase.auth.getUser();
+        if (!user) return;
+
+        const { data: staffData } = await supabase
+          .from('platform_staff')
+          .select('role')
+          .eq('user_id', user.id)
+          .maybeSingle();
+
+        if (isMounted && staffData && staffData.role === 'admin') {
+          setIsAdmin(true);
+        }
+      } catch (err) {
+        console.error('Erro ao verificar perfil admin:', err);
+      }
+    }
+    checkAdminStatus();
+    return () => { isMounted = false; };
+  }, []);
 
   const navigationItems = [
     {
@@ -64,7 +91,7 @@ export const StudentSidebar: React.FC<StudentSidebarProps> = () => {
 
   return (
     <aside
-      className={`relative flex flex-col shrink-0 border-r transition-all duration-300 z-30 ${
+      className={`h-full flex flex-col shrink-0 border-r transition-all duration-300 ${
         collapsed ? 'w-20' : 'w-64'
       } ${
         theme === 'dark' 
@@ -149,6 +176,24 @@ export const StudentSidebar: React.FC<StudentSidebarProps> = () => {
           );
         })}
       </nav>
+
+      {/* Botão de Área do Admin: visível APENAS para administradores autenticados */}
+      {isAdmin && (
+        <div className={`p-3 border-t shrink-0 ${theme === 'dark' ? 'border-white/10' : 'border-slate-200'}`}>
+          <Link
+            to="/admin"
+            className={`flex items-center gap-3 px-3 py-2.5 rounded-xl text-xs font-bold transition-all ${
+              theme === 'dark'
+                ? 'text-amber-300 bg-amber-500/10 hover:bg-amber-500/20 border border-amber-500/30'
+                : 'text-amber-800 bg-amber-50 hover:bg-amber-100 border border-amber-200'
+            }`}
+            title={collapsed ? 'Área do Administrador' : undefined}
+          >
+            <ShieldAlert className="w-5 h-5 shrink-0 text-amber-500" />
+            {!collapsed && <span>Área do Admin</span>}
+          </Link>
+        </div>
+      )}
     </aside>
   );
 };

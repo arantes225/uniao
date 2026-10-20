@@ -15,13 +15,15 @@ export const StudentLayout: React.FC = () => {
         turma="Turma APH & Stop the Bleed — 2026" 
       />
 
-      {/* Área Principal: Menu lateral que abre/fecha embaixo + Conteúdo */}
-      <div className="flex-1 flex min-w-0 overflow-hidden">
-        {/* Menu Lateral Acadêmico (Apenas navegação, sem duplicar logo) */}
-        <StudentSidebar />
+      {/* Área Principal: Menu lateral que fica fixo/flutuante enquanto a página rola */}
+      <div className="flex-1 flex min-w-0 relative">
+        {/* Menu Lateral Acadêmico Fixo / Flutuante */}
+        <div className="sticky top-16 h-[calc(100vh-4rem)] shrink-0 z-30">
+          <StudentSidebar />
+        </div>
 
-        {/* Conteúdo Central */}
-        <main className="flex-1 overflow-y-auto">
+        {/* Conteúdo Central com scroll natural */}
+        <main className="flex-1 min-w-0 overflow-y-auto">
           <Outlet />
         </main>
       </div>
