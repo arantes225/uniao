@@ -11,11 +11,13 @@ import { supabase } from '../../services/supabase/client';
 interface StudentNavbarProps {
   studentName?: string;
   turma?: string;
+  onProfileUpdated?: (name: string) => void;
 }
 
 export const StudentNavbar: React.FC<StudentNavbarProps> = ({ 
-  studentName = 'Dr(a). Aluno(a) União',
-  turma = 'Turma APH & Stop the Bleed'
+  studentName = 'Aluno(a) União',
+  turma = 'Turma APH & Stop the Bleed',
+  onProfileUpdated
 }) => {
   const { theme, toggleTheme } = useTheme();
   const [dropdownOpen, setDropdownOpen] = useState(false);
@@ -252,11 +254,7 @@ export const StudentNavbar: React.FC<StudentNavbarProps> = ({
       <ProfileModal
         isOpen={profileModalOpen}
         onClose={() => setProfileModalOpen(false)}
-        initialData={{
-          name: studentName,
-          cpf: '123.456.789-00',
-          email: 'aluno@uniaoservicosmedicos.com.br'
-        }}
+        onSaved={onProfileUpdated}
       />
 
       {/* Modal Popup de Principais Dúvidas (5 Dúvidas e 5 Respostas) */}
