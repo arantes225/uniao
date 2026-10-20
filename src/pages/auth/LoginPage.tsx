@@ -155,7 +155,7 @@ export const LoginPage: React.FC = () => {
         <Link to="/" className="inline-flex items-center gap-3 group">
           <div className="w-14 h-14 rounded-2xl bg-white p-2.5 shadow-lg border border-slate-700 flex items-center justify-center">
             <img 
-              src="/brand/logo-uniao.png" 
+              src="./brand/logo-uniao.png" 
               alt="União Serviços Médicos" 
               className="w-full h-full object-contain"
             />

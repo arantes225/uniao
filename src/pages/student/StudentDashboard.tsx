@@ -149,7 +149,7 @@ export const StudentDashboard: React.FC = () => {
             : 'bg-gradient-to-r from-slate-900 via-slate-800 to-slate-900 text-white border-slate-700 shadow-slate-300/40'
         }`}>
           <div className="absolute right-0 bottom-0 opacity-10 translate-x-10 translate-y-10 pointer-events-none">
-            <img src="/brand/simbolo-cruz-uniao.png" alt="USM" className="w-96 h-96 object-contain" />
+            <img src="./brand/simbolo-cruz-uniao.png" alt="USM" className="w-96 h-96 object-contain" />
           </div>
 
           <div className="max-w-2xl relative z-10 space-y-4">

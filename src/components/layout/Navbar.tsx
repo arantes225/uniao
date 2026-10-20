@@ -23,7 +23,7 @@ export const Navbar: React.FC = () => {
           <Link to="/" className="flex items-center gap-4 group">
             <div className="w-13 h-13 sm:w-14 sm:h-14 flex items-center justify-center shrink-0">
               <img 
-                src="/brand/simbolo-cruz-uniao.png" 
+                src="./brand/simbolo-cruz-uniao.png" 
                 alt="Cruz União Serviços Médicos" 
                 className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-300 filter drop-shadow-[0_0_10px_rgba(255,255,255,0.25)]"
               />

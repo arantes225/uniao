@@ -14,7 +14,7 @@ export const Footer: React.FC = () => {
             <div className="flex items-center gap-3.5">
               <div className="w-13 h-13 sm:w-14 sm:h-14 flex items-center justify-center shrink-0">
                 <img 
-                  src="/brand/simbolo-cruz-uniao.png" 
+                  src="./brand/simbolo-cruz-uniao.png" 
                   alt="União Serviços Médicos" 
                   className="w-full h-full object-contain"
                 />

@@ -53,7 +53,7 @@ export const StudentNavbar: React.FC<StudentNavbarProps> = ({
               theme === 'dark' ? 'bg-slate-950/60' : 'bg-slate-50 border border-slate-200/80 shadow-xs'
             }`}>
               <img 
-                src={theme === 'light' ? "/brand/simbolo-cruz-uniao-verde.png" : "/brand/simbolo-cruz-uniao.png"} 
+                src={theme === 'light' ? "./brand/simbolo-cruz-uniao-verde.png" : "./brand/simbolo-cruz-uniao.png"} 
                 alt="União Serviços Médicos" 
                 className="w-full h-full object-contain group-hover:scale-105 transition-transform" 
               />

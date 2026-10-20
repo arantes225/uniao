@@ -681,7 +681,7 @@ export const AdminDashboard: React.FC = () => {
       <header className="bg-slate-900/90 backdrop-blur-md text-white h-16 px-6 flex items-center justify-between border-b border-white/10 sticky top-0 z-40">
         <div className="flex items-center gap-3">
           <div className="w-8 h-8 rounded-lg bg-slate-950 p-1 border border-white/10">
-            <img src="/brand/simbolo-cruz-uniao.png" alt="USM" className="w-full h-full object-contain" />
+            <img src="./brand/simbolo-cruz-uniao.png" alt="USM" className="w-full h-full object-contain" />
           </div>
           <div>
             <span className="font-extrabold text-sm tracking-tight">Painel de Gestão & Governança USM</span>
@@ -2098,7 +2098,7 @@ export const AdminDashboard: React.FC = () => {
                     {/* Topo: Logo União e Cruz */}
                     <div className="flex items-center justify-center gap-4">
                       <div className="w-12 h-12">
-                        <img src="/brand/simbolo-cruz-uniao-verde.png" alt="Cruz USM" className="w-full h-full object-contain" />
+                        <img src="./brand/simbolo-cruz-uniao-verde.png" alt="Cruz USM" className="w-full h-full object-contain" />
                       </div>
                       <div className="text-left font-sans">
                         <div className="text-xl font-black text-slate-950 tracking-tight leading-none">UNIÃO</div>

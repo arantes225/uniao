@@ -79,7 +79,7 @@ export const HeroSection: React.FC = () => {
                   {/* Ícone Branco Puro em Destaque Imponente */}
                   <div className="relative w-48 h-48 sm:w-60 sm:h-60 flex items-center justify-center">
                     <img 
-                      src="/brand/simbolo-cruz-uniao.png" 
+                      src="./brand/simbolo-cruz-uniao.png" 
                       alt="Cruz União Serviços Médicos" 
                       className="w-full h-full object-contain filter group-hover:scale-105 transition-transform duration-500 drop-shadow-[0_4px_20px_rgba(255,255,255,0.15)]"
                     />
