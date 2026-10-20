@@ -78,8 +78,8 @@ export const StudentSidebar: React.FC<StudentSidebarProps> = () => {
       highlight: true
     },
     {
-      label: 'Presença Presencial',
-      path: '/aluno/frequencia',
+      label: 'Presencial (Presença)',
+      path: '/aluno/presencial',
       icon: CalendarCheck,
     },
     {
