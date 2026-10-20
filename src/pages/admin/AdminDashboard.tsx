@@ -318,6 +318,20 @@ export const AdminDashboard: React.FC = () => {
     setPresenceCodeModalOpen(true);
   };
 
+  // Modal de Certificação por Turma (Visualizar Certificado Frente/Verso + Gerenciar Alunos Aptos)
+  const [isCohortCertModalOpen, setIsCohortCertModalOpen] = useState(false);
+  const [activeCertCohort, setActiveCertCohort] = useState<any | null>(null);
+  const [cohortCertSide, setCohortCertSide] = useState<'front' | 'back'>('front');
+  const [selectedStudentForCert, setSelectedStudentForCert] = useState<StudentRecord | null>(null);
+
+  const handleOpenCohortCertModal = (cohort: any) => {
+    setActiveCertCohort(cohort);
+    setCohortCertSide('front');
+    const firstStudent = students.find(s => s.cohortId === cohort.id);
+    setSelectedStudentForCert(firstStudent || null);
+    setIsCohortCertModalOpen(true);
+  };
+
   // Ajuste responsivo de tamanho de fonte para acomodar qualquer tamanho de nome sem estourar o layout
   const getInstructorFontSizeClass = (name: string) => {
     const len = (name || '').trim().length;
@@ -1088,7 +1102,17 @@ export const AdminDashboard: React.FC = () => {
                           <h3 className="text-lg font-bold text-white mt-0.5">{cohort.name}</h3>
                         </div>
 
-                        <div className="flex items-center gap-3">
+                        <div className="flex flex-wrap items-center gap-2 sm:gap-3">
+                          <button
+                            type="button"
+                            onClick={() => handleOpenCohortCertModal(cohort)}
+                            className="px-3.5 py-1.5 rounded-xl text-xs font-bold text-slate-950 bg-gradient-to-r from-teal-400 to-emerald-300 hover:brightness-110 shadow transition-all inline-flex items-center gap-1.5"
+                            title="Visualizar certificado oficial da turma e gerenciar alunos que irão receber"
+                          >
+                            <Award className="w-3.5 h-3.5 text-slate-950" />
+                            <span>Certificação da Turma</span>
+                          </button>
+
                           <button
                             type="button"
                             onClick={() => handleOpenPresenceGenerator(cohort)}
@@ -2798,6 +2822,310 @@ export const AdminDashboard: React.FC = () => {
               >
                 Concluir
               </button>
+            </div>
+
+          </div>
+        </div>
+      )}
+
+      {/* ========================================================================= */}
+      {/* MODAL: CERTIFICAÇÃO DA TURMA (VISUALIZADOR FRENTE/VERSO + GERENCIADOR DE ALUNOS) */}
+      {/* ========================================================================= */}
+      {isCohortCertModalOpen && activeCertCohort && (
+        <div className="fixed inset-0 z-50 bg-slate-950/90 backdrop-blur-md flex items-center justify-center p-3 sm:p-6 overflow-y-auto">
+          <div className="bg-slate-900 border border-teal-500/40 rounded-3xl p-5 sm:p-8 max-w-6xl w-full my-auto space-y-6 shadow-2xl animate-fadeIn">
+            
+            {/* Header do Modal */}
+            <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-white/10 pb-4">
+              <div className="flex items-center gap-3">
+                <div className="w-10 h-10 rounded-2xl bg-teal-500/20 text-teal-400 flex items-center justify-center border border-teal-500/30">
+                  <Award className="w-5 h-5" />
+                </div>
+                <div>
+                  <div className="flex items-center gap-2">
+                    <span className="text-[10px] font-black uppercase tracking-wider text-teal-400">Certificação Oficial</span>
+                    <span className="text-[10px] px-2 py-0.5 rounded-full bg-white/5 border border-white/10 text-slate-300">
+                      Turma: {activeCertCohort.name}
+                    </span>
+                  </div>
+                  <h3 className="font-bold text-white text-base sm:text-lg">
+                    Emissão e Validação de Certificados da Turma
+                  </h3>
+                </div>
+              </div>
+
+              {/* Controles do Topo: Frente / Verso + Fechar */}
+              <div className="flex items-center gap-2">
+                <div className="bg-slate-950 p-1 rounded-xl border border-white/10 flex items-center gap-1 shadow-inner">
+                  <button
+                    type="button"
+                    onClick={() => setCohortCertSide('front')}
+                    className={`px-3 py-1.5 rounded-lg text-xs font-bold transition-all flex items-center gap-1.5 ${
+                      cohortCertSide === 'front' 
+                        ? 'bg-gradient-to-r from-teal-500 to-emerald-400 text-slate-950 shadow-md' 
+                        : 'text-slate-400 hover:text-white'
+                    }`}
+                  >
+                    <FileText className="w-3.5 h-3.5" />
+                    <span>Frente</span>
+                  </button>
+                  <button
+                    type="button"
+                    onClick={() => setCohortCertSide('back')}
+                    className={`px-3 py-1.5 rounded-lg text-xs font-bold transition-all flex items-center gap-1.5 ${
+                      cohortCertSide === 'back' 
+                        ? 'bg-gradient-to-r from-teal-500 to-emerald-400 text-slate-950 shadow-md' 
+                        : 'text-slate-400 hover:text-white'
+                    }`}
+                  >
+                    <BookOpen className="w-3.5 h-3.5" />
+                    <span>Verso (Ementa)</span>
+                  </button>
+                </div>
+
+                <button 
+                  onClick={() => setIsCohortCertModalOpen(false)}
+                  className="p-2 rounded-xl text-slate-400 hover:text-white hover:bg-white/5 transition-colors"
+                  title="Fechar"
+                >
+                  <X className="w-5 h-5" />
+                </button>
+              </div>
+            </div>
+
+            {/* Layout em 2 Colunas: Esquerda (Visualizador A4) / Direita (Gestão de Alunos com Adicionar/Remover) */}
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 items-start">
+              
+              {/* COLUNA ESQUERDA: VISUALIZADOR DA IMAGEM DO CERTIFICADO (A4 HORIZONTAL) (Cols 7) */}
+              <div className="lg:col-span-7 space-y-3">
+                <div className="flex items-center justify-between text-xs font-bold text-slate-300">
+                  <span className="flex items-center gap-1.5">
+                    <Eye className="w-4 h-4 text-teal-400" />
+                    <span>Certificado em Formato A4 ({cohortCertSide === 'front' ? 'Frente Oficial' : 'Verso com Ementa'})</span>
+                  </span>
+                  <span className="text-[11px] text-teal-400 font-mono">
+                    Visualizando: {selectedStudentForCert ? selectedStudentForCert.name : 'Modelo Padrão'}
+                  </span>
+                </div>
+
+                {/* Container do Certificado em Formato A4 Horizontal */}
+                <div className="w-full aspect-[1.414/1] bg-slate-950 text-slate-100 rounded-2xl p-4 sm:p-6 shadow-2xl border-2 border-teal-500/30 relative overflow-hidden font-sans select-none flex flex-col justify-between">
+                  
+                  {/* Marca d'água */}
+                  <div className="absolute right-0 bottom-0 opacity-5 translate-x-10 translate-y-10 pointer-events-none">
+                    <img src="./brand/simbolo-cruz-uniao.png" alt="USM" className="w-[300px] h-[300px] object-contain" />
+                  </div>
+
+                  <div className="border border-teal-500/30 rounded-xl p-4 sm:p-5 relative bg-gradient-to-b from-slate-900/90 via-slate-950/90 to-slate-900/90 backdrop-blur-md h-full flex flex-col justify-between">
+                    
+                    {cohortCertSide === 'front' ? (
+                      /* FRENTE */
+                      <div className="text-center space-y-3 my-auto">
+                        <div className="flex items-center justify-between border-b border-white/10 pb-2">
+                          <div className="flex items-center gap-2">
+                            <div className="w-8 h-8 rounded-lg bg-teal-500/10 border border-teal-500/30 p-1 flex items-center justify-center">
+                              <img src="./brand/simbolo-cruz-uniao.png" alt="USM" className="w-full h-full object-contain" />
+                            </div>
+                            <div className="text-left font-sans">
+                              <div className="text-sm font-black text-white tracking-wider flex items-center gap-1 leading-none">
+                                UNIÃO
+                                <span className="w-1.5 h-1.5 rounded-full bg-teal-400" />
+                              </div>
+                              <div className="text-[8px] font-extrabold text-teal-400 tracking-[0.2em] uppercase mt-0.5">
+                                SERVIÇOS MÉDICOS
+                              </div>
+                            </div>
+                          </div>
+                          <span className="text-[10px] font-bold px-2 py-0.5 rounded-full bg-teal-500/10 text-teal-300 border border-teal-500/30">
+                            Capacitação Médica & APH
+                          </span>
+                        </div>
+
+                        <div>
+                          <span className="text-[9px] font-black uppercase tracking-[0.25em] text-teal-400 block">
+                            CERTIFICADO DE CAPACITAÇÃO PROFISSIONAL
+                          </span>
+                          <h4 className="text-sm sm:text-base font-black text-white mt-1">
+                            {certTitle}
+                          </h4>
+                        </div>
+
+                        <div className="py-1">
+                          <p className="text-[11px] text-slate-300 font-light">Certificamos que</p>
+                          <div className="my-1 text-base sm:text-lg font-black text-white underline decoration-teal-400 decoration-2 underline-offset-4">
+                            {selectedStudentForCert ? selectedStudentForCert.name : previewStudentName}
+                          </div>
+                          <p className="text-[10px] text-slate-300 font-light max-w-lg mx-auto leading-relaxed">
+                            concluiu a formação técnica em saúde com simulação clínica e prática presencial realizada em <strong className="text-teal-300 font-bold">{activeCertCohort.practical_date || certPracticalDate}</strong>, totalizando <strong className="text-teal-300 font-bold">{certWorkload} horas</strong>.
+                          </p>
+                        </div>
+
+                        {/* Assinaturas */}
+                        <div className="grid grid-cols-2 gap-4 pt-3 border-t border-white/10 text-center">
+                          <div>
+                            <div className="font-serif italic text-xs text-teal-300 font-bold pb-0.5 border-b border-white/20 w-32 mx-auto">
+                              {certInstructor}
+                            </div>
+                            <div className="text-[10px] font-bold text-white mt-0.5">{certInstructor}</div>
+                            <div className="text-[8px] text-slate-400">{certInstructorRole}</div>
+                          </div>
+                          <div>
+                            <div className="font-serif italic text-xs text-teal-300 font-bold pb-0.5 border-b border-white/20 w-32 mx-auto">
+                              {certDirector.split('-')[0]}
+                            </div>
+                            <div className="text-[10px] font-bold text-white mt-0.5">{certDirector}</div>
+                            <div className="text-[8px] text-slate-400">Diretoria Técnica • CRM-SP</div>
+                          </div>
+                        </div>
+
+                        {/* Rodapé */}
+                        <div className="pt-2 border-t border-white/10 flex items-center justify-between text-[9px] text-slate-400 font-mono">
+                          <div>Chave: <strong className="text-teal-400">USM-2026-X89A-99F</strong></div>
+                          <a href="#/validar-certificado" target="_blank" rel="noopener noreferrer" className="text-teal-400 underline font-sans">
+                            Link para autenticação
+                          </a>
+                          <div>Emissão: <strong className="text-white">{new Date().toLocaleDateString('pt-BR')}</strong></div>
+                        </div>
+                      </div>
+                    ) : (
+                      /* VERSO */
+                      <div className="space-y-3 h-full flex flex-col justify-between">
+                        <div className="flex items-center justify-between border-b border-white/10 pb-2">
+                          <div className="flex items-center gap-1.5">
+                            <BookOpen className="w-3.5 h-3.5 text-teal-400" />
+                            <h5 className="font-bold text-xs uppercase tracking-wider text-white">
+                              Conteúdo Programático & Ementa do Treinamento
+                            </h5>
+                          </div>
+                          <span className="text-[10px] font-bold px-2 py-0.5 bg-teal-500/10 text-teal-300 rounded font-mono">
+                            {certWorkload} horas
+                          </span>
+                        </div>
+
+                        <div className="grid grid-cols-2 gap-1.5 text-[10px]">
+                          {certModules.slice(0, 6).map((m, idx) => (
+                            <div key={idx} className="p-1.5 rounded-lg bg-slate-950/70 border border-white/5 flex items-start gap-1.5 text-slate-300">
+                              <span className="w-3.5 h-3.5 rounded bg-teal-500/20 text-teal-300 flex items-center justify-center font-mono text-[8px] font-bold shrink-0">
+                                {idx + 1}
+                              </span>
+                              <span className="leading-tight truncate">{m}</span>
+                            </div>
+                          ))}
+                        </div>
+
+                        <div className="p-2 rounded-xl bg-slate-950/80 border border-teal-500/20 text-[9px] text-slate-300">
+                          <strong className="text-teal-400 block font-bold">Metodologia e Aprovação:</strong>
+                          <p className="leading-relaxed">
+                            Formação em metodologia Blended Learning com videoaulas, simulados clínicos de urgência e estação prática com manequins de RCP e torniquetes homologados.
+                          </p>
+                        </div>
+
+                        <div className="pt-2 border-t border-white/10 flex items-center justify-between text-[8px] text-slate-500 font-mono">
+                          <div>União Serviços Médicos • Registro Interno</div>
+                          <div>Documento Oficial Autenticado</div>
+                        </div>
+                      </div>
+                    )}
+
+                  </div>
+                </div>
+              </div>
+
+              {/* COLUNA DIREITA: GESTÃO DE ALUNOS QUE IRÃO RECEBER O CERTIFICADO (Cols 5) */}
+              <div className="lg:col-span-5 space-y-4 bg-slate-950/70 p-4 sm:p-5 rounded-2xl border border-white/10">
+                
+                <div className="flex items-center justify-between border-b border-white/10 pb-3">
+                  <div>
+                    <h4 className="font-bold text-white text-xs sm:text-sm flex items-center gap-1.5">
+                      <Users className="w-4 h-4 text-teal-400" />
+                      <span>Alunos que Irão Receber ({students.filter(s => s.cohortId === activeCertCohort.id).length})</span>
+                    </h4>
+                    <p className="text-[10px] text-slate-400">
+                      Clique no aluno para visualizá-lo no certificado
+                    </p>
+                  </div>
+
+                  {/* Botão de Adicionar Aluno */}
+                  <button
+                    type="button"
+                    onClick={() => {
+                      setNewStudentCohortId(activeCertCohort.id);
+                      setIsAddStudentOpen(true);
+                    }}
+                    className="px-3 py-1.5 rounded-xl font-bold text-xs text-slate-950 bg-gradient-to-r from-teal-400 to-emerald-300 hover:brightness-110 shadow flex items-center gap-1 transition-all"
+                  >
+                    <UserPlus className="w-3.5 h-3.5" />
+                    <span>Adicionar Aluno</span>
+                  </button>
+                </div>
+
+                {/* Lista de Alunos da Turma */}
+                <div className="space-y-2 max-h-80 overflow-y-auto pr-1">
+                  {students.filter(s => s.cohortId === activeCertCohort.id).length === 0 ? (
+                    <div className="p-6 text-center text-xs text-slate-500 bg-slate-900/40 rounded-xl border border-white/5">
+                      Nenhum aluno cadastrado nesta turma ainda. Clique em "Adicionar Aluno" acima.
+                    </div>
+                  ) : (
+                    students.filter(s => s.cohortId === activeCertCohort.id).map((student) => {
+                      const isSelected = selectedStudentForCert?.id === student.id;
+
+                      return (
+                        <div
+                          key={student.id}
+                          onClick={() => setSelectedStudentForCert(student)}
+                          className={`p-3 rounded-xl border cursor-pointer transition-all flex items-center justify-between gap-3 ${
+                            isSelected
+                              ? 'bg-teal-500/10 border-teal-500/60 shadow-md text-white'
+                              : 'bg-slate-900/80 border-white/5 hover:border-white/15 text-slate-300'
+                          }`}
+                        >
+                          <div className="space-y-0.5 truncate">
+                            <div className="font-bold text-xs truncate flex items-center gap-1.5">
+                              <span>{student.name}</span>
+                              {isSelected && (
+                                <span className="text-[9px] px-1.5 py-0.2 rounded bg-teal-500/20 text-teal-300 font-mono font-semibold">
+                                  No Certificado
+                                </span>
+                              )}
+                            </div>
+                            <div className="text-[10px] text-slate-400 truncate">{student.email} • CPF: {student.cpf}</div>
+                            <div className="text-[10px] text-teal-400">Progresso: {student.progress}% • Nota: {student.scoreQuiz}%</div>
+                          </div>
+
+                          {/* Botão de Remover Aluno */}
+                          <button
+                            type="button"
+                            onClick={(e) => {
+                              e.stopPropagation();
+                              handleRemoveStudent(student.id, student.name);
+                              if (selectedStudentForCert?.id === student.id) {
+                                const remaining = students.filter(s => s.cohortId === activeCertCohort.id && s.id !== student.id);
+                                setSelectedStudentForCert(remaining[0] || null);
+                              }
+                            }}
+                            className="p-1.5 rounded-lg text-slate-400 hover:text-red-400 hover:bg-red-500/10 transition-colors shrink-0"
+                            title={`Remover ${student.name} desta turma`}
+                          >
+                            <Trash2 className="w-4 h-4" />
+                          </button>
+                        </div>
+                      );
+                    })
+                  )}
+                </div>
+
+                <div className="pt-2 border-t border-white/10 flex justify-end">
+                  <button
+                    type="button"
+                    onClick={() => setIsCohortCertModalOpen(false)}
+                    className="px-5 py-2 rounded-xl text-xs font-bold text-white bg-slate-800 hover:bg-slate-700 transition-colors"
+                  >
+                    Fechar
+                  </button>
+                </div>
+
+              </div>
+
             </div>
 
           </div>
