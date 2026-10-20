@@ -43,6 +43,7 @@ export const App: React.FC = () => {
           <Route path="provas" element={<ExamsPage />} />
           <Route path="certificados" element={<CertificatesPage />} />
           <Route path="frequencia" element={<PresencePage />} />
+          <Route path="presencial" element={<PresencePage />} />
         </Route>
 
         {/* Painel Administrativo Protegido */}
