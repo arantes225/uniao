@@ -274,7 +274,9 @@ export const ExamsPage: React.FC = () => {
   const minPassingScore = 70; // 70% de acertos para ser aprovado (14 de 20 questões)
   const isApproved = bestScore !== null && bestScore >= minPassingScore;
   const attemptsRemaining = Math.max(0, maxAttempts - attemptsUsed);
-  const canAttempt = !isApproved && attemptsRemaining > 0;
+  // Regra Atualizada: Mesmo aprovado de primeira, o aluno pode utilizar as tentativas restantes
+  // para tentar uma nota maior (prevalecendo sempre a maior nota obtida).
+  const canAttempt = attemptsRemaining > 0;
 
   // Temporizador Geral de 45 minutos da Prova
   useEffect(() => {
@@ -749,10 +751,16 @@ export const ExamsPage: React.FC = () => {
 
             {/* Ação de Iniciar Prova */}
             <div className="w-full md:w-auto shrink-0 flex flex-col gap-2">
-              {isApproved ? (
-                <div className="text-center md:text-right space-y-2">
-                  <div className="px-5 py-3 rounded-2xl bg-emerald-500/10 border border-emerald-500/30 text-emerald-600 dark:text-emerald-400 text-xs font-bold">
-                    ✓ Aprovado com {bestScore}% de aproveitamento
+              {attemptsRemaining === 0 ? (
+                <div className="space-y-2 text-center md:text-right">
+                  {isApproved && (
+                    <div className="px-5 py-2.5 rounded-2xl bg-emerald-500/10 border border-emerald-500/30 text-emerald-600 dark:text-emerald-400 text-xs font-bold">
+                      ✓ Aprovado com {bestScore}% de aproveitamento
+                    </div>
+                  )}
+                  <div className="p-4 rounded-2xl bg-slate-800/80 border border-slate-700 text-slate-300 text-xs space-y-1">
+                    <strong>Limite de 3 tentativas concluído.</strong>
+                    <p className="text-[11px] opacity-80">Maior nota registrada: {bestScore}%</p>
                   </div>
                   <button
                     onClick={() => { setAnswers({}); setExamFinished(true); setIsExamRunning(true); }}
@@ -765,10 +773,21 @@ export const ExamsPage: React.FC = () => {
                     Revisar Questões
                   </button>
                 </div>
-              ) : attemptsRemaining === 0 ? (
-                <div className="p-4 rounded-2xl bg-red-500/10 border border-red-500/20 text-red-600 dark:text-red-400 text-xs space-y-1 text-center md:text-right">
-                  <strong>Limite de 3 tentativas atingido.</strong>
-                  <p className="text-[11px] opacity-80">Solicite autorização de nova tentativa ao instrutor.</p>
+              ) : isApproved ? (
+                <div className="text-center md:text-right space-y-2">
+                  <div className="px-5 py-2.5 rounded-2xl bg-emerald-500/10 border border-emerald-500/30 text-emerald-600 dark:text-emerald-400 text-xs font-bold">
+                    ✓ Aprovado com {bestScore}% (Maior Nota Registrada)
+                  </div>
+                  <button
+                    onClick={handleStartExam}
+                    className="w-full md:w-auto inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-2xl font-bold text-slate-950 bg-gradient-to-r from-uniao-400 to-teal-300 hover:brightness-110 text-xs shadow-md transition-all"
+                  >
+                    <span>Fazer Nova Tentativa (Chance {attemptsUsed + 1}/3)</span>
+                    <ChevronRight className="w-4 h-4" />
+                  </button>
+                  <p className="text-[10px] text-slate-500">
+                    A maior nota obtida sempre prevalece no seu histórico.
+                  </p>
                 </div>
               ) : (
                 <button
@@ -792,7 +811,7 @@ export const ExamsPage: React.FC = () => {
                   Suas 3 Chances da Prova
                 </h3>
                 <p className={`text-xs ${theme === 'dark' ? 'text-slate-400' : 'text-slate-500'}`}>
-                  Para aprovação é necessário atingir 70% ou mais (14 acertos em 20 questões) em pelo menos uma das três chances.
+                  Para aprovação é necessário atingir 70% ou mais (14 acertos em 20 questões). A maior nota obtida entre as tentativas é a que fica oficialmente registrada.
                 </p>
               </div>
               <span className={`text-xs font-bold px-3 py-1 rounded-full border ${
