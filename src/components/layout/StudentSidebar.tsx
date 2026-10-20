@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
-import { NavLink, Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import { 
   LayoutDashboard, Video, BookOpen, HelpCircle, 
   Stethoscope, Award, ChevronLeft, ChevronRight, 
-  CalendarCheck, ShieldAlert
+  CalendarCheck
 } from 'lucide-react';
 import { useTheme } from '../../context/ThemeContext';
 
@@ -149,22 +149,6 @@ export const StudentSidebar: React.FC<StudentSidebarProps> = () => {
           );
         })}
       </nav>
-
-      {/* Admin Quick Shortcut */}
-      <div className={`p-3 border-t ${theme === 'dark' ? 'border-white/10' : 'border-slate-200'}`}>
-        <Link
-          to="/admin"
-          className={`flex items-center gap-3 px-3 py-2.5 rounded-xl text-xs font-medium transition-colors ${
-            theme === 'dark'
-              ? 'text-slate-400 hover:text-white hover:bg-white/5'
-              : 'text-slate-600 hover:text-slate-950 hover:bg-slate-100'
-          }`}
-          title={collapsed ? 'Acesso Administrativo' : undefined}
-        >
-          <ShieldAlert className="w-5 h-5 shrink-0 text-amber-500" />
-          {!collapsed && <span>Acesso Admin</span>}
-        </Link>
-      </div>
     </aside>
   );
 };

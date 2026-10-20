@@ -49,12 +49,9 @@ export const LoginPage: React.FC = () => {
         throw new Error('Seu usuário não possui matrícula ativa ou autorização cadastrada pela União Serviços Médicos. Não é permitido cadastro espontâneo.');
       }
 
-      // Direcionamento conforme perfil
-      if (isStaff && staffCheck.data?.role === 'admin') {
-        navigate('/admin');
-      } else {
-        navigate('/aluno/dashboard');
-      }
+      // Todos os acessos via login caem diretamente no ambiente do aluno
+      // O acesso administrativo fica restrito por rota direta (/admin)
+      navigate('/aluno/dashboard');
 
     } catch (err: any) {
       setError(err.message || 'Erro ao realizar login.');
@@ -113,7 +110,7 @@ export const LoginPage: React.FC = () => {
           </div>
         </Link>
         <h2 className="mt-4 text-2xl sm:text-3xl font-extrabold text-white tracking-tight">
-          Área do Aluno e Docente
+          Área do Aluno
         </h2>
         <p className="mt-1.5 text-xs sm:text-sm text-slate-400">
           União Serviços Médicos — Acesso Educacional Restrito
@@ -306,28 +303,7 @@ export const LoginPage: React.FC = () => {
           <div className="mt-6 pt-5 border-t border-slate-700/60 text-center space-y-3">
             <div className="inline-flex items-center gap-1.5 text-xs text-slate-400">
               <ShieldCheck className="w-3.5 h-3.5 text-uniao-500" />
-              <span>Acesso exclusivo para alunos e turmas autorizadas.</span>
-            </div>
-
-            {/* Caixa com as Credenciais Oficiais para Teste Rápido */}
-            <div className="p-4 rounded-xl bg-slate-950/80 border border-uniao-500/30 text-left text-xs space-y-2">
-              <div className="flex items-center justify-between">
-                <span className="font-bold text-uniao-400">Credenciais Criadas:</span>
-                <button
-                  type="button"
-                  onClick={() => {
-                    setEmail('aluno.uniao@gmail.com');
-                    setPassword('Uniao2026!');
-                  }}
-                  className="px-2.5 py-1 rounded-lg font-black uppercase text-[10px] bg-uniao-500 hover:bg-uniao-400 text-slate-950 transition-all shadow"
-                >
-                  Preencher
-                </button>
-              </div>
-              <div className="font-mono text-[11px] text-slate-300 space-y-0.5">
-                <div>E-mail: <strong className="text-white">aluno.uniao@gmail.com</strong></div>
-                <div>Senha: <strong className="text-white">Uniao2026!</strong></div>
-              </div>
+              <span>Acesso exclusivo para alunos autorizados.</span>
             </div>
 
             <p className="mt-1 text-[11px] text-slate-500">
