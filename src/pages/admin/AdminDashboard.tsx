@@ -158,6 +158,7 @@ export const AdminDashboard: React.FC = () => {
   const [editCohortName, setEditCohortName] = useState('');
   const [editCohortStatus, setEditCohortStatus] = useState('active');
   const [editCohortLocation, setEditCohortLocation] = useState('');
+  const [editCohortPracticalDate, setEditCohortPracticalDate] = useState('');
   const [cohortSaveSuccess, setCohortSaveSuccess] = useState(false);
 
   // Alunos e Filtro por Turma
@@ -246,6 +247,7 @@ export const AdminDashboard: React.FC = () => {
   const [newCohortDays, setNewCohortDays] = useState(90);
   const [newCohortCapacity, setNewCohortCapacity] = useState(30);
   const [newCohortLocation, setNewCohortLocation] = useState('Centro de Treinamento USM');
+  const [newCohortPracticalDate, setNewCohortPracticalDate] = useState('24/10/2026');
   const [cohortCreationMode, setCohortCreationMode] = useState<'empty' | 'manual' | 'import'>('empty');
   const [cohortImportFile, setCohortImportFile] = useState<File | null>(null);
 
@@ -416,6 +418,7 @@ export const AdminDashboard: React.FC = () => {
         max_students: Number(editCohortMaxStudents),
         status: editCohortStatus,
         practical_location: editCohortLocation,
+        practical_date: editCohortPracticalDate,
       })
       .eq('id', selectedCohort.id);
 
@@ -516,6 +519,7 @@ export const AdminDashboard: React.FC = () => {
       max_students: Number(newCohortCapacity),
       status: 'active',
       practical_location: newCohortLocation.trim() || 'Centro de Treinamento USM',
+      practical_date: newCohortPracticalDate.trim() || '24/10/2026',
       created_at: new Date().toISOString(),
     };
 
@@ -1046,6 +1050,7 @@ export const AdminDashboard: React.FC = () => {
                               setEditCohortMaxStudents(cohort.max_students || 30);
                               setEditCohortStatus(cohort.status || 'active');
                               setEditCohortLocation(cohort.practical_location || 'Centro de Treinamento USM');
+                              setEditCohortPracticalDate(cohort.practical_date || '24/10/2026');
                               setIsEditingCohort(true);
                             }}
                             className="px-3.5 py-1.5 rounded-xl text-xs font-bold text-white bg-white/5 hover:bg-white/10 border border-white/10 transition-colors inline-flex items-center gap-1.5"
@@ -1069,7 +1074,7 @@ export const AdminDashboard: React.FC = () => {
                       </div>
 
                       {/* Métricas da Turma */}
-                      <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 bg-slate-900/60 p-4 rounded-xl border border-white/5 text-xs text-slate-300 mb-4">
+                      <div className="grid grid-cols-2 sm:grid-cols-5 gap-3 bg-slate-900/60 p-4 rounded-xl border border-white/5 text-xs text-slate-300 mb-4">
                         <div>
                           <span className="text-slate-500 block text-[11px]">Countdown de Acesso:</span>
                           <strong className="text-amber-300 font-mono text-sm">{cohort.access_days_limit || 90} dias</strong>
@@ -1077,6 +1082,10 @@ export const AdminDashboard: React.FC = () => {
                         <div>
                           <span className="text-slate-500 block text-[11px]">Alunos Matriculados:</span>
                           <strong className="text-white font-mono text-sm">{cohortStudents.length} / {cohort.max_students || 30}</strong>
+                        </div>
+                        <div>
+                          <span className="text-slate-500 block text-[11px]">Data Atividade Presencial:</span>
+                          <strong className="text-teal-400 font-mono text-xs">{cohort.practical_date || '24/10/2026'}</strong>
                         </div>
                         <div>
                           <span className="text-slate-500 block text-[11px]">Local do Treinamento:</span>
@@ -1201,7 +1210,18 @@ export const AdminDashboard: React.FC = () => {
                               </select>
                             </div>
 
-                            <div className="md:col-span-2 space-y-1">
+                            <div className="space-y-1">
+                              <label className="text-xs font-semibold text-slate-300">Data da Atividade Presencial</label>
+                              <input
+                                type="text"
+                                value={editCohortPracticalDate}
+                                onChange={(e) => setEditCohortPracticalDate(e.target.value)}
+                                placeholder="Ex: 24/10/2026"
+                                className="w-full px-3 py-2 rounded-xl bg-slate-950 border border-teal-500/30 text-teal-300 text-xs focus:outline-none focus:border-uniao-500 font-mono"
+                              />
+                            </div>
+
+                            <div className="space-y-1">
                               <label className="text-xs font-semibold text-slate-300">Local do Treinamento Prático Presencial</label>
                               <input
                                 type="text"
@@ -1705,15 +1725,28 @@ export const AdminDashboard: React.FC = () => {
                 </div>
               </div>
 
-              <div className="space-y-1">
-                <label className="text-xs font-semibold text-slate-300">Local da Aula Prática Presencial</label>
-                <input
-                  type="text"
-                  value={newCohortLocation}
-                  onChange={(e) => setNewCohortLocation(e.target.value)}
-                  placeholder="Ex: Base Central USM ou In Company"
-                  className="w-full px-3 py-2.5 rounded-xl bg-slate-950 border border-white/10 text-white text-xs focus:outline-none focus:border-uniao-500"
-                />
+              <div className="grid grid-cols-2 gap-4">
+                <div className="space-y-1">
+                  <label className="text-xs font-semibold text-slate-300">Data Atividade Presencial</label>
+                  <input
+                    type="text"
+                    required
+                    value={newCohortPracticalDate}
+                    onChange={(e) => setNewCohortPracticalDate(e.target.value)}
+                    placeholder="Ex: 24/10/2026"
+                    className="w-full px-3 py-2.5 rounded-xl bg-slate-950 border border-teal-500/30 text-teal-300 text-xs font-mono focus:outline-none focus:border-uniao-500"
+                  />
+                </div>
+                <div className="space-y-1">
+                  <label className="text-xs font-semibold text-slate-300">Local da Aula Prática</label>
+                  <input
+                    type="text"
+                    value={newCohortLocation}
+                    onChange={(e) => setNewCohortLocation(e.target.value)}
+                    placeholder="Ex: Base Central USM ou In Company"
+                    className="w-full px-3 py-2.5 rounded-xl bg-slate-950 border border-white/10 text-white text-xs focus:outline-none focus:border-uniao-500"
+                  />
+                </div>
               </div>
 
               {/* OPÇÕES DE ALUNOS NA CRIAÇÃO: APENAS CRIAR TURMA, MANUAL OU IMPORTAR PDF/EXCEL */}
