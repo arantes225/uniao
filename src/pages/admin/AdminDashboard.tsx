@@ -5,7 +5,9 @@ import {
   Trash2, CheckCircle2, RefreshCw, Award, Users, 
   Settings, Clock, BookOpen, FileText, Check, Plus,
   UserPlus, UserMinus, Eye, Filter, Sparkles, X,
-  GraduationCap
+  GraduationCap,
+  Upload, Move, RotateCcw,
+  KeyRound, Copy
 } from 'lucide-react';
 import { supabase } from '../../services/supabase/client';
 import { ContentManagerTab } from './ContentManagerTab';
@@ -287,10 +289,56 @@ export const AdminDashboard: React.FC = () => {
   const [newCustomModule, setNewCustomModule] = useState('');
   const [certSavedSuccess, setCertSavedSuccess] = useState(false);
 
+  // Assinatura Digital do Instrutor & Ajuste Fino de Posição
+  const [instructorSigUrl, setInstructorSigUrl] = useState<string>('');
+  const [sigPosX, setSigPosX] = useState<number>(0);
+  const [sigPosY, setSigPosY] = useState<number>(0);
+  const [sigScale, setSigScale] = useState<number>(1);
+  const [isDraggingSig, setIsDraggingSig] = useState<boolean>(false);
+  const [dragStart, setDragStart] = useState<{ x: number; y: number }>({ x: 0, y: 0 });
+
   // Modal de Prévia Visual do Certificado
   const [isPreviewOpen, setIsPreviewOpen] = useState(false);
   const [previewStudentName, setPreviewStudentName] = useState('Dr. Lucas Arantes');
   const [previewSide, setPreviewSide] = useState<'front' | 'back'>('front');
+
+  // Gerador de Código de Presença Presencial para Turmas
+  const [presenceCodeModalOpen, setPresenceCodeModalOpen] = useState(false);
+  const [activePresenceCohort, setActivePresenceCohort] = useState<any | null>(null);
+  const [generatedPresenceCode, setGeneratedPresenceCode] = useState('APH-2026');
+  const [presenceCodeCopied, setPresenceCodeCopied] = useState(false);
+
+  const handleOpenPresenceGenerator = (cohort: any) => {
+    setActivePresenceCohort(cohort);
+    // Gera código dinâmico único baseado na turma ou timestamp
+    const randomSuffix = Math.floor(1000 + Math.random() * 9000);
+    const code = `${cohort.name.includes('Stop') ? 'STB' : 'APH'}-${randomSuffix}`;
+    setGeneratedPresenceCode(code);
+    localStorage.setItem('usm_presence_code_aph', code);
+    setPresenceCodeModalOpen(true);
+  };
+
+  // Ajuste responsivo de tamanho de fonte para acomodar qualquer tamanho de nome sem estourar o layout
+  const getInstructorFontSizeClass = (name: string) => {
+    const len = (name || '').trim().length;
+    if (len > 32) return 'text-[9px] leading-tight';
+    if (len > 24) return 'text-[10px] leading-tight';
+    if (len > 18) return 'text-xs leading-normal';
+    return 'text-xs font-bold leading-normal';
+  };
+
+  const handleSignatureUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const file = e.target.files?.[0];
+    if (file) {
+      const reader = new FileReader();
+      reader.onload = (loadEvent) => {
+        if (loadEvent.target?.result) {
+          setInstructorSigUrl(loadEvent.target.result as string);
+        }
+      };
+      reader.readAsDataURL(file);
+    }
+  };
 
   const handlePinSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -1043,6 +1091,16 @@ export const AdminDashboard: React.FC = () => {
                         <div className="flex items-center gap-3">
                           <button
                             type="button"
+                            onClick={() => handleOpenPresenceGenerator(cohort)}
+                            className="px-3.5 py-1.5 rounded-xl text-xs font-bold text-teal-300 bg-teal-500/10 hover:bg-teal-500/20 border border-teal-500/30 transition-colors inline-flex items-center gap-1.5"
+                            title="Gerar código dinâmico para os alunos validarem presença no presencial"
+                          >
+                            <KeyRound className="w-3.5 h-3.5 text-teal-400" />
+                            <span>Código de Presença</span>
+                          </button>
+
+                          <button
+                            type="button"
                             onClick={() => {
                               setSelectedCohort(cohort);
                               setEditCohortName(cohort.name);
@@ -1444,6 +1502,50 @@ export const AdminDashboard: React.FC = () => {
                     </div>
                   </div>
 
+                  {/* CAMPO PARA SUBIR ASSINATURA DO INSTRUTOR */}
+                  <div className="p-3.5 rounded-2xl bg-slate-950/70 border border-teal-500/20 space-y-2">
+                    <div className="flex items-center justify-between">
+                      <label className="text-xs font-bold text-teal-300 flex items-center gap-1.5">
+                        <Upload className="w-3.5 h-3.5" />
+                        <span>Assinatura Digitalizada do Instrutor (PNG transparente)</span>
+                      </label>
+                      {instructorSigUrl && (
+                        <button
+                          type="button"
+                          onClick={() => { setInstructorSigUrl(''); setSigPosX(0); setSigPosY(0); setSigScale(1); }}
+                          className="text-[10px] text-red-400 hover:text-red-300 flex items-center gap-1"
+                        >
+                          <X className="w-3 h-3" />
+                          <span>Remover</span>
+                        </button>
+                      )}
+                    </div>
+
+                    <div className="flex flex-col sm:flex-row items-center gap-3">
+                      <label className="cursor-pointer inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-slate-900 border border-white/10 hover:border-teal-500/50 text-white text-xs font-semibold transition-all">
+                        <Upload className="w-3.5 h-3.5 text-teal-400" />
+                        <span>{instructorSigUrl ? 'Trocar Imagem da Assinatura' : 'Subir Arquivo de Assinatura'}</span>
+                        <input
+                          type="file"
+                          accept="image/png,image/jpeg,image/webp"
+                          onChange={handleSignatureUpload}
+                          className="hidden"
+                        />
+                      </label>
+
+                      {instructorSigUrl ? (
+                        <div className="flex items-center gap-3">
+                          <div className="h-8 px-2 py-0.5 rounded-lg bg-white/5 border border-white/10 flex items-center">
+                            <img src={instructorSigUrl} alt="Assinatura" className="h-full object-contain max-w-[100px]" />
+                          </div>
+                          <span className="text-[11px] text-emerald-400 font-medium">Assinatura carregada e pronta</span>
+                        </div>
+                      ) : (
+                        <span className="text-[11px] text-slate-400">Recomendado formato PNG com fundo transparente</span>
+                      )}
+                    </div>
+                  </div>
+
                   <div className="space-y-1.5">
                     <label className="text-xs font-semibold text-slate-300">Diretor Técnico Médico</label>
                     <input
@@ -1529,6 +1631,308 @@ export const AdminDashboard: React.FC = () => {
                 </div>
 
               </form>
+
+
+              {/* ========================================================================= */}
+              {/* PRÉVIA VISUAL INTEGRADA AO VIVO (SEM PRECISAR CLICAR PARA ABRIR MODAL) */}
+              {/* ========================================================================= */}
+              <div className="pt-8 border-t border-white/10 space-y-6">
+                
+                {/* Barra Superior da Prévia Integrada */}
+                <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 bg-slate-950 p-4 sm:p-5 rounded-2xl border border-teal-500/30">
+                  <div className="space-y-1">
+                    <div className="flex items-center gap-2">
+                      <GraduationCap className="w-5 h-5 text-teal-400" />
+                      <h3 className="font-bold text-white text-sm sm:text-base">
+                        Visualização ao Vivo do Certificado Oficial
+                      </h3>
+                      <span className="text-[10px] font-bold px-2 py-0.5 rounded-full bg-emerald-500/10 text-emerald-400 border border-emerald-500/30">
+                        Tempo Real
+                      </span>
+                    </div>
+                    <p className="text-xs text-slate-400">
+                      Turma: <strong className="text-uniao-400">{currentCertCohort?.name || 'Turma Selecionada'}</strong> • Aluno: <strong className="text-white">{previewStudentName}</strong>
+                    </p>
+                  </div>
+
+                  <div className="flex flex-wrap items-center gap-3">
+                    {/* BOTÃO VER VERSO / FRENTE */}
+                    <div className="bg-slate-900 p-1 rounded-xl border border-white/10 flex items-center gap-1 shadow-inner">
+                      <button
+                        type="button"
+                        onClick={() => setPreviewSide('front')}
+                        className={`px-3.5 py-1.5 rounded-lg text-xs font-bold transition-all flex items-center gap-1.5 ${
+                          previewSide === 'front' 
+                            ? 'bg-gradient-to-r from-uniao-600 to-teal-600 text-white shadow-md' 
+                            : 'text-slate-400 hover:text-white'
+                        }`}
+                      >
+                        <FileText className="w-3.5 h-3.5" />
+                        <span>Frente</span>
+                      </button>
+                      <button
+                        type="button"
+                        onClick={() => setPreviewSide('back')}
+                        className={`px-3.5 py-1.5 rounded-lg text-xs font-bold transition-all flex items-center gap-1.5 ${
+                          previewSide === 'back' 
+                            ? 'bg-gradient-to-r from-uniao-600 to-teal-600 text-white shadow-md' 
+                            : 'text-slate-400 hover:text-white'
+                        }`}
+                      >
+                        <BookOpen className="w-3.5 h-3.5" />
+                        <span>Ver Verso</span>
+                      </button>
+                    </div>
+
+                    {/* Reset de Posição da Assinatura */}
+                    {instructorSigUrl && (
+                      <button
+                        type="button"
+                        onClick={() => { setSigPosX(0); setSigPosY(0); setSigScale(1); }}
+                        className="px-3 py-1.5 rounded-xl bg-slate-900 border border-white/10 hover:border-teal-500/50 text-[11px] font-semibold text-slate-300 hover:text-white transition-all flex items-center gap-1"
+                        title="Restaurar posição original da assinatura"
+                      >
+                        <RotateCcw className="w-3.5 h-3.5 text-teal-400" />
+                        <span>Resetar Posição</span>
+                      </button>
+                    )}
+                  </div>
+                </div>
+
+                {/* Dica de Interatividade da Assinatura */}
+                {instructorSigUrl && previewSide === 'front' && (
+                  <div className="p-3 rounded-xl bg-teal-500/10 border border-teal-500/20 text-xs text-teal-300 flex items-center justify-between gap-3">
+                    <div className="flex items-center gap-2">
+                      <Move className="w-4 h-4 text-teal-400 animate-pulse shrink-0" />
+                      <span>
+                        <strong>Ajuste de Assinatura Ativo:</strong> Clique e arraste a assinatura sobre a linha do instrutor para posicionar no local exato desejado.
+                      </span>
+                    </div>
+                    <div className="flex items-center gap-2 shrink-0 font-mono text-[11px] text-slate-300">
+                      <span>X: {sigPosX}px</span>
+                      <span>Y: {sigPosY}px</span>
+                    </div>
+                  </div>
+                )}
+
+                {/* CERTIFICADO EM SI (DESIGN OFICIAL UNIÃO SERVIÇOS MÉDICOS) */}
+                <div 
+                  className="bg-slate-950 text-slate-100 rounded-3xl p-4 sm:p-8 md:p-10 shadow-2xl border-4 border-teal-500/30 relative overflow-hidden font-sans select-none"
+                  onMouseMove={(e) => {
+                    if (isDraggingSig) {
+                      const dx = e.clientX - dragStart.x;
+                      const dy = e.clientY - dragStart.y;
+                      setSigPosX((prev) => prev + dx);
+                      setSigPosY((prev) => prev + dy);
+                      setDragStart({ x: e.clientX, y: e.clientY });
+                    }
+                  }}
+                  onMouseUp={() => setIsDraggingSig(false)}
+                  onMouseLeave={() => setIsDraggingSig(false)}
+                >
+                  
+                  {/* Marca d'água no Fundo */}
+                  <div className="absolute right-0 bottom-0 opacity-5 translate-x-12 translate-y-12 pointer-events-none">
+                    <img src="./brand/simbolo-cruz-uniao.png" alt="USM" className="w-[450px] h-[450px] object-contain" />
+                  </div>
+
+                  {/* Moldura Interna com Gradiente */}
+                  <div className="border border-teal-500/40 rounded-2xl p-5 sm:p-8 md:p-10 relative bg-gradient-to-b from-slate-900/90 via-slate-950/90 to-slate-900/90 backdrop-blur-md shadow-inner">
+                    
+                    {previewSide === 'front' ? (
+                      /* ===================================================== */
+                      /* FRENTE DO CERTIFICADO (IDENTIDADE USM) */
+                      /* ===================================================== */
+                      <div className="text-center space-y-6">
+                        
+                        {/* Topo Oficial: Logomarca União Serviços Médicos */}
+                        <div className="flex flex-col sm:flex-row items-center justify-between gap-4 border-b border-white/10 pb-5">
+                          <div className="flex items-center gap-3.5">
+                            <div className="w-12 h-12 rounded-xl bg-teal-500/10 border border-teal-500/30 p-2 flex items-center justify-center shrink-0">
+                              <img src="./brand/simbolo-cruz-uniao.png" alt="Cruz USM" className="w-full h-full object-contain" />
+                            </div>
+                            <div className="text-left font-sans">
+                              <div className="text-xl font-black text-white tracking-wider flex items-center gap-1.5">
+                                UNIÃO
+                                <span className="w-2 h-2 rounded-full bg-teal-400" />
+                              </div>
+                              <div className="text-[10px] font-extrabold text-teal-400 tracking-[0.25em] uppercase">
+                                SERVIÇOS MÉDICOS
+                              </div>
+                            </div>
+                          </div>
+
+                          {/* Selo Oficial */}
+                          <div className="text-right text-xs">
+                            <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-teal-500/10 border border-teal-500/30 text-teal-300 font-bold text-[11px]">
+                              <Award className="w-3.5 h-3.5 text-teal-400" />
+                              <span>Capacitação Médica & APH</span>
+                            </div>
+                          </div>
+                        </div>
+
+                        {/* Título de Concessão do Certificado */}
+                        <div className="space-y-1.5 pt-2">
+                          <span className="text-[11px] font-black uppercase tracking-[0.3em] text-teal-400 block">
+                            CERTIFICADO DE CAPACITAÇÃO E QUALIFICAÇÃO PROFISSIONAL
+                          </span>
+                          <h2 className="text-xl sm:text-2xl md:text-3xl font-black text-white tracking-tight">
+                            {certTitle}
+                          </h2>
+                        </div>
+
+                        {/* Texto Certificador */}
+                        <div className="max-w-2xl mx-auto py-2">
+                          <p className="text-sm sm:text-base text-slate-300 leading-relaxed font-light">
+                            Certificamos para todos os fins acadêmicos e profissionais que
+                          </p>
+                          <div className="my-2 py-1 text-xl sm:text-2xl font-black text-white underline decoration-teal-400 decoration-2 underline-offset-8 tracking-wide">
+                            {previewStudentName}
+                          </div>
+                          <p className="text-xs sm:text-sm text-slate-300 leading-relaxed font-light mt-3">
+                            concluiu com aproveitamento integral a formação técnica em saúde, compreendendo estudos teóricos dirigidos, avaliações formativas, simulação clínica de urgência e estação prática presencial realizada em <strong className="text-teal-300 font-bold">{certPracticalDate}</strong>, totalizando a carga horária de <strong className="text-teal-300 font-bold">{certWorkload} horas</strong>.
+                          </p>
+                        </div>
+
+                        {/* BLOCO DE ASSINATURAS DOS RESPONSÁVEIS (ESPAÇO FIXO + FONTE AUTO-AJUSTÁVEL) */}
+                        <div className="grid grid-cols-2 gap-8 pt-6 border-t border-white/10 mt-6">
+                          
+                          {/* INSTRUTOR RESPONSÁVEL COM ASSINATURA ARRASTÁVEL E ESPAÇO FIXO */}
+                          <div className="text-center flex flex-col items-center justify-end h-28 relative">
+                            {/* Assinatura Digitalizada Interativa / Movível */}
+                            {instructorSigUrl ? (
+                              <div
+                                style={{
+                                  transform: `translate(${sigPosX}px, ${sigPosY}px) scale(${sigScale})`,
+                                  cursor: isDraggingSig ? 'grabbing' : 'grab',
+                                }}
+                                onMouseDown={(e) => {
+                                  e.preventDefault();
+                                  setIsDraggingSig(true);
+                                  setDragStart({ x: e.clientX, y: e.clientY });
+                                }}
+                                className="absolute bottom-10 z-10 p-1 group select-none touch-none"
+                                title="Clique e arraste para posicionar a assinatura"
+                              >
+                                <img
+                                  src={instructorSigUrl}
+                                  alt="Assinatura do Instrutor"
+                                  className="h-16 max-w-[200px] object-contain drop-shadow-md pointer-events-none"
+                                  draggable={false}
+                                />
+                                <div className="opacity-0 group-hover:opacity-100 transition-opacity absolute -top-5 left-1/2 -translate-x-1/2 bg-slate-900 border border-teal-500 text-[9px] text-teal-300 px-1.5 py-0.5 rounded shadow pointer-events-none whitespace-nowrap flex items-center gap-1">
+                                  <Move className="w-2.5 h-2.5" />
+                                  <span>Arraste para mover</span>
+                                </div>
+                              </div>
+                            ) : (
+                              <div className="font-serif italic text-base sm:text-lg text-teal-300 font-bold pb-1 w-48 border-b border-white/20">
+                                {certInstructor}
+                              </div>
+                            )}
+
+                            {/* Linha de Assinatura Fixa */}
+                            {instructorSigUrl && (
+                              <div className="w-48 border-b border-white/20 mb-1" />
+                            )}
+
+                            {/* Espaço de Nome Fixo: tamanho da fonte se adapta automaticamente à quantidade de letras */}
+                            <div className="w-56 h-9 flex flex-col justify-center items-center overflow-hidden px-1">
+                              <div className={`${getInstructorFontSizeClass(certInstructor)} text-white font-bold truncate max-w-full`}>
+                                {certInstructor}
+                              </div>
+                              <div className="text-[10px] text-slate-400 truncate max-w-full mt-0.5">
+                                {certInstructorRole}
+                              </div>
+                            </div>
+                          </div>
+
+                          {/* DIRETOR TÉCNICO MÉDICO COM ESPAÇO FIXO E FONTE ADAPTATIVA */}
+                          <div className="text-center flex flex-col items-center justify-end h-28 relative">
+                            <div className="font-serif italic text-base sm:text-lg text-teal-300 font-bold pb-1 w-48 border-b border-white/20">
+                              {certDirector.split('-')[0]}
+                            </div>
+
+                            {/* Espaço de Nome Fixo do Diretor Técnico */}
+                            <div className="w-56 h-9 flex flex-col justify-center items-center overflow-hidden px-1">
+                              <div className={`${getInstructorFontSizeClass(certDirector)} text-white font-bold truncate max-w-full`}>
+                                {certDirector}
+                              </div>
+                              <div className="text-[10px] text-slate-400 truncate max-w-full mt-0.5">
+                                Diretoria Técnica • CRM-SP
+                              </div>
+                            </div>
+                          </div>
+
+                        </div>
+
+                        {/* Rodapé com Código de Autenticidade e QR Code */}
+                        <div className="pt-4 flex flex-col sm:flex-row items-center justify-between text-[11px] text-slate-400 border-t border-white/10 gap-2 font-mono">
+                          <div className="flex items-center gap-1.5">
+                            <span className="text-slate-500">Chave de Autenticação:</span>
+                            <strong className="text-teal-400 font-bold">USM-2026-X89A-99F</strong>
+                          </div>
+                          <div>Validade Técnica Recomendada: <strong className="text-white">{certValidity} meses</strong></div>
+                          <div>Emissão: <strong className="text-white">{new Date().toLocaleDateString('pt-BR')}</strong></div>
+                        </div>
+
+                      </div>
+                    ) : (
+                      /* ===================================================== */
+                      /* VERSO DO CERTIFICADO (EMENTA E CONTEÚDO PROGRAMÁTICO) */
+                      /* ===================================================== */
+                      <div className="space-y-6">
+                        <div className="flex flex-col sm:flex-row sm:items-center justify-between border-b border-white/10 pb-4 gap-2">
+                          <div>
+                            <div className="flex items-center gap-2">
+                              <BookOpen className="w-4 h-4 text-teal-400" />
+                              <h4 className="font-black text-sm uppercase tracking-wider text-white">
+                                Conteúdo Programático & Registro Curricular
+                              </h4>
+                            </div>
+                            <span className="text-xs text-teal-400 font-medium">{certTitle}</span>
+                          </div>
+                          <span className="text-xs font-bold px-3 py-1 bg-teal-500/10 border border-teal-500/30 rounded-lg text-teal-300 font-mono self-start sm:self-auto">
+                            Carga Horária Total: {certWorkload} horas
+                          </span>
+                        </div>
+
+                        <div className="space-y-3">
+                          <div className="text-xs font-bold text-slate-300 uppercase tracking-wider">
+                            Módulos e Competências Prático-Profissionais:
+                          </div>
+
+                          <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs">
+                            {certModules.map((item, i) => (
+                              <div key={i} className="p-2.5 rounded-xl bg-slate-950/70 border border-white/5 flex items-start gap-2 text-slate-300">
+                                <span className="w-5 h-5 rounded-md bg-teal-500/20 text-teal-300 flex items-center justify-center font-mono text-[10px] font-bold shrink-0">
+                                  {i + 1}
+                                </span>
+                                <span className="leading-snug">{item}</span>
+                              </div>
+                            ))}
+                          </div>
+                        </div>
+
+                        <div className="p-4 bg-slate-950/80 rounded-2xl border border-teal-500/20 text-xs text-slate-300 space-y-1">
+                          <strong className="text-teal-400 block font-bold">Metodologia e Critérios de Aprovação:</strong>
+                          <p className="leading-relaxed">
+                            Formação estruturada com videoaulas técnicas, material didático referenciado, 5 questões por módulo (mínimo de aproveitamento formativo), avaliação teórica com 20 questões e simulação de resposta a emergências.
+                          </p>
+                        </div>
+
+                        <div className="flex flex-col sm:flex-row items-center justify-between pt-4 border-t border-white/10 text-[10px] text-slate-500 gap-2 font-mono">
+                          <div>União Serviços Médicos • Registro Interno de Capacitação</div>
+                          <div>Documento com Verificação Eletrônica de Autenticidade</div>
+                        </div>
+                      </div>
+                    )}
+
+                  </div>
+                </div>
+
+              </div>
+
 
             </div>
           </div>
@@ -2286,6 +2690,89 @@ export const AdminDashboard: React.FC = () => {
                 className="px-5 py-2.5 rounded-xl text-xs font-bold text-white bg-slate-800 hover:bg-slate-700"
               >
                 Fechar Prévia
+              </button>
+            </div>
+
+          </div>
+        </div>
+      )}
+
+      {/* ========================================================================= */}
+      {/* MODAL: GERADOR DE CÓDIGO DE PRESENÇA PRESENCIAL (SALA DE AULA / PROJETOR) */}
+      {/* ========================================================================= */}
+      {presenceCodeModalOpen && activePresenceCohort && (
+        <div className="fixed inset-0 z-50 bg-slate-950/85 backdrop-blur-md flex items-center justify-center p-4">
+          <div className="bg-slate-900 border border-teal-500/30 rounded-3xl p-6 sm:p-8 max-w-lg w-full space-y-6 shadow-2xl animate-fadeIn">
+            
+            <div className="flex items-center justify-between border-b border-white/10 pb-4">
+              <div className="flex items-center gap-2.5">
+                <div className="w-9 h-9 rounded-xl bg-teal-500/20 text-teal-400 flex items-center justify-center">
+                  <KeyRound className="w-5 h-5" />
+                </div>
+                <div>
+                  <h3 className="font-bold text-white text-base">Validador de Presença em Sala</h3>
+                  <p className="text-[11px] text-slate-400">{activePresenceCohort.name}</p>
+                </div>
+              </div>
+              <button 
+                onClick={() => setPresenceCodeModalOpen(false)}
+                className="text-slate-400 hover:text-white"
+              >
+                <X className="w-5 h-5" />
+              </button>
+            </div>
+
+            {/* Banner do Código para Projeção */}
+            <div className="p-8 rounded-2xl bg-slate-950 border-2 border-teal-500/50 text-center space-y-4 shadow-inner">
+              <span className="text-[10px] font-black uppercase tracking-[0.25em] text-teal-400 block">
+                Código Oficial da Aula Presencial
+              </span>
+
+              <div className="text-4xl sm:text-5xl font-black font-mono tracking-[0.25em] text-white selection:bg-teal-500 selection:text-slate-950">
+                {generatedPresenceCode}
+              </div>
+
+              <p className="text-xs text-slate-400 max-w-sm mx-auto">
+                Projete este código no telão ou informe aos alunos presentes para que validem o check-in no menu <strong>Presença Presencial</strong> do portal.
+              </p>
+            </div>
+
+            <div className="grid grid-cols-2 gap-3 text-xs">
+              <button
+                type="button"
+                onClick={() => {
+                  navigator.clipboard.writeText(generatedPresenceCode);
+                  setPresenceCodeCopied(true);
+                  setTimeout(() => setPresenceCodeCopied(false), 2500);
+                }}
+                className="py-3 px-4 rounded-xl font-bold bg-white/5 hover:bg-white/10 border border-white/10 text-white flex items-center justify-center gap-2 transition-colors"
+              >
+                {presenceCodeCopied ? <Check className="w-4 h-4 text-emerald-400" /> : <Copy className="w-4 h-4 text-slate-400" />}
+                <span>{presenceCodeCopied ? 'Código Copiado!' : 'Copiar Código'}</span>
+              </button>
+
+              <button
+                type="button"
+                onClick={() => {
+                  const randomSuffix = Math.floor(1000 + Math.random() * 9000);
+                  const code = `${activePresenceCohort.name.includes('Stop') ? 'STB' : 'APH'}-${randomSuffix}`;
+                  setGeneratedPresenceCode(code);
+                  localStorage.setItem('usm_presence_code_aph', code);
+                }}
+                className="py-3 px-4 rounded-xl font-bold bg-teal-500/20 hover:bg-teal-500/30 border border-teal-500/40 text-teal-300 flex items-center justify-center gap-2 transition-colors"
+              >
+                <RefreshCw className="w-4 h-4 text-teal-400" />
+                <span>Gerar Novo Código</span>
+              </button>
+            </div>
+
+            <div className="pt-2 border-t border-white/10 flex justify-end">
+              <button
+                type="button"
+                onClick={() => setPresenceCodeModalOpen(false)}
+                className="px-6 py-2.5 rounded-xl font-bold text-xs text-slate-950 bg-gradient-to-r from-teal-400 to-emerald-300 hover:brightness-110 shadow"
+              >
+                Concluir
               </button>
             </div>
 

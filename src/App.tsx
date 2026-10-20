@@ -10,6 +10,7 @@ import { ClinicalSimulatorPage } from './pages/student/ClinicalSimulatorPage';
 import { MaterialsPage } from './pages/student/MaterialsPage';
 import { ExamsPage } from './pages/student/ExamsPage';
 import { CertificatesPage } from './pages/student/CertificatesPage';
+import { PresencePage } from './pages/student/PresencePage';
 import { AdminDashboard } from './pages/admin/AdminDashboard';
 
 import { ThemeProvider } from './context/ThemeContext';
@@ -41,7 +42,7 @@ export const App: React.FC = () => {
           <Route path="videos" element={<StudentDashboard />} />
           <Route path="provas" element={<ExamsPage />} />
           <Route path="certificados" element={<CertificatesPage />} />
-          <Route path="frequencia" element={<StudentDashboard />} />
+          <Route path="frequencia" element={<PresencePage />} />
         </Route>
 
         {/* Painel Administrativo Protegido */}
