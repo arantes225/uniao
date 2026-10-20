@@ -179,6 +179,13 @@ O plano de segurança escolar deve conter um **Protocolo de Resposta ao Engasgo 
 
 ---
 
+### Figuras de Apoio
+
+![Figura 1 - Compressões abdominais (manobra de Heimlich).](../imagens/Abdominal_thrusts_against_choking_cropped_.jpg)
+*Figura 1 - Compressões abdominais (manobra de Heimlich). Crédito: US Army Medical Department Center and School. Licença: Domínio público. Fonte: Wikimedia Commons.*
+
+---
+
 ## SEÇÃO 6 — QUADROS PRÁTICOS E MATRIZES DE RISCO ALIMENTAR
 
 ### Quadro 6.1 — Matriz de Risco dos Alimentos Infantis e Adaptação Culinária

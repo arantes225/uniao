@@ -174,6 +174,13 @@ Enquanto a ambulância desloca-se, o socorrista deve otimizar o ambiente:
 
 ---
 
+### Figuras de Apoio
+
+![Figura 1 - Motolâncias do SAMU 192 (Distrito Federal).](../imagens/Motolancias_SAMU_Distrito_Federal.jpg)
+*Figura 1 - Motolâncias do SAMU 192 (Distrito Federal). Crédito: Antonio Cruz/Agência Brasil. Licença: CC BY 3.0 BR (https://creativecommons.org/licenses/by/3.0/br/). Fonte: Wikimedia Commons.*
+
+---
+
 ## SEÇÃO 6 — QUADROS PRÁTICOS E MATRIZES DECISÓRIAS
 
 ### Quadro 6.1 — Matriz Decisória de Acionamento: 192 ou 193?

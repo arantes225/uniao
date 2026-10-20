@@ -181,6 +181,13 @@ A NR-35 exige que toda empresa que atue em altura possua uma equipe de emergênc
 
 ---
 
+### Figuras de Apoio
+
+![Figura 1 - ColocaÃ§Ã£o de colar cervical.](../imagens/Cervical-collar-application.png)
+*Figura 1 - ColocaÃ§Ã£o de colar cervical. CrÃ©dito: Baedr-9439. LicenÃ§a: CC0. Fonte: Wikimedia Commons.*
+
+---
+
 ## 6. MATRIZ DE DECISÃO RÁPIDA EM TRAUMAS DE ALTURA
 
 | Cenário de Acidente | Sinais e Gravidade | Conduta Imediata Obrigatória | Conduta Expressamente Proibida |

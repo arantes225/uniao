@@ -190,6 +190,19 @@ Suspeite e aja se a vítima apresentar sintomas de início súbito (segundos a m
 
 ---
 
+### Figuras de Apoio
+
+![Figura 1 - Uso de autoinjetor de adrenalina.](../imagens/Epinephrine-injection.png)
+*Figura 1 - Uso de autoinjetor de adrenalina. Crédito: Baedr-9439. Licença: CC0. Fonte: Wikimedia Commons.*
+
+![Figura 2 - Sinais e sintomas da anafilaxia.](../imagens/Signs_and_symptoms_of_anaphylaxis.png)
+*Figura 2 - Sinais e sintomas da anafilaxia. Crédito: Mikael Häggström. Licença: CC0. Fonte: Wikimedia Commons.*
+
+![Figura 3 - Inalador dosimetrado para asma.](../imagens/AsthmaInhaler.jpg)
+*Figura 3 - Inalador dosimetrado para asma. Crédito: Wikimedia Commons (Mendel, assumido). Licença: Domínio público. Fonte: Wikimedia Commons.*
+
+---
+
 ## SEÇÃO 6 — QUADROS PRÁTICOS E MATRIZES DECISÓRIAS
 
 ### Quadro 6.1 — Diagnóstico Diferencial: Hipoglicemia versus Hiperglicemia

@@ -186,6 +186,19 @@ A gestão de sinistros químicos fundamenta-se na organização espacial rígida
 
 ---
 
+### Figuras de Apoio
+
+![Figura 1 - Bolsa-vÃ¡lvula-mÃ¡scara (ambu).](../imagens/Bag-valve-mask.jpg)
+*Figura 1 - Bolsa-vÃ¡lvula-mÃ¡scara (ambu). CrÃ©dito: Another-anon-artist-234. LicenÃ§a: CC0. Fonte: Wikimedia Commons.*
+
+![Figura 2 - Sinal ISO 7010 E011: lava-olhos de emergÃªncia.](../imagens/ISO_7010_E011.png)
+*Figura 2 - Sinal ISO 7010 E011: lava-olhos de emergÃªncia. CrÃ©dito: MaxxL. LicenÃ§a: DomÃ­nio pÃºblico. Fonte: Wikimedia Commons.*
+
+![Figura 3 - Diamante de Hommel (NFPA 704).](../imagens/NFPA_704.png)
+*Figura 3 - Diamante de Hommel (NFPA 704). CrÃ©dito: Denelson83. LicenÃ§a: DomÃ­nio pÃºblico. Fonte: Wikimedia Commons.*
+
+---
+
 ## 6. MATRIZ DE CONDUTAS RÁPIDAS EM ACIDENTES QUÍMICOS
 
 | Cenário Químico | Sinais Típicos | Conduta Imediata Obrigatória | Conduta Expressamente Proibida |

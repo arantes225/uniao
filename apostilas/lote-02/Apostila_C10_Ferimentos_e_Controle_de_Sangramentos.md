@@ -194,6 +194,13 @@ Diante desses sinais, acione imediatamente o SAMU 192, deite a vítima de costas
 
 ---
 
+### Figuras de Apoio
+
+![Figura 1 - Aplicação de torniquete em treinamento TCCC.](../imagens/Tourniquet_application.jpg)
+*Figura 1 - Aplicação de torniquete em treinamento TCCC. Crédito: U.S. Navy, MC2 Barry R. Hirayama. Licença: Domínio público. Fonte: Wikimedia Commons.*
+
+---
+
 ## SEÇÃO 6 — QUADROS PRÁTICOS E MATRIZES DECISÓRIAS
 
 ### Quadro 6.1 — Matriz Decisória: Técnicas de Controle Hemorrágico por Região Corporal

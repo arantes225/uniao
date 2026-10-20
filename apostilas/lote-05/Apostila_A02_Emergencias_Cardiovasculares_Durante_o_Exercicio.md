@@ -231,6 +231,16 @@ A competência técnica sob estresse só se consolida mediante treinamentos real
 
 ---
 
+### Figuras de Apoio
+
+![Figura 1 - Desfibrilador Externo Automático (DEA).](../imagens/Modern_AED_Automated_external_defibrillator.png)
+*Figura 1 - Desfibrilador Externo Automático (DEA). Crédito: VoLid27. Licença: CC0. Fonte: Wikimedia Commons.*
+
+![Figura 2 - Infarto agudo do miocárdio.](../imagens/Blausen_0463_HeartAttack.png)
+*Figura 2 - Infarto agudo do miocárdio. Crédito: Blausen Medical Communications, Inc.. Licença: CC BY 3.0 (https://creativecommons.org/licenses/by/3.0/). Fonte: Wikimedia Commons.*
+
+---
+
 ## SEÇÃO 6 — QUADROS PRÁTICOS E ALGORITMOS DECISÓRIOS DE SUPORTE À VIDA
 
 ### Algoritmo de Decisão no Colapso do Aluno

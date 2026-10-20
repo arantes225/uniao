@@ -184,6 +184,16 @@ A movimentação de uma vítima de trauma só deve ser executada se houver perig
 
 ---
 
+### Figuras de Apoio
+
+![Figura 1 - Imobilização de braço com tala moldável.](../imagens/Splinting-an-arm.png)
+*Figura 1 - Imobilização de braço com tala moldável. Crédito: Baedr-9439. Licença: CC0. Fonte: Wikimedia Commons.*
+
+![Figura 2 - Colocação de colar cervical.](../imagens/Cervical-collar-application.png)
+*Figura 2 - Colocação de colar cervical. Crédito: Baedr-9439. Licença: CC0. Fonte: Wikimedia Commons.*
+
+---
+
 ## SEÇÃO 6 — QUADROS PRÁTICOS E MATRIZES DECISÓRIAS
 
 ### Quadro 6.1 — Matriz Comparativa: Fratura, Luxação e Entorse

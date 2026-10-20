@@ -174,6 +174,13 @@ O fechamento pedagógico do módulo segue o modelo internacional de Exame Clíni
 
 ---
 
+### Figuras de Apoio
+
+![Figura 1 - Aplicação de torniquete em treinamento TCCC.](../imagens/Tourniquet_application.jpg)
+*Figura 1 - Aplicação de torniquete em treinamento TCCC. Crédito: U.S. Navy, MC2 Barry R. Hirayama. Licença: Domínio público. Fonte: Wikimedia Commons.*
+
+---
+
 ## SEÇÃO 6 — QUADROS PRÁTICOS, RUBRICAS DE AVALIAÇÃO E CHECKLISTS DE HABILIDADES
 
 ### Rubrica de Avaliação de Desempenho Prático (Padrão USM / OSCE)

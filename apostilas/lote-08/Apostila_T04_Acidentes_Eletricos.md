@@ -216,6 +216,13 @@ O atendimento pré-hospitalar ao acidentado elétrico deve seguir uma metodologi
 
 ---
 
+### Figuras de Apoio
+
+![Figura 1 - Procedimento de bloqueio e etiquetagem (LOTO).](../imagens/Lockout_Tagout_14853353063_.jpg)
+*Figura 1 - Procedimento de bloqueio e etiquetagem (LOTO). CrÃ©dito: NAVFAC (U.S. Navy). LicenÃ§a: DomÃ­nio pÃºblico. Fonte: Wikimedia Commons.*
+
+---
+
 ## 6. MATRIZ DE CONDUTAS RÁPIDAS EM ACIDENTES ELÉTRICOS
 
 | Cenário Clínico | Quadro Observado | Ação Primária Obrigatória | Ação Terminantemente Proibida |

@@ -212,6 +212,13 @@ A interface entre a resposta corporativa interna e as forças públicas de socor
 
 ---
 
+### Figuras de Apoio
+
+![Figura 1 - Extintor de incÃªndio.](../imagens/Fire_extinguisher.png)
+*Figura 1 - Extintor de incÃªndio. CrÃ©dito: OpenClipart. LicenÃ§a: CC0. Fonte: Wikimedia Commons.*
+
+---
+
 ## 6. MATRIZ DE RESPOSTA RÁPIDA EM INCÊNDIOS INDUSTRIAIS
 
 | Cenário de Emergência | Sinais Críticos | Ação Imediata Obrigatória | Ação Terminantemente Proibida |

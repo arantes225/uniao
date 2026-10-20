@@ -164,6 +164,16 @@ A atuação coordenada requer alinhamento contínuo:
 
 ---
 
+### Figuras de Apoio
+
+![Figura 1 - Uso de autoinjetor de adrenalina.](../imagens/Epinephrine-injection.png)
+*Figura 1 - Uso de autoinjetor de adrenalina. Crédito: Baedr-9439. Licença: CC0. Fonte: Wikimedia Commons.*
+
+![Figura 2 - Inalador dosimetrado para asma.](../imagens/AsthmaInhaler.jpg)
+*Figura 2 - Inalador dosimetrado para asma. Crédito: Wikimedia Commons (Mendel, assumido). Licença: Domínio público. Fonte: Wikimedia Commons.*
+
+---
+
 ## SEÇÃO 6 — QUADROS PRÁTICOS E MATRIZES DECISÓRIAS
 
 ### Matriz de Decisão: Abordagem das Quatro Principais Condições Crônicas

@@ -203,6 +203,13 @@ O socorrista corporativo e a liderança empresarial respondem legalmente pelas s
 
 ---
 
+### Figuras de Apoio
+
+![Figura 1 - Procedimento de bloqueio e etiquetagem (LOTO).](../imagens/Lockout_Tagout_14853353063_.jpg)
+*Figura 1 - Procedimento de bloqueio e etiquetagem (LOTO). Crédito: NAVFAC (U.S. Navy). Licença: Domínio público. Fonte: Wikimedia Commons.*
+
+---
+
 ## SEÇÃO 6 — QUADROS PRÁTICOS, MATRIZES DE RISCO E MODELOS DE GESTÃO OCUPACIONAL
 
 ### Matriz de Priorização de Riscos (Matriz de Severidade x Probabilidade)

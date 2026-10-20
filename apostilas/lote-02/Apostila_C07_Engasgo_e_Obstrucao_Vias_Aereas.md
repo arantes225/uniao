@@ -206,6 +206,13 @@ A prevenção é o pilar mais eficiente da segurança da vida. Conforme preconiz
 
 ---
 
+### Figuras de Apoio
+
+![Figura 1 - Compressões abdominais (manobra de Heimlich).](../imagens/Abdominal_thrusts_against_choking_cropped_.jpg)
+*Figura 1 - Compressões abdominais (manobra de Heimlich). Crédito: US Army Medical Department Center and School. Licença: Domínio público. Fonte: Wikimedia Commons.*
+
+---
+
 ## SEÇÃO 6 — QUADROS PRÁTICOS E ALGORITMOS COMPARATIVOS
 
 ### Quadro 6.1 — Matriz Decisória Rápida no Engasgo (OVACE)

@@ -188,6 +188,13 @@ O socorro em acidentes com maquinário segue o rigoroso fluxo de comando de cena
 
 ---
 
+### Figuras de Apoio
+
+![Figura 1 - Procedimento de bloqueio e etiquetagem (LOTO).](../imagens/Lockout_Tagout_14853353063_.jpg)
+*Figura 1 - Procedimento de bloqueio e etiquetagem (LOTO). Crédito: NAVFAC (U.S. Navy). Licença: Domínio público. Fonte: Wikimedia Commons.*
+
+---
+
 ## SEÇÃO 6 — QUADROS PRÁTICOS, ALGORITMOS DE DESENCARCERAMENTO E MATRIZES DE RISCO
 
 ### Matriz Decisória em Acidentes Mecânicos Industriais

@@ -185,6 +185,16 @@ O educador deve guiar-se pela seguinte regra de ouro da pediatria de emergência
 
 ---
 
+### Figuras de Apoio
+
+![Figura 1 - Uso de autoinjetor de adrenalina.](../imagens/Epinephrine-injection.png)
+*Figura 1 - Uso de autoinjetor de adrenalina. Crédito: Baedr-9439. Licença: CC0. Fonte: Wikimedia Commons.*
+
+![Figura 2 - Sinais e sintomas da anafilaxia.](../imagens/Signs_and_symptoms_of_anaphylaxis.png)
+*Figura 2 - Sinais e sintomas da anafilaxia. Crédito: Mikael Häggström. Licença: CC0. Fonte: Wikimedia Commons.*
+
+---
+
 ## SEÇÃO 6 — QUADROS PRÁTICOS E MATRIZES DECISÓRIAS
 
 ### Quadro 6.1 — Matriz Decisória de Conduta nas Emergências Pediátricas Escolares

@@ -195,6 +195,19 @@ A crise convulsiva decorre de uma descarga elétrica neuronal hipersincrônica, 
 
 ---
 
+### Figuras de Apoio
+
+![Figura 1 - Reconhecimento do AVC pelo método FAST.](../imagens/Identify_the_symptoms_of_a_stroke_using_the_FAST_method.png)
+*Figura 1 - Reconhecimento do AVC pelo método FAST. Crédito: U.S. Food and Drug Administration (vetor: Fvasconcellos). Licença: Domínio público. Fonte: Wikimedia Commons.*
+
+![Figura 2 - Act FAST: sinais de alerta do AVC.](../imagens/Act_FAST.png)
+*Figura 2 - Act FAST: sinais de alerta do AVC. Crédito: U.S. CDC, NCCDPHP. Licença: Domínio público. Fonte: Wikimedia Commons.*
+
+![Figura 3 - Infarto agudo do miocárdio.](../imagens/Blausen_0463_HeartAttack.png)
+*Figura 3 - Infarto agudo do miocárdio. Crédito: Blausen Medical Communications, Inc.. Licença: CC BY 3.0 (https://creativecommons.org/licenses/by/3.0/). Fonte: Wikimedia Commons.*
+
+---
+
 ## SEÇÃO 6 — QUADROS PRÁTICOS E MATRIZES DECISÓRIAS
 
 ### Quadro 6.1 — Diagnóstico Diferencial Rápido de Alterações da Consciência

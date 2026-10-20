@@ -238,6 +238,16 @@ Assim que a vítima for extraída para a atmosfera livre:
 
 ---
 
+### Figuras de Apoio
+
+![Figura 1 - TripÃ© de extraÃ§Ã£o para espaÃ§o confinado.](../imagens/Confined_Space_Entry_32884133734_.jpg)
+*Figura 1 - TripÃ© de extraÃ§Ã£o para espaÃ§o confinado. CrÃ©dito: Georgia National Guard. LicenÃ§a: CC BY 2.0 (https://creativecommons.org/licenses/by/2.0/). Fonte: Wikimedia Commons.*
+
+![Figura 2 - Bolsa-vÃ¡lvula-mÃ¡scara (ambu).](../imagens/Bag-valve-mask.jpg)
+*Figura 2 - Bolsa-vÃ¡lvula-mÃ¡scara (ambu). CrÃ©dito: Another-anon-artist-234. LicenÃ§a: CC0. Fonte: Wikimedia Commons.*
+
+---
+
 ## 6. MATRIZ DE CONDUTAS RÁPIDAS EM EMERGÊNCIAS DE ESPAÇO CONFINADO
 
 | Cenário Observado | Perigo Iminente | Ação Imediata Obrigatória | Ação Terminantemente Proibida |

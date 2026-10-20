@@ -184,6 +184,13 @@ Nas aulas de educação física e treinos de futebol/vôlei:
 
 ---
 
+### Figuras de Apoio
+
+![Figura 1 - Imobilização de braço com tala moldável.](../imagens/Splinting-an-arm.png)
+*Figura 1 - Imobilização de braço com tala moldável. Crédito: Baedr-9439. Licença: CC0. Fonte: Wikimedia Commons.*
+
+---
+
 ## SEÇÃO 6 — QUADROS PRÁTICOS E PROTOCOLOS DE CONDUTA
 
 ### Quadro 6.1 — Matriz de Decisão: Quando Encaminhar ao Hospital no Trauma Escolar

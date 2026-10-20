@@ -184,6 +184,16 @@ A realização periódica de simulações com cenários realísticos é o coraç
 
 ---
 
+### Figuras de Apoio
+
+![Figura 1 - Desfibrilador Externo Automático (DEA).](../imagens/Modern_AED_Automated_external_defibrillator.png)
+*Figura 1 - Desfibrilador Externo Automático (DEA). Crédito: VoLid27. Licença: CC0. Fonte: Wikimedia Commons.*
+
+![Figura 2 - DEA de acesso público em gabinete sinalizado.](../imagens/Public_access_AED_with_coded_lock.jpg)
+*Figura 2 - DEA de acesso público em gabinete sinalizado. Crédito: Christian P. Nielsen. Licença: CC0. Fonte: Wikimedia Commons.*
+
+---
+
 ## SEÇÃO 6 — QUADROS PRÁTICOS, MATRIZES OPERACIONAIS E CHECKLISTS DE AUDITORIA
 
 ### Matriz de Prioridades Operacionais no Plano de Emergência da Academia

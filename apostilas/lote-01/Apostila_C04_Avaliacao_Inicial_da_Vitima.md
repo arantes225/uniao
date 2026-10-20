@@ -194,6 +194,13 @@ A avaliação inicial não é uma foto estática tirada na chegada; ela é um fi
 
 ---
 
+### Figuras de Apoio
+
+![Figura 1 - Tração da mandíbula (jaw thrust) para abertura de via aérea.](../imagens/Jaw_thrust.jpg)
+*Figura 1 - Tração da mandíbula (jaw thrust) para abertura de via aérea. Crédito: Department of the Army (EUA). Licença: Domínio público. Fonte: Wikimedia Commons.*
+
+---
+
 ## SEÇÃO 6 — QUADROS PRÁTICOS E MATRIZES DECISÓRIAS
 
 ### Quadro 6.1 — Matriz de Triagem Visual Primária (Primeiros 30 Segundos)
