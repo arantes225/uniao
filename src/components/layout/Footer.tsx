@@ -57,10 +57,28 @@ export const Footer: React.FC = () => {
           {/* Portal & Legal */}
           <div className="space-y-3">
             <h4 className="text-xs font-bold uppercase tracking-wider text-white">
-              Acesso Acadêmico
+              Contato Institucional
             </h4>
-            <ul className="space-y-2 text-sm">
+            <ul className="space-y-2 text-sm text-slate-400">
               <li>
+                <a 
+                  href="https://wa.me/5561999638011" 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  className="hover:text-uniao-400 transition-colors flex items-center gap-1.5"
+                >
+                  <span className="text-uniao-400 font-mono text-xs">WhatsApp:</span> (61) 99963-8011
+                </a>
+              </li>
+              <li>
+                <a 
+                  href="mailto:uniaoservicosmedicos@gmail.com" 
+                  className="hover:text-uniao-400 transition-colors flex items-center gap-1.5"
+                >
+                  <span className="text-uniao-400 font-mono text-xs">E-mail:</span> uniaoservicosmedicos@gmail.com
+                </a>
+              </li>
+              <li className="pt-2">
                 <Link to="/login" className="flex items-center gap-1.5 text-uniao-400 hover:text-uniao-300 font-medium">
                   <Lock className="w-3.5 h-3.5" />
                   <span>Área do Aluno (Login)</span>
@@ -69,16 +87,6 @@ export const Footer: React.FC = () => {
               <li>
                 <Link to="/validar-certificado" className="hover:text-uniao-400 transition-colors">
                   Validar Certificado
-                </Link>
-              </li>
-              <li>
-                <Link to="/privacidade" className="hover:text-uniao-400 transition-colors">
-                  Política de Privacidade (LGPD)
-                </Link>
-              </li>
-              <li>
-                <Link to="/termos" className="hover:text-uniao-400 transition-colors">
-                  Termos de Uso
                 </Link>
               </li>
             </ul>

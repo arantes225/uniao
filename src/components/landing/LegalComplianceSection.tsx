@@ -66,7 +66,7 @@ export const LegalComplianceSection: React.FC = () => {
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
           {cards.map((card, idx) => {
             const Icon = card.icon;
-            const link = `https://wa.me/5500000000000?text=${encodeURIComponent(`Olá! Gostaria de uma proposta de adequação de treinamento para: ${card.target}`)}`;
+            const link = `https://wa.me/5561999638011?text=${encodeURIComponent(`Olá! Gostaria de uma proposta de adequação de treinamento para: ${card.target}`)}`;
 
             return (
               <div 

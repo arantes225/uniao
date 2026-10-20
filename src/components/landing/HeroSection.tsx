@@ -2,7 +2,7 @@ import React from 'react';
 import { ArrowRight, ShieldAlert, PhoneCall, Zap, HeartPulse, Clock, Sparkles } from 'lucide-react';
 
 export const HeroSection: React.FC = () => {
-  const whatsappUrl = "https://wa.me/5500000000000?text=Ol%C3%A1!%20Gostaria%20de%20solicitar%20informa%C3%A7%C3%B5es%20urgentes%20sobre%20capacita%C3%A7%C3%B5es%20da%20Uni%C3%A3o%20Servi%C3%A7os%20M%C3%A9dicos.";
+  const whatsappUrl = "https://wa.me/5561999638011?text=Ol%C3%A1!%20Gostaria%20de%20solicitar%20informa%C3%A7%C3%B5es%20urgentes%20sobre%20capacita%C3%A7%C3%B5es%20da%20Uni%C3%A3o%20Servi%C3%A7os%20M%C3%A9dicos.";
 
   return (
     <section className="relative pt-32 pb-24 lg:pt-40 lg:pb-36 bg-slate-950 text-white overflow-hidden">

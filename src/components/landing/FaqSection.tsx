@@ -78,7 +78,7 @@ export const FaqSection: React.FC = () => {
         {/* Floating Call to Action */}
         <div className="mt-12 text-center">
           <a
-            href="https://wa.me/5500000000000?text=Ol%C3%A1!%20Ainda%20tenho%20d%C3%BAvidas%20sobre%20a%20capacita%C3%A7%C3%A3o%20da%20Uni%C3%A3o."
+            href="https://wa.me/5561999638011?text=Ol%C3%A1!%20Ainda%20tenho%20d%C3%BAvidas%20sobre%20a%20capacita%C3%A7%C3%A3o%20da%20Uni%C3%A3o."
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 text-xs font-bold text-uniao-400 hover:text-uniao-300 underline"

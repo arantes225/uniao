@@ -14,7 +14,7 @@ export const ContactSection: React.FC = () => {
   const [success, setSuccess] = useState(false);
   const [error, setError] = useState<string | null>(null);
 
-  const whatsappUrl = "https://wa.me/5500000000000?text=Ol%C3%A1!%20Gostaria%20de%20solicitar%20uma%20proposta%20de%20capacita%C3%A7%C3%A3o%20para%20minha%20institui%C3%A7%C3%A3o.";
+  const whatsappUrl = "https://wa.me/5561999638011?text=Ol%C3%A1!%20Gostaria%20de%20solicitar%20uma%20proposta%20de%20capacita%C3%A7%C3%A3o%20para%20minha%20institui%C3%A7%C3%A3o.";
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -72,7 +72,7 @@ export const ContactSection: React.FC = () => {
                 <span>Falar pelo WhatsApp</span>
               </a>
               <a
-                href="mailto:contato@uniaoservicosmedicos.com.br"
+                href="mailto:uniaoservicosmedicos@gmail.com"
                 className="inline-flex items-center justify-center gap-2.5 px-6 py-3.5 rounded-xl font-semibold text-white bg-uniao-700 hover:bg-uniao-600 border border-uniao-500/40 transition-all"
               >
                 <Mail className="w-5 h-5" />

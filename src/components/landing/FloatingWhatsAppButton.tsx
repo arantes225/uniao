@@ -2,7 +2,7 @@ import React from 'react';
 import { PhoneCall } from 'lucide-react';
 
 export const FloatingWhatsAppButton: React.FC = () => {
-  const whatsappUrl = "https://wa.me/5500000000000?text=Ol%C3%A1!%20Gostaria%20de%20solicitar%20uma%20proposta%20de%20capacita%C3%A7%C3%A3o%20para%20minha%20institui%C3%A7%C3%A3o.";
+  const whatsappUrl = "https://wa.me/5561999638011?text=Ol%C3%A1!%20Gostaria%20de%20solicitar%20uma%20proposta%20de%20capacita%C3%A7%C3%A3o%20para%20minha%20institui%C3%A7%C3%A3o.";
 
   return (
     <aside aria-label="Contato Rápido WhatsApp" className="fixed bottom-6 right-6 z-50 group">

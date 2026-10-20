@@ -78,7 +78,7 @@ export const CoursesSection: React.FC = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-16">
           {courses.map((course, idx) => {
             const Icon = course.icon;
-            const link = `https://wa.me/5500000000000?text=${encodeURIComponent(course.whatsappMsg)}`;
+            const link = `https://wa.me/5561999638011?text=${encodeURIComponent(course.whatsappMsg)}`;
             return (
               <div 
                 key={idx}
