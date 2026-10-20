@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
+import { HashRouter, Routes, Route, Navigate } from 'react-router-dom';
 import { LandingPage } from './pages/landing/LandingPage';
 import { LoginPage } from './pages/auth/LoginPage';
 import { CertificateValidationPage } from './pages/public/CertificateValidationPage';
@@ -17,7 +17,7 @@ import { ThemeProvider } from './context/ThemeContext';
 export const App: React.FC = () => {
   return (
     <ThemeProvider>
-      <BrowserRouter>
+      <HashRouter>
         <Routes>
         {/* Site Institucional Público */}
         <Route path="/" element={<LandingPage />} />
@@ -50,7 +50,7 @@ export const App: React.FC = () => {
         {/* Fallback de rotas */}
         <Route path="*" element={<Navigate to="/" replace />} />
       </Routes>
-    </BrowserRouter>
+    </HashRouter>
   </ThemeProvider>
   );
 };
