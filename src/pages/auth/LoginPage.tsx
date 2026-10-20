@@ -1,17 +1,20 @@
 import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import { Lock, Mail, ArrowRight, ShieldCheck, AlertCircle, CheckCircle2 } from 'lucide-react';
+import { Lock, Mail, ArrowRight, ShieldCheck, AlertCircle, CheckCircle2, KeyRound, Sparkles } from 'lucide-react';
 import { supabase } from '../../services/supabase/client';
 
 export const LoginPage: React.FC = () => {
   const navigate = useNavigate();
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const [confirmPassword, setConfirmPassword] = useState('');
   const [rememberMe, setRememberMe] = useState(false);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
-  const [resetSuccess, setResetSuccess] = useState(false);
-  const [isResetMode, setIsResetMode] = useState(false);
+  const [successMessage, setSuccessMessage] = useState<string | null>(null);
+  
+  // Modos de visualização da tela de login: 'login' | 'reset' | 'first_access'
+  const [viewMode, setViewMode] = useState<'login' | 'reset' | 'first_access'>('login');
 
   const handleLogin = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -86,9 +89,58 @@ export const LoginPage: React.FC = () => {
         redirectTo: `${window.location.origin}/redefinir-senha`,
       });
       if (resetErr) throw resetErr;
-      setResetSuccess(true);
+      setSuccessMessage('E-mail de recuperação enviado! Se o e-mail estiver cadastrado, você receberá um link seguro.');
     } catch (err: any) {
       setError(err.message || 'Erro ao solicitar redefinição de senha.');
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  // Fluxo de Primeiro Acesso: cadastrar/definir a senha da conta matriculada
+  const handleFirstAccess = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setLoading(true);
+    setError(null);
+
+    if (password.length < 6) {
+      setError('A senha deve conter no mínimo 6 caracteres.');
+      setLoading(false);
+      return;
+    }
+
+    if (password !== confirmPassword) {
+      setError('A confirmação de senha não confere com a senha digitada.');
+      setLoading(false);
+      return;
+    }
+
+    try {
+      // 1. Tenta cadastrar ou ativar credencial no Supabase Auth
+      const { data: signUpData, error: signUpError } = await supabase.auth.signUp({
+        email,
+        password,
+      });
+
+      if (signUpError) {
+        // Se o usuário já existir (pré-cadastrado pela administração), dispara o link de definição
+        if (signUpError.message?.toLowerCase().includes('already registered')) {
+          const { error: resetErr } = await supabase.auth.resetPasswordForEmail(email, {
+            redirectTo: `${window.location.origin}/aluno/dashboard`,
+          });
+          if (resetErr) throw resetErr;
+          setSuccessMessage('Sua matrícula já foi identificada! Enviamos um link de confirmação para o seu e-mail para ativar e registrar sua nova senha imediatamente.');
+          return;
+        }
+        throw signUpError;
+      }
+
+      if (signUpData.user) {
+        setSuccessMessage('Senha cadastrada com sucesso! Você já pode realizar o login com suas novas credenciais.');
+        setViewMode('login');
+      }
+    } catch (err: any) {
+      setError(err.message || 'Erro ao definir senha no primeiro acesso.');
     } finally {
       setLoading(false);
     }
@@ -128,22 +180,14 @@ export const LoginPage: React.FC = () => {
             </div>
           )}
 
-          {resetSuccess ? (
-            <div className="p-6 rounded-xl bg-uniao-500/10 border border-uniao-500/30 text-center space-y-3">
-              <CheckCircle2 className="w-10 h-10 text-uniao-400 mx-auto" />
-              <h4 className="text-base font-bold text-white">E-mail de recuperação enviado!</h4>
-              <p className="text-xs text-slate-300 leading-relaxed">
-                Se este e-mail estiver cadastrado na plataforma, você receberá um link de redefinição de senha com validade temporária.
-              </p>
-              <button
-                type="button"
-                onClick={() => { setResetSuccess(false); setIsResetMode(false); }}
-                className="mt-3 text-xs font-semibold text-uniao-400 hover:text-uniao-300 underline"
-              >
-                Voltar para o login
-              </button>
+          {successMessage && (
+            <div className="mb-6 p-4 rounded-xl bg-emerald-500/10 border border-emerald-500/30 text-emerald-200 text-xs flex items-start gap-3">
+              <CheckCircle2 className="w-5 h-5 shrink-0 text-emerald-400 mt-0.5" />
+              <div className="leading-relaxed">{successMessage}</div>
             </div>
-          ) : isResetMode ? (
+          )}
+
+          {viewMode === 'reset' ? (
             /* Formulário de Recuperação de Senha */
             <form onSubmit={handlePasswordReset} className="space-y-4">
               <div className="text-sm text-slate-300 mb-2">
@@ -166,10 +210,10 @@ export const LoginPage: React.FC = () => {
               <div className="flex items-center justify-between pt-2">
                 <button
                   type="button"
-                  onClick={() => setIsResetMode(false)}
+                  onClick={() => { setViewMode('login'); setError(null); setSuccessMessage(null); }}
                   className="text-xs text-slate-400 hover:text-slate-200"
                 >
-                  Cancelar
+                  Cancelar e voltar
                 </button>
                 <button
                   type="submit"
@@ -177,6 +221,93 @@ export const LoginPage: React.FC = () => {
                   className="px-5 py-2.5 rounded-lg text-xs font-bold text-white bg-uniao-600 hover:bg-uniao-700 disabled:opacity-50"
                 >
                   {loading ? 'Enviando...' : 'Enviar link de recuperação'}
+                </button>
+              </div>
+            </form>
+          ) : viewMode === 'first_access' ? (
+            /* FORMULÁRIO DE PRIMEIRO ACESSO / CADASTRO DA SENHA DA CONTA */
+            <form onSubmit={handleFirstAccess} className="space-y-4">
+              <div className="space-y-1">
+                <div className="flex items-center gap-2 text-uniao-400 font-bold text-sm">
+                  <Sparkles className="w-4 h-4" />
+                  <span>Primeiro Acesso à Plataforma</span>
+                </div>
+                <p className="text-xs text-slate-400">
+                  Informe o seu e-mail cadastrado na sua turma e defina a senha da sua conta de aluno:
+                </p>
+              </div>
+
+              <div>
+                <label className="block text-xs font-semibold text-slate-300 uppercase mb-1.5">
+                  E-mail cadastrado na turma
+                </label>
+                <div className="relative">
+                  <div className="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-slate-500">
+                    <Mail className="w-4 h-4" />
+                  </div>
+                  <input
+                    type="email"
+                    required
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
+                    placeholder="aluno@exemplo.com"
+                    className="w-full pl-10 pr-4 py-2.5 rounded-lg bg-slate-900 border border-slate-700 text-white placeholder-slate-500 text-sm focus:outline-none focus:border-uniao-500"
+                  />
+                </div>
+              </div>
+
+              <div>
+                <label className="block text-xs font-semibold text-slate-300 uppercase mb-1.5">
+                  Criar Nova Senha (mínimo 6 caracteres)
+                </label>
+                <div className="relative">
+                  <div className="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-slate-500">
+                    <KeyRound className="w-4 h-4" />
+                  </div>
+                  <input
+                    type="password"
+                    required
+                    value={password}
+                    onChange={(e) => setPassword(e.target.value)}
+                    placeholder="••••••••"
+                    className="w-full pl-10 pr-4 py-2.5 rounded-lg bg-slate-900 border border-slate-700 text-white placeholder-slate-500 text-sm focus:outline-none focus:border-uniao-500"
+                  />
+                </div>
+              </div>
+
+              <div>
+                <label className="block text-xs font-semibold text-slate-300 uppercase mb-1.5">
+                  Confirmar Senha
+                </label>
+                <div className="relative">
+                  <div className="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-slate-500">
+                    <Lock className="w-4 h-4" />
+                  </div>
+                  <input
+                    type="password"
+                    required
+                    value={confirmPassword}
+                    onChange={(e) => setConfirmPassword(e.target.value)}
+                    placeholder="••••••••"
+                    className="w-full pl-10 pr-4 py-2.5 rounded-lg bg-slate-900 border border-slate-700 text-white placeholder-slate-500 text-sm focus:outline-none focus:border-uniao-500"
+                  />
+                </div>
+              </div>
+
+              <div className="flex items-center justify-between pt-2">
+                <button
+                  type="button"
+                  onClick={() => { setViewMode('login'); setError(null); setSuccessMessage(null); }}
+                  className="text-xs text-slate-400 hover:text-slate-200"
+                >
+                  Voltar para o login
+                </button>
+                <button
+                  type="submit"
+                  disabled={loading}
+                  className="px-6 py-2.5 rounded-xl text-xs font-bold text-slate-950 bg-gradient-to-r from-uniao-400 to-teal-300 hover:brightness-110 shadow disabled:opacity-50"
+                >
+                  {loading ? 'Cadastrando...' : 'Cadastrar Senha e Ativar'}
                 </button>
               </div>
             </form>
@@ -210,7 +341,7 @@ export const LoginPage: React.FC = () => {
                   </label>
                   <button
                     type="button"
-                    onClick={() => setIsResetMode(true)}
+                    onClick={() => { setViewMode('reset'); setError(null); setSuccessMessage(null); }}
                     className="text-xs text-uniao-400 hover:text-uniao-300 transition-colors"
                   >
                     Esqueceu a senha?
@@ -241,6 +372,16 @@ export const LoginPage: React.FC = () => {
                   />
                   <span className="text-xs text-slate-400">Lembrar de mim</span>
                 </label>
+
+                {/* BOTÃO DE PRIMEIRO ACESSO */}
+                <button
+                  type="button"
+                  onClick={() => { setViewMode('first_access'); setError(null); setSuccessMessage(null); }}
+                  className="text-xs font-semibold text-teal-400 hover:text-teal-300 flex items-center gap-1"
+                >
+                  <Sparkles className="w-3.5 h-3.5" />
+                  <span>Primeiro Acesso?</span>
+                </button>
               </div>
 
               <button
