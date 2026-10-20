@@ -1,12 +1,22 @@
-import React from 'react';
+import React, { useMemo } from 'react';
 
 interface BookletRendererProps {
   markdown: string;
 }
 
+// Performance Optimization: Pre-compile regular expressions outside render loop
+// to avoid re-creating RegExp objects on every inline text chunk and render pass.
+const INLINE_REGEX = /(\*\*[^*]+\*\*|\*[^*]+\*|`[^`]+`)/g;
+const HR_REGEX = /^---+\s*$/;
+const UNORDERED_LIST_REGEX = /^\s*[-*]\s+/;
+const ORDERED_LIST_REGEX = /^\s*\d+\.\s+/;
+const IMG_REGEX = /^!\[([^\]]*)\]\(([^)]+)\)/;
+const CALLOUT_HEADER_REGEX = /^\[!(TIP|NOTE|IMPORTANT|WARNING|CAUTION)\]/i;
+
 const renderInline = (text: string): React.ReactNode[] => {
+  if (!text) return [];
   // Handle bold (**text**), italic (*text*), and inline code (`code`)
-  const parts = text.split(/(\*\*[^*]+\*\*|\*[^*]+\*|`[^`]+`)/g);
+  const parts = text.split(INLINE_REGEX);
   return parts.map((part, idx) => {
     if (part.startsWith('**') && part.endsWith('**')) {
       return <strong key={idx} className="font-bold text-slate-900 dark:text-white">{part.slice(2, -2)}</strong>;
@@ -25,7 +35,11 @@ const renderInline = (text: string): React.ReactNode[] => {
   });
 };
 
-export const BookletRenderer: React.FC<BookletRendererProps> = ({ markdown }) => {
+/**
+ * Pure parser function that converts markdown text into React nodes.
+ */
+const parseMarkdown = (markdown: string): React.ReactNode[] => {
+  if (!markdown) return [];
   const lines = markdown.replace(/\r\n/g, '\n').split('\n');
   const elements: React.ReactNode[] = [];
 
@@ -40,7 +54,7 @@ export const BookletRenderer: React.FC<BookletRendererProps> = ({ markdown }) =>
     }
 
     // Horizontal Rule
-    if (/^---+\s*$/.test(line.trim())) {
+    if (HR_REGEX.test(line.trim())) {
       elements.push(<hr key={`hr-${i}`} className="my-6 border-slate-200 dark:border-slate-800" />);
       i++;
       continue;
@@ -113,7 +127,7 @@ export const BookletRenderer: React.FC<BookletRendererProps> = ({ markdown }) =>
     }
 
     // Image ![alt](src)
-    const imgMatch = line.trim().match(/^!\[([^\]]*)\]\(([^)]+)\)/);
+    const imgMatch = line.trim().match(IMG_REGEX);
     if (imgMatch) {
       const alt = imgMatch[1];
       const src = imgMatch[2];
@@ -149,7 +163,7 @@ export const BookletRenderer: React.FC<BookletRendererProps> = ({ markdown }) =>
       const quoteLines: string[] = [];
       while (i < lines.length && lines[i].trim().startsWith('>')) {
         const clean = lines[i].trim().replace(/^>\s?/, '');
-        if (!/^\[!(TIP|NOTE|IMPORTANT|WARNING|CAUTION)\]/i.test(clean)) {
+        if (!CALLOUT_HEADER_REGEX.test(clean)) {
           quoteLines.push(clean);
         }
         i++;
@@ -211,10 +225,10 @@ export const BookletRenderer: React.FC<BookletRendererProps> = ({ markdown }) =>
     }
 
     // Unordered List
-    if (/^\s*[-*]\s+/.test(line)) {
+    if (UNORDERED_LIST_REGEX.test(line)) {
       const items: string[] = [];
-      while (i < lines.length && /^\s*[-*]\s+/.test(lines[i])) {
-        items.push(lines[i].replace(/^\s*[-*]\s+/, ''));
+      while (i < lines.length && UNORDERED_LIST_REGEX.test(lines[i])) {
+        items.push(lines[i].replace(UNORDERED_LIST_REGEX, ''));
         i++;
       }
       elements.push(
@@ -230,10 +244,10 @@ export const BookletRenderer: React.FC<BookletRendererProps> = ({ markdown }) =>
     }
 
     // Ordered List
-    if (/^\s*\d+\.\s+/.test(line)) {
+    if (ORDERED_LIST_REGEX.test(line)) {
       const items: string[] = [];
-      while (i < lines.length && /^\s*\d+\.\s+/.test(lines[i])) {
-        items.push(lines[i].replace(/^\s*\d+\.\s+/, ''));
+      while (i < lines.length && ORDERED_LIST_REGEX.test(lines[i])) {
+        items.push(lines[i].replace(ORDERED_LIST_REGEX, ''));
         i++;
       }
       elements.push(
@@ -257,5 +271,19 @@ export const BookletRenderer: React.FC<BookletRendererProps> = ({ markdown }) =>
     i++;
   }
 
-  return <div className="space-y-1">{elements}</div>;
+  return elements;
 };
+
+/**
+ * Bolt Performance Optimization:
+ * 1. Wrapped in React.memo to prevent unnecessary re-renders when parent state
+ *    (e.g., active tabs, quiz answer selections, or form field edits) updates.
+ * 2. Memoized AST line parsing using useMemo based on the `markdown` prop.
+ * Expected Impact: Eliminates ~100% of redundant line-by-line parsing overhead
+ * on non-markdown parent state changes, reducing main thread rendering time.
+ */
+export const BookletRenderer: React.FC<BookletRendererProps> = React.memo(({ markdown }) => {
+  const elements = useMemo(() => parseMarkdown(markdown), [markdown]);
+
+  return <div className="space-y-1">{elements}</div>;
+});
