@@ -1,0 +1,365 @@
+# UNIÃO SERVIÇOS MÉDICOS
+## DIRETORIA DE ENSINO, PESQUISA E INOVAÇÃO — DEPI
+### PROGRAMA DE FORMAÇÃO CONTINUADA EM ATENDIMENTO PRÉ-HOSPITALAR E SEGURANÇA OCUPACIONAL
+---
+**Biblioteca Temática:** Primeiros Socorros em Empresas (Normas Regulamentadoras)  
+**Módulo:** T04 — Acidentes Elétricos  
+**Código Curricular:** USM-EMP-T04  
+**Carga Horária Equivalente:** 45 minutos (1 hora teórica)  
+**Público-Alvo:** Eletricistas, operadores industriais, técnicos de manutenção, brigadistas e membros da CIPA  
+**Status Editorial:** Revisão Final Concluída — Aguardando Homologação Médica  
+
+---
+
+## 1. EM 30 SEGUNDOS (SUMÁRIO EXECUTIVO DE RESPOSTA RÁPIDA)
+
+Acidentes com eletricidade industrial e predial constituem emergências críticas onde o princípio inviolável de segurança é: **NUNCA TOQUE NA VÍTIMA ANTES DA CONFIRMAÇÃO ABSOLUTA DA DESENERGIZAÇÃO**. A corrente elétrica não é visível; tocar em uma pessoa ainda conectada ao circuito transfere a descarga para o socorrista, gerando uma segunda vítima letal. A passagem da corrente pelo organismo vivo gera danos por três vias: efeito térmico (efeito Joule causando queimaduras profundas na entrada e saída), perturbação eletrofisiológica direta sobre o sistema de condução cardíaco (desencadeando fibrilação ventricular ou assistolia) e tetanização muscular (espasmo violento que impede a vítima de soltar o cabo elétrico ou contrai os músculos respiratórios, provocando asfixia).
+
+Em acidentes de baixa tensão (menos de 1.000 V), corte a fonte no disjuntor geral ou afaste o condutor utilizando materiais secos e não condutores (madeira seca, fibra de vidro ou bastão isolante homologado). Em alta tensão (acima de 1.000 V / redes de distribuição), mantenha **distância de segurança de no mínimo 10 metros**, pois a eletricidade rompe a rigidez dielétrica do ar e forma arcos elétricos sem necessidade de toque direto; isole a área e acione a concessionária de energia e o Corpo de Bombeiros (193). Se a vítima estiver inconsciente e sem respiração após a desenergização, inicie imediatamente a Ressuscitação Cardiopulmonar (RCP) com compressões torácicas contínuas e instale o Desfibrilador Externo Automático (DEA) o mais rápido possível. Toda vítima de choque elétrico com perda de consciência, mesmo que momentânea, exige internação hospitalar para monitoramento eletrocardiográfico por risco de arritmias cardíacas tardias e síndrome de compartimento por necrose muscular profunda (rabdomiólise).
+
+---
+
+## 2. OBJETIVOS DE APRENDIZAGEM E COMPETÊNCIAS OPERACIONAIS
+
+Ao concluir o estudo deste módulo didático e seus treinamentos operacionais, o profissional estará capacitado a:
+
+1. **Compreender as grandezas físicas e os efeitos biofísicos da corrente elétrica** (tensão, intensidade, frequência, resistência tecidual e trajeto corporal).
+2. **Aplicar os protocolos preventivos e de conformidade com a NR-10** (Segurança em Instalações e Serviços em Eletricidade), incluindo desenergização prévia, bloqueio LOTO e uso de EPI/EPC isolantes.
+3. **Executar a abordagem segura da cena de acidente elétrico**, eliminando o risco de arco voltaico e tensão de passo.
+4. **Reconhecer as lesões térmicas e profundas por efeito Joule**, diferenciando queimaduras de entrada e saída, flash elétrico e síndrome compartimental aguda.
+5. **Identificar as complicações cardiovasculares imediatas e tardias**, manejando a PCR induzida por fibrilação ventricular com suporte rápido de RCP e DEA.
+6. **Organizar o fluxo de atendimento pré-hospitalar ocupacional**, estabilizando a coluna cervical quando houver ejeção mecânica associada e encaminhando a vítima a centros hospitalares com monitorização contínua.
+
+---
+
+## 3. INTRODUÇÃO, CONTEXTO INDUSTRIAL E RELEVÂNCIA EPIDEMIOLÓGICA
+
+A energia elétrica é a força motriz essencial das plantas fabris, escritórios e canteiros de obras. Contudo, segundo estatísticas da Associação Brasileira de Conscientização para os Perigos da Eletricidade (Abracopel) e relatórios do Ministério do Trabalho e Emprego, o Brasil registra anualmente centenas de acidentes fatais por choque elétrico, grande parte no ambiente de trabalho. As ocorrências concentram-se na manutenção improvisada, intervenção em painéis sem desenergização formal, contato acidental de caminhões basculantes e guindastes com redes aéreas e uso de ferramentas elétricas com isolamento degradado.
+
+A lesão por eletricidade é frequentemente enganosa. A pele, por possuir alta resistência ôhmica inicial, pode apresentar apenas pequenas marcas pontilhadas cinzentas ou escaras carbonizadas milimétricas nos pontos de contato. Sob a derme, no entanto, tecidos de baixa resistência (músculos, nervos e vasos sanguíneos) funcionam como condutores preferenciais da corrente. A energia elétrica dissipa-se ao longo desses feixes na forma de calor maciço (Efeito Joule), "cozinhando" grupos musculares internos, trombosando artérias profundas e necrosando nervos motores. Horas após o acidente, a tumefação desses músculos oclui o fluxo vascular nas extremidades (síndrome de compartimento) e a destruição muscular maciça lança mioglobina na corrente sanguínea, entupindo os túbulos renais e provocando insuficiência renal aguda anúrica.
+
+Diante desse quadro patológico oculto e da severidade das perturbações do ritmo cardíaco, o atendimento pré-hospitalar em acidentes elétricos requer competência técnica refinada, prudência extrema com a autoproteção e desmistificação de condutas populares perigosas.
+
+---
+
+## 4. FISIOPATOLOGIA DO CHOQUE ELÉTRICO E EFEITOS BIOLÓGICOS
+
+O impacto biológico da eletricidade depende da interação entre as leis da física e a fisiologia humana:
+
+### A. Lei de Ohm e Efeito Joule
+A intensidade da corrente ($I$) que atravessa o corpo humano é diretamente proporcional à diferença de potencial elétrico / tensão ($V$) e inversamente proporcional à resistência elétrica dos tecidos ($R$), segundo a Lei de Ohm: $I = \frac{V}{R}$. A quantidade de calor gerada pela passagem da corrente por unidade de tempo é descrita pelo Efeito Joule: $Q = I^2 \cdot R \cdot t$.
+- Tecidos com **alta resistência** (pele seca, ossos e gordura) dissipam muito calor ao serem transpassados, gerando carbonização no ponto de entrada e saída.
+- Tecidos com **baixa resistência** (músculos estriados, sangue, linfa e nervos periféricos) atuam como condutores volumétricos, permitindo a livre propagação da corrente e sofrendo lise celular maciça.
+
+### B. Tensão e Tipos de Corrente: Contínua vs. Alternada
+- **Corrente Alternada (CA - 50/60 Hz):** É a padrão das redes prediais e industriais (127V, 220V, 380V). A frequência de 60 Hz é extremamente perigosa porque coincide com o período vulnerável da repolarização ventricular cardíaca (onda T do eletrocardiograma), induzindo despolarizações caóticas que culminam em **Fibrilação Ventricular (FV)** com limiares muito baixos de corrente (50 a 100 mA). Além disso, a CA provoca **tetanização muscular** contínua ("efeito agarrar"), onde os músculos flexores da mão, mais potentes que os extensores, contraem-se violentamente contra a fonte condutora, impedindo a vítima de soltar o cabo energizado e aumentando drasticamente o tempo de contato ($t$).
+- **Corrente Contínua (CC):** Presente em baterias industriais, veículos elétricos e usinas fotovoltaicas. Costuma produzir uma única contração muscular espasmódica maciça que muitas vezes ejeta violentamente a vítima para longe da fonte condutora, causando traumas secundários graves (queda de altura, fraturas e traumatismo cranioencefálico). A CC tende a causar parada cardíaca em **Assistolia**.
+
+### C. Queimaduras Elétricas: Flash Elétrico vs. Contato Direto
+1. **Queimadura por Arco Elétrico / Flash:** Ocorre quando a corrente salta pelo ar entre dois condutores ou entre um condutor e a terra devido à falha de isolação. O arco atinge temperaturas de até 19.000 °C (quatro vezes a temperatura da superfície solar), vaporizando metais e gerando radiação térmica brutal com onda de choque mecânica (*arc blast*), causando queimaduras térmicas extensas de segundo e terceiro graus na pele e face sem que a corrente necessariamente percorra os tecidos internos da vítima.
+2. **Queimadura por Contato Direto:** A corrente entra por um ponto do corpo (frequentemente as mãos), viaja pelos membros e sai por outro ponto aterrado (frequentemente os pés). Provoca pequenas lesões carbonizadas deprimidas de "entrada" e lesões explosivas de "saída", associadas a necrose tecidual muscular interna difusa.
+
+---
+
+## 5. DESENVOLVIMENTO DOS SUBTEMAS OFICIAIS DO CURRÍCULO
+
+### 5.1. Riscos da Corrente Elétrica e Limiares Fisiológicos
+
+Os efeitos fisiológicos no organismo humano variam conforme a intensidade da corrente (em miliamperes - mA) em contato com o corpo em baixa tensão:
+
+```
+┌────────────────────────────────────────────────────────┐
+│ INTENSIDADE DA CORRENTE ELÉTRICA E RESPOSTA HUMANA     │
+├───────────────┬────────────────────────────────────────┤
+│ 1 mA          │ Limiar de percepção tátil (formigamento│
+│ 5 mA          │ Choque leve aceitável, sem dor         │
+│ 10 a 20 mA    │ Limiar de "largar": tetanização, espasm│
+│               │ muscular que impede soltar a fonte     │
+│ 20 a 50 mA    │ Paralisia dos músculos respiratórios   │
+│               │ e asfixia mecânica em poucos minutos   │
+│ 50 a 100 mA   │ Limiar de Fibrilação Ventricular (PCR) │
+│ > 1.000 mA    │ Queimaduras térmicas profundas severas,│
+│ (1 Ampère)    │ parada respiratória e parada cardíaca  │
+└───────────────┴────────────────────────────────────────┘
+```
+
+A trajetória da corrente pelo corpo determina o risco de letalidade imediata:
+- **Mão esquerda para o pé direito/esquerdo:** O trajeto transita diretamente pelo tórax e através do miocárdio, apresentando a maior probabilidade de deflagrar Fibrilação Ventricular fulminante.
+- **Mão para mão:** Transita pelo tórax superior, afetando pulmões, grandes vasos e coração.
+- **Pé para pé:** Menor risco cardiológico direto, mas gera graves lesões musculoesqueléticas pélvicas e membros inferiores.
+
+---
+
+### 5.2. Princípios de Prevenção e Diretrizes da NR-10
+
+A Norma Regulamentadora nº 10 (NR-10) estabelece os requisitos mínimos para garantir a segurança e a saúde dos trabalhadores que interagem em instalações elétricas:
+
+```
+┌────────────────────────────────────────────────────────┐
+│ HIERARQUIA DE SEGURANÇA ELÉTRICA (NR-10)               │
+├────────────────────────────────────────────────────────┤
+│ 1. DESENERGIZAÇÃO TOTAL PROGRAMADA (Medida Primária)   │
+├────────────────────────────────────────────────────────┤
+│ 2. TENSÃO DE SEGURANÇA (Extra Baixa Tensão - SELV/PELV)│
+├────────────────────────────────────────────────────────┤
+│ 3. MEDIDAS DE PROTEÇÃO COLETIVA (EPC)                  │
+│    • Bloqueio mecânico com cadeado e garra (LOTO)      │
+│    • Barreiras, invólucros, mantas isolantes e aterram.│
+├────────────────────────────────────────────────────────┤
+│ 4. EQUIPAMENTOS DE PROTEÇÃO INDIVIDUAL (EPI)           │
+│    • Luvas de borracha isolantes com sobreluva de couro│
+│    • Calçados dielétricos sem partes metálicas         │
+│    • Vestimentas 100% algodão ou retardantes de chama  │
+│    • Protetor facial contra arco elétrico (Arc Flash)  │
+└────────────────────────────────────────────────────────┘
+```
+
+#### Protocolo de Desenergização Conforme a NR-10
+A desenergização elétrica não consiste apenas em "apagar o interruptor". Um circuito somente é considerado desenergizado e liberado para intervenção após o cumprimento sequencial estrito de seis etapas:
+1. Seccionamento (abertura da chave ou disjuntor).
+2. Impedimento de reenergização (bloqueio físico LOTO com cadeado pessoal e etiqueta informativa).
+3. Constatação da ausência de tensão com detector testado previamente.
+4. Instalação de aterramento temporário com equipotencialização dos condutores.
+5. Proteção dos elementos energizados existentes na zona controlada.
+6. Sinalização de impedimento e delimitação da área de trabalho.
+
+---
+
+### 5.3. Segurança Absoluta Antes de Abordar a Vítima
+
+A primeira e mais inviolável atitude de qualquer socorrista frente a uma vítima de choque elétrico é a **garantia estrita da própria segurança**. Aproximar-se impensadamente de alguém em contato com condutor energizado resulta em choque imediato do socorrista.
+
+```
+       ┌────────────────────────────────────────────────────────┐
+       │     DIAGRAMA DE ABORDAGEM SEGURA DE CENA ELÉTRICA     │
+       └──────────────────────────┬─────────────────────────────┘
+                                  │
+       ┌──────────────────────────┴─────────────────────────────┐
+       ▼                                                         ▼
+┌───────────────────────────────┐     ┌───────────────────────────────────┐
+│ BAIXA TENSÃO (< 1.000 V)      │     │ ALTA TENSÃO (> 1.000 V)           │
+│ Ambientes prediais/oficinas   │     │ Cabos caídos, postes e subestações│
+└──────────────┬────────────────┘     └─────────────────┬─────────────────┘
+               │                                        │
+               ▼                                        ▼
+┌───────────────────────────────┐     ┌───────────────────────────────────┐
+│ 1. Desligar disjuntor geral   │     │ 1. NÃO SE APROXIMAR (Raio de 10m) │
+│ 2. Se inacessível: afastar o  │     │ 2. Risco de arco voltaico no ar   │
+│    cabo com bastão isolante,  │     │ 3. Risco de tensão de passo       │
+│    madeira seca ou PVC        │     │ 4. Chamar concessionária e 193    │
+│ 3. Pisar sobre superfície seca│     │ 5. Resgate somente após corte     │
+│ 4. NUNCA TOCAR na vítima antes│     │    formal da rede pela operadora  │
+└───────────────────────────────┘     └───────────────────────────────────┘
+```
+
+#### A. O Perigo da Tensão de Passo em Alta Tensão
+Quando um cabo de alta tensão cai sobre o solo ou sobre um veículo, a corrente elétrica flui para a terra espalhando-se em ondas concêntricas de potencial decrescente, semelhante a ondas criadas por uma pedra jogada na água.
+- A diferença de potencial elétrico entre os dois pés de uma pessoa caminhando no solo energizado cria a chamada **Tensão de Passo**. Essa voltagem pode atingir milhares de volts, fazendo a corrente subir por uma perna, atravessar a bacia e descer pela outra, derrubando a pessoa e causando parada cardíaca imediata.
+- **Se você estiver próximo a um cabo de alta tensão caído:** Mantenha os pés rigorosamente juntos e afaste-se da área saltando com ambos os pés colados (*pulos com pernas unidas*) ou arrastando os pés no chão sem erguer nenhum calçado e sem afastar as solas mais que alguns milímetros.
+- **Veículos em Contato com Rede Elétrica:** Se um caminhão ou veículo colidir com um poste e fios elétricos caírem sobre a lataria, **os ocupantes devem permanecer no interior da cabine**, que atua como uma Gaiola de Faraday protetora. Sair do caminhão e encostar simultaneamente na lataria metálica e no solo causa morte instantânea. Caso haja princípio de incêndio inadiável, a vítima deve pular para fora do veículo sem tocar em nenhuma parte de metal durante o salto, aterrissando com os dois pés juntos e afastando-se aos pulos unípedes.
+
+---
+
+### 5.4. Queimaduras Elétricas e Efeitos Térmicos Internos
+
+As lesões térmicas em acidentes com eletricidade distinguem-se radicalmente das queimaduras convencionais por fogo ou água fervente:
+
+1. **Marcas de Entrada e Saída:** O ponto de entrada exibe comumente uma lesão esbranquiçada ou marrom-escura, endurecida, indolor (pela destruição dos terminais nervosos locais) e cercada por halo eritematoso. O ponto de saída, por onde a corrente descarregou para a terra, costuma apresentar bordas evertidas e aspecto explosivo.
+2. **Necrose Muscular e Rabdomiólise:** O aquecimento interno profundo coagula e destrói massas musculares inteiras. As fibras musculares rompidas despejam na corrente sanguínea grandes quantidades de **mioglobina** e **potássio ($K^+$)**. A hipercalemia aguda decorrente pode deflagrar arritmias fatais, enquanto a mioglobina precipita-se nos néfrons, gerando urina de coloração escura (aspecto de "chá preto" ou refrigerante de cola) e insuficiência renal aguda necessitando de hemodiálise.
+3. **Síndrome de Compartimento:** O edema maciço dos músculos profundos contidos dentro das fáscias inelásticas dos membros eleva a pressão intracompartimental. Quando essa pressão supera a pressão capilar de perfusão, o sangue arterial para de nutrir o membro, provocando necrose isquêmica irreversível que exige fasciotomia cirúrgica de urgência nas primeiras horas para evitar a amputação.
+4. **Manejo Pré-Hospitalar da Queimadura:** Remova tecidos soltos e adornos (anéis e relógios que podem garrotear o membro com o edema). Cubra as feridas de entrada e saída com curativos estéreis ou gazes secas e limpas. Nunca aplique pomadas, cremes, manteiga ou gelo. Mantenha o membro acometido levemente elevado, desde que não haja suspeita de fratura não imobilizada.
+
+---
+
+### 5.5. Complicações Cardiovasculares e Arritmias Cardíacas
+
+O miocárdio opera através de pulsos eletrofisiológicos milimétricos gerados pelo nó sinoatrial. A invasão de uma corrente elétrica exógena desorganiza violentamente essa harmonia:
+
+```
+┌────────────────────────────────────────────────────────┐
+│ COMPLICAÇÕES CARDÍACAS NO CHOQUE ELÉTRICO              │
+├────────────────────────────────────────────────────────┤
+│ 1. FIBRILAÇÃO VENTRICULAR (FV)                         │
+│    • Principal causa de morte imediata em baixa tensão │
+│    • Ritmo caótico, ausência de pulso e parada (PCR)   │
+│    • Tratamento: RCP imediata + DESFIBRILAÇÃO (DEA)    │
+├────────────────────────────────────────────────────────┤
+│ 2. ASSISTOLIA                                          │
+│    • Parada miocárdica completa (comum em alta tensão  │
+│      e descargas atmosféricas/raios)                   │
+├────────────────────────────────────────────────────────┤
+│ 3. ARRITMIAS TARDIAS (Até 24 horas após o choque)      │
+│    • Extrassístoles ventriculares, bloqueios atrio-    │
+│      ventriculares (BAV) e taquicardias sustentadas    │
+│    • OBRIGATORIEDADE DE INTERNAÇÃO E ELETROCARDIOGRAMA │
+└────────────────────────────────────────────────────────┘
+```
+
+#### A Parada Cardiorrespiratória por Eletricidade
+Se o choque elétrico induzir PCR:
+1. Garanta que o circuito esteja desenergizado antes de se aproximar.
+2. Cheque a responsividade da vítima e a respiração simultaneamente (ausência de movimentos torácicos ou respiração anormal tipo *gasping* em menos de 10 segundos).
+3. Solicite que um colega acione o SAMU (192) e traga o DEA da empresa imediatamente.
+4. Posicione as mãos no centro do tórax da vítima (metade inferior do esterno) e inicie **compressões torácicas de alta qualidade**: frequência de 100 a 120 por minuto, profundidade de 5 a 6 cm no adulto, permitindo o retorno total do tórax e minimizando as interrupções.
+5. Assim que o DEA chegar, abra a tampa, seque o tórax da vítima se houver umidade ou suor, cole os eletrodos adesivos e siga estritamente as instruções de voz do aparelho. Se o DEA indicar choque, certifique-se de que ninguém está tocando na vítima, pressione o botão de disparo e retome as compressões torácicas imediatamente.
+
+---
+
+### 5.6. Organização do Atendimento e Avaliação Secundária
+
+O atendimento pré-hospitalar ao acidentado elétrico deve seguir uma metodologia padronizada de trauma:
+
+1. **Suspeita de Lesão de Coluna Cervical e Traumas Ocultos:** A contração muscular violenta tetânica por si só é capaz de fraturar vértebras e ossos longos ou provocar luxação de ombro. Além disso, muitas vítimas são arremessadas ao chão ou caem de escadas e andaimes. **Assuma que toda vítima de choque elétrico com ejeção ou queda é portadora de lesão na coluna vertebral.** Estabilize a cabeça e o pescoço em posição neutra alinhada, evitando rotações e flexões desnecessárias.
+2. **Monitoramento Neurológico e Respiratório:** Observe o nível de consciência. A passagem da corrente pelo cérebro ou tronco encefálico pode desencadear convulsões pós-choque, amnésia transitória, agitação psicomotora ou apneia central por paralisia do centro respiratório bulbar.
+3. **Avaliação da Circulação Periférica:** Monitore pulsos distais (radial e pedioso), tempo de enchimento capilar e coloração das extremidades para identificar precocemente o desenvolvimento de isquemia de membros por síndrome compartimental.
+4. **Transporte e Comunicação com o Suporte Avançado:** Toda e qualquer vítima de choque elétrico que tenha apresentado perda de consciência, formigamento persistente em membros, queimadura cutânea visível ou choque sob tensão superior a 110V deve ser formalmente encaminhada a uma unidade hospitalar com suporte de emergência para realização de eletrocardiograma (ECG) de 12 derivações e dosagem sérica de enzimas musculares (creatinoquinase - CK total e CK-MB) e eletrólitos.
+
+---
+
+## 6. MATRIZ DE CONDUTAS RÁPIDAS EM ACIDENTES ELÉTRICOS
+
+| Cenário Clínico | Quadro Observado | Ação Primária Obrigatória | Ação Terminantemente Proibida |
+| :--- | :--- | :--- | :--- |
+| **Vítima Conectada à Baixa Tensão (Tomada/Quadro 220V)** | Espasmo muscular, vítima "grudada" ao cabo, gemidos ou inconsciência. | Desligar disjuntor geral imediatamente; na impossibilidade, afastar o fio com bastão de fibra ou madeira seca. | Agarrar a vítima pelas mãos ou corpo diretamente sem ter desligado a chave geral da energia. |
+| **Cabo de Alta Tensão Rompido no Solo da Fábrica** | Fio faiscando no pátio, fumaça no asfalto, potencial arco no ar. | Manter distância mínima de 10 metros; isolar perímetro; acionar concessionária e Bombeiros (193). | Tentar empurrar o cabo de alta tensão com pedaços de madeira, canos plásticos ou vassouras. |
+| **Vítima em Parada Cardiorrespiratória Pós-Choque** | Inconsciente, apneia ou respiração tipo gasping, sem pulso central. | Iniciar compressões torácicas (100-120/min); conectar e aplicar o DEA assim que disponível na cena. | Perder tempo procurando queimaduras ou tentando dar tapas no rosto; ventilar boca a boca sem ambu. |
+| **Veículo Energizado por Fios Elétricos Caídos** | Cabo sobre a carroceria de caminhão/carro; passageiros ilesos dentro. | Ordenar que permaneçam sentados dentro da cabine; isolar o solo até o corte da rede externa. | Mandar descer do caminhão normalmente colocando um pé na lataria e o outro no solo úmido. |
+| **Queimaduras de Entrada e Saída em Membros** | Lesões circunscritas secas na mão e pé; dor interna profunda; dormência. | Cobrir ferimentos com gazes estéreis secas; elevar membro levemente; monitorar pulso periférico. | Aplicar gelo, pasta de dente, manteiga ou pomadas cicatrizantes; estourar eventuais flictenas. |
+
+---
+
+## 7. ERROS FREQUENTES E CONDUTAS PROIBIDAS NO AMBIENTE DE TRABALHO
+
+```
+┌────────────────────────────────────────────────────────┐
+│ ERROS CRÍTICOS EM RESGATE E PRIMEIROS SOCORROS         │
+├────────────────────────────────────────────────────────┤
+│ 1. TOCAR NA VÍTIMA ENERGIZADA: O erro fatal do         │
+│    socorrista voluntário que vira segunda vítima.      │
+├────────────────────────────────────────────────────────┤
+│ 2. USAR MATERIAIS CONDUTORES OU ÚMIDOS: Afastar fios   │
+│    com madeira molhada, cabos metálicos ou panos.      │
+├────────────────────────────────────────────────────────┤
+│ 3. LIBERAR O PACIENTE PORQUE "ELE JÁ ESTÁ BEM":        │
+│    Subestimar o choque e dispensar vítima sem ECG;     │
+│    risco de fibrilação ventricular fatal tardia.       │
+├────────────────────────────────────────────────────────┤
+│ 4. IGNORAR FRATURAS E TRAUMA DE COLUNA: Movimentar     │
+│    vítima jogada ao chão sem alinhamento cervical.     │
+└────────────────────────────────────────────────────────┘
+```
+
+1. **Tocar na Vítima sem Certificação da Desenergização:** É a principal causa de mortalidade entre colegas de trabalho que tentam prestar socorro imediato. A condutividade do corpo humano converte qualquer pessoa que encostar na vítima em um caminho paralelo para a corrente.
+2. **Utilizar Objetos Úmidos ou Inadequados para Afastamento:** Tentar remover fios utilizando cabos de vassoura sujos, pedaços de madeira úmida ou ferramentas manuais sem isolamento dielétrico certificado. Materiais porosos ou molhados conduzem eletricidade facilmente em tensões industriais.
+3. **Liberar a Vítima sem Avaliação Médica ("Foi só um susto"):** O trabalhador que sofreu um choque moderado, recupera a consciência e diz estar "apenas com o braço dolorido" é liberado para voltar ao posto ou ir para casa. Horas depois, durante a noite, ele evolui para fibrilação ventricular tardia ou parada cardíaca durante o sono, ou desenvolve insuficiência renal por rabdomiólise não diagnosticada. **Todo choque com perda transitória de consciência ou passagem transtorácica exige avaliação hospitalar e ECG.**
+4. **Desperdiçar Tempo com Medidas Populares:** Enterrar os pés da vítima na terra para "descarregar a energia do corpo" ou dar sal e água com açúcar para beber. Essas crenças populares retardam o início da RCP e a desfibrilação pelo DEA, que são as únicas medidas capazes de salvar a vida do paciente em parada.
+5. **Esquecer o Risco de Queda de Altura:** Tratar a ocorrência apenas como choque elétrico e esquecer que a vítima estava trabalhando sobre uma escada a 3 metros de altura e despencou após o choque, omitindo a imobilização cervical e a triagem de hemorragias internas decorrentes da queda.
+
+---
+
+## 8. ESTUDO DE CASO PRÁTICO AMBIENTADO NA INDÚSTRIA
+
+### O Incidente: Choque em Painel de Distribuição de Baixa Tensão
+Na oficina de manutenção de uma fábrica têxtil, o técnico de manutenção elétrica Rodrigo (32 anos) foi designado para substituir um contator no painel secundário trifásico (380V). Pressionado pelo atraso na linha de tecelagem, Rodrigo descumpriu o procedimento operacional da NR-10 e não desligou o disjuntor geral daquele barramento, optando por intervir "com o painel a quente".
+
+Ao tentar desapertar um borne com uma chave de fenda de cabo desgastado, sua mão tocou a fase energizada, enquanto seu antebraço esquerdo encostava na carcaça metálica aterrada do armário elétrico. Imediatamente, uma corrente alternada de 220V/380V percorreu sua mão, tórax e braço esquerdo. Rodrigo sofreu tetanização muscular violenta e ficou preso ao barramento, soltando um grito rouco antes de silenciar, com os olhos revirados e tremores espasmódicos no corpo.
+
+### A Atuação do Brigadista e Socorrista Ocupacional
+O operador líder e brigadista industrial Cláudio estava na bancada a 5 metros de distância. Diante da emergência:
+1. **Reconhecimento e Autoproteção Imediata:** Cláudio identificou que Rodrigo estava preso eletricamente ao painel. Resistiu ao impulso imediato de puxá-lo pela camisa e gritou em tom imperativo para os operários ao redor: *"Ninguém encosta nele! Painel energizado!"*.
+2. **Desenergização da Fonte:** Cláudio correu até a chave seccionadora geral da sala de máquinas, localizada a 4 metros na parede lateral, e puxou a alavanca de corte mestre com firmeza, interrompendo o fornecimento de energia daquele setor da fábrica.
+3. **Aproximação e Desabamento da Vítima:** Com o corte da corrente, os músculos de Rodrigo relaxaram instantaneamente e ele desabou inerte sobre o piso de cimento.
+4. **Acionamento do Sistema e Suporte Imediato:** Cláudio aproximou-se, ajoelhou-se ao lado de Rodrigo e ordenou a outro colega: *"Ligue para o ramal de emergência interno e para o SAMU 192, e traga o DEA que está no corredor da expedição!"*.
+5. **Reconhecimento da PCR:** Cláudio verificou que Rodrigo não respondia a estímulos verbais e táteis e não apresentava movimentos respiratórios (apneia completa). Sem perder tempo tentando sentir pulsos periféricos por mais de 10 segundos, confirmou o estado de Parada Cardiorrespiratória.
+6. **Início da RCP e Desfibrilação com DEA:** Cláudio posicionou suas mãos sobre o esterno de Rodrigo e iniciou compressões torácicas rítmicas e profundas a 110 compressões por minuto. Aos 90 segundos de manobras, o segundo brigadista chegou correndo com o DEA. Cláudio manteve as compressões enquanto o colega ligava o DEA e colava os eletrodos autoadesivos no tórax desnudo de Rodrigo (abaixo da clavícula direita e na linha axilar média esquerda).
+7. **Choque do DEA e Retorno da Circulação:** O DEA emitiu o comando: *"Analisando o ritmo cardíaco... Não toque no paciente!"*. Cláudio ergueu as mãos e ordenou afastamento. O aparelho declarou: *"Choque recomendado! Carregando... Pressione o botão piscante agora!"*. O brigadista disparou o choque. Imediatamente após a descarga, Cláudio reiniciou as compressões torácicas contínuas. Durante o segundo ciclo de RCP, Rodrigo esboçou tosse, inspirou profundamente e movimentou o braço direito, recuperando a respiração espontânea.
+8. **Estabilização Pós-PCR e Alinhamento:** Cláudio suspendeu as massagens, manteve Rodrigo deitado de costas com alinhamento neutro da cabeça para proteger a coluna cervical (devido ao impacto da queda no chão) e monitorou a respiração até a chegada da Unidade de Suporte Avançado (USA) do SAMU aos 12 minutos do chamado.
+
+### Desfecho Clínico
+No hospital geral de referência, o eletrocardiograma pós-reanimação revelou ritmo sinusal com taquicardia compensatória. Rodrigo apresentava uma queimadura elétrica profunda de terceiro grau de 2 cm na polpa digital do indicador direito (ponto de entrada) e uma lesão exsudativa no antebraço esquerdo (ponto de saída). Permaneceu internado na UTI por 48 horas sob monitorização cardíaca e hidratação venosa vigorosa com soro fisiológico e bicarbonato para prevenir lesão renal por mioglobinúria. Graças à disciplina do brigadista Cláudio — que priorizou a desenergização rápida antes de tocar na vítima, iniciou a RCP sem hesitação e utilizou o DEA nos primeiros minutos —, Rodrigo sobreviveu sem nenhum déficit neurológico e teve alta hospitalar plenamente recuperado.
+
+---
+
+## 9. PULO DO GATO — SEGREDOS PRÁTICOS DO SOCORRISTA INDUSTRIAL
+
+> [!TIP]
+> **1. A Regra do Olho nas Mãos:** Ao se deparar com alguém caído dentro de uma sala elétrica ou oficina, olhe imediatamente para as mãos da vítima antes de dar qualquer passo. Se a pessoa estiver segurando um fio, ferramenta ou alavanca metálica, pare imediatamente! Trata-se de choque elétrico ativo por tetanização. Corte o disjuntor antes de qualquer outra atitude.
+> 
+> **2. Nunca Confie no "Acho que Desliguei":** Se você desligou o disjuntor mas o painel não possui identificação confiável de circuitos, use um bastão isolante ou um pedaço de madeira perfeitamente seca para afastar o condutor da vítima, ou empurre a vítima utilizando o bastão. Jamais encoste nela com a pele desprotegida sem confirmação de ausência de tensão.
+> 
+> **3. Cuidado com o Suor e a Água:** Pisos molhados, poças d'água na fábrica ou suor abundante no corpo da vítima reduzem drasticamente a resistência elétrica da pele, tornando qualquer contato elétrico muito mais destrutivo e expandindo a zona condutora de perigo ao redor do paciente.
+> 
+> **4. O DEA Salva o Coração Tetanizado:** Em choques por baixa tensão (127V/220V/380V), a arritmia causadora da morte súbita é quase invariavelmente a Fibrilação Ventricular. Cada minuto de atraso na aplicação do choque elétrico despolarizante do DEA reduz as chances de sobrevivência da vítima em 7 a 10%. Ter o DEA perto e saber colá-lo rapidamente é a chave da sobrevida.
+> 
+> **5. A Cor da Urina Prevê o Risco Renal:** Se a vítima de choque estiver consciente ou urinar após o evento e a urina apresentar cor escura avermelhada ou castanha (como xarope de cola), isso é sinal grave de rabdomiólise com destruição muscular maciça por efeito Joule interno. Avise a equipe médica de transporte imediatamente para iniciarem hidratação venosa expansiva.
+
+---
+
+## 10. MAPA MENTAL INTEGRADO (ALGORITMO OPERACIONAL)
+
+```
+                     ACIDENTE COM ENERGIA ELÉTRICA
+                                   │
+               ┌───────────────────┴───────────────────┐
+               ▼                                       ▼
+       BAIXA TENSÃO (< 1.000 V)               ALTA TENSÃO (> 1.000 V)
+   (Ambientes Prediais / Oficinas)          (Linhas Aéreas / Subestações)
+               │                                       │
+   • Desligar a chave ou disjuntor geral   • Manter distância MÍNIMA de 10m
+   • Se impossível, afastar com bastão     • Risco de arco voltaico e passo
+     isolante de madeira ou fibra seca     • Chamar concessionária e 193
+   • NUNCA TOCAR antes de desligar         • Resgate APENAS pós-corte formal
+               │                                       │
+               └───────────────────┬───────────────────┘
+                                   │
+                                   ▼
+                       AVALIAÇÃO DA VÍTIMA (APH)
+                                   │
+       ┌───────────────────────────┴───────────────────────────┐
+       ▼                                                       ▼
+ VÍTIMA EM PARADA (PCR)                               VÍTIMA CONSCIENTE
+ • Inconsciente e sem respirar                        • Avaliar via aérea e pulso
+ • Iniciar RCP (100 a 120/min)                        • Manter alinhamento cervical
+ • Instalar o DEA imediatamente                       • Procurar entrada e saída
+ • Seguir instruções de choque                        • Cobrir com gazes secas
+ • Manter manobras até o socorro                      • Hidratação venosa médica
+                                                               │
+                                                               ▼
+                                                   ENCAMINHAMENTO HOSPITALAR
+                                                   • Eletrocardiograma (ECG)
+                                                   • Monitorização de arritmias
+                                                   • Dosagem de CK (rabdomiólise)
+```
+
+---
+
+## 11. O QUE VOCÊ PRECISA LEMBRAR (PONTOS INEGOCIÁVEIS)
+
+- **A desenergização da fonte antecede qualquer contato com a vítima:** Tocar em uma pessoa energizada cria um novo circuito fechado que vitima letalmente o socorrista.
+- **Em alta tensão, a distância mínima de segurança é de 10 metros:** O ar ionizado conduz arcos elétricos mortais sem necessidade de contato físico.
+- **A parada cardíaca por choque elétrico é prioritariamente por Fibrilação Ventricular:** Compressões torácicas imediatas e a aplicação precoce do DEA são determinantes para a restauração do ritmo cardíaco.
+- **Todo choque elétrico pode ocultar traumas secundários:** A tetanização ou ejeção violenta gera luxações, fraturas ósseas e lesões graves na coluna cervical.
+- **Queimaduras elétricas internas são invisíveis externamente:** Pequenas marcas de entrada e saída na pele mascaram necroses musculares maciças e risco de falência renal aguda por rabdomiólise.
+- **Avaliação hospitalar é mandatória para todo trabalhador acidentado:** Mesmo acidentados conscientes que relatam estar bem necessitam de ECG de 12 derivações e monitorização devido ao risco de arritmias cardíacas tardias nas primeiras 24 horas.
+
+---
+
+## 12. REFERÊNCIAS CIENTÍFICAS E METADADOS EDITORIAIS
+
+1. BRASIL. Ministério do Trabalho e Emprego. **Norma Regulamentadora nº 10 (NR-10) — Segurança em Instalações e Serviços em Eletricidade**. Brasília: MTE, atualizada pela Portaria SEPRT nº 915/2019.
+2. AMERICAN HEART ASSOCIATION (AHA). **2020-2025 American Heart Association Guidelines for Cardiopulmonary Resuscitation and Emergency Cardiovascular Care: Special Circumstances of Resuscitation (Electrocution and Lightning Strikes)**. Circulation, v. 142, n. 16, supl. 2, 2020.
+3. EUROPEAN RESUSCITATION COUNCIL (ERC). **European Resuscitation Council Guidelines 2021: Cardiac arrest in special circumstances — Electrocution and Electrical Injuries**. Resuscitation, v. 161, p. 152-219, 2021.
+4. ASSOCIAÇÃO BRASILEIRA DE CONSCIENTIZAÇÃO PARA OS PERIGOS DA ELETRICIDADE (ABRACOPEL). **Anuário Estatístico de Acidentes de Origem Elétrica no Brasil**. São Paulo: Abracopel, 2023.
+5. NATIONAL FIRE PROTECTION ASSOCIATION. **NFPA 70E: Standard for Electrical Safety in the Workplace**. Quincy: NFPA, 2024.
+6. AMERICAN COLLEGE OF SURGEONS COMMITTEE ON TRAUMA. **Advanced Trauma Life Support (ATLS) — 10th Edition: Thermal and Electrical Injuries**. Chicago: ACS, 2018.
+7. FUNDACENTRO. **Riscos Elétricos em Manutenção Industrial: Procedimentos Seguros e Bloqueio de Energias Perigosas**. São Paulo: Fundacentro, 2021.
+8. KOUWENHOVEN, W. B. **Effects of Electricity on the Human Body**. Electrical Engineering, v. 68, n. 3, p. 199-207, 1949 (Artigo Clássico Fundamentador).
+
+---
+
+### Metadados e Controle Editorial
+- **Instituição Proprietária:** União Serviços Médicos Ltda. — Todos os direitos reservados
+- **Plataforma Pedagógica:** LURIA Framework Educacional
+- **Revisor Científico Responsável:** Equipe de Medicina do Trabalho e Emergência USM
+- **Status da Apostila:** Aguardando Aprovação Científica
+- **Identificador de Controle:** USM-EMP-T04-REV01-2026
