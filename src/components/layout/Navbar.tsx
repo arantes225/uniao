@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { Menu, X, ArrowRight, GraduationCap } from 'lucide-react';
+import { Menu, X, ArrowRight, GraduationCap, ShieldCheck } from 'lucide-react';
 
 export const Navbar: React.FC = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -25,7 +25,7 @@ export const Navbar: React.FC = () => {
               <img 
                 src="./brand/simbolo-cruz-uniao.png" 
                 alt="Cruz União Serviços Médicos" 
-                className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-300 filter drop-shadow-[0_0_10px_rgba(255,255,255,0.25)]"
+                className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-300 filter drop-shadow-[0_0_10px_rgba(255,255,255,0.25)]" 
               />
             </div>
             <div className="flex flex-col">
@@ -40,7 +40,7 @@ export const Navbar: React.FC = () => {
           </Link>
 
           {/* Desktop Navigation */}
-          <nav className="hidden lg:flex items-center gap-8">
+          <nav className="hidden lg:flex items-center gap-7">
             {navLinks.map((link) => (
               <a
                 key={link.label}
@@ -51,10 +51,19 @@ export const Navbar: React.FC = () => {
                 <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-uniao-400 to-teal-300 group-hover:w-full transition-all duration-300" />
               </a>
             ))}
+
+            {/* Link para Validação de Certificado */}
+            <Link
+              to="/validar-certificado"
+              className="text-sm font-semibold text-teal-400 hover:text-teal-300 transition-colors flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-teal-500/10 border border-teal-500/30 hover:bg-teal-500/20"
+            >
+              <ShieldCheck className="w-4 h-4 text-teal-400" />
+              <span>Validar Certificado</span>
+            </Link>
           </nav>
 
           {/* Action CTA: Área do Aluno com Design Moderno */}
-          <div className="hidden sm:flex items-center gap-4">
+          <div className="hidden sm:flex items-center gap-3">
             <Link
               to="/login"
               className="relative group overflow-hidden rounded-xl p-[1px] font-semibold text-xs transition-all shadow-lg hover:shadow-[0_0_25px_rgba(20,184,166,0.35)]"
@@ -96,7 +105,17 @@ export const Navbar: React.FC = () => {
               {link.label}
             </a>
           ))}
-          <div className="pt-3 border-t border-white/10">
+          <div className="pt-2">
+            <Link
+              to="/validar-certificado"
+              onClick={() => setMobileMenuOpen(false)}
+              className="w-full flex items-center justify-center gap-2 px-4 py-3 rounded-xl font-bold text-teal-300 bg-teal-500/10 border border-teal-500/30 text-sm"
+            >
+              <ShieldCheck className="w-4 h-4 text-teal-400" />
+              <span>Validar Certificado</span>
+            </Link>
+          </div>
+          <div className="pt-2 border-t border-white/10">
             <Link
               to="/login"
               onClick={() => setMobileMenuOpen(false)}
