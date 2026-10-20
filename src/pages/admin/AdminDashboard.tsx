@@ -1715,9 +1715,10 @@ export const AdminDashboard: React.FC = () => {
                   </div>
                 )}
 
-                {/* CERTIFICADO EM SI (DESIGN OFICIAL UNIÃO SERVIÇOS MÉDICOS) */}
-                <div 
-                  className="bg-slate-950 text-slate-100 rounded-3xl p-4 sm:p-8 md:p-10 shadow-2xl border-4 border-teal-500/30 relative overflow-hidden font-sans select-none"
+                {/* CERTIFICADO EM SI (DESIGN OFICIAL UNIÃO SERVIÇOS MÉDICOS — FORMATO A4 HORIZONTAL) */}
+                <div className="w-full flex justify-center overflow-x-auto py-2">
+                  <div 
+                    className="w-full max-w-5xl aspect-[1.414/1] bg-slate-950 text-slate-100 rounded-3xl p-6 sm:p-10 md:p-12 shadow-2xl border-4 border-teal-500/30 relative overflow-hidden font-sans select-none flex flex-col justify-between"
                   onMouseMove={(e) => {
                     if (isDraggingSig) {
                       const dx = e.clientX - dragStart.x;
@@ -1930,8 +1931,9 @@ export const AdminDashboard: React.FC = () => {
 
                   </div>
                 </div>
-
               </div>
+
+            </div>
 
 
             </div>
@@ -2532,9 +2534,10 @@ export const AdminDashboard: React.FC = () => {
             </div>
 
             {/* ============================================================= */}
-            {/* O CERTIFICADO EM SI (DESIGN OFICIAL UNIÃO SERVIÇOS MÉDICOS) */}
+            {/* O CERTIFICADO EM SI (DESIGN OFICIAL UNIÃO SERVIÇOS MÉDICOS — FORMATO A4 HORIZONTAL) */}
             {/* ============================================================= */}
-            <div className="bg-slate-950 text-slate-100 rounded-3xl p-6 sm:p-10 shadow-2xl border-4 border-teal-500/30 relative overflow-hidden font-sans">
+            <div className="w-full flex justify-center overflow-x-auto py-2">
+              <div className="w-full max-w-5xl aspect-[1.414/1] bg-slate-950 text-slate-100 rounded-3xl p-6 sm:p-10 md:p-12 shadow-2xl border-4 border-teal-500/30 relative overflow-hidden font-sans flex flex-col justify-between">
               
               {/* Efeito de Marca d'água de Alta Resolução no Fundo */}
               <div className="absolute right-0 bottom-0 opacity-5 translate-x-12 translate-y-12 pointer-events-none">
@@ -2682,6 +2685,7 @@ export const AdminDashboard: React.FC = () => {
 
               </div>
             </div>
+          </div>
 
             <div className="flex justify-end gap-3 pt-2">
               <button
