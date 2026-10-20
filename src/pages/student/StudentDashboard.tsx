@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { 
   PlayCircle, CheckCircle, Clock, 
-  ArrowRight, ShieldCheck, Compass, BookOpen
+  ArrowRight, ShieldCheck, Compass
 } from 'lucide-react';
 import { useTheme } from '../../context/ThemeContext';
 
