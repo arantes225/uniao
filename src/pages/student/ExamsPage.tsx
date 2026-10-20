@@ -297,6 +297,8 @@ export const ExamsPage: React.FC = () => {
   }, [isExamRunning, examFinished]);
 
   // Monitoramento de Inatividade (45s) e Troca de Aba/Tela (Visibilitychange / Blur)
+  // Regra Atualizada: Em caso de troca de tela ou inatividade acima de 45 segundos,
+  // a tentativa de prova é automaticamente atribuída nota 0 e encerrada.
   useEffect(() => {
     if (!isExamRunning || examFinished) return;
 
@@ -304,39 +306,43 @@ export const ExamsPage: React.FC = () => {
       lastActiveTimestamp.current = Date.now();
     };
 
-    // Ação: Cancelar resposta selecionada devido a infração de segurança
-    const triggerDeselect = (reason: string) => {
-      setAnswers((prev) => {
-        const questionKeys = Object.keys(prev);
-        if (questionKeys.length === 0) return prev;
-        // Identifica última questão respondida ou desmarca a questão corrente
-        const lastQId = Number(questionKeys[questionKeys.length - 1]);
-        const nextAnswers = { ...prev };
-        delete nextAnswers[lastQId];
-        return nextAnswers;
-      });
+    // Ação: Anular a tentativa com Nota 0 por violação de segurança
+    const triggerZeroScore = (reason: string) => {
+      setAnswers({});
+      setLastScore(0);
+      const newAttemptNumber = attemptsUsed + 1;
+      setAttemptsUsed(newAttemptNumber);
+      setBestScore((prev) => (prev === null ? 0 : Math.max(prev, 0)));
+      setHistory((prev) => [
+        ...prev,
+        {
+          attempt: newAttemptNumber,
+          score: 0,
+          passed: false,
+          date: `${new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })} (Anulada)`
+        }
+      ]);
+      setExamFinished(true);
       setSecurityAlert(reason);
-      // Auto limpa alerta após 7 segundos
-      setTimeout(() => setSecurityAlert(null), 7000);
     };
 
     // 1. Troca de aba ou perda de foco da janela
     const handleVisibilityChange = () => {
       if (document.hidden) {
-        triggerDeselect('⚠️ Troca de tela/aba detectada! A sua última alternativa marcada foi cancelada por segurança.');
+        triggerZeroScore('⚠️ Atenção: Troca de tela/aba detectada! Conforme a regra de segurança, a tentativa de prova foi automaticamente encerrada com nota 0.');
       }
     };
 
     const handleWindowBlur = () => {
-      triggerDeselect('⚠️ Perda de foco da janela da prova detectada! A sua alternativa foi cancelada por segurança.');
+      triggerZeroScore('⚠️ Atenção: Perda de foco da janela da prova detectada! Conforme a regra de segurança, a tentativa de prova foi automaticamente encerrada com nota 0.');
     };
 
     // 2. Verificação de Inatividade a cada 2 segundos
     const inactivityInterval = setInterval(() => {
       const elapsedInactiveMs = Date.now() - lastActiveTimestamp.current;
       if (elapsedInactiveMs >= 45000) { // 45 segundos inativo
-        triggerDeselect('⚠️ Inatividade superior a 45 segundos detectada! A sua última alternativa marcada foi cancelada.');
-        lastActiveTimestamp.current = Date.now(); // reseta ciclo
+        triggerZeroScore('⚠️ Atenção: Inatividade superior a 45 segundos detectada! A tentativa de prova foi automaticamente encerrada com nota 0.');
+        lastActiveTimestamp.current = Date.now();
       }
     }, 2000);
 
@@ -359,7 +365,7 @@ export const ExamsPage: React.FC = () => {
       document.removeEventListener('visibilitychange', handleVisibilityChange);
       window.removeEventListener('blur', handleWindowBlur);
     };
-  }, [isExamRunning, examFinished]);
+  }, [isExamRunning, examFinished, attemptsUsed]);
 
   const handleStartExam = () => {
     if (!canAttempt) return;
@@ -735,8 +741,8 @@ export const ExamsPage: React.FC = () => {
                   <span>Aprovação: <strong>mínimo 70%</strong> (14 acertos)</span>
                 </span>
                 <span className="flex items-center gap-1.5 text-amber-600 dark:text-amber-400 font-semibold">
-                  <ShieldAlert className="w-4 h-4" />
-                  <span>Segurança: alternativa cancelada se trocar de tela ou inativo por &gt; 45s</span>
+                  <ShieldAlert className="w-4 h-4 shrink-0" />
+                  <span>Atenção: em caso de troca de tela ou inatividade acima de 45 segundos, a tentativa de prova é automaticamente atribuída nota 0</span>
                 </span>
               </div>
             </div>
