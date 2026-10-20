@@ -178,14 +178,14 @@ O treinamento com o DEA deve utilizar aparelhos simuladores de treinamento (*DEA
 
 ### Figuras de Apoio
 
-![Figura 1 - Desfibrilador Externo Automático (DEA).](../imagens/Modern_AED_Automated_external_defibrillator.png)
-*Figura 1 - Desfibrilador Externo Automático (DEA). Crédito: VoLid27. Licença: CC0. Fonte: Wikimedia Commons.*
+![Figura 1 - Desfibrilador Externo AutomÃ¡tico (DEA).](../imagens/Modern_AED_Automated_external_defibrillator.png)
+*Figura 1 - Desfibrilador Externo AutomÃ¡tico (DEA). CrÃ©dito: VoLid27. LicenÃ§a: CC0. Fonte: Wikimedia Commons.*
 
-![Figura 2 - DEA de acesso público em gabinete sinalizado.](../imagens/Public_access_AED_with_coded_lock.jpg)
-*Figura 2 - DEA de acesso público em gabinete sinalizado. Crédito: Christian P. Nielsen. Licença: CC0. Fonte: Wikimedia Commons.*
+![Figura 2 - DEA de acesso pÃºblico em gabinete sinalizado.](../imagens/Public_access_AED_with_coded_lock.jpg)
+*Figura 2 - DEA de acesso pÃºblico em gabinete sinalizado. CrÃ©dito: Christian P. Nielsen. LicenÃ§a: CC0. Fonte: Wikimedia Commons.*
 
-![Figura 3 - Sinal ISO 7010 E010: localização do DEA.](../imagens/ISO_7010_E010.png)
-*Figura 3 - Sinal ISO 7010 E010: localização do DEA. Crédito: M!dgard. Licença: CC0. Fonte: Wikimedia Commons.*
+![Figura 3 - Sinal ISO 7010 E010: localizaÃ§Ã£o do DEA.](../imagens/ISO_7010_E010.png)
+*Figura 3 - Sinal ISO 7010 E010: localizaÃ§Ã£o do DEA. CrÃ©dito: M!dgard. LicenÃ§a: CC0. Fonte: Wikimedia Commons.*
 
 ---
 

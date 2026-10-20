@@ -167,10 +167,10 @@ A atuação coordenada requer alinhamento contínuo:
 ### Figuras de Apoio
 
 ![Figura 1 - Uso de autoinjetor de adrenalina.](../imagens/Epinephrine-injection.png)
-*Figura 1 - Uso de autoinjetor de adrenalina. Crédito: Baedr-9439. Licença: CC0. Fonte: Wikimedia Commons.*
+*Figura 1 - Uso de autoinjetor de adrenalina. CrÃ©dito: Baedr-9439. LicenÃ§a: CC0. Fonte: Wikimedia Commons.*
 
 ![Figura 2 - Inalador dosimetrado para asma.](../imagens/AsthmaInhaler.jpg)
-*Figura 2 - Inalador dosimetrado para asma. Crédito: Wikimedia Commons (Mendel, assumido). Licença: Domínio público. Fonte: Wikimedia Commons.*
+*Figura 2 - Inalador dosimetrado para asma. CrÃ©dito: Wikimedia Commons (Mendel, assumido). LicenÃ§a: DomÃ­nio pÃºblico. Fonte: Wikimedia Commons.*
 
 ---
 

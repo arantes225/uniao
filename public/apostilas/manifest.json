@@ -1,0 +1,242 @@
+{
+    "T06":  {
+                "chars":  35148,
+                "code":  "T06",
+                "fileName":  "Apostila_T06_Emergencias_em_Espacos_Confinados.md",
+                "webPath":  "./apostilas/md/T06.md"
+            },
+    "A04":  {
+                "chars":  33463,
+                "code":  "A04",
+                "fileName":  "Apostila_A04_Emergencias_Metabolicas_e_Relacionadas_ao_Esforco.md",
+                "webPath":  "./apostilas/md/A04.md"
+            },
+    "C03":  {
+                "chars":  32073,
+                "code":  "C03",
+                "fileName":  "Apostila_C03_Acionamento_e_Organizacao_do_Socorro.md",
+                "webPath":  "./apostilas/md/C03.md"
+            },
+    "T01":  {
+                "chars":  32362,
+                "code":  "T01",
+                "fileName":  "Apostila_T01_Seguranca_Ocupacional_e_Prevencao_de_Acidentes.md",
+                "webPath":  "./apostilas/md/T01.md"
+            },
+    "H01":  {
+                "chars":  27854,
+                "code":  "H01",
+                "fileName":  "Apostila_H01_Fundamentos_da_Hemorragia_e_do_Choque.md",
+                "webPath":  "./apostilas/md/H01.md"
+            },
+    "C02":  {
+                "chars":  35766,
+                "code":  "C02",
+                "fileName":  "Apostila_C02_Seguranca_da_Cena_e_Biosseguranca.md",
+                "webPath":  "./apostilas/md/C02.md"
+            },
+    "E04":  {
+                "chars":  32000,
+                "code":  "E04",
+                "fileName":  "Apostila_E04_Emergencias_Clinicas_Infancia.md",
+                "webPath":  "./apostilas/md/E04.md"
+            },
+    "T07":  {
+                "chars":  33444,
+                "code":  "T07",
+                "fileName":  "Apostila_T07_Incendios_Fumaca_e_Evacuacao.md",
+                "webPath":  "./apostilas/md/T07.md"
+            },
+    "E01":  {
+                "chars":  31633,
+                "code":  "E01",
+                "fileName":  "Apostila_E01_Lei_Lucas_e_Seguranca_Escolar.md",
+                "webPath":  "./apostilas/md/E01.md"
+            },
+    "E06":  {
+                "chars":  20756,
+                "code":  "E06",
+                "fileName":  "Apostila_E06_Alunos_com_Condicoes_de_Saude_Especificas.md",
+                "webPath":  "./apostilas/md/E06.md"
+            },
+    "A05":  {
+                "chars":  30384,
+                "code":  "A05",
+                "fileName":  "Apostila_A05_Emergencias_em_Atividades_Aquaticas_e_ao_Ar_Livre.md",
+                "webPath":  "./apostilas/md/A05.md"
+            },
+    "C11":  {
+                "chars":  32060,
+                "code":  "C11",
+                "fileName":  "Apostila_C11_Traumatismos_e_Lesoes_Musculoesqueleticas.md",
+                "webPath":  "./apostilas/md/C11.md"
+            },
+    "T08":  {
+                "chars":  35454,
+                "code":  "T08",
+                "fileName":  "Apostila_T08_Resposta_a_Incidentes_com_Multiplas_Vitimas.md",
+                "webPath":  "./apostilas/md/T08.md"
+            },
+    "H06":  {
+                "chars":  29561,
+                "code":  "H06",
+                "fileName":  "Apostila_H06_Hemorragias_em_Situacoes_Especiais.md",
+                "webPath":  "./apostilas/md/H06.md"
+            },
+    "T03":  {
+                "chars":  25616,
+                "code":  "T03",
+                "fileName":  "Apostila_T03_Emergencias_com_Substancias_Quimicas.md",
+                "webPath":  "./apostilas/md/T03.md"
+            },
+    "A03":  {
+                "chars":  31855,
+                "code":  "A03",
+                "fileName":  "Apostila_A03_Lesoes_Musculoesqueleticas_no_Esporte.md",
+                "webPath":  "./apostilas/md/A03.md"
+            },
+    "H02":  {
+                "chars":  37199,
+                "code":  "H02",
+                "fileName":  "Apostila_H02_Reconhecimento_de_Sangramentos_Potencialmente_Fatais.md",
+                "webPath":  "./apostilas/md/H02.md"
+            },
+    "C05":  {
+                "chars":  37869,
+                "code":  "C05",
+                "fileName":  "Apostila_C05_Ressuscitacao_Cardiopulmonar_Adulto.md",
+                "webPath":  "./apostilas/md/C05.md"
+            },
+    "H07":  {
+                "chars":  29472,
+                "code":  "H07",
+                "fileName":  "Apostila_H07_Estacoes_Praticas_e_Simulacoes_de_Hemorragia.md",
+                "webPath":  "./apostilas/md/H07.md"
+            },
+    "C12":  {
+                "chars":  36391,
+                "code":  "C12",
+                "fileName":  "Apostila_C12_Emergencias_Ambientais_e_Intoxicacoes.md",
+                "webPath":  "./apostilas/md/C12.md"
+            },
+    "C04":  {
+                "chars":  31567,
+                "code":  "C04",
+                "fileName":  "Apostila_C04_Avaliacao_Inicial_da_Vitima.md",
+                "webPath":  "./apostilas/md/C04.md"
+            },
+    "E05":  {
+                "chars":  31590,
+                "code":  "E05",
+                "fileName":  "Apostila_E05_Acidentes_e_Traumas_Ambiente_Escolar.md",
+                "webPath":  "./apostilas/md/E05.md"
+            },
+    "E02":  {
+                "chars":  31165,
+                "code":  "E02",
+                "fileName":  "Apostila_E02_Suporte_Basico_de_Vida_Pediatrico.md",
+                "webPath":  "./apostilas/md/E02.md"
+            },
+    "C01":  {
+                "chars":  24800,
+                "code":  "C01",
+                "fileName":  "Apostila_C01_Fundamentos_do_APH.md",
+                "webPath":  "./apostilas/md/C01.md"
+            },
+    "E07":  {
+                "chars":  33834,
+                "code":  "E07",
+                "fileName":  "Apostila_E07_Protocolos_Prevencao_e_Simulacoes_Escolares.md",
+                "webPath":  "./apostilas/md/E07.md"
+            },
+    "T04":  {
+                "chars":  37809,
+                "code":  "T04",
+                "fileName":  "Apostila_T04_Acidentes_Eletricos.md",
+                "webPath":  "./apostilas/md/T04.md"
+            },
+    "E03":  {
+                "chars":  31811,
+                "code":  "E03",
+                "fileName":  "Apostila_E03_Engasgos_e_Acidentes_Alimentacao.md",
+                "webPath":  "./apostilas/md/E03.md"
+            },
+    "A02":  {
+                "chars":  34738,
+                "code":  "A02",
+                "fileName":  "Apostila_A02_Emergencias_Cardiovasculares_Durante_o_Exercicio.md",
+                "webPath":  "./apostilas/md/A02.md"
+            },
+    "A01":  {
+                "chars":  33585,
+                "code":  "A01",
+                "fileName":  "Apostila_A01_Seguranca_e_Prevencao_de_Emergencias_Esportivas.md",
+                "webPath":  "./apostilas/md/A01.md"
+            },
+    "T05":  {
+                "chars":  32106,
+                "code":  "T05",
+                "fileName":  "Apostila_T05_Quedas_de_Altura_e_Traumas_Ocupacionais.md",
+                "webPath":  "./apostilas/md/T05.md"
+            },
+    "H04":  {
+                "chars":  33871,
+                "code":  "H04",
+                "fileName":  "Apostila_H04_Preenchimento_de_Feridas_Wound_Packing.md",
+                "webPath":  "./apostilas/md/H04.md"
+            },
+    "A06":  {
+                "chars":  29495,
+                "code":  "A06",
+                "fileName":  "Apostila_A06_Plano_de_Emergencia_e_Simulacoes_em_Academias.md",
+                "webPath":  "./apostilas/md/A06.md"
+            },
+    "C08":  {
+                "chars":  37011,
+                "code":  "C08",
+                "fileName":  "Apostila_C08_Emergencias_Cardiovasculares_Neurologicas.md",
+                "webPath":  "./apostilas/md/C08.md"
+            },
+    "C07":  {
+                "chars":  33206,
+                "code":  "C07",
+                "fileName":  "Apostila_C07_Engasgo_e_Obstrucao_Vias_Aereas.md",
+                "webPath":  "./apostilas/md/C07.md"
+            },
+    "H05":  {
+                "chars":  34075,
+                "code":  "H05",
+                "fileName":  "Apostila_H05_Torniquetes_para_Controle_de_Hemorragias.md",
+                "webPath":  "./apostilas/md/H05.md"
+            },
+    "C09":  {
+                "chars":  34422,
+                "code":  "C09",
+                "fileName":  "Apostila_C09_Emergencias_Respiratorias_Metabolicas.md",
+                "webPath":  "./apostilas/md/C09.md"
+            },
+    "H03":  {
+                "chars":  31686,
+                "code":  "H03",
+                "fileName":  "Apostila_H03_Compressao_Direta_e_Curativos_Hemostaticos.md",
+                "webPath":  "./apostilas/md/H03.md"
+            },
+    "C10":  {
+                "chars":  34868,
+                "code":  "C10",
+                "fileName":  "Apostila_C10_Ferimentos_e_Controle_de_Sangramentos.md",
+                "webPath":  "./apostilas/md/C10.md"
+            },
+    "T02":  {
+                "chars":  30959,
+                "code":  "T02",
+                "fileName":  "Apostila_T02_Acidentes_com_Maquinas_Equipamentos_e_Ferramentas.md",
+                "webPath":  "./apostilas/md/T02.md"
+            },
+    "C06":  {
+                "chars":  31531,
+                "code":  "C06",
+                "fileName":  "Apostila_C06_Desfibrilador_Externo_Automatico.md",
+                "webPath":  "./apostilas/md/C06.md"
+            }
+}

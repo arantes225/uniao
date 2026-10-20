@@ -227,8 +227,8 @@ A teoria sem treinamento sob estresse real é inútil em catástrofes:
 
 ### Figuras de Apoio
 
-![Figura 1 - DEA de acesso pÃºblico em gabinete sinalizado.](../imagens/Public_access_AED_with_coded_lock.jpg)
-*Figura 1 - DEA de acesso pÃºblico em gabinete sinalizado. CrÃ©dito: Christian P. Nielsen. LicenÃ§a: CC0. Fonte: Wikimedia Commons.*
+![Figura 1 - Algoritmo visual de Triagem START para incidentes com mÃºltiplas vÃ­timas.](../imagens/START_Triage_algorithm.png)
+*Figura 1 - Algoritmo visual de Triagem START para incidentes com mÃºltiplas vÃ­timas. CrÃ©dito: HZS ÄŒR (Corpo de Bombeiros da RepÃºblica Tcheca). LicenÃ§a: DomÃ­nio pÃºblico. Fonte: Wikimedia Commons.*
 
 ![Figura 2 - TraÃ§Ã£o da mandÃ­bula (jaw thrust) para abertura de via aÃ©rea.](../imagens/Jaw_thrust.jpg)
 *Figura 2 - TraÃ§Ã£o da mandÃ­bula (jaw thrust) para abertura de via aÃ©rea. CrÃ©dito: Department of the Army (EUA). LicenÃ§a: DomÃ­nio pÃºblico. Fonte: Wikimedia Commons.*

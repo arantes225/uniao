@@ -176,8 +176,8 @@ Enquanto a ambulância desloca-se, o socorrista deve otimizar o ambiente:
 
 ### Figuras de Apoio
 
-![Figura 1 - Motolâncias do SAMU 192 (Distrito Federal).](../imagens/Motolancias_SAMU_Distrito_Federal.jpg)
-*Figura 1 - Motolâncias do SAMU 192 (Distrito Federal). Crédito: Antonio Cruz/Agência Brasil. Licença: CC BY 3.0 BR (https://creativecommons.org/licenses/by/3.0/br/). Fonte: Wikimedia Commons.*
+![Figura 1 - MotolÃ¢ncias do SAMU 192 (Distrito Federal).](../imagens/Motolancias_SAMU_Distrito_Federal.jpg)
+*Figura 1 - MotolÃ¢ncias do SAMU 192 (Distrito Federal). CrÃ©dito: Antonio Cruz/AgÃªncia Brasil. LicenÃ§a: CC BY 3.0 BR (https://creativecommons.org/licenses/by/3.0/br/). Fonte: Wikimedia Commons.*
 
 ---
 

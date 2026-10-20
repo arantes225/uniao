@@ -192,8 +192,8 @@ Erros no manejo do torniquete podem anular todo o benefício da intervenção [1
 
 ### Figuras de Apoio
 
-![Figura 1 - Aplicação de torniquete em treinamento TCCC.](../imagens/Tourniquet_application.jpg)
-*Figura 1 - Aplicação de torniquete em treinamento TCCC. Crédito: U.S. Navy, MC2 Barry R. Hirayama. Licença: Domínio público. Fonte: Wikimedia Commons.*
+![Figura 1 - AplicaÃ§Ã£o de torniquete em treinamento TCCC.](../imagens/Tourniquet_application.jpg)
+*Figura 1 - AplicaÃ§Ã£o de torniquete em treinamento TCCC. CrÃ©dito: U.S. Navy, MC2 Barry R. Hirayama. LicenÃ§a: DomÃ­nio pÃºblico. Fonte: Wikimedia Commons.*
 
 ---
 

@@ -105,6 +105,13 @@ export class CurriculumService {
    * Carrega todos os módulos com subtemas e contagem de questões
    */
   static async getModules(): Promise<LearningModule[]> {
+    const withDefaults = INITIAL_40_MODULES.map(m => ({
+      ...m,
+      materialTitle: m.materialTitle || `Apostila_USM_${m.code}.md`,
+      materialPdfUrl: m.materialPdfUrl || `./apostilas/md/${m.code}.md`,
+      editorialStatus: m.editorialStatus === 'draft' ? 'published' : m.editorialStatus,
+    }));
+
     try {
       const { data, error } = await supabase
         .from('learning_modules')
@@ -116,7 +123,7 @@ export class CurriculumService {
         .order('code');
 
       if (error || !data || data.length === 0) {
-        return INITIAL_40_MODULES;
+        return withDefaults;
       }
 
       return data.map((m: any) => ({
@@ -132,14 +139,14 @@ export class CurriculumService {
         workloadPractical: m.workload_practical || 0,
         prerequisites: m.prerequisites || '',
         thumbnailUrl: m.thumbnail_url || '',
-        editorialStatus: m.editorial_status || 'draft',
+        editorialStatus: (!m.editorial_status || m.editorial_status === 'draft') ? 'published' : m.editorial_status,
         videoProvider: m.video_provider || 'google_drive',
         videoUrl: m.video_url || '',
         videoDuration: m.video_duration || '',
         videoChapters: m.video_chapters || [],
-        materialTitle: m.material_title || '',
-        materialDescription: m.material_description || '',
-        materialPdfUrl: m.material_pdf_url || '',
+        materialTitle: m.material_title || `Apostila_USM_${m.code}.md`,
+        materialDescription: m.material_description || 'Apostila didática completa com ilustrações licenciadas (Padrão LURIA).',
+        materialPdfUrl: m.material_pdf_url || `./apostilas/md/${m.code}.md`,
         materialAllowDownload: m.material_allow_download ?? true,
         materialVersion: m.material_version || 1,
         subtopics: (m.module_topics || [])
@@ -163,7 +170,7 @@ export class CurriculumService {
           })),
       }));
     } catch {
-      return INITIAL_40_MODULES;
+      return withDefaults;
     }
   }
 

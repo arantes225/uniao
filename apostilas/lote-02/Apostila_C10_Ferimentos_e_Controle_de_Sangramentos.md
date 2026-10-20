@@ -196,8 +196,11 @@ Diante desses sinais, acione imediatamente o SAMU 192, deite a vítima de costas
 
 ### Figuras de Apoio
 
-![Figura 1 - Aplicação de torniquete em treinamento TCCC.](../imagens/Tourniquet_application.jpg)
-*Figura 1 - Aplicação de torniquete em treinamento TCCC. Crédito: U.S. Navy, MC2 Barry R. Hirayama. Licença: Domínio público. Fonte: Wikimedia Commons.*
+![Figura 1 - AplicaÃ§Ã£o de torniquete em treinamento TCCC.](../imagens/Tourniquet_application.jpg)
+*Figura 1 - AplicaÃ§Ã£o de torniquete em treinamento TCCC. CrÃ©dito: U.S. Navy, MC2 Barry R. Hirayama. LicenÃ§a: DomÃ­nio pÃºblico. Fonte: Wikimedia Commons.*
+
+![Figura 2 - Gaze estÃ©ril para compressÃ£o direta e preenchimento de feridas.](../imagens/Gauze_bandage.png)
+*Figura 2 - Gaze estÃ©ril para compressÃ£o direta e preenchimento de feridas. CrÃ©dito: im_tau. LicenÃ§a: CC BY 4.0 (https://creativecommons.org/licenses/by/4.0/). Fonte: Wikimedia Commons.*
 
 ---
 

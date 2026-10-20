@@ -218,8 +218,11 @@ O atendimento pré-hospitalar ao acidentado elétrico deve seguir uma metodologi
 
 ### Figuras de Apoio
 
-![Figura 1 - Procedimento de bloqueio e etiquetagem (LOTO).](../imagens/Lockout_Tagout_14853353063_.jpg)
-*Figura 1 - Procedimento de bloqueio e etiquetagem (LOTO). CrÃ©dito: NAVFAC (U.S. Navy). LicenÃ§a: DomÃ­nio pÃºblico. Fonte: Wikimedia Commons.*
+![Figura 1 - SinalizaÃ§Ã£o internacional de perigo de alta tensÃ£o elÃ©trica.](../imagens/High_voltage_warning_sign_Beromuenster.JPG)
+*Figura 1 - SinalizaÃ§Ã£o internacional de perigo de alta tensÃ£o elÃ©trica. CrÃ©dito: Timberwind. LicenÃ§a: DomÃ­nio pÃºblico. Fonte: Wikimedia Commons.*
+
+![Figura 2 - Procedimento de bloqueio e etiquetagem (LOTO).](../imagens/Lockout_Tagout_14853353063_.jpg)
+*Figura 2 - Procedimento de bloqueio e etiquetagem (LOTO). CrÃ©dito: NAVFAC (U.S. Navy). LicenÃ§a: DomÃ­nio pÃºblico. Fonte: Wikimedia Commons.*
 
 ---
 

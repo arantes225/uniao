@@ -227,11 +227,11 @@ Nenhuma pessoa aprende a comprimir o tórax com eficácia apenas lendo manuais t
 
 ### Figuras de Apoio
 
-![Figura 1 - Posicionamento para compressões torácicas no adulto.](../imagens/Cardiopulmonary_Resuscitation_Adult.jpg)
-*Figura 1 - Posicionamento para compressões torácicas no adulto. Crédito: Illinois Waterway Visitor Center, US Army Corps of Engineers. Licença: Domínio público. Fonte: Wikimedia Commons.*
+![Figura 1 - Posicionamento para compressÃµes torÃ¡cicas no adulto.](../imagens/Cardiopulmonary_Resuscitation_Adult.jpg)
+*Figura 1 - Posicionamento para compressÃµes torÃ¡cicas no adulto. CrÃ©dito: Illinois Waterway Visitor Center, US Army Corps of Engineers. LicenÃ§a: DomÃ­nio pÃºblico. Fonte: Wikimedia Commons.*
 
-![Figura 2 - Bolsa-válvula-máscara (ambu).](../imagens/Bag-valve-mask.jpg)
-*Figura 2 - Bolsa-válvula-máscara (ambu). Crédito: Another-anon-artist-234. Licença: CC0. Fonte: Wikimedia Commons.*
+![Figura 2 - Bolsa-vÃ¡lvula-mÃ¡scara (ambu).](../imagens/Bag-valve-mask.jpg)
+*Figura 2 - Bolsa-vÃ¡lvula-mÃ¡scara (ambu). CrÃ©dito: Another-anon-artist-234. LicenÃ§a: CC0. Fonte: Wikimedia Commons.*
 
 ---
 

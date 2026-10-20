@@ -188,6 +188,13 @@ Em pacientes traumatizados com perda sanguínea maciça, três desordens metabó
 
 ---
 
+### Figuras de Apoio
+
+![Figura 1 - Estrutura anatÃ´mica comparativa entre artÃ©rias e veias.](../imagens/2102_Comparison_of_Artery_and_Vein.jpg)
+*Figura 1 - Estrutura anatÃ´mica comparativa entre artÃ©rias e veias. CrÃ©dito: OpenStax College. LicenÃ§a: CC BY 3.0 (https://creativecommons.org/licenses/by/3.0/). Fonte: Wikimedia Commons.*
+
+---
+
 ## SEÇÃO 6 — QUADROS PRÁTICOS, CLASSIFICAÇÃO DAS CLASSES DE CHOQUE E MATRIZES
 
 ### Classificação do Choque Hemorrágico (Padrão ATLS / American College of Surgeons)

@@ -186,11 +186,11 @@ A movimentação de uma vítima de trauma só deve ser executada se houver perig
 
 ### Figuras de Apoio
 
-![Figura 1 - Imobilização de braço com tala moldável.](../imagens/Splinting-an-arm.png)
-*Figura 1 - Imobilização de braço com tala moldável. Crédito: Baedr-9439. Licença: CC0. Fonte: Wikimedia Commons.*
+![Figura 1 - ImobilizaÃ§Ã£o de braÃ§o com tala moldÃ¡vel.](../imagens/Splinting-an-arm.png)
+*Figura 1 - ImobilizaÃ§Ã£o de braÃ§o com tala moldÃ¡vel. CrÃ©dito: Baedr-9439. LicenÃ§a: CC0. Fonte: Wikimedia Commons.*
 
-![Figura 2 - Colocação de colar cervical.](../imagens/Cervical-collar-application.png)
-*Figura 2 - Colocação de colar cervical. Crédito: Baedr-9439. Licença: CC0. Fonte: Wikimedia Commons.*
+![Figura 2 - ColocaÃ§Ã£o de colar cervical.](../imagens/Cervical-collar-application.png)
+*Figura 2 - ColocaÃ§Ã£o de colar cervical. CrÃ©dito: Baedr-9439. LicenÃ§a: CC0. Fonte: Wikimedia Commons.*
 
 ---
 

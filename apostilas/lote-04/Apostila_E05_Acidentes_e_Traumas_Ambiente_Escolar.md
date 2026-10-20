@@ -186,8 +186,11 @@ Nas aulas de educação física e treinos de futebol/vôlei:
 
 ### Figuras de Apoio
 
-![Figura 1 - Imobilização de braço com tala moldável.](../imagens/Splinting-an-arm.png)
-*Figura 1 - Imobilização de braço com tala moldável. Crédito: Baedr-9439. Licença: CC0. Fonte: Wikimedia Commons.*
+![Figura 1 - ImobilizaÃ§Ã£o de braÃ§o com tala moldÃ¡vel.](../imagens/Splinting-an-arm.png)
+*Figura 1 - ImobilizaÃ§Ã£o de braÃ§o com tala moldÃ¡vel. CrÃ©dito: Baedr-9439. LicenÃ§a: CC0. Fonte: Wikimedia Commons.*
+
+![Figura 2 - Enfaixamento funcional de contenÃ§Ã£o em entorse articular.](../imagens/Ankle-wrap.png)
+*Figura 2 - Enfaixamento funcional de contenÃ§Ã£o em entorse articular. CrÃ©dito: Baedr-9439. LicenÃ§a: CC0. Fonte: Wikimedia Commons.*
 
 ---
 

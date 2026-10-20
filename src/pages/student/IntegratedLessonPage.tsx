@@ -1,10 +1,12 @@
-import React, { useState } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
+import React, { useState, useEffect } from 'react';
+import { Link, useNavigate, useParams } from 'react-router-dom';
 import { 
   ArrowLeft, Video, BookOpen, HelpCircle, CheckCircle2, 
-  XCircle, ChevronRight, Play, ZoomIn, ZoomOut
+  XCircle, ChevronRight, Play
 } from 'lucide-react';
 import { useTheme } from '../../context/ThemeContext';
+import { INITIAL_40_MODULES } from '../../data/curriculumData';
+import { BookletRenderer } from '../../components/common/BookletRenderer';
 
 interface Question {
   id: number;
@@ -16,12 +18,38 @@ interface Question {
 
 export const IntegratedLessonPage: React.FC = () => {
   const navigate = useNavigate();
+  const { lessonSlug } = useParams<{ lessonSlug: string }>();
   const { theme } = useTheme();
 
   // Abas integradas conforme Prompt Mestre (Videoaula | Apostila | 5 Questões)
-  const [activeTab, setActiveTab] = useState<'video' | 'material' | 'questions'>('video');
+  const [activeTab, setActiveTab] = useState<'video' | 'material' | 'questions'>('material');
   const [videoWatched, setVideoWatched] = useState(false);
   const [readingConfirmed, setReadingConfirmed] = useState(false);
+
+  const resolveModuleCode = (slug?: string): string => {
+    if (!slug) return 'C02';
+    const upper = slug.toUpperCase();
+    const found = INITIAL_40_MODULES.find(m => m.code === upper);
+    if (found) return found.code;
+    if (slug.includes('aula1')) return 'C01';
+    if (slug.includes('aula2')) return 'C02';
+    return 'C02';
+  };
+
+  const [selectedCode, setSelectedCode] = useState<string>(() => resolveModuleCode(lessonSlug));
+  const [bookletMd, setBookletMd] = useState<string>('');
+  const currentModule = INITIAL_40_MODULES.find(m => m.code === selectedCode) || INITIAL_40_MODULES[1];
+
+  useEffect(() => {
+    setSelectedCode(resolveModuleCode(lessonSlug));
+  }, [lessonSlug]);
+
+  useEffect(() => {
+    fetch(`./apostilas/md/${selectedCode}.md`)
+      .then(res => (res.ok ? res.text() : ''))
+      .then(txt => setBookletMd(txt))
+      .catch(() => setBookletMd(''));
+  }, [selectedCode]);
 
   // 5 Questões Objetivas Específicas da Aula
   const questions: Question[] = [
@@ -131,12 +159,12 @@ export const IntegratedLessonPage: React.FC = () => {
             <span className={`text-[11px] font-bold uppercase tracking-wider block ${
               theme === 'dark' ? 'text-uniao-400' : 'text-teal-700'
             }`}>
-              Módulo 01 • Aula 02
+              Módulo {currentModule.code} • {currentModule.durationMinutes} min
             </span>
             <h1 className={`text-sm sm:text-base font-bold truncate max-w-xs sm:max-w-md ${
               theme === 'dark' ? 'text-white' : 'text-slate-900'
             }`}>
-              Avaliação e Segurança da Cena
+              {currentModule.title}
             </h1>
           </div>
         </div>
@@ -265,7 +293,7 @@ export const IntegratedLessonPage: React.FC = () => {
           </div>
         )}
 
-        {/* ABA 2: APOSTILA (Visualizador PDF Integrado) */}
+        {/* ABA 2: APOSTILA (Visualizador Editorial Integrado) */}
         {activeTab === 'material' && (
           <div className="space-y-6">
             <div className={`rounded-2xl border overflow-hidden shadow-2xl transition-colors ${
@@ -273,60 +301,58 @@ export const IntegratedLessonPage: React.FC = () => {
                 ? 'bg-slate-800 border-slate-700'
                 : 'bg-white border-slate-200 shadow-slate-200/80'
             }`}>
-              {/* Barra de Ferramentas da Apostila */}
-              <div className={`border-b p-3 px-6 flex items-center justify-between text-xs transition-colors ${
+              {/* Barra de Ferramentas da Apostila + Seletor dos 40 Módulos */}
+              <div className={`border-b p-3 px-6 flex flex-wrap items-center justify-between gap-3 text-xs transition-colors ${
                 theme === 'dark'
                   ? 'bg-slate-900/90 border-slate-700 text-slate-300'
                   : 'bg-slate-50 border-slate-200 text-slate-700'
               }`}>
-                <div className="flex items-center gap-2 font-semibold">
-                  <BookOpen className="w-4 h-4 text-uniao-600 dark:text-uniao-400" />
-                  <span>Apostila_USM_Mod01_Aula02_Seguranca_Cena.pdf</span>
+                <div className="flex flex-wrap items-center gap-3">
+                  <div className="flex items-center gap-2 font-semibold">
+                    <BookOpen className="w-4 h-4 text-uniao-600 dark:text-uniao-400" />
+                    <span>Apostila Oficial:</span>
+                  </div>
+                  <select
+                    value={selectedCode}
+                    onChange={e => setSelectedCode(e.target.value)}
+                    className={`px-3 py-1.5 rounded-lg border font-semibold text-xs ${
+                      theme === 'dark'
+                        ? 'bg-slate-950 border-slate-700 text-white'
+                        : 'bg-white border-slate-300 text-slate-900'
+                    }`}
+                  >
+                    {INITIAL_40_MODULES.map(m => (
+                      <option key={m.code} value={m.code}>
+                        {m.code} — {m.title}
+                      </option>
+                    ))}
+                  </select>
                 </div>
                 <div className="flex items-center gap-3">
-                  <button className={`p-1.5 rounded transition-colors ${
-                    theme === 'dark' ? 'hover:bg-slate-800 text-slate-400 hover:text-white' : 'hover:bg-slate-200 text-slate-500 hover:text-slate-900'
-                  }`} title="Reduzir Zoom">
-                    <ZoomOut className="w-4 h-4" />
-                  </button>
-                  <span className={`font-mono ${theme === 'dark' ? 'text-slate-400' : 'text-slate-500'}`}>Página 1 de 6</span>
-                  <button className={`p-1.5 rounded transition-colors ${
-                    theme === 'dark' ? 'hover:bg-slate-800 text-slate-400 hover:text-white' : 'hover:bg-slate-200 text-slate-500 hover:text-slate-900'
-                  }`} title="Aumentar Zoom">
-                    <ZoomIn className="w-4 h-4" />
+                  <button
+                    onClick={() => window.print()}
+                    className={`px-3 py-1.5 rounded-lg font-bold transition-colors ${
+                      theme === 'dark'
+                        ? 'bg-slate-800 hover:bg-slate-700 text-slate-200'
+                        : 'bg-slate-200 hover:bg-slate-300 text-slate-800'
+                    }`}
+                  >
+                    Imprimir / PDF
                   </button>
                 </div>
               </div>
 
-              {/* Área de Leitura Renderizada */}
-              <div className={`p-8 sm:p-14 max-w-3xl mx-auto my-6 rounded-xl border shadow-lg space-y-6 font-serif transition-colors ${
+              {/* Área de Leitura Renderizada Completa (LURIA Editorial Standard + Figuras Wikimedia) */}
+              <div className={`p-6 sm:p-12 max-w-4xl mx-auto my-6 rounded-xl border shadow-lg transition-colors ${
                 theme === 'dark' ? 'bg-slate-900 text-slate-100 border-slate-700' : 'bg-white text-slate-900 border-slate-200/80'
               }`}>
-                <div className="border-b border-slate-200 dark:border-slate-800 pb-4 text-center">
-                  <span className="text-[10px] font-sans font-bold tracking-widest text-uniao-600 dark:text-uniao-400 uppercase">
-                    União Serviços Médicos • Material Didático Oficial
-                  </span>
-                  <h2 className="text-2xl font-bold font-sans text-slate-900 dark:text-white mt-1">
-                    Aula 02: Segurança da Cena e Biossegurança
-                  </h2>
-                </div>
-
-                <div className="text-sm leading-relaxed space-y-4 font-sans text-slate-700 dark:text-slate-300">
-                  <p>
-                    <strong>1. Introdução e Princípio Fundamental:</strong> No atendimento pré-hospitalar (APH), a regra absoluta e primária é: <em>a segurança do socorrista sempre vem em primeiro lugar</em>. Uma vítima a mais na ocorrência não resolve a emergência e consome recursos vitais.
-                  </p>
-                  <p>
-                    <strong>2. Os Três Nós da Avaliação de Cena:</strong>
-                  </p>
-                  <ul className="list-disc pl-5 space-y-1">
-                    <li><strong>O que aconteceu?</strong> Análise da cinemática, mecanismos de lesão e gravidade aparente.</li>
-                    <li><strong>Quantas vítimas existem?</strong> Triagem e dimensionamento dos recursos necessários.</li>
-                    <li><strong>O local oferece perigo?</strong> Tráfego, eletricidade, produtos químicos, fogo ou violência.</li>
-                  </ul>
-                  <p>
-                    <strong>3. Biossegurança:</strong> A utilização de luvas de procedimento, máscara de proteção e óculos deve ocorrer antes de qualquer contato físico com a vítima.
-                  </p>
-                </div>
+                {bookletMd ? (
+                  <BookletRenderer markdown={bookletMd} />
+                ) : (
+                  <div className="py-12 text-center text-sm text-slate-400">
+                    Carregando apostila completa do módulo {selectedCode}...
+                  </div>
+                )}
               </div>
 
               {/* Rodapé da Apostila */}

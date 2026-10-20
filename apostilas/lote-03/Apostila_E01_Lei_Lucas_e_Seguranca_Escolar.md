@@ -171,6 +171,16 @@ Toda ocorrência na escola exige registro formal para proteção do aluno e resp
 
 ---
 
+### Figuras de Apoio
+
+![Figura 1 - Maleta e estaÃ§Ã£o de primeiros socorros sinalizada.](../imagens/First_aid_kit_on_wall.png)
+*Figura 1 - Maleta e estaÃ§Ã£o de primeiros socorros sinalizada. CrÃ©dito: Leigh Blackall. LicenÃ§a: CC BY 2.0 (https://creativecommons.org/licenses/by/2.0/). Fonte: Wikimedia Commons.*
+
+![Figura 2 - DEA de acesso pÃºblico em gabinete sinalizado.](../imagens/Public_access_AED_with_coded_lock.jpg)
+*Figura 2 - DEA de acesso pÃºblico em gabinete sinalizado. CrÃ©dito: Christian P. Nielsen. LicenÃ§a: CC0. Fonte: Wikimedia Commons.*
+
+---
+
 ## SEÇÃO 6 — QUADROS PRÁTICOS E CHECKLISTS ESCOLARES
 
 ### Quadro 6.1 — Checklist Mensal de Auditoria de Segurança Escolar (Lei Lucas)

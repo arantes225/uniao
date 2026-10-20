@@ -200,6 +200,16 @@ A Sociedade Brasileira de Salvamento Aquático (SOBRASA) e a *International Life
 
 ---
 
+### Figuras de Apoio
+
+![Figura 1 - ClassificaÃ§Ã£o de profundidade nas queimaduras graves.](../imagens/Fourth-degree-burn.png)
+*Figura 1 - ClassificaÃ§Ã£o de profundidade nas queimaduras graves. CrÃ©dito: Baedr-9439. LicenÃ§a: CC0. Fonte: Wikimedia Commons.*
+
+![Figura 2 - Sinais clÃ­nicos de exaustÃ£o tÃ©rmica e intermaÃ§Ã£o (golpe de calor).](../imagens/Heat-symptoms-2022-final.png)
+*Figura 2 - Sinais clÃ­nicos de exaustÃ£o tÃ©rmica e intermaÃ§Ã£o (golpe de calor). CrÃ©dito: National Weather Service / CDC / NIOSH. LicenÃ§a: DomÃ­nio pÃºblico. Fonte: Wikimedia Commons.*
+
+---
+
 ## SEÇÃO 6 — QUADROS PRÁTICOS E MATRIZES DECISÓRIAS
 
 ### Quadro 6.1 — Classificação e Conduta em Queimaduras

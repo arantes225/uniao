@@ -206,7 +206,10 @@ O socorrista corporativo e a liderança empresarial respondem legalmente pelas s
 ### Figuras de Apoio
 
 ![Figura 1 - Procedimento de bloqueio e etiquetagem (LOTO).](../imagens/Lockout_Tagout_14853353063_.jpg)
-*Figura 1 - Procedimento de bloqueio e etiquetagem (LOTO). Crédito: NAVFAC (U.S. Navy). Licença: Domínio público. Fonte: Wikimedia Commons.*
+*Figura 1 - Procedimento de bloqueio e etiquetagem (LOTO). CrÃ©dito: NAVFAC (U.S. Navy). LicenÃ§a: DomÃ­nio pÃºblico. Fonte: Wikimedia Commons.*
+
+![Figura 2 - CinturÃ£o de seguranÃ§a tipo paraquedista para trabalho em altura (NR-35).](../imagens/Worker_with_safety_harness_9248564334_.jpg)
+*Figura 2 - CinturÃ£o de seguranÃ§a tipo paraquedista para trabalho em altura (NR-35). CrÃ©dito: National Institute for Occupational Safety and Health (NIOSH). LicenÃ§a: DomÃ­nio pÃºblico. Fonte: Wikimedia Commons.*
 
 ---
 

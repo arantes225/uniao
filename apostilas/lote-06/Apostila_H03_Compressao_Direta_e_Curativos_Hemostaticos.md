@@ -176,6 +176,16 @@ O socorrista deve manter vigilância ininterrupta sobre a ferida após a aplica�
 
 ---
 
+### Figuras de Apoio
+
+![Figura 1 - Bandagem compressiva de emergÃªncia para controle hemorrÃ¡gico.](../imagens/The_Emergency_Bandage_in_different_forms_of_packaging.jpg)
+*Figura 1 - Bandagem compressiva de emergÃªncia para controle hemorrÃ¡gico. CrÃ©dito: Struppig taucher. LicenÃ§a: CC BY 4.0 (https://creativecommons.org/licenses/by/4.0/). Fonte: Wikimedia Commons.*
+
+![Figura 2 - Gaze estÃ©ril para compressÃ£o direta e preenchimento de feridas.](../imagens/Gauze_bandage.png)
+*Figura 2 - Gaze estÃ©ril para compressÃ£o direta e preenchimento de feridas. CrÃ©dito: im_tau. LicenÃ§a: CC BY 4.0 (https://creativecommons.org/licenses/by/4.0/). Fonte: Wikimedia Commons.*
+
+---
+
 ## SEÇÃO 6 — QUADROS PRÁTICOS, MATRIZES COMPARATIVAS DE AGENTES E ALGORITMOS
 
 ### Matriz Comparativa: Curativo Convencional vs. Gaze Hemostática Avançada

@@ -191,7 +191,10 @@ O socorro em acidentes com maquinário segue o rigoroso fluxo de comando de cena
 ### Figuras de Apoio
 
 ![Figura 1 - Procedimento de bloqueio e etiquetagem (LOTO).](../imagens/Lockout_Tagout_14853353063_.jpg)
-*Figura 1 - Procedimento de bloqueio e etiquetagem (LOTO). Crédito: NAVFAC (U.S. Navy). Licença: Domínio público. Fonte: Wikimedia Commons.*
+*Figura 1 - Procedimento de bloqueio e etiquetagem (LOTO). CrÃ©dito: NAVFAC (U.S. Navy). LicenÃ§a: DomÃ­nio pÃºblico. Fonte: Wikimedia Commons.*
+
+![Figura 2 - AplicaÃ§Ã£o de torniquete em treinamento TCCC.](../imagens/Tourniquet_application.jpg)
+*Figura 2 - AplicaÃ§Ã£o de torniquete em treinamento TCCC. CrÃ©dito: U.S. Navy, MC2 Barry R. Hirayama. LicenÃ§a: DomÃ­nio pÃºblico. Fonte: Wikimedia Commons.*
 
 ---
 

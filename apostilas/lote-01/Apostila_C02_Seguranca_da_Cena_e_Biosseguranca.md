@@ -208,6 +208,16 @@ A gestão de uma emergência envolve também a liderança sobre as pessoas ao re
 
 ---
 
+### Figuras de Apoio
+
+![Figura 1 - Luva de proteÃ§Ã£o individual em nitrila para biosseguranÃ§a.](../imagens/Disposable_nitrile_glove.jpg)
+*Figura 1 - Luva de proteÃ§Ã£o individual em nitrila para biosseguranÃ§a. CrÃ©dito: Wikimedia Commons. LicenÃ§a: DomÃ­nio pÃºblico. Fonte: Wikimedia Commons.*
+
+![Figura 2 - Maleta e estaÃ§Ã£o de primeiros socorros sinalizada.](../imagens/First_aid_kit_on_wall.png)
+*Figura 2 - Maleta e estaÃ§Ã£o de primeiros socorros sinalizada. CrÃ©dito: Leigh Blackall. LicenÃ§a: CC BY 2.0 (https://creativecommons.org/licenses/by/2.0/). Fonte: Wikimedia Commons.*
+
+---
+
 ## SEÇÃO 6 — QUADROS PRÁTICOS E MATRIZES DECISÓRIAS
 
 ### Quadro 6.1 — Matriz de Ameaças: Perigo, Consequência e Conduta Imediata

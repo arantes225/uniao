@@ -6,6 +6,7 @@ import {
 } from 'lucide-react';
 import { LearningModule, ContentLibrary } from '../../data/curriculumData';
 import { CurriculumService } from '../../services/CurriculumService';
+import { BookletRenderer } from '../../components/common/BookletRenderer';
 
 export const ContentManagerTab: React.FC = () => {
   const [libraries, setLibraries] = useState<ContentLibrary[]>([]);
@@ -20,6 +21,8 @@ export const ContentManagerTab: React.FC = () => {
   const [activeEditorSubtab, setActiveEditorSubtab] = useState<'info' | 'subtopics' | 'video' | 'material' | 'questions'>('info');
   const [saveSuccess, setSaveSuccess] = useState(false);
   const [previewVideoOpen, setPreviewVideoOpen] = useState(false);
+  const [previewBookletMd, setPreviewBookletMd] = useState<string>('');
+  const [previewBookletOpen, setPreviewBookletOpen] = useState(false);
 
   useEffect(() => {
     loadData();
@@ -59,6 +62,8 @@ export const ContentManagerTab: React.FC = () => {
     setEditingModule(JSON.parse(JSON.stringify(mod)));
     setActiveEditorSubtab('info');
     setSaveSuccess(false);
+    setPreviewBookletOpen(false);
+    setPreviewBookletMd('');
   };
 
   const handleCreateModule = () => {
@@ -738,7 +743,7 @@ export const ContentManagerTab: React.FC = () => {
                         />
                       </div>
 
-                      <div className="flex items-center gap-4 pt-1">
+                      <div className="flex flex-wrap items-center gap-4 pt-1">
                         <label className="flex items-center gap-2 cursor-pointer">
                           <input
                             type="checkbox"
@@ -751,8 +756,32 @@ export const ContentManagerTab: React.FC = () => {
                         <span className="text-slate-500">
                           Versão atual: v{editingModule.materialVersion || 1}
                         </span>
+                        <button
+                          type="button"
+                          onClick={async () => {
+                            if (previewBookletOpen) {
+                              setPreviewBookletOpen(false);
+                              return;
+                            }
+                            const res = await fetch(`./apostilas/md/${editingModule.code}.md`);
+                            if (res.ok) {
+                              setPreviewBookletMd(await res.text());
+                              setPreviewBookletOpen(true);
+                            }
+                          }}
+                          className="ml-auto px-3 py-1.5 rounded-xl bg-purple-600/20 hover:bg-purple-600/40 text-purple-300 border border-purple-500/30 font-bold flex items-center gap-1.5"
+                        >
+                          <Eye className="w-3.5 h-3.5" />
+                          <span>{previewBookletOpen ? 'Ocultar Apostila Renderizada' : 'Visualizar Apostila Completa e Imagens'}</span>
+                        </button>
                       </div>
                     </div>
+
+                    {previewBookletOpen && previewBookletMd && (
+                      <div className="p-6 rounded-2xl bg-slate-900 border border-purple-500/30 max-h-[60vh] overflow-y-auto">
+                        <BookletRenderer markdown={previewBookletMd} />
+                      </div>
+                    )}
                   </div>
                 )}
 

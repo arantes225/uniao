@@ -195,6 +195,16 @@ Ao chegar a equipe de Suporte Avançado do SAMU 192 ou ao desembarcar na sala de
 
 ---
 
+### Figuras de Apoio
+
+![Figura 1 - Curativo oclusivo em ferimento abdominal complexo (evisceraÃ§Ã£o).](../imagens/Open-abdominal-wound-dressed.png)
+*Figura 1 - Curativo oclusivo em ferimento abdominal complexo (evisceraÃ§Ã£o). CrÃ©dito: Baedr-9439. LicenÃ§a: CC0. Fonte: Wikimedia Commons.*
+
+![Figura 2 - ColocaÃ§Ã£o de colar cervical.](../imagens/Cervical-collar-application.png)
+*Figura 2 - ColocaÃ§Ã£o de colar cervical. CrÃ©dito: Baedr-9439. LicenÃ§a: CC0. Fonte: Wikimedia Commons.*
+
+---
+
 ## SEÇÃO 6 — QUADROS PRÁTICOS, ALGORITMOS DE TRIAGEM E MATRIZES ANATÔMICAS
 
 ### Matriz Decisória em Cenários Especiais de Sangramento

@@ -190,6 +190,16 @@ A evacuação de feridos em ambientes remotos é uma operação logística compl
 
 ---
 
+### Figuras de Apoio
+
+![Figura 1 - TÃ©cnica segura de salvamento aquÃ¡tico sem entrada impulsiva.](../imagens/Proper_Rescue_Method.jpg)
+*Figura 1 - TÃ©cnica segura de salvamento aquÃ¡tico sem entrada impulsiva. CrÃ©dito: US Army Corps of Engineers. LicenÃ§a: DomÃ­nio pÃºblico. Fonte: Wikimedia Commons.*
+
+![Figura 2 - Sinais clÃ­nicos de exaustÃ£o tÃ©rmica e intermaÃ§Ã£o (golpe de calor).](../imagens/Heat-symptoms-2022-final.png)
+*Figura 2 - Sinais clÃ­nicos de exaustÃ£o tÃ©rmica e intermaÃ§Ã£o (golpe de calor). CrÃ©dito: National Weather Service / CDC / NIOSH. LicenÃ§a: DomÃ­nio pÃºblico. Fonte: Wikimedia Commons.*
+
+---
+
 ## SEÇÃO 6 — QUADROS PRÁTICOS E CLASSIFICAÇÃO CLÍNICA DO AFOGAMENTO (SZPILMAN)
 
 A SOBRASA e a literatura médica mundial adotam a **Classificação de Afogamento do Dr. David Szpilman**, que estratifica a gravidade do afogado e direciona o atendimento com precisão [2, 3]:

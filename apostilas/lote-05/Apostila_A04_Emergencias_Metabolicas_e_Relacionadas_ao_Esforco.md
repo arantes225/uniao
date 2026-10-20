@@ -228,6 +228,13 @@ O profissional de educação física deve saber reconhecer o momento exato em qu
 
 ---
 
+### Figuras de Apoio
+
+![Figura 1 - Sinais clÃ­nicos de exaustÃ£o tÃ©rmica e intermaÃ§Ã£o (golpe de calor).](../imagens/Heat-symptoms-2022-final.png)
+*Figura 1 - Sinais clÃ­nicos de exaustÃ£o tÃ©rmica e intermaÃ§Ã£o (golpe de calor). CrÃ©dito: National Weather Service / CDC / NIOSH. LicenÃ§a: DomÃ­nio pÃºblico. Fonte: Wikimedia Commons.*
+
+---
+
 ## SEÇÃO 6 — QUADROS PRÁTICOS E MATRIZES DECISÓRIAS DE DESCOMPENSAÇÃO METABÓLICA
 
 ### Matriz de Diferenciação das Emergências Térmicas e Metabólicas

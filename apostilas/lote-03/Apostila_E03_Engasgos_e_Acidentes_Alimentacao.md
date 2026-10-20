@@ -181,8 +181,8 @@ O plano de segurança escolar deve conter um **Protocolo de Resposta ao Engasgo 
 
 ### Figuras de Apoio
 
-![Figura 1 - Compressões abdominais (manobra de Heimlich).](../imagens/Abdominal_thrusts_against_choking_cropped_.jpg)
-*Figura 1 - Compressões abdominais (manobra de Heimlich). Crédito: US Army Medical Department Center and School. Licença: Domínio público. Fonte: Wikimedia Commons.*
+![Figura 1 - CompressÃµes abdominais (manobra de Heimlich).](../imagens/Abdominal_thrusts_against_choking_cropped_.jpg)
+*Figura 1 - CompressÃµes abdominais (manobra de Heimlich). CrÃ©dito: US Army Medical Department Center and School. LicenÃ§a: DomÃ­nio pÃºblico. Fonte: Wikimedia Commons.*
 
 ---
 

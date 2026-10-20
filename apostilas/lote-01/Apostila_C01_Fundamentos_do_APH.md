@@ -170,6 +170,16 @@ A abordagem do socorrista obedece a uma ordem operacional clara:
 
 ---
 
+### Figuras de Apoio
+
+![Figura 1 - Maleta e estaÃ§Ã£o de primeiros socorros sinalizada.](../imagens/First_aid_kit_on_wall.png)
+*Figura 1 - Maleta e estaÃ§Ã£o de primeiros socorros sinalizada. CrÃ©dito: Leigh Blackall. LicenÃ§a: CC BY 2.0 (https://creativecommons.org/licenses/by/2.0/). Fonte: Wikimedia Commons.*
+
+![Figura 2 - InspeÃ§Ã£o ocular e abertura palpebral no atendimento inicial.](../imagens/Medic-open-patients-eye-1.png)
+*Figura 2 - InspeÃ§Ã£o ocular e abertura palpebral no atendimento inicial. CrÃ©dito: Baedr-9439. LicenÃ§a: CC0. Fonte: Wikimedia Commons.*
+
+---
+
 ## SEÇÃO 6 — QUADROS PRÁTICOS E COMPARATIVOS
 
 ### Quadro 6.1 — Matriz Decisória Rápida

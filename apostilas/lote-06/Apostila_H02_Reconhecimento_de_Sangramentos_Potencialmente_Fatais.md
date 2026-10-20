@@ -216,6 +216,13 @@ O profissional treinado e o cidadão socorrista devem conhecer com clareza a fro
 
 ---
 
+### Figuras de Apoio
+
+![Figura 1 - Treinamento prÃ¡tico de controle de sangramentos ameaÃ§adores Ã  vida.](../imagens/STOP_THE_BLEED_Course_8209645_.jpg)
+*Figura 1 - Treinamento prÃ¡tico de controle de sangramentos ameaÃ§adores Ã  vida. CrÃ©dito: U.S. Air Force, Staff Sgt. Juan Paz. LicenÃ§a: DomÃ­nio pÃºblico. Fonte: Wikimedia Commons.*
+
+---
+
 ## SEÇÃO 6 — QUADROS PRÁTICOS, ALGORITMOS VISUAIS DE RECONHECIMENTO E TRIAGEM
 
 ### Algoritmo Decisório de Reconhecimento e Ação Inicial

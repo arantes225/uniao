@@ -185,10 +185,10 @@ Em ambiente escolar e de creches, o cansaço ao realizar compressões com 2 dedo
 ### Figuras de Apoio
 
 ![Figura 1 - Treino de RCP em manequim de lactente.](../imagens/CardiopulmonaryResuscitationBabyDummy.jpg)
-*Figura 1 - Treino de RCP em manequim de lactente. Crédito: Uniformed Services University. Licença: Domínio público. Fonte: Wikimedia Commons.*
+*Figura 1 - Treino de RCP em manequim de lactente. CrÃ©dito: Uniformed Services University. LicenÃ§a: DomÃ­nio pÃºblico. Fonte: Wikimedia Commons.*
 
-![Figura 2 - Posicionamento para compressões torácicas no adulto.](../imagens/Cardiopulmonary_Resuscitation_Adult.jpg)
-*Figura 2 - Posicionamento para compressões torácicas no adulto. Crédito: Illinois Waterway Visitor Center, US Army Corps of Engineers. Licença: Domínio público. Fonte: Wikimedia Commons.*
+![Figura 2 - Posicionamento para compressÃµes torÃ¡cicas no adulto.](../imagens/Cardiopulmonary_Resuscitation_Adult.jpg)
+*Figura 2 - Posicionamento para compressÃµes torÃ¡cicas no adulto. CrÃ©dito: Illinois Waterway Visitor Center, US Army Corps of Engineers. LicenÃ§a: DomÃ­nio pÃºblico. Fonte: Wikimedia Commons.*
 
 ---
 

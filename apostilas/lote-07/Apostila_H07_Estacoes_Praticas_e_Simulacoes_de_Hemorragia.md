@@ -176,8 +176,11 @@ O fechamento pedagógico do módulo segue o modelo internacional de Exame Clíni
 
 ### Figuras de Apoio
 
-![Figura 1 - Aplicação de torniquete em treinamento TCCC.](../imagens/Tourniquet_application.jpg)
-*Figura 1 - Aplicação de torniquete em treinamento TCCC. Crédito: U.S. Navy, MC2 Barry R. Hirayama. Licença: Domínio público. Fonte: Wikimedia Commons.*
+![Figura 1 - AplicaÃ§Ã£o de torniquete em treinamento TCCC.](../imagens/Tourniquet_application.jpg)
+*Figura 1 - AplicaÃ§Ã£o de torniquete em treinamento TCCC. CrÃ©dito: U.S. Navy, MC2 Barry R. Hirayama. LicenÃ§a: DomÃ­nio pÃºblico. Fonte: Wikimedia Commons.*
+
+![Figura 2 - Treinamento prÃ¡tico de controle de sangramentos ameaÃ§adores Ã  vida.](../imagens/STOP_THE_BLEED_Course_8209645_.jpg)
+*Figura 2 - Treinamento prÃ¡tico de controle de sangramentos ameaÃ§adores Ã  vida. CrÃ©dito: U.S. Air Force, Staff Sgt. Juan Paz. LicenÃ§a: DomÃ­nio pÃºblico. Fonte: Wikimedia Commons.*
 
 ---
 

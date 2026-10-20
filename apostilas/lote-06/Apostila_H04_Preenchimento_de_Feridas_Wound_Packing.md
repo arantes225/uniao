@@ -232,6 +232,16 @@ Após completar o tempo de compressão manual (3 ou 10 minutos), o socorrista de
 
 ---
 
+### Figuras de Apoio
+
+![Figura 1 - PrÃ¡tica supervisionada de preenchimento de feridas (wound packing) e hemostasia.](../imagens/Defenders_participate_in_TCCC_Combat_Lifesaver_training_9464952_.jpg)
+*Figura 1 - PrÃ¡tica supervisionada de preenchimento de feridas (wound packing) e hemostasia. CrÃ©dito: U.S. Air Force, Tech. Sgt. Kristen Pittman. LicenÃ§a: DomÃ­nio pÃºblico. Fonte: Wikimedia Commons.*
+
+![Figura 2 - Gaze estÃ©ril para compressÃ£o direta e preenchimento de feridas.](../imagens/Gauze_bandage.png)
+*Figura 2 - Gaze estÃ©ril para compressÃ£o direta e preenchimento de feridas. CrÃ©dito: im_tau. LicenÃ§a: CC BY 4.0 (https://creativecommons.org/licenses/by/4.0/). Fonte: Wikimedia Commons.*
+
+---
+
 ## SEÇÃO 6 — QUADROS PRÁTICOS, ALGORITMOS DE EMPACOTAMENTO E MATRIZES
 
 ### Algoritmo Técnico do Wound Packing (Passo a Passo)

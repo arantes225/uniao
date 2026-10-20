@@ -196,8 +196,11 @@ A avaliação inicial não é uma foto estática tirada na chegada; ela é um fi
 
 ### Figuras de Apoio
 
-![Figura 1 - Tração da mandíbula (jaw thrust) para abertura de via aérea.](../imagens/Jaw_thrust.jpg)
-*Figura 1 - Tração da mandíbula (jaw thrust) para abertura de via aérea. Crédito: Department of the Army (EUA). Licença: Domínio público. Fonte: Wikimedia Commons.*
+![Figura 1 - TraÃ§Ã£o da mandÃ­bula (jaw thrust) para abertura de via aÃ©rea.](../imagens/Jaw_thrust.jpg)
+*Figura 1 - TraÃ§Ã£o da mandÃ­bula (jaw thrust) para abertura de via aÃ©rea. CrÃ©dito: Department of the Army (EUA). LicenÃ§a: DomÃ­nio pÃºblico. Fonte: Wikimedia Commons.*
+
+![Figura 2 - InspeÃ§Ã£o ocular e abertura palpebral no atendimento inicial.](../imagens/Medic-open-patients-eye-1.png)
+*Figura 2 - InspeÃ§Ã£o ocular e abertura palpebral no atendimento inicial. CrÃ©dito: Baedr-9439. LicenÃ§a: CC0. Fonte: Wikimedia Commons.*
 
 ---
 
