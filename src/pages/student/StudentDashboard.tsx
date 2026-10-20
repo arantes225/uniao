@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useOutletContext } from 'react-router-dom';
 import { 
   PlayCircle, CheckCircle, Clock, 
   ArrowRight, ShieldCheck, Compass
@@ -8,6 +8,7 @@ import { useTheme } from '../../context/ThemeContext';
 
 export const StudentDashboard: React.FC = () => {
   const { theme } = useTheme();
+  const { studentName } = useOutletContext<{ studentName: string }>();
 
   // Suporte a múltiplas turmas por aluno com switch
   const studentCohorts = [
@@ -58,7 +59,7 @@ export const StudentDashboard: React.FC = () => {
           <div className="space-y-2">
             <div className="flex items-center gap-3">
               <h1 className={`text-2xl sm:text-3xl font-black tracking-tight ${theme === 'dark' ? 'text-white' : 'text-slate-900'}`}>
-                Olá, Dr. Lucas Arantes
+                Olá, {studentName}
               </h1>
               {studentCohorts.length > 1 && (
                 <span className={`text-[10px] font-black uppercase px-2.5 py-0.5 rounded-full border ${
