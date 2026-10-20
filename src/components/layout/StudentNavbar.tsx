@@ -49,19 +49,18 @@ export const StudentNavbar: React.FC<StudentNavbarProps> = ({
           
           {/* Brand - UNIÃO SERVIÇOS MÉDICOS alinhado à esquerda */}
           <Link to="/aluno/dashboard" className="flex items-center gap-3.5 group text-left">
-            <div className={`w-10 h-10 rounded-xl flex items-center justify-center p-1 shrink-0 ${
-              theme === 'dark' ? 'bg-slate-950/60' : 'bg-slate-50 border border-slate-200/80 shadow-xs'
-            }`}>
+            <div className="w-11 h-11 flex items-center justify-center shrink-0">
               <img 
-                src={theme === 'light' ? "./brand/simbolo-cruz-uniao-verde.png" : "./brand/simbolo-cruz-uniao.png"} 
-                alt="União Serviços Médicos" 
-                className="w-full h-full object-contain group-hover:scale-105 transition-transform" 
+                src="./brand/simbolo-cruz-uniao.png" 
+                alt="Cruz União Serviços Médicos" 
+                className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-300 filter drop-shadow-[0_0_8px_rgba(20,184,166,0.35)]" 
               />
             </div>
             <div className="flex flex-col">
               <div className="flex items-center gap-2">
-                <span className={`font-black text-base tracking-wider ${theme === 'dark' ? 'text-white' : 'text-slate-900'}`}>
+                <span className={`font-black text-xl tracking-wider leading-none flex items-center gap-1.5 ${theme === 'dark' ? 'text-white' : 'text-slate-900'}`}>
                   UNIÃO
+                  <span className="w-1.5 h-1.5 rounded-full bg-teal-400" />
                 </span>
                 <span className={`text-[10px] font-bold px-1.5 py-0.5 rounded border ${
                   theme === 'dark' 
@@ -71,8 +70,8 @@ export const StudentNavbar: React.FC<StudentNavbarProps> = ({
                   LMS
                 </span>
               </div>
-              <span className={`text-[10px] font-extrabold tracking-widest uppercase ${
-                theme === 'dark' ? 'text-slate-400' : 'text-teal-700'
+              <span className={`text-[10px] font-bold tracking-[0.22em] uppercase mt-1 ${
+                theme === 'dark' ? 'text-teal-400' : 'text-teal-700'
               }`}>
                 SERVIÇOS MÉDICOS
               </span>
