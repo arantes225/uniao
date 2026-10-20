@@ -1,0 +1,347 @@
+# UNIÃO SERVIÇOS MÉDICOS
+## DIRETORIA DE ENSINO, PESQUISA E INSTRUÇÃO PRÉ-HOSPITALAR
+
+---
+
+**MÓDULO E01 — LEI LUCAS E SEGURANÇA NO AMBIENTE ESCOLAR**
+*Biblioteca Curricular: Primeiros Socorros em Escolas (School Safety)*
+*Versão Editorial: 1.0.0 — Padrão Editorial USM*
+*Carga Horária Teórica: 1 hora | Alinhamento: Lei Federal nº 13.722/2018 / MEC / SBP*
+
+---
+
+## SUMÁRIO
+
+- [Seção 1 — Em 30 Segundos](#seção-1--em-30-segundos)
+- [Seção 2 — Objetivos de Aprendizagem](#seção-2--objetivos-de-aprendizagem)
+- [Seção 3 — Introdução e Contexto Histórico da Lei Lucas](#seção-3--introdução-e-contexto-histórico-da-lei-lucas)
+- [Seção 4 — Fundamentação Jurídica e Responsabilidades Institucionais](#seção-4--fundamentação-jurídica-e-responsabilidades-institucionais)
+- [Seção 5 — Desenvolvimento dos Subtemas](#seção-5--desenvolvimento-dos-subtemas)
+  - [5.1 A Lei Federal nº 13.722/2018: Exigências e Abrangência](#51-a-lei-federal-nº-137222018-exigências-e-abrangência)
+  - [5.2 Responsabilidades da Gestão Escolar e dos Educadores](#52-responsabilidades-da-gestão-escolar-e-dos-educadores)
+  - [5.3 Mapeamento e Identificação de Riscos em Escolas e Creches](#53-mapeamento-e-identificação-de-riscos-em-escolas-e-creches)
+  - [5.4 Planejamento Anual de Capacitações e Recertificações](#54-planejamento-anual-de-capacitações-e-recertificações)
+  - [5.5 Estruturação e Manutenção dos Kits de Primeiros Socorros Escolares](#55-estruturação-e-manutenção-dos-kits-de-primeiros-socorros-escolares)
+  - [5.6 Protocolos de Prevenção, Fluxos de Emergência e Documentação](#56-protocolos-de-prevenção-fluxos-de-emergência-e-documentação)
+- [Seção 6 — Quadros Práticos e Checklists Escolares](#seção-6--quadros-práticos-e-checklists-escolares)
+- [Seção 7 — Erros Frequentes e Infrações Legais](#seção-7--erros-frequentes-e-infrações-legais)
+- [Seção 8 — Aplicação Prática Contextualizada (Estudo de Caso)](#seção-8--aplicação-prática-contextualizada-estudo-de-caso)
+- [Seção 9 — Pulo do Gato](#seção-9--pulo-do-gato)
+- [Seção 10 — Mapa Mental da Gestão Escolar e Lei Lucas](#seção-10--mapa-mental-da-gestão-escolar-e-lei-lucas)
+- [Seção 11 — O Que Você Precisa Lembrar](#seção-11--o-que-você-precisa-lembrar)
+- [Seção 12 — Referências Bibliográficas e Metadados Editoriais](#seção-12--referências-bibliográficas-e-metadados-editoriais)
+
+---
+
+## SEÇÃO 1 — EM 30 SEGUNDOS
+
+> **VISÃO RÁPIDA DE SOBREVIVÊNCIA**
+> 1. **O que é a Lei Lucas (Lei Federal nº 13.722/2018):** Legislação nacional que torna **obrigatória a capacitação em noções básicas de primeiros socorros de professores e funcionários** de todos os estabelecimentos de ensino públicos e privados de educação básica e de recreação infantil [1].
+> 2. **Origem da lei:** Criada em memória do menino Lucas Begalli Zamora, de 10 anos, que faleceu em 2017 vítima de asfixia por engasgo durante um passeio escolar em Campinas/SP, sem que houvesse nenhum adulto capacitado para realizar a manobra básica de desengasgo [2].
+> 3. **Cursos periódicos obrigatórios:** O treinamento escolar não pode ser pontual ou único; a lei exige **recertificação periódica (usualmente anual)** para manter as equipes aptas frente à rotatividade funcional [1, 3].
+> 4. **Composição da equipe escolar capacitada:** A escola deve possuir uma proporção mínima de colaboradores certificados presentes em todos os turnos de funcionamento, incluindo pátios, passeios externos e excursões pedagógicas [1].
+> 5. **O Kit Escolar não contém remédios:** O kit de primeiros socorros da escola destina-se a contenção física de sangramentos, curativos, imobilização e barreiras biológicas. **É vedado manter analgésicos, antitérmicos ou xaropes de administração livre** sem receita nominal arquivada e autorização expressa dos pais [4].
+> 6. **Responsabilidade civil e administrativa:** Estabelecimentos de ensino que descumprirem a Lei Lucas sofrem penalidades graduadas: notificação formal, multa pecuniária e até **cassação do alvará de funcionamento** ou fechamento da unidade escolar [1].
+
+---
+
+## SEÇÃO 2 — OBJETIVOS DE APRENDIZAGEM
+
+Ao concluir o estudo deste módulo, o gestor e educador serão capazes de:
+
+1. **Explicar os fundamentos jurídicos e os dispositivos obrigatórios** da Lei Federal nº 13.722/2018 (Lei Lucas).
+2. **Definir as responsabilidades civis, administrativas e penais** da direção escolar e dos educadores diante de acidentes de alunos.
+3. **Mapear e neutralizar riscos ambientais críticos** em berçários, salas de aula, refeitórios, escadarias e áreas recreativas (*playgrounds*).
+4. **Estruturar um cronograma institucional de capacitação continuada** e simulações semestrais de emergência com todo o corpo docente.
+5. **Montar, auditar e fiscalizar kits de primeiros socorros escolares**, respeitando as restrições sanitárias vigentes.
+6. **Redigir fichas de ocorrência padronizadas e termos de notificação aos pais**, assegurando transparência e conformidade com o Estatuto da Criança e do Adolescente (ECA).
+
+---
+
+## SEÇÃO 3 — INTRODUÇÃO E CONTEXTO HISTÓRICO DA LEI LUCAS
+
+A promulgação da Lei Federal nº 13.722, em 4 de outubro de 2018, representou um marco histórico e civilizatório nas políticas de proteção à infância e à juventude no Brasil [1]. Durante décadas, o ambiente escolar brasileiro foi considerado intuitivamente como um espaço imune a emergências médicas graves, delegando-se qualquer intercorrência à espera passiva pela chegada de viaturas de socorro público.
+
+Entretanto, em setembro de 2017, durante uma excursão escolar em Cordeirópolis/SP, o estudante **Lucas Begalli Zamora**, de apenas 10 anos de idade, engasgou-se com um pedaço de cachorro-quente servido durante o lanche. Nenhuma das professoras ou monitores presentes na viagem conhecia a Manobra de Heimlich ou sabia reconhecer o sinal de asfixia grave. O socorro especializado demorou mais de 20 minutos para chegar; quando o atendimento avançado iniciou-se, o cérebro de Lucas já havia sofrido morte encefálica por anóxia prolongada [2].
+
+A dor transformou-se em luta por meio da incansável mobilização de sua mãe, Alessandra Begalli, que liderou uma campanha popular nacional resultando na aprovação unânime da **Lei Lucas** no Congresso Nacional [2]. A legislação consagrou o princípio de que o dever de custódia da escola sobre o aluno engloba o dever técnico de saber como mantê-lo vivo caso ocorra um engasgo, uma queda grave, uma crise convulsiva ou uma parada cardíaca súbita dentro do muro escolar ou em passeios externos sob responsabilidade da instituição [1, 3].
+
+---
+
+## SEÇÃO 4 — FUNDAMENTAÇÃO JURÍDICA E RESPONSABILIDADES INSTITUCIONAIS
+
+### 4.1 A Natureza Jurídica do Dever de Custódia Escolar
+Quando os pais ou responsáveis matriculam uma criança ou adolescente em um estabelecimento de ensino (público ou privado), ocorre a transferência temporária do **dever de guarda e custódia**.
+- Conforme o Artigo 932, inciso IV, do Código Civil Brasileiro, os donos de escolas e educadores respondem civilmente pelos atos e danos sofridos pelos educandos enquanto estiverem sob sua autoridade [5].
+- Trata-se de uma **Responsabilidade Civil Objetiva** nas escolas privadas (sob o Código de Defesa do Consumidor — CDC, Lei nº 8.078/1990) e de responsabilidade estatal nas escolas públicas (Artigo 37, § 6º, da Constituição Federal) [5, 6]. A instituição só se exime de responsabilidade se provar que adotou todas as medidas preventivas consagradas pela ciência e pela legislação vigente.
+
+```
++---------------------------------------------------------------------------------+
+|                    ESFERAS DE RESPONSABILIDADE NA SEGURANÇA ESCOLAR             |
+|                                                                                 |
+|  [ ESFERA ADMINISTRATIVA (LEI LUCAS) ]                                          |
+|  - Fiscalização pelos órgãos municipais e estaduais de educação                 |
+|  - Sanções: Notificação, Multa diária e Cassação do Alvará da Escola            |
+|                                                                                 |
+|  [ ESFERA CIVIL (CÓDIGO CIVIL / CDC) ]                                          |
+|  - Indenizações materiais por despesas médicas hospitalares                     |
+|  - Indenizações por danos morais e estéticos à família da criança               |
+|                                                                                 |
+|  [ ESFERA PENAL (CÓDIGO PENAL ART. 135) ]                                       |
+|  - Omissão de socorro: responder pessoalmente se o educador se recusar a        |
+|    chamar o 192 ou abandonar a criança em risco sem prestar assistência        |
++---------------------------------------------------------------------------------+
+```
+
+---
+
+## SEÇÃO 5 — DESENVOLVIMENTO DOS SUBTEMAS
+
+### 5.1 A Lei Federal nº 13.722/2018: Exigências e Abrangência
+O texto da Lei Lucas estabelece parâmetros claros que toda instituição de ensino deve cumprir [1]:
+- **Quem deve cumprir:** Todos os estabelecimentos de ensino públicos e privados de educação básica (educação infantil, creches, pré-escolas, ensino fundamental e médio) e estabelecimentos de recreação infantil (espaços de festas infantis, colônias de férias, brinquedotecas e clubes com monitores infantis).
+- **Quem deve ser treinado:** Professores e funcionários de apoio administrativo e operacional (inspetores de alunos, coordenadores, merendeiras e porteiros).
+- **Conteúdo dos cursos:** Ministrado obrigatoriamente por entidades especializadas em práticas de auxílio imediato e emergências médicas, fundamentado em diretrizes reconhecidas de suporte básico de vida e adaptado à faixa etária escolar.
+- **Selo e Certificação:** As escolas capacitadas devem afixar em local visível o certificado comprovando que sua equipe foi treinada conforme a Lei Lucas [1].
+
+### 5.2 Responsabilidades da Gestão Escolar e dos Educadores
+- **Da Direção Escolar:**
+  1. Garantir que um percentual de no mínimo **um terço da equipe** (ou proporção definida pelos Conselhos Municipais de Educação) esteja certificado e válido na unidade.
+  2. Assegurar que em **todo e qualquer turno escolar** haja ao menos dois profissionais certificados presentes no prédio.
+  3. Designar obrigatoriamente profissionais capacitados para acompanhar qualquer passeio pedagógico, visita técnica ou excursão externa fora da escola.
+  4. Manter o Kit de Primeiros Socorros abastecido, checado mensalmente e acessível (não trancado a chaves que ninguém encontra na emergência).
+- **Dos Professores e Educadores:**
+  - Manter postura de vigilância ativa nos horários de recreio e alimentação.
+  - Conhecer a localização dos kits de emergência e telefones úteis.
+  - Intervir de imediato dentro dos limites do seu treinamento em suporte básico até a chegada do SAMU ou resgate.
+
+### 5.3 Mapeamento e Identificação de Riscos em Escolas e Creches
+A gestão de segurança escolar exige a eliminação pró-ativa de riscos ambientais cotidianos através de vistorias estruturadas [4]:
+
+```
++---------------------------------------------------------------------------------+
+|                        MAPEAMENTO DE RISCOS NO PERÍMETRO ESCOLAR                |
+|                                                                                 |
+|  [ REFEITÓRIO E HORA DO LANCHE (ZONA CRÍTICA DE ASFIXIA) ]                      |
+|  - Alimentos cortados incorretamente (uvas inteiras, tomates-cereja redondos). |
+|  - Crianças comendo correndo, conversando ou rindo no pátio.                   |
+|  - Ausência de supervisão de adultos durante os primeiros 15 min da refeição.   |
+|                                                                                 |
+|  [ PLAYGROUND E QUADRAS (ZONA DE TRAUMA E QUEDAS) ]                             |
+|  - Piso de concreto sob brinquedos altos (escorregadores sem piso emborrachado).|
+|  - Brinquedos de madeira com farpas expostas ou parafusos salientes enferrujados|
+|  - Espaço livre inferior a 1,5 metro ao redor de balanços em movimento.        |
+|                                                                                 |
+|  [ SALAS DE AULA E CORREDORES (ZONA DE TRAUMA DE CRÂNIO E CORTES) ]            |
+|  - Portas de vidro sem faixas adesivas refletivas visíveis à altura da criança. |
+|  - Quinas vivas de mesas sem protetores de silicone em salas de creche.        |
+|  - Tomadas elétricas baixas sem protetores plásticos de bloqueio contra choque.|
+|  - Escadarias sem corrimão duplo (altura adulta e infantil) ou fitas antiderrap.|
++---------------------------------------------------------------------------------+
+```
+
+### 5.4 Planejamento Anual de Capacitações e Recertificações
+A habilidade manual em compressões torácicas e desengasgo sofre degradação cognitiva e motora comprovada após 6 a 12 meses do treinamento inicial [3].
+- A direção escolar deve incluir a capacitação da Lei Lucas no **Calendário Pedagógico Oficial** (geralmente durante as semanas de planejamento escolar de janeiro/fevereiro ou julho).
+- A cada 6 meses, a escola deve realizar um **Simulado Prático Rápido de Emergência** (ex.: simulação surpresa de engasgo no refeitório ou simulação de queda com trauma na escada), avaliando o tempo de resposta da equipe e o acionamento do 192 pelo viva-voz [1, 4].
+
+### 5.5 Estruturação e Manutenção dos Kits de Primeiros Socorros Escolares
+O kit escolar de emergência deve ser armazenado em **maleta plástica rígida ou bolsa de lona verde/vermelha identificada**, fixada em local de fácil acesso para os funcionários (ex.: secretaria, sala dos professores ou enfermaria), porém fora do alcance direto de crianças pequenas [4].
+
+#### Conteúdo Obrigatório do Kit Escolar Lei Lucas:
+- **EPIs de Biossegurança:** 10 pares de luvas de procedimento descartáveis (nitrila/látex) em tamanhos M e G; 2 óculos de proteção ampla visão.
+- **Manejo de Vias Aéreas:** 1 Pocket Mask com válvula unidirecional para ventilações em caso de parada cardiorrespiratória.
+- **Controle de Sangramentos e Curativos:**
+  - 10 pacotes de gaze estéril (7,5 x 7,5 cm);
+  - 4 rolos de atadura de crepe elástica (larguras de 10 cm e 15 cm);
+  - 1 rolo de fita microporosa hipoalergênica (micropore);
+  - 1 tesoura de ponta romba (tipo ponta de pato para cortar roupas sem ferir);
+  - 1 frasco de soro fisiológico a 0,9% estéril (para lavagem ocular e de feridas).
+- **Imobilizações:** 2 talas moldáveis de alumínio com espuma (tipo SAM Splint) ou papelão estruturado para membros; 2 bandagens triangulares de tecido para tipóia de braço.
+- **Termo e Outros:** 1 termômetro digital axilar; bolsas térmicas de gelo instantâneo (*cold packs* de compressão química); 1 manta térmica aluminizada.
+
+> [!CAUTION]
+> **PROIBIÇÃO DE REMÉDIOS NO KIT ESCOLAR**
+> O kit de primeiros socorros **NÃO pode conter analgésicos (Dipirona, Paracetamol), anti-inflamatórios, xaropes, colírios, pomadas antibióticas ou anti-histamínicos** de livre acesso. A administração empírica de remédios por funcionários escolares sem prescrição médica nominal e sem autorização escrita dos pais é ilegal e pode causar choque anafilático letal ou mascarar sintomas de abdome agudo cirúrgico [4].
+
+### 5.6 Protocolos de Prevenção, Fluxos de Emergência e Documentação
+Toda ocorrência na escola exige registro formal para proteção do aluno e respaldo institucional:
+1. **Ficha de Saúde Prévia do Aluno:** No ato da matrícula anual, a escola deve colher formulário de saúde assinado pelos pais: histórico de asma, alergias alimentares (amendoim, leite, ovo), diabetes, epilepsia, uso contínuo de medicações e contato de emergência com dois telefones atualizados.
+2. **Relatório de Ocorrência Escolar de Primeiros Socorros:** Toda vez que um curativo for feito ou o 192 for acionado, deve-se preencher formulário padronizado constando: data, horário exato, nome do aluno, local do evento, o que aconteceu, manobras executadas pelo brigadista e horário da comunicação aos pais. Uma cópia é arquivada no prontuário escolar e outra entregue aos responsáveis [1, 4].
+
+---
+
+## SEÇÃO 6 — QUADROS PRÁTICOS E CHECKLISTS ESCOLARES
+
+### Quadro 6.1 — Checklist Mensal de Auditoria de Segurança Escolar (Lei Lucas)
+
+| Setor Escolar | Item Auditado | Padrão Esperado de Conformidade | Situação |
+|---|---|---|:---:|
+| **Refeitório** | Supervisão de Alimentos | Alimentos cortados em tiras longitudinais; proibição de uvas inteiras para creche. | [ ] OK |
+| **Playground** | Integridade dos Brinquedos | Parafusos cobertos, pisos emborrachados íntegros, sem ferrugem ou pontas cortantes. | [ ] OK |
+| **Escadarias** | Proteção contra Quedas | Corrimãos firmes e fitas antiderrapantes em todos os degraus. | [ ] OK |
+| **Salas de Aula** | Eletricidade e Vidros | Tomadas baixas com protetor plástico; portas de vidro com faixas visuais a 1 metro de altura. | [ ] OK |
+| **Kit de Socorro** | Validade de Materiais | Luvas íntegras, gazes estéreis, sem medicamentos alopáticos dentro da maleta. | [ ] OK |
+| **Equipe** | Validade dos Certificados | No mínimo 30% da equipe com certificação válida da Lei Lucas em dia. | [ ] OK |
+
+---
+
+### Quadro 6.2 — Fluxo Decisório de Emergência Escolar
+
+| Gravidade do Evento | Exemplo Típico | Ação Primária da Escola | Comunicação com a Família |
+|---|---|---|---|
+| **Nível 1 (Leve)** | Escoriação superficial no joelho após correr; sangramento capilar mínimo. | Lavagem com água e sabão no pátio; curativo simples com micropore. | Avisar os pais pelo aplicativo escolar ou na entrega do aluno no final do dia. |
+| **Nível 2 (Moderado)** | Entorse de tornozelo na aula de educação física; dor e inchaço sem fratura exposta. | Protocolo PRICE (gelo local protegido, repouso e perna elevada); imobilizar. | Ligar para os pais imediatamente para que venham retirar o aluno para consulta médica. |
+| **Nível 3 (Grave / Risco de Vida)** | Engasgo com tosse muda; crise convulsiva; parada cardíaca; queda de escada com perda de consciência. | **Executar manobras de SBV imediatamente no local e ligar 192 pelo viva-voz.** | Um segundo funcionário liga para os pais avisando a ocorrência e o hospital de destino. |
+
+---
+
+## SEÇÃO 7 — ERROS FREQUENTES E INFRAÇÕES LEGAIS
+
+> [!CAUTION]
+> ### CATÁLOGO DE ERROS ADMINISTRATIVOS E PEDAGÓGICOS CRÍTICOS
+> 
+> 1. **Guardar o Kit de Primeiros Socorros trancado na gaveta do diretor que saiu da escola:**
+>    - *Por que é uma falha grave:* Na emergência de um engasgo ou hemorragia arterial, os primeiros 180 segundos decidem a vida. Gastar 5 minutos procurando a chave da gaveta trancada anula qualquer chance de socorro.
+>    - *Conduta correta:* O kit deve ficar em suporte aberto de fácil alcance visual, acessível a todos os professores e funcionários adultos, em altura superior a 1,60 m para que alunos pequenos não alcancem.
+> 
+> 2. **Dar comprimido de dipirona ou paracetamol para criança com dor de cabeça sem receita:**
+>    - *Por que não fazer:* Em cerca de 1% a 2% das crianças, a dipirona ou outros analgésicos podem disparar crises anafiláticas severas ou reações cutâneas graves (Síndrome de Stevens-Johnson). O educador que dá remédio por conta própria comete exercício ilegal da medicina e responde civil e criminalmente se a criança apresentar choque anafilático.
+>    - *Conduta correta:* Em caso de febre ou dor de cabeça, avise os pais para virem buscar a criança. Apenas aplique compressas frescas na testa. Remédios só com autorização médica prescrita no prontuário.
+> 
+> 3. **Treinar apenas um funcionário na escola e achar que a Lei Lucas está cumprida:**
+>    - *Por que é um erro legal:* Se o funcionário treinado faltar no dia por motivo de doença, tirar férias ou estiver no horário de almoço na rua, a escola fica desprovida de socorro legal. A lei exige equipe ampla capacitada em todos os turnos.
+> 
+> 4. **Transportar criança grave desmaiada no banco traseiro do carro da coordenadora:**
+>    - *Por que não fazer:* Em caso de parada cardiorrespiratória ou trauma craniano/cervical, transportar a criança solta no banco de um carro comum impede massagem cardíaca contínua e agrava lesões medulares.
+>    - *Conduta correta:* Ligue 192 (SAMU) e execute os cuidados na escola até a ambulância chegar.
+> 
+> 5. **Omitir acidentes ou esconder quedas dos pais com medo de reclamações:**
+>    - *Por que é perigoso:* Traumatismos cranianos leves podem evoluir com sangramento intracraniano lento (hematoma extradural) 6 a 12 horas depois da batida, quando a criança já está dormindo em casa. Se os pais não souberem que ela bateu a cabeça na escola, não saberão reconhecer a sonolência anormal como sinal de emergência cirúrgica.
+>    - *Conduta correta:* Registre toda queda na ficha e comunique os pais de forma transparente no mesmo dia.
+
+---
+
+## SEÇÃO 8 — APLICAÇÃO PRÁTICA CONTEXTUALIZADA (ESTUDO DE CASO)
+
+### Cenário Simulado
+*Local:* Pátio interno de uma escola municipal de educação infantil e fundamental.  
+*Horário:* 15h15 (horário de recreio supervisionado).  
+*Ocorrência:* Durante uma brincadeira de pega-pega no piso de ladrilho liso que acabara de ser lavado pela equipe de limpeza (sem placas de sinalização de piso molhado), uma aluna de 7 anos escorrega em alta velocidade, perde a sustentação e colide violentamente a região frontal do crânio e o punho esquerdo contra a quina de uma mureta de concreto. A menina grita de dor, chora compulsivamente, apresenta ferimento cortocontuso sangrante de 4 cm na testa e deformidade em "garfo" no punho esquerdo (angulação de fratura fechada de rádio). Há cerca de 60 crianças no pátio que começam a gritar e se aglomerar ao redor.
+
+---
+
+### Resolução Técnica Passo a Passo
+
+#### 1. Divisão Operacional Imediata entre as Educadoras da Brigada (0 a 30 segundos)
+Duas professoras treinadas na Lei Lucas encontravam-se no pátio cumprindo o protocolo de vigilância:
+- **Professora 1 (Socorrista Líder):** Assume o atendimento direto à aluna caída no chão.
+- **Professora 2 (Gestão de Cena e Apoio):** Afasta as outras crianças com serenidade:
+  > *"Crianças, todos para a área do gramado com a tia Marina, por favor! A Alice escorregou e nós vamos cuidar dela agora"*.
+  - A Professora 2 busca a maleta verde da Lei Lucas na secretaria e desvia o tráfego de alunos.
+
+#### 2. Avaliação Primária e Estabilização da Menina (30 segundos a 2 minutos)
+- A Professora 1 ajoelha-se ao lado da aluna, calçando luvas de nitrila da maleta:
+  - **Nível de Consciência:** A menina responde em voz clara, chora, aperta a mão da professora e sabe dizer seu nome e idade (Alerta no AVDI). Não houve perda de consciência.
+  - **Controle da Hemorragia Craniana:** Pega um maço de gaze estéril e comprime firmemente o corte da testa com a mão espalmada. O sangue é de origem venosa/capilar e cessa em 3 minutos de compressão direta firme.
+  - **Manejo do Punho Deformado:** A aluna relata dor intensa no braço esquerdo. A professora examina o punho: pele íntegra (fratura fechada sem pontas expostas). Os dedos da mão continuam rosados e com pulso radial presente.
+
+#### 3. Acionamento do SAMU e Comunicação à Família (2 minutos)
+- Enquanto a Professora 1 mantém a compressão na testa e estabiliza o braço da aluna suavemente sobre o peito com apoio de uma toalha macia dobrada, a Professora 2 liga para o SAMU 192 pelo viva-voz:
+  - Fornece o endereço da escola, portão de acesso livre de ambulâncias, informa queda de própria altura com trauma craniofacial contido e fratura fechada de punho em criança de 7 anos lúcida.
+- Concomitantemente, a coordenação da escola acessa a ficha médica de matrícula de Alice e liga para a mãe:
+  > *"Olá, dona Lúcia, aqui é da coordenação da escola. A Alice teve uma queda no pátio e machucou o braço e a testa. Ela está perfeitamente consciente, conversando com a professora que é treinada em primeiros socorros. O sangramento na testa já foi estancado com curativo, o braço está protegido e nós já acionamos a viatura do SAMU para transporte seguro para raio-X. A senhora pode nos encontrar diretamente na escola ou no Pronto-Socorro Infantil Municipal"*.
+
+#### 4. Imobilização Provisória até a Chegada do Socorro
+- A Professora 1 molda uma tala de alumínio com espuma da maleta no antebraço e punho esquerdo da menina, fixando suavemente com fita microporosa sem apertar os dedos.
+- Mantém a aluna sentada confortavelmente no colo com apoio acolchoado, conversando em tom calmo e acolhedor até a chegada dos paramédicos aos 12 minutos.
+
+#### Desfecho Administrativo e Pedagógico
+A aluna é encaminhada ao hospital, onde recebe sutura plástica na testa e imobilização gessada no punho, com alta no mesmo dia. A direção da escola registra o Boletim de Ocorrência Escolar completo assinado pelas professoras e pela mãe. No dia seguinte, a direção reúne a equipe de limpeza e instala protetores de silicone nas quinas de muretas e estabelece a regra de secagem imediata de pisos com sinalização obrigatória de cavaletes em horários sem circulação de alunos. A atuação transparente e técnica evitou qualquer processo civil e resguardou a vida e a integridade da aluna.
+
+---
+
+## SEÇÃO 9 — PULO DO GATO
+
+> [!TIP]
+> ### O PULO DO GATO DA UNIÃO: A REGRA DA "COMUNICAÇÃO DE TRÊS ETAPAS" COM OS PAIS NO ACIDENTE ESCOLAR
+> Quando a escola liga para uma mãe e diz de forma abrupta: *"Seu filho sofreu um acidente grave e a ambulância está vindo!"*, a mãe entra em choque de pânico, pode colidir o carro no trânsito e chegará à escola transtornada e agressiva contra a equipe escolar.
+> 
+> **A Técnica de Comunicação Humanizada em 3 Etapas:**
+> 1. **Etapa 1 (Afirmação da Vida e Consciência Primeiro):** Comece sempre informando o estado vital antes do ferimento: *"Dona Lúcia, a Alice está bem, consciente e conversando aqui comigo no meu colo"*. (Isso desliga instantaneamente o pânico cerebral de morte da mãe).
+> 2. **Etapa 2 (O Fato Objetivo sem Minimização Falsa):** *"Ela escorregou no pátio e teve um corte na testa e machucou o punho"*.
+> 3. **Etapa 3 (A Ação Técnica que Já Foi Feita):** *"Nós já fizemos o curativo da Lei Lucas, a hemorragia parou, o braço está com tala e o SAMU já foi chamado por protocolo preventivo. Estamos cuidando dela com carinho e esperamos a senhora"*.
+> 
+> Essa estrutura transmite autoridade profissional, acalma a família e transforma a mãe em uma parceira grata da equipe escolar em vez de uma adversária litigiosa.
+
+---
+
+## SEÇÃO 10 — MAPA MENTAL DA GESTÃO ESCOLAR E LEI LUCAS
+
+```
+                     LEI LUCAS E SEGURANÇA NO AMBIENTE ESCOLAR (E01)
+                                            |
+         +----------------------------------+----------------------------------+
+         |                                  |                                  |
+         V                                  V                                  V
+EXIGÊNCIAS LEGAIS (13.722)          MAPEAMENTO DE RISCOS              KIT DE SOCORRO ESCOLAR
+         |                                  |                                  |
+ - Escolas públicas e privadas      - Refeitório: asfixia por          - Luvas de nitrila e óculos
+ - Educação básica e recreação        alimentos redondos inteiros      - Pocket Mask com filtro
+ - Treinamento periódico            - Playground: quinas vivas,        - Gazes estéreis e ataduras
+ - Proporção de 1/3 da equipe         parafusos e piso duro            - Talas moldáveis leves
+ - Sanções: Notificação, Multa      - Escadas e vidros sem faixa       - Manta térmica aluminizada
+   e Cassação do Alvará                     |                          - PROIBIDO REMÉDIOS
+         |                                  V                            (analgésicos e xaropes)
+         +----------------------------------+                                  |
+                                            |                                  |
+                                            V                                  V
+                                 GESTÃO DA OCORRÊNCIA NA ESCOLA
+                                - Atendimento imediato pelo brigadista
+                                - Acionamento simultâneo do 192 (SAMU)
+                                - Comunicação acolhedora em 3 etapas com pais
+                                - Ficha de registro e melhoria predial
+```
+
+---
+
+## SEÇÃO 11 — O QUE VOCÊ PRECISA LEMBRAR
+
+1. **A Lei Lucas é obrigatória:** Escolas públicas e privadas de educação básica devem ter funcionários treinados em primeiros socorros em todos os turnos de aula e passeios.
+2. **Kits escolares não contêm medicamentos:** O kit destina-se a curativos, imobilização e contenção de sangramentos. É expressamente proibido dar remédios por conta própria sem receita e autorização.
+3. **Cuidado redobrado na hora do lanche:** O engasgo com alimentos é o maior risco de morte dentro da escola. Alimentos esféricos devem ser cortados longitudinalmente.
+4. **Comunique-se em 3 etapas com os pais:** Diga primeiro que a criança está viva e consciente, relate o fato e explique as medidas de socorro já tomadas.
+5. **Registre tudo por escrito:** Todo acidente com atendimento inicial deve gerar ficha de ocorrência detalhada para proteção do educador e do aluno.
+6. **Capacitação contínua é a chave:** Treinar uma única vez não basta; a lei e a fisiologia exigem recertificações periódicas para manter as mãos prontas para salvar.
+
+---
+
+## SEÇÃO 12 — REFERÊNCIAS BIBLIOGRÁFICAS E METADADOS EDITORIAIS
+
+### Referências Consultadas (Padrão ABNT NBR 6023)
+
+[1] BRASIL. Presidência da República. **Lei nº 13.722, de 4 de outubro de 2018 (Lei Lucas)**. Torna obrigatória a capacitação em noções básicas de primeiros socorros de professores e funcionários de estabelecimentos de ensino públicos e privados de educação básica e de recreação infantil. *Diário Oficial da União*, Brasília, DF, 5 out. 2018.
+
+[2] BEGALLI, Alessandra. **O Legado de Lucas: Da Dor à Proteção da Criança no Ambiente Escolar**. São Paulo: Editora Autoral, 2020.
+
+[3] SOCIEDADE BRASILEIRA DE PEDIATRIA (SBP). Departamento Científico de Segurança da Criança e do Adolescente. **Guia Prático para Implementação da Lei Lucas nas Escolas Brasileiras**. *Manual de Orientação*, Rio de Janeiro, n. 6, 2021.
+
+[4] CONSELHO NACIONAL DE EDUCAÇÃO (CNE); MINISTÉRIO DA EDUCAÇÃO (MEC). **Diretrizes para a Promoção da Saúde e Segurança Escolar na Educação Básica**. Brasília: MEC/CNE, 2021.
+
+[5] BRASIL. Presidência da República. **Lei nº 10.406, de 10 de janeiro de 2002 (Código Civil Brasileiro)**. Artigo 932, inciso IV — Da Responsabilidade Civil dos Estabelecimentos Educacionais. *Diário Oficial da União*, Brasília, DF, 11 jan. 2002.
+
+[6] BRASIL. Presidência da República. **Lei nº 8.069, de 13 de julho de 1990**. Estatuto da Criança e do Adolescente (ECA). *Diário Oficial da União*, Brasília, DF, 16 jul. 1990.
+
+---
+
+### METADADOS EDITORIAIS USM
+
+| Parâmetro | Detalhe |
+|---|---|
+| **Código e Módulo:** | E01 — Lei Lucas e Segurança no Ambiente Escolar |
+| **Biblioteca:** | Primeiros Socorros em Escolas (*School Safety*) |
+| **Status:** | `Aguardando Aprovação Científica` |
+| **Data da Redação:** | 19 de outubro de 2026 |
+| **Versão:** | 1.0.0 |
+| **Validação Científica por IA:** | Conforme texto federal da Lei nº 13.722/18, SBP e Código Civil Brasileiro |
+| **Próxima Revisão:** | Outubro de 2027 |
