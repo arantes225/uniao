@@ -1,0 +1,387 @@
+# UNIÃO SERVIÇOS MÉDICOS
+## DIRETORIA DE ENSINO, PESQUISA E INSTRUÇÃO PRÉ-HOSPITALAR
+
+---
+
+**MÓDULO C02 — SEGURANÇA DA CENA E BIOSSEGURANÇA NO APH**
+*Biblioteca Curricular: Núcleo Compartilhado (Core Skills)*
+*Versão Editorial: 1.0.0 — Padrão Editorial USM*
+*Carga Horária Teórica: 1 hora | Público-alvo: Não médicos, educadores, gestores, socorristas e brigadistas*
+
+---
+
+## SUMÁRIO
+
+- [Seção 1 — Em 30 Segundos](#seção-1--em-30-segundos)
+- [Seção 2 — Objetivos de Aprendizagem](#seção-2--objetivos-de-aprendizagem)
+- [Seção 3 — Introdução e Justificativa de Segurança](#seção-3--introdução-e-justificativa-de-segurança)
+- [Seção 4 — Fundamentação de Biossegurança e Dinâmica de Riscos](#seção-4--fundamentação-de-biossegurança-e-dinâmica-de-riscos)
+- [Seção 5 — Desenvolvimento dos Subtemas](#seção-5--desenvolvimento-dos-subtemas)
+  - [5.1 Avaliação de Riscos Ambientais](#51-avaliação-de-riscos-ambientais)
+  - [5.2 Autoproteção como Primazia Operacional](#52-autoproteção-como-primazia-operacional)
+  - [5.3 Equipamentos de Proteção Individual (EPI)](#53-equipamentos-de-proteção-individual-epi)
+  - [5.4 Exposição Ocupacional a Sangue e Fluidos Corporais](#54-exposição-ocupacional-a-sangue-e-fluidos-corporais)
+  - [5.5 Segurança e Controle de Atores na Cena](#55-segurança-e-controle-de-atores-na-cena)
+  - [5.6 Prevenção de Acidentes Secundários e Contaminação](#56-prevenção-de-acidentes-secundários-e-contaminação)
+- [Seção 6 — Quadros Práticos e Matrizes Decisórias](#seção-6--quadros-práticos-e-matrizes-decisórias)
+- [Seção 7 — Erros Frequentes e Condutas Proibidas](#seção-7--erros-frequentes-e-condutas-proibidas)
+- [Seção 8 — Aplicação Prática Contextualizada (Estudo de Caso)](#seção-8--aplicação-prática-contextualizada-estudo-de-caso)
+- [Seção 9 — Pulo do Gato](#seção-9--pulo-do-gato)
+- [Seção 10 — Mapa Mental da Segurança da Cena](#seção-10--mapa-mental-da-segurança-da-cena)
+- [Seção 11 — O Que Você Precisa Lembrar](#seção-11--o-que-você-precisa-lembrar)
+- [Seção 12 — Referências Bibliográficas e Metadados Editoriais](#seção-12--referências-bibliográficas-e-metadados-editoriais)
+
+---
+
+## SEÇÃO 1 — EM 30 SEGUNDOS
+
+> **VISÃO RÁPIDA DE SOBREVIVÊNCIA**
+> 1. **Prioridade absoluta de vida:** Na escala operacional do APH, a ordem de proteção é inviolável: 1º Eu (o socorrista); 2º Minha equipe; 3º As testemunhas e o ambiente; 4º A vítima [1].
+> 2. **Cena insegura não se adentra:** Nenhum procedimento de suporte de vida pode ser iniciado em ambiente hostil ou instável. Se a cena não estiver sob controle, o dever do socorrista é isolar, sinalizar e acionar bombeiros (193) ou polícia (190) [2].
+> 3. **Precaução padrão universal:** Todo sangue e fluido corpóreo de qualquer ser humano deve ser tratado tecnicamente como potencialmente infectado por patógenos veiculados pelo sangue (HIV, Hepatite B, Hepatite C), independentemente de aparência, classe social ou idade da vítima [3].
+> 4. **EPI mínimo obrigatório:** Óculos de proteção e luvas de procedimento (nitrila ou látex) são indispensáveis antes de qualquer contato tátil com a vítima ou suas vestes ensopadas [4].
+> 5. **O perigo cinético invisível:** Em acidentes veiculares ou industriais, o risco elétrico, vazamento de combustível, tráfego descontrolado e desmoronamento matam mais socorristas do que as patologias clínicas primárias [5].
+> 6. **Descarte e higienização pós-evento:** Luvas contaminadas devem ser retiradas pela técnica de envelope reverso, sem contato da pele externa com a mão limpa, seguidas de higienização imediata com água e sabão ou álcool 70% [3].
+
+---
+
+## SEÇÃO 2 — OBJETIVOS DE APRENDIZAGEM
+
+Ao concluir o estudo aprofundado deste módulo, o aluno deverá ser capaz de:
+
+1. **Reconhecer sistematicamente ameaças ambientais** (físicas, químicas, elétricas, cinéticas e biológicas) através de varredura visual em 360 graus antes da aproximação.
+2. **Aplicar com rigor o princípio da primazia da autoproteção**, recusando ingressar em perímetros perigosos sem apoio especializado.
+3. **Selecionar, inspecionar, calçar e retirar corretamente os Equipamentos de Proteção Individual (EPI)** indicados para resposta pré-hospitalar básica.
+4. **Descrever o protocolo biológico de conduta pós-exposição acidental** a respingos de sangue ou perfurocortantes em mucosas e pele não íntegra.
+5. **Estabelecer perímetros seguros de contenção de público**, evitando que curiosos ou parentes em pânico desestabilizem o atendimento ou provoquem novos acidentes.
+6. **Implementar procedimentos de descarte correto de resíduos biológicos** e desinfecção de materiais conforme a legislação sanitária brasileira (RDC ANVISA nº 222/2018).
+
+---
+
+## SEÇÃO 3 — INTRODUÇÃO E JUSTIFICATIVA DE SEGURANÇA
+
+No cenário pré-hospitalar, o ambiente é inerentemente imprevisível, hostil e dinâmico. Diferente do ambiente hospitalar controlado — onde há climatização, iluminação cirúrgica, pisos antiderrapantes e barreiras assépticas —, as emergências comunitárias ocorrem em rodovias movimentadas, salas de máquinas barulhentas, pátios escolares molhados, escadarias e espaços confinados [1, 5].
+
+Dados históricos e epidemiológicos dos serviços de salvamento demonstram que uma fração considerável das fatalidades envolvendo socorristas decorre da precipitação emocional. O impulso natural de prestar auxílio imediato a um colega ferido faz com que o indivíduo negligencie fios elétricos energizados no chão, vapores tóxicos asfixiantes mais pesados que o ar acumulados em fossos, ou veículos desgovernados aproximando-se em alta velocidade [2, 5].
+
+> [!WARNING]
+> **REGRA DE OURO DO APH: NÃO AUMENTE O NÚMERO DE VÍTIMAS**
+> Uma pessoa que se expõe ao risco sem avaliação de cena transforma-se instantaneamente de socorrista em segunda vítima. Isso dobra a necessidade de recursos de resgate, divide a atenção dos socorristas profissionais que chegam ao local e frequentemente inviabiliza o salvamento da primeira vítima. Salvar vidas exige coragem técnica, e não impulsividade temerária.
+
+Paralelamente aos riscos físicos imediatos, o risco microbiológico representa uma ameaça insidiosa e duradoura. Vírus envelopados como o HIV possuem sobrevida curta fora do hospedeiro, mas vírus com elevada estabilidade ambiental como o vírus da **Hepatite B (HBV)** podem permanecer viáveis e com poder infeccioso em sangue seco sobre superfícies ou tecidos por mais de sete dias [3, 6]. A biossegurança no APH é o escudo técnico que garante que o socorrista retorne saudável para sua família após o cumprimento do dever.
+
+---
+
+## SEÇÃO 4 — FUNDAMENTAÇÃO DE BIOSSEGURANÇA E DINÂMICA DE RISCOS
+
+### 4.1 A Dinâmica da Cadeia de Transmissão Biológica
+A transmissão de patógenos no atendimento inicial a emergências exige a confluência de quatro fatores biológicos fundamentais:
+1. **Agente infeccioso:** Presença de vírus, bactérias ou fungos no sangue, secreções respiratórias, saliva com sangue, líquido amniótico ou outros fluidos corporais da vítima.
+2. **Reservatório biológico:** O organismo da vítima infectada (frequentemente assintomática).
+3. **Porta de saída e via de transmissão:** Sangramento ativo em jato, esguicho arterial, secreção expelida por tosse violenta ou agulha/vidro contaminado.
+4. **Porta de entrada no socorrista suscetível:** Mucosa conjuntival dos olhos, mucosa oral, mucosa nasal, ou solução de continuidade na pele (cortes, microfissuras por ressecamento, dermatites ou arranhões prévios) [3, 4].
+
+```
++---------------------------------------------------------------------------------+
+|                       A CADEIA DE TRANSMISSÃO NO APH                            |
+|                                                                                 |
+|  [ HOSPEDEIRO INFECTADO ]                                                       |
+|           | (Vítima com sangramento ou secreção)                                |
+|           V                                                                     |
+|  [ FLUIDO BIOLÓGICO ] ---> Sangue, vômito hemático, saliva sanguinolenta       |
+|           |                                                                     |
+|           V                                                                     |
+|  [ VIA DE DISPERSÃO ] ---> Respingos aéreos, contato por luva furada, perfuração|
+|           |                                                                     |
+|           +---------------------------------------------+                       |
+|           |                                             |                       |
+|           V                                             V                       |
+|  [ BARREIRA EFICAZ: EPI ]                 [ FALHA DE BARREIRA: CONTAMINAÇÃO ]   |
+|  - Óculos vedados                         - Respingos em olhos desprotegidos    |
+|  - Máscara cirúrgica / N95                - Pele com microcortes sem luvas      |
+|  - Luvas íntegras de nitrila              - Perfuração por agulha ou vidro      |
+|           |                                             |                       |
+|           V                                             V                       |
+|  [ INFECÇÃO BLOQUEADA ]                   [ RISCO DE SOROCONVERSÃO (HIV/HBV) ]  |
++---------------------------------------------------------------------------------+
+```
+
+### 4.2 Riscos Físicos, Cinéticos e Energias Residuais
+Em acidentes traumáticos, a primeira avaliação exige compreender o princípio da **Conservação de Energia Mecânica**. A energia cinética dissipada em uma colisão ou colapso estrutural não desaparece; ela deforma materiais e permanece parcialmente retida sob a forma de:
+- *Cabos e tirantes tensionados:* Risco de chicoteamento letal se rompidos.
+- *Veículos em planos inclinados:* Risco de rolamento ou escorregamento sobre a equipe.
+- *Sistemas pneumáticos e hidráulicos sob alta pressão:* Risco de injeção de fluido tóxico sob a pele ou projeção de peças metálicas.
+- *Airbags não deflagrados em veículos colididos:* Podem disparar subitamente durante o atendimento e fraturar a coluna cervical do socorrista debruçado sobre a vítima [5].
+
+---
+
+## SEÇÃO 5 — DESENVOLVIMENTO DOS SUBTEMAS
+
+### 5.1 Avaliação de Riscos Ambientais
+Antes de dar o primeiro passo em direção à vítima, o socorrista deve executar o que a doutrina internacional de resgate chama de **Varredura Panorâmica em 360 Graus** [1, 2]. Essa varredura divide-se em três planos visuais:
+
+1. **Plano Superior (Olhar para Cima):**
+   - Fios da rede elétrica rompidos ou caídos sobre galhos e cercas.
+   - Marquises trincadas, telhas soltas, vidros de janelas estilhaçadas em andares superiores.
+   - Cargas suspensas por pontes rolantes em indústrias, guindastes ou árvores com risco de queda.
+2. **Plano Médio (Olhar ao Redor / Horizonte):**
+   - Tráfego de veículos rodoviários não controlado ou motoristas curiosos filmando pelo celular sem olhar para a pista.
+   - Presença de fumaça, névoas de poeira química ou odores atípicos (ex.: cheiro de amônia, enxofre ou gás liquefeito de petróleo).
+   - Animais domésticos agressivos defendendo a vítima ferida (cães de guarda).
+   - Indivíduos armados, multidões hostis ou tumultos generalizados.
+3. **Plano Inferior (Olhar para o Solo):**
+   - Poças de combustível (gasolina, diesel) com potencial de deflagração por faísca estática.
+   - Poças de água conectadas a fiações ou equipamentos elétricos energizados.
+   - Fragmentos de vidro temperado cortante, pregos e ferragens retorcidas.
+   - Piso com graxa, óleo lubrificante ou sabão industrial extremamente escorregadio.
+
+Se qualquer uma dessas ameaças for identificada e não puder ser neutralizada de imediato pelo próprio socorrista com segurança garantida, a aproximação é proibida. Deve-se estabelecer um perímetro de isolamento e aguardar a chegada de órgãos de segurança pública e bombeiros militares [2].
+
+### 5.2 Autoproteção como Primazia Operacional
+A doutrina de autoproteção fundamenta-se na prevenção do erro de heroísmo. O socorrista precisa internalizar que:
+- **Coragem sem técnica é negligência:** Querer salvar alguém entrando em poço artesiano sem ventilação adequada gera apenas mais um óbito por asfixia por gases tóxicos.
+- **Limites de intervenção:** Se um acidente envolve colisão contra poste com fiação caída sobre o teto do veículo, o socorrista **NÃO deve tocar no carro**. Os pneus de borracha isolam o automóvel, mas quem pisa no solo e toca na lataria fecha o circuito elétrico de alta tensão com a terra, sofrendo eletrocussão imediata fatal. A orientação correta é gritar para os ocupantes permanecerem imóveis dentro do veículo até que a concessionária de energia desligue a rede e os bombeiros liberem o acesso [5].
+
+### 5.3 Equipamentos de Proteção Individual (EPI)
+Os EPIs formam a barreira mecânica que separa o corpo do socorrista do ambiente e dos fluidos biológicos da vítima. De acordo com a Norma Regulamentadora nº 06 (NR-06) e diretrizes internacionais de primeiros socorros [4, 7]:
+
+#### 5.3.1 Luvas de Procedimento (Barreira Básica Universal)
+- **Nitrila (Altamente Recomendada):** Maior resistência mecânica a perfurações e rasgos por farpas ou fragmentos de roupas; livre de proteínas do látex (evitando crises anafiláticas no socorrista ou na vítima alérgica); excelente tolerância a derivados de hidrocarbonetos e graxas [4].
+- **Látex Natural:** Boa elasticidade e sensibilidade tátil, porém rompe-se facilmente com óleos minerais e possui potencial alergênico.
+- **Inadequação de luvas plásticas culinárias ou domésticas:** Luvas plásticas frouxas escorregam, rasgam nas costuras e não garantem vedação dérmica mínima durante compressões torácicas vigorosas.
+
+#### 5.3.2 Óculos de Segurança com Proteção Lateral
+Os olhos possuem mucosa conjuntival ricamente vascularizada, sendo uma das portas biológicas mais permeáveis a vírus veiculados por sangue e secreções. Durante o rompimento acidental de artérias na colocação de torniquetes ou durante tosse/vômito da vítima na reanimação, microgotículas viajam distâncias de até dois metros. Óculos comuns de grau com lentes abertas nas laterais **não substituem óculos de proteção**, pois deixam frestas para respingos oblíquos [3, 4].
+
+#### 5.3.3 Máscaras de Proteção Respiratória
+- **Máscara Cirúrgica Descartável:** Protege a boca e o nariz do socorrista contra respingos diretos de sangue e fluidos corporais expelidos pela vítima.
+- **Respirador PFF2 / N95:** Indicado em ambientes confinados onde haja suspeita de transmissão aérea de patógenos por aerossóis (tuberculose, meningite bacteriana, viroses respiratórias agudas graves) ou poeiras minerais tóxicas [3].
+
+#### 5.3.4 Dispositivos de Barreira para Ventilação (Pocket Mask e Face Shield)
+Nas situações de parada cardiorrespiratória em que o socorrista opte por realizar ventilações de resgate (como no afogamento, intoxicações e paradas pediátricas), o contato boca a boca direto **é formalmente contraindicado** se não houver dispositivo de proteção.
+- Deve-se utilizar uma **Pocket Mask** com válvula unidirecional com filtro bacteriológico hidrofóbico. A válvula permite que o ar soprado pelo socorrista entre nos pulmões da vítima, mas desvia o ar exalado, vômito e saliva para a lateral, impedindo qualquer refluxo para a boca do socorrista [1, 4].
+
+### 5.4 Exposição Ocupacional a Sangue e Fluidos Corporais
+Caso ocorra acidente biológico durante o socorro (por exemplo: luva rasgada com contato de sangue em corte prévio do socorrista, respingo de sangue nos olhos ou perfuração por agulha esquecida nas vestes da vítima), deve-se seguir estritamente o protocolo preconizado pelo Ministério da Saúde do Brasil [3, 8]:
+
+```
++---------------------------------------------------------------------------------+
+|                   FLUXOGRAMA PÓS-EXPOSIÇÃO A FLUIDOS BIOLÓGICOS                 |
+|                                                                                 |
+| 1. CONDUTA IMEDIATA NO LOCAL DO EVENTO:                                         |
+|    - Pele íntegra ou lesionada: Lavar imediatamente com ÁGUA CORRENTE E SABÃO.  |
+|      * NUNCA espremer ou friccionar a ferida agressivamente.                    |
+|    - Mucosa ocular ou oral: Irrigar abundantemente com ÁGUA LIMPA ou SORO por   |
+|      no mínimo 15 minutos ininterruptos.                                        |
+|                                                                                 |
+| 2. ENCAMINHAMENTO MÉDICO URGENTE (JANELA DE OURO = ATÉ 2 HORAS):                |
+|    - Dirigir-se imediatamente à Unidade de Pronto Atendimento (UPA) ou serviço   |
+|      de referência em Infectologia / CTA.                                       |
+|                                                                                 |
+| 3. AVALIAÇÃO DE PROFILAXIA PÓS-EXPOSIÇÃO (PEP):                                 |
+|    - Testagem rápida da vítima-fonte (se disponível e autorizada) e do socorrista|
+|    - Início de antirretrovirais (PEP HIV) preferencialmente nas primeiras 2 a 72h|
+|    - Avaliação da imunização prévia para Hepatite B (vacina + imunoglobulina)   |
+|    - Profilaxia antitetânica conforme status vacinal                            |
++---------------------------------------------------------------------------------+
+```
+
+> [!IMPORTANT]
+> **ENTENDA O PORQUÊ: A EFICÁCIA DA JANELA DE 72 HORAS NA PEP**
+> A Profilaxia Pós-Exposição (PEP) para o HIV impede a replicação inicial do vírus nas células dendríticas e nos linfócitos locais antes que o vírus atinja os linfonodos regionais e cause infecção sistêmica disseminada. Cada hora de atraso reduz a eficácia protetora. A eficácia máxima é obtida quando os antirretrovirais são iniciados **nas primeiras 2 horas**, perdendo efeito clínico protetor quase total após decorridas 72 horas do acidente biológico [3].
+
+### 5.5 Segurança e Controle de Atores na Cena
+A gestão de uma emergência envolve também a liderança sobre as pessoas ao redor:
+- **Parentes desesperados:** Freqüentemente agem de forma impulsiva, tentando puxar a vítima de forma descontrolada ou sacudi-la. O socorrista deve manter tom de voz calmo, firme e acolhedor, atribuindo-lhes tarefas úteis que aliviem a ansiedade e os afastem do contato perigoso: *"Por favor, pegue a carteira de documentos dele e nos traga os remédios que ele costuma tomar diariamente"*.
+- **Curiosos e celulares filmando:** O acúmulo de curiosos bloqueia a circulação de ar, contamina o perímetro e atrasa o acesso da maca da ambulância. Solicite com firmeza: *"Por gentileza, todos abram um corredor de 5 metros de raio para a chegada da maca médica"*.
+- **Preservação de vestígios e cenas de crime:** Em ferimentos por arma branca ou de fogo, agressões e atropelamentos com fuga, a cena é também objeto de perícia criminal. O socorrista prioriza incondicionalmente a vida da vítima, mas deve evitar tocar em armas, cápsulas deflagradas ou objetos dispersos, a menos que seja estritamente necessário para prestar o suporte [2].
+
+### 5.6 Prevenção de Acidentes Secundários e Contaminação
+- **Sinalização em vias públicas:** Se o evento ocorre em rua ou estrada, a sinalização deve iniciar a distâncias seguras com triângulo, galhos e cones. Em rodovias com velocidade de 80 km/h, a sinalização deve iniciar a no mínimo **80 passos longos (cerca de 80 metros)** da colisão na linha reta; se houver curva ou neblina, dobra-se a distância [5].
+- **Técnica de remoção de luvas sem contato dérmico (Método Envelope):**
+  1. Pinçar a face externa da luva da mão dominante próxima ao punho sem encostar na pele do antebraço.
+  2. Puxar a luva em direção aos dedos, virando-a completamente do avesso.
+  3. Reter a luva retirada embolada na palma da mão protegida remanescente.
+  4. Introduzir o indicador e o dedo médio limpos da mão desnudada por baixo do punho da outra luva (em contato exclusivo com a pele limpa interna).
+  5. Virar a segunda luva do avesso, envelopando a primeira em seu interior.
+  6. Descartar em saco plástico identificado de lixo biológico e higienizar as mãos imediatamente [3, 4].
+
+---
+
+## SEÇÃO 6 — QUADROS PRÁTICOS E MATRIZES DECISÓRIAS
+
+### Quadro 6.1 — Matriz de Ameaças: Perigo, Consequência e Conduta Imediata
+
+| Natureza da Ameaça | Sinal de Identificação | Consequência Potencial se Ignorada | Conduta Correta Obrigatória |
+|---|---|---|---|
+| **Risco Elétrico** | Cabos rompidos no solo; zumbido elétrico; poça com água próxima a quadros. | Fibrilação ventricular instantânea e óbito do socorrista por eletrocussão. | Isolar a área a 15 metros de raio; acionar concessionária de energia e 193. Não se aproximar. |
+| **Gás Asfixiante / Confinado** | Vítima desmaiada dentro de cisterna, fossa séptica, silo ou porão sem ventilação. | Anóxia súbita do socorrista por deslocamento de oxigênio ou envenenamento por $H_2S$. | **PROIBIDO ENTRAR.** Ligar 193 (Resgate em Espaço Confinado). Ventilar externamente se possível. |
+| **Atropelamento Secundário** | Ocorrência em pista de rolamento; curva cega; chuva ou pista escorregadia. | Colisão de novos veículos contra os socorristas e as vítimas prévias. | Parar o veículo de apoio antes do acidente com pisca-alerta; sinalizar a pista a longa distância. |
+| **Contaminação Biológica** | Sangramento pulsátil arterial; tosse com sangue; vômito abundante. | Transmissão ocupacional de hepatites virais crônicas ou HIV. | Uso imediato de luvas de nitrila, óculos de proteção e máscara antes de tocar a vítima. |
+| **Incêndio Veicular** | Fumaça sob o capô; cheiro forte de gasolina derramada; vazamento no asfalto. | Explosão e queimaduras térmicas extensas de vias aéreas e tronco. | Desligar a ignição do carro; afastar curiosos; manter extintor de pó químico pronto para uso. |
+
+---
+
+### Quadro 6.2 — Comparativo Técnico de Materiais de Proteção
+
+| Equipamento / Barreira | Nível de Proteção | Indicação Primária | Limitações Inegociáveis |
+|---|---|---|---|
+| **Luva de Nitrila** | Máxima contra vírus, químicos, graxas e perfurações leves. | Qualquer atendimento com contato físico com a vítima ou pertences ensopados. | Não protege contra perfurações de agulhas cirúrgicas rígidas ou pregos grossos sob pressão direta. |
+| **Luva de Látex** | Média; excelente sensibilidade elástica. | Atendimentos rápidos de saúde sem contato com óleos lubrificantes. | Degrada-se rapidamente com graxa e pode disparar choque anafilático em alérgicos. |
+| **Óculos de Proteção Ampla Visão** | Máxima contra respingos frontais e laterais. | Contenção de hemorragias em jato, desobstrução de via aérea e aspirações. | Deve ser lavado e desinfetado com álcool 70% ou hipoclorito após cada ocorrência. |
+| **Máscara Cirúrgica** | Barreira de gotículas e projeções diretas de fluidos corporais. | Proteção do socorrista e barreira para não contaminar queimaduras extensas da vítima. | Não filtra vapores tóxicos químicos, solventes industriais ou monóxido de carbono. |
+| **Pocket Mask com Válvula** | Máxima para respiração boca-máscara em SBV. | Ventilações em afogados, crianças e intoxicados em PCR. | A válvula deve ser descartada ou desinfetada; não utilizar se a máscara estiver furada. |
+
+---
+
+## SEÇÃO 7 — ERROS FREQUENTES E CONDUTAS PROIBIDAS
+
+> [!CAUTION]
+> ### CATÁLOGO DE ATOS INSEGUROS E ERROS CRÍTICOS DE BIOSSEGURANÇA
+> 
+> 1. **Entrar em poços, galerias subterrâneas ou fossas para tentar retirar alguém desmaiado:**
+>    - *Por que não fazer:* Em locais profundos e fechados, gases densos e letais como o monóxido de carbono ($CO$), o metano e o sulfeto de hidrogênio ($H_2S$) expulsam o oxigênio atmosférico. Ao descer, o socorrista inala o ar anóxico e perde a consciência em menos de 30 segundos, caindo sobre a vítima.
+>    - *Conduta correta:* Somente equipes de busca e salvamento dos Bombeiros Militares equipadas com Conjunto de Respiração Autônoma (fita e cilindro de ar respirável pressurizado) e tripés de resgate podem ingressar nesses locais.
+> 
+> 2. **Tocar em vítimas eletrocutadas ainda em contato com a fonte de energia:**
+>    - *Por que não fazer:* O corpo humano é composto por mais de 60% de água com eletrólitos, funcionando como excelente condutor elétrico. Se você encostar diretamente na vítima antes do desarme da rede, a corrente elétrica fluirá pelo seu corpo, provocando contração tetânica muscular involuntária que impede você de soltar a vítima.
+>    - *Conduta correta:* Desligue o disjuntor geral ou a chave geral de força. Se não for possível, utilize material isolante seco e homologado (bastão de fibra de vidro testado). Em alta tensão de rua, **jamais toque**; aguarde a concessionária.
+> 
+> 3. **Reencapar agulhas após o uso ou comprimir sacos de lixo biológico com as mãos:**
+>    - *Por que não fazer:* O movimento de reenfileirar a ponta da agulha na tampa plástica é o responsável por mais de 70% dos acidentes perfurocortantes ocupacionais no Brasil. Pressionar sacos de lixo com as mãos ou pés pode disparar vidros quebrados ou seringas descartadas contra sua perna.
+>    - *Conduta correta:* Nunca reencape agulhas. Descarte materiais perfurocortantes diretamente em caixas de descarte rígido impermeável (*Descarpack*).
+> 
+> 4. **Tirar as luvas com os dentes ou puxar pelas pontas dos dedos contaminados:**
+>    - *Por que não fazer:* Puxar as luvas com a boca projeta sangue e secreções diretamente sobre os lábios e a mucosa bucal. Puxar com os dedos limpos pela parte ensopada da borracha contamina imediatamente as mãos que acabaram de ser descalçadas.
+>    - *Conduta correta:* Use estritamente a técnica de envelope reverso, tocando apenas na borracha interna limpa ao retirar a segunda luva.
+> 
+> 5. **Lavar olhos expostos a sangue esfregando as pálpebras com força:**
+>    - *Por que não fazer:* O atrito mecânico sobre a conjuntiva gera microabrasões epiteliais que facilitam a penetração de partículas virais nos capilares oculares.
+>    - *Conduta correta:* Apenas irrigue continuamente o globo ocular com soro fisiológico ou água corrente abundante em jato suave, mantendo as pálpebras afastadas com os dedos limpos.
+
+---
+
+## SEÇÃO 8 — APLICAÇÃO PRÁTICA CONTEXTUALIZADA (ESTUDO DE CASO)
+
+### Cenário Simulado
+*Local:* Laboratório químico de uma escola técnica estadual.  
+*Horário:* 16h10.  
+*Ocorrência:* Durante o fracionamento de reagentes, um frasco de 2 litros contendo ácido concentrado escorrega da bancada e quebra-se no piso de granilite. Um estudante de 17 anos sofre respingos extensos nos braços e pernas, perde o equilíbrio ao recuar assustado, cai sobre os cacos de vidro e o líquido e passa a gritar de dor, com sangramento ativo visível no antebraço e vapores brancos irritantes emanando do piso. O alarme de emergência da escola dispara.
+
+---
+
+### Resolução Técnica Passo a Passo
+
+#### 1. Abordagem e Isolamento Imediato da Cena
+O professor responsável pelo laboratório e o socorrista da brigada escolar acorrem ao recinto. Ao abrirem a porta, sentem forte odor cáustico e visualizam a poça de ácido e os vapores subindo:
+- **Decisão Crítica:** O socorrista **NÃO avança** imediatamente sobre a poça de ácido com sapatos comuns.
+- **Ações Imediatas:** 
+  1. O socorrista aciona a ventilação forçada de exaustão e abre totalmente as janelas externas do corredor.
+  2. Ordena que todos os outros 25 alunos evacuem a sala de aula imediatamente de forma ordeira, fechando o acesso de curiosos.
+  3. Calça luvas de borracha nitrílica de cano longo e óculos de proteção vedados em seu rosto.
+  4. Mantém distância segura dos vapores concentrados enquanto avalia a melhor rota de aproximação sem pisar sobre a poça cáustica.
+
+#### 2. Extração Rápida da Vítima da Área Contaminada
+Como a permanência do aluno sobre a poça de ácido provoca queimaduras químicas contínuas de espessura total e absorção sistêmica, a remoção do ambiente hostil é imperativa:
+- O socorrista utiliza botas com solado impermeável resistente a químicos, aproxima-se pela retaguarda não molhada do aluno, segura-o pelas axilas por baixo dos braços (sem tocar nas áreas ensopadas por ácido) e arrasta-o em linha reta para fora da sala, depositando-o no corredor limpo e arejado.
+
+#### 3. Descontaminação Química e Manejo Biológico Simultâneo
+No corredor seguro:
+- **Lavagem Abundante:** O socorrista encaminha o estudante imediatamente ao chuveiro de emergência/lava-olhos do corredor, lavando os braços e pernas com água corrente em fluxo contínuo e baixa pressão por no mínimo **20 minutos ininterruptos**.
+- **Retirada de Roupas:** As roupas ensopadas de ácido e sangue são tesouradas e retiradas com cuidado para não encostar no rosto do estudante.
+- **Controle Hemorrágico Seguro:** Após lavar e diluir o ácido da ferida cortante do antebraço, o socorrista (usando novas luvas limpas de nitrila e óculos) aplica gaze limpa e atadura compressiva estéril sobre o corte com sangramento, estancando a perda sanguínea.
+
+#### 4. Notificação e Destinação
+O socorrista fornece à equipe do SAMU 192 e aos Bombeiros 193 o nome exato do produto químico envolvido (obtido da Ficha com Dados de Segurança — FDS/FISPQ afixada na porta do laboratório). Os resíduos de vidro e ácido no laboratório são sinalizados e isolados para neutralização por equipe técnica de limpeza com pó absorvente específico. O socorrista retira seus EPIs pela técnica do envelope e lava minuciosamente as mãos e antebraços.
+
+---
+
+## SEÇÃO 9 — PULO DO GATO
+
+> [!TIP]
+> ### O PULO DO GATO DA UNIÃO: A TÉCNICA VISUAL "PARE, OLHE, PENSE E SÓ DEPOIS AJA" (POPA)
+> Sob a influência de altos níveis de adrenalina, o cérebro humano reduz drasticamente a percepção periférica visual — um fenômeno conhecido como **visão em túnel**. Você enxerga apenas o sangue da vítima e deixa de ver a moto desgovernada a 10 metros ou o cabo de energia caído sobre ela [5].
+> 
+> **A Regra Mnemônica POPA:**
+> - **P (PARE):** Congele seus pés a 5 passos de distância da ocorrência. Não dê nenhum passo automático.
+> - **O (OLHE):** Faça o movimento deliberado de girar o pescoço: olhe para cima, olhe para os lados, olhe para o chão.
+> - **P (PENSE):** Pergunte a si mesmo: *"O que pode me ferir, contaminar ou matar neste exato local?"*.
+> - **A (AJA):** Neutralize a ameaça (ou isole-a) e somente então execute a aproximação e o atendimento.
+> 
+> Esse ritual deliberado de apenas **5 segundos** quebra a visão em túnel e salva a vida do socorrista.
+
+---
+
+## SEÇÃO 10 — MAPA MENTAL DA SEGURANÇA DA CENA
+
+```
+                      SEGURANÇA DA CENA E BIOSSEGURANÇA (C02)
+                                         |
+     +-----------------------------------+-----------------------------------+
+     |                                   |                                   |
+     V                                   V                                   V
+AVALIAÇÃO PANORÂMICA 360°        EQUIPAMENTOS DE PROTEÇÃO            CONDUTAS PÓS-EXPOSIÇÃO
+     |                                   |                                   |
+ - Plano Superior (cabos soltos,  - Luvas de Nitrila/Látex           - Lavar com água e sabão
+   marquises, estruturas)           (precaução universal)              (sem espremer)
+ - Plano Médio (tráfego, fumaça,  - Óculos com proteção lateral      - Olhos: soro/água corrente
+   tumulto, animais agressivos)   - Máscara cirúrgica / N95            por 15 min contínuos
+ - Plano Inferior (combustível,   - Pocket Mask com válvula          - Janela de ouro da PEP:
+   graxas, vidros, rede elétrica)   unidirecional (sem boca-boca)      iniciar em até 2 a 72h
+     |                                   |                                   |
+     +-----------------+-----------------+-----------------------------------+
+                       |
+                       V
+              PROTOCOLO POPA
+             P - Pare a 5 passos
+             O - Olhe para cima, lados e chão
+             P - Pense no perigo
+             A - Aja com segurança
+```
+
+---
+
+## SEÇÃO 11 — O QUE VOCÊ PRECISA LEMBRAR
+
+1. **A prioridade da vida é sua:** Você é a pessoa mais importante da ocorrência. Se você se acidentar, não haverá quem socorra a vítima original.
+2. **Universalidade do risco biológico:** Considere todo sangue, vômito e fluido corpóreo como potencialmente contaminado por patógenos graves (HIV, Hepatite B e C). Use sempre luvas de procedimento e óculos.
+3. **Cena hostil = Acionamento e espera:** Não entre em poços, galerias subterrâneas fechadas, incêndios ou locais com cabos elétricos caídos. Chame o Corpo de Bombeiros (193).
+4. **Sem boca a boca direto desprotegido:** Na ausência de Pocket Mask com válvula unidirecional, realize compressões torácicas contínuas puras (*hands-only CPR*) no adulto, sem contato labial direto.
+5. **Retirada de luvas pelo método envelope:** Nunca toque na face externa suja da luva com as mãos desnudadas. Lave sempre as mãos com água e sabão após o procedimento.
+6. **Agilidade no acidente biológico:** Se houver perfuração ou respingo em mucosas, lave com água e sabão/soro e procure atendimento de emergência imediatamente para profilaxia medicamentosa (PEP em até 72 horas).
+
+---
+
+## SEÇÃO 12 — REFERÊNCIAS BIBLIOGRÁFICAS E METADADOS EDITORIAIS
+
+### Referências Consultadas (Padrão ABNT NBR 6023)
+
+[1] AMERICAN HEART ASSOCIATION (AHA). **2020 American Heart Association Guidelines for Cardiopulmonary Resuscitation and Emergency Cardiovascular Care**. *Circulation*, Dallas, v. 142, supl. 2, p. S366-S468, 2020. DOI: 10.1161/CIR.0000000000000916. [Com atualizações 2021-2025].
+
+[2] INTERNATIONAL LIAISON COMMITTEE ON RESUSCITATION (ILCOR). **Consensus on Science and Treatment Recommendations for First Aid**. *Resuscitation*, v. 156, p. A1-A240, 2020. Disponível em: https://www.ilcor.org.
+
+[3] BRASIL. Ministério da Saúde. Secretaria de Vigilância em Saúde. **Protocolo Clínico e Diretrizes Terapêuticas para Profilaxia Pós-Exposição (PEP) de Risco à Infecção pelo HIV, IST e Hepatites Virais**. Brasília: Ministério da Saúde, 2021.
+
+[4] CENTERS FOR DISEASE CONTROL AND PREVENTION (CDC). **Guideline for Isolation Precautions: Preventing Transmission of Infectious Agents in Healthcare Settings**. Atlanta: CDC, 2019. Atualizado em: https://www.cdc.gov/infectioncontrol/guidelines/isolation/.
+
+[5] AMERICAN COLLEGE OF SURGEONS (ACS). Committee on Trauma. **Prehospital Trauma Life Support (PHTLS)**. 10. ed. Burlington: Jones & Bartlett Learning, 2023.
+
+[6] WORLD HEALTH ORGANIZATION (WHO). **Guidelines on Hepatitis B and C Testing**. Geneva: World Health Organization, 2017.
+
+[7] BRASIL. Ministério do Trabalho e Emprego. **Norma Regulamentadora nº 06 (NR-06) — Equipamento de Proteção Individual (EPI)**. Portaria MTP nº 2.175, de 28 de julho de 2022. *Diário Oficial da União*, Brasília, DF, 2022.
+
+[8] AGÊNCIA NACIONAL DE VIGILÂNCIA SANITÁRIA (ANVISA). **Resolução da Diretoria Colegiada — RDC nº 222, de 28 de março de 2018**. Regulamenta as Boas Práticas de Gerenciamento dos Resíduos de Serviços de Saúde. *Diário Oficial da União*, Brasília, DF, 29 mar. 2018.
+
+---
+
+### METADADOS EDITORIAIS USM
+
+| Parâmetro | Detalhe |
+|---|---|
+| **Código e Módulo:** | C02 — Segurança da Cena e Biossegurança |
+| **Biblioteca:** | Núcleo Compartilhado |
+| **Status:** | `Aguardando Aprovação Científica` |
+| **Data da Redação:** | 19 de outubro de 2026 |
+| **Versão:** | 1.0.0 |
+| **Validação Científica por IA:** | Conforme diretrizes CDC/AHA/MS e NR-06 |
+| **Próxima Revisão:** | Outubro de 2027 |

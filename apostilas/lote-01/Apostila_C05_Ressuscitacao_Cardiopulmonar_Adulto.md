@@ -1,0 +1,418 @@
+# UNIÃO SERVIÇOS MÉDICOS
+## DIRETORIA DE ENSINO, PESQUISA E INSTRUÇÃO PRÉ-HOSPITALAR
+
+---
+
+**MÓDULO C05 — RESSUSCITAÇÃO CARDIOPULMONAR NO ADULTO**
+*Biblioteca Curricular: Núcleo Compartilhado (Core Skills)*
+*Versão Editorial: 1.0.0 — Padrão Editorial USM*
+*Carga Horária: 1h Teórica + 1h Prática Recomendada | Alinhamento: AHA 2020-2025 / ILCOR / ERC*
+
+---
+
+## SUMÁRIO
+
+- [Seção 1 — Em 30 Segundos](#seção-1--em-30-segundos)
+- [Seção 2 — Objetivos de Aprendizagem](#seção-2--objetivos-de-aprendizagem)
+- [Seção 3 — Introdução e Epidemiologia da Morte Súbita](#seção-3--introdução-e-epidemiologia-da-morte-súbita)
+- [Seção 4 — Fundamentação Fisiológica da RCP](#seção-4--fundamentação-fisiológica-da-rcp)
+- [Seção 5 — Desenvolvimento dos Subtemas](#seção-5--desenvolvimento-dos-subtemas)
+  - [5.1 Reconhecimento Precoce da Parada Cardiorrespiratória](#51-reconhecimento-precoce-da-parada-cardiorrespiratória)
+  - [5.2 A Cadeia de Sobrevivência Intra e Extra-Hospitalar](#52-a-cadeia-de-sobrevivência-intra-e-extra-hospitalar)
+  - [5.3 Métrica e Qualidade das Compressões Torácicas](#53-métrica-e-qualidade-das-compressões-torácicas)
+  - [5.4 Ventilações Conforme o Nível de Treinamento](#54-ventilações-conforme-o-nível-de-treinamento)
+  - [5.5 RCP com Um versus Múltiplos Socorristas](#55-rcp-com-um-versus-múltiplos-socorristas)
+  - [5.6 Metodologia do Treinamento Prático Supervisionado](#56-metodologia-do-treinamento-prático-supervisionado)
+- [Seção 6 — Quadros Práticos e Algoritmos Clínicos](#seção-6--quadros-práticos-e-algoritmos-clínicos)
+- [Seção 7 — Erros Frequentes e Condutas Proibidas](#seção-7--erros-frequentes-e-condutas-proibidas)
+- [Seção 8 — Aplicação Prática Contextualizada (Estudo de Caso)](#seção-8--aplicação-prática-contextualizada-estudo-de-caso)
+- [Seção 9 — Pulo do Gato](#seção-9--pulo-do-gato)
+- [Seção 10 — Mapa Mental da Ressuscitação Cardiopulmonar](#seção-10--mapa-mental-da-ressuscitação-cardiopulmonar)
+- [Seção 11 — O Que Você Precisa Lembrar](#seção-11--o-que-você-precisa-lembrar)
+- [Seção 12 — Referências Bibliográficas e Metadados Editoriais](#seção-12--referências-bibliográficas-e-metadados-editoriais)
+
+---
+
+## SEÇÃO 1 — EM 30 SEGUNDOS
+
+> **VISÃO RÁPIDA DE SOBREVIVÊNCIA**
+> 1. **Parada Cardiorrespiratória (PCR):** Cessação abrupta da atividade mecânica cardíaca e do fluxo sanguíneo sistêmico. A cada minuto transcorrido sem RCP de qualidade, a probabilidade de sobrevida da vítima cai de 7% a 10% [1].
+> 2. **Critério diagnóstico simplificado para leigos:** Vítima inconsciente (não responde ao estímulo nos ombros) associada à ausência de respiração ou presença de respiração agônica (*gasping*). **Não perca tempo checando pulso carotídeo** [2].
+> 3. **Métrica padrão ouro das compressões torácicas:**
+>    - *Frequência:* 100 a 120 compressões por minuto (ritmo da música *"Stayin' Alive"*).
+>    - *Profundidade:* No mínimo 5 cm e no máximo 6 cm no tórax do adulto.
+>    - *Descompressão:* Permitir o retorno elástico completo da parede torácica entre cada compressão.
+>    - *Interrupções:* Minimizadas ao máximo (pausas inferiores a 10 segundos) [1, 3].
+> 4. **RCP Apenas com as Mãos (*Hands-Only CPR*):** Se você não possui treinamento prévio em ventilações ou não tem dispositivo de barreira com válvula (Pocket Mask), realize **compressões torácicas contínuas sem pausas** até a chegada da equipe com o DEA [1, 2].
+> 5. **O Desfibrilador Externo Automático (DEA):** Peça o DEA imediatamente ao reconhecer a parada. Assim que o aparelho chegar, abra a tampa, conecte as pás adesivas no tórax nu da vítima e siga rigorosamente as instruções de áudio [4].
+> 6. **Fadiga do socorrista:** A eficácia biomecânica das compressões despenca após 2 minutos de esforço contínuo. Alterne com outro socorrista a cada 2 minutos (ou a cada ciclo de análise do DEA) [1, 5].
+
+---
+
+## SEÇÃO 2 — OBJETIVOS DE APRENDIZAGEM
+
+Ao concluir o estudo teórico e a prática deste módulo, o participante deverá ser capaz de:
+
+1. **Reconhecer imediatamente a PCR no adulto** em menos de 10 segundos, diferenciando a respiração normal da respiração agônica (*gasping*).
+2. **Descrever cada elo da Cadeia de Sobrevivência Extra-Hospitalar** da American Heart Association (AHA) e do ILCOR.
+3. **Executar a biomecânica correta das compressões torácicas**, alinhando braços em 90 graus, travando cotovelos e utilizando o peso do tronco para atingir de 5 a 6 cm de profundidade.
+4. **Compreender a fisiologia da Pressão de Perfusão Coronariana (PPC)** e a razão crítica para evitar pausas e apoios residuais no tórax.
+5. **Decidir com clareza técnica** entre a abordagem *Hands-Only* (compressões contínuas puras) e a relação 30:2 (30 compressões para 2 ventilações de resgate com barreira).
+6. **Integrar-se eficientemente em uma equipe de ressuscitação**, coordenando revezamentos a cada 2 minutos e viabilizando a instalação célere do DEA sem interrupção precoce das massagens.
+
+---
+
+## SEÇÃO 3 — INTRODUÇÃO E EPIDEMIOLOGIA DA MORTE SÚBITA
+
+A Parada Cardiorrespiratória (PCR) no ambiente extra-hospitalar representa um dos maiores desafios de saúde pública global. No Brasil, dados da Sociedade Brasileira de Cardiologia (SBC) estimam a ocorrência de mais de 250.000 mortes súbitas anuais, das quais aproximadamente metade ocorre fora de ambiente hospitalar — em domicílios, locais de trabalho, vias públicas, escolas e academias [6].
+
+Na imensa maioria dos casos em adultos (mais de 75%), a parada cardíaca súbita decorre de uma arritmia letal ventricular originada por isquemia miocárdica aguda (infarto agudo do miocárdio). Os ritmos colapsantes predominantes no primeiro minuto são a **Fibrilação Ventricular (FV)** e a **Taquicardia Ventricular sem Pulso (TVSP)** [1, 7].
+
+Na fibrilação ventricular, o músculo cardíaco não se contrai de forma coordenada; ele "treme" caoticamente a mais de 400 vezes por minuto, incapaz de ejetar um único mililitro de sangue para a circulação sistêmica. O débito cardíaco cai instantaneamente a zero. O indivíduo desaba inconsciente em segundos.
+
+A fisiopatologia temporal é impiedosa: sem compressões torácicas que produzam fluxo artificial, as reservas de ATP miocárdico e neuronal extinguem-se em poucos minutos, transformando uma arritmia chocável passível de reversão (FV) em uma linha isoelétrica definitiva (**assistolia**), cuja mortalidade ultrapassa 98% [1, 3]. Portanto, a RCP imediata realizada por quem presencia o colapso é a única ponte capaz de manter o coração viável até que um desfibrilador aplique o choque elétrico terapêutico.
+
+---
+
+## SEÇÃO 4 — FUNDAMENTAÇÃO FISIOLÓGICA DA RCP
+
+Para compreender a necessidade da disciplina técnica nas compressões, o socorrista deve entender como a massagem cardíaca externa substitui a função hemodinâmica natural do organismo:
+
+### 4.1 O Modelo da Bomba Cardíaca e da Bomba Torácica
+Durante as compressões torácicas externas manuais, dois mecanismos biofísicos operam cooperativamente [7]:
+1. **Mecanismo da Bomba Cardíaca:** A compressão direta do osso esterno contra a coluna vertebral torácica comprime fisicamente os ventrículos cardíacos, ejetando sangue pela artéria aorta em direção ao cérebro e às coronárias.
+2. **Mecanismo da Bomba Torácica:** A rápida variação de pressão intratorácica gerada pela compressão cria um gradiente de pressão arteriovenoso sistêmico, promovendo fluxo anterógrado de sangue.
+
+Mesmo quando executada com perfeição técnica milimétrica por socorristas de elite, **a RCP manual produz apenas de 25% a 33% do débito cardíaco normal em repouso**, e cerca de 30% a 40% do fluxo sanguíneo cerebral basal [1, 7]. Trata-se de uma margem estreita e crítica de sobrevivência celular. Qualquer imperfeição técnica (como profundidade insuficiente ou apoio contínuo sobre o tórax) derruba essa perfusão residual para níveis incompatíveis com a vida neuronal.
+
+### 4.2 A Pressão de Perfusão Coronariana (PPC) e a Curva de Decaimento
+O miocárdio (músculo cardíaco) não recebe sangue durante a sístole; ele é perfundido exclusivamente durante a **diástole** (fase de relaxamento), impulsionado pela diferença entre a pressão aórtica diastólica e a pressão no átrio direito. Essa diferença é a chamada **Pressão de Perfusão Coronariana (PPC)** [7].
+
+Estudos hemodinâmicos demonstram que são necessárias de **10 a 15 compressões ininterruptas de alta qualidade** para que a PPC atinja o limiar mínimo de 15 a 20 mmHg necessário para nutrir o miocárdio e permitir o retorno da circulação espontânea (ROSC) [1, 7].
+
+```
++---------------------------------------------------------------------------------+
+|               DINÂMICA DA PRESSÃO DE PERFUSÃO CORONARIANA (PPC)                 |
+|                                                                                 |
+|  PPC (mmHg)                                                                     |
+|   25 |                  /\      /\      /\                                      |
+|   20 |               /\/  \  /\/  \  /\/  \     [ LIMIAR MÍNIMO DE SOBREVIDA ]  |
+|   15 |             /\      \/      \/      \                                    |
+|   10 |          /\/                         \                                   |
+|    5 |       /\/                             \                                  |
+|    0 +--+---+---+---+---+---+---+---+---+---+---+---------------------------->  |
+|         1   3   5   7   9  11  13  15  17  19  21   [ NÚMERO DE COMPRESSÕES ]   |
+|                                                  |                              |
+|                                                  V                              |
+|                                     [ PAUSA DE 10 SEGUNDOS ]                    |
+|                                     * A pressão despenca a ZERO instantaneamente |
+|                                     * São necessárias mais 15 compressões para  |
+|                                       reconstruir a pressão perdida!            |
++---------------------------------------------------------------------------------+
+```
+
+> [!CRITICAL]
+> **ENTENDA O PORQUÊ: O PERIGO DAS INTERRUPÇÕES PROLONGADAS**
+> Se o socorrista interrompe as compressões por 10 ou 15 segundos para "checar se a vítima voltou", ajustar roupas, conversar ou colocar as pás do DEA com hesitação, a pressão de perfusão desaba para zero em menos de 2 segundos. O miocárdio volta a ficar isquêmico, e quando a massagem é reiniciada, os primeiros 10 a 15 golpes servem apenas para recuperar a pressão anterior perdida, sem gerar perfusão cerebral efetiva. **Pausas matam.**
+
+### 4.3 O Retorno Elástico Completo do Tórax (*Full Chest Recoil*)
+Ao final de cada compressão para baixo, o socorrista deve permitir que o tórax retorne 100% à sua posição neutra original, **sem retirar o contato das palmas das mãos da pele**.
+- *Por que isso é vital:* O retorno elástico da caixa torácica cria uma **pressão intratorácica negativa** (efeito de sucção a vácuo), que puxa o sangue das grandes veias (cava superior e inferior) de volta para dentro das câmaras cardíacas.
+- Se o socorrista permanecer debruçado apoiando parte do seu peso sobre o esterno entre as compressões (*leaning*), o coração não se enche de sangue. E um coração que não se enche não tem sangue para ejetar na próxima compressão [1, 3].
+
+---
+
+## SEÇÃO 5 — DESENVOLVIMENTO DOS SUBTEMAS
+
+### 5.1 Reconhecimento Precoce da Parada Cardiorrespiratória
+Para que a RCP tenha eficácia, o tempo de diagnóstico deve ser inferior a **10 segundos** [1]. A sequência de checagem consiste em:
+
+1. **Garantir a segurança da cena:** Ajoelhe-se ao lado da vítima com seus EPIs (luvas).
+2. **Verificar responsividade:** Bata com firmeza nos dois ombros da vítima e chame em voz alta: *"Senhor! Senhor! Você me ouve?"*.
+3. **Avaliar a respiração simultaneamente:** Observe a movimentação do tórax e do abdome por no mínimo 5 e no máximo 10 segundos:
+   - *A vítima está imóvel, não responde e NÃO respira normalmente (ausência total de movimento ou apenas suspiros agônicos/gasping)?*
+   - **DIAGNÓSTICO: PARADA CARDIORRESPIRATÓRIA.**
+
+> [!WARNING]
+> **DIRETRIZ DA AHA: NÃO PERCA TEMPO PROCURANDO PULSO**
+> A checagem de pulso carotídeo é formally **eliminada** para socorristas leigos e não médicos. Avaliações científicas comprovaram que socorristas leigos e até profissionais sob estresse levam de 30 a 60 segundos procurando pulso, erram em 45% dos casos (acreditando sentir pulso em vítimas paradas ou não sentindo pulso em vítimas que tinham circulação fraca). A regra é taxativa: **Inconsciente + sem respiração normal = INICIAR RCP IMEDIATAMENTE** [1, 2].
+
+### 5.2 A Cadeia de Sobrevivência Extra-Hospitalar
+A American Heart Association sintetiza as etapas indispensáveis para o sucesso na ressuscitação através dos seis elos da **Cadeia de Sobrevivência Extra-Hospitalar (PCREH)** [1]:
+
+```
++---------------------------------------------------------------------------------+
+|                   CADEIA DE SOBREVIVÊNCIA ADULTA EXTRA-HOSPITALAR               |
+|                                                                                 |
+|  [ ELO 1: RECONHECIMENTO PRECOCE E ACIONAMENTO DO SERVIÇO DE EMERGÊNCIA ]       |
+|  - Identificar a parada e ligar 192 pedindo apoio e um DEA móvel.               |
+|                                                                                 |
+|  [ ELO 2: RCP DE ALTA QUALIDADE IMEDIATA ]                                      |
+|  - Compressões torácicas rápidas e profundas no centro do peito.                |
+|                                                                                 |
+|  [ ELO 3: DESFIBRILAÇÃO RÁPIDA COM O DEA ]                                      |
+|  - Choque despolarizante precoce nos primeiros 3 a 5 minutos.                   |
+|                                                                                 |
+|  [ ELO 4: SUPORTE AVANÇADO DE VIDA E TRANSPORTE INTEGRADO ]                     |
+|  - Intervenção farmacológica do SAMU e manejo de via aérea avançada.            |
+|                                                                                 |
+|  [ ELO 5: CUIDADOS PÓS-PARADA CARDIORRESPIRATÓRIA ]                             |
+|  - Cateterismo cardíaco emergencial (angioplastia) e controle de temperatura.   |
+|                                                                                 |
+|  [ ELO 6: RECUPERAÇÃO E REABILITAÇÃO INTEGRADA ]                                |
+|  - Acompanhamento psicológico, neurológico e funcional a longo prazo.           |
++---------------------------------------------------------------------------------+
+```
+
+Se qualquer um dos três primeiros elos comunitários falhar, a taxa de sobrevivência neurológica cai para menos de 5%.
+
+### 5.3 Métrica e Qualidade das Compressões Torácicas
+Para que as compressões torácicas manuais gerem débito hemodinâmico mensurável, todos os cinco parâmetros abaixo devem ser cumpridos rigorosamente [1, 3]:
+
+1. **Posicionamento Anatômico Exato:**
+   - A vítima deve estar obrigatoriamente deitada em decúbito dorsal (barriga para cima) sobre uma **superfície plana, firme e rígida** (chão de concreto, piso frio ou prancha rígida). Colchões macios de molas ou sofás absorvem a força para baixo, tornando a compressão clinicamente nula.
+   - O socorrista apoia a **região tenar e hipotenar (o calcanhar da mão)** sobre a metade inferior do osso esterno (no centro do tórax, entre os mamilos).
+   - A outra mão é posicionada diretamente sobre a primeira, com os dedos firmemente entrelaçados para evitar que as pontas dos dedos exerçam pressão indesejada sobre as costelas laterais, prevenindo fraturas costais desnecessárias.
+
+2. **Alinhamento Biomecânico do Socorrista:**
+   - Os braços do socorrista devem permanecer **completamente esticados, com os cotovelos travados em extensão rígida**.
+   - Os ombros do socorrista devem ficar posicionados verticalmente em um ângulo de **90 graus perpendicular** diretamente sobre o centro do esterno da vítima.
+   - O movimento de descida e subida deve ser gerado pelo peso e movimentação da bacia e do tronco do socorrista (usando as articulações do quadril como dobradiça), e não pela flexão dos braços. Dobrar os cotovelos esgota a musculatura dos tríceps em menos de 60 segundos.
+
+3. **Profundidade das Compressões:**
+   - No adulto, comprima a uma profundidade de **no mínimo 5 cm (2 polegadas) e no máximo 6 cm (2,4 polegadas)** [1, 3].
+   - *Por que não menos de 5 cm:* Compressões superficiais não esvaziam os ventrículos e geram PPC insuficiente para irrigar o cérebro.
+   - *Por que não mais de 6 cm:* Compressões excessivamente profundas aumentam a incidência de lacerações viscerais (fígado, baço), fraturas múltiplas de costelas e pneumotórax sem benefício circulatório adicional.
+
+4. **Frequência Rítmica:**
+   - Comprima a uma cadência estrita de **100 a 120 compressões por minuto** [1, 3].
+   - Menos de 100 compressões por minuto não gera volume minuto suficiente. Mais de 120 compressões por minuto não concede tempo fisiológico diastólico para o coração relaxar e encher-se de sangue.
+   - *Dica mnemônica rítmica:* Mantenha o ritmo mental de canções com 100-110 batidas por minuto, como *"Stayin' Alive"* dos Bee Gees ou *"Baby Shark"*.
+
+5. **Retorno Elástico Pleno (Sem Apoio Residual):**
+   - Deixe o tórax expandir completamente após cada descida. Não fique debruçado sobre a vítima durante a fase ascendente.
+
+6. **Minimizar as Pausas:**
+   - Qualquer interrupção das manobras deve durar **menos de 10 segundos** (tempo estritamente necessário para o DEA analisar o ritmo ou aplicar choque elétrico) [1].
+
+### 5.4 Ventilações Conforme o Nível de Treinamento
+A conduta ventilatória no suporte básico foi modernizada pelas diretrizes internacionais para priorizar o fluxo cerebral e evitar a relutância de testemunhas em socorrer [1, 2]:
+
+#### Modalidade 1: RCP Apenas com as Mãos (*Hands-Only CPR*)
+- **Indicação:** Recomendada prioritariamente para socorristas leigos sem treinamento específico em ventilações, para quem não possui dispositivos de proteção individual (Pocket Mask) ou quando a vítima colapsa subitamente na frente do socorrista em ambiente comunitário [1].
+- **Como executar:** Realize **compressões torácicas contínuas sem interrupções**, na frequência de 100 a 120 por minuto, mantendo a via aérea alinhada passivamente, até a chegada do socorro ou do DEA.
+- *Justificativa fisiológica:* No adulto que sofre parada súbita por arritmia ventricular, o sangue e os pulmões contêm reserva residual de oxigênio suficiente para sustentar a perfusão celular nos primeiros 6 a 8 minutos, desde que o sangue seja impulsionado ativamente pelas compressões contínuas.
+
+#### Modalidade 2: RCP Convencional 30:2 (Compressões e Ventilações)
+- **Indicação:** Recomendada para socorristas capacitados que possuam equipamento de barreira (Pocket Mask com válvula unidirecional ou bolsa-valva-máscara/Ambu), e obrigatória em paradas de etiologia hipóxica/asfíxica (ex.: **afogamento, engasgo com asfixia prolongada, overdose por opioides e paradas pediátricas**) [1, 2].
+- **Como executar:** Ciclos de **30 compressões torácicas seguidas de 2 ventilações de resgate**.
+- *Regras inegociáveis para as 2 ventilações:*
+  1. Cada insuflação deve durar apenas **1 segundo** [1].
+  2. O volume de ar soprado deve ser apenas o suficiente para promover a **elevação visível e suave do tórax** (cerca de 500 a 600 mL no adulto).
+  3. A pausa total das compressões para realizar as duas ventilações não pode ultrapassar **10 segundos**.
+  4. Se a primeira ventilação não elevar o peito, reposicione a cabeça da vítima (reajuste a inclinação da cabeça e elevação do queixo) e tente a segunda. Se ainda assim não subir, retorne imediatamente às compressões. Jamais tente uma terceira insuflação.
+  5. **Evite a hiperventilação:** Soprar ar em excesso ou com muita força distende o estômago, induz vômitos imediatos e eleva a pressão intratorácica a níveis que impedem o retorno venoso ao coração [1, 3].
+
+### 5.5 RCP com Um versus Múltiplos Socorristas
+- **Socorrista Isolado:** Executa todas as etapas: reconhece a PCR, aciona o 192 pelo viva-voz do celular posicionado no piso, solicita o DEA (se houver no prédio) e inicia compressões contínuas ou 30:2 sem se afastar da vítima [1].
+- **Dois ou Mais Socorristas (Equipe de Alta Performance):**
+  - *Socorrista 1:* Assume as compressões torácicas contínuas imediatamente.
+  - *Socorrista 2:* Abre a via aérea, prepara a Pocket Mask, aciona o 192 e opera o DEA assim que chegar, colando os eletrodos sem que o Socorrista 1 interrompa a massagem.
+  - *Revezamento obrigatório:* A cada **2 minutos** (ou a cada análise de ritmo do DEA), os socorristas invertem as posições em menos de 5 segundos: o que massageava passa a ventilar, e o que ventilava assume o tórax. Essa alternância impede a perda de qualidade gerada pelo cansaço muscular do operador [1, 5].
+
+### 5.6 Metodologia do Treinamento Prático Supervisionado
+Nenhuma pessoa aprende a comprimir o tórax com eficácia apenas lendo manuais teóricos. A memória muscular e a percepção proprioceptiva de 5 a 6 cm de resistência elástica torácica exigem treinamento prático em manequins anatômicos com dispositivos de feedback em tempo real (luzes indicadoras de profundidade e metrônomos acústicos). Os cursos da União Serviços Médicos devem propiciar a cada participante ao menos 2 ciclos completos de simulação sob avaliação direta do instrutor responsável [1, 5].
+
+---
+
+## SEÇÃO 6 — QUADROS PRÁTICOS E ALGORITMOS CLÍNICOS
+
+### Quadro 6.1 — Algoritmo Operacional do Suporte Básico de Vida Adulto no APH
+
+| Etapa Cronológica | Ação Operacional | Critério Técnico Objetivo | Erro a Evitar |
+|---|---|---|---|
+| **01. Segurança** | Avaliar a cena | Varredura visual de 360°; uso de luvas de proteção. | Não tocar na vítima em piso molhado eletrificado. |
+| **02. Diagnóstico** | Chamar e checar respiração | Tocar nos ombros com vigor e observar o tórax de 5 a 10s. | Não gastar tempo procurando pulso carotídeo. |
+| **03. Acionamento** | Ligar 192 e pedir DEA | Celular no viva-voz; delegar ordem nominativa direta. | Não desligar a ligação telefônica primeiro. |
+| **04. RCP de Alta Qualidade** | Iniciar compressões | 100 a 120/min; 5 a 6 cm de profundidade; calcanhar da mão no centro do esterno. | Não dobrar os cotovelos; não apoiar peso na subida. |
+| **05. Ventilação (Se treinado)** | Ciclos 30:2 ou *Hands-Only* | 2 insuflações de 1s com Pocket Mask, apenas até o tórax elevar suavemente. | Não hiperventilar; não interromper por mais de 10s. |
+| **06. Desfibrilação (DEA)** | Ligar o aparelho e colar pás | Seguir estritamente as instruções verbais do DEA assim que ele chegar. | Não encostar na vítima durante o choque. |
+| **07. Revezamento** | Troca de socorrista | Alternar quem comprime a cada 2 minutos de massagem. | Não demorar mais de 5s para realizar a troca. |
+
+---
+
+### Quadro 6.2 — Comparativo: Modalidades de RCP no Suporte Básico
+
+| Parâmetro Técnico | RCP Apenas com as Mãos (*Hands-Only*) | RCP Convencional (30:2) com Barreira |
+|---|---|---|
+| **Público Indicado** | Socorristas leigos ou sem dispositivo de barreira | Socorristas capacitados com Pocket Mask ou Ambu |
+| **Relação Compressão/Sopro** | Compressões contínuas ininterruptas | 30 compressões seguidas de 2 ventilações |
+| **Frequência** | 100 a 120 compressões por minuto | 100 a 120 compressões por minuto |
+| **Pausas nas Massagens** | Zero pausas (apenas para análise do DEA) | Pausa estrita inferior a 10s a cada 30 massagens |
+| **Aplicação em Afogados/Crianças** | Não ideal (etiologia hipóxica primária) | **Obrigatória** (oxigenação urgente é necessária) |
+| **Segurança Biológica** | Risco biológico nulo (sem contato oronasal) | Alta segurança desde que use Pocket Mask com filtro |
+
+---
+
+## SEÇÃO 7 — ERROS FREQUENTES E CONDUTAS PROIBIDAS
+
+> [!CAUTION]
+> ### CATÁLOGO DE ERROS CRÍTICOS NA RESSUSCITAÇÃO CARDIOPULMONAR
+> 
+> 1. **Fazer massagem cardíaca com a vítima deitada em colchão macio ou cama:**
+>    - *Por que não fazer:* Em superfícies macias, a cada empurrão para baixo, o colchão afunda 4 centímetros e o tórax da vítima apenas 1 centímetro. A profundidade efetiva real da compressão torna-se clinicamente ineficaz, e a pressão aórtica não se eleva.
+>    - *Conduta correta:* Puxe a vítima imediatamente para o chão plano e rígido ou posicione prancha rígida sob o tórax.
+> 
+> 2. **Permanecer apoiado sobre o peito da vítima entre as compressões (*Leaning*):**
+>    - *Por que não fazer:* O peso residual do corpo do socorrista sobre o esterno impede o retorno elástico completo da caixa torácica. Sem descompressão total, o coração não se enche de sangue, e o débito da compressão seguinte cai pela metade.
+>    - *Conduta correta:* Alivie 100% do peso do tronco na fase de subida, mantendo apenas o contato suave das palmas das mãos na pele.
+> 
+> 3. **Interromper a massagem por mais de 10 segundos para "ver se o coração bateu":**
+>    - *Por que não fazer:* A cada interrupção desnecessária, a pressão de perfusão coronariana cai instantaneamente a zero. Para restabelecer o fluxo sanguíneo protetor aos neurônios, são necessárias de 10 a 15 compressões contínuas subsequentes.
+>    - *Conduta correta:* Não pare as compressões para checar a vítima, exceto se ela manifestar movimentos voluntários claros, despertar ou abrir os olhos, ou quando o DEA expressamente ordenar: *"Afaste-se da vítima, analisando ritmo cardíaco"*.
+> 
+> 4. **Hiperventilar a vítima (sopros rápidos, volumosos e com força excessiva):**
+>    - *Por que não fazer:* Insuflar ar excessivo supera a pressão de abertura do esfíncter esofágico inferior, desviando o ar para o estômago. O estômago distende-se rapidamente, gerando refluxo e vômito maciço de conteúdo gástrico na via aérea (broncoaspiração). Além disso, a hiperinsuflação eleva a pressão intratorácica positiva, comprimindo a veia cava e impedindo o sangue de chegar ao coração.
+>    - *Conduta correta:* Sopre suavemente durante 1 segundo, apenas até notar que o tórax começou a subir.
+> 
+> 5. **Dobrar os cotovelos durante a massagem cardíaca:**
+>    - *Por que não fazer:* O socorrista que flete os cotovelos utiliza a força muscular dos braços (tríceps e deltoides). Essa musculatura cansa-se em menos de 1 minuto, e as compressões tornam-se progressivamente mais rasas e lentas sem que o operador perceba.
+>    - *Conduta correta:* Trave os cotovelos em extensão completa e projete o peso do seu quadril e tronco para comprimir o esterno.
+
+---
+
+## SEÇÃO 8 — APLICAÇÃO PRÁTICA CONTEXTUALIZADA (ESTUDO DE CASO)
+
+### Cenário Simulado
+*Local:* Sala de musculação de um clube esportivo.  
+*Horário:* 18h15.  
+*Ocorrência:* Um homem de 52 anos, praticante regular de exercícios, larga abruptamente a barra de halteres no chão, leva as mãos ao centro do peito com expressão de dor intensa, empalidece e desaba inerte sobre o piso emborrachado da academia. Um instrutor de educação física com certificação em SBV encontra-se a 6 metros do local.
+
+---
+
+### Resolução Técnica Passo a Passo
+
+#### Etapa 1: Reconhecimento e Acionamento Instantâneo (0 a 15 segundos)
+- O instrutor corre até o aluno, ajoelha-se ao lado do peito e bate com vigor em ambos os ombros: *"Amigo! Você está me ouvindo? Abra os olhos!"*. A vítima não emite som, tem os olhos fechados e corpo completamente flácido.
+- Simultaneamente, o instrutor olha a caixa torácica por 6 segundos: não há nenhuma expansão torácica perceptível.
+- **Diagnóstico imediato:** Parada Cardiorrespiratória em ambiente público.
+- **Ordem Direta:** O instrutor aponta com firmeza para a recepcionista da academia que se aproximava:
+  > *"Camila! Ligue agora 192 para o SAMU pelo viva-voz, diga que temos um adulto em parada cardíaca na academia e traga imediatamente o DEA que está fixado na recepção! Vá agora!"*.
+
+#### Etapa 2: Início Biomecânico das Compressões de Alta Qualidade (15 a 120 segundos)
+- Sem perder tempo tentando sentir o pulso no pescoço, o instrutor afasta a camiseta da vítima para expor o tórax nu.
+- Posiciona o calcanhar da mão direita sobre o centro do esterno, entrelaça os dedos da mão esquerda por cima, trava os cotovelos em extensão reta, alinha os ombros verticalmente a 90 graus sobre o peito e inicia compressões contínuas:
+  - Ritmo: Metrônomo mental de 110 batimentos por minuto (*"Stayin' Alive"*).
+  - Profundidade: 5 a 6 cm firmes a cada descida.
+  - Alívio total de carga na subida para o tórax expandir completamente.
+- Como está sozinho e sem máscara de bolso no primeiro momento, adota a conduta **Hands-Only CPR** (compressões contínuas sem interrupção).
+
+#### Etapa 3: Chegada e Acoplamento Rápido do DEA (2 minutos)
+- A recepcionista chega com o DEA aos 2 minutos de massagem. O instrutor **NÃO para as compressões** enquanto o aparelho é aberto.
+- O instrutor comanda: *"Abra a tampa do DEA e aperte o botão de ligar!"*. O aparelho emite comandos de voz: *"Aplique as pás adesivas no peito nu da vítima"*.
+- Enquanto o instrutor mantém as compressões contínuas, um segundo instrutor que acabava de chegar seca o suor do tórax da vítima com uma toalha e cola as pás adesivas:
+  - Pá 1: Abaixo da clavícula direita, lateral ao esterno.
+  - Pá 2: Na linha axilar média esquerda, abaixo do mamilo esquerdo (ápice cardíaco).
+- O DEA avisa em voz alta: *"Analisando ritmo cardíaco... Afaste-se da vítima!"*.
+- **Pausa estrita:** O instrutor ergue as duas mãos espalmadas e grita: *"Ninguém toca na vítima! Todos afastados!"*.
+- O DEA anuncia: *"Choque recomendado! Carregando aparelho... Afaste-se!"*. O botão de choque pisca em laranja.
+- O instrutor faz a varredura visual: *"Eu estou afastado, você está afastado, todos afastados!"*. E pressiona o botão de choque.
+- O corpo da vítima sofre uma contração muscular rápida com a descarga elétrica despolarizante de 200 Joules.
+- **Ação Crítica Imediata pós-choque:** Sem conferir se o coração voltou ou se há pulso, o instrutor retorna as mãos instantaneamente ao centro do esterno e reinicia as compressões torácicas por mais 2 minutos ininterruptos [1, 4].
+
+#### Desfecho Clínico
+Após 3 ciclos completos (6 minutos de atendimento integrado com o DEA e troca de socorristas no tórax), a equipe de Suporte Avançado (USA) do SAMU chega ao local. O paciente apresentava retorno da circulação espontânea (ROSC), com ritmo sinusal ao monitor e pulso carotídeo palpável. O paciente é intubado, transportado ao hospital de referência e submetido à angioplastia coronariana com colocação de stent, obtendo alta hospitalar em 5 dias sem qualquer déficit motor ou cognitivo. A sobrevida com integridade neurológica decorreu da RCP imediata de alta performance e da desfibrilação precoce em menos de 3 minutos.
+
+---
+
+## SEÇÃO 9 — PULO DO GATO
+
+> [!TIP]
+> ### O PULO DO GATO DA UNIÃO: A TÉCNICA DO "PÉ FIRME E JOELHOS AFASTADOS"
+> A fadiga muscular precoce durante a massagem cardíaca decorre quase sempre da postura incorreta dos joelhos no piso. Socorristas que mantêm os joelhos colados um ao outro perdem o equilíbrio lateral e começam a usar a força dos braços para se equilibrar, esgotando a musculatura peitoral e do tríceps em menos de 90 segundos.
+> 
+> **A Biomecânica Correta de Estabilidade:**
+> - Ajoelhe-se ao lado da vítima afastando os seus próprios joelhos na mesma largura dos seus ombros (cerca de 40 a 50 cm de distância entre um joelho e outro).
+> - Cole o quadril lateralmente próximo à costela da vítima.
+> - Apoie as pontas dos pés firmemente no piso atrás de você (dedos flexionados no chão).
+> 
+> Essa base em três pontos cria uma plataforma de sustentação inabalável, permitindo que todo o peso gravitacional da parte superior do seu corpo trabalhe como um pistão mecânico sem sobrecarregar seus braços.
+
+---
+
+## SEÇÃO 10 — MAPA MENTAL DA RESSUSCITAÇÃO CARDIOPULMONAR
+
+```
+                      RESSUSCITAÇÃO CARDIOPULMONAR NO ADULTO (C05)
+                                           |
+         +---------------------------------+---------------------------------+
+         |                                 |                                 |
+         V                                 V                                 V
+RECONHECIMENTO (0-10s)            CADEIA DE SOBREVIVÊNCIA             MÉTRICA DA COMPRESSÃO
+         |                                 |                                 |
+ - Vítima inconsciente             - 1. Chamar 192 e pedir DEA        - Centro do osso esterno
+ - NÃO respira normalmente         - 2. RCP imediata de qualidade     - 100 a 120 compressões/min
+ - Gasping = PARADA CARDÍACA       - 3. Desfibrilação rápida (DEA)    - 5 a 6 cm de profundidade
+ - NÃO checar pulso (leigos)       - 4. Suporte Avançado / SAMU       - Retorno total do tórax
+         |                         - 5. Cuidados pós-parada           - Minimizar pausas (< 10s)
+         |                         - 6. Reabilitação neurológica             |
+         +---------------------------------+---------------------------------+
+                                           |
+                                           V
+                           ESTRATÉGIA VENTILATÓRIA E OPERACIONAL
+                                           |
+                         +-----------------+-----------------+
+                         |                                   |
+                         V                                   V
+                  HANDS-ONLY CPR                      CONVENCIONAL 30:2
+                  - Apenas compressões contínuas      - Com Pocket Mask com filtro
+                  - Sem pausas até o DEA chegar       - 2 ventilações de 1 segundo
+                  - Ideal para leigos em parada       - Obrigatória em afogamento
+                    súbita comunitária do adulto        e asfixia/pediatria
+```
+
+---
+
+## SEÇÃO 11 — O QUE VOCÊ PRECISA LEMBRAR
+
+1. **Gasping é parada cardíaca:** Respiração agônica com ruídos espaçados de suspiro não é respiração normal. Inicie a massagem cardíaca imediatamente.
+2. **Leigo não perde tempo com pulso:** Vítima que não responde e não respira está em parada cardiorrespiratória. Atrasar a massagem para procurar pulso mata neurônios cerebrais.
+3. **Métrica inegociável da massagem:** Frequência de 100 a 120 compressões por minuto, profundidade de 5 a 6 cm, com retorno elástico total da caixa torácica.
+4. **Cotovelos travados a 90 graus:** Não dobre os cotovelos. Utilize o peso do seu tronco e quadril para realizar o trabalho mecânico.
+5. **Hands-Only salva vidas:** Se você não tem treinamento ou máscara com válvula, não faça boca a boca. Mantenha compressões torácicas contínuas puras no peito.
+6. **Peça e use o DEA sem medo:** Ligue o aparelho assim que ele chegar, cole as pás adesivas no peito nu e siga rigorosamente as ordens de áudio do equipamento.
+7. **Troque de socorrista a cada 2 minutos:** A fadiga muscular invisível reduz a profundidade das compressões; alterne com outro socorrista a cada 2 minutos para manter a alta qualidade.
+
+---
+
+## SEÇÃO 12 — REFERÊNCIAS BIBLIOGRÁFICAS E METADADOS EDITORIAIS
+
+### Referências Consultadas (Padrão ABNT NBR 6023)
+
+[1] AMERICAN HEART ASSOCIATION (AHA). **2020 American Heart Association Guidelines for Cardiopulmonary Resuscitation and Emergency Cardiovascular Care**. *Circulation*, Dallas, v. 142, n. 16, supl. 2, p. S366-S468, 2020. DOI: https://doi.org/10.1161/CIR.0000000000000916. [Com atualizações e alinhamentos científicos interinos ILCOR 2021-2025].
+
+[2] INTERNATIONAL LIAISON COMMITTEE ON RESUSCITATION (ILCOR). **Consensus on Science and Treatment Recommendations for Basic Life Support**. *Resuscitation*, v. 156, p. A1-A240, 2020. Disponível em: https://www.ilcor.org.
+
+[3] PERKINS, Gavin D. et al. **European Resuscitation Council Guidelines 2021: Basic Life Support**. *Resuscitation*, v. 161, p. 98-114, 2021. DOI: https://doi.org/10.1016/j.resuscitation.2021.02.003.
+
+[4] OBLASSER, Veronika et al. **Public access defibrillation: A systematic review and meta-analysis of bystander shock provision**. *Resuscitation*, v. 154, p. 77-86, 2020. DOI: https://doi.org/10.1016/j.resuscitation.2020.06.035.
+
+[5] AMERICAN COLLEGE OF SURGEONS (ACS). Committee on Trauma. **Prehospital Trauma Life Support (PHTLS)**. 10. ed. Burlington: Jones & Bartlett Learning, 2023.
+
+[6] SOCIEDADE BRASILEIRA DE CARDIOLOGIA (SBC). **Diretriz de Ressuscitação Cardiopulmonar e Cuidados Cardiovasculares de Emergência**. *Arquivos Brasileiros de Cardiologia*, Rio de Janeiro, v. 113, n. 3, p. 449-663, 2019.
+
+[7] HALL, John E.; HALL, Michael E. **Guyton and Hall Textbook of Medical Physiology**. 14. ed. Philadelphia: Elsevier, 2021.
+
+---
+
+### METADADOS EDITORIAIS USM
+
+| Parâmetro | Detalhe |
+|---|---|
+| **Código e Módulo:** | C05 — Ressuscitação Cardiopulmonar no Adulto |
+| **Biblioteca:** | Núcleo Compartilhado |
+| **Status:** | `Aguardando Aprovação Científica` |
+| **Data da Redação:** | 19 de outubro de 2026 |
+| **Versão:** | 1.0.0 |
+| **Validação Científica por IA:** | Conforme diretrizes AHA/ILCOR/ERC e Diretriz SBC |
+| **Próxima Revisão:** | Outubro de 2027 |
