@@ -1,5 +1,5 @@
 import React from 'react';
-import { ArrowRight, Stethoscope, Droplet, Heart, Sliders, Check } from 'lucide-react';
+import { ArrowRight, Stethoscope, Droplet, Heart, Sliders, Check, Sparkles } from 'lucide-react';
 
 export const CoursesSection: React.FC = () => {
   const courses = [
@@ -58,18 +58,28 @@ export const CoursesSection: React.FC = () => {
   ];
 
   return (
-    <section id="cursos" className="py-20 lg:py-28 bg-slate-50">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="cursos" className="py-24 lg:py-32 bg-slate-950 text-white relative border-t border-white/5 overflow-hidden">
+
+      {/* Background Glow */}
+      <div className="absolute top-1/3 right-10 w-[500px] h-[500px] bg-teal-600/10 rounded-full blur-[160px] pointer-events-none animate-pulse-glow" />
+
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
         {/* Section Header */}
         <div className="max-w-3xl mx-auto text-center space-y-4">
-          <span className="text-xs font-bold tracking-widest text-uniao-600 uppercase bg-uniao-100/70 px-3.5 py-1.5 rounded-full border border-uniao-200">
-            Nossos Treinamentos
-          </span>
-          <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
-            Cursos estruturados para máxima eficiência em campo
+          <div data-reveal="fade-down" className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-uniao-500/10 border border-uniao-500/30 text-uniao-300 text-xs font-bold uppercase tracking-wider">
+            <Sparkles className="w-4 h-4 text-uniao-400" />
+            <span>Nossos Treinamentos</span>
+          </div>
+
+          <h2 data-reveal="fade-up" className="text-3xl sm:text-5xl font-black text-white tracking-tight font-sans">
+            Cursos estruturados para <br className="hidden sm:inline" />
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-teal-300 via-uniao-400 to-emerald-300">
+              máxima eficiência em campo
+            </span>
           </h2>
-          <p className="text-base sm:text-lg text-slate-600 leading-relaxed">
+
+          <p data-reveal="fade-up" className="text-base sm:text-lg text-slate-300 leading-relaxed font-light">
             Metodologia teórico-prática desenvolvida para gerar retenção de conhecimento e confiança operacional real.
           </p>
         </div>
@@ -82,48 +92,50 @@ export const CoursesSection: React.FC = () => {
             return (
               <div 
                 key={idx}
-                className="flex flex-col justify-between rounded-2xl bg-white border border-slate-200 p-8 shadow-sm hover:shadow-premium hover:border-uniao-300 transition-all duration-300"
+                data-reveal="fade-up"
+                data-reveal-delay={`${idx * 150}`}
+                className="flex flex-col justify-between rounded-3xl bg-slate-900/80 border border-white/10 p-8 hover:border-uniao-500/60 hover:bg-slate-900 shadow-2xl hover:shadow-[0_0_35px_rgba(20,184,166,0.2)] transition-all duration-300 transform hover:-translate-y-2 group"
               >
                 <div>
                   <div className="flex items-center justify-between mb-6">
-                    <div className="w-12 h-12 rounded-xl bg-uniao-50 text-uniao-600 flex items-center justify-center border border-uniao-100">
-                      <Icon className="w-6 h-6" />
+                    <div className="w-14 h-14 rounded-2xl bg-uniao-500/15 border border-uniao-500/30 text-uniao-400 flex items-center justify-center group-hover:bg-uniao-400 group-hover:text-slate-950 transition-all duration-300">
+                      <Icon className="w-7 h-7" />
                     </div>
-                    <span className="text-xs font-semibold px-3 py-1 rounded-full bg-slate-100 text-slate-700">
+                    <span className="text-xs font-bold uppercase tracking-wider px-3.5 py-1.5 rounded-full bg-white/5 border border-white/10 text-slate-300">
                       {course.badge}
                     </span>
                   </div>
 
-                  <h3 className="text-2xl font-bold text-slate-900 mb-3">
+                  <h3 className="text-2xl font-black text-white mb-3 group-hover:text-uniao-300 transition-colors">
                     {course.title}
                   </h3>
                   
-                  <p className="text-slate-600 text-sm leading-relaxed mb-6">
+                  <p className="text-slate-400 text-sm leading-relaxed mb-6">
                     {course.description}
                   </p>
 
-                  <div className="space-y-2.5 pt-4 border-t border-slate-100">
-                    <span className="text-xs font-bold text-slate-400 uppercase tracking-wider block">
-                      O que está incluído:
+                  <div className="space-y-3 pt-6 border-t border-white/10">
+                    <span className="text-xs font-bold text-uniao-400/90 uppercase tracking-wider block">
+                      Conteúdo e Habilidades Técnicas:
                     </span>
                     {course.topics.map((topic, tIdx) => (
-                      <div key={tIdx} className="flex items-start gap-2.5 text-xs text-slate-700">
-                        <Check className="w-4 h-4 text-uniao-600 shrink-0 mt-0.5" />
+                      <div key={tIdx} className="flex items-start gap-3 text-xs text-slate-300">
+                        <Check className="w-4 h-4 text-emerald-400 shrink-0 mt-0.5" />
                         <span>{topic}</span>
                       </div>
                     ))}
                   </div>
                 </div>
 
-                <div className="pt-8 mt-6 border-t border-slate-100">
+                <div className="pt-8 mt-8 border-t border-white/10">
                   <a
                     href={link}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="w-full inline-flex items-center justify-center gap-2 px-5 py-3 rounded-xl text-sm font-semibold text-uniao-800 bg-uniao-50 hover:bg-uniao-600 hover:text-white transition-all border border-uniao-200 hover:border-uniao-600 shadow-sm"
+                    className="w-full inline-flex items-center justify-center gap-2.5 px-6 py-4 rounded-xl text-xs font-bold text-uniao-300 bg-uniao-500/10 hover:bg-gradient-to-r hover:from-uniao-400 hover:via-teal-300 hover:to-emerald-300 hover:text-slate-950 transition-all duration-300 border border-uniao-500/30 hover:border-uniao-300 shadow-lg group/btn"
                   >
-                    <span>Solicitar informações do curso</span>
-                    <ArrowRight className="w-4 h-4" />
+                    <span>Solicitar Informações do Curso</span>
+                    <ArrowRight className="w-4 h-4 group-hover/btn:translate-x-1 transition-transform" />
                   </a>
                 </div>
 
