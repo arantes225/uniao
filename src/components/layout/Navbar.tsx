@@ -21,7 +21,7 @@ export const Navbar: React.FC = () => {
           
           {/* Nova Logomarca Oficial Integrada de Forma Limpa e com Destaque Maior */}
           <Link to="/" className="flex items-center gap-4 group">
-            <div className="w-9 h-9 sm:w-10 sm:h-10 flex items-center justify-center shrink-0">
+            <div className="w-8 h-8 sm:w-9 sm:h-9 flex items-center justify-center shrink-0">
               <img 
                 src="./brand/simbolo-cruz-uniao.png" 
                 alt="Cruz União Serviços Médicos" 
@@ -29,7 +29,7 @@ export const Navbar: React.FC = () => {
               />
             </div>
             <div className="flex flex-col">
-              <span className="font-black text-xl tracking-wider text-white font-sans flex items-center gap-1 leading-none">
+                <span className="font-black text-lg tracking-wider text-white font-sans flex items-center gap-1 leading-none">
                 UNIÃO
               </span>
               <span className="text-[9px] font-bold tracking-[0.2em] text-slate-300 uppercase mt-1">
@@ -39,40 +39,39 @@ export const Navbar: React.FC = () => {
           </Link>
 
           {/* Desktop Navigation */}
-          <nav className="hidden lg:flex items-center gap-4 xl:gap-6">
+          <nav className="hidden lg:flex items-center gap-7">
             {navLinks.map((link) => (
               <a
                 key={link.label}
                 href={link.href}
-                className="text-xs xl:text-sm font-medium text-slate-300 hover:text-white transition-colors relative py-1 group whitespace-nowrap"
+                className="text-sm font-medium text-slate-300 hover:text-white transition-colors relative py-1 group"
               >
                 <span>{link.label}</span>
                 <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-uniao-400 to-teal-300 group-hover:w-full transition-all duration-300" />
               </a>
             ))}
-          </nav>
 
-          {/* Action CTAs: Validar Certificado & Área do Aluno com espaçamento elegante */}
-          <div className="hidden sm:flex items-center gap-4">
             {/* Link para Validação de Certificado */}
             <Link
               to="/validar-certificado"
-              className="text-xs font-semibold text-teal-400 hover:text-teal-300 transition-colors flex items-center gap-1.5 px-3 py-2 rounded-xl bg-teal-500/10 border border-teal-500/30 hover:bg-teal-500/20 whitespace-nowrap shrink-0"
+              className="text-sm font-semibold text-teal-400 hover:text-teal-300 transition-colors flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-teal-500/10 border border-teal-500/30 hover:bg-teal-500/20"
             >
-              <ShieldCheck className="w-3.5 h-3.5 text-teal-400 shrink-0" />
-              <span className="whitespace-nowrap">Validar Certificado</span>
+              <ShieldCheck className="w-4 h-4 text-teal-400" />
+              <span>Validar Certificado</span>
             </Link>
+          </nav>
 
-            {/* Botão Área do Aluno */}
+          {/* Action CTA: Área do Aluno com Design Moderno */}
+          <div className="hidden sm:flex items-center gap-3">
             <Link
               to="/login"
-              className="relative group overflow-hidden rounded-xl p-[1px] font-semibold text-xs transition-all shadow-lg hover:shadow-[0_0_25px_rgba(20,184,166,0.35)] shrink-0"
+              className="relative group overflow-hidden rounded-xl p-[1px] font-semibold text-xs transition-all shadow-lg hover:shadow-[0_0_25px_rgba(20,184,166,0.35)]"
             >
               <span className="absolute inset-0 bg-gradient-to-r from-uniao-500 via-teal-400 to-uniao-600 rounded-xl" />
-              <span className="relative flex items-center gap-2 px-4 py-2 rounded-[11px] bg-slate-950 text-white group-hover:bg-opacity-80 transition-all font-bold whitespace-nowrap">
-                <GraduationCap className="w-3.5 h-3.5 text-uniao-400 shrink-0" />
-                <span className="whitespace-nowrap">Área do Aluno</span>
-                <ArrowRight className="w-3.5 h-3.5 text-uniao-400 group-hover:translate-x-1 transition-transform shrink-0" />
+              <span className="relative flex items-center gap-2 px-5 py-2.5 rounded-[11px] bg-slate-950 text-white group-hover:bg-opacity-80 transition-all font-bold">
+                <GraduationCap className="w-4 h-4 text-uniao-400" />
+                <span>Área do Aluno</span>
+                <ArrowRight className="w-3.5 h-3.5 text-uniao-400 group-hover:translate-x-1 transition-transform" />
               </span>
             </Link>
           </div>
@@ -130,3 +129,4 @@ export const Navbar: React.FC = () => {
     </header>
   );
 };
+
