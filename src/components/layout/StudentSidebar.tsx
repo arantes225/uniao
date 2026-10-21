@@ -11,9 +11,10 @@ import { supabase } from '../../services/supabase/client';
 interface StudentSidebarProps {
   collapsed?: boolean;
   onToggle?: () => void;
+  initialLessonCode?: string;
 }
 
-export const StudentSidebar: React.FC<StudentSidebarProps> = ({ collapsed = false, onToggle }) => {
+export const StudentSidebar: React.FC<StudentSidebarProps> = ({ collapsed = false, onToggle, initialLessonCode }) => {
   const [isAdmin, setIsAdmin] = useState(false);
   const { theme } = useTheme();
 
@@ -51,7 +52,7 @@ export const StudentSidebar: React.FC<StudentSidebarProps> = ({ collapsed = fals
     },
     {
       label: 'Aula Integrada',
-      path: '/aluno/aula/aph-mod1-aula2',
+      path: initialLessonCode ? `/aluno/aula/${initialLessonCode}` : '/aluno/dashboard',
       icon: Video,
       highlight: false,
       badge: 'Obrigatório'
