@@ -22,7 +22,7 @@ export const IntegratedLessonPage: React.FC = () => {
   const { theme } = useTheme();
 
   // Abas integradas conforme Prompt Mestre (Videoaula | Apostila | 5 Questões)
-  const [activeTab, setActiveTab] = useState<'video' | 'material' | 'questions'>('material');
+  const [activeTab, setActiveTab] = useState<'video' | 'material' | 'questions'>('video');
   const [videoWatched, setVideoWatched] = useState(false);
   const [readingConfirmed, setReadingConfirmed] = useState(false);
 
@@ -138,7 +138,7 @@ export const IntegratedLessonPage: React.FC = () => {
     return correct;
   };
 
-  const isCompleted = submitted && calculateScore() >= 2;
+  const isCompleted = submitted;
 
   return (
     <div className={`min-h-screen flex flex-col transition-colors duration-200 ${
@@ -224,7 +224,7 @@ export const IntegratedLessonPage: React.FC = () => {
             }`}
           >
             <BookOpen className="w-4 h-4" />
-            <span>Apostila (PDF)</span>
+            <span>Apostila de leitura</span>
             {readingConfirmed && <CheckCircle2 className="w-3.5 h-3.5 text-emerald-500 ml-1" />}
           </button>
 
@@ -381,7 +381,7 @@ export const IntegratedLessonPage: React.FC = () => {
                 5 Questões de Fixação
               </h2>
               <p className={`text-xs ${theme === 'dark' ? 'text-slate-400' : 'text-slate-500'}`}>
-                Responda com atenção. Para avançar para a próxima aula ou módulo, você precisa acertar <strong>pelo menos 2 das 5 questões</strong> desta atividade.
+                Responda todas as questões. A conclusão da atividade exige apenas que todas sejam respondidas.
               </p>
             </div>
 
@@ -498,7 +498,7 @@ export const IntegratedLessonPage: React.FC = () => {
               {!submitted ? (
                 <>
                   <div className={`text-xs ${theme === 'dark' ? 'text-slate-400' : 'text-slate-500'}`}>
-                    Respondidas: {Object.keys(answers).length} de 5 questões • Mínimo para avançar: 2 acertos
+                    Respondidas: {Object.keys(answers).length} de 5 questões • Todas as questões são obrigatórias
                   </div>
                   <button
                     onClick={() => setSubmitted(true)}
@@ -515,32 +515,17 @@ export const IntegratedLessonPage: React.FC = () => {
                       Resultado: {calculateScore()} de 5 acertos ({Math.round((calculateScore() / 5) * 100)}%)
                     </div>
                     <div className={`text-xs ${theme === 'dark' ? 'text-slate-400' : 'text-slate-500'}`}>
-                      {calculateScore() >= 2 
-                        ? 'Parabéns! Você acertou pelo menos 2 questões e liberou o próximo conteúdo.' 
-                        : 'Você acertou menos de 2 questões. É necessário acertar pelo menos 2 para avançar.'}
+                      'Questões respondidas. O resultado é apresentado para estudo e registro da atividade.'
                     </div>
                   </div>
 
-                  {calculateScore() >= 2 ? (
-                    <button
-                      onClick={() => navigate('/aluno/dashboard')}
-                      className="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl font-bold text-slate-950 bg-uniao-400 hover:bg-uniao-300 text-sm shadow transition-all"
-                    >
-                      <span>Avançar para o Próximo Conteúdo</span>
-                      <ChevronRight className="w-4 h-4" />
-                    </button>
-                  ) : (
-                    <button
-                      onClick={() => { setSubmitted(false); setAnswers({}); }}
-                      className={`px-6 py-3.5 rounded-xl font-bold text-sm transition-all ${
-                        theme === 'dark'
-                          ? 'text-white bg-slate-700 hover:bg-slate-600'
-                          : 'text-slate-700 bg-slate-200 hover:bg-slate-300'
-                      }`}
-                    >
-                      Tentar Novamente (Requer 2 acertos)
-                    </button>
-                  )}
+                  <button
+                    onClick={() => navigate('/aluno/dashboard')}
+                    className="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl font-bold text-slate-950 bg-uniao-400 hover:bg-uniao-300 text-sm shadow transition-all"
+                  >
+                    <span>Avançar para o Próximo Conteúdo</span>
+                    <ChevronRight className="w-4 h-4" />
+                  </button>
                 </>
               )}
             </div>
@@ -553,3 +538,4 @@ export const IntegratedLessonPage: React.FC = () => {
     </div>
   );
 };
+
