@@ -1,51 +1,38 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Link, useOutletContext } from 'react-router-dom';
-import { 
-  PlayCircle, CheckCircle, Clock, 
-  ArrowRight, ShieldCheck, Compass
-} from 'lucide-react';
+import { PlayCircle, CheckCircle, Clock, ArrowRight, ShieldCheck, Compass } from 'lucide-react';
 import { useTheme } from '../../context/ThemeContext';
+import { INITIAL_40_MODULES } from '../../data/curriculumData';
+import { StudentOutletContext } from '../../services/studentCurriculum';
 
 export const StudentDashboard: React.FC = () => {
   const { theme } = useTheme();
-  const { studentName } = useOutletContext<{ studentName: string }>();
-
-  // Suporte a múltiplas turmas por aluno com switch
-  const studentCohorts = [
-    {
-      id: 'aph-2026',
-      name: 'Atendimento Pré-Hospitalar (APH) & Controle de Hemorragias',
-      cohortCode: 'Turma de Capacitação APH 2026',
-      currentModule: 'Módulo 01 — Fundamentos do APH',
-      currentLesson: 'Aula 02 — Avaliação e Segurança da Cena',
-      lessonUrl: '/aluno/aula/aph-mod1-aula2',
-      progress: 40,
-      daysRemaining: 89,
-      lessonsCompleted: 4,
-      totalLessons: 12,
-      score: 95,
-      simReady: true,
-      practicalReady: false,
-    },
-    {
-      id: 'stb-tatico',
-      name: 'Stop the Bleed — Controle Tático de Grandes Hemorragias',
-      cohortCode: 'Turma Stop the Bleed Tático',
-      currentModule: 'Módulo 02 — Torniquetes e Curativos Hemostáticos',
-      currentLesson: 'Aula 01 — Aplicação Rápida de Torniquetes em Extremidades',
-      lessonUrl: '/aluno/aula/aph-mod1-aula2',
-      progress: 70,
-      daysRemaining: 45,
-      lessonsCompleted: 7,
-      totalLessons: 10,
-      score: 98,
-      simReady: true,
-      practicalReady: true,
-    },
-  ];
-
-  const [activeCohortId, setActiveCohortId] = useState('aph-2026');
-  const activeCohort = studentCohorts.find(c => c.id === activeCohortId) || studentCohorts[0];
+  const { studentName, cohorts, activeCohortId, setActiveCohortId,
+    curriculumLoading, curriculumError } = useOutletContext<StudentOutletContext>();
+  const watched: string[] = (() => {
+    try { return JSON.parse(localStorage.getItem('uniao:watched-lessons') || '[]'); }
+    catch { return []; }
+  })();
+  const studentCohorts = cohorts.map(cohort => {
+    const modules = INITIAL_40_MODULES.filter(mod => cohort.moduleIds.includes(mod.id));
+    const nextLesson = modules.find(module => !watched.includes(module.code)) || modules[0];
+    const completed = modules.filter(module => watched.includes(module.code)).length;
+    return {
+      id: cohort.id,
+      name: cohort.name,
+      cohortCode: cohort.name,
+      modules,
+      currentModule: nextLesson ? `${nextLesson.code} — ${nextLesson.title}` : 'Sem aulas liberadas',
+      currentLesson: nextLesson?.title || 'Nenhuma aula disponível',
+      lessonUrl: nextLesson ? `/aluno/aula/${nextLesson.code}` : '/aluno/dashboard',
+      progress: modules.length ? Math.round(completed / modules.length * 100) : 0,
+      daysRemaining: cohort.daysRemaining,
+    };
+  });
+  const activeCohort = studentCohorts.find(cohort => cohort.id === activeCohortId) || studentCohorts[0];
+  if (curriculumLoading) return <div className="p-8 text-sm text-slate-400">Carregando suas turmas e aulas...</div>;
+  if (curriculumError) return <div role="alert" className="p-8 text-sm text-red-400">Falha ao carregar sua trilha: {curriculumError}</div>;
+  if (!activeCohort) return <div className="p-8 text-sm text-slate-500">Nenhuma turma ativa com acesso disponível foi encontrada para sua conta.</div>;
 
   return (
     <div className="p-6 sm:p-10 space-y-8 max-w-7xl mx-auto w-full">
@@ -187,168 +174,39 @@ export const StudentDashboard: React.FC = () => {
           </div>
         </div>
 
-        {/* Trilha Pedagógica Completa com Bloqueio Sequencial de Módulos */}
-        <div className="space-y-6">
-          <div className="flex items-center justify-between">
-            <div>
-              <h3 className={`text-xl font-black ${theme === 'dark' ? 'text-white' : 'text-slate-900'}`}>
-                Trilha do Curso: Módulos & Aulas
-              </h3>
-              <p className={`text-xs ${theme === 'dark' ? 'text-slate-400' : 'text-slate-500'}`}>
-                Cada módulo requer a conclusão prévia do anterior e o preenchimento obrigatório das questões.
-              </p>
-            </div>
+        {/* Trilha real: apenas os módulos autorizados para a turma ativa. */}
+        <section className="space-y-5">
+          <div>
+            <h3 className={`text-xl font-black ${theme === 'dark' ? 'text-white' : 'text-slate-900'}`}>
+              Trilha do Curso: Módulos & Aulas
+            </h3>
+            <p className="text-xs text-slate-500 mt-1">
+              Conteúdo autorizado para {activeCohort.name}. O progresso é individual.
+            </p>
           </div>
-
-          {/* MÓDULO 1 — CONCLUÍDO / EM ANDAMENTO */}
-          <div className={`rounded-3xl border p-6 sm:p-8 space-y-5 shadow-sm transition-colors ${
-            theme === 'dark' 
-              ? 'bg-slate-900 border-white/10' 
-              : 'bg-white border-slate-200/90 shadow-slate-100'
-          }`}>
-            <div className="flex items-center justify-between">
-              <div>
-                <span className={`text-[10px] font-bold uppercase tracking-wider block ${
-                  theme === 'dark' ? 'text-teal-400' : 'text-teal-700'
-                }`}>
-                  Etapa 01
-                </span>
-                <h4 className={`text-base sm:text-lg font-bold ${theme === 'dark' ? 'text-white' : 'text-slate-900'}`}>
-                  Módulo 01: Fundamentos do APH & Biossegurança
-                </h4>
-              </div>
-              <span className={`text-xs font-bold px-3 py-1 rounded-full border ${
-                theme === 'dark'
-                  ? 'text-uniao-400 bg-uniao-500/10 border-uniao-500/30'
-                  : 'text-teal-800 bg-teal-50 border-teal-200'
-              }`}>
-                Módulo Liberado
-              </span>
-            </div>
-
-            <div className="space-y-3">
-              {/* Aula 1 */}
-              <div className={`p-4 rounded-2xl border flex items-center justify-between gap-4 ${
-                theme === 'dark' ? 'bg-slate-950/60 border-white/5' : 'bg-slate-50/80 border-slate-200/80'
-              }`}>
-                <div className="flex items-center gap-3">
-                  <div className="w-8 h-8 rounded-full bg-emerald-500/20 text-emerald-500 flex items-center justify-center shrink-0">
-                    <CheckCircle className="w-5 h-5" />
+          {activeCohort.modules.length === 0 ? (
+            <p className="text-sm text-amber-400">Esta turma ainda não tem aulas liberadas.</p>
+          ) : activeCohort.modules.map((module, index) => {
+            const completed = watched.includes(module.code);
+            return (
+              <article key={module.code} className={`rounded-2xl border p-5 flex flex-col sm:flex-row sm:items-center gap-4 justify-between ${theme === 'dark' ? 'bg-slate-900 border-white/10' : 'bg-white border-slate-200'}`}>
+                <div className="flex items-center gap-3 min-w-0">
+                  <div className={`w-9 h-9 rounded-xl flex items-center justify-center shrink-0 ${completed ? 'bg-emerald-500/15 text-emerald-400' : 'bg-teal-500/15 text-teal-400'}`}>
+                    {completed ? <CheckCircle className="w-5 h-5" /> : <PlayCircle className="w-5 h-5" />}
                   </div>
                   <div>
-                    <h5 className={`text-sm font-semibold ${theme === 'dark' ? 'text-white' : 'text-slate-900'}`}>
-                      Aula 01 — Introdução ao Atendimento Pré-Hospitalar
-                    </h5>
-                    <p className={`text-xs ${theme === 'dark' ? 'text-slate-500' : 'text-slate-500'}`}>
-                      Concluída • 5/5 questões corretas (Mínimo: 2)
-                    </p>
+                    <span className="text-[10px] font-bold uppercase text-teal-500">Etapa {String(index + 1).padStart(2, '0')} · {module.code}</span>
+                    <h4 className={`font-bold text-sm sm:text-base ${theme === 'dark' ? 'text-white' : 'text-slate-900'}`}>{module.title}</h4>
+                    <p className="text-xs text-slate-500">{completed ? 'Videoaula visualizada' : 'Videoaula, apostila e questões'}</p>
                   </div>
                 </div>
-                <Link
-                  to="/aluno/aula/aph-mod1-aula1"
-                  className={`text-xs font-semibold px-3 py-1.5 rounded-lg border transition-colors ${
-                    theme === 'dark'
-                      ? 'text-slate-400 hover:text-white border-white/10 hover:bg-white/5'
-                      : 'text-slate-600 hover:text-slate-900 border-slate-300 hover:bg-slate-100'
-                  }`}
-                >
-                  Revisar
+                <Link to={`/aluno/aula/${module.code}`} className="px-4 py-2 rounded-xl text-xs font-bold bg-uniao-600 text-white text-center hover:bg-uniao-500 shrink-0">
+                  {completed ? 'Revisar aula' : 'Iniciar aula'}
                 </Link>
-              </div>
-
-              {/* Aula 2 */}
-              <div className={`p-4 rounded-2xl border-2 flex items-center justify-between gap-4 ${
-                theme === 'dark'
-                  ? 'border-uniao-500 bg-uniao-950/20'
-                  : 'border-teal-500 bg-teal-50/50 shadow-xs'
-              }`}>
-                <div className="flex items-center gap-3">
-                  <div className="w-8 h-8 rounded-full bg-teal-600 text-white flex items-center justify-center shrink-0 font-black shadow-xs">
-                    <PlayCircle className="w-5 h-5" />
-                  </div>
-                  <div>
-                    <div className="flex items-center gap-2">
-                      <h5 className={`text-sm font-bold ${theme === 'dark' ? 'text-white' : 'text-slate-950'}`}>
-                        Aula 02 — Avaliação e Segurança da Cena
-                      </h5>
-                      <span className={`text-[10px] font-black px-2 py-0.5 rounded border ${
-                        theme === 'dark'
-                          ? 'bg-uniao-500/20 text-uniao-300 border-uniao-500/40'
-                          : 'bg-teal-100 text-teal-800 border-teal-300'
-                      }`}>
-                        EM CURSO
-                      </span>
-                    </div>
-                    <p className={`text-xs ${theme === 'dark' ? 'text-slate-400' : 'text-slate-600'}`}>
-                      Videoaula • Apostila de leitura • 5 Questões obrigatórias
-                    </p>
-                  </div>
-                </div>
-                <Link
-                  to="/aluno/aula/aph-mod1-aula2"
-                  className="text-xs font-bold text-slate-950 bg-gradient-to-r from-uniao-400 to-teal-300 px-4 py-2 rounded-xl shadow hover:brightness-105 transition-all"
-                >
-                  Continuar
-                </Link>
-              </div>
-            </div>
-          </div>
-
-          {/* MÓDULO 2 — BLOQUEADO ATÉ CONCLUSÃO DO MÓDULO 01 */}
-          <div className={`rounded-3xl border p-6 sm:p-8 space-y-4 opacity-70 transition-colors ${
-            theme === 'dark' 
-              ? 'bg-slate-900/40 border-white/5' 
-              : 'bg-slate-100/70 border-slate-200'
-          }`}>
-            <div className="flex items-center justify-between">
-              <div>
-                <span className="text-[10px] font-bold uppercase tracking-wider block text-slate-500">
-                  Etapa 02 • Bloqueada
-                </span>
-                <h4 className={`text-base sm:text-lg font-bold ${theme === 'dark' ? 'text-slate-400' : 'text-slate-700'}`}>
-                  Módulo 02: Hemorragias Exsanguinantes & Protocolo XABCDE
-                </h4>
-              </div>
-              <span className={`text-xs font-medium px-3 py-1 rounded-full border ${
-                theme === 'dark'
-                  ? 'bg-slate-800 border-slate-700 text-slate-400'
-                  : 'bg-slate-200 border-slate-300 text-slate-600'
-              }`}>
-                Requer Módulo 01 Completo
-              </span>
-            </div>
-
-            <div className={`p-4 rounded-2xl border text-xs flex items-center justify-between ${
-              theme === 'dark' ? 'bg-slate-950/30 border-white/5 text-slate-400' : 'bg-white border-slate-200 text-slate-600'
-            }`}>
-              <div className="flex items-center gap-3">
-                <Clock className="w-4 h-4 text-slate-400" />
-                <span>Liberação automática após concluir todas as questões obrigatórias do Módulo 01.</span>
-              </div>
-              <span className="font-bold text-slate-400">Bloqueado</span>
-            </div>
-          </div>
-
-          {/* MÓDULO 3 — BLOQUEADO */}
-          <div className={`rounded-3xl border p-6 sm:p-8 space-y-4 opacity-50 transition-colors ${
-            theme === 'dark' 
-              ? 'bg-slate-900/30 border-white/5' 
-              : 'bg-slate-100/50 border-slate-200'
-          }`}>
-            <div className="flex items-center justify-between">
-              <div>
-                <span className="text-[10px] font-bold uppercase tracking-wider block text-slate-500">
-                  Etapa 03 • Bloqueada
-                </span>
-                <h4 className={`text-base sm:text-lg font-bold ${theme === 'dark' ? 'text-slate-400' : 'text-slate-700'}`}>
-                  Módulo 03: PCR no APH e Desfibrilação com DEA
-                </h4>
-              </div>
-              <span className="text-xs text-slate-400">Requer Módulos 01 e 02</span>
-            </div>
-          </div>
-
-        </div>
+              </article>
+            );
+          })}
+        </section>
 
     </div>
   );
