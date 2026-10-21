@@ -36,7 +36,7 @@ export const LegalComplianceSection: React.FC = () => {
   ];
 
   return (
-    <section className="py-24 lg:py-32 bg-slate-950 text-white relative border-t border-white/5 overflow-hidden">
+    <section id="urgencia" className="py-24 lg:py-32 bg-slate-950 text-white relative border-t border-white/5 overflow-hidden">
       
       {/* Background Glow */}
       <div className="absolute top-1/2 right-1/4 w-[500px] h-[500px] bg-red-600/10 rounded-full blur-[160px] pointer-events-none" />
