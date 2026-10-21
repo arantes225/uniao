@@ -5,7 +5,7 @@ export const HeroSection: React.FC = () => {
   const whatsappUrl = "https://wa.me/5561999638011?text=Ol%C3%A1!%20Gostaria%20de%20solicitar%20informa%C3%A7%C3%B5es%20urgentes%20sobre%20capacita%C3%A7%C3%B5es%20da%20Uni%C3%A3o%20Servi%C3%A7os%20M%C3%A9dicos.";
 
   return (
-    <section className="relative pt-32 pb-24 lg:pt-40 lg:pb-36 bg-slate-950 text-white overflow-hidden">
+    <section id="inicio" className="relative pt-32 pb-24 lg:pt-40 lg:pb-36 bg-slate-950 text-white overflow-hidden">
       
       {/* Background Animated Gradients & Mesh */}
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-7xl h-full pointer-events-none">
@@ -54,14 +54,15 @@ export const HeroSection: React.FC = () => {
               <span>Solicitar Treinamento Agora</span>
             </a>
 
-            <a
-              href="#contato"
+            <button
+              type="button"
+              onClick={() => document.getElementById('contato')?.scrollIntoView({ behavior: 'smooth', block: 'start' })}
               className="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 px-8 py-4 rounded-2xl text-base font-semibold text-white bg-white/5 hover:bg-white/10 border border-white/10 backdrop-blur-md transition-all"
             >
               <Sparkles className="w-4 h-4 text-uniao-400" />
               <span>Solicitar orçamento</span>
               <ArrowRight className="w-4 h-4 text-slate-400" />
-            </a>
+            </button>
           </div>
 
         </div>
