@@ -42,8 +42,8 @@ export const LandingPage: React.FC = () => {
       <main className="flex-1">
         <div data-reveal><HeroSection /></div>
         <div data-reveal><ContactSection /></div>
-        <div data-reveal><MethodologySection /></div>
         <div data-reveal><LegalComplianceSection /></div>
+        <div data-reveal><MethodologySection /></div>
         <div data-reveal><TrainingGallerySection /></div>
         <div data-reveal><AboutSection /></div>
         <div data-reveal><AudienceSection /></div>
