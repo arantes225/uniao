@@ -66,7 +66,7 @@ export const StudentLayout: React.FC = () => {
       <StudentNavbar 
         studentName={studentName}
         onProfileUpdated={setStudentName} 
-        turma="Turma APH & Stop the Bleed — 2026" 
+        turma={activeCohort?.name || 'Área do Aluno'} 
       />
 
       {/* Área principal: lateral no desktop e barra inferior fixa no mobile */}
