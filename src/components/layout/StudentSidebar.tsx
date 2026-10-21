@@ -13,8 +13,7 @@ interface StudentSidebarProps {
   onToggle?: () => void;
 }
 
-export const StudentSidebar: React.FC<StudentSidebarProps> = () => {
-  const [collapsed, setCollapsed] = useState(false);
+export const StudentSidebar: React.FC<StudentSidebarProps> = ({ collapsed = false, onToggle }) => {
   const [isAdmin, setIsAdmin] = useState(false);
   const { theme } = useTheme();
 
@@ -98,7 +97,7 @@ export const StudentSidebar: React.FC<StudentSidebarProps> = () => {
 
   return (
     <aside
-      className={`h-auto w-full flex flex-row border-t pb-[env(safe-area-inset-bottom)] md:h-full md:w-auto md:flex-col md:shrink-0 md:border-t-0 md:border-r md:pb-0 transition-all duration-300 ${
+      className={`h-auto w-full flex flex-row border-t pb-[env(safe-area-inset-bottom)] md:h-full md:w-full md:flex-col md:shrink-0 md:border-t-0 md:border-r md:pb-0 transition-all duration-300 ${
         collapsed ? 'md:w-20' : 'md:w-64'
       } ${
         theme === 'dark' 
@@ -123,7 +122,7 @@ export const StudentSidebar: React.FC<StudentSidebarProps> = () => {
         {/* Toggle Button */}
         <button
           type="button"
-          onClick={() => setCollapsed(!collapsed)}
+          onClick={onToggle}
           className={`p-1.5 rounded-lg transition-colors flex items-center justify-center ${
             theme === 'dark' 
               ? 'text-slate-400 hover:text-white hover:bg-white/5' 
