@@ -148,7 +148,7 @@ export const StudentDashboard: React.FC = () => {
             </div>
 
             <p className="text-sm text-slate-300 leading-relaxed font-light">
-              Videoaula completa + Apostila em PDF + 5 Questões objetivas (mínimo de 2 acertos para avançar).
+              Videoaula completa + Apostila de leitura + 5 questões obrigatórias para responder.
             </p>
 
             {/* Barra de Progresso do Curso */}
@@ -195,7 +195,7 @@ export const StudentDashboard: React.FC = () => {
                 Trilha do Curso: Módulos & Aulas
               </h3>
               <p className={`text-xs ${theme === 'dark' ? 'text-slate-400' : 'text-slate-500'}`}>
-                Cada módulo requer a conclusão prévia do anterior (mínimo de 2 de 5 acertos nas atividades).
+                Cada módulo requer a conclusão prévia do anterior e o preenchimento obrigatório das questões.
               </p>
             </div>
           </div>
@@ -280,7 +280,7 @@ export const StudentDashboard: React.FC = () => {
                       </span>
                     </div>
                     <p className={`text-xs ${theme === 'dark' ? 'text-slate-400' : 'text-slate-600'}`}>
-                      Videoaula • Apostila PDF • 5 Questões (acerte 2 para avançar)
+                      Videoaula • Apostila de leitura • 5 Questões obrigatórias
                     </p>
                   </div>
                 </div>
@@ -323,7 +323,7 @@ export const StudentDashboard: React.FC = () => {
             }`}>
               <div className="flex items-center gap-3">
                 <Clock className="w-4 h-4 text-slate-400" />
-                <span>Liberação automática após obter pelo menos 2 acertos em cada atividade do Módulo 01.</span>
+                <span>Liberação automática após concluir todas as questões obrigatórias do Módulo 01.</span>
               </div>
               <span className="font-bold text-slate-400">Bloqueado</span>
             </div>
@@ -353,3 +353,4 @@ export const StudentDashboard: React.FC = () => {
     </div>
   );
 };
+
