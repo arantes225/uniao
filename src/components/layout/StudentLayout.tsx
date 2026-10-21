@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Outlet } from 'react-router-dom';
 import { StudentSidebar } from './StudentSidebar';
+import { StudentBottomNav } from './StudentBottomNav';
 import { StudentNavbar } from './StudentNavbar';
 import { useTheme } from '../../context/ThemeContext';
 import { supabase } from '../../services/supabase/client';
@@ -49,15 +50,16 @@ export const StudentLayout: React.FC = () => {
 
       {/* Área principal: lateral no desktop e barra inferior fixa no mobile */}
       <div className="flex-1 flex min-w-0 relative">
-        <div className="fixed inset-x-0 bottom-0 z-40 w-full md:sticky md:top-16 md:h-[calc(100vh-4rem)] md:w-auto md:shrink-0 md:z-30">
+        <div className="hidden md:sticky md:top-16 md:z-30 md:block md:h-[calc(100vh-4rem)] md:w-auto md:shrink-0">
           <StudentSidebar />
         </div>
 
         {/* Espaço inferior evita que a barra móvel cubra o conteúdo. */}
-        <main className="flex-1 min-w-0 overflow-x-hidden overflow-y-auto pb-20 md:pb-0">
+        <main className="flex-1 min-w-0 overflow-x-hidden overflow-y-auto pb-[calc(6rem+env(safe-area-inset-bottom))] md:pb-0">
           <Outlet context={{ studentName }} />
         </main>
       </div>
+      <StudentBottomNav />
     </div>
   );
 };
