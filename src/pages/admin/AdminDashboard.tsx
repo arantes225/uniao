@@ -7,7 +7,7 @@ import {
   UserPlus, UserMinus, Eye, Filter, Sparkles, X,
   GraduationCap,
   Upload, Move, RotateCcw,
-  KeyRound, Copy
+  KeyRound, Copy, Send
 } from 'lucide-react';
 import { supabase } from '../../services/supabase/client';
 import { ContentManagerTab } from './ContentManagerTab';
@@ -49,6 +49,7 @@ const PRESET_MODELS: CertificatePreset[] = [
       'Suporte Básico de Vida (SBV) e Desfibrilação Externa Automática (DEA)',
       'Imobilização Espinhal Seletiva, Colar Cervical e Pranchamento Seguro',
       'Simulação Prática Realística de Alta Fidelidade com Debriefing Clínico',
+      'Aula Presencial Prática: estações de habilidades, torniquete, DEA e RCP',
     ],
   },
   {
@@ -116,6 +117,11 @@ const PRESET_MODELS: CertificatePreset[] = [
     ],
   },
 ];
+
+// Mantém o mesmo PIN administrativo usado pelo painel e pela liberação da turma.
+// A autenticação da rota continua sendo a barreira principal; este PIN é uma
+// confirmação adicional para ações irreversíveis dentro do modal.
+const ADMIN_PIN = '1926';
 
 interface StudentRecord {
   id: string;
@@ -326,6 +332,10 @@ export const AdminDashboard: React.FC = () => {
   const [releasedCohorts, setReleasedCohorts] = useState<Record<string, boolean>>({});
   const [releasePassword, setReleasePassword] = useState('');
   const [releaseError, setReleaseError] = useState(false);
+  const [isSendCertificatesOpen, setIsSendCertificatesOpen] = useState(false);
+  const [sendCertificatesPassword, setSendCertificatesPassword] = useState('');
+  const [sendCertificatesError, setSendCertificatesError] = useState(false);
+  const [sentCohorts, setSentCohorts] = useState<Record<string, number>>({});
 
   const handleOpenCohortCertModal = (cohort: any) => {
     setActiveCertCohort(cohort);
@@ -338,13 +348,28 @@ export const AdminDashboard: React.FC = () => {
   };
 
   const handleReleaseCertificates = () => {
-    if (releasePassword !== '1926') {
+    if (releasePassword !== ADMIN_PIN) {
       setReleaseError(true);
       return;
     }
     setReleasedCohorts(prev => ({ ...prev, [activeCertCohort.id]: true }));
     setReleasePassword('');
     setReleaseError(false);
+  };
+
+  const handleSendCertificatesToAll = () => {
+    if (!activeCertCohort) return;
+
+    if (sendCertificatesPassword !== ADMIN_PIN) {
+      setSendCertificatesError(true);
+      return;
+    }
+
+    const eligibleStudents = students.filter(student => student.cohortId === activeCertCohort.id);
+    setSentCohorts(prev => ({ ...prev, [activeCertCohort.id]: eligibleStudents.length }));
+    setSendCertificatesPassword('');
+    setSendCertificatesError(false);
+    setIsSendCertificatesOpen(false);
   };
 
   // Ajuste responsivo de tamanho de fonte para acomodar qualquer tamanho de nome sem estourar o layout
@@ -371,7 +396,7 @@ export const AdminDashboard: React.FC = () => {
 
   const handlePinSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    if (pinEntered === '1926') {
+    if (pinEntered === ADMIN_PIN) {
       setPinAuthorized(true);
       setPinError(false);
     } else {
@@ -1586,7 +1611,7 @@ export const AdminDashboard: React.FC = () => {
                   </div>
 
                   <div className="space-y-1.5">
-                    <label className="text-xs font-semibold text-slate-300">Diretor Técnico Médico</label>
+                    <label className="text-xs font-semibold text-slate-300">Cargo da direção técnica / responsável</label>
                     <input
                       type="text"
                       required
@@ -1806,7 +1831,7 @@ export const AdminDashboard: React.FC = () => {
                           <div className="text-right text-xs">
                             <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-teal-500/10 border border-teal-500/30 text-teal-300 font-bold text-[11px]">
                               <Award className="w-3.5 h-3.5 text-teal-400" />
-                              <span>Capacitação Médica & APH</span>
+                              <span>Treinamento em Primeiros Socorros</span>
                             </div>
                           </div>
                         </div>
@@ -1910,7 +1935,7 @@ export const AdminDashboard: React.FC = () => {
                         <div className="pt-4 flex flex-col sm:flex-row items-center justify-between text-[11px] text-slate-400 border-t border-white/10 gap-2 font-mono">
                           <div className="flex flex-wrap items-center gap-2">
                             <span className="text-slate-500">Chave:</span>
-                            <strong className="text-teal-400 font-bold">USM-2026-X89A-99F</strong>
+                            <strong className="text-teal-400 font-bold">{selectedStudentForCert ? `USM-${selectedStudentForCert.id.slice(0, 8).toUpperCase()}` : 'USM-MODELO-0001'}</strong>
                             <span className="text-slate-600">•</span>
                             <span className="text-teal-400 font-sans font-semibold">
                               uniao-servicos-medicos.com.br/validar-certificado
@@ -1943,7 +1968,7 @@ export const AdminDashboard: React.FC = () => {
 
                         <div className="space-y-3">
                           <div className="text-xs font-bold text-slate-300 uppercase tracking-wider">
-                            Módulos e Competências Prático-Profissionais:
+                            Conteúdo da formação:
                           </div>
 
                           <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs">
@@ -1959,9 +1984,9 @@ export const AdminDashboard: React.FC = () => {
                         </div>
 
                         <div className="p-4 bg-slate-950/80 rounded-2xl border border-teal-500/20 text-xs text-slate-300 space-y-1">
-                          <strong className="text-teal-400 block font-bold">Metodologia e Critérios de Aprovação:</strong>
+                          <strong className="text-teal-400 block font-bold">Etapas da formação:</strong>
                           <p className="leading-relaxed">
-                            Formação estruturada com videoaulas técnicas, material didático referenciado, 5 questões por módulo (mínimo de aproveitamento formativo), avaliação teórica com 20 questões e simulação de resposta a emergências.
+                            Videoaulas, material didático, questões obrigatórias, simulação de resposta a emergências e aula presencial prática.
                           </p>
                         </div>
 
@@ -2617,7 +2642,7 @@ export const AdminDashboard: React.FC = () => {
                       <div className="text-right text-xs">
                         <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-teal-500/10 border border-teal-500/30 text-teal-300 font-bold text-[11px]">
                           <Award className="w-3.5 h-3.5 text-teal-400" />
-                          <span>Capacitação Médica & APH</span>
+                          <span>Treinamento em Primeiros Socorros</span>
                         </div>
                       </div>
                     </div>
@@ -2668,7 +2693,7 @@ export const AdminDashboard: React.FC = () => {
                     <div className="pt-4 flex flex-col sm:flex-row items-center justify-between text-[11px] text-slate-400 border-t border-white/10 gap-2 font-mono">
                       <div className="flex flex-wrap items-center gap-2">
                         <span className="text-slate-500">Chave:</span>
-                        <strong className="text-teal-400 font-bold">USM-2026-X89A-99F</strong>
+                        <strong className="text-teal-400 font-bold">{selectedStudentForCert ? `USM-${selectedStudentForCert.id.slice(0, 8).toUpperCase()}` : 'USM-MODELO-0001'}</strong>
                         <span className="text-slate-600">•</span>
                         <span className="text-teal-400 font-sans font-semibold">
                           uniao-servicos-medicos.com.br/validar-certificado
@@ -2717,9 +2742,9 @@ export const AdminDashboard: React.FC = () => {
                     </div>
 
                     <div className="p-4 bg-slate-950/80 rounded-2xl border border-teal-500/20 text-xs text-slate-300 space-y-1">
-                      <strong className="text-teal-400 block font-bold">Metodologia e Critérios de Aprovação:</strong>
+                      <strong className="text-teal-400 block font-bold">Etapas da formação:</strong>
                       <p className="leading-relaxed">
-                        Formação estruturada com videoaulas técnicas, material didático referenciado, 5 questões por módulo (mínimo de aproveitamento formativo), avaliação teórica com 20 questões e simulação de resposta a emergências.
+                        Conteúdo online, simulações e aula presencial prática conforme o modelo autorizado para a turma.
                       </p>
                     </div>
 
@@ -2957,7 +2982,7 @@ export const AdminDashboard: React.FC = () => {
                             </div>
                           </div>
                           <span className="text-[10px] font-bold px-2 py-0.5 rounded-full bg-teal-500/10 text-teal-300 border border-teal-500/30">
-                            Capacitação Médica & APH
+                            Treinamento em Primeiros Socorros
                           </span>
                         </div>
 
@@ -3000,7 +3025,7 @@ export const AdminDashboard: React.FC = () => {
 
                         {/* Rodapé */}
                         <div className="pt-2 border-t border-white/10 flex items-center justify-between text-[9px] text-slate-400 font-mono">
-                          <div>Chave: <strong className="text-teal-400">USM-2026-X89A-99F</strong></div>
+                          <div>Chave: <strong className="text-teal-400">{selectedStudentForCert ? `USM-${selectedStudentForCert.id.slice(0, 8).toUpperCase()}` : 'USM-MODELO-0001'}</strong></div>
                           <span className="text-teal-400 font-sans">
                             uniao-servicos-medicos.com.br/validar-certificado
                           </span>
@@ -3034,14 +3059,14 @@ export const AdminDashboard: React.FC = () => {
                         </div>
 
                         <div className="p-2 rounded-xl bg-slate-950/80 border border-teal-500/20 text-[9px] text-slate-300">
-                          <strong className="text-teal-400 block font-bold">Metodologia e Aprovação:</strong>
+                          <strong className="text-teal-400 block font-bold">Etapas da formação:</strong>
                           <p className="leading-relaxed">
-                            Formação em metodologia Blended Learning com videoaulas, simulados clínicos de urgência e estação prática com manequins de RCP e torniquetes homologados.
+                            Conteúdo online, simulações clínicas de urgência e aula presencial com estações práticas de RCP e controle de hemorragias.
                           </p>
                         </div>
 
                         <div className="pt-2 border-t border-white/10 flex items-center justify-between text-[8px] text-slate-500 font-mono">
-                          <div>Código: <strong className="text-teal-400">USM-2026-X89A-99F</strong></div>
+                          <div>Código: <strong className="text-teal-400">{selectedStudentForCert ? `USM-${selectedStudentForCert.id.slice(0, 8).toUpperCase()}` : 'USM-MODELO-0001'}</strong></div>
                           <div>Documento Oficial Autenticado</div>
                         </div>
                       </div>
@@ -3134,6 +3159,28 @@ export const AdminDashboard: React.FC = () => {
                   )}
                 </div>
 
+                <div className="pt-3 border-t border-white/10 space-y-2">
+                  <button
+                    type="button"
+                    onClick={() => {
+                      setSendCertificatesPassword('');
+                      setSendCertificatesError(false);
+                      setIsSendCertificatesOpen(true);
+                    }}
+                    disabled={!releasedCohorts[activeCertCohort.id] || students.filter(student => student.cohortId === activeCertCohort.id).length === 0 || sentCohorts[activeCertCohort.id] !== undefined}
+                    className="w-full rounded-xl px-4 py-2.5 text-xs font-black flex items-center justify-center gap-2 transition-all bg-gradient-to-r from-teal-400 to-emerald-300 text-slate-950 hover:brightness-110 disabled:cursor-not-allowed disabled:opacity-40"
+                  >
+                    <Send className="w-3.5 h-3.5" />
+                    <span>{sentCohorts[activeCertCohort.id] !== undefined ? `Envio confirmado (${sentCohorts[activeCertCohort.id]} alunos)` : 'Enviar certificado para todos'}</span>
+                  </button>
+                  {!releasedCohorts[activeCertCohort.id] && (
+                    <p className="text-[10px] text-amber-300/80">Libere os certificados com o PIN acima antes de enviar para a turma.</p>
+                  )}
+                  {sentCohorts[activeCertCohort.id] !== undefined && (
+                    <p className="text-[10px] text-emerald-300/80">A confirmação foi registrada nesta sessão. O disparo de e-mail precisa estar conectado ao serviço de envio.</p>
+                  )}
+                </div>
+
                 <div className="pt-2 border-t border-white/10 flex justify-end">
                   <button
                     type="button"
@@ -3152,6 +3199,66 @@ export const AdminDashboard: React.FC = () => {
         </div>
       )}
 
+      {isSendCertificatesOpen && activeCertCohort && (
+        <div className="fixed inset-0 z-[60] bg-slate-950/90 backdrop-blur-sm flex items-center justify-center p-4">
+          <div className="w-full max-w-md rounded-2xl border border-amber-400/40 bg-slate-900 p-6 shadow-2xl">
+            <div className="flex items-start gap-3">
+              <div className="rounded-xl bg-amber-400/15 p-2 text-amber-300">
+                <KeyRound className="h-5 w-5" />
+              </div>
+              <div>
+                <h3 className="text-base font-bold text-white">Confirmar envio para toda a turma</h3>
+                <p className="mt-1 text-xs leading-relaxed text-slate-400">
+                  Digite o PIN administrativo para confirmar o envio dos certificados de {students.filter(student => student.cohortId === activeCertCohort.id).length} aluno(s) de “{activeCertCohort.name}”.
+                </p>
+              </div>
+            </div>
+
+            <form
+              onSubmit={(event) => {
+                event.preventDefault();
+                handleSendCertificatesToAll();
+              }}
+              className="mt-5 space-y-3"
+            >
+              <label className="block text-xs font-semibold text-slate-300" htmlFor="send-certificates-admin-pin">
+                Senha/PIN de administrador
+              </label>
+              <input
+                id="send-certificates-admin-pin"
+                autoFocus
+                type="password"
+                inputMode="numeric"
+                value={sendCertificatesPassword}
+                onChange={(event) => {
+                  setSendCertificatesPassword(event.target.value);
+                  setSendCertificatesError(false);
+                }}
+                placeholder="Digite o PIN administrativo"
+                className="w-full rounded-xl border border-white/10 bg-slate-950 px-3 py-2.5 text-sm text-white outline-none focus:border-amber-400/60"
+              />
+              {sendCertificatesError && <p className="text-xs text-red-300">PIN incorreto. O envio não foi confirmado.</p>}
+              <div className="flex justify-end gap-2 pt-2">
+                <button
+                  type="button"
+                  onClick={() => setIsSendCertificatesOpen(false)}
+                  className="rounded-xl bg-slate-800 px-4 py-2 text-xs font-bold text-white hover:bg-slate-700"
+                >
+                  Cancelar
+                </button>
+                <button
+                  type="submit"
+                  className="rounded-xl bg-amber-400 px-4 py-2 text-xs font-black text-slate-950 hover:bg-amber-300"
+                >
+                  Confirmar envio
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      )}
+
     </div>
   );
 };
+
