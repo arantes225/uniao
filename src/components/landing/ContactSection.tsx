@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { PhoneCall, Mail, Send, CheckCircle2, AlertCircle } from 'lucide-react';
-import { supabase } from '../../services/supabase/client';
 
 export const ContactSection: React.FC = () => {
   const [form, setForm] = useState({
@@ -22,18 +21,9 @@ export const ContactSection: React.FC = () => {
     setError(null);
 
     try {
-      // Salva o lead diretamente no Supabase União
-      const { error: insertError } = await supabase.from('contact_leads').insert([
-        {
-          contact_name: form.name,
-          email: form.email,
-          institution_name: form.institution,
-          audience: form.audience,
-          message: form.message,
-        }
-      ]);
-
-      if (insertError) throw insertError;
+      const subject = encodeURIComponent(`Solicitação de orçamento institucional — ${form.institution || form.name}`);
+      const body = encodeURIComponent(`Nome: ${form.name}\nE-mail: ${form.email}\nInstituição: ${form.institution}\nTipo: ${form.audience}\n\nNecessidade:\n${form.message}`);
+      window.location.href = `mailto:uniaoservicosmedicos@gmail.com?subject=${subject}&body=${body}`;
       setSuccess(true);
       setForm({ name: '', email: '', institution: '', audience: 'Escola / Colégio', message: '' });
     } catch (err: any) {
@@ -211,3 +201,4 @@ export const ContactSection: React.FC = () => {
     </section>
   );
 };
+
