@@ -39,30 +39,30 @@ export const LegalComplianceSection: React.FC = () => {
     <section className="py-24 lg:py-32 bg-slate-950 text-white relative border-t border-white/5 overflow-hidden">
       
       {/* Background Glow */}
-      <div className="absolute top-1/2 right-1/4 w-[500px] h-[500px] bg-red-600/10 rounded-full blur-[160px] pointer-events-none" />
+      <div className="absolute top-1/2 right-1/4 w-[500px] h-[500px] bg-red-600/10 rounded-full blur-[160px] pointer-events-none animate-pulse-glow" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
-        {/* Section Header de Alto Impacto Comercial */}
+        {/* Section Header */}
         <div className="max-w-3xl mx-auto text-center space-y-4 mb-20">
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-red-500/10 border border-red-500/30 text-red-300 text-xs font-bold uppercase tracking-wider">
+          <div data-reveal="fade-down" className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-red-500/10 border border-red-500/30 text-red-300 text-xs font-bold uppercase tracking-wider">
             <AlertTriangle className="w-4 h-4 text-red-400" />
             <span>Responsabilidade Jurídica & Preservação da Vida</span>
           </div>
 
-          <h2 className="text-3xl sm:text-5xl font-black tracking-tight text-white font-sans">
+          <h2 data-reveal="fade-up" className="text-3xl sm:text-5xl font-black tracking-tight text-white font-sans">
             Sua instituição está <br />
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-red-400 via-amber-300 to-uniao-400">
               realmente protegida ou correndo riscos?
             </span>
           </h2>
 
-          <p className="text-base sm:text-lg text-slate-400 leading-relaxed font-light">
+          <p data-reveal="fade-up" className="text-base sm:text-lg text-slate-400 leading-relaxed font-light">
             Não é apenas uma questão de segurança humana: é conformidade jurídica, reputação e tranquilidade operacional para diretores e proprietários.
           </p>
         </div>
 
-        {/* 3 Cards de Conversão Direta por Segmento */}
+        {/* 3 Cards */}
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
           {cards.map((card, idx) => {
             const Icon = card.icon;
@@ -71,7 +71,9 @@ export const LegalComplianceSection: React.FC = () => {
             return (
               <div 
                 key={idx}
-                className="group relative rounded-3xl p-8 bg-slate-900/90 border border-white/10 hover:border-uniao-500/60 shadow-2xl transition-all duration-300 flex flex-col justify-between hover:-translate-y-2"
+                data-reveal="fade-up"
+                data-reveal-delay={`${idx * 150}`}
+                className="group relative rounded-3xl p-8 bg-slate-900/90 border border-white/10 hover:border-uniao-500/60 shadow-2xl transition-all duration-300 flex flex-col justify-between hover:-translate-y-2 hover:shadow-[0_0_35px_rgba(20,184,166,0.2)]"
               >
                 <div className="space-y-6">
                   

@@ -42,25 +42,25 @@ export const MethodologySection: React.FC = () => {
     <section id="metodologia" className="py-24 lg:py-32 bg-slate-950 text-white relative border-t border-white/5 overflow-hidden">
       
       {/* Background Glow */}
-      <div className="absolute top-1/3 left-1/2 -translate-x-1/2 w-[700px] h-[350px] bg-uniao-600/10 rounded-full blur-[160px] pointer-events-none" />
+      <div className="absolute top-1/3 left-1/2 -translate-x-1/2 w-[700px] h-[350px] bg-uniao-600/10 rounded-full blur-[160px] pointer-events-none animate-pulse-glow" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
-        {/* Section Header com foco na Blended Learning Médica */}
+        {/* Section Header */}
         <div className="max-w-3xl mx-auto text-center space-y-4 mb-20">
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-uniao-500/10 border border-uniao-500/30 text-uniao-300 text-xs font-bold uppercase tracking-wider">
+          <div data-reveal="fade-down" className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-uniao-500/10 border border-uniao-500/30 text-uniao-300 text-xs font-bold uppercase tracking-wider">
             <Sparkles className="w-4 h-4 text-uniao-400" />
             <span>O Modelo de Excelência USM</span>
           </div>
 
-          <h2 className="text-3xl sm:text-5xl font-black tracking-tight font-sans text-white">
+          <h2 data-reveal="fade-up" className="text-3xl sm:text-5xl font-black tracking-tight font-sans text-white">
             Teoria e Simulação Online. <br />
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-teal-300 via-uniao-400 to-emerald-300">
               Prática Realista no Presencial.
             </span>
           </h2>
 
-          <p className="text-base sm:text-lg text-slate-400 leading-relaxed font-light">
+          <p data-reveal="fade-up" className="text-base sm:text-lg text-slate-400 leading-relaxed font-light">
             Não perdemos tempo presencial com slides teóricos. O aluno estuda no site, faz as provas, vence os simulados online e chega ao treinamento presencial pronto para praticar exaustivamente.
           </p>
         </div>
@@ -72,14 +72,15 @@ export const MethodologySection: React.FC = () => {
             return (
               <div
                 key={idx}
-                className={`relative rounded-3xl p-7 flex flex-col justify-between transition-all duration-300 ${
+                data-reveal="fade-up"
+                data-reveal-delay={`${idx * 150}`}
+                className={`relative rounded-3xl p-7 flex flex-col justify-between transition-all duration-300 hover:-translate-y-2 ${
                   step.highlight
-                    ? 'bg-gradient-to-b from-uniao-950/80 via-slate-900 to-slate-900 border-2 border-uniao-400 shadow-[0_0_35px_rgba(20,184,166,0.25)] transform lg:-translate-y-2'
-                    : 'bg-slate-900/70 border border-white/10 hover:border-uniao-500/40'
+                    ? 'bg-gradient-to-b from-uniao-950/90 via-slate-900 to-slate-900 border-2 border-uniao-400 shadow-[0_0_35px_rgba(20,184,166,0.25)]'
+                    : 'bg-slate-900/70 border border-white/10 hover:border-uniao-500/40 hover:bg-slate-900'
                 }`}
               >
                 <div>
-                  {/* Etapa tag */}
                   <span className={`text-[10px] font-bold tracking-wider block mb-4 uppercase ${
                     step.highlight ? 'text-uniao-300' : 'text-slate-500'
                   }`}>
@@ -126,8 +127,8 @@ export const MethodologySection: React.FC = () => {
           })}
         </div>
 
-        {/* Callout de Pré-requisito Rigoroso */}
-        <div className="mt-12 max-w-4xl mx-auto rounded-2xl bg-gradient-to-r from-uniao-950/60 to-slate-900/80 border border-uniao-500/30 p-6 flex flex-col sm:flex-row items-center gap-5 text-center sm:text-left">
+        {/* Callout */}
+        <div data-reveal="fade-up" className="mt-12 max-w-4xl mx-auto rounded-2xl bg-gradient-to-r from-uniao-950/80 to-slate-900/90 border border-uniao-500/30 p-6 flex flex-col sm:flex-row items-center gap-5 text-center sm:text-left">
           <div className="w-12 h-12 rounded-xl bg-uniao-500/20 text-uniao-400 flex items-center justify-center shrink-0 border border-uniao-500/30">
             <AlertTriangle className="w-6 h-6 text-uniao-400" />
           </div>

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { PhoneCall, Mail, Send, CheckCircle2, AlertCircle } from 'lucide-react';
+import { PhoneCall, Mail, Send, CheckCircle2, AlertCircle, Sparkles } from 'lucide-react';
 import { supabase } from '../../services/supabase/client';
 
 export const ContactSection: React.FC = () => {
@@ -38,7 +38,6 @@ export const ContactSection: React.FC = () => {
       setForm({ name: '', email: '', institution: '', audience: 'Escola / Colégio', message: '' });
     } catch (err: any) {
       console.error('Erro ao enviar contato:', err);
-      // Mesmo se houver falha de inserção (ex: RLS público estrito), oferecemos o link direto do WhatsApp/Mailto
       setError('Recebemos sua mensagem! Se preferir retorno imediato, fale conosco diretamente pelo WhatsApp.');
     } finally {
       setLoading(false);
@@ -46,77 +45,89 @@ export const ContactSection: React.FC = () => {
   };
 
   return (
-    <section id="contato" className="py-20 lg:py-28 bg-slate-50 relative">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="contato" className="py-24 lg:py-32 bg-slate-950 text-white relative border-t border-white/5 overflow-hidden">
+
+      {/* Background Glow */}
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-uniao-600/10 rounded-full blur-[180px] pointer-events-none animate-pulse-glow" />
+
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
         {/* Banner CTA */}
-        <div className="rounded-3xl bg-gradient-to-br from-uniao-900 via-uniao-800 to-slate-900 text-white p-8 sm:p-12 lg:p-16 shadow-2xl relative overflow-hidden mb-16">
+        <div data-reveal="fade-up" className="rounded-3xl bg-gradient-to-br from-slate-900 via-uniao-950/80 to-slate-900 border border-uniao-500/30 text-white p-8 sm:p-12 lg:p-16 shadow-2xl relative overflow-hidden mb-16 shadow-[0_0_50px_rgba(20,184,166,0.15)]">
           <div className="max-w-3xl space-y-4 relative z-10">
-            <span className="text-xs font-bold tracking-widest text-uniao-300 uppercase bg-uniao-700/50 px-3.5 py-1.5 rounded-full border border-uniao-500/30">
-              Prontidão e Resposta Rápida
-            </span>
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight">
-              Prepare sua equipe para agir quando cada segundo importa.
+            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-uniao-500/10 border border-uniao-500/30 text-uniao-300 text-xs font-bold uppercase tracking-wider">
+              <Sparkles className="w-4 h-4 text-uniao-400" />
+              <span>Prontidão e Resposta Rápida</span>
+            </div>
+
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black tracking-tight font-sans">
+              Prepare sua equipe para agir quando <br className="hidden sm:inline" />
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-teal-300 via-uniao-400 to-emerald-300">
+                cada segundo importa.
+              </span>
             </h2>
-            <p className="text-base sm:text-lg text-slate-300 leading-relaxed pt-2">
+
+            <p className="text-base sm:text-lg text-slate-300 leading-relaxed font-light pt-1">
               Solicite uma proposta detalhada para capacitar os colaboradores ou alunos da sua instituição com a equipe da União Serviços Médicos.
             </p>
+
             <div className="flex flex-col sm:flex-row gap-4 pt-4">
               <a
                 href={whatsappUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center justify-center gap-2.5 px-6 py-3.5 rounded-xl font-bold text-slate-900 bg-white hover:bg-slate-100 shadow-md transition-all"
+                className="inline-flex items-center justify-center gap-2.5 px-7 py-4 rounded-xl font-extrabold text-xs sm:text-sm text-slate-950 bg-gradient-to-r from-uniao-400 via-teal-300 to-emerald-300 hover:brightness-110 shadow-lg shadow-uniao-500/20 transition-all transform hover:-translate-y-0.5"
               >
-                <PhoneCall className="w-5 h-5 text-uniao-600" />
+                <PhoneCall className="w-4 h-4 text-slate-950" />
                 <span>Falar pelo WhatsApp</span>
               </a>
+
               <a
                 href="mailto:uniaoservicosmedicos@gmail.com"
-                className="inline-flex items-center justify-center gap-2.5 px-6 py-3.5 rounded-xl font-semibold text-white bg-uniao-700 hover:bg-uniao-600 border border-uniao-500/40 transition-all"
+                className="inline-flex items-center justify-center gap-2.5 px-7 py-4 rounded-xl font-bold text-xs sm:text-sm text-white bg-white/10 hover:bg-white/15 border border-white/10 backdrop-blur-md transition-all"
               >
-                <Mail className="w-5 h-5" />
-                <span>Enviar um e-mail</span>
+                <Mail className="w-4 h-4 text-uniao-400" />
+                <span>Enviar um E-mail</span>
               </a>
             </div>
           </div>
         </div>
 
         {/* Formulário de Proposta */}
-        <div className="max-w-2xl mx-auto bg-white rounded-2xl border border-slate-200 p-8 shadow-sm">
-          <h3 className="text-2xl font-bold text-slate-900 mb-2 text-center">
+        <div data-reveal="fade-up" data-reveal-delay="150" className="max-w-2xl mx-auto bg-slate-900/90 rounded-3xl border border-white/10 p-8 sm:p-12 shadow-2xl backdrop-blur-xl">
+          <h3 className="text-2xl sm:text-3xl font-black text-white mb-2 text-center">
             Solicite um orçamento institucional
           </h3>
-          <p className="text-sm text-slate-600 text-center mb-8">
+          <p className="text-xs sm:text-sm text-slate-400 text-center mb-8">
             Preencha os dados abaixo e nossa coordenação pedagógica entrará em contato.
           </p>
 
           {success ? (
-            <div className="p-6 rounded-xl bg-uniao-50 border border-uniao-200 text-center space-y-3">
-              <CheckCircle2 className="w-10 h-10 text-uniao-600 mx-auto" />
-              <h4 className="text-lg font-bold text-slate-900">Solicitação enviada com sucesso!</h4>
-              <p className="text-sm text-slate-600">
+            <div className="p-8 rounded-2xl bg-uniao-500/10 border border-uniao-500/30 text-center space-y-4">
+              <CheckCircle2 className="w-12 h-12 text-uniao-400 mx-auto" />
+              <h4 className="text-xl font-bold text-white">Solicitação enviada com sucesso!</h4>
+              <p className="text-sm text-slate-300 leading-relaxed">
                 Nossa equipe entrará em contato em breve com a proposta personalizada.
               </p>
               <button
                 type="button"
                 onClick={() => setSuccess(false)}
-                className="mt-2 text-xs font-semibold text-uniao-700 underline"
+                className="mt-2 text-xs font-bold text-uniao-400 hover:text-uniao-300 underline"
               >
                 Enviar nova mensagem
               </button>
             </div>
           ) : (
-            <form onSubmit={handleSubmit} className="space-y-4">
+            <form onSubmit={handleSubmit} className="space-y-5">
               {error && (
-                <div className="p-4 rounded-lg bg-amber-50 border border-amber-200 text-amber-800 text-xs flex items-center gap-2">
-                  <AlertCircle className="w-4 h-4 shrink-0 text-amber-600" />
+                <div className="p-4 rounded-xl bg-amber-500/10 border border-amber-500/30 text-amber-200 text-xs flex items-center gap-2.5">
+                  <AlertCircle className="w-4 h-4 shrink-0 text-amber-400" />
                   <span>{error}</span>
                 </div>
               )}
 
               <div>
-                <label className="block text-xs font-semibold text-slate-700 uppercase mb-1">
+                <label className="block text-xs font-bold text-slate-300 uppercase tracking-wider mb-2">
                   Nome Completo
                 </label>
                 <input
@@ -125,13 +136,13 @@ export const ContactSection: React.FC = () => {
                   value={form.name}
                   onChange={(e) => setForm({ ...form, name: e.target.value })}
                   placeholder="Seu nome"
-                  className="w-full px-4 py-2.5 rounded-lg border border-slate-300 text-sm focus:outline-none focus:ring-2 focus:ring-uniao-500/50 focus:border-uniao-500"
+                  className="w-full px-4 py-3 rounded-xl bg-slate-950/80 border border-white/15 text-white placeholder-slate-500 text-sm focus:outline-none focus:ring-2 focus:ring-uniao-400/50 focus:border-uniao-400 transition-all"
                 />
               </div>
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div>
-                  <label className="block text-xs font-semibold text-slate-700 uppercase mb-1">
+                  <label className="block text-xs font-bold text-slate-300 uppercase tracking-wider mb-2">
                     E-mail Institucional
                   </label>
                   <input
@@ -140,11 +151,11 @@ export const ContactSection: React.FC = () => {
                     value={form.email}
                     onChange={(e) => setForm({ ...form, email: e.target.value })}
                     placeholder="seu@email.com"
-                    className="w-full px-4 py-2.5 rounded-lg border border-slate-300 text-sm focus:outline-none focus:ring-2 focus:ring-uniao-500/50 focus:border-uniao-500"
+                    className="w-full px-4 py-3 rounded-xl bg-slate-950/80 border border-white/15 text-white placeholder-slate-500 text-sm focus:outline-none focus:ring-2 focus:ring-uniao-400/50 focus:border-uniao-400 transition-all"
                   />
                 </div>
                 <div>
-                  <label className="block text-xs font-semibold text-slate-700 uppercase mb-1">
+                  <label className="block text-xs font-bold text-slate-300 uppercase tracking-wider mb-2">
                     Nome da Instituição
                   </label>
                   <input
@@ -152,19 +163,19 @@ export const ContactSection: React.FC = () => {
                     value={form.institution}
                     onChange={(e) => setForm({ ...form, institution: e.target.value })}
                     placeholder="Escola, Empresa, Academia..."
-                    className="w-full px-4 py-2.5 rounded-lg border border-slate-300 text-sm focus:outline-none focus:ring-2 focus:ring-uniao-500/50 focus:border-uniao-500"
+                    className="w-full px-4 py-3 rounded-xl bg-slate-950/80 border border-white/15 text-white placeholder-slate-500 text-sm focus:outline-none focus:ring-2 focus:ring-uniao-400/50 focus:border-uniao-400 transition-all"
                   />
                 </div>
               </div>
 
               <div>
-                <label className="block text-xs font-semibold text-slate-700 uppercase mb-1">
+                <label className="block text-xs font-bold text-slate-300 uppercase tracking-wider mb-2">
                   Tipo de Instituição
                 </label>
                 <select
                   value={form.audience}
                   onChange={(e) => setForm({ ...form, audience: e.target.value })}
-                  className="w-full px-4 py-2.5 rounded-lg border border-slate-300 text-sm focus:outline-none focus:ring-2 focus:ring-uniao-500/50 focus:border-uniao-500 bg-white"
+                  className="w-full px-4 py-3 rounded-xl bg-slate-950/80 border border-white/15 text-white text-sm focus:outline-none focus:ring-2 focus:ring-uniao-400/50 focus:border-uniao-400 transition-all"
                 >
                   <option value="Escola / Colégio">Escola / Colégio</option>
                   <option value="Academia / Centro Esportivo">Academia / Centro Esportivo</option>
@@ -175,7 +186,7 @@ export const ContactSection: React.FC = () => {
               </div>
 
               <div>
-                <label className="block text-xs font-semibold text-slate-700 uppercase mb-1">
+                <label className="block text-xs font-bold text-slate-300 uppercase tracking-wider mb-2">
                   Mensagem / Necessidade do Treinamento
                 </label>
                 <textarea
@@ -183,14 +194,14 @@ export const ContactSection: React.FC = () => {
                   value={form.message}
                   onChange={(e) => setForm({ ...form, message: e.target.value })}
                   placeholder="Ex: Treinamento de primeiros socorros para 30 professores em conformidade com a Lei Lucas..."
-                  className="w-full px-4 py-2.5 rounded-lg border border-slate-300 text-sm focus:outline-none focus:ring-2 focus:ring-uniao-500/50 focus:border-uniao-500"
+                  className="w-full px-4 py-3 rounded-xl bg-slate-950/80 border border-white/15 text-white placeholder-slate-500 text-sm focus:outline-none focus:ring-2 focus:ring-uniao-400/50 focus:border-uniao-400 transition-all resize-none"
                 />
               </div>
 
               <button
                 type="submit"
                 disabled={loading}
-                className="w-full inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl font-bold text-white bg-uniao-600 hover:bg-uniao-700 transition-all shadow disabled:opacity-50 mt-2"
+                className="w-full inline-flex items-center justify-center gap-2.5 px-6 py-4 rounded-xl font-black text-xs sm:text-sm text-slate-950 bg-gradient-to-r from-uniao-400 via-teal-300 to-emerald-300 hover:brightness-110 shadow-xl shadow-uniao-500/20 transition-all disabled:opacity-50 mt-2"
               >
                 {loading ? (
                   <span>Enviando solicitação...</span>

@@ -16,6 +16,26 @@ import { Footer } from '../../components/layout/Footer';
 export const LandingPage: React.FC = () => {
   useEffect(() => {
     const revealElements = Array.from(document.querySelectorAll<HTMLElement>('[data-reveal]'));
+
+    revealElements.forEach((element) => {
+      const delay = element.getAttribute('data-reveal-delay');
+      if (delay) {
+        element.style.transitionDelay = `${delay}ms`;
+      }
+    });
+
+    const revealInView = () => {
+      revealElements.forEach((element) => {
+        const rect = element.getBoundingClientRect();
+        if (rect.top < window.innerHeight + 80 && rect.bottom > -80) {
+          element.classList.add('is-visible');
+        }
+      });
+    };
+
+    // Immediate check on mount
+    revealInView();
+
     if (!('IntersectionObserver' in window)) {
       revealElements.forEach((element) => element.classList.add('is-visible'));
       return;
@@ -30,28 +50,44 @@ export const LandingPage: React.FC = () => {
           }
         });
       },
-      { threshold: 0.12, rootMargin: '0px 0px -48px' },
+      { threshold: 0.05, rootMargin: '80px 0px' },
     );
 
     revealElements.forEach((element) => observer.observe(element));
-    return () => observer.disconnect();
+
+    window.addEventListener('scroll', revealInView, { passive: true });
+
+    return () => {
+      observer.disconnect();
+      window.removeEventListener('scroll', revealInView);
+    };
   }, []);
 
   return (
-    <div className="landing-dark min-h-screen flex flex-col bg-slate-950 text-slate-100">
+    <div className="landing-dark min-h-screen flex flex-col bg-slate-950 text-slate-100 overflow-x-hidden selection:bg-uniao-500 selection:text-slate-950">
+
+      {/* Dynamic Ambient Background Orbs */}
+      <div className="fixed inset-0 pointer-events-none z-0 overflow-hidden">
+        <div className="absolute -top-40 -left-40 w-96 h-96 bg-uniao-600/10 rounded-full blur-[160px] animate-pulse-glow" />
+        <div className="absolute top-1/3 -right-40 w-[500px] h-[500px] bg-teal-500/10 rounded-full blur-[180px] animate-pulse-glow" style={{ animationDuration: '8s' }} />
+        <div className="absolute bottom-1/4 -left-40 w-[600px] h-[600px] bg-emerald-600/10 rounded-full blur-[200px] animate-pulse-glow" style={{ animationDuration: '10s' }} />
+      </div>
+
       <Navbar />
-      <main className="flex-1">
-        <div data-reveal><HeroSection /></div>
-        <div data-reveal><LegalComplianceSection /></div>
-        <div data-reveal><TrainingGallerySection /></div>
-        <div data-reveal><AboutSection /></div>
-        <div data-reveal><CoursesSection /></div>
-        <div data-reveal><AudienceSection /></div>
-        <div data-reveal><MethodologySection /></div>
-        <div data-reveal><InstructorsSection /></div>
-        <div data-reveal><FaqSection /></div>
-        <div data-reveal><ContactSection /></div>
+
+      <main className="flex-1 relative z-10">
+        <HeroSection />
+        <LegalComplianceSection />
+        <TrainingGallerySection />
+        <AboutSection />
+        <CoursesSection />
+        <AudienceSection />
+        <MethodologySection />
+        <InstructorsSection />
+        <FaqSection />
+        <ContactSection />
       </main>
+
       <FloatingWhatsAppButton />
       <Footer />
     </div>

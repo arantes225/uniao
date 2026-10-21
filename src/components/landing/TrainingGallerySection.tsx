@@ -13,7 +13,6 @@ interface GalleryItem {
 export const TrainingGallerySection: React.FC = () => {
   const [items, setItems] = useState<GalleryItem[]>([]);
 
-  // Amostras realistas de destaque para quando o usuário subir no admin
   const placeholderImages: GalleryItem[] = [
     {
       id: 'demo-1',
@@ -66,25 +65,25 @@ export const TrainingGallerySection: React.FC = () => {
   }, []);
 
   return (
-    <section id="galeria" className="py-24 lg:py-32 bg-slate-950 text-white relative border-t border-white/5">
+    <section id="galeria" className="py-24 lg:py-32 bg-slate-950 text-white relative border-t border-white/5 overflow-hidden">
       
       {/* Background Glow */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[300px] bg-uniao-600/10 rounded-full blur-[140px] pointer-events-none" />
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[300px] bg-uniao-600/10 rounded-full blur-[140px] pointer-events-none animate-pulse-glow" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
         {/* Section Header */}
         <div className="max-w-3xl mx-auto text-center space-y-4 mb-16">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-uniao-500/10 border border-uniao-500/30 text-uniao-400 text-xs font-bold uppercase tracking-wider">
+          <div data-reveal="fade-down" className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-uniao-500/10 border border-uniao-500/30 text-uniao-400 text-xs font-bold uppercase tracking-wider">
             <Camera className="w-4 h-4" />
             <span>Treinamento Real em Campo</span>
           </div>
 
-          <h2 className="text-3xl sm:text-5xl font-black tracking-tight font-sans text-white">
+          <h2 data-reveal="fade-up" className="text-3xl sm:text-5xl font-black tracking-tight font-sans text-white">
             Imersão, técnica e prática sem filtros.
           </h2>
 
-          <p className="text-base sm:text-lg text-slate-400 leading-relaxed font-light">
+          <p data-reveal="fade-up" className="text-base sm:text-lg text-slate-400 leading-relaxed font-light">
             Não ensinamos com palestras cansativas. Ensinamos com as mãos na massa, equipamentos de verdade e simulações realistas que preparam o reflexo de quem socorre.
           </p>
         </div>
@@ -94,7 +93,9 @@ export const TrainingGallerySection: React.FC = () => {
           {items.map((item, idx) => (
             <div 
               key={item.id || idx}
-              className="group relative rounded-3xl overflow-hidden bg-slate-900 border border-white/10 hover:border-uniao-500/50 shadow-2xl transition-all duration-300 transform hover:-translate-y-1.5"
+              data-reveal="fade-up"
+              data-reveal-delay={`${idx * 120}`}
+              className="group relative rounded-3xl overflow-hidden bg-slate-900 border border-white/10 hover:border-uniao-500/60 shadow-2xl transition-all duration-300 transform hover:-translate-y-2 hover:shadow-[0_0_30px_rgba(20,184,166,0.2)]"
             >
               {/* Image Frame */}
               <div className="aspect-[4/3] w-full overflow-hidden bg-slate-800 relative">

@@ -28,20 +28,20 @@ export const FaqSection: React.FC = () => {
   ];
 
   return (
-    <section className="py-24 lg:py-32 bg-slate-950 text-white relative border-t border-white/5">
+    <section className="py-24 lg:py-32 bg-slate-950 text-white relative border-t border-white/5 overflow-hidden">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
         <div className="text-center space-y-4 mb-16">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-uniao-500/10 border border-uniao-500/30 text-uniao-400 text-xs font-bold uppercase tracking-wider">
+          <div data-reveal="fade-down" className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-uniao-500/10 border border-uniao-500/30 text-uniao-400 text-xs font-bold uppercase tracking-wider">
             <HelpCircle className="w-4 h-4" />
             <span>Perguntas Frequentes</span>
           </div>
 
-          <h2 className="text-3xl sm:text-5xl font-black tracking-tight text-white font-sans">
+          <h2 data-reveal="fade-up" className="text-3xl sm:text-5xl font-black tracking-tight text-white font-sans">
             Tire suas dúvidas antes de contratar
           </h2>
 
-          <p className="text-sm sm:text-base text-slate-400 font-light">
+          <p data-reveal="fade-up" className="text-sm sm:text-base text-slate-400 font-light">
             Transparência total para você tomar a decisão certa para a segurança da sua equipe.
           </p>
         </div>
@@ -52,7 +52,9 @@ export const FaqSection: React.FC = () => {
             return (
               <div
                 key={idx}
-                className="rounded-2xl border border-white/10 bg-slate-900/80 overflow-hidden transition-all"
+                data-reveal="fade-up"
+                data-reveal-delay={`${idx * 100}`}
+                className="rounded-2xl border border-white/10 bg-slate-900/80 overflow-hidden transition-all hover:border-uniao-500/40"
               >
                 <button
                   type="button"
@@ -76,7 +78,7 @@ export const FaqSection: React.FC = () => {
         </div>
 
         {/* Floating Call to Action */}
-        <div className="mt-12 text-center">
+        <div data-reveal="fade-up" className="mt-12 text-center">
           <a
             href="https://wa.me/5561999638011?text=Ol%C3%A1!%20Ainda%20tenho%20d%C3%BAvidas%20sobre%20a%20capacita%C3%A7%C3%A3o%20da%20Uni%C3%A3o."
             target="_blank"

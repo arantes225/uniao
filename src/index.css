@@ -3,31 +3,41 @@
 @tailwind utilities;
 
 @layer base {
+  html {
+    scroll-behavior: smooth;
+    color-scheme: dark;
+    background-color: #030712;
+  }
   body {
     @apply text-slate-100 bg-slate-950 antialiased;
     font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+    background-color: #030712;
+  }
+  ::selection {
+    background-color: #14b8a6;
+    color: #030712;
   }
 }
 
 /* Scrollbars follow the União palette in every page and reader panel. */
 * {
   scrollbar-width: thin;
-  scrollbar-color: #14b8a6 #0f1b2d;
+  scrollbar-color: #14b8a6 #0b1320;
 }
 
 *::-webkit-scrollbar {
-  width: 10px;
-  height: 10px;
+  width: 8px;
+  height: 8px;
 }
 
 *::-webkit-scrollbar-track {
-  background: #0f1b2d;
+  background: #0b1320;
   border-radius: 999px;
 }
 
 *::-webkit-scrollbar-thumb {
   background: linear-gradient(180deg, #2dd4bf, #0f766e);
-  border: 2px solid #0f1b2d;
+  border: 2px solid #0b1320;
   border-radius: 999px;
 }
 
@@ -39,92 +49,127 @@
   scrollbar-gutter: stable;
 }
 
-/* União visual system: one dark surface shared by the institutional landing
-   page and public certificate validation flow. */
+/* União visual system: dark surface theme */
 .landing-dark {
-  --uniao-surface: #08111d;
-  --uniao-surface-raised: #0d1a2a;
-  --uniao-surface-soft: #101f31;
-  background-color: var(--uniao-surface) !important;
+  --uniao-surface: #030712;
+  --uniao-surface-raised: #0b1320;
+  --uniao-surface-soft: #0f172a;
+  background-color: #030712 !important;
   color: #f8fafc;
   color-scheme: dark;
 }
 
 .landing-dark .bg-white,
-.landing-dark [class~="bg-white"] {
+.landing-dark [class*="bg-white"] {
   background-color: var(--uniao-surface-raised) !important;
 }
 
 .landing-dark .bg-slate-50,
-.landing-dark [class~="bg-slate-50"],
-.landing-dark [class~="bg-slate-50/50"],
-.landing-dark [class~="bg-slate-50/70"] {
+.landing-dark [class*="bg-slate-50"] {
   background-color: var(--uniao-surface-soft) !important;
 }
 
-.landing-dark [class~="text-slate-900"],
-.landing-dark [class~="text-slate-800"] {
+.landing-dark [class*="text-slate-900"],
+.landing-dark [class*="text-slate-800"] {
   color: #f8fafc !important;
 }
 
-.landing-dark [class~="text-slate-700"] {
+.landing-dark [class*="text-slate-700"] {
   color: #cbd5e1 !important;
 }
 
-.landing-dark [class~="text-slate-600"] {
+.landing-dark [class*="text-slate-600"] {
   color: #94a3b8 !important;
 }
 
-.landing-dark [class~="text-slate-500"] {
+.landing-dark [class*="text-slate-500"] {
   color: #64748b !important;
 }
 
-.landing-dark [class~="border-slate-200"],
-.landing-dark [class~="border-slate-200/80"],
-.landing-dark [class~="border-slate-200/90"],
-.landing-dark [class~="border-slate-100"],
-.landing-dark [class~="border-slate-300"] {
+.landing-dark [class*="border-slate-200"],
+.landing-dark [class*="border-slate-100"],
+.landing-dark [class*="border-slate-300"] {
   border-color: rgba(148, 163, 184, 0.18) !important;
 }
 
-.landing-dark input,
-.landing-dark textarea,
-.landing-dark select {
-  color-scheme: dark;
-}
-
-.landing-dark input:not([class*="bg-"]),
-.landing-dark textarea:not([class*="bg-"]),
-.landing-dark select:not([class*="bg-"]) {
-  background-color: rgba(8, 17, 29, 0.82) !important;
+/* Fix option tag dropdowns in select elements on dark background */
+option {
+  background-color: #0f172a !important;
   color: #f8fafc !important;
-  border-color: rgba(148, 163, 184, 0.24) !important;
 }
 
+/* Scroll reveal motion classes */
 [data-reveal] {
   opacity: 0;
-  transform: translate3d(0, 28px, 0);
-  transition: opacity 700ms ease, transform 700ms cubic-bezier(0.22, 1, 0.36, 1);
   will-change: opacity, transform;
+  transition: opacity 700ms cubic-bezier(0.16, 1, 0.3, 1), transform 700ms cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-[data-reveal].is-visible,
-.reveal.is-visible {
-  opacity: 1;
-  transform: none;
+[data-reveal="fade-up"],
+[data-reveal]:not([data-reveal="fade-down"]):not([data-reveal="fade-left"]):not([data-reveal="fade-right"]):not([data-reveal="zoom-in"]) {
+  transform: translate3d(0, 24px, 0);
+}
+
+[data-reveal="fade-down"] {
+  transform: translate3d(0, -24px, 0);
+}
+
+[data-reveal="fade-left"] {
+  transform: translate3d(-24px, 0, 0);
+}
+
+[data-reveal="fade-right"] {
+  transform: translate3d(24px, 0, 0);
+}
+
+[data-reveal="zoom-in"] {
+  transform: scale(0.95);
+}
+
+[data-reveal].is-visible {
+  opacity: 1 !important;
+  transform: translate3d(0, 0, 0) scale(1) !important;
 }
 
 @media (prefers-reduced-motion: reduce) {
-  [data-reveal],
-  .reveal {
-    opacity: 1;
-    transform: none;
-    transition: none;
+  [data-reveal] {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
   }
 }
 
+/* Custom animations for glowing background elements and subtle floating */
+@keyframes floatSlow {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-12px) rotate(1deg);
+  }
+}
+
+@keyframes pulseGlow {
+  0%, 100% {
+    opacity: 0.3;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.6;
+    transform: scale(1.08);
+  }
+}
+
+.animate-float-slow {
+  animation: floatSlow 7s ease-in-out infinite;
+}
+
+.animate-pulse-glow {
+  animation: pulseGlow 5s ease-in-out infinite;
+}
+
 .gradient-hero {
-  background: radial-gradient(120% 120% at 50% 0%, rgba(204, 251, 241, 0.4) 0%, rgba(240, 253, 250, 0.2) 50%, rgba(248, 250, 252, 1) 100%);
+  background: radial-gradient(120% 120% at 50% 0%, rgba(20, 184, 166, 0.18) 0%, rgba(13, 148, 136, 0.08) 50%, rgba(3, 7, 18, 1) 100%);
 }
 
 .gradient-teal {
@@ -132,7 +177,7 @@
 }
 
 .glass-nav {
-  background: rgba(255, 255, 255, 0.88);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
+  background: rgba(3, 7, 18, 0.85);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
 }
