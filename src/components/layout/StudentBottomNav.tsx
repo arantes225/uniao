@@ -22,13 +22,14 @@ const extraItems = [
   { label: 'Certificados', path: '/aluno/certificados', icon: Award },
 ];
 
-export const StudentBottomNav: React.FC = () => {
+export const StudentBottomNav: React.FC<{ initialLessonCode?: string }> = ({ initialLessonCode }) => {
   const { theme } = useTheme();
   const location = useLocation();
   const [moreOpen, setMoreOpen] = useState(false);
   const [isAdmin, setIsAdmin] = useState(false);
   const navRef = useRef<HTMLElement>(null);
   const dark = theme === 'dark';
+  const currentPrimaryItems = primaryItems.map(item => item.label === 'Aulas' ? { ...item, path: initialLessonCode ? `/aluno/aula/${initialLessonCode}` : '/aluno/dashboard' } : item);
 
   useEffect(() => {
     let mounted = true;
@@ -148,7 +149,7 @@ export const StudentBottomNav: React.FC = () => {
       )}
 
       <div className="grid grid-cols-6 gap-1">
-        {primaryItems.map(({ label, path, icon: Icon }) => (
+        {currentPrimaryItems.map(({ label, path, icon: Icon }) => (
           <NavLink
             key={path}
             to={path}
