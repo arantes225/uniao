@@ -39,6 +39,28 @@
   scrollbar-gutter: stable;
 }
 
+.apostilas-page {
+  scrollbar-color: #14b8a6 #e2e8f0;
+}
+
+.apostilas-page::-webkit-scrollbar-track,
+.apostila-leitor::-webkit-scrollbar-track {
+  background: #e2e8f0;
+}
+
+.apostilas-page::-webkit-scrollbar-thumb,
+.apostila-leitor::-webkit-scrollbar-thumb {
+  border-color: #e2e8f0;
+}
+
+/* Apostilas são disponibilizadas somente para leitura dentro do site. */
+@media print {
+  .apostilas-page,
+  .apostila-leitor {
+    display: none !important;
+  }
+}
+
 /* União visual system: one dark surface shared by the institutional landing
    page and public certificate validation flow. */
 .landing-dark {
@@ -136,3 +158,4 @@
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
 }
+
