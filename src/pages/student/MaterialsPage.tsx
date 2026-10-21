@@ -1,7 +1,7 @@
-import React, { useState, useEffect, useMemo } from 'react';
-import { BookOpen, FileDown, CheckCircle2, Eye, X, Search, Printer, Layers } from 'lucide-react';
+import React, { useState, useEffect } from 'react';
+import { BookOpen, CheckCircle2, Eye, X, Search, Layers } from 'lucide-react';
 import { INITIAL_LIBRARIES, INITIAL_40_MODULES, LearningModule } from '../../data/curriculumData';
-import { BookletRenderer } from '../../components/common/BookletRenderer';
+import { BookletRenderer, TextHighlightToolbar } from '../../components/common/BookletRenderer';
 import { useTheme } from '../../context/ThemeContext';
 
 export const MaterialsPage: React.FC = () => {
@@ -13,28 +13,14 @@ export const MaterialsPage: React.FC = () => {
   const [loadingMd, setLoadingMd] = useState<boolean>(false);
   const [studiedCodes, setStudiedCodes] = useState<string[]>(['C01', 'C02', 'H01']);
 
-  // Performance Optimization: O(1) Map lookup for library details instead of O(N) .find() inside map loops
-  const libraryMap = useMemo(() => {
-    const map = new Map<string, typeof INITIAL_LIBRARIES[0]>();
-    INITIAL_LIBRARIES.forEach(lib => map.set(lib.id, lib));
-    return map;
-  }, []);
-
-  // Performance Optimization: Memoize filtered modules list to prevent re-filtering
-  // on unrelated state updates (such as toggleStudied or activeModule change).
-  const filteredModules = useMemo(() => {
-    const term = searchTerm.toLowerCase().trim();
-    return INITIAL_40_MODULES.filter(mod => {
-      const matchesLib = selectedLibraryId === 'all' || mod.libraryId === selectedLibraryId;
-      if (!matchesLib) return false;
-      if (!term) return true;
-      return (
-        mod.code.toLowerCase().includes(term) ||
-        mod.title.toLowerCase().includes(term) ||
-        mod.description.toLowerCase().includes(term)
-      );
-    });
-  }, [selectedLibraryId, searchTerm]);
+  const filteredModules = INITIAL_40_MODULES.filter(mod => {
+    const matchesLib = selectedLibraryId === 'all' || mod.libraryId === selectedLibraryId;
+    const matchesSearch =
+      mod.code.toLowerCase().includes(searchTerm.toLowerCase()) ||
+      mod.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
+      mod.description.toLowerCase().includes(searchTerm.toLowerCase());
+    return matchesLib && matchesSearch;
+  });
 
   const handleOpenBooklet = async (mod: LearningModule) => {
     setActiveModule(mod);
@@ -54,15 +40,6 @@ export const MaterialsPage: React.FC = () => {
     }
   };
 
-  const handleDownloadMd = (mod: LearningModule) => {
-    const link = document.createElement('a');
-    link.href = `./apostilas/md/${mod.code}.md`;
-    link.download = `Apostila_${mod.code}_${mod.title.replace(/\s+/g, '_')}.md`;
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
-  };
-
   const toggleStudied = (code: string) => {
     setStudiedCodes(prev =>
       prev.includes(code) ? prev.filter(c => c !== code) : [...prev, code]
@@ -72,13 +49,16 @@ export const MaterialsPage: React.FC = () => {
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
       if (e.key === 'Escape') setActiveModule(null);
+      if (activeModule && (e.ctrlKey || e.metaKey) && e.key.toLowerCase() === 'p') {
+        e.preventDefault();
+      }
     };
     window.addEventListener('keydown', handleKeyDown);
     return () => window.removeEventListener('keydown', handleKeyDown);
-  }, []);
+  }, [activeModule]);
 
   return (
-    <div className="p-6 sm:p-10 space-y-8 max-w-7xl mx-auto w-full">
+    <div className="apostilas-page p-6 sm:p-10 space-y-8 max-w-7xl mx-auto w-full">
       {/* Cabeçalho */}
       <div className="flex flex-col md:flex-row md:items-end justify-between gap-4">
         <div className="space-y-1">
@@ -135,7 +115,7 @@ export const MaterialsPage: React.FC = () => {
                 : theme === 'dark'
                 ? 'bg-slate-900 text-slate-400 hover:text-white border border-white/10'
                 : 'bg-white text-slate-600 hover:text-slate-950 border border-slate-200'
-          }`}
+            }`}
           >
             {lib.name} ({lib.modulesCount})
           </button>
@@ -145,7 +125,7 @@ export const MaterialsPage: React.FC = () => {
       {/* Grid das 40 Apostilas */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {filteredModules.map(mod => {
-          const lib = libraryMap.get(mod.libraryId);
+          const lib = INITIAL_LIBRARIES.find(l => l.id === mod.libraryId);
           const isStudied = studiedCodes.includes(mod.code);
 
           return (
@@ -207,17 +187,6 @@ export const MaterialsPage: React.FC = () => {
                   <Eye className="w-4 h-4" />
                   <span>Ler Apostila Completa</span>
                 </button>
-                <button
-                  onClick={() => handleDownloadMd(mod)}
-                  title="Baixar arquivo da apostila"
-                  className={`p-2.5 rounded-xl border text-xs font-bold transition-all ${
-                    theme === 'dark'
-                      ? 'bg-slate-800 border-white/10 text-slate-300 hover:text-white hover:bg-slate-700'
-                      : 'bg-slate-100 border-slate-200 text-slate-700 hover:bg-slate-200'
-                  }`}
-                >
-                  <FileDown className="w-4 h-4" />
-                </button>
               </div>
             </div>
           );
@@ -226,9 +195,9 @@ export const MaterialsPage: React.FC = () => {
 
       {/* Modal de Leitura Completa da Apostila */}
       {activeModule && (
-        <div className="fixed inset-0 z-50 bg-black/80 backdrop-blur-xs flex items-center justify-center p-2 sm:p-6">
+        <div className="apostila-leitor fixed inset-0 z-50 bg-black/80 backdrop-blur-xs flex items-center justify-center p-0">
           <div
-            className={`w-full max-w-5xl h-[92vh] rounded-3xl border shadow-2xl flex flex-col overflow-hidden ${
+            className={`w-full h-screen rounded-none border-0 shadow-2xl flex flex-col overflow-hidden ${
               theme === 'dark' ? 'bg-slate-900 border-slate-700 text-white' : 'bg-white border-slate-200 text-slate-900'
             }`}
           >
@@ -253,17 +222,7 @@ export const MaterialsPage: React.FC = () => {
               </div>
 
               <div className="flex items-center gap-2">
-                <button
-                  onClick={() => window.print()}
-                  className={`px-3 py-2 rounded-xl border text-xs font-bold flex items-center gap-1.5 ${
-                    theme === 'dark'
-                      ? 'bg-slate-800 border-slate-700 text-slate-200 hover:bg-slate-700'
-                      : 'bg-white border-slate-200 text-slate-700 hover:bg-slate-100'
-                  }`}
-                >
-                  <Printer className="w-4 h-4" />
-                  <span className="hidden sm:inline">Imprimir / Salvar PDF</span>
-                </button>
+                <TextHighlightToolbar />
                 <button
                   onClick={() => setActiveModule(null)}
                   className="p-2 rounded-xl bg-red-500/10 text-red-400 hover:bg-red-500/20 border border-red-500/20"
@@ -275,7 +234,7 @@ export const MaterialsPage: React.FC = () => {
             </div>
 
             {/* Corpo da Apostila */}
-            <div className="flex-1 overflow-y-auto p-6 sm:p-12">
+            <div className="styled-scrollbar flex-1 overflow-y-auto p-6 sm:p-12">
               <div className="max-w-3xl mx-auto">
                 {loadingMd ? (
                   <div className="py-24 text-center space-y-3">
@@ -288,24 +247,8 @@ export const MaterialsPage: React.FC = () => {
               </div>
             </div>
 
-            {/* Rodapé do Leitor */}
-            <div
-              className={`px-6 py-3 border-t flex items-center justify-between text-xs shrink-0 ${
-                theme === 'dark' ? 'bg-slate-950 border-slate-800 text-slate-400' : 'bg-slate-50 border-slate-200 text-slate-600'
-              }`}
-            >
-              <span>União Serviços Médicos • Padrão Editorial LURIA • Figuras licenciadas via Wikimedia Commons</span>
-              <button
-                onClick={() => {
-                  if (!studiedCodes.includes(activeModule.code)) {
-                    toggleStudied(activeModule.code);
-                  }
-                  setActiveModule(null);
-                }}
-                className="px-4 py-2 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-bold transition-all"
-              >
-                ✓ Marcar como Conferida e Fechar
-              </button>
+            <div className={`px-6 py-2 border-t text-[11px] shrink-0 ${theme === 'dark' ? 'bg-slate-950 border-slate-800 text-slate-400' : 'bg-slate-50 border-slate-200 text-slate-600'}`}>
+              União Serviços Médicos • Leitura exclusiva dentro da plataforma
             </div>
           </div>
         </div>
@@ -313,3 +256,4 @@ export const MaterialsPage: React.FC = () => {
     </div>
   );
 };
+
