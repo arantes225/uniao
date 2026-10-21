@@ -5,11 +5,31 @@ import { StudentBottomNav } from './StudentBottomNav';
 import { StudentNavbar } from './StudentNavbar';
 import { useTheme } from '../../context/ThemeContext';
 import { supabase } from '../../services/supabase/client';
+import { loadStudentCohortAccess, StudentCohortAccess } from '../../services/studentCurriculum';
 
 export const StudentLayout: React.FC = () => {
   const { theme } = useTheme();
   const [studentName, setStudentName] = useState('Aluno(a) União');
   const [sidebarCollapsed, setSidebarCollapsed] = useState(false);
+  const [cohorts, setCohorts] = useState<StudentCohortAccess[]>([]);
+  const [activeCohortId, setActiveCohortId] = useState('');
+  const [curriculumLoading, setCurriculumLoading] = useState(true);
+  const [curriculumError, setCurriculumError] = useState<string | null>(null);
+
+  useEffect(() => {
+    let mounted = true;
+    loadStudentCohortAccess()
+      .then(result => {
+        if (!mounted) return;
+        setCohorts(result);
+        setActiveCohortId(current => result.some(cohort => cohort.id === current) ? current : (result[0]?.id || ''));
+      })
+      .catch(error => { if (mounted) setCurriculumError(error.message || 'Não foi possível consultar suas aulas.'); })
+      .finally(() => { if (mounted) setCurriculumLoading(false); });
+    return () => { mounted = false; };
+  }, []);
+  const activeCohort = cohorts.find(cohort => cohort.id === activeCohortId);
+  const allowedModuleIds = activeCohort?.moduleIds || [];
 
   useEffect(() => {
     let mounted = true;
@@ -53,16 +73,18 @@ export const StudentLayout: React.FC = () => {
       <div className="flex-1 flex min-w-0 relative">
         <div className={`hidden md:block md:shrink-0 ${sidebarCollapsed ? 'md:w-20' : 'md:w-64'}`}>
           <div className={`fixed left-0 top-16 bottom-0 z-30 ${sidebarCollapsed ? 'w-20' : 'w-64'}`}>
-            <StudentSidebar collapsed={sidebarCollapsed} onToggle={() => setSidebarCollapsed(prev => !prev)} />
+            <StudentSidebar collapsed={sidebarCollapsed} onToggle={() => setSidebarCollapsed(prev => !prev)}
+              initialLessonCode={allowedModuleIds[0]} />
           </div>
         </div>
 
         {/* Espaço inferior evita que a barra móvel cubra o conteúdo. */}
         <main className="flex-1 min-w-0 overflow-x-hidden overflow-y-auto pb-[calc(6rem+env(safe-area-inset-bottom))] md:pb-0">
-          <Outlet context={{ studentName }} />
+          <Outlet context={{ studentName, cohorts, activeCohortId, setActiveCohortId,
+            allowedModuleIds, curriculumLoading, curriculumError }} />
         </main>
       </div>
-      <StudentBottomNav />
+      <StudentBottomNav initialLessonCode={allowedModuleIds[0]} />
     </div>
   );
 };
