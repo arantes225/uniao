@@ -1,11 +1,14 @@
 import React, { useState, useEffect } from 'react';
+import { useOutletContext } from 'react-router-dom';
 import { BookOpen, CheckCircle2, Eye, X, Search, Layers } from 'lucide-react';
 import { INITIAL_LIBRARIES, INITIAL_40_MODULES, LearningModule } from '../../data/curriculumData';
 import { BookletRenderer, TextHighlightToolbar } from '../../components/common/BookletRenderer';
 import { useTheme } from '../../context/ThemeContext';
+import { StudentOutletContext } from '../../services/studentCurriculum';
 
 export const MaterialsPage: React.FC = () => {
   const { theme } = useTheme();
+  const { allowedModuleIds, curriculumLoading, curriculumError } = useOutletContext<StudentOutletContext>();
   const [selectedLibraryId, setSelectedLibraryId] = useState<string>('all');
   const [searchTerm, setSearchTerm] = useState<string>('');
   const [activeModule, setActiveModule] = useState<LearningModule | null>(null);
@@ -14,6 +17,7 @@ export const MaterialsPage: React.FC = () => {
   const [studiedCodes, setStudiedCodes] = useState<string[]>(['C01', 'C02', 'H01']);
 
   const filteredModules = INITIAL_40_MODULES.filter(mod => {
+    if (!allowedModuleIds.includes(mod.code)) return false;
     const matchesLib = selectedLibraryId === 'all' || mod.libraryId === selectedLibraryId;
     const matchesSearch =
       mod.code.toLowerCase().includes(searchTerm.toLowerCase()) ||
@@ -23,6 +27,7 @@ export const MaterialsPage: React.FC = () => {
   });
 
   const handleOpenBooklet = async (mod: LearningModule) => {
+    if (!allowedModuleIds.includes(mod.code) || curriculumLoading || curriculumError) return;
     setActiveModule(mod);
     setLoadingMd(true);
     try {
@@ -57,6 +62,8 @@ export const MaterialsPage: React.FC = () => {
     return () => window.removeEventListener('keydown', handleKeyDown);
   }, [activeModule]);
 
+  if (curriculumLoading) return <p className="p-8 text-sm text-slate-400">Carregando apostilas da turma...</p>;
+  if (curriculumError) return <p role="alert" className="p-8 text-sm text-red-400">{curriculumError}</p>;
   return (
     <div className="apostilas-page p-6 sm:p-10 space-y-8 max-w-7xl mx-auto w-full">
       {/* Cabeçalho */}
@@ -64,10 +71,10 @@ export const MaterialsPage: React.FC = () => {
         <div className="space-y-1">
           <span className="text-xs font-bold text-uniao-400 uppercase tracking-wider flex items-center gap-1.5">
             <Layers className="w-4 h-4" />
-            <span>Acervo Completo • 5 Bibliotecas • 40 Módulos</span>
+            <span>Acervo da Turma • Materiais Liberados</span>
           </span>
           <h1 className={`text-2xl sm:text-3xl font-black ${theme === 'dark' ? 'text-white' : 'text-slate-900'}`}>
-            Apostilas Didáticas & Ilustrações (40 Obras)
+            Apostilas Didáticas & Ilustrações
           </h1>
           <p className={`text-xs sm:text-sm ${theme === 'dark' ? 'text-slate-400' : 'text-slate-600'}`}>
             Material didático oficial da União Serviços Médicos com figuras certificadas, algoritmos e casos clínicos.
@@ -103,7 +110,7 @@ export const MaterialsPage: React.FC = () => {
               : 'bg-white text-slate-600 hover:text-slate-950 border border-slate-200'
           }`}
         >
-          Todas as Apostilas (40)
+          Todas as Apostilas ({allowedModuleIds.length})
         </button>
         {INITIAL_LIBRARIES.map(lib => (
           <button
@@ -117,7 +124,7 @@ export const MaterialsPage: React.FC = () => {
                 : 'bg-white text-slate-600 hover:text-slate-950 border border-slate-200'
             }`}
           >
-            {lib.name} ({lib.modulesCount})
+            {lib.name} ({INITIAL_40_MODULES.filter(m => m.libraryId === lib.id && allowedModuleIds.includes(m.code)).length})
           </button>
         ))}
       </div>
