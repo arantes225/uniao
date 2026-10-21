@@ -9,6 +9,7 @@ import { supabase } from '../../services/supabase/client';
 export const StudentLayout: React.FC = () => {
   const { theme } = useTheme();
   const [studentName, setStudentName] = useState('Aluno(a) União');
+  const [sidebarCollapsed, setSidebarCollapsed] = useState(false);
 
   useEffect(() => {
     let mounted = true;
@@ -50,8 +51,10 @@ export const StudentLayout: React.FC = () => {
 
       {/* Área principal: lateral no desktop e barra inferior fixa no mobile */}
       <div className="flex-1 flex min-w-0 relative">
-        <div className="hidden md:sticky md:top-16 md:z-30 md:block md:h-[calc(100vh-4rem)] md:w-auto md:shrink-0">
-          <StudentSidebar />
+        <div className={`hidden md:block md:shrink-0 ${sidebarCollapsed ? 'md:w-20' : 'md:w-64'}`}>
+          <div className={`fixed left-0 top-16 bottom-0 z-30 ${sidebarCollapsed ? 'w-20' : 'w-64'}`}>
+            <StudentSidebar collapsed={sidebarCollapsed} onToggle={() => setSidebarCollapsed(prev => !prev)} />
+          </div>
         </div>
 
         {/* Espaço inferior evita que a barra móvel cubra o conteúdo. */}
