@@ -1,5 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { 
   Sun, Moon, User, LogOut, ChevronDown, 
   ShieldCheck, HelpCircle, AlertCircle, X, ChevronRight, MessageSquare
@@ -20,6 +20,7 @@ export const StudentNavbar: React.FC<StudentNavbarProps> = ({
   onProfileUpdated
 }) => {
   const { theme, toggleTheme } = useTheme();
+  const navigate = useNavigate();
   const [dropdownOpen, setDropdownOpen] = useState(false);
   const [profileModalOpen, setProfileModalOpen] = useState(false);
   const [faqModalOpen, setFaqModalOpen] = useState(false);
@@ -65,7 +66,7 @@ export const StudentNavbar: React.FC<StudentNavbarProps> = ({
 
   const handleLogout = async () => {
     await supabase.auth.signOut();
-    window.location.href = '/login';
+    navigate('/login', { replace: true });
   };
 
   return (
@@ -81,9 +82,9 @@ export const StudentNavbar: React.FC<StudentNavbarProps> = ({
           <Link to="/aluno/dashboard" className="flex items-center gap-3.5 group text-left">
             <div className="w-11 h-11 flex items-center justify-center shrink-0">
               <img 
-                src="./brand/simbolo-cruz-uniao.png" 
+                src="./brand/simbolo-cruz-uniao-verde.png" 
                 alt="Cruz União Serviços Médicos" 
-                className={`w-full h-full object-contain group-hover:scale-105 transition-transform duration-300 filter drop-shadow-[0_0_8px_rgba(20,184,166,0.35)] ${theme === 'light' ? 'brightness-0 opacity-70' : ''}`} 
+                className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-300 drop-shadow-[0_0_8px_rgba(20,184,166,0.35)]"
               />
             </div>
             <div className="flex flex-col">
@@ -386,3 +387,4 @@ export const StudentNavbar: React.FC<StudentNavbarProps> = ({
     </>
   );
 };
+

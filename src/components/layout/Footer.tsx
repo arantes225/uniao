@@ -75,7 +75,7 @@ export const Footer: React.FC = () => {
                   href="mailto:uniaoservicosmedicos@gmail.com" 
                   className="hover:text-uniao-400 transition-colors flex items-center gap-1.5"
                 >
-                  <span className="text-uniao-400 font-mono text-xs">E-mail:</span> uniaoservicosmedicos@gmail.com
+                  <span className="text-uniao-400 font-mono text-xs whitespace-nowrap">E-mail: uniaoservicosmedicos@gmail.com</span>
                 </a>
               </li>
               <li className="pt-2">
@@ -104,3 +104,4 @@ export const Footer: React.FC = () => {
     </footer>
   );
 };
+

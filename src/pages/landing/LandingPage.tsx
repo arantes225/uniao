@@ -3,7 +3,6 @@ import { Navbar } from '../../components/layout/Navbar';
 import { HeroSection } from '../../components/landing/HeroSection';
 import { AboutSection } from '../../components/landing/AboutSection';
 import { LegalComplianceSection } from '../../components/landing/LegalComplianceSection';
-import { CoursesSection } from '../../components/landing/CoursesSection';
 import { TrainingGallerySection } from '../../components/landing/TrainingGallerySection';
 import { AudienceSection } from '../../components/landing/AudienceSection';
 import { MethodologySection } from '../../components/landing/MethodologySection';
@@ -42,18 +41,18 @@ export const LandingPage: React.FC = () => {
       <Navbar />
       <main className="flex-1">
         <div data-reveal><HeroSection /></div>
+        <div data-reveal><ContactSection /></div>
+        <div data-reveal><MethodologySection /></div>
         <div data-reveal><LegalComplianceSection /></div>
         <div data-reveal><TrainingGallerySection /></div>
         <div data-reveal><AboutSection /></div>
-        <div data-reveal><CoursesSection /></div>
         <div data-reveal><AudienceSection /></div>
-        <div data-reveal><MethodologySection /></div>
         <div data-reveal><InstructorsSection /></div>
         <div data-reveal><FaqSection /></div>
-        <div data-reveal><ContactSection /></div>
       </main>
       <FloatingWhatsAppButton />
       <Footer />
     </div>
   );
 };
+
