@@ -1,11 +1,12 @@
 import React, { useState, useEffect } from 'react';
-import { Link, useNavigate, useParams } from 'react-router-dom';
+import { Link, useNavigate, useParams, useOutletContext } from 'react-router-dom';
 import { 
   ArrowLeft, Video, BookOpen, HelpCircle, CheckCircle2, 
   XCircle, ChevronRight, Play, X, Maximize2
 } from 'lucide-react';
 import { useTheme } from '../../context/ThemeContext';
 import { INITIAL_40_MODULES } from '../../data/curriculumData';
+import { StudentOutletContext } from '../../services/studentCurriculum';
 import { BookletRenderer, TextHighlightToolbar } from '../../components/common/BookletRenderer';
 
 interface Question {
@@ -20,6 +21,7 @@ export const IntegratedLessonPage: React.FC = () => {
   const navigate = useNavigate();
   const { lessonSlug } = useParams<{ lessonSlug: string }>();
   const { theme } = useTheme();
+  const { allowedModuleIds, curriculumLoading, curriculumError } = useOutletContext<StudentOutletContext>();
 
   // Abas integradas conforme Prompt Mestre (Videoaula | Apostila | 5 Questões)
   const [activeTab, setActiveTab] = useState<'video' | 'material' | 'questions'>('video');
@@ -44,18 +46,18 @@ export const IntegratedLessonPage: React.FC = () => {
   }, [isBookletOpen]);
 
   const resolveModuleCode = (slug?: string): string => {
-    if (!slug) return 'C02';
+    if (!slug) return '';
     const upper = slug.toUpperCase();
     const found = INITIAL_40_MODULES.find(m => m.code === upper);
     if (found) return found.code;
     if (slug.includes('aula1')) return 'C01';
     if (slug.includes('aula2')) return 'C02';
-    return 'C02';
+    return '';
   };
 
   const [selectedCode, setSelectedCode] = useState<string>(() => resolveModuleCode(lessonSlug));
   const [bookletMd, setBookletMd] = useState<string>('');
-  const currentModule = INITIAL_40_MODULES.find(m => m.code === selectedCode) || INITIAL_40_MODULES[1];
+  const currentModule = INITIAL_40_MODULES.find(m => m.code === selectedCode) || INITIAL_40_MODULES[0];
 
   const markVideoWatched = () => {
     setVideoWatched(true);
@@ -68,11 +70,12 @@ export const IntegratedLessonPage: React.FC = () => {
   }, [lessonSlug]);
 
   useEffect(() => {
+    if (curriculumLoading || !allowedModuleIds.includes(selectedCode)) return;
     fetch(`./apostilas/md/${selectedCode}.md`)
       .then(res => (res.ok ? res.text() : ''))
       .then(txt => setBookletMd(txt))
       .catch(() => setBookletMd(''));
-  }, [selectedCode]);
+  }, [selectedCode, allowedModuleIds, curriculumLoading]);
 
   // 5 Questões Objetivas Específicas da Aula
   const questions: Question[] = [
@@ -156,6 +159,15 @@ export const IntegratedLessonPage: React.FC = () => {
   };
 
   const isCompleted = submitted;
+
+  if (curriculumLoading) return <div className="p-8 text-sm text-slate-400">Verificando acesso à aula...</div>;
+  if (curriculumError || !allowedModuleIds.includes(selectedCode)) {
+    return <div className="p-8 space-y-3">
+      <h2 className="font-bold text-lg text-amber-400">Aula não liberada para sua turma</h2>
+      <p className="text-sm text-slate-400">{curriculumError || 'Esta aula não faz parte da sua trilha atual.'}</p>
+      <Link to="/aluno/dashboard" className="text-sm text-teal-400 underline">Voltar à trilha</Link>
+    </div>;
+  }
 
   return (
     <div className={`min-h-screen flex flex-col transition-colors duration-200 ${
@@ -336,7 +348,7 @@ export const IntegratedLessonPage: React.FC = () => {
                   theme === 'dark' ? 'border-slate-700 bg-slate-950 text-white' : 'border-slate-300 bg-white text-slate-900'
                 }`}
               >
-                {INITIAL_40_MODULES.map(module => (
+                {INITIAL_40_MODULES.filter(module => allowedModuleIds.includes(module.code)).map(module => (
                   <option key={module.code} value={module.code}>
                     {module.code} — {module.title}
                   </option>
