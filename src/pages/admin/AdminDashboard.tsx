@@ -653,39 +653,45 @@ export const AdminDashboard: React.FC = () => {
     setCohortImportFile(null);
   };
 
-  // Criar Nova Turma
+  // Criar turma com curso de referência, instituição e currículo.
   const handleCreateCohort = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (!newCohortName.trim()) return;
-
-    const newId = crypto.randomUUID ? crypto.randomUUID() : (Date.now() + '-cohort');
-    const newCohortObj = {
-      id: newId,
-      name: newCohortName.trim(),
-      access_days_limit: Number(newCohortDays),
-      max_students: Number(newCohortCapacity),
-      status: 'active',
-      practical_location: newCohortLocation.trim() || 'Centro de Treinamento USM',
-      practical_date: newCohortPracticalDate.trim() || '24/10/2026',
-      created_at: new Date().toISOString(),
-    };
-
-    // Insere no banco
-    await supabase.from('cohorts').insert([newCohortObj]);
-
-    setCohorts([newCohortObj, ...cohorts]);
-    setSelectedCohort(newCohortObj);
-
-    // Se optou por importar logo na criação
-    if (cohortCreationMode === 'import' && cohortImportFile) {
-      handleImportStudents(newId);
-    }
-
-    setNewCohortName('');
-    setIsCreateCohortOpen(false);
-    setCohortCreationMode('empty');
-    setCohortImportFile(null);
-    alert('Nova turma cadastrada com sucesso!');
+    if (savingCohort || !newCohortName.trim()) return;
+    if (!newSelectedLessonIds.length) { alert('Selecione pelo menos uma aula.'); return; }
+    if (!newCourseId || !newInstitutionId) { alert('Selecione instituição e curso.'); return; }
+    const date = normalizeDate(newCohortPracticalDate);
+    if (newCohortPracticalDate.trim() && !date) { alert('Data inválida. Utilize DD/MM/AAAA.'); return; }
+    setSavingCohort(true);
+    try {
+      const { data: cohort, error } = await supabase.from('cohorts').insert({
+        name: newCohortName.trim(), course_id: newCourseId,
+        institution_id: newInstitutionId, access_days_limit: Number(newCohortDays),
+        max_students: Number(newCohortCapacity), status: 'active',
+        practical_location: newCohortLocation.trim() || 'Centro de Treinamento USM',
+        practical_date: date,
+      }).select('*').single();
+      if (error) throw error;
+      const { error: accessError } = await supabase.rpc('set_cohort_curriculum', {
+        p_cohort_id: cohort.id, p_lesson_ids: newSelectedLessonIds,
+      });
+      if (accessError) {
+        const { error: rollbackError } = await supabase.from('cohorts').delete().eq('id', cohort.id);
+        if (rollbackError) console.error('Falha no rollback da turma:', rollbackError);
+        throw accessError;
+      }
+      if (cohortCreationMode === 'import' && cohortImportFile) {
+        alert('Turma criada. A importação por arquivo ainda não está implementada; matricule os alunos separadamente.');
+      }
+      setNewCohortName('');
+      setNewSelectedLessonIds([]);
+      setIsCreateCohortOpen(false);
+      setCohortCreationMode('empty');
+      setCohortImportFile(null);
+      await loadData();
+      alert('Turma e trilha cadastradas com sucesso!');
+    } catch (err: any) {
+      alert('Não foi possível cadastrar a turma: ' + (err.message || String(err)));
+    } finally { setSavingCohort(false); }
   };
 
   // Abrir Edição de Aluno
