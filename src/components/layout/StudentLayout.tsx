@@ -47,15 +47,14 @@ export const StudentLayout: React.FC = () => {
         turma="Turma APH & Stop the Bleed — 2026" 
       />
 
-      {/* Área Principal: Menu lateral que fica fixo/flutuante enquanto a página rola */}
+      {/* Área principal: lateral no desktop e barra inferior fixa no mobile */}
       <div className="flex-1 flex min-w-0 relative">
-        {/* Menu Lateral Acadêmico Fixo / Flutuante */}
-        <div className="sticky top-16 h-[calc(100vh-4rem)] shrink-0 z-30">
+        <div className="fixed inset-x-0 bottom-0 z-40 w-full md:sticky md:top-16 md:h-[calc(100vh-4rem)] md:w-auto md:shrink-0 md:z-30">
           <StudentSidebar />
         </div>
 
-        {/* Conteúdo Central com scroll natural */}
-        <main className="flex-1 min-w-0 overflow-y-auto">
+        {/* Espaço inferior evita que a barra móvel cubra o conteúdo. */}
+        <main className="flex-1 min-w-0 overflow-x-hidden overflow-y-auto pb-20 md:pb-0">
           <Outlet context={{ studentName }} />
         </main>
       </div>

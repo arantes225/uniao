@@ -98,16 +98,16 @@ export const StudentSidebar: React.FC<StudentSidebarProps> = () => {
 
   return (
     <aside
-      className={`h-full flex flex-col shrink-0 border-r transition-all duration-300 ${
-        collapsed ? 'w-20' : 'w-64'
+      className={`h-auto w-full flex flex-row border-t pb-[env(safe-area-inset-bottom)] md:h-full md:w-auto md:flex-col md:shrink-0 md:border-t-0 md:border-r md:pb-0 transition-all duration-300 ${
+        collapsed ? 'md:w-20' : 'md:w-64'
       } ${
         theme === 'dark' 
           ? 'bg-slate-900/95 border-white/10 text-slate-300' 
           : 'bg-white border-slate-200 text-slate-700'
       }`}
     >
-      {/* Header do Menu Lateral (Apenas controle de recolher/expandir) */}
-      <div className={`h-12 flex items-center border-b px-3 ${
+      {/* Cabeçalho do menu lateral: oculto quando a navegação vira barra inferior. */}
+      <div className={`hidden md:flex h-12 items-center border-b px-3 ${
         theme === 'dark' ? 'border-white/10' : 'border-slate-200 bg-slate-50/50'
       } ${
         collapsed ? 'justify-center' : 'justify-between'
@@ -136,8 +136,8 @@ export const StudentSidebar: React.FC<StudentSidebarProps> = () => {
       </div>
 
       {/* Navigation List */}
-      <nav className="flex-1 overflow-y-auto p-3 space-y-1.5">
-        <div className={`px-3 py-1.5 text-[10px] font-black uppercase tracking-widest ${
+      <nav className="flex flex-1 min-w-0 flex-row overflow-x-auto overflow-y-hidden p-1.5 space-x-1 md:block md:overflow-y-auto md:overflow-x-hidden md:space-x-0 md:space-y-1.5 md:p-3">
+        <div className={`hidden md:block px-3 py-1.5 text-[10px] font-black uppercase tracking-widest ${
           theme === 'dark' ? 'text-slate-500' : 'text-slate-400'
         }`}>
           {!collapsed ? 'Menu Acadêmico' : '•••'}
@@ -150,7 +150,7 @@ export const StudentSidebar: React.FC<StudentSidebarProps> = () => {
               key={item.path}
               to={item.path}
               className={({ isActive }) =>
-                `flex items-center gap-3 px-3 py-2.5 rounded-xl text-xs font-semibold transition-all group ${
+                `flex min-w-[68px] shrink-0 flex-col items-center justify-center gap-0.5 px-1.5 py-1.5 rounded-xl text-[9px] font-semibold transition-all group md:min-w-0 md:flex-row md:gap-3 md:px-3 md:py-2.5 md:text-xs ${
                   isActive
                     ? 'bg-uniao-600 text-white shadow-md shadow-uniao-600/30'
                     : item.highlight
@@ -166,10 +166,10 @@ export const StudentSidebar: React.FC<StudentSidebarProps> = () => {
             >
               <Icon className="w-5 h-5 shrink-0" />
               {!collapsed && (
-                <span className="truncate flex-1">{item.label}</span>
+                <span className="w-full truncate text-center md:flex-1 md:text-left">{item.label}</span>
               )}
               {!collapsed && item.badge && (
-                <span className={`text-[9px] font-bold px-1.5 py-0.5 rounded uppercase ${
+                <span className={`hidden md:inline text-[9px] font-bold px-1.5 py-0.5 rounded uppercase ${
                   item.highlight
                     ? 'bg-uniao-400 text-slate-950 font-black'
                     : theme === 'dark'
@@ -186,7 +186,7 @@ export const StudentSidebar: React.FC<StudentSidebarProps> = () => {
 
       {/* Botão de Área do Admin: visível APENAS para administradores autenticados */}
       {isAdmin && (
-        <div className={`p-3 border-t shrink-0 ${theme === 'dark' ? 'border-white/10' : 'border-slate-200'}`}>
+        <div className={`hidden md:block p-3 border-t shrink-0 ${theme === 'dark' ? 'border-white/10' : 'border-slate-200'}`}>
           <Link
             to="/admin"
             className={`flex items-center gap-3 px-3 py-2.5 rounded-xl text-xs font-bold transition-all ${

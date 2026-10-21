@@ -10,7 +10,7 @@ export default defineConfig({
     react(),
     VitePWA({
       registerType: 'autoUpdate',
-      includeAssets: ['favicon.png', 'brand/logo-uniao.png', 'icons/*.png'],
+      includeAssets: ['favicon.png', 'brand/logo-uniao.png', 'brand/simbolo-cruz-uniao-verde.png', 'icons/*.png'],
       manifest: {
         name: 'União Serviços Médicos',
         short_name: 'União Médica',
@@ -23,18 +23,18 @@ export default defineConfig({
         scope: './',
         icons: [
           {
-            src: 'icons/pwa-192x192.png',
-            sizes: '192x192',
+            src: 'brand/simbolo-cruz-uniao-verde.png',
+            sizes: '1024x1024',
             type: 'image/png'
           },
           {
-            src: 'icons/pwa-512x512.png',
-            sizes: '512x512',
+            src: 'brand/simbolo-cruz-uniao-verde.png',
+            sizes: '1024x1024',
             type: 'image/png'
           },
           {
-            src: 'icons/maskable-icon-512x512.png',
-            sizes: '512x512',
+            src: 'brand/simbolo-cruz-uniao-verde.png',
+            sizes: '1024x1024',
             type: 'image/png',
             purpose: 'maskable'
           }

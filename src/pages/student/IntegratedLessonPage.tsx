@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Link, useNavigate, useParams } from 'react-router-dom';
 import { 
   ArrowLeft, Video, BookOpen, HelpCircle, CheckCircle2, 
-  XCircle, ChevronRight, Play
+  XCircle, ChevronRight, Play, X, Maximize2
 } from 'lucide-react';
 import { useTheme } from '../../context/ThemeContext';
 import { INITIAL_40_MODULES } from '../../data/curriculumData';
@@ -25,6 +25,23 @@ export const IntegratedLessonPage: React.FC = () => {
   const [activeTab, setActiveTab] = useState<'video' | 'material' | 'questions'>('video');
   const [videoWatched, setVideoWatched] = useState(false);
   const [readingConfirmed, setReadingConfirmed] = useState(false);
+  const [isBookletOpen, setIsBookletOpen] = useState(false);
+
+  useEffect(() => {
+    if (!isBookletOpen) return undefined;
+
+    const closeWithEscape = (event: KeyboardEvent) => {
+      if (event.key === 'Escape') setIsBookletOpen(false);
+    };
+    const previousOverflow = document.body.style.overflow;
+    document.body.style.overflow = 'hidden';
+    document.addEventListener('keydown', closeWithEscape);
+
+    return () => {
+      document.body.style.overflow = previousOverflow;
+      document.removeEventListener('keydown', closeWithEscape);
+    };
+  }, [isBookletOpen]);
 
   const resolveModuleCode = (slug?: string): string => {
     if (!slug) return 'C02';
@@ -299,74 +316,123 @@ export const IntegratedLessonPage: React.FC = () => {
           </div>
         )}
 
-        {/* ABA 2: APOSTILA (Visualizador Editorial Integrado) */}
+        {/* ABA 2: APOSTILA FECHADA + LEITOR EM TELA CHEIA */}
         {activeTab === 'material' && (
           <div className="space-y-6">
-            <div className={`rounded-2xl border overflow-hidden shadow-2xl transition-colors ${
+            <div className="flex flex-wrap items-center justify-between gap-3">
+              <div>
+                <p className={`text-xs font-bold uppercase tracking-wider ${theme === 'dark' ? 'text-slate-400' : 'text-slate-500'}`}>
+                  Apostila oficial
+                </p>
+                <p className={`mt-1 text-sm ${theme === 'dark' ? 'text-slate-300' : 'text-slate-600'}`}>
+                  Selecione o módulo antes de abrir a leitura.
+                </p>
+              </div>
+              <select
+                aria-label="Selecionar módulo da apostila"
+                value={selectedCode}
+                onChange={event => setSelectedCode(event.target.value)}
+                className={`rounded-lg border px-3 py-2 text-xs font-semibold ${
+                  theme === 'dark' ? 'border-slate-700 bg-slate-950 text-white' : 'border-slate-300 bg-white text-slate-900'
+                }`}
+              >
+                {INITIAL_40_MODULES.map(module => (
+                  <option key={module.code} value={module.code}>
+                    {module.code} — {module.title}
+                  </option>
+                ))}
+              </select>
+            </div>
+            <button
+              type="button"
+              onClick={() => setIsBookletOpen(true)}
+              className={`group w-full rounded-2xl border p-6 text-left shadow-2xl transition-all hover:-translate-y-0.5 hover:border-teal-400/70 sm:p-10 ${
               theme === 'dark'
                 ? 'bg-slate-800 border-slate-700'
                 : 'bg-white border-slate-200 shadow-slate-200/80'
             }`}>
-              {/* Barra de Ferramentas da Apostila + Seletor dos 40 Módulos */}
-              <div className={`border-b p-3 px-6 flex flex-wrap items-center justify-between gap-3 text-xs transition-colors ${
-                theme === 'dark'
-                  ? 'bg-slate-900/90 border-slate-700 text-slate-300'
-                  : 'bg-slate-50 border-slate-200 text-slate-700'
-              }`}>
-                <div className="flex flex-wrap items-center gap-3">
-                  <div className="flex items-center gap-2 font-semibold">
-                    <BookOpen className="w-4 h-4 text-uniao-600 dark:text-uniao-400" />
-                    <span>Apostila Oficial:</span>
+              <div className="flex items-start justify-between gap-4">
+                <div className="flex items-center gap-4">
+                  <div className="flex h-16 w-16 shrink-0 items-center justify-center rounded-2xl bg-teal-500/10 text-teal-400 ring-1 ring-teal-500/30">
+                    <BookOpen className="h-8 w-8" />
                   </div>
-                  <select
-                    value={selectedCode}
-                    onChange={e => setSelectedCode(e.target.value)}
-                    className={`px-3 py-1.5 rounded-lg border font-semibold text-xs ${
-                      theme === 'dark'
-                        ? 'bg-slate-950 border-slate-700 text-white'
-                        : 'bg-white border-slate-300 text-slate-900'
+                  <div>
+                    <p className="text-[11px] font-black uppercase tracking-[0.18em] text-teal-500">Material de estudo</p>
+                    <h2 className={`mt-1 text-xl font-extrabold ${theme === 'dark' ? 'text-white' : 'text-slate-900'}`}>
+                      Apostila do Módulo {selectedCode}
+                    </h2>
+                  </div>
+                </div>
+                <Maximize2 className="h-5 w-5 shrink-0 text-teal-500 transition-transform group-hover:scale-110" />
+              </div>
+              <div className={`mt-8 rounded-xl border p-5 ${
+                theme === 'dark' ? 'border-slate-700 bg-slate-900/80 text-slate-300' : 'border-slate-200 bg-slate-50 text-slate-600'
+              }`}>
+                <p className="text-sm font-semibold">A apostila está fechada.</p>
+                <p className="mt-1 text-xs leading-relaxed">Clique aqui para abrir o leitor e estudar em tela cheia.</p>
+              </div>
+            </button>
+
+            {isBookletOpen && (
+              <div className={`fixed inset-0 z-[100] flex h-[100dvh] flex-col ${
+                theme === 'dark' ? 'bg-slate-950' : 'bg-slate-100'
+              }`} role="dialog" aria-modal="true" aria-label={`Apostila do Módulo ${selectedCode}`}>
+                <header className={`flex shrink-0 items-center justify-between border-b px-4 py-3 sm:px-8 ${
+                  theme === 'dark' ? 'border-slate-800 bg-slate-950' : 'border-slate-200 bg-white'
+                }`}>
+                  <div className="flex min-w-0 items-center gap-3">
+                    <BookOpen className="h-5 w-5 shrink-0 text-teal-500" />
+                    <div className="min-w-0">
+                      <p className="text-[10px] font-black uppercase tracking-wider text-teal-500">Leitor em tela cheia</p>
+                      <h2 className={`truncate text-sm font-bold sm:text-base ${theme === 'dark' ? 'text-white' : 'text-slate-900'}`}>
+                        Apostila do Módulo {selectedCode}
+                      </h2>
+                    </div>
+                  </div>
+                  <button
+                    type="button"
+                    onClick={() => setIsBookletOpen(false)}
+                    className={`flex shrink-0 items-center gap-2 rounded-xl px-3 py-2 text-xs font-bold transition-colors ${
+                      theme === 'dark' ? 'text-slate-300 hover:bg-white/10 hover:text-white' : 'text-slate-600 hover:bg-slate-100 hover:text-slate-900'
                     }`}
+                    aria-label="Fechar apostila"
                   >
-                    {INITIAL_40_MODULES.map(m => (
-                      <option key={m.code} value={m.code}>
-                        {m.code} — {m.title}
-                      </option>
-                    ))}
-                  </select>
-                </div>
-                <div className="flex items-center gap-3">
-                  <TextHighlightToolbar />
-                </div>
-              </div>
+                    <span className="hidden sm:inline">Fechar</span>
+                    <X className="h-5 w-5" />
+                  </button>
+                </header>
 
-              {/* Área de Leitura Renderizada Completa (LURIA Editorial Standard + Figuras Wikimedia) */}
-              <div className={`p-6 sm:p-12 max-w-4xl mx-auto my-6 rounded-xl border shadow-lg transition-colors ${
-                theme === 'dark' ? 'bg-slate-900 text-slate-100 border-slate-700' : 'bg-white text-slate-900 border-slate-200/80'
-              }`}>
-                {bookletMd ? (
-                  <BookletRenderer markdown={bookletMd} />
-                ) : (
-                  <div className="py-12 text-center text-sm text-slate-400">
-                    Carregando apostila completa do módulo {selectedCode}...
+                <div className="flex-1 overflow-y-auto px-3 py-4 sm:px-8 sm:py-8">
+                  <div className={`mx-auto max-w-4xl rounded-xl border p-5 shadow-lg sm:p-12 ${
+                    theme === 'dark' ? 'border-slate-700 bg-slate-900 text-slate-100' : 'border-slate-200 bg-white text-slate-900'
+                  }`}>
+                    <div className="mb-5 flex justify-end">
+                      <TextHighlightToolbar />
+                    </div>
+                    {bookletMd ? (
+                      <BookletRenderer markdown={bookletMd} />
+                    ) : (
+                      <div className="py-12 text-center text-sm text-slate-400">
+                        Carregando apostila completa do módulo {selectedCode}...
+                      </div>
+                    )}
                   </div>
-                )}
-              </div>
 
-              {/* Rodapé da Apostila */}
-              <div className={`border-t p-4 px-6 flex items-center justify-between text-xs transition-colors ${
-                theme === 'dark'
-                  ? 'bg-slate-900/90 border-slate-700 text-slate-400'
-                  : 'bg-slate-50 border-slate-200 text-slate-600'
-              }`}>
-                <span>Leitura obrigatória para fixação do conteúdo</span>
-                <button
-                  onClick={() => { setReadingConfirmed(true); setActiveTab('questions'); }}
-                  className="px-4 py-2 rounded-lg bg-uniao-600 hover:bg-uniao-500 text-white font-bold transition-colors shadow-sm"
-                >
-                  Confirmar Leitura e Ir para as Questões →
-                </button>
+                  <div className={`mx-auto mt-4 flex max-w-4xl flex-col items-start justify-between gap-3 rounded-xl border p-4 text-xs sm:flex-row sm:items-center ${
+                    theme === 'dark' ? 'border-slate-800 bg-slate-900/80 text-slate-400' : 'border-slate-200 bg-white text-slate-600'
+                  }`}>
+                    <span>Leitura obrigatória para fixação do conteúdo</span>
+                    <button
+                      type="button"
+                      onClick={() => { setReadingConfirmed(true); setIsBookletOpen(false); setActiveTab('questions'); }}
+                      className="rounded-lg bg-uniao-600 px-4 py-2 font-bold text-white shadow-sm transition-colors hover:bg-uniao-500"
+                    >
+                      Confirmar Leitura e Ir para as Questões →
+                    </button>
+                  </div>
+                </div>
               </div>
-            </div>
+            )}
           </div>
         )}
 

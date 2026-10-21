@@ -1,5 +1,5 @@
-import React from 'react';
-import { HashRouter, Routes, Route, Navigate } from 'react-router-dom';
+import React, { useEffect } from 'react';
+import { HashRouter, Routes, Route, Navigate, useLocation } from 'react-router-dom';
 import { LandingPage } from './pages/landing/LandingPage';
 import { LoginPage } from './pages/auth/LoginPage';
 import { CertificateValidationPage } from './pages/public/CertificateValidationPage';
@@ -16,10 +16,28 @@ import { AdminDashboard } from './pages/admin/AdminDashboard';
 
 import { ThemeProvider } from './context/ThemeContext';
 
+const ScrollToTop: React.FC = () => {
+  const location = useLocation();
+
+  useEffect(() => {
+    window.scrollTo({ top: 0, left: 0, behavior: 'auto' });
+    document.documentElement.scrollTop = 0;
+    document.body.scrollTop = 0;
+
+    // O ambiente do aluno usa um painel interno com rolagem própria.
+    document.querySelectorAll<HTMLElement>('main').forEach(main => {
+      main.scrollTo({ top: 0, left: 0, behavior: 'auto' });
+    });
+  }, [location.pathname, location.hash]);
+
+  return null;
+};
+
 export const App: React.FC = () => {
   return (
     <ThemeProvider>
       <HashRouter>
+        <ScrollToTop />
         <Routes>
         {/* Site Institucional Público */}
         <Route path="/" element={<LandingPage />} />
