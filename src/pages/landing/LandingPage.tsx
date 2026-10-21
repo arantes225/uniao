@@ -37,7 +37,7 @@ export const LandingPage: React.FC = () => {
   }, []);
 
   return (
-    <div className="landing-dark min-h-screen flex flex-col bg-slate-950 text-slate-100">
+    <div className="landing-dark min-h-screen flex flex-col bg-slate-950 text-slate-100 pb-[calc(6rem+env(safe-area-inset-bottom))] lg:pb-0">
       <Navbar />
       <main className="flex-1">
         <div data-reveal><HeroSection /></div>
