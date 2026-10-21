@@ -11,6 +11,16 @@ import {
 } from 'lucide-react';
 import { supabase } from '../../services/supabase/client';
 import { ContentManagerTab } from './ContentManagerTab';
+import { CurriculumService } from '../../services/CurriculumService';
+import { LearningModule } from '../../data/curriculumData';
+import { CohortCurriculumSelector, CurriculumLessonOption } from '../../components/admin/CohortCurriculumSelector';
+
+const normalizeDate = (input: string): string | null => {
+  if (!input.trim()) return null;
+  const br = input.match(/^(\d{2})\/(\d{2})\/(\d{4})$/);
+  const date = br ? `${br[3]}-${br[2]}-${br[1]}` : input.substring(0, 10);
+  return /^\d{4}-\d{2}-\d{2}$/.test(date) && !Number.isNaN(Date.parse(date)) ? date : null;
+};
 
 // Modelos Pré-definidos para Treinamentos Médicos da União
 interface CertificatePreset {
@@ -168,6 +178,16 @@ export const AdminDashboard: React.FC = () => {
   const [editCohortLocation, setEditCohortLocation] = useState('');
   const [editCohortPracticalDate, setEditCohortPracticalDate] = useState('');
   const [cohortSaveSuccess, setCohortSaveSuccess] = useState(false);
+  const [curriculumModules, setCurriculumModules] = useState<LearningModule[]>([]);
+  const [curriculumLessons, setCurriculumLessons] = useState<CurriculumLessonOption[]>([]);
+  const [cohortLessonSelections, setCohortLessonSelections] = useState<Record<string, string[]>>({});
+  const [editSelectedLessonIds, setEditSelectedLessonIds] = useState<string[]>([]);
+  const [newSelectedLessonIds, setNewSelectedLessonIds] = useState<string[]>([]);
+  const [institutionOptions, setInstitutionOptions] = useState<Array<{ id: string; name: string }>>([]);
+  const [courseOptions, setCourseOptions] = useState<Array<{ id: string; title: string }>>([]);
+  const [newInstitutionId, setNewInstitutionId] = useState('');
+  const [newCourseId, setNewCourseId] = useState('');
+  const [savingCohort, setSavingCohort] = useState(false);
 
   // Alunos e Filtro por Turma
   const [cohortFilter, setCohortFilter] = useState<string>('all');
@@ -412,6 +432,31 @@ export const AdminDashboard: React.FC = () => {
       .order('created_at', { ascending: false });
     if (gal) setGalleryImages(gal);
 
+    // Catálogo compartilhado e aulas permitidas de cada turma.
+    const [moduleList, lessonResponse, institutionResponse, courseResponse, accessResponse] = await Promise.all([
+      CurriculumService.getModules(),
+      supabase.from('curriculum_lessons').select('id,module_id,title,position').order('position'),
+      supabase.from('institutions').select('id,name').order('name'),
+      supabase.from('courses').select('id,title').order('title'),
+      supabase.from('cohort_lesson_access').select('cohort_id,lesson_id'),
+    ]);
+    setCurriculumModules(moduleList);
+    if (lessonResponse.error) console.error('Falha ao buscar aulas:', lessonResponse.error);
+    else setCurriculumLessons((lessonResponse.data || []) as CurriculumLessonOption[]);
+    if (institutionResponse.data) {
+      setInstitutionOptions(institutionResponse.data);
+      setNewInstitutionId(previous => previous || institutionResponse.data?.[0]?.id || '');
+    }
+    if (courseResponse.data) {
+      setCourseOptions(courseResponse.data);
+      setNewCourseId(previous => previous || courseResponse.data?.[0]?.id || '');
+    }
+    if (accessResponse.error) console.error('Falha ao buscar trilhas das turmas:', accessResponse.error);
+    else {
+      const mapping: Record<string, string[]> = {};
+      (accessResponse.data || []).forEach(row => { (mapping[row.cohort_id] ||= []).push(row.lesson_id); });
+      setCohortLessonSelections(mapping);
+    }
     // 2. Carregar turmas
     const { data: coh } = await supabase
       .from('cohorts')
@@ -506,31 +551,31 @@ export const AdminDashboard: React.FC = () => {
     await loadData();
   };
 
-  // Salvar Parâmetros da Turma
+  // Atualizar parâmetros e seleção curricular da turma.
   const handleSaveCohort = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (!selectedCohort) return;
+    if (!selectedCohort || savingCohort) return;
+    if (!editSelectedLessonIds.length) { alert('Selecione pelo menos uma aula.'); return; }
+    const date = normalizeDate(editCohortPracticalDate);
+    if (editCohortPracticalDate.trim() && !date) { alert('Data inválida. Utilize DD/MM/AAAA.'); return; }
+    setSavingCohort(true);
     setCohortSaveSuccess(false);
-
-    const { error } = await supabase
-      .from('cohorts')
-      .update({
-        name: editCohortName,
-        access_days_limit: Number(editCohortDays),
-        max_students: Number(editCohortMaxStudents),
-        status: editCohortStatus,
-        practical_location: editCohortLocation,
-        practical_date: editCohortPracticalDate,
-      })
-      .eq('id', selectedCohort.id);
-
-    if (!error) {
+    try {
+      const { error } = await supabase.from('cohorts').update({
+        name: editCohortName.trim(), access_days_limit: Number(editCohortDays),
+        max_students: Number(editCohortMaxStudents), status: editCohortStatus,
+        practical_location: editCohortLocation, practical_date: date,
+      }).eq('id', selectedCohort.id);
+      if (error) throw error;
+      const { error: accessError } = await supabase.rpc('set_cohort_curriculum', {
+        p_cohort_id: selectedCohort.id, p_lesson_ids: editSelectedLessonIds,
+      });
+      if (accessError) throw accessError;
       setCohortSaveSuccess(true);
       setIsEditingCohort(false);
       await loadData();
-    } else {
-      alert('Erro ao atualizar turma: ' + error.message);
-    }
+    } catch (err: any) { alert('Falha ao salvar turma/trilha: ' + (err.message || String(err))); }
+    finally { setSavingCohort(false); }
   };
 
   // Adicionar Aluno a uma Turma
