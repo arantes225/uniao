@@ -1,16 +1,22 @@
 import React, { useState } from 'react';
+import { useOutletContext } from 'react-router-dom';
 import { PlayCircle, Video, Clock, Search } from 'lucide-react';
 import { INITIAL_40_MODULES } from '../../data/curriculumData';
 import { useTheme } from '../../context/ThemeContext';
+import { StudentOutletContext } from '../../services/studentCurriculum';
 
 export const VideosPage: React.FC = () => {
   const { theme } = useTheme();
+  const { allowedModuleIds, curriculumLoading, curriculumError } = useOutletContext<StudentOutletContext>();
   const [search, setSearch] = useState('');
   const [playing, setPlaying] = useState<string | null>(null);
   const videos = INITIAL_40_MODULES.filter(module =>
+    allowedModuleIds.includes(module.code) &&
     `${module.code} ${module.title} ${module.description}`.toLowerCase().includes(search.toLowerCase())
   );
 
+  if (curriculumLoading) return <p className="p-8 text-sm text-slate-400">Carregando videoaulas da turma...</p>;
+  if (curriculumError) return <p role="alert" className="p-8 text-sm text-red-400">{curriculumError}</p>;
   return (
     <div className="p-6 sm:p-10 space-y-8 max-w-7xl mx-auto w-full">
       <div className="flex flex-col md:flex-row md:items-end justify-between gap-4">
