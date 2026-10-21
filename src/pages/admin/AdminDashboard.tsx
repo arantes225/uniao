@@ -1224,12 +1224,13 @@ export const AdminDashboard: React.FC = () => {
                               setEditCohortStatus(cohort.status || 'active');
                               setEditCohortLocation(cohort.practical_location || 'Centro de Treinamento USM');
                               setEditCohortPracticalDate(cohort.practical_date || '24/10/2026');
+                              setEditSelectedLessonIds(cohortLessonSelections[cohort.id] || []);
                               setIsEditingCohort(true);
                             }}
                             className="px-3.5 py-1.5 rounded-xl text-xs font-bold text-white bg-white/5 hover:bg-white/10 border border-white/10 transition-colors inline-flex items-center gap-1.5"
                           >
                             <Settings className="w-3.5 h-3.5 text-uniao-400" />
-                            <span>Editar Prazos / Parâmetros</span>
+                            <span>Editar Turma / Trilha</span>
                           </button>
 
                           <button
@@ -1323,7 +1324,7 @@ export const AdminDashboard: React.FC = () => {
                             <div className="flex items-center gap-2">
                               <Settings className="w-4 h-4 text-uniao-400" />
                               <h3 className="font-bold text-white text-sm">
-                                Editar Prazos e Parâmetros: {cohort.name}
+                                Editar Turma e Trilha: {cohort.name}
                               </h3>
                             </div>
                             <button 
@@ -1404,6 +1405,13 @@ export const AdminDashboard: React.FC = () => {
                               />
                             </div>
 
+                            <div className="md:col-span-2">
+                              <CohortCurriculumSelector
+                                modules={curriculumModules} lessons={curriculumLessons}
+                                selectedLessonIds={editSelectedLessonIds}
+                                onChange={setEditSelectedLessonIds} disabled={savingCohort}
+                              />
+                            </div>
                             <div className="md:col-span-2 pt-2 flex justify-end gap-3">
                               <button
                                 type="button"
@@ -1416,7 +1424,7 @@ export const AdminDashboard: React.FC = () => {
                                 type="submit"
                                 className="px-6 py-2 rounded-xl text-xs font-bold text-slate-950 bg-gradient-to-r from-uniao-400 to-teal-300 hover:brightness-110 shadow"
                               >
-                                Salvar Prazos / Parâmetros
+                                Salvar Turma e Trilha
                               </button>
                             </div>
                           </form>
@@ -2197,8 +2205,8 @@ export const AdminDashboard: React.FC = () => {
       {/* MODAL: CRIAR NOVA TURMA (OPÇÃO DE TURMA VAZIA, MANUAL OU IMPORTAR PDF/EXCEL) */}
       {/* ========================================================================= */}
       {isCreateCohortOpen && (
-        <div className="fixed inset-0 z-50 bg-slate-950/80 backdrop-blur-sm flex items-center justify-center p-4">
-          <div className="bg-slate-900 border border-white/10 rounded-2xl p-6 sm:p-8 max-w-lg w-full space-y-5 shadow-2xl">
+        <div className="fixed inset-0 z-50 bg-slate-950/80 backdrop-blur-sm flex items-center justify-center p-4 overflow-y-auto">
+          <div className="bg-slate-900 border border-white/10 rounded-2xl p-6 sm:p-8 max-w-3xl max-h-[94dvh] overflow-y-auto w-full space-y-5 shadow-2xl">
             <div className="flex items-center justify-between border-b border-white/10 pb-4">
               <div className="flex items-center gap-2.5">
                 <School className="w-5 h-5 text-uniao-400" />
@@ -2274,6 +2282,28 @@ export const AdminDashboard: React.FC = () => {
                 </div>
               </div>
 
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                <label className="space-y-1 text-xs font-semibold text-slate-300">
+                  <span>Instituição responsável</span>
+                  <select required value={newInstitutionId} onChange={e => setNewInstitutionId(e.target.value)}
+                    className="w-full px-3 py-2.5 rounded-xl bg-slate-950 border border-white/10 text-white">
+                    <option value="">Selecione a instituição</option>
+                    {institutionOptions.map(inst => <option key={inst.id} value={inst.id}>{inst.name}</option>)}
+                  </select>
+                </label>
+                <label className="space-y-1 text-xs font-semibold text-slate-300">
+                  <span>Curso de referência (certificação)</span>
+                  <select required value={newCourseId} onChange={e => setNewCourseId(e.target.value)}
+                    className="w-full px-3 py-2.5 rounded-xl bg-slate-950 border border-white/10 text-white">
+                    <option value="">Selecione o curso</option>
+                    {courseOptions.map(course => <option key={course.id} value={course.id}>{course.title}</option>)}
+                  </select>
+                </label>
+              </div>
+
+              <CohortCurriculumSelector modules={curriculumModules} lessons={curriculumLessons}
+                selectedLessonIds={newSelectedLessonIds} onChange={setNewSelectedLessonIds} disabled={savingCohort} />
+
               {/* OPÇÕES DE ALUNOS NA CRIAÇÃO: APENAS CRIAR TURMA, MANUAL OU IMPORTAR PDF/EXCEL */}
               <div className="pt-2 space-y-2 border-t border-white/10">
                 <label className="text-xs font-bold uppercase tracking-wider text-slate-400 block">
@@ -2343,9 +2373,10 @@ export const AdminDashboard: React.FC = () => {
                 </button>
                 <button
                   type="submit"
-                  className="px-6 py-2.5 rounded-xl font-bold text-xs text-slate-950 bg-gradient-to-r from-uniao-400 to-teal-300 hover:brightness-110 shadow"
+                  disabled={savingCohort || !newSelectedLessonIds.length || !newCourseId || !newInstitutionId}
+                  className="px-6 py-2.5 rounded-xl font-bold text-xs text-slate-950 bg-gradient-to-r from-uniao-400 to-teal-300 hover:brightness-110 shadow disabled:opacity-40 disabled:cursor-not-allowed"
                 >
-                  Confirmar e Criar Turma
+                  {savingCohort ? 'Salvando...' : 'Confirmar e Criar Turma'}
                 </button>
               </div>
             </form>
