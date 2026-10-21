@@ -21,7 +21,7 @@ export const Navbar: React.FC = () => {
           
           {/* Nova Logomarca Oficial Integrada de Forma Limpa e com Destaque Maior */}
           <Link to="/" className="flex items-center gap-4 group">
-            <div className="w-13 h-13 sm:w-14 sm:h-14 flex items-center justify-center shrink-0">
+            <div className="w-9 h-9 sm:w-10 sm:h-10 flex items-center justify-center shrink-0">
               <img 
                 src="./brand/simbolo-cruz-uniao.png" 
                 alt="Cruz União Serviços Médicos" 
@@ -29,11 +29,10 @@ export const Navbar: React.FC = () => {
               />
             </div>
             <div className="flex flex-col">
-              <span className="font-black text-2xl tracking-wider text-white font-sans flex items-center gap-1.5 leading-none">
+              <span className="font-black text-xl tracking-wider text-white font-sans flex items-center gap-1 leading-none">
                 UNIÃO
-                <span className="w-2 h-2 rounded-full bg-uniao-400" />
               </span>
-              <span className="text-[11px] font-bold tracking-[0.25em] text-slate-300 uppercase mt-1">
+              <span className="text-[9px] font-bold tracking-[0.2em] text-slate-300 uppercase mt-1">
                 Serviços Médicos
               </span>
             </div>

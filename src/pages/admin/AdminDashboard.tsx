@@ -323,13 +323,28 @@ export const AdminDashboard: React.FC = () => {
   const [activeCertCohort, setActiveCertCohort] = useState<any | null>(null);
   const [cohortCertSide, setCohortCertSide] = useState<'front' | 'back'>('front');
   const [selectedStudentForCert, setSelectedStudentForCert] = useState<StudentRecord | null>(null);
+  const [releasedCohorts, setReleasedCohorts] = useState<Record<string, boolean>>({});
+  const [releasePassword, setReleasePassword] = useState('');
+  const [releaseError, setReleaseError] = useState(false);
 
   const handleOpenCohortCertModal = (cohort: any) => {
     setActiveCertCohort(cohort);
     setCohortCertSide('front');
     const firstStudent = students.find(s => s.cohortId === cohort.id);
     setSelectedStudentForCert(firstStudent || null);
+    setReleasePassword('');
+    setReleaseError(false);
     setIsCohortCertModalOpen(true);
+  };
+
+  const handleReleaseCertificates = () => {
+    if (releasePassword !== '1926') {
+      setReleaseError(true);
+      return;
+    }
+    setReleasedCohorts(prev => ({ ...prev, [activeCertCohort.id]: true }));
+    setReleasePassword('');
+    setReleaseError(false);
   };
 
   // Ajuste responsivo de tamanho de fonte para acomodar qualquer tamanho de nome sem estourar o layout
@@ -1897,15 +1912,9 @@ export const AdminDashboard: React.FC = () => {
                             <span className="text-slate-500">Chave:</span>
                             <strong className="text-teal-400 font-bold">USM-2026-X89A-99F</strong>
                             <span className="text-slate-600">•</span>
-                            <a
-                              href="#/validar-certificado/USM-2026-X89A-99F"
-                              target="_blank"
-                              rel="noopener noreferrer"
-                              className="text-teal-400 hover:text-teal-300 underline font-sans font-semibold transition-colors flex items-center gap-1"
-                              title="Verificar autenticidade digital"
-                            >
-                              Link para autenticação
-                            </a>
+                            <span className="text-teal-400 font-sans font-semibold">
+                              uniao-servicos-medicos.com.br/validar-certificado
+                            </span>
                           </div>
                           <div>Validade Técnica: <strong className="text-white">{certValidity} meses</strong></div>
                           <div>Emissão: <strong className="text-white">{new Date().toLocaleDateString('pt-BR')}</strong></div>
@@ -2661,15 +2670,9 @@ export const AdminDashboard: React.FC = () => {
                         <span className="text-slate-500">Chave:</span>
                         <strong className="text-teal-400 font-bold">USM-2026-X89A-99F</strong>
                         <span className="text-slate-600">•</span>
-                        <a
-                          href="#/validar-certificado/USM-2026-X89A-99F"
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="text-teal-400 hover:text-teal-300 underline font-sans font-semibold transition-colors flex items-center gap-1"
-                          title="Verificar autenticidade digital"
-                        >
-                          Link para autenticação
-                        </a>
+                        <span className="text-teal-400 font-sans font-semibold">
+                          uniao-servicos-medicos.com.br/validar-certificado
+                        </span>
                       </div>
                       <div>Validade Técnica: <strong className="text-white">{certValidity} meses</strong></div>
                       <div>Emissão: <strong className="text-white">{new Date().toLocaleDateString('pt-BR')}</strong></div>
@@ -2854,7 +2857,7 @@ export const AdminDashboard: React.FC = () => {
                 </div>
               </div>
 
-              {/* Controles do Topo: Frente / Verso + Fechar */}
+             {/* Controles do Topo: Frente / Verso + Liberação protegida + Fechar */}
               <div className="flex items-center gap-2">
                 <div className="bg-slate-950 p-1 rounded-xl border border-white/10 flex items-center gap-1 shadow-inner">
                   <button
@@ -2891,6 +2894,23 @@ export const AdminDashboard: React.FC = () => {
                   <X className="w-5 h-5" />
                 </button>
               </div>
+            </div>
+
+            <div className={`rounded-2xl border p-4 flex flex-col sm:flex-row sm:items-center justify-between gap-3 ${releasedCohorts[activeCertCohort.id] ? 'border-emerald-500/40 bg-emerald-500/10' : 'border-amber-500/30 bg-amber-500/5'}`}>
+              <div className="flex items-center gap-3">
+                <KeyRound className={`w-5 h-5 ${releasedCohorts[activeCertCohort.id] ? 'text-emerald-400' : 'text-amber-400'}`} />
+                <div>
+                  <strong className="block text-xs text-white">{releasedCohorts[activeCertCohort.id] ? 'Certificados liberados para esta turma' : 'Certificados bloqueados para emissão'}</strong>
+                  <span className="text-[10px] text-slate-400">A liberação exige uma nova confirmação do PIN administrativo.</span>
+                </div>
+              </div>
+              {!releasedCohorts[activeCertCohort.id] && (
+                <form onSubmit={(event) => { event.preventDefault(); handleReleaseCertificates(); }} className="flex items-center gap-2">
+                  <input type="password" value={releasePassword} onChange={event => setReleasePassword(event.target.value)} placeholder="PIN admin" aria-label="PIN para liberar certificados" className="w-28 rounded-lg border border-white/10 bg-slate-950 px-3 py-2 text-xs text-white" />
+                  <button type="submit" className="rounded-lg bg-amber-400 px-3 py-2 text-xs font-black text-slate-950 hover:bg-amber-300">Liberar certificados</button>
+                </form>
+              )}
+              {releaseError && <span className="text-[10px] text-red-300">PIN incorreto.</span>}
             </div>
 
             {/* Layout em 2 Colunas: Esquerda (Visualizador A4) / Direita (Gestão de Alunos com Adicionar/Remover) */}
@@ -2981,9 +3001,9 @@ export const AdminDashboard: React.FC = () => {
                         {/* Rodapé */}
                         <div className="pt-2 border-t border-white/10 flex items-center justify-between text-[9px] text-slate-400 font-mono">
                           <div>Chave: <strong className="text-teal-400">USM-2026-X89A-99F</strong></div>
-                          <a href="#/validar-certificado" target="_blank" rel="noopener noreferrer" className="text-teal-400 underline font-sans">
-                            Link para autenticação
-                          </a>
+                          <span className="text-teal-400 font-sans">
+                            uniao-servicos-medicos.com.br/validar-certificado
+                          </span>
                           <div>Emissão: <strong className="text-white">{new Date().toLocaleDateString('pt-BR')}</strong></div>
                         </div>
                       </div>
@@ -3021,7 +3041,7 @@ export const AdminDashboard: React.FC = () => {
                         </div>
 
                         <div className="pt-2 border-t border-white/10 flex items-center justify-between text-[8px] text-slate-500 font-mono">
-                          <div>União Serviços Médicos • Registro Interno</div>
+                          <div>Código: <strong className="text-teal-400">USM-2026-X89A-99F</strong></div>
                           <div>Documento Oficial Autenticado</div>
                         </div>
                       </div>

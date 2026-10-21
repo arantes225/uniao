@@ -7,6 +7,7 @@ import { useTheme } from '../../context/ThemeContext';
 
 export const PresencePage: React.FC = () => {
   const { theme } = useTheme();
+  const dark = theme === 'dark';
 
   // Código digitado pelo aluno
   const [inputCode, setInputCode] = useState('');
@@ -81,16 +82,16 @@ export const PresencePage: React.FC = () => {
 
       {/* Card da Sessão Prática */}
       <div className={`p-6 sm:p-8 rounded-3xl border ${
-        theme === 'dark' ? 'bg-slate-900/90 border-white/10' : 'bg-white border-slate-200 shadow-sm'
+        dark ? 'bg-slate-900/90 border-white/10' : 'bg-white border-slate-200 shadow-sm'
       } space-y-6`}>
         
-        <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b pb-5 border-white/10">
+          <div className={`flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b pb-5 ${dark ? 'border-white/10' : 'border-slate-200'}`}>
           <div>
             <span className="text-[10px] font-black uppercase tracking-wider text-teal-400">Atividade Agendada</span>
             <h2 className={`text-lg sm:text-xl font-bold ${theme === 'dark' ? 'text-white' : 'text-slate-900'}`}>
               {activeTraining.courseName}
             </h2>
-            <p className="text-xs text-slate-400 mt-0.5">{activeTraining.cohortName}</p>
+            <p className={`text-xs mt-0.5 ${dark ? 'text-slate-400' : 'text-slate-500'}`}>{activeTraining.cohortName}</p>
           </div>
 
           <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-xl bg-teal-500/10 border border-teal-500/30 text-teal-300 font-mono text-xs">
@@ -102,21 +103,21 @@ export const PresencePage: React.FC = () => {
         {/* Detalhes do Local e Instrutor */}
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs">
           <div className={`p-4 rounded-2xl border ${
-            theme === 'dark' ? 'bg-slate-950/60 border-white/5 text-slate-300' : 'bg-slate-50 border-slate-200 text-slate-700'
+            dark ? 'bg-slate-950/60 border-white/5 text-slate-300' : 'bg-slate-50 border-slate-200 text-slate-700'
           } flex items-start gap-3`}>
             <MapPin className="w-4 h-4 text-teal-400 shrink-0 mt-0.5" />
             <div>
-              <strong className="block text-white font-bold mb-0.5">Local do Treinamento:</strong>
+              <strong className={`block font-bold mb-0.5 ${dark ? 'text-white' : 'text-slate-900'}`}>Local do Treinamento:</strong>
               <span>{activeTraining.location}</span>
             </div>
           </div>
 
           <div className={`p-4 rounded-2xl border ${
-            theme === 'dark' ? 'bg-slate-950/60 border-white/5 text-slate-300' : 'bg-slate-50 border-slate-200 text-slate-700'
+            dark ? 'bg-slate-950/60 border-white/5 text-slate-300' : 'bg-slate-50 border-slate-200 text-slate-700'
           } flex items-start gap-3`}>
             <UserCheck className="w-4 h-4 text-teal-400 shrink-0 mt-0.5" />
             <div>
-              <strong className="block text-white font-bold mb-0.5">Instrutor Responsável:</strong>
+              <strong className={`block font-bold mb-0.5 ${dark ? 'text-white' : 'text-slate-900'}`}>Instrutor Responsável:</strong>
               <span>{activeTraining.instructor}</span>
             </div>
           </div>
@@ -128,7 +129,7 @@ export const PresencePage: React.FC = () => {
             <div className="w-12 h-12 rounded-full bg-emerald-500/20 text-emerald-400 flex items-center justify-center mx-auto">
               <CheckCircle2 className="w-7 h-7" />
             </div>
-            <h3 className="text-lg font-black text-white">Presença Homologada com Sucesso!</h3>
+            <h3 className={`text-lg font-black ${dark ? 'text-white' : 'text-slate-900'}`}>Presença Homologada com Sucesso!</h3>
             <p className="text-xs text-emerald-300 max-w-md mx-auto">
               {feedback.message}
             </p>
@@ -139,7 +140,7 @@ export const PresencePage: React.FC = () => {
         ) : (
           <form onSubmit={handleValidateCode} className="space-y-4 pt-2">
             <div className="max-w-md mx-auto space-y-2 text-center">
-              <label className="text-xs font-bold uppercase tracking-wider text-slate-300 block">
+              <label className={`text-xs font-bold uppercase tracking-wider block ${dark ? 'text-slate-300' : 'text-slate-600'}`}>
                 Insira o Código de Presença da Aula:
               </label>
               
@@ -150,7 +151,7 @@ export const PresencePage: React.FC = () => {
                   value={inputCode}
                   onChange={(e) => setInputCode(e.target.value.toUpperCase())}
                   placeholder="EX: APH-2026"
-                  className="w-full text-center text-2xl font-black font-mono tracking-[0.3em] uppercase py-3.5 px-4 rounded-2xl bg-slate-950 border-2 border-teal-500/40 text-teal-300 placeholder:text-slate-600 focus:outline-none focus:border-teal-400 shadow-inner"
+                  className={`w-full text-center text-2xl font-black font-mono tracking-[0.3em] uppercase py-3.5 px-4 rounded-2xl border-2 border-teal-500/40 focus:outline-none focus:border-teal-400 shadow-inner ${dark ? 'bg-slate-950 text-teal-300 placeholder:text-slate-600' : 'bg-slate-50 text-teal-700 placeholder:text-slate-400'}`}
                 />
               </div>
 
@@ -182,10 +183,10 @@ export const PresencePage: React.FC = () => {
       </div>
 
       {/* Regra de Requisito de Certificação */}
-      <div className="p-5 rounded-2xl bg-slate-900/50 border border-white/5 flex items-center gap-3 text-xs text-slate-400">
+      <div className={`p-5 rounded-2xl border flex items-center gap-3 text-xs ${dark ? 'bg-slate-900/50 border-white/5 text-slate-400' : 'bg-white border-slate-200 text-slate-600'}`}>
         <ShieldCheck className="w-5 h-5 text-teal-400 shrink-0" />
         <div>
-          <strong className="text-white block font-bold">Critério Obrigatório para Concessão de Certificado:</strong>
+          <strong className={`block font-bold ${dark ? 'text-white' : 'text-slate-900'}`}>Critério Obrigatório para Concessão de Certificado:</strong>
           A presença na atividade presencial com simulação realística de alta fidelidade é pré-requisito indispensável para a liberação da via oficial do certificado digital.
         </div>
       </div>

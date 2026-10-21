@@ -6,7 +6,7 @@ import {
 } from 'lucide-react';
 import { useTheme } from '../../context/ThemeContext';
 import { INITIAL_40_MODULES } from '../../data/curriculumData';
-import { BookletRenderer } from '../../components/common/BookletRenderer';
+import { BookletRenderer, TextHighlightToolbar } from '../../components/common/BookletRenderer';
 
 interface Question {
   id: number;
@@ -39,6 +39,12 @@ export const IntegratedLessonPage: React.FC = () => {
   const [selectedCode, setSelectedCode] = useState<string>(() => resolveModuleCode(lessonSlug));
   const [bookletMd, setBookletMd] = useState<string>('');
   const currentModule = INITIAL_40_MODULES.find(m => m.code === selectedCode) || INITIAL_40_MODULES[1];
+
+  const markVideoWatched = () => {
+    setVideoWatched(true);
+    const watched = JSON.parse(localStorage.getItem('uniao:watched-lessons') || '[]') as string[];
+    if (!watched.includes(selectedCode)) localStorage.setItem('uniao:watched-lessons', JSON.stringify([...watched, selectedCode]));
+  };
 
   useEffect(() => {
     setSelectedCode(resolveModuleCode(lessonSlug));
@@ -265,7 +271,7 @@ export const IntegratedLessonPage: React.FC = () => {
               <div className="absolute bottom-0 inset-x-0 bg-gradient-to-t from-black/90 to-transparent p-4 flex items-center justify-between text-xs text-slate-300">
                 <span>00:00 / 12:45</span>
                 <button
-                  onClick={() => setVideoWatched(true)}
+                  onClick={markVideoWatched}
                   className="px-3 py-1.5 rounded-lg bg-uniao-600 hover:bg-uniao-500 text-white font-semibold text-xs transition-colors"
                 >
                   {videoWatched ? '✓ Vídeo Assistido' : 'Marcar como Assistido'}
@@ -329,16 +335,7 @@ export const IntegratedLessonPage: React.FC = () => {
                   </select>
                 </div>
                 <div className="flex items-center gap-3">
-                  <button
-                    onClick={() => window.print()}
-                    className={`px-3 py-1.5 rounded-lg font-bold transition-colors ${
-                      theme === 'dark'
-                        ? 'bg-slate-800 hover:bg-slate-700 text-slate-200'
-                        : 'bg-slate-200 hover:bg-slate-300 text-slate-800'
-                    }`}
-                  >
-                    Imprimir / PDF
-                  </button>
+                  <TextHighlightToolbar />
                 </div>
               </div>
 

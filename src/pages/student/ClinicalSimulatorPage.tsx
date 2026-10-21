@@ -6,6 +6,7 @@ import {
   Stethoscope,
   Maximize2, Volume2, Sparkles, HeartPulse
 } from 'lucide-react';
+import { useTheme } from '../../context/ThemeContext';
 
 interface SimulationStep {
   id: number;
@@ -27,6 +28,8 @@ interface SimulationStep {
 }
 
 export const ClinicalSimulatorPage: React.FC = () => {
+  const { theme } = useTheme();
+  const dark = theme === 'dark';
   // Caso Clínico Oficial: Hemorragia Exanguinante em Acidente Escolar/Trabalho (Stop the Bleed)
   const steps: SimulationStep[] = [
     {
@@ -176,10 +179,10 @@ export const ClinicalSimulatorPage: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen bg-slate-950 text-white flex flex-col font-sans select-none overflow-x-hidden">
+    <div className={`min-h-screen flex flex-col font-sans select-none overflow-x-hidden ${dark ? 'bg-slate-950 text-white' : 'bg-slate-50 text-slate-900'}`}>
       
       {/* 1. TOP BAR COMPACTA DO SIMULADOR (ESTILO LURIA OS / SIMULATOR VIEW) */}
-      <header className="bg-slate-950/90 backdrop-blur-md border-b border-white/10 px-4 sm:px-6 h-14 flex items-center justify-between sticky top-0 z-50">
+      <header className={`${dark ? 'bg-slate-950/90 border-white/10' : 'bg-white/95 border-slate-200'} backdrop-blur-md border-b px-4 sm:px-6 h-14 flex items-center justify-between sticky top-0 z-50`}>
         <div className="flex items-center gap-3">
           <Link
             to="/aluno/dashboard"
@@ -231,7 +234,7 @@ export const ClinicalSimulatorPage: React.FC = () => {
       <main className="flex-1 flex flex-col relative min-h-[calc(100vh-3.5rem)]">
         
         {/* Placeholder para a Imagem de Fundo Imersiva (Cenário 3D / Real) */}
-        <div className="absolute inset-0 z-0 bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 pointer-events-none">
+        <div className={`absolute inset-0 z-0 pointer-events-none ${dark ? 'bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950' : 'bg-gradient-to-b from-slate-50 via-white to-slate-100'}`}>
           {/* Grid tecnológico e luz de emergência sutil de fundo */}
           <div className="absolute inset-0 bg-[radial-gradient(#14b8a6_1px,transparent_1px)] [background-size:24px_24px] opacity-15" />
           <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[300px] bg-red-600/10 blur-[140px] pointer-events-none" />

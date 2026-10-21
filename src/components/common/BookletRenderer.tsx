@@ -1,13 +1,70 @@
 import React from 'react';
+import { Highlighter, Eraser } from 'lucide-react';
 
 interface BookletRendererProps {
   markdown: string;
 }
 
+const slugify = (value: string) => value
+  .toLowerCase()
+  .normalize('NFD')
+  .replace(/[\u0300-\u036f]/g, '')
+  .replace(/[^a-z0-9\s-]/g, '')
+  .trim()
+  .replace(/\s+/g, '-');
+
+export const TextHighlightToolbar: React.FC = () => {
+  const applyHighlight = (color: string) => {
+    document.execCommand('backColor', false, color);
+    window.getSelection()?.removeAllRanges();
+  };
+
+  const keepSelection = (event: React.MouseEvent) => event.preventDefault();
+
+  return (
+    <div className="flex items-center gap-1.5 rounded-xl border border-teal-500/20 bg-teal-500/5 px-2 py-1.5 text-[10px]" aria-label="Marcador de texto">
+      <Highlighter className="h-3.5 w-3.5 text-teal-500" aria-hidden="true" />
+      <span className="mr-1 font-bold text-slate-500">Marcar</span>
+      {[
+        ['#fde047', 'Amarelo'],
+        ['#f9a8d4', 'Rosa'],
+        ['#93c5fd', 'Azul'],
+      ].map(([color, label]) => (
+        <button
+          key={color}
+          type="button"
+          title={`Marcar em ${label}`}
+          aria-label={`Marcar em ${label}`}
+          onMouseDown={keepSelection}
+          onClick={() => applyHighlight(color)}
+          className="h-5 w-5 rounded-full border border-slate-400/50 shadow-sm transition-transform hover:scale-110"
+          style={{ backgroundColor: color }}
+        />
+      ))}
+      <button
+        type="button"
+        title="Remover marcação da seleção"
+        aria-label="Remover marcação da seleção"
+        onMouseDown={keepSelection}
+        onClick={() => applyHighlight('transparent')}
+        className="ml-1 rounded-md p-1 text-slate-500 hover:bg-slate-200 dark:hover:bg-slate-800"
+      >
+        <Eraser className="h-3.5 w-3.5" />
+      </button>
+    </div>
+  );
+};
+
 const renderInline = (text: string): React.ReactNode[] => {
-  // Handle bold (**text**), italic (*text*), and inline code (`code`)
-  const parts = text.split(/(\*\*[^*]+\*\*|\*[^*]+\*|`[^`]+`)/g);
+  // Handle links, bold (**text**), italic (*text*), and inline code (`code`)
+  const parts = text.split(/(\[[^\]]+\]\([^\)]+\)|\*\*[^*]+\*\*|\*[^*]+\*|`[^`]+`)/g);
   return parts.map((part, idx) => {
+    const link = part.match(/^\[([^\]]+)\]\(([^)]+)\)$/);
+    if (link) {
+      const [label, href] = [link[1], link[2]];
+      const target = href.startsWith('#') ? `#${slugify(decodeURIComponent(href.slice(1)))}` : href;
+      return <a key={idx} href={target} className="font-semibold text-teal-700 underline decoration-teal-400/60 underline-offset-2 hover:text-teal-500 dark:text-teal-300 dark:hover:text-teal-200">{label}</a>;
+    }
     if (part.startsWith('**') && part.endsWith('**')) {
       return <strong key={idx} className="font-bold text-slate-900 dark:text-white">{part.slice(2, -2)}</strong>;
     }
@@ -171,39 +228,44 @@ export const BookletRenderer: React.FC<BookletRendererProps> = ({ markdown }) =>
 
     // Headings
     if (line.startsWith('# ')) {
+      const title = line.slice(2);
       elements.push(
-        <h1 key={`h1-${i}`} className="text-2xl sm:text-3xl font-black text-teal-700 dark:text-teal-400 mt-6 mb-3 tracking-tight">
-          {renderInline(line.slice(2))}
+        <h1 id={slugify(title)} key={`h1-${i}`} className="text-2xl sm:text-3xl font-black text-teal-700 dark:text-teal-400 mt-6 mb-3 tracking-tight scroll-mt-6">
+          {renderInline(title)}
         </h1>
       );
       i++;
       continue;
     }
     if (line.startsWith('## ')) {
+      const title = line.slice(3);
       elements.push(
         <h2
+          id={slugify(title)}
           key={`h2-${i}`}
-          className="text-lg sm:text-xl font-extrabold text-slate-900 dark:text-white mt-8 mb-3 pb-2 border-b border-teal-500/30 flex items-center gap-2"
+          className="text-lg sm:text-xl font-extrabold text-slate-900 dark:text-white mt-8 mb-3 pb-2 border-b border-teal-500/30 flex items-center gap-2 scroll-mt-6"
         >
-          {renderInline(line.slice(3))}
+          {renderInline(title)}
         </h2>
       );
       i++;
       continue;
     }
     if (line.startsWith('### ')) {
+      const title = line.slice(4);
       elements.push(
-        <h3 key={`h3-${i}`} className="text-base sm:text-lg font-bold text-teal-700 dark:text-teal-300 mt-6 mb-2">
-          {renderInline(line.slice(4))}
+        <h3 id={slugify(title)} key={`h3-${i}`} className="text-base sm:text-lg font-bold text-teal-700 dark:text-teal-300 mt-6 mb-2 scroll-mt-6">
+          {renderInline(title)}
         </h3>
       );
       i++;
       continue;
     }
     if (line.startsWith('#### ')) {
+      const title = line.slice(5);
       elements.push(
-        <h4 key={`h4-${i}`} className="text-sm sm:text-base font-bold text-slate-800 dark:text-slate-200 mt-4 mb-1.5">
-          {renderInline(line.slice(5))}
+        <h4 id={slugify(title)} key={`h4-${i}`} className="text-sm sm:text-base font-bold text-slate-800 dark:text-slate-200 mt-4 mb-1.5 scroll-mt-6">
+          {renderInline(title)}
         </h4>
       );
       i++;

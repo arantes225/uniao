@@ -48,44 +48,51 @@ export const StudentSidebar: React.FC<StudentSidebarProps> = () => {
       label: 'Dashboard / Trilha',
       path: '/aluno/dashboard',
       icon: LayoutDashboard,
+      highlight: false,
     },
     {
       label: 'Aula Integrada',
       path: '/aluno/aula/aph-mod1-aula2',
       icon: Video,
+      highlight: false,
       badge: 'Obrigatório'
     },
     {
       label: 'Materiais & Apostilas',
       path: '/aluno/materiais',
       icon: BookOpen,
+      highlight: false,
     },
     {
       label: 'Biblioteca de Vídeos',
       path: '/aluno/videos',
       icon: Video,
+      highlight: false,
     },
     {
       label: 'Prova',
       path: '/aluno/provas',
       icon: HelpCircle,
+      highlight: false,
       badge: 'Obrigatório'
     },
     {
       label: 'Simulador Clínico',
       path: '/aluno/simulador',
       icon: Stethoscope,
-      highlight: true
+      highlight: false,
     },
     {
       label: 'Presencial (Presença)',
       path: '/aluno/presencial',
       icon: CalendarCheck,
+      highlight: false,
     },
     {
       label: 'Meus Certificados',
       path: '/aluno/certificados',
       icon: Award,
+      highlight: false,
     },
   ];
 

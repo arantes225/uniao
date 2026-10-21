@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { HelpCircle, Clock, Award, CheckCircle2, ChevronRight, AlertTriangle, RotateCcw, XCircle, ArrowLeft, ShieldAlert } from 'lucide-react';
 import { useTheme } from '../../context/ThemeContext';
+import { INITIAL_40_MODULES } from '../../data/curriculumData';
 
 interface Question {
   id: number;
@@ -277,6 +278,10 @@ export const ExamsPage: React.FC = () => {
   // Regra Atualizada: Mesmo aprovado de primeira, o aluno pode utilizar as tentativas restantes
   // para tentar uma nota maior (prevalecendo sempre a maior nota obtida).
   const canAttempt = attemptsRemaining > 0;
+  const watchedLessons = (() => {
+    try { return JSON.parse(localStorage.getItem('uniao:watched-lessons') || '[]') as string[]; } catch { return []; }
+  })();
+  const allLessonsViewed = INITIAL_40_MODULES.length === 0 || watchedLessons.length >= INITIAL_40_MODULES.length;
 
   // Temporizador Geral de 45 minutos da Prova
   useEffect(() => {
@@ -370,7 +375,7 @@ export const ExamsPage: React.FC = () => {
   }, [isExamRunning, examFinished, attemptsUsed]);
 
   const handleStartExam = () => {
-    if (!canAttempt) return;
+    if (!canAttempt || !allLessonsViewed) return;
     setAnswers({});
     setExamFinished(false);
     setSecondsRemaining(45 * 60); // 45 minutos cravados
@@ -723,9 +728,6 @@ export const ExamsPage: React.FC = () => {
                 <h2 className={`text-xl font-black ${theme === 'dark' ? 'text-white' : 'text-slate-900'}`}>
                   Prova Teórica Geral de Certificação Pré-Hospitalar (20 Questões)
                 </h2>
-                <p className={`text-xs sm:text-sm mt-1 leading-relaxed ${theme === 'dark' ? 'text-slate-400' : 'text-slate-600'}`}>
-                  Contém <strong>20 questões de múltipla escolha</strong> de casos clínicos de urgência e emergência pré-hospitalar. O aluno dispõe de <strong>45 minutos</strong> por tentativa e <strong>3 chances</strong> para atingir <strong>pelo menos 70%</strong> de acertos (14 acertos) e garantir a aprovação.
-                </p>
               </div>
 
               {/* Regras Críticas em Destaque */}
@@ -792,11 +794,16 @@ export const ExamsPage: React.FC = () => {
               ) : (
                 <button
                   onClick={handleStartExam}
-                  className="w-full md:w-auto inline-flex items-center justify-center gap-2.5 px-8 py-4 rounded-2xl font-bold text-slate-950 bg-gradient-to-r from-uniao-400 to-teal-300 hover:brightness-110 text-sm shadow-lg transition-all transform hover:-translate-y-0.5"
+                  disabled={!allLessonsViewed}
+                  title={!allLessonsViewed ? 'Assista a todas as aulas antes de iniciar a prova.' : undefined}
+                  className="w-full md:w-auto inline-flex items-center justify-center gap-2.5 px-8 py-4 rounded-2xl font-bold text-slate-950 bg-gradient-to-r from-uniao-400 to-teal-300 hover:brightness-110 text-sm shadow-lg transition-all transform hover:-translate-y-0.5 disabled:opacity-40 disabled:cursor-not-allowed disabled:hover:brightness-100"
                 >
                   <span>{attemptsUsed === 0 ? 'Iniciar Prova Agora (45 min)' : `Tentar Novamente (Chance ${attemptsUsed + 1}/3)`}</span>
                   <ChevronRight className="w-4 h-4" />
                 </button>
+              )}
+              {!allLessonsViewed && attemptsRemaining > 0 && !isApproved && (
+                <p className="text-[11px] text-amber-600 dark:text-amber-300 text-center md:text-right max-w-xs">Assista a todas as {INITIAL_40_MODULES.length} aulas para liberar o início da prova.</p>
               )}
             </div>
           </div>

@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import { BookOpen, FileDown, CheckCircle2, Eye, X, Search, Printer, Layers } from 'lucide-react';
+import { BookOpen, FileDown, CheckCircle2, Eye, X, Search, Layers } from 'lucide-react';
 import { INITIAL_LIBRARIES, INITIAL_40_MODULES, LearningModule } from '../../data/curriculumData';
-import { BookletRenderer } from '../../components/common/BookletRenderer';
+import { BookletRenderer, TextHighlightToolbar } from '../../components/common/BookletRenderer';
 import { useTheme } from '../../context/ThemeContext';
 
 export const MaterialsPage: React.FC = () => {
@@ -239,17 +239,7 @@ export const MaterialsPage: React.FC = () => {
               </div>
 
               <div className="flex items-center gap-2">
-                <button
-                  onClick={() => window.print()}
-                  className={`px-3 py-2 rounded-xl border text-xs font-bold flex items-center gap-1.5 ${
-                    theme === 'dark'
-                      ? 'bg-slate-800 border-slate-700 text-slate-200 hover:bg-slate-700'
-                      : 'bg-white border-slate-200 text-slate-700 hover:bg-slate-100'
-                  }`}
-                >
-                  <Printer className="w-4 h-4" />
-                  <span className="hidden sm:inline">Imprimir / Salvar PDF</span>
-                </button>
+                <TextHighlightToolbar />
                 <button
                   onClick={() => setActiveModule(null)}
                   className="p-2 rounded-xl bg-red-500/10 text-red-400 hover:bg-red-500/20 border border-red-500/20"
@@ -261,7 +251,7 @@ export const MaterialsPage: React.FC = () => {
             </div>
 
             {/* Corpo da Apostila */}
-            <div className="flex-1 overflow-y-auto p-6 sm:p-12">
+            <div className="styled-scrollbar flex-1 overflow-y-auto p-6 sm:p-12">
               <div className="max-w-3xl mx-auto">
                 {loadingMd ? (
                   <div className="py-24 text-center space-y-3">

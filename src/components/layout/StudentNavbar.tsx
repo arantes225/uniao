@@ -23,6 +23,8 @@ export const StudentNavbar: React.FC<StudentNavbarProps> = ({
   const [dropdownOpen, setDropdownOpen] = useState(false);
   const [profileModalOpen, setProfileModalOpen] = useState(false);
   const [faqModalOpen, setFaqModalOpen] = useState(false);
+  const [reportModalOpen, setReportModalOpen] = useState(false);
+  const [reportText, setReportText] = useState('');
   const [expandedFaq, setExpandedFaq] = useState<number | null>(0);
   const dropdownRef = useRef<HTMLDivElement>(null);
 
@@ -42,7 +44,7 @@ export const StudentNavbar: React.FC<StudentNavbarProps> = ({
     },
     {
       q: '4. Como faço para baixar e validar o meu certificado?',
-      a: 'Assim que todos os requisitos estiverem cumpridos, o botão "Baixar Certificado em PDF" é liberado no menu "Meus Certificados". Cada documento possui uma chave única (ex: USM-2026-X89A-99F) e um link clicável que direciona para a validação oficial do nosso site.'
+      a: 'Assim que todos os requisitos estiverem cumpridos, o botão "Baixar Certificado em PDF" é liberado no menu "Meus Certificados". Cada documento possui uma chave única (ex: USM-2026-X89A-99F) e o endereço uniao-servicos-medicos.com.br/validar-certificado impresso no próprio certificado para conferência manual.'
     },
     {
       q: '5. Meu acesso às aulas tem prazo de validade?',
@@ -81,7 +83,7 @@ export const StudentNavbar: React.FC<StudentNavbarProps> = ({
               <img 
                 src="./brand/simbolo-cruz-uniao.png" 
                 alt="Cruz União Serviços Médicos" 
-                className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-300 filter drop-shadow-[0_0_8px_rgba(20,184,166,0.35)]" 
+                className={`w-full h-full object-contain group-hover:scale-105 transition-transform duration-300 filter drop-shadow-[0_0_8px_rgba(20,184,166,0.35)] ${theme === 'light' ? 'brightness-0 opacity-70' : ''}`} 
               />
             </div>
             <div className="flex flex-col">
@@ -215,9 +217,9 @@ export const StudentNavbar: React.FC<StudentNavbarProps> = ({
                   </button>
 
                   {/* 3. Botão de Reportar Erro (E-mail direto para uniaoservicosmedicos@gmail.com) */}
-                  <a
-                    href="mailto:uniaoservicosmedicos@gmail.com?subject=Relato%20de%20Erro%20-%20Plataforma%20do%20Aluno%20USM&body=Ol%C3%A1%2C%20equipe%20Uni%C3%A3o%20Servi%C3%A7os%20M%C3%A9dicos.%0A%0AEstou%20enfrentando%20a%20seguinte%20dificuldade%20na%20plataforma%3A%0A%0A-%20Descri%C3%A7%C3%A3o%20do%20problema%3A%20%0A-%20P%C3%A1gina%2FAula%3A%20%0A-%20Nome%20do%20Aluno%3A%20"
-                    onClick={() => setDropdownOpen(false)}
+                  <button
+                    type="button"
+                    onClick={() => { setDropdownOpen(false); setReportModalOpen(true); }}
                     className={`w-full px-4 py-2.5 text-left flex items-center gap-2.5 transition-colors ${
                       theme === 'dark'
                         ? 'text-amber-300 hover:text-amber-200 hover:bg-white/5'
@@ -226,7 +228,7 @@ export const StudentNavbar: React.FC<StudentNavbarProps> = ({
                   >
                     <AlertCircle className="w-4 h-4 text-amber-400" />
                     <span>Reportar Erro</span>
-                  </a>
+                  </button>
 
                   <div className={`my-1 border-t ${theme === 'dark' ? 'border-white/10' : 'border-slate-100'}`} />
 
@@ -256,6 +258,26 @@ export const StudentNavbar: React.FC<StudentNavbarProps> = ({
         onClose={() => setProfileModalOpen(false)}
         onSaved={onProfileUpdated}
       />
+
+      {reportModalOpen && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-slate-950/80 p-4 backdrop-blur-sm">
+          <form
+            onSubmit={(event) => {
+              event.preventDefault();
+              const subject = encodeURIComponent('Relato de Erro - Plataforma do Aluno USM');
+              const body = encodeURIComponent(`Olá, equipe União Serviços Médicos.\n\n${reportText}`);
+              window.location.href = `mailto:uniaoservicosmedicos@gmail.com?subject=${subject}&body=${body}`;
+              setReportModalOpen(false);
+            }}
+            className={`w-full max-w-lg rounded-3xl border p-6 shadow-2xl ${theme === 'dark' ? 'bg-slate-900 border-white/10 text-white' : 'bg-white border-slate-200 text-slate-900'}`}
+          >
+            <div className="flex items-center justify-between mb-4"><h3 className="text-lg font-bold">Reportar Erro</h3><button type="button" onClick={() => setReportModalOpen(false)} aria-label="Fechar"><X className="w-5 h-5 text-slate-400" /></button></div>
+            <p className="text-xs text-slate-500 mb-3">Descreva o problema. A mensagem será preparada para uniaoservicosmedicos@gmail.com.</p>
+            <textarea autoFocus required value={reportText} onChange={event => setReportText(event.target.value)} rows={7} placeholder="O que aconteceu? Em qual página ou aula?" className={`w-full rounded-xl border p-3 text-sm resize-y ${theme === 'dark' ? 'bg-slate-950 border-white/10 text-white' : 'bg-slate-50 border-slate-200 text-slate-900'}`} />
+            <div className="mt-4 flex justify-end gap-2"><button type="button" onClick={() => setReportModalOpen(false)} className="rounded-xl px-4 py-2 text-xs font-bold text-slate-500">Cancelar</button><button type="submit" className="rounded-xl bg-teal-400 px-4 py-2 text-xs font-black text-slate-950">Abrir e-mail</button></div>
+          </form>
+        </div>
+      )}
 
       {/* Modal Popup de Principais Dúvidas (5 Dúvidas e 5 Respostas) */}
       {faqModalOpen && (

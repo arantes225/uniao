@@ -1,7 +1,10 @@
 import React from 'react';
 import { CheckCircle2, Download, ShieldCheck, Clock } from 'lucide-react';
+import { useTheme } from '../../context/ThemeContext';
 
 export const CertificatesPage: React.FC = () => {
+  const { theme } = useTheme();
+  const dark = theme === 'dark';
   const certificates = [
     {
       id: 'cert-aph-2026',
@@ -28,10 +31,10 @@ export const CertificatesPage: React.FC = () => {
         <span className="text-xs font-bold text-uniao-400 uppercase tracking-wider">
           Certificação Oficial
         </span>
-        <h1 className="text-2xl sm:text-3xl font-black text-white">
+        <h1 className={`text-2xl sm:text-3xl font-black ${dark ? 'text-white' : 'text-slate-900'}`}>
           Meus Certificados
         </h1>
-        <p className="text-xs sm:text-sm text-slate-400">
+        <p className={`text-xs sm:text-sm ${dark ? 'text-slate-400' : 'text-slate-600'}`}>
           Certificados digitais autênticos emitidos com código identificador único e validação por QR Code.
         </p>
       </div>
@@ -42,8 +45,8 @@ export const CertificatesPage: React.FC = () => {
             key={cert.id}
             className={`rounded-3xl border p-6 sm:p-8 flex flex-col sm:flex-row sm:items-center justify-between gap-6 transition-all ${
               cert.status === 'ready'
-                ? 'bg-slate-900 border-emerald-500/30 shadow-xl'
-                : 'bg-slate-900/50 border-white/5 opacity-80'
+                ? `${dark ? 'bg-slate-900' : 'bg-white'} border-emerald-500/30 shadow-xl`
+                : `${dark ? 'bg-slate-900/50 border-white/5' : 'bg-white/70 border-slate-200'} opacity-80`
             }`}
           >
             <div className="space-y-3">
@@ -62,16 +65,16 @@ export const CertificatesPage: React.FC = () => {
               </div>
 
               <div>
-                <h3 className="text-lg font-bold text-white">{cert.title}</h3>
-                <p className="text-xs text-slate-400 mt-0.5">{cert.cohort} • Carga Horária: {cert.hours} horas</p>
+                <h3 className={`text-lg font-bold ${dark ? 'text-white' : 'text-slate-900'}`}>{cert.title}</h3>
+                <p className={`text-xs mt-0.5 ${dark ? 'text-slate-400' : 'text-slate-600'}`}>{cert.cohort} • Carga Horária: {cert.hours} horas</p>
               </div>
 
               {cert.status === 'ready' && (
                 <div className="flex items-center gap-3 text-xs text-slate-300 font-mono">
-                  <span className="bg-slate-950 px-3 py-1 rounded-lg border border-white/10">
+                  <span className={`${dark ? 'bg-slate-950 border-white/10' : 'bg-slate-50 border-slate-200'} px-3 py-1 rounded-lg border`}>
                     Código: <strong className="text-uniao-400">{cert.code}</strong>
                   </span>
-                  <span className="flex items-center gap-1 text-slate-400 font-sans">
+                  <span className={`flex items-center gap-1 font-sans ${dark ? 'text-slate-400' : 'text-slate-600'}`}>
                     <ShieldCheck className="w-4 h-4 text-emerald-400" />
                     <span>Autenticidade Verificada</span>
                   </span>

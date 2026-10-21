@@ -5,6 +5,7 @@ import { LoginPage } from './pages/auth/LoginPage';
 import { CertificateValidationPage } from './pages/public/CertificateValidationPage';
 import { StudentLayout } from './components/layout/StudentLayout';
 import { StudentDashboard } from './pages/student/StudentDashboard';
+import { VideosPage } from './pages/student/VideosPage';
 import { IntegratedLessonPage } from './pages/student/IntegratedLessonPage';
 import { ClinicalSimulatorPage } from './pages/student/ClinicalSimulatorPage';
 import { MaterialsPage } from './pages/student/MaterialsPage';
@@ -39,7 +40,7 @@ export const App: React.FC = () => {
           <Route path="dashboard" element={<StudentDashboard />} />
           <Route path="aula/:lessonSlug" element={<IntegratedLessonPage />} />
           <Route path="materiais" element={<MaterialsPage />} />
-          <Route path="videos" element={<StudentDashboard />} />
+          <Route path="videos" element={<VideosPage />} />
           <Route path="provas" element={<ExamsPage />} />
           <Route path="certificados" element={<CertificatesPage />} />
           <Route path="frequencia" element={<PresencePage />} />

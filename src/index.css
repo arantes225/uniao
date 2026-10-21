@@ -4,8 +4,122 @@
 
 @layer base {
   body {
-    @apply text-slate-800 bg-slate-50 antialiased;
+    @apply text-slate-100 bg-slate-950 antialiased;
     font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+  }
+}
+
+/* Scrollbars follow the União palette in every page and reader panel. */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #14b8a6 #0f1b2d;
+}
+
+*::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+*::-webkit-scrollbar-track {
+  background: #0f1b2d;
+  border-radius: 999px;
+}
+
+*::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #2dd4bf, #0f766e);
+  border: 2px solid #0f1b2d;
+  border-radius: 999px;
+}
+
+*::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, #5eead4, #14b8a6);
+}
+
+.styled-scrollbar {
+  scrollbar-gutter: stable;
+}
+
+/* União visual system: one dark surface shared by the institutional landing
+   page and public certificate validation flow. */
+.landing-dark {
+  --uniao-surface: #08111d;
+  --uniao-surface-raised: #0d1a2a;
+  --uniao-surface-soft: #101f31;
+  background-color: var(--uniao-surface) !important;
+  color: #f8fafc;
+  color-scheme: dark;
+}
+
+.landing-dark .bg-white,
+.landing-dark [class~="bg-white"] {
+  background-color: var(--uniao-surface-raised) !important;
+}
+
+.landing-dark .bg-slate-50,
+.landing-dark [class~="bg-slate-50"],
+.landing-dark [class~="bg-slate-50/50"],
+.landing-dark [class~="bg-slate-50/70"] {
+  background-color: var(--uniao-surface-soft) !important;
+}
+
+.landing-dark [class~="text-slate-900"],
+.landing-dark [class~="text-slate-800"] {
+  color: #f8fafc !important;
+}
+
+.landing-dark [class~="text-slate-700"] {
+  color: #cbd5e1 !important;
+}
+
+.landing-dark [class~="text-slate-600"] {
+  color: #94a3b8 !important;
+}
+
+.landing-dark [class~="text-slate-500"] {
+  color: #64748b !important;
+}
+
+.landing-dark [class~="border-slate-200"],
+.landing-dark [class~="border-slate-200/80"],
+.landing-dark [class~="border-slate-200/90"],
+.landing-dark [class~="border-slate-100"],
+.landing-dark [class~="border-slate-300"] {
+  border-color: rgba(148, 163, 184, 0.18) !important;
+}
+
+.landing-dark input,
+.landing-dark textarea,
+.landing-dark select {
+  color-scheme: dark;
+}
+
+.landing-dark input:not([class*="bg-"]),
+.landing-dark textarea:not([class*="bg-"]),
+.landing-dark select:not([class*="bg-"]) {
+  background-color: rgba(8, 17, 29, 0.82) !important;
+  color: #f8fafc !important;
+  border-color: rgba(148, 163, 184, 0.24) !important;
+}
+
+[data-reveal] {
+  opacity: 0;
+  transform: translate3d(0, 28px, 0);
+  transition: opacity 700ms ease, transform 700ms cubic-bezier(0.22, 1, 0.36, 1);
+  will-change: opacity, transform;
+}
+
+[data-reveal].is-visible,
+.reveal.is-visible {
+  opacity: 1;
+  transform: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  [data-reveal],
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
   }
 }
 
