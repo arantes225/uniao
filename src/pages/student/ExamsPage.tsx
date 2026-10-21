@@ -1,7 +1,8 @@
 import React, { useState, useEffect, useRef } from 'react';
+import { useOutletContext } from 'react-router-dom';
 import { HelpCircle, Clock, Award, CheckCircle2, ChevronRight, AlertTriangle, RotateCcw, XCircle, ArrowLeft, ShieldAlert } from 'lucide-react';
 import { useTheme } from '../../context/ThemeContext';
-import { INITIAL_40_MODULES } from '../../data/curriculumData';
+import { StudentOutletContext } from '../../services/studentCurriculum';
 
 interface Question {
   id: number;
@@ -255,6 +256,7 @@ const mockQuestions: Question[] = [
 ];
 
 export const ExamsPage: React.FC = () => {
+  const { allowedModuleIds, curriculumLoading, curriculumError } = useOutletContext<StudentOutletContext>();
   const { theme } = useTheme();
 
   // Estado da Prova Única Oficial (com regra de 3 chances e mínimo 70%)
@@ -281,7 +283,7 @@ export const ExamsPage: React.FC = () => {
   const watchedLessons = (() => {
     try { return JSON.parse(localStorage.getItem('uniao:watched-lessons') || '[]') as string[]; } catch { return []; }
   })();
-  const allLessonsViewed = INITIAL_40_MODULES.length === 0 || watchedLessons.length >= INITIAL_40_MODULES.length;
+  const allLessonsViewed = allowedModuleIds.length > 0 && allowedModuleIds.every(code => watchedLessons.includes(code));
 
   // Temporizador Geral de 45 minutos da Prova
   useEffect(() => {
@@ -427,6 +429,13 @@ export const ExamsPage: React.FC = () => {
     const s = secs % 60;
     return `${m.toString().padStart(2, '0')}:${s.toString().padStart(2, '0')}`;
   };
+
+  if (curriculumLoading) return <p className="p-8 text-sm text-slate-400">Verificando sua matrícula...</p>;
+  if (curriculumError || !allowedModuleIds.length) {
+    return <p role="alert" className="p-8 text-sm text-amber-400">
+      {curriculumError || 'A prova não está disponível sem aulas liberadas para sua turma.'}
+    </p>;
+  }
 
   return (
     <div className="p-6 sm:p-10 space-y-8 max-w-7xl mx-auto w-full transition-colors">
@@ -803,7 +812,7 @@ export const ExamsPage: React.FC = () => {
                 </button>
               )}
               {!allLessonsViewed && attemptsRemaining > 0 && !isApproved && (
-                <p className="text-[11px] text-amber-600 dark:text-amber-300 text-center md:text-right max-w-xs">Assista a todas as {INITIAL_40_MODULES.length} aulas para liberar o início da prova.</p>
+                <p className="text-[11px] text-amber-600 dark:text-amber-300 text-center md:text-right max-w-xs">Assista a todas as {allowedModuleIds.length} aulas da sua turma para liberar o início da prova.</p>
               )}
             </div>
           </div>
