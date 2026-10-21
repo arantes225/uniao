@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { PhoneCall, Mail, Send, CheckCircle2, AlertCircle } from 'lucide-react';
 
 export const ContactSection: React.FC = () => {
@@ -9,11 +9,18 @@ export const ContactSection: React.FC = () => {
     audience: 'Escola / Colégio',
     message: ''
   });
+  const [formOpen, setFormOpen] = useState(false);
   const [loading, setLoading] = useState(false);
   const [success, setSuccess] = useState(false);
   const [error, setError] = useState<string | null>(null);
 
   const whatsappUrl = "https://wa.me/5561999638011?text=Ol%C3%A1!%20Gostaria%20de%20solicitar%20uma%20proposta%20de%20capacita%C3%A7%C3%A3o%20para%20minha%20institui%C3%A7%C3%A3o.";
+
+  useEffect(() => {
+    if (formOpen) {
+      document.getElementById('formulario-orcamento')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  }, [formOpen]);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -29,7 +36,7 @@ export const ContactSection: React.FC = () => {
     } catch (err: any) {
       console.error('Erro ao enviar contato:', err);
       // Mesmo se houver falha de inserção (ex: RLS público estrito), oferecemos o link direto do WhatsApp/Mailto
-      setError('Recebemos sua mensagem! Se preferir retorno imediato, fale conosco diretamente pelo WhatsApp.');
+      setError('Não foi possível abrir o aplicativo de e-mail. Você também pode falar conosco pelo WhatsApp.');
     } finally {
       setLoading(false);
     }
@@ -40,7 +47,7 @@ export const ContactSection: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Banner CTA */}
-        <div className="rounded-3xl bg-gradient-to-br from-uniao-900 via-uniao-800 to-slate-900 text-white p-8 sm:p-12 lg:p-16 shadow-2xl relative overflow-hidden mb-16">
+        <div className={`rounded-3xl bg-gradient-to-br from-uniao-900 via-uniao-800 to-slate-900 text-white p-8 sm:p-12 lg:p-16 shadow-2xl relative overflow-hidden ${formOpen ? 'mb-16' : 'mb-0'}`}>
           <div className="max-w-3xl space-y-4 relative z-10">
             <span className="text-xs font-bold tracking-widest text-uniao-300 uppercase bg-uniao-700/50 px-3.5 py-1.5 rounded-full border border-uniao-500/30">
               Prontidão e Resposta Rápida
@@ -61,19 +68,22 @@ export const ContactSection: React.FC = () => {
                 <PhoneCall className="w-5 h-5 text-uniao-600" />
                 <span>Falar pelo WhatsApp</span>
               </a>
-              <a
-                href="mailto:uniaoservicosmedicos@gmail.com"
+              <button
+                type="button"
+                onClick={() => setFormOpen(open => !open)}
+                aria-expanded={formOpen}
+                aria-controls="formulario-orcamento"
                 className="inline-flex items-center justify-center gap-2.5 px-6 py-3.5 rounded-xl font-semibold text-white bg-uniao-700 hover:bg-uniao-600 border border-uniao-500/40 transition-all"
               >
                 <Mail className="w-5 h-5" />
-                <span>Enviar um e-mail</span>
-              </a>
+                <span>{formOpen ? 'Fechar formulário' : 'Enviar um e-mail'}</span>
+              </button>
             </div>
           </div>
         </div>
 
         {/* Formulário de Proposta */}
-        <div className="max-w-2xl mx-auto bg-white rounded-2xl border border-slate-200 p-8 shadow-sm">
+        <div id="formulario-orcamento" aria-hidden={!formOpen} className={`${formOpen ? 'block' : 'hidden'} scroll-mt-28 max-w-2xl mx-auto bg-white rounded-2xl border border-slate-200 p-8 shadow-sm`}>
           <h3 className="text-2xl font-bold text-slate-900 mb-2 text-center">
             Solicite um orçamento institucional
           </h3>
@@ -84,9 +94,9 @@ export const ContactSection: React.FC = () => {
           {success ? (
             <div className="p-6 rounded-xl bg-uniao-50 border border-uniao-200 text-center space-y-3">
               <CheckCircle2 className="w-10 h-10 text-uniao-600 mx-auto" />
-              <h4 className="text-lg font-bold text-slate-900">Solicitação enviada com sucesso!</h4>
+              <h4 className="text-lg font-bold text-slate-900">E-mail preparado para envio</h4>
               <p className="text-sm text-slate-600">
-                Nossa equipe entrará em contato em breve com a proposta personalizada.
+                Confira a mensagem no seu aplicativo de e-mail e confirme o envio para nossa equipe.
               </p>
               <button
                 type="button"
