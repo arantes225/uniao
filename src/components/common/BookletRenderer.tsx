@@ -1,17 +1,18 @@
-import React from 'react';
+import React, { useMemo } from 'react';
 import { Highlighter, Eraser } from 'lucide-react';
 
 interface BookletRendererProps {
   markdown: string;
 }
 
-const slugify = (value: string) => value
-  .toLowerCase()
-  .normalize('NFD')
-  .replace(/[\u0300-\u036f]/g, '')
-  .replace(/[^a-z0-9\s-]/g, '')
-  .trim()
-  .replace(/\s+/g, '-');
+const slugify = (value: string) =>
+  value
+    .toLowerCase()
+    .normalize('NFD')
+    .replace(/[\u0300-\u036f]/g, '')
+    .replace(/[^a-z0-9\s-]/g, '')
+    .trim()
+    .replace(/\s+/g, '-');
 
 export const TextHighlightToolbar: React.FC = () => {
   const applyHighlight = (color: string) => {
@@ -55,15 +56,31 @@ export const TextHighlightToolbar: React.FC = () => {
   );
 };
 
+// Performance Optimization: Pre-compile regular expressions outside render loop
+const INLINE_REGEX = /(\[[^\]]+\]\([^\)]+\)|\*\*[^*]+\*\*|\*[^*]+\*|`[^`]+`)/g;
+const HR_REGEX = /^---+\s*$/;
+const UNORDERED_LIST_REGEX = /^\s*[-*]\s+/;
+const ORDERED_LIST_REGEX = /^\s*\d+\.\s+/;
+const IMG_REGEX = /^!\[([^\]]*)\]\(([^)]+)\)/;
+const CALLOUT_HEADER_REGEX = /^\[!(TIP|NOTE|IMPORTANT|WARNING|CAUTION)\]/i;
+
 const renderInline = (text: string): React.ReactNode[] => {
-  // Handle links, bold (**text**), italic (*text*), and inline code (`code`)
-  const parts = text.split(/(\[[^\]]+\]\([^\)]+\)|\*\*[^*]+\*\*|\*[^*]+\*|`[^`]+`)/g);
+  if (!text) return [];
+  const parts = text.split(INLINE_REGEX);
   return parts.map((part, idx) => {
     const link = part.match(/^\[([^\]]+)\]\(([^)]+)\)$/);
     if (link) {
       const [label, href] = [link[1], link[2]];
       const target = href.startsWith('#') ? `#${slugify(decodeURIComponent(href.slice(1)))}` : href;
-      return <a key={idx} href={target} className="font-semibold text-teal-700 underline decoration-teal-400/60 underline-offset-2 hover:text-teal-500 dark:text-teal-300 dark:hover:text-teal-200">{label}</a>;
+      return (
+        <a
+          key={idx}
+          href={target}
+          className="font-semibold text-teal-700 underline decoration-teal-400/60 underline-offset-2 hover:text-teal-500 dark:text-teal-300 dark:hover:text-teal-200"
+        >
+          {label}
+        </a>
+      );
     }
     if (part.startsWith('**') && part.endsWith('**')) {
       return <strong key={idx} className="font-bold text-slate-900 dark:text-white">{part.slice(2, -2)}</strong>;
@@ -82,7 +99,11 @@ const renderInline = (text: string): React.ReactNode[] => {
   });
 };
 
-export const BookletRenderer: React.FC<BookletRendererProps> = ({ markdown }) => {
+/**
+ * Pure parser function that converts markdown text into React nodes.
+ */
+const parseMarkdown = (markdown: string): React.ReactNode[] => {
+  if (!markdown) return [];
   const lines = markdown.replace(/\r\n/g, '\n').split('\n');
   const elements: React.ReactNode[] = [];
 
@@ -97,7 +118,7 @@ export const BookletRenderer: React.FC<BookletRendererProps> = ({ markdown }) =>
     }
 
     // Horizontal Rule
-    if (/^---+\s*$/.test(line.trim())) {
+    if (HR_REGEX.test(line.trim())) {
       elements.push(<hr key={`hr-${i}`} className="my-6 border-slate-200 dark:border-slate-800" />);
       i++;
       continue;
@@ -170,7 +191,7 @@ export const BookletRenderer: React.FC<BookletRendererProps> = ({ markdown }) =>
     }
 
     // Image ![alt](src)
-    const imgMatch = line.trim().match(/^!\[([^\]]*)\]\(([^)]+)\)/);
+    const imgMatch = line.trim().match(IMG_REGEX);
     if (imgMatch) {
       const alt = imgMatch[1];
       const src = imgMatch[2];
@@ -206,7 +227,7 @@ export const BookletRenderer: React.FC<BookletRendererProps> = ({ markdown }) =>
       const quoteLines: string[] = [];
       while (i < lines.length && lines[i].trim().startsWith('>')) {
         const clean = lines[i].trim().replace(/^>\s?/, '');
-        if (!/^\[!(TIP|NOTE|IMPORTANT|WARNING|CAUTION)\]/i.test(clean)) {
+        if (!CALLOUT_HEADER_REGEX.test(clean)) {
           quoteLines.push(clean);
         }
         i++;
@@ -228,44 +249,39 @@ export const BookletRenderer: React.FC<BookletRendererProps> = ({ markdown }) =>
 
     // Headings
     if (line.startsWith('# ')) {
-      const title = line.slice(2);
       elements.push(
-        <h1 id={slugify(title)} key={`h1-${i}`} className="text-2xl sm:text-3xl font-black text-teal-700 dark:text-teal-400 mt-6 mb-3 tracking-tight scroll-mt-6">
-          {renderInline(title)}
+        <h1 key={`h1-${i}`} className="text-2xl sm:text-3xl font-black text-teal-700 dark:text-teal-400 mt-6 mb-3 tracking-tight">
+          {renderInline(line.slice(2))}
         </h1>
       );
       i++;
       continue;
     }
     if (line.startsWith('## ')) {
-      const title = line.slice(3);
       elements.push(
         <h2
-          id={slugify(title)}
           key={`h2-${i}`}
-          className="text-lg sm:text-xl font-extrabold text-slate-900 dark:text-white mt-8 mb-3 pb-2 border-b border-teal-500/30 flex items-center gap-2 scroll-mt-6"
+          className="text-lg sm:text-xl font-extrabold text-slate-900 dark:text-white mt-8 mb-3 pb-2 border-b border-teal-500/30 flex items-center gap-2"
         >
-          {renderInline(title)}
+          {renderInline(line.slice(3))}
         </h2>
       );
       i++;
       continue;
     }
     if (line.startsWith('### ')) {
-      const title = line.slice(4);
       elements.push(
-        <h3 id={slugify(title)} key={`h3-${i}`} className="text-base sm:text-lg font-bold text-teal-700 dark:text-teal-300 mt-6 mb-2 scroll-mt-6">
-          {renderInline(title)}
+        <h3 key={`h3-${i}`} className="text-base sm:text-lg font-bold text-teal-700 dark:text-teal-300 mt-6 mb-2">
+          {renderInline(line.slice(4))}
         </h3>
       );
       i++;
       continue;
     }
     if (line.startsWith('#### ')) {
-      const title = line.slice(5);
       elements.push(
-        <h4 id={slugify(title)} key={`h4-${i}`} className="text-sm sm:text-base font-bold text-slate-800 dark:text-slate-200 mt-4 mb-1.5 scroll-mt-6">
-          {renderInline(title)}
+        <h4 key={`h4-${i}`} className="text-sm sm:text-base font-bold text-slate-800 dark:text-slate-200 mt-4 mb-1.5">
+          {renderInline(line.slice(5))}
         </h4>
       );
       i++;
@@ -273,10 +289,10 @@ export const BookletRenderer: React.FC<BookletRendererProps> = ({ markdown }) =>
     }
 
     // Unordered List
-    if (/^\s*[-*]\s+/.test(line)) {
+    if (UNORDERED_LIST_REGEX.test(line)) {
       const items: string[] = [];
-      while (i < lines.length && /^\s*[-*]\s+/.test(lines[i])) {
-        items.push(lines[i].replace(/^\s*[-*]\s+/, ''));
+      while (i < lines.length && UNORDERED_LIST_REGEX.test(lines[i])) {
+        items.push(lines[i].replace(UNORDERED_LIST_REGEX, ''));
         i++;
       }
       elements.push(
@@ -292,10 +308,10 @@ export const BookletRenderer: React.FC<BookletRendererProps> = ({ markdown }) =>
     }
 
     // Ordered List
-    if (/^\s*\d+\.\s+/.test(line)) {
+    if (ORDERED_LIST_REGEX.test(line)) {
       const items: string[] = [];
-      while (i < lines.length && /^\s*\d+\.\s+/.test(lines[i])) {
-        items.push(lines[i].replace(/^\s*\d+\.\s+/, ''));
+      while (i < lines.length && ORDERED_LIST_REGEX.test(lines[i])) {
+        items.push(lines[i].replace(ORDERED_LIST_REGEX, ''));
         i++;
       }
       elements.push(
@@ -319,5 +335,16 @@ export const BookletRenderer: React.FC<BookletRendererProps> = ({ markdown }) =>
     i++;
   }
 
-  return <div className="space-y-1">{elements}</div>;
+  return elements;
 };
+
+/**
+ * Bolt Performance Optimization:
+ * 1. Wrapped in React.memo to prevent unnecessary re-renders when parent state updates.
+ * 2. Memoized AST line parsing using useMemo based on the `markdown` prop.
+ */
+export const BookletRenderer: React.FC<BookletRendererProps> = React.memo(({ markdown }) => {
+  const elements = useMemo(() => parseMarkdown(markdown), [markdown]);
+
+  return <div className="space-y-1">{elements}</div>;
+});

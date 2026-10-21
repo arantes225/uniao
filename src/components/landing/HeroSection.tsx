@@ -5,7 +5,7 @@ export const HeroSection: React.FC = () => {
   const whatsappUrl = "https://wa.me/5561999638011?text=Ol%C3%A1!%20Gostaria%20de%20solicitar%20informa%C3%A7%C3%B5es%20urgentes%20sobre%20capacita%C3%A7%C3%B5es%20da%20Uni%C3%A3o%20Servi%C3%A7os%20M%C3%A9dicos.";
 
   return (
-    <section className="relative pt-32 pb-24 lg:pt-40 lg:pb-36 bg-slate-950 text-white overflow-hidden">
+    <section className="relative pt-28 pb-16 lg:pt-36 lg:pb-24 bg-slate-950 text-white overflow-hidden">
       
       {/* Background Animated Gradients & Mesh */}
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-7xl h-full pointer-events-none">
@@ -17,38 +17,38 @@ export const HeroSection: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
         {/* Dynamic Sales Urgency Capsule */}
-        <div className="flex justify-center mb-8">
-          <div className="inline-flex items-center gap-2.5 px-5 py-2 rounded-full bg-slate-900/90 border border-uniao-500/40 text-uniao-300 shadow-[0_0_25px_rgba(20,184,166,0.25)] hover:border-uniao-400 transition-all">
-            <span className="flex h-2.5 w-2.5 relative">
+        <div className="flex justify-center mb-6">
+          <div className="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full bg-slate-900/90 border border-uniao-500/40 text-uniao-300 shadow-[0_0_20px_rgba(20,184,166,0.2)] hover:border-uniao-400 transition-all">
+            <span className="flex h-2 w-2 relative">
               <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-400 opacity-75"></span>
-              <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-red-500"></span>
+              <span className="relative inline-flex rounded-full h-2 w-2 bg-red-500"></span>
             </span>
-            <span className="text-xs font-black tracking-wide uppercase">
+            <span className="text-xs font-bold tracking-wide uppercase">
               Plantão de Agendamento Aberto para Turmas Institucionais
             </span>
           </div>
         </div>
 
         {/* Impactful Heading */}
-        <div className="max-w-4xl mx-auto text-center space-y-6">
-          <h1 className="text-4xl sm:text-6xl lg:text-7xl font-black tracking-tight leading-[1.08] font-sans">
+        <div className="max-w-4xl mx-auto text-center space-y-5">
+          <h1 className="text-3xl sm:text-5xl lg:text-5xl xl:text-6xl font-extrabold tracking-tight leading-[1.15] font-sans">
             Quando cada segundo importa, <br />
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-teal-300 via-uniao-400 to-emerald-400 drop-shadow-[0_0_35px_rgba(20,184,166,0.4)]">
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-teal-300 via-uniao-400 to-emerald-400 drop-shadow-[0_0_25px_rgba(20,184,166,0.35)]">
               sua equipe sabe exatamente o que fazer?
             </span>
           </h1>
 
-          <p className="text-lg sm:text-xl text-slate-300 max-w-2xl mx-auto leading-relaxed font-light">
+          <p className="text-base sm:text-lg text-slate-300 max-w-2xl mx-auto leading-relaxed font-light">
             Uma hemorragia grave mata em <strong>3 a 5 minutos</strong>. Uma parada cardíaca causa danos cerebrais irreversíveis em <strong>4 minutos</strong>. A <strong className="text-white font-semibold">União Serviços Médicos</strong> transforma professores, instrutores e colaboradores em socorristas preparados para intervir com maestria.
           </p>
 
           {/* CTAs */}
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4">
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-3.5 pt-2">
             <a
               href={whatsappUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="w-full sm:w-auto inline-flex items-center justify-center gap-3 px-8 py-4 rounded-2xl text-base font-extrabold text-slate-950 bg-gradient-to-r from-uniao-400 via-teal-300 to-emerald-300 hover:brightness-110 shadow-[0_0_30px_rgba(20,184,166,0.4)] transition-all transform hover:-translate-y-1"
+              className="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 px-7 py-3.5 rounded-xl text-sm sm:text-base font-bold text-slate-950 bg-gradient-to-r from-uniao-400 via-teal-300 to-emerald-300 hover:brightness-110 shadow-[0_0_25px_rgba(20,184,166,0.35)] transition-all transform hover:-translate-y-0.5"
             >
               <PhoneCall className="w-5 h-5 text-slate-950" />
               <span>Solicitar Treinamento Agora</span>
@@ -56,7 +56,7 @@ export const HeroSection: React.FC = () => {
 
             <a
               href="#galeria"
-              className="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 px-8 py-4 rounded-2xl text-base font-semibold text-white bg-white/5 hover:bg-white/10 border border-white/10 backdrop-blur-md transition-all"
+              className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-xl text-sm sm:text-base font-semibold text-white bg-white/5 hover:bg-white/10 border border-white/10 backdrop-blur-md transition-all"
             >
               <Sparkles className="w-4 h-4 text-uniao-400" />
               <span>Ver Fotos dos Treinamentos Reais</span>
@@ -67,7 +67,7 @@ export const HeroSection: React.FC = () => {
         </div>
 
         {/* Hero Interactive Proof Display (com a Cruz Oficial Fluida) */}
-        <div className="mt-16 lg:mt-24 max-w-5xl mx-auto">
+        <div className="mt-12 lg:mt-16 max-w-5xl mx-auto">
           <div className="relative rounded-3xl p-1 bg-gradient-to-b from-uniao-500/40 via-slate-800/60 to-transparent shadow-2xl">
             <div className="rounded-[23px] bg-slate-900/95 backdrop-blur-2xl p-6 sm:p-10 border border-white/5">
               
