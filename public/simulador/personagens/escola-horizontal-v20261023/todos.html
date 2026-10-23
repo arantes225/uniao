@@ -22,9 +22,13 @@
     .status { display:flex; align-items:center; gap:8px; margin-left:auto; color:var(--muted); font-size:.8rem; }
     .status-dot { width:9px; height:9px; border-radius:50%; background:#718898; }
     body.is-running .status-dot { background:var(--accent); box-shadow:0 0 0 5px #38d6b022; }
-    .filters { display:flex; flex-wrap:wrap; gap:8px; margin-bottom:18px; }
-    .filters button { padding:7px 11px; font-size:.77rem; }
-    .gallery { display:grid; grid-template-columns:repeat(auto-fit, minmax(min(100%, 440px), 1fr)); gap:18px; }
+    .pager { display:flex; align-items:center; gap:10px; margin-bottom:18px; padding:12px; border:1px solid var(--line); border-radius:16px; background:#0c2332; }
+    .pager button { padding:8px 11px; font-size:.76rem; }
+    .page-buttons { display:flex; flex:1; flex-wrap:wrap; justify-content:center; gap:7px; }
+    .page-buttons button { min-width:42px; }
+    .page-buttons button[aria-pressed="true"] { background:var(--accent); color:#06222a; border-color:transparent; }
+    .page-counter { min-width:58px; color:var(--muted); font-size:.78rem; text-align:center; }
+    .gallery { display:block; max-width:1120px; margin:0 auto; }
     .card { overflow:hidden; border:1px solid var(--line); border-radius:18px; background:#0c2332; box-shadow:0 15px 40px #0003; }
     .card.is-hidden { display:none; }
     .card-head { display:flex; justify-content:space-between; align-items:start; gap:10px; padding:15px 16px 12px; }
@@ -45,7 +49,7 @@
     .empty { display:none; padding:30px; color:var(--muted); text-align:center; }
     @keyframes breathe { 0%,100% { transform:scale(1); } 42% { transform:scale(1.025,1.09); } 58% { transform:scale(1.018,1.065); } }
     @keyframes blink { 0%,91%,100% { opacity:0; } 94%,96% { opacity:1; } 98% { opacity:0; } }
-    @media (max-width:700px) { header { display:block; } .status { margin:8px 0 0; } .toolbar { position:static; } }
+    @media (max-width:700px) { header { display:block; } .status { margin:8px 0 0; } .toolbar { position:static; } .pager { display:block; } .pager > button { width:100%; margin-bottom:8px; } .page-buttons { justify-content:stretch; } .page-buttons button { flex:1 1 42px; } .page-counter { margin-top:8px; } }
     @media (prefers-reduced-motion:reduce) { .patient .chest, .patient .blink { animation:none; } }
   </style>
 </head>
@@ -70,13 +74,12 @@
       <a class="link-button" href="/uniao/#/aluno/simulador">← Voltar ao simulador</a>
     </nav>
 
-    <div class="filters" aria-label="Filtrar pacientes">
-      <button type="button" data-filter="todos" aria-pressed="true">Todos (10)</button>
-      <button type="button" data-filter="sentada">Sentados (5)</button>
-      <button type="button" data-filter="deitada">Deitados (5)</button>
-      <button type="button" data-filter="adultos">Profissionais (4)</button>
-      <button type="button" data-filter="criancas">Crianças e bebê (6)</button>
-    </div>
+    <nav class="pager" aria-label="Escolher paciente">
+      <button id="previousPage" type="button">← Anterior</button>
+      <div class="page-buttons" id="pageButtons"></div>
+      <button id="nextPage" type="button">Próximo →</button>
+      <span class="page-counter" id="pageCounter" aria-live="polite">1 / 10</span>
+    </nav>
 
     <section class="gallery" id="gallery" aria-label="Pacientes escolares">
       <article class="card" data-group="adultos" data-pose="sentada"><div class="card-head"><div><h2>Professora</h2><p>Equipe pedagógica</p></div><span class="pose-tag">Sentada</span></div><div class="patient" style="--chest-x:49%;--chest-y:46%;--chest-rx:13%;--chest-ry:15%;--eyes-x:50%;--eyes-y:25%;--eyes-rx:5%;--eyes-ry:3%"><img src="professora-sentada.png" alt="Professora sentada na sala de aula"><img class="chest" src="professora-sentada.png" alt="" aria-hidden="true"><img class="blink" src="blink/professora-sentada-olhos-fechados.png" alt="" aria-hidden="true"></div><div class="card-controls"><button type="button" data-command="pause">Ⅱ Pausar</button><button type="button" data-command="breath" aria-pressed="true">Respirar</button><button type="button" data-command="blink" aria-pressed="true">Piscar</button><button type="button" data-command="eyes" aria-pressed="false">Manter olhos fechados</button><span class="command-state">Controle individual pronto</span></div></article>
@@ -90,13 +93,23 @@
       <article class="card" data-group="criancas" data-pose="sentada"><div class="card-head"><div><h2>Bebê</h2><p>Lactente</p></div><span class="pose-tag">Sentado</span></div><div class="patient" style="--chest-x:50%;--chest-y:52%;--chest-rx:12%;--chest-ry:13%;--eyes-x:49%;--eyes-y:32%;--eyes-rx:6%;--eyes-ry:3.5%"><img src="bebe-sentado.png" alt="Bebê sentado na sala de atividades"><img class="chest" src="bebe-sentado.png" alt="" aria-hidden="true"><img class="blink" src="blink/bebe-sentado-olhos-fechados.png" alt="" aria-hidden="true"></div><div class="card-controls"><button type="button" data-command="pause">Ⅱ Pausar</button><button type="button" data-command="breath" aria-pressed="true">Respirar</button><button type="button" data-command="blink" aria-pressed="true">Piscar</button><button type="button" data-command="eyes" aria-pressed="false">Manter olhos fechados</button><span class="command-state">Controle individual pronto</span></div></article>
       <article class="card" data-group="criancas" data-pose="deitada"><div class="card-head"><div><h2>Bebê</h2><p>Lactente</p></div><span class="pose-tag">Deitado</span></div><div class="patient" style="--chest-x:50%;--chest-y:57%;--chest-rx:15%;--chest-ry:14%;--eyes-x:47%;--eyes-y:42%;--eyes-rx:6%;--eyes-ry:3.5%"><img src="bebe-deitado.png" alt="Bebê deitado na sala de atividades"><img class="chest" src="bebe-deitado.png" alt="" aria-hidden="true"><img class="blink" src="blink/bebe-deitado-olhos-fechados.png" alt="" aria-hidden="true"></div><div class="card-controls"><button type="button" data-command="pause">Ⅱ Pausar</button><button type="button" data-command="breath" aria-pressed="true">Respirar</button><button type="button" data-command="blink" aria-pressed="true">Piscar</button><button type="button" data-command="eyes" aria-pressed="false">Manter olhos fechados</button><span class="command-state">Controle individual pronto</span></div></article>
     </section>
-    <p class="empty" id="empty">Nenhum paciente corresponde a este filtro.</p>
   </main>
   <script>
     const body = document.body;
     const cards = [...document.querySelectorAll('.card')];
     const statusText = document.querySelector('#statusText');
     const patients = () => cards.map(card => card.querySelector('.patient'));
+    let currentPage = 0;
+    const pageButtons = document.querySelector('#pageButtons');
+    const pageCounter = document.querySelector('#pageCounter');
+    const previousPage = document.querySelector('#previousPage');
+    const nextPage = document.querySelector('#nextPage');
+    cards.forEach((card, index) => { const button = document.createElement('button'); button.type = 'button'; button.dataset.page = String(index); button.textContent = `${index + 1} · ${card.querySelector('h2').textContent} ${card.querySelector('.pose-tag').textContent.toLowerCase()}`; button.setAttribute('aria-label', `Abrir ${button.textContent}`); pageButtons.append(button); });
+    const showPage = index => { currentPage = Math.max(0, Math.min(cards.length - 1, index)); cards.forEach((card, cardIndex) => card.classList.toggle('is-hidden', cardIndex !== currentPage)); pageButtons.querySelectorAll('button').forEach((button, buttonIndex) => button.setAttribute('aria-pressed', String(buttonIndex === currentPage))); pageCounter.textContent = `${currentPage + 1} / ${cards.length}`; previousPage.disabled = currentPage === 0; nextPage.disabled = currentPage === cards.length - 1; };
+    pageButtons.addEventListener('click', event => { const button = event.target.closest('button[data-page]'); if (button) showPage(Number(button.dataset.page)); });
+    previousPage.addEventListener('click', () => showPage(currentPage - 1));
+    nextPage.addEventListener('click', () => showPage(currentPage + 1));
+    showPage(0);
     const setRunning = running => { body.classList.toggle('is-running', running); patients().forEach(patient => patient.classList.toggle('paused', !running)); statusText.textContent = running ? 'Animações ativas' : 'Animações pausadas'; };
     document.querySelector('#playAll').addEventListener('click', () => setRunning(true));
     document.querySelector('#pauseAll').addEventListener('click', () => setRunning(false));
@@ -107,8 +120,7 @@
     document.querySelector('#blinkAll').addEventListener('click', event => { const enabled = event.currentTarget.getAttribute('aria-pressed') !== 'true'; event.currentTarget.setAttribute('aria-pressed', String(enabled)); patients().forEach(patient => patient.classList.toggle('no-blink', !enabled)); });
     document.querySelector('#eyesClosedAll').addEventListener('click', event => { const enabled = event.currentTarget.getAttribute('aria-pressed') !== 'true'; event.currentTarget.setAttribute('aria-pressed', String(enabled)); event.currentTarget.textContent = enabled ? '◉ Abrir olhos de todos' : '◉ Manter olhos fechados'; patients().forEach(patient => patient.classList.toggle('eyes-closed', enabled)); setPressed('[data-command="eyes"]', enabled); });
     cards.forEach(card => card.addEventListener('click', event => { const button = event.target.closest('button[data-command]'); if (!button) return; const patient = card.querySelector('.patient'); const command = button.dataset.command; if (command === 'pause') { patient.classList.toggle('paused'); const paused = patient.classList.contains('paused'); button.textContent = paused ? '▶ Retomar' : 'Ⅱ Pausar'; updateCommandState(card, paused ? 'Paciente pausado' : 'Animações ativas'); } if (command === 'breath') { const enabled = button.getAttribute('aria-pressed') !== 'true'; button.setAttribute('aria-pressed', String(enabled)); patient.classList.toggle('no-breath', !enabled); updateCommandState(card, enabled ? 'Respiração ativada' : 'Respiração pausada'); } if (command === 'blink') { const enabled = button.getAttribute('aria-pressed') !== 'true'; button.setAttribute('aria-pressed', String(enabled)); patient.classList.toggle('no-blink', !enabled); updateCommandState(card, enabled ? 'Piscar ativado' : 'Piscar pausado'); } if (command === 'eyes') { const enabled = button.getAttribute('aria-pressed') !== 'true'; button.setAttribute('aria-pressed', String(enabled)); patient.classList.toggle('eyes-closed', enabled); button.textContent = enabled ? 'Abrir olhos' : 'Manter olhos fechados'; updateCommandState(card, enabled ? 'Olhos mantidos fechados' : 'Olhos liberados'); } }));
-    document.querySelectorAll('[data-filter]').forEach(button => button.addEventListener('click', () => { const filter = button.dataset.filter; document.querySelectorAll('[data-filter]').forEach(item => item.setAttribute('aria-pressed', String(item === button))); let visible = 0; cards.forEach(card => { const matches = filter === 'todos' || filter === card.dataset.pose || filter === card.dataset.group; card.classList.toggle('is-hidden', !matches); if (matches) visible += 1; }); document.querySelector('#empty').style.display = visible ? 'none' : 'block'; }));
-    window.addEventListener('keydown', event => { if (event.code === 'Space' && event.target.tagName !== 'BUTTON') { event.preventDefault(); setRunning(body.classList.contains('is-running') ? false : true); } });
+    window.addEventListener('keydown', event => { if (event.code === 'Space' && event.target.tagName !== 'BUTTON') { event.preventDefault(); setRunning(body.classList.contains('is-running') ? false : true); } if (event.code === 'ArrowLeft') showPage(currentPage - 1); if (event.code === 'ArrowRight') showPage(currentPage + 1); });
   </script>
 </body>
 </html>
