@@ -63,6 +63,10 @@ Ao concluir o estudo deste módulo, o aluno deverá ser capaz de:
 
 As emergências ambientais e toxicológicas abrangem agravos em que o organismo humano é submetido a energias e agentes externos nocivos: energia térmica extrema (fogo, vapor, líquidos ferventes), energia elétrica de alta intensidade, agentes químicos industriais e domésticos corrosivos, toxinas biológicas de animais peçonhentos e hipóxia por submersão líquida (afogamento) [1, 3, 5].
 
+
+![Figura 1 — Quadro comparativo clínico entre exaustão térmica e golpe de calor (intermação).](../imagens/Heat-symptoms-2022-final.png)
+*Figura 1 — Quadro comparativo clínico entre exaustão térmica e golpe de calor (intermação). Crédito: National Weather Service / CDC / NIOSH. Licença: Domínio público. Fonte: Wikimedia Commons.*
+
 No Brasil, os acidentes por animais peçonhentos representam uma notificação compulsória de magnitude alarmante: são mais de **300 mil acidentes anuais**, com destaque para as picadas de escorpiões da espécie *Tityus serrulatus* (escorpião-amarelo), que lideram os casos fatais em crianças, e serpentes do gênero *Bothrops* (jararacas), responsáveis por mais de 85% dos acidentes ofídicos [7].
 
 Da mesma forma, o afogamento é responsável pelo falecimento de mais de 5.700 brasileiros todos os anos, sendo a segunda causa de morte acidental em crianças de 1 a 4 anos de idade [3]. Nas cozinhas domésticas e nas indústrias, as queimaduras térmicas e químicas produzem sequelas estéticas e funcionais devastadoras se o socorro nas primeiras dezenas de minutos for inadequado [2]. O socorrista leigo bem instruído atua exatamente na janela de ouro que impede que o calor continue cozinhando os tecidos ou que o veneno destrua a função renal da vítima.
@@ -98,6 +102,10 @@ As queimaduras são graduadas pela profundidade tecidual atingida [2]:
 - **1º Grau (Superficial):** Atinge apenas a epiderme. Pele avermelhada (*eritema*), quente, seca e muito dolorosa (ex.: queimadura solar típica). Não forma bolhas. Cicatriza em 3 a 6 dias sem cicatriz.
 - **2º Grau (Espessura Parcial):** Atinge a epiderme e partes variáveis da derme. Caracteriza-se pela presença de **bolhas intactas ou rompidas (*flictenas*)**, com fundo avermelhado e úmido, extremamente dolorosas ao contato do ar.
 - **3º Grau (Espessura Total):** Destrói todas as camadas da pele, atingindo tecido adiposo subcutâneo, músculos ou ossos. Aspecto esbranquiçado (couro cru), acinzentado ou carbonizado escuro e seco. **Geralmente indolor no centro da lesão**, pois as terminações nervosas sensitivas foram completamente destruídas pelo calor (a dor persiste apenas nas bordas de 2º grau adjacentes) [2, 6].
+
+
+![Figura 2 — Queimadura de segundo grau superficial com formação de flictenas (bolhas).](../imagens/Superficial-partial-thickness-burn.png)
+*Figura 2 — Queimadura de segundo grau superficial com formação de flictenas (bolhas). Crédito: Baedr-9439. Licença: CC0. Fonte: Wikimedia Commons.*
 
 #### Cálculo da Superfície Corporal Queimada (Regra dos Nove de Wallace):
 Utilizada para estimar o percentual corporal em adultos: Cabeça (9%), Membro Superior Direito (9%), Membro Superior Esquerdo (9%), Tronco Anterior (18%), Tronco Posterior (18%), Membro Inferior Direito (18%), Membro Inferior Esquerdo (18%) e Genitália (1%).
@@ -141,6 +149,10 @@ As substâncias tóxicas penetram no organismo por quatro vias principais [6]:
 
 ### 5.5 Acidentes por Animais Peçonhentos no Brasil
 O Brasil abriga ampla diversidade de fauna peçonhenta cujo manejo pré-hospitalar exige rigor científico para não agravar a lesão tecidual [7]:
+
+
+![Figura 3 — Regra dos Nove de Wallace para estimativa da Superfície Corporal Queimada (SCQ).](../imagens/Wallace-rule-of-nines.jpg)
+*Figura 3 — Regra dos Nove de Wallace para estimativa da Superfície Corporal Queimada (SCQ). Crédito: Another-anon-artist-234. Licença: CC0. Fonte: Wikimedia Commons.*
 
 - **Acidentes Ofídicos (Serpentes):**
   - *Gênero Bothrops (Jararacas — 85% dos casos):* O veneno tem ação proteolítica, necrosante e coagulante. Causa dor lancinante imediata, inchaço deformante rápido na perna/braço, bolhas com sangue e hemorragias à distância (sangramento na gengiva ou urina escura).
@@ -194,31 +206,15 @@ A Sociedade Brasileira de Salvamento Aquático (SOBRASA) e a *International Life
 +---------------------------------------------------------------------------------+
 ```
 
+
+![Figura 4 — Manifestações clínicas locais e sistêmicas nos acidentes ofídicos (peçonhentos).](../imagens/Snake_bite_symptoms.png)
+*Figura 4 — Manifestações clínicas locais e sistêmicas nos acidentes ofídicos (peçonhentos). Crédito: Mikael HÃ¤ggstrÃ¶m. Licença: Domínio público. Fonte: Wikimedia Commons.*
+
 > [!IMPORTANT]
 > **ENTENDA O PORQUÊ: AS 5 VENTILAÇÕES INICIAIS NO AFOGADO**
 > No afogamento, o coração parou porque os pulmões ficaram sem oxigênio (parada primariamente hipóxica/asfíxica), e não por infarto ou fibrilação cardíaca primária. Portanto, enquanto na parada súbita comum do adulto nós começamos pelas compressões, no **AFOGADO a prioridade é oxigenar o sangue imediatamente**. Posicione a vítima na areia firme de barriga para cima, abra a via aérea e aplique **5 ventilações de resgate com Pocket Mask** (ou boca a boca se não houver dispositivo). Em seguida, continue ciclos de **30 compressões torácicas para 2 ventilações** [3, 4]. Não perca tempo tentando "tirar a água da barriga" apertando o estômago; isso induz vômito e broncoaspiração imediata.
 
 ---
-
-### Figuras de Apoio
-
-![Figura 1 - Queimadura de segundo grau superficial com formaÃ§Ã£o de flictenas (bolhas).](../imagens/Superficial-partial-thickness-burn.png)
-*Figura 1 - Queimadura de segundo grau superficial com formaÃ§Ã£o de flictenas (bolhas). CrÃ©dito: Baedr-9439. LicenÃ§a: CC0. Fonte: Wikimedia Commons.*
-
-![Figura 2 - Queimadura de terceiro grau (espessura total) com destruiÃ§Ã£o epidÃ©rmica e dÃ©rmica.](../imagens/Full-thickness-burn.png)
-*Figura 2 - Queimadura de terceiro grau (espessura total) com destruiÃ§Ã£o epidÃ©rmica e dÃ©rmica. CrÃ©dito: Baedr-9439. LicenÃ§a: CC0. Fonte: Wikimedia Commons.*
-
-![Figura 3 - Regra dos Nove de Wallace para estimativa da SuperfÃ­cie Corporal Queimada (SCQ).](../imagens/Wallace-rule-of-nines.jpg)
-*Figura 3 - Regra dos Nove de Wallace para estimativa da SuperfÃ­cie Corporal Queimada (SCQ). CrÃ©dito: Another-anon-artist-234. LicenÃ§a: CC0. Fonte: Wikimedia Commons.*
-
-![Figura 4 - Quadro comparativo clÃ­nico entre exaustÃ£o tÃ©rmica e golpe de calor (intermaÃ§Ã£o).](../imagens/Heat-symptoms-2022-final.png)
-*Figura 4 - Quadro comparativo clÃ­nico entre exaustÃ£o tÃ©rmica e golpe de calor (intermaÃ§Ã£o). CrÃ©dito: National Weather Service / CDC / NIOSH. LicenÃ§a: DomÃ­nio pÃºblico. Fonte: Wikimedia Commons.*
-
-![Figura 5 - EnvoltÃ³rio de isolamento tÃ©rmico passivo e ativo para prevenÃ§Ã£o da hipotermia no trauma.](../imagens/Hypothermia-wrap.png)
-*Figura 5 - EnvoltÃ³rio de isolamento tÃ©rmico passivo e ativo para prevenÃ§Ã£o da hipotermia no trauma. CrÃ©dito: Baedr-9439. LicenÃ§a: CC0. Fonte: Wikimedia Commons.*
-
-![Figura 6 - ManifestaÃ§Ãµes clÃ­nicas locais e sistÃªmicas nos acidentes ofÃ­dicos (peÃ§onhentos).](../imagens/Snake_bite_symptoms.png)
-*Figura 6 - ManifestaÃ§Ãµes clÃ­nicas locais e sistÃªmicas nos acidentes ofÃ­dicos (peÃ§onhentos). CrÃ©dito: Mikael HÃ¤ggstrÃ¶m. LicenÃ§a: DomÃ­nio pÃºblico. Fonte: Wikimedia Commons.*
 
 ---
 
@@ -232,6 +228,10 @@ A Sociedade Brasileira de Salvamento Aquático (SOBRASA) e a *International Life
 | **2º Grau** | Epiderme e Derme | **Presença de bolhas (*flictenas*)**, fundo úmido e muito doloroso. | Resfriar em água corrente; **NÃO romper bolhas**; cobrir com gaze estéril ou plástico limpo. |
 | **3º Grau** | Pele total, gordura e músculos | Couro esbranquiçado, cinza ou carbonizado seco; centro indolor. | Resfriar suavemente; cobrir com pano limpo e seco; **chamar 192/193**; manter aquecido contra hipotermia. |
 | **Química** | Variável com corrosão ácida/base | Queimação progressiva com alteração de cor da pele. | **Irrigar com água corrente contínua por 20 a 30 minutos** ininterruptos. Tirar roupas. |
+
+
+![Figura 5 — Queimadura de terceiro grau (espessura total) com destruição epidérmica e dérmica.](../imagens/Full-thickness-burn.png)
+*Figura 5 — Queimadura de terceiro grau (espessura total) com destruição epidérmica e dérmica. Crédito: Baedr-9439. Licença: CC0. Fonte: Wikimedia Commons.*
 
 ---
 
@@ -272,6 +272,10 @@ A Sociedade Brasileira de Salvamento Aquático (SOBRASA) e a *International Life
 > 5. **Tocar em uma pessoa recebendo choque de baixa tensão com as mãos desnudadas:**
 >    - *Por que não fazer:* O corpo da vítima torna-se um condutor energizado. A corrente passará para o socorrista, travando os dois na rede elétrica.
 >    - *Conduta correta:* Desligue o disjuntor na caixa de força ou use material de madeira completamente seco.
+
+
+![Figura 6 — Envoltório de isolamento térmico passivo e ativo para prevenção da hipotermia no trauma.](../imagens/Hypothermia-wrap.png)
+*Figura 6 — Envoltório de isolamento térmico passivo e ativo para prevenção da hipotermia no trauma. Crédito: Baedr-9439. Licença: CC0. Fonte: Wikimedia Commons.*
 
 ---
 

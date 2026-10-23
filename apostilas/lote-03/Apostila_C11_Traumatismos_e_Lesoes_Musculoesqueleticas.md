@@ -62,6 +62,10 @@ Ao concluir o estudo deste módulo, você será capaz de:
 
 O traumatismo físico decorrente de acidentes de trânsito, acidentes de trabalho com máquinas, quedas de lajes, acidentes esportivos em academias e quedas recreativas no pátio escolar compõe uma das maiores demandas de atendimento pré-hospitalar em território brasileiro [1, 5].
 
+
+![Figura 1 — Manobra de rolamento em bloco mantendo o alinhamento do eixo cranioespinal.](../imagens/Rolling-a-patient.jpg)
+*Figura 1 — Manobra de rolamento em bloco mantendo o alinhamento do eixo cranioespinal. Crédito: Another-anon-artist-234. Licença: CC0. Fonte: Wikimedia Commons.*
+
 Ao abordar uma vítima de traumatismo, o socorrista capacitado não deve olhar apenas para o local que dói. A primeira avaliação clínica é a **análise da cinemática**:
 - *Qual foi a velocidade do impacto?*
 - *Houve desaceleração brusca?*
@@ -83,6 +87,10 @@ O esqueleto humano não é uma estrutura mineral inerte; os ossos são órgãos 
   - Fratura fechada de **Bacia / Pelve:** Perda de **1.500 a mais de 3.000 mL de sangue** no retroperitônio (choque grave com risco de morte iminente).
   - Fratura fechada de **Úmero ou Tíbia:** Perda média de **300 a 750 mL de sangue** [1, 6].
 
+
+![Figura 2 — Equimose periorbitária bilateral (sinal do guaxinim) sugestiva de fratura de base de crânio.](../imagens/Raccoon-eyes.jpg)
+*Figura 2 — Equimose periorbitária bilateral (sinal do guaxinim) sugestiva de fratura de base de crânio. Crédito: Another-anon-artist-234. Licença: CC0. Fonte: Wikimedia Commons.*
+
 ```
 +---------------------------------------------------------------------------------+
 |                    PERDA HEMORRÁGICA OCULTA NAS FRATURAS FECHADAS               |
@@ -101,6 +109,10 @@ A coluna vertebral humana é composta por 33 vértebras sobrepostas que protegem
 - **A Coluna Cervical (Pescoço):** Composta por 7 vértebras (C1 a C7), é o segmento mais móvel e vulnerável de toda a coluna.
 - A medula espinhal no nível cervical alto (C3 a C5) emite os neurônios motores do **Nervo Frênico**, que controlam a contração do músculo diafragma, responsável pela respiração autônoma.
 - *O mecanismo da lesão medular:* Se uma vítima sofre fratura ou luxação vertebral cervical, a movimentação descuidada da cabeça (dobrar ou girar o pescoço) esmaga a medula contra a vértebra fraturada. A vítima perde instantaneamente a sensibilidade e o movimento dos braços e pernas (**tetraplegia**) e, se a lesão for acima de C4, entra em **parada respiratória imediata por paralisia diafragmática** [1, 4].
+
+
+![Figura 3 — Aplicação técnica de colar cervical para restrição de movimento.](../imagens/Cervical-collar-application.png)
+*Figura 3 — Aplicação técnica de colar cervical para restrição de movimento. Crédito: Baedr-9439. Licença: CC0. Fonte: Wikimedia Commons.*
 
 ---
 
@@ -133,6 +145,10 @@ Frequentemente confundidas no ambiente comunitário, essas lesões guardam difer
   - *Sinais:* Deformidade anatômica grotesca, dor lancinante intolerável e travamento articular completo (o membro fica "congelado" na posição torta).
   - *Conduta no APH:* **JAMAIS tente "colocar a articulação no lugar" (redução articular incruenta).** Tracionar a articulação desencaixada pode comprimir ou romper artérias e nervos que passam grudados na cápsula articular, provocando isquemia e paralisia permanente da mão ou do pé. Imobilize na posição em que o membro travou e transporte imediatamente para o hospital [1, 3].
 
+
+![Figura 4 — Enfaixamento compressivo funcional em entorse articular de tornozelo.](../imagens/Ankle-wrap.png)
+*Figura 4 — Enfaixamento compressivo funcional em entorse articular de tornozelo. Crédito: Baedr-9439. Licença: CC0. Fonte: Wikimedia Commons.*
+
 ### 5.4 Traumatismo Cranioencefálico (TCE): Sinais de Alarme
 Qualquer impacto mecânico contra a cabeça (quedas, socos, pancadas de objetos, acidentes de moto ou carro) exige vigilância neurológica rigorosa nas primeiras 24 horas [1, 4]:
 
@@ -159,6 +175,10 @@ Qualquer impacto mecânico contra a cabeça (quedas, socos, pancadas de objetos,
 +---------------------------------------------------------------------------------+
 ```
 
+
+![Figura 5 — Equimose retroauricular na região mastoidea (sinal de Battle) em trauma craniano grave.](../imagens/Battles-sign.jpg)
+*Figura 5 — Equimose retroauricular na região mastoidea (sinal de Battle) em trauma craniano grave. Crédito: Another-anon-artist-234. Licença: CC0. Fonte: Wikimedia Commons.*
+
 Identificando qualquer um desses sinais, o paciente deve ser transportado com urgência absoluta via SAMU 192 para tomografia de crânio e avaliação neurocirúrgica imediata [4].
 
 ### 5.5 Suspeita de Lesão Raquimedular (Trauma de Coluna Cervical)
@@ -175,6 +195,10 @@ O socorrista deve presumir lesão na coluna vertebral em qualquer ocorrência qu
 3. Traga suavemente a cabeça para a **posição neutra** (olhos apontando para a frente a 90 graus), **exceto se a vítima relatar piora súbita da dor, espasmo muscular severo ou se a cabeça estiver travada torta** (nesses casos, imobilize na posição em que ela estiver) [1, 4].
 4. Mantenha essa estabilização manual contínua sem afrouxar as mãos até que a equipe do SAMU/Bombeiros instale o colar cervical rígido e fixe a vítima na prancha longa.
 
+
+![Figura 6 — Estabilização manual alinhada (in-line) da cabeça e coluna cervical no trauma.](../imagens/In-line-traction.png)
+*Figura 6 — Estabilização manual alinhada (in-line) da cabeça e coluna cervical no trauma. Crédito: Baedr-9439. Licença: CC0. Fonte: Wikimedia Commons.*
+
 ### 5.6 Cuidados com a Movimentação, Rolamento e Imobilização
 A movimentação de uma vítima de trauma só deve ser executada se houver perigo iminente de morte no local (incêndio, desabamento ou tráfego sem controle) ou para viabilizar manobras de ressuscitação cardiopulmonar em superfície rígida [1, 2]:
 - **Rolamento em Bloco de 90 Graus:** Exige no mínimo 3 a 4 socorristas operando sincronizadamente:
@@ -183,32 +207,6 @@ A movimentação de uma vítima de trauma só deve ser executada se houver perig
   - A um comando único (*"Ao três: um, dois, três!"*), o corpo da vítima é girado lateralmente como uma tora rígida única de madeira, mantendo cabeça, pescoço e tronco rigorosamente alinhados no mesmo eixo biomecânico [1, 4].
 
 ---
-
-### Figuras de Apoio
-
-![Figura 1 - EstabilizaÃ§Ã£o manual alinhada (in-line) da cabeÃ§a e coluna cervical no trauma.](../imagens/In-line-traction.png)
-*Figura 1 - EstabilizaÃ§Ã£o manual alinhada (in-line) da cabeÃ§a e coluna cervical no trauma. CrÃ©dito: Baedr-9439. LicenÃ§a: CC0. Fonte: Wikimedia Commons.*
-
-![Figura 2 - AplicaÃ§Ã£o tÃ©cnica de colar cervical para restriÃ§Ã£o de movimento.](../imagens/Cervical-collar-application.png)
-*Figura 2 - AplicaÃ§Ã£o tÃ©cnica de colar cervical para restriÃ§Ã£o de movimento. CrÃ©dito: Baedr-9439. LicenÃ§a: CC0. Fonte: Wikimedia Commons.*
-
-![Figura 3 - Manobra de rolamento em bloco mantendo o alinhamento do eixo cranioespinal.](../imagens/Rolling-a-patient.jpg)
-*Figura 3 - Manobra de rolamento em bloco mantendo o alinhamento do eixo cranioespinal. CrÃ©dito: Another-anon-artist-234. LicenÃ§a: CC0. Fonte: Wikimedia Commons.*
-
-![Figura 4 - ImobilizaÃ§Ã£o de membro superior com tala moldÃ¡vel.](../imagens/Splinting-an-arm.png)
-*Figura 4 - ImobilizaÃ§Ã£o de membro superior com tala moldÃ¡vel. CrÃ©dito: Baedr-9439. LicenÃ§a: CC0. Fonte: Wikimedia Commons.*
-
-![Figura 5 - Enfaixamento compressivo funcional em entorse articular de tornozelo.](../imagens/Ankle-wrap.png)
-*Figura 5 - Enfaixamento compressivo funcional em entorse articular de tornozelo. CrÃ©dito: Baedr-9439. LicenÃ§a: CC0. Fonte: Wikimedia Commons.*
-
-![Figura 6 - Mecanismo de fratura craniana com afundamento em traumatismo cranioencefÃ¡lico (TCE).](../imagens/Depressed-skull-fracture.jpg)
-*Figura 6 - Mecanismo de fratura craniana com afundamento em traumatismo cranioencefÃ¡lico (TCE). CrÃ©dito: Another-anon-artist-234. LicenÃ§a: CC0. Fonte: Wikimedia Commons.*
-
-![Figura 7 - Equimose periorbitÃ¡ria bilateral (sinal do guaxinim) sugestiva de fratura de base de crÃ¢nio.](../imagens/Raccoon-eyes.jpg)
-*Figura 7 - Equimose periorbitÃ¡ria bilateral (sinal do guaxinim) sugestiva de fratura de base de crÃ¢nio. CrÃ©dito: Another-anon-artist-234. LicenÃ§a: CC0. Fonte: Wikimedia Commons.*
-
-![Figura 8 - Equimose retroauricular na regiÃ£o mastoidea (sinal de Battle) em trauma craniano grave.](../imagens/Battles-sign.jpg)
-*Figura 8 - Equimose retroauricular na regiÃ£o mastoidea (sinal de Battle) em trauma craniano grave. CrÃ©dito: Another-anon-artist-234. LicenÃ§a: CC0. Fonte: Wikimedia Commons.*
 
 ---
 
@@ -236,6 +234,10 @@ A movimentação de uma vítima de trauma só deve ser executada se houver perig
 | **4. Fixação com Ataduras** | Amarrar com voltas firmes de ataduras ou tiras de tecido. | Não amarrar o nó diretamente sobre a ferida ou sobre o osso quebrado. |
 | **5. Checagem Posterior** | **Reavaliar pulso e enchimento capilar dos dedos após amarrar a tala.** | Se o dedo ficou gelado ou dormente, a atadura está apertada demais. Solte um pouco! |
 
+
+![Figura 7 — Imobilização de membro superior com tala moldável.](../imagens/Splinting-an-arm.png)
+*Figura 7 — Imobilização de membro superior com tala moldável. Crédito: Baedr-9439. Licença: CC0. Fonte: Wikimedia Commons.*
+
 ---
 
 ## SEÇÃO 7 — ERROS FREQUENTES E CONDUTAS PROIBIDAS
@@ -262,6 +264,10 @@ A movimentação de uma vítima de trauma só deve ser executada se houver perig
 > 5. **Fazer massagens ou aplicar compressas quentes imediatamente após uma entorse:**
 >    - *Por que não fazer:* O calor dilata os vasos sanguíneos rompidos, duplicando o inchaço e a formação de hematomas internos.
 >    - *Conduta correta:* Aplique exclusivamente compressas frias ou gelo protegido nas primeiras 48 horas.
+
+
+![Figura 8 — Mecanismo de fratura craniana com afundamento em traumatismo cranioencefálico (TCE).](../imagens/Depressed-skull-fracture.jpg)
+*Figura 8 — Mecanismo de fratura craniana com afundamento em traumatismo cranioencefálico (TCE). Crédito: Another-anon-artist-234. Licença: CC0. Fonte: Wikimedia Commons.*
 
 ---
 

@@ -79,6 +79,10 @@ A Lei Lucas (Lei Federal nº 13.722/2018) estabelece a obrigatoriedade de capaci
 +---------------------------------------------------------------------------------+
 ```
 
+
+![Figura 1 — Fisiopatologia da crise asmática: broncoespasmo, edema de mucosa e hipersecreção.](../imagens/Asthma-bronchial-tube-cross-section.png)
+*Figura 1 — Fisiopatologia da crise asmática: broncoespasmo, edema de mucosa e hipersecreção. Crédito: Baedr-9439. Licença: CC0. Fonte: Wikimedia Commons.*
+
 - **Anafilaxia:** Liberação maciça de histamina mediada por IgE, provocando vasodilatação sistêmica, colapso pressórico e edema submucoso laríngeo. A adrenalina reverte a vasodilatação e relaxa a musculatura brônquica [3, 4].
 - **Hipoglicemia:** Queda rápida da glicose circulante priva os neurônios do substrato energético primário, gerando reações adrenérgicas (sudorese, taquicardia) seguidas de neuroglicopenia (confusão, convulsão e coma) [5, 6].
 - **Epilepsia:** Despolarização paroxística neuronal sincrônica com fase tônica (rigidez e apneia) sucedida por fase clônica (abalos rítmicos) e estado pós-ictal [7, 8].
@@ -131,6 +135,10 @@ As crises tônico-clônicas generalizadas na escola demandam calma para proteger
 5. **Proibição absoluta:** Nunca segurar os membros à força e **jamais enfiar objetos ou dedos na boca** sob alegação de puxar a língua.
 6. Cronometrar o evento: Acionar o 192 se a crise durar mais de **5 minutos** ou se encadear em episódios repetitivos [7, 8].
 
+
+![Figura 2 — Inalador pressurizado dosimetrado para crise de broncoespasmo.](../imagens/AsthmaInhaler.jpg)
+*Figura 2 — Inalador pressurizado dosimetrado para crise de broncoespasmo. Crédito: Wikimedia Commons (Mendel, assumido). Licença: Domínio público. Fonte: Wikimedia Commons.*
+
 ---
 
 ### 5.4 Condições Respiratórias Crônicas e Asma
@@ -164,17 +172,6 @@ A atuação coordenada requer alinhamento contínuo:
 
 ---
 
-### Figuras de Apoio
-
-![Figura 1 - AplicaÃ§Ã£o intramuscular de autoinjetor de adrenalina na face anterolateral da coxa.](../imagens/Epinephrine-injection.png)
-*Figura 1 - AplicaÃ§Ã£o intramuscular de autoinjetor de adrenalina na face anterolateral da coxa. CrÃ©dito: Baedr-9439. LicenÃ§a: CC0. Fonte: Wikimedia Commons.*
-
-![Figura 2 - Inalador pressurizado dosimetrado para crise de broncoespasmo.](../imagens/AsthmaInhaler.jpg)
-*Figura 2 - Inalador pressurizado dosimetrado para crise de broncoespasmo. CrÃ©dito: Wikimedia Commons (Mendel, assumido). LicenÃ§a: DomÃ­nio pÃºblico. Fonte: Wikimedia Commons.*
-
-![Figura 3 - Fisiopatologia da crise asmÃ¡tica: broncoespasmo, edema de mucosa e hipersecreÃ§Ã£o.](../imagens/Asthma-bronchial-tube-cross-section.png)
-*Figura 3 - Fisiopatologia da crise asmÃ¡tica: broncoespasmo, edema de mucosa e hipersecreÃ§Ã£o. CrÃ©dito: Baedr-9439. LicenÃ§a: CC0. Fonte: Wikimedia Commons.*
-
 ---
 
 ## SEÇÃO 6 — QUADROS PRÁTICOS E MATRIZES DECISÓRIAS
@@ -191,6 +188,10 @@ A atuação coordenada requer alinhamento contínuo:
 ---
 
 ## SEÇÃO 7 — ERROS FREQUENTES E CONDUTAS PROIBIDAS
+
+
+![Figura 3 — Aplicação intramuscular de autoinjetor de adrenalina na face anterolateral da coxa.](../imagens/Epinephrine-injection.png)
+*Figura 3 — Aplicação intramuscular de autoinjetor de adrenalina na face anterolateral da coxa. Crédito: Baedr-9439. Licença: CC0. Fonte: Wikimedia Commons.*
 
 1. **Atrasar a aplicação da adrenalina:** Aguardar evolução de edema de glote para acionar o autoinjetor eleva drasticamente o risco de parada respiratória [3, 4].
 2. **Introduzir líquidos na boca de vítima em coma hipoglicêmico:** Provoca obstrução de vias aéreas e aspiração de fluidos para a traqueia [5, 6].

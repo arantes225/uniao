@@ -159,6 +159,10 @@ Acidentes traumáticos em academias decorrem frequentemente de práticas operaci
 - **Cilindros de Peso Soltos em Máquinas:** Pinos seletores de carga devem ser originais com trava magnética. Usar canetas, parafusos ou pedaços de ferro como pino de peso causa ejeção do pino durante a repetição e impacto descontrolado da pilha de placas.
 - **Piso e Armazenamento de Anilhas:** Anilhas e halteres devem ser devolvidos aos suportes apropriados imediatamente após a utilização. Halteres soltos pelo piso acarretam entorses de tornozelo e tropeços catastróficos [2, 6].
 
+
+![Figura 1 — Maleta e estação de primeiros socorros sinalizada e acessível.](../imagens/First_aid_kit_on_wall.png)
+*Figura 1 — Maleta e estação de primeiros socorros sinalizada e acessível. Crédito: Leigh Blackall. Licença: CC BY 2.0 (https://creativecommons.org/licenses/by/2.0/). Fonte: Wikimedia Commons.*
+
 ---
 
 ### 5.4 Protocolos de Inspeção Preventiva de Áreas, Equipamentos e Cabos
@@ -212,18 +216,11 @@ O Plano de Ação de Emergência (EAP - *Emergency Action Plan*) em academias de
 2. **Escala de Prontidão Operacional:** Mantenha profissionais treinados em primeiros socorros, RCP e uso do DEA em todos os turnos. Defina responsáveis e suplentes conforme as exigências locais [1, 9].
 3. **Fluxo de Evacuação e Acesso para Viaturas:** A portaria ou catraca deve possuir botão manual de liberação rápida de passagem de maca retrátil do SAMU ou Corpo de Bombeiros, com estacionamento frontal desimpedido para viaturas de resgate [2, 5].
 
+
+![Figura 2 — DEA de acesso público em gabinete sinalizado.](../imagens/Public_access_AED_with_coded_lock.jpg)
+*Figura 2 — DEA de acesso público em gabinete sinalizado. Crédito: Christian P. Nielsen. Licença: CC0. Fonte: Wikimedia Commons.*
+
 ---
-
-### Figuras de Apoio
-
-![Figura 1 - DEA de acesso pÃºblico em gabinete sinalizado.](../imagens/Public_access_AED_with_coded_lock.jpg)
-*Figura 1 - DEA de acesso pÃºblico em gabinete sinalizado. CrÃ©dito: Christian P. Nielsen. LicenÃ§a: CC0. Fonte: Wikimedia Commons.*
-
-![Figura 2 - Maleta e estaÃ§Ã£o de primeiros socorros sinalizada e acessÃ­vel.](../imagens/First_aid_kit_on_wall.png)
-*Figura 2 - Maleta e estaÃ§Ã£o de primeiros socorros sinalizada e acessÃ­vel. CrÃ©dito: Leigh Blackall. LicenÃ§a: CC BY 2.0 (https://creativecommons.org/licenses/by/2.0/). Fonte: Wikimedia Commons.*
-
-![Figura 3 - Mochila padronizada de Atendimento PrÃ©-Hospitalar (APH) organizada por compartimentos.](../imagens/EMS-medic-backpack.png)
-*Figura 3 - Mochila padronizada de Atendimento PrÃ©-Hospitalar (APH) organizada por compartimentos. CrÃ©dito: Baedr-9439. LicenÃ§a: CC0. Fonte: Wikimedia Commons.*
 
 ---
 
@@ -257,6 +254,10 @@ O Plano de Ação de Emergência (EAP - *Emergency Action Plan*) em academias de
 ---
 
 ## SEÇÃO 7 — ERROS FREQUENTES E CONDUTAS PERIGOSAS EM ACADEMIAS
+
+
+![Figura 3 — Mochila padronizada de Atendimento Pré-Hospitalar (APH) organizada por compartimentos.](../imagens/EMS-medic-backpack.png)
+*Figura 3 — Mochila padronizada de Atendimento Pré-Hospitalar (APH) organizada por compartimentos. Crédito: Baedr-9439. Licença: CC0. Fonte: Wikimedia Commons.*
 
 1. **Permitir que o aluno volte a treinar após "quase desmaiar":** O episódio de pré-síncope indica colapso circulatório ou arritmia transitória. Forçar o aluno a "completar a série para aquecer" pode precipitar uma parada cardíaca fatal [3, 4].
 2. **DEA guardado em sala trancada sob posse exclusiva da gerência:** Durante uma parada cardíaca, cada minuto sem choque reduz as chances de sobrevivência em 7% a 10%. Perder tempo caçando a chave da gerência é imperdoável [4, 5].

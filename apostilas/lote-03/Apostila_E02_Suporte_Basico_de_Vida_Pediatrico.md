@@ -71,6 +71,10 @@ Ao contrário do adulto cardiopata — cujo coração subitamente para de bater 
 
 A criança asfixia-se por engasgo com comida ou brinquedo, afoga-se na piscina da escola, sofre choque séptico por infecção bacteriana galopante ou entra em exaustão ventilatória por crise asmática descontrolada. À medida que o oxigênio no sangue cai (**hipoxemia severa**), o músculo cardíaco infantil começa a bater cada vez mais devagar (**bradicardia extrema**), até entrar em assistolia definitiva [5]. Dessa realidade biológica decorre a regra mestra do socorro infantil: **em crianças, o ar nos pulmões (oxigenação e ventilação) é tão importante quanto a massagem no peito**.
 
+
+![Figura 1 — Mecanismo de bomba cardíaca e ejeção sanguínea durante a compressão torácica externa.](../imagens/CPR-heart-compression.png)
+*Figura 1 — Mecanismo de bomba cardíaca e ejeção sanguínea durante a compressão torácica externa. Crédito: Baedr-9439. Licença: CC0. Fonte: Wikimedia Commons.*
+
 ---
 
 ## SEÇÃO 4 — ANATOMIA E FISIOLOGIA COMPARATIVA: O QUE MUDA NA CRIANÇA E NO BEBÊ
@@ -112,6 +116,10 @@ O organismo infantil não é uma réplica em miniatura do corpo adulto; ele poss
 - **A Posição "Olfativa" (*Sniffing Position*) de Abertura de Vias Aéreas:** No adulto inconsciente, para abrir a via aérea nós inclinamos a cabeça bastante para trás (*head tilt-chin lift*). **No lactente (bebê < 1 ano), essa extensão máxima é proibida**, pois dobra a traqueia cartilaginosa mole contra a coluna vertebral, ocluindo o ar. No bebê, mantém-se a cabeça na **posição neutra ou de farejador** (o canal auditivo externo alinhado horizontalmente com a ponta do ombro) [1, 2].
 - Para manter a posição neutra no bebê deitado de costas, frequentemente coloca-se uma **toalhinha dobrada de 2 cm sob os ombros** do lactente (coxim subescapular), compensando o tamanho grande da nuca.
 
+
+![Figura 2 — Treino de RCP em manequim de lactente.](../imagens/CardiopulmonaryResuscitationBabyDummy.jpg)
+*Figura 2 — Treino de RCP em manequim de lactente. Crédito: Uniformed Services University. Licença: Domínio público. Fonte: Wikimedia Commons.*
+
 ### 5.2 Reconhecimento Precoce da PCR em Crianças e Lactentes
 O diagnóstico de parada deve ser feito em **menos de 10 segundos** [1]:
 1. **Verificar a responsividade:**
@@ -140,6 +148,10 @@ A biomecânica na criança equilibra força e delicadeza para deprimir o tórax 
 5. **Ciclo de Relação Compressão / Ventilação:**
    - **1 Socorrista:** **30 compressões para 2 ventilações de resgate**.
    - **2 Socorristas treinados:** **15 compressões para 2 ventilações de resgate** (a relação 15:2 fornece maior suporte ventilatório e menor acúmulo de $CO_2$ no sangue da criança) [1, 3].
+
+
+![Figura 3 — Técnica de ventilação com bolsa-válvula-máscara executada por dois socorristas.](../imagens/Bvm-with-two-medics.png)
+*Figura 3 — Técnica de ventilação com bolsa-válvula-máscara executada por dois socorristas. Crédito: Baedr-9439. Licença: CC0. Fonte: Wikimedia Commons.*
 
 ### 5.4 Técnica da Ressuscitação no Lactente (Bebês < 1 ano)
 No lactente, a AHA/AAP 2025 recomenda compressões com dois polegares envolvendo o tórax ou com a base de uma mão. A técnica de dois dedos não é recomendada, pois pode não atingir a profundidade adequada [1, 2]:
@@ -177,24 +189,14 @@ O Desfibrilador Externo Automático pode e deve ser utilizado em crianças de qu
   - Se você usar as pás grandes de adulto em uma criança de 2 anos, colar as duas na frente fará as pás se tocarem.
   - Cole **uma pá no meio do peito** e a **outra pá no meio das costas** (técnica do sanduíche). Nenhuma pá encostará na outra e o coração ficará no centro da corrente elétrica.
 
+
+![Figura 4 — Posicionamento para compressões torácicas no adulto.](../imagens/Cardiopulmonary_Resuscitation_Adult.jpg)
+*Figura 4 — Posicionamento para compressões torácicas no adulto. Crédito: Illinois Waterway Visitor Center, US Army Corps of Engineers. Licença: Domínio público. Fonte: Wikimedia Commons.*
+
 ### 5.6 Treinamento Prático, Simulações Escolares e Troca de Socorristas
 Em ambiente escolar e de creches, o cansaço ao realizar compressões com 2 dedos no lactente instala-se rapidamente nos tendões da mão. A cada **2 minutos de RCP (cerca de 5 ciclos 30:2 ou 10 ciclos 15:2)**, os socorristas devem trocar de função em menos de 5 segundos para garantir que a profundidade de 4 ou 5 cm não seja perdida [1, 3].
 
 ---
-
-### Figuras de Apoio
-
-![Figura 1 - Treino de RCP em manequim de lactente.](../imagens/CardiopulmonaryResuscitationBabyDummy.jpg)
-*Figura 1 - Treino de RCP em manequim de lactente. CrÃ©dito: Uniformed Services University. LicenÃ§a: DomÃ­nio pÃºblico. Fonte: Wikimedia Commons.*
-
-![Figura 2 - Posicionamento para compressÃµes torÃ¡cicas no adulto.](../imagens/Cardiopulmonary_Resuscitation_Adult.jpg)
-*Figura 2 - Posicionamento para compressÃµes torÃ¡cicas no adulto. CrÃ©dito: Illinois Waterway Visitor Center, US Army Corps of Engineers. LicenÃ§a: DomÃ­nio pÃºblico. Fonte: Wikimedia Commons.*
-
-![Figura 3 - Mecanismo de bomba cardÃ­aca e ejeÃ§Ã£o sanguÃ­nea durante a compressÃ£o torÃ¡cica externa.](../imagens/CPR-heart-compression.png)
-*Figura 3 - Mecanismo de bomba cardÃ­aca e ejeÃ§Ã£o sanguÃ­nea durante a compressÃ£o torÃ¡cica externa. CrÃ©dito: Baedr-9439. LicenÃ§a: CC0. Fonte: Wikimedia Commons.*
-
-![Figura 4 - TÃ©cnica de ventilaÃ§Ã£o com bolsa-vÃ¡lvula-mÃ¡scara executada por dois socorristas.](../imagens/Bvm-with-two-medics.png)
-*Figura 4 - TÃ©cnica de ventilaÃ§Ã£o com bolsa-vÃ¡lvula-mÃ¡scara executada por dois socorristas. CrÃ©dito: Baedr-9439. LicenÃ§a: CC0. Fonte: Wikimedia Commons.*
 
 ---
 
