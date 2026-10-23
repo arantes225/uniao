@@ -94,6 +94,8 @@ Ao concluir o estudo deste módulo, o educador e monitor escolar serão capazes 
 
 ## SEÇÃO 3 — INTRODUÇÃO E EPIDEMIOLOGIA DOS ACIDENTES ESCOLARES
 
+**LEITURA GUIADA — COMECE AQUI:** Quedas em escolas parecem comuns, mas nem toda criança deve levantar e voltar à aula. Dor forte, confusão, vômitos repetidos, deformidade ou perda de força podem indicar uma lesão que merece avaliação imediata.
+
 Os acidentes traumáticos representam a principal causa de atendimento médico de emergência em crianças e adolescentes em idade escolar no Brasil. De acordo com a Sociedade Brasileira de Pediatria (SBP) e dados do Ministério da Saúde, aproximadamente metade de todos os traumas infantis ocorre durante o período escolar ou no trajeto entre a residência e o colégio [1, 6].
 
 A natureza da infância envolve a exploração física do espaço, o teste de limites corporais e a socialização dinâmica em jogos e esportes coletivos. Brinquedos de parquinhos (*escorregadores, balanços, trepa-trepas e gangorras*), escadarias, pisos molhados e quadras poliesportivas constituem os principais locais de ocorrência de quedas, fraturas em galho verde, luxações e ferimentos na face [1, 3].
@@ -103,6 +105,9 @@ A responsabilidade da equipe escolar fundamenta-se na **Lei Lucas (Lei Federal n
 ---
 
 ## SEÇÃO 4 — ANATOMIA E FISIOPATOLOGIA DO TRAUMA CRANIANO E ÓSSEO INFANTIL
+
+> [!NOTE]
+> **Por que isso acontece?** A cabeça da criança é proporcionalmente maior que a do adulto, e o esqueleto ainda está em crescimento. Quedas podem afetar cabeça, articulações e dentes. Evitar movimentos desnecessários reduz risco adicional quando há suspeita de lesão grave.
 
 O corpo da criança apresenta particularidades biométricas que alteram a distribuição das lesões traumáticas [3, 8]:
 
@@ -266,6 +271,9 @@ Nas aulas de educação física e treinos de futebol/vôlei:
 ## SEÇÃO 7 — ERROS FREQUENTES E CONDUTAS PROIBIDAS
 
 > [!CAUTION]
+> **Erro que pode prejudicar a vítima:** Depois de impacto importante, não force a criança a caminhar. Em fratura, não alinhe à força. Dente de leite avulsionado não deve ser reimplantado; um dente permanente perdido precisa de avaliação odontológica urgente.
+
+> [!CAUTION]
 > ### CATÁLOGO DE ERROS CRÍTICOS EM TRAUMAS ESCOLARES
 > 
 > 1. **Jogar a cabeça da criança para trás durante um sangramento nasal:**
@@ -295,6 +303,9 @@ Nas aulas de educação física e treinos de futebol/vôlei:
 ---
 
 ## SEÇÃO 8 — APLICAÇÃO PRÁTICA CONTEXTUALIZADA (ESTUDO DE CASO)
+
+> [!TIP]
+> **Decisão no caso prático:** Um estudante escorrega na escada e bate a cabeça. O professor isola a área, avalia resposta e respiração, pergunta sobre dor e observa sinais neurológicos. Se houver rebaixamento ou vômitos repetidos, chama 192.
 
 ### Cenário Simulado
 *Local:* Quadra de esportes de uma escola de ensino fundamental.  

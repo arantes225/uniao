@@ -94,6 +94,8 @@ Ao concluir o estudo deste módulo, o educador e monitor escolar serão capazes 
 
 ## SEÇÃO 3 — INTRODUÇÃO E SINGULARIDADE CLÍNICA DA CRIANÇA
 
+**LEITURA GUIADA — COMECE AQUI:** Uma criança que desmaia, convulsiona ou tem dificuldade para respirar não precisa de um diagnóstico feito pela escola. Precisa de segurança, observação da respiração e ajuda no momento certo. Saber o que não fazer é tão importante quanto agir.
+
 O organismo infantil não se comporta como o adulto diante de doenças clínicas. Crianças pequenas possuem uma reserva funcional metabólica e respiratória muito menor. Isso significa que, enquanto um adulto costuma dar sinais graduais e lentos de adoecimento ao longo de várias horas, a criança pode estar brincando normalmente no início da tarde e, em menos de duas horas, encontrar-se em insuficiência respiratória grave ou choque séptico fulminante [1, 3].
 
 Em creches e escolas, o educador passa mais tempo acordado com a criança do que os próprios pais. É o professor em sala de aula quem primeiro nota que o aluno "não está com o olhar normal", que ele recusou o lanche, que sua respiração está rápida ou que sua pele está pálida e quente [2].
@@ -107,6 +109,9 @@ A Lei Lucas (Lei Federal nº 13.722/2018) estabelece que as equipes escolares de
 ---
 
 ## SEÇÃO 4 — FISIOPATOLOGIA PEDIÁTRICA: IMATURIDADE CEREBRAL E TERMORREGULAÇÃO
+
+> [!NOTE]
+> **Por que isso acontece?** Convulsões ocorrem por atividade elétrica anormal no cérebro. A glicose baixa pode prejudicar o funcionamento cerebral; alergias e crises de asma podem comprometer a respiração. Esses problemas parecem diferentes, mas todos exigem atenção à consciência e ao ar que entra.
 
 Para intervir com serenidade, o educador precisa entender o que acontece dentro do corpo infantil durante as emergências clínicas mais comuns:
 
@@ -265,6 +270,9 @@ O educador deve guiar-se pela seguinte regra de ouro da pediatria de emergência
 ## SEÇÃO 7 — ERROS FREQUENTES E CONDUTAS PROIBIDAS
 
 > [!CAUTION]
+> **Erro que pode prejudicar a vítima:** Nunca contenha à força uma convulsão nem coloque objetos na boca. Se a criança estiver sonolenta ou não conseguir engolir, não ofereça água, açúcar ou comida. Observe a duração da crise e acione 192 nos sinais de gravidade.
+
+> [!CAUTION]
 > ### CATÁLOGO DE PRÁTICAS EMPÍRICAS NOCIVAS NA PEDIATRIA ESCOLAR
 > 
 > 1. **Dar banho em água gelada ou álcool para baixar a febre da criança:**
@@ -290,6 +298,9 @@ O educador deve guiar-se pela seguinte regra de ouro da pediatria de emergência
 ---
 
 ## SEÇÃO 8 — APLICAÇÃO PRÁTICA CONTEXTUALIZADA (ESTUDO DE CASO)
+
+> [!TIP]
+> **Decisão no caso prático:** Durante a aula, uma criança cai e começa a convulsionar. A professora afasta cadeiras, protege a cabeça e marca o tempo. Ao terminar, verifica respiração e mantém observação até a avaliação indicada.
 
 ### Cenário Simulado
 *Local:* Sala de aula do 1º ano do ensino fundamental (crianças de 6 anos).  

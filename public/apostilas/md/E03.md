@@ -95,6 +95,8 @@ Ao concluir o estudo deste módulo, o educador e manipulador de alimentos serão
 
 ## SEÇÃO 3 — INTRODUÇÃO E RELEVÂNCIA DO RISCO ASFÍXICO ALIMENTAR INFANTIL
 
+**LEITURA GUIADA — COMECE AQUI:** O engasgo costuma acontecer durante refeições ou brincadeiras com objetos pequenos. A pessoa pode tossir, ficar em silêncio ou ter dificuldade para respirar. A diferença entre tosse forte e obstrução grave determina o que fazer.
+
 O momento da alimentação em creches e escolas de educação infantil deve ser um espaço de socialização, nutrição e desenvolvimento de hábitos saudáveis. Todavia, dados epidemiológicos do Ministério da Saúde e de entidades internacionais revelam que os refeitórios escolares e pátios de recreio representam o **cenário de maior incidência de óbitos por asfixia mecânica acidental na infância** [1, 3].
 
 Mais de 70% de todos os casos fatais de engasgo em crianças pequenas são causados por **alimentos sólidos** (e não por moedas ou peças de brinquedos, como habitualmente se imagina). A gravidade decorre da física do alimento: produtos gordurosos, moles ou gelatinosos (como pedaços de carne com cartilagem, balas de goma, queijos derretidos em bloco ou uvas) amoldam-se sob sucção à parede interna da laringe da criança. À medida que a criança tenta puxar o ar desesperadamente, o vácuo intratorácico puxa o alimento ainda mais para dentro, selando a via aérea de forma quase impenetrável [2, 6].
@@ -108,6 +110,9 @@ A perda de oxigenação cerebral em crianças instala-se com velocidade aterrado
 *Figura 1 — Manobra de inclinação da cabeça e elevação do mento (head-tilt/chin-lift). Crédito: Another-anon-artist-234. Licença: CC0. Fonte: Wikimedia Commons.*
 
 ## SEÇÃO 4 — FISIOLOGIA DO DESENVOLVIMENTO INFANTIL E MECANISMOS DA ASPIRAÇÃO
+
+> [!NOTE]
+> **Por que isso acontece?** A passagem de ar das crianças é estreita, e objetos ou alimentos podem bloqueá-la. As técnicas de desengasgo tentam deslocar o objeto com movimento do ar. O procedimento é diferente no bebê, cuja barriga não deve ser comprimida.
 
 Para prevenir acidentes com eficiência, a equipe escolar precisa compreender as limitações fisiológicas e anatômicas das diferentes etapas do crescimento da criança [5, 6]:
 
@@ -258,6 +263,9 @@ O plano de segurança escolar deve conter um **Protocolo de Resposta ao Engasgo 
 ## SEÇÃO 7 — ERROS FREQUENTES E MITOS NA ALIMENTAÇÃO INFANTIL
 
 > [!CAUTION]
+> **Erro que pode prejudicar a vítima:** No bebê menor de um ano, alterne cinco pancadas nas costas e cinco impulsos torácicos com a base de uma mão. Em crianças maiores com obstrução grave, alterne cinco pancadas nas costas e cinco compressões abdominais. Não coloque dedos na boca sem enxergar o objeto.
+
+> [!CAUTION]
 > ### CATÁLOGO DE MITOS E ERROS GRAVES NO ENGASGO ALIMENTAR
 > 
 > 1. **Fazer a criança beber água quando ela estiver engasgando com sólido:**
@@ -283,6 +291,9 @@ O plano de segurança escolar deve conter um **Protocolo de Resposta ao Engasgo 
 ---
 
 ## SEÇÃO 8 — APLICAÇÃO PRÁTICA CONTEXTUALIZADA (ESTUDO DE CASO)
+
+> [!TIP]
+> **Decisão no caso prático:** Na creche, um bebê fica silencioso e não consegue chorar após comer. Uma cuidadora pede 192 enquanto outra executa a técnica para lactentes no manequim de treinamento ou, na emergência real, conforme capacitação.
 
 ### Cenário Simulado
 *Local:* Berçário II de uma escola de educação infantil privada.  

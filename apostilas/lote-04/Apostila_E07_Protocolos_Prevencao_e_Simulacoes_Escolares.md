@@ -93,6 +93,8 @@ Ao concluir o estudo teórico e a prática simulada deste módulo, a equipe esco
 
 ## SEÇÃO 3 — INTRODUÇÃO E A CULTURA DE PREVENÇÃO E PRONTIDÃO ESCOLAR
 
+**LEITURA GUIADA — COMECE AQUI:** Um plano escolar só funciona quando os funcionários conseguem executá-lo durante uma emergência. Não basta guardar contatos em uma pasta. É necessário saber quem reconhece o problema, quem liga 192, quem busca material e quem organiza os demais alunos.
+
 O ambiente escolar concentra diariamente dezenas ou centenas de indivíduos em faixas etárias de elevado dinamismo motor, curiosidade exploratória e imaturidade na percepção de perigos. Desde o berçário até o ensino fundamental e médio, a escola é um ecossistema vivo onde ocorrem quedas de brinquedos, choques entre alunos na quadra, cortes em materiais escolares, engasgos com refeições e crises clínicas súbitas [1, 2].
 
 A publicação da Lei Federal nº 13.722/2018 (Lei Lucas) inaugurou um marco civil e pedagógico no Brasil: a obrigação formal de que estabelecimentos de ensino públicos e privados de educação básica e recreação capacitem professores e funcionários em primeiros socorros. Contudo, a experiência prática demonstra que **a capacitação individual perde quase toda a sua eficácia se não estiver inserida em um sistema institucional organizado** [1, 3].
@@ -102,6 +104,9 @@ Se diante de uma parada cardíaca ou engasgo de um aluno na sala de aula o profe
 ---
 
 ## SEÇÃO 4 — FUNDAMENTOS ORGANIZACIONAIS DA RESPOSTA INTEGRADA A EMERGÊNCIAS
+
+> [!NOTE]
+> **Por que isso acontece?** Emergências causam distração e muitas pessoas tentam agir ao mesmo tempo. A divisão de funções diminui tarefas esquecidas. Simulações ajudam a transformar uma sequência escrita em resposta coordenada.
 
 A metodologia de resposta a acidentes em escolas fundamenta-se nos princípios do Sistema de Comando de Incidentes (SCI) adaptado para instituições de ensino [4, 5]:
 
@@ -293,6 +298,9 @@ A teoria só se transforma em reflexo motor se for praticada fisicamente em simu
 
 ## SEÇÃO 7 — ERROS FREQUENTES E FALHAS CRÍTICAS DE GESTÃO EM EMERGÊNCIAS ESCOLARES
 
+> [!CAUTION]
+> **Erro que pode prejudicar a vítima:** Não use crianças reais para simular desmaios, choques, engasgo com manobras físicas ou compressões torácicas. Essas técnicas devem ser praticadas em manequins e ambientes seguros.
+
 1. **Maleta de primeiros socorros trancada a chave em sala fechada:** Em emergências com risco à vida, cada segundo de atraso à procura de chaves custa neurônios e sobrevida da criança [1, 6].
 2. **Ministrar analgésicos ou antitérmicos por iniciativa própria:** Uma atitude frequente de funcionários é oferecer gotas de dipirona ou paracetamol para dor de cabeça. Se a criança tiver alergia não diagnosticada ou sofrer choque anafilático, o funcionário e a escola respondem judicialmente por exercício ilegal da medicina e lesão corporal [1, 7].
 3. **Transportar vítima grave em veículo particular de professor:** Diante de uma emergência com perda de consciência ou convulsão prolongada, colocar a criança no banco traseiro do carro particular de um professor e enfrentar o trânsito urbano é extremamente perigoso. Se houver parada cardiorrespiratória no trânsito, não há como prestar socorro eficaz. Aguarde a viatura tripulada do SAMU [2, 5].
@@ -302,6 +310,9 @@ A teoria só se transforma em reflexo motor se for praticada fisicamente em simu
 ---
 
 ## SEÇÃO 8 — ESTUDO DE CASO PRÁTICO CONTEXTUALIZADO (SIMULAÇÃO DE PÂNICO CONTROLADO)
+
+> [!TIP]
+> **Decisão no caso prático:** A direção organiza um simulado de engasgo no refeitório. Um adulto chama 192 de modo fictício, outro atende o manequim, um terceiro afasta a turma. O grupo registra o que funcionou e o que deve mudar.
 
 ### Cenário: Acidente Coletivo no Intervalo das Aulas
 No Colégio Estadual Horizonte, durante o recreio unificado, dois alunos de 11 anos colidem em alta velocidade correndo na quadra poliesportiva. Um dos alunos cai batendo a cabeça violentamente contra a base de concreto da trave de futsal, ficando desacordado no chão com sangramento visível no couro cabeludo. O segundo aluno sofre uma queda com deformidade visível no antebraço e chora aos gritos de dor. Cerca de 80 alunos aglomeram-se ao redor em estado de pânico e gritaria.
