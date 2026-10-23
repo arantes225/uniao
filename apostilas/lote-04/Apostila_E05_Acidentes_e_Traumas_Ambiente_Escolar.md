@@ -96,7 +96,7 @@ Ao concluir o estudo deste módulo, o educador e monitor escolar serão capazes 
 
 **LEITURA GUIADA — COMECE AQUI:** Quedas em escolas parecem comuns, mas nem toda criança deve levantar e voltar à aula. Dor forte, confusão, vômitos repetidos, deformidade ou perda de força podem indicar uma lesão que merece avaliação imediata.
 
-Os acidentes traumáticos representam a principal causa de atendimento médico de emergência em crianças e adolescentes em idade escolar no Brasil. De acordo com a Sociedade Brasileira de Pediatria (SBP) e dados do Ministério da Saúde, aproximadamente metade de todos os traumas infantis ocorre durante o período escolar ou no trajeto entre a residência e o colégio [1, 6].
+Quedas, impactos e ferimentos são situações que escolas precisam estar prontas para reconhecer e atender. Escadas, quadras, pátios e áreas de recreação oferecem riscos diferentes conforme a idade e a atividade. Não é necessário atribuir uma porcentagem de todos os traumas à escola para justificar prevenção, supervisão e treinamento de primeiros socorros [1, 6].
 
 A natureza da infância envolve a exploração física do espaço, o teste de limites corporais e a socialização dinâmica em jogos e esportes coletivos. Brinquedos de parquinhos (*escorregadores, balanços, trepa-trepas e gangorras*), escadarias, pisos molhados e quadras poliesportivas constituem os principais locais de ocorrência de quedas, fraturas em galho verde, luxações e ferimentos na face [1, 3].
 

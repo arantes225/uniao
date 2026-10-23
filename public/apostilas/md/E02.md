@@ -102,9 +102,9 @@ Ao concluir o estudo deste módulo, o educador e socorrista escolar serão capaz
 
 **LEITURA GUIADA — COMECE AQUI:** Crianças podem parar de respirar antes de sofrer parada cardíaca. Por isso, a RCP pediátrica combina compressões e, sempre que possível para quem foi treinado, ventilações. O primeiro passo é reconhecer rapidamente inconsciência e respiração anormal.
 
-A Parada Cardiorrespiratória (PCR) em lactentes e crianças é um evento de devastação emocional ímpar que desafia educadores e profissionais de saúde. Felizmente, a parada cardíaca pura é estatisticamente menos frequente na infância do que em idosos; todavia, quando ocorre, suas taxas de mortalidade hospitalar superam 70% se o primeiro atendimento no pátio ou creche for retardado [1, 5].
+A parada cardiorrespiratória em bebês e crianças é uma emergência que exige resposta organizada dos adultos presentes. Os problemas respiratórios são uma causa importante de deterioração em pediatria, mas não a única. Reconhecimento precoce, acionamento do 192, RCP e DEA conforme indicação podem melhorar as chances de atendimento oportuno [1, 5].
 
-Ao contrário do adulto cardiopata — cujo coração subitamente para de bater em fibrilação ventricular enquanto seus pulmões ainda estão cheios de oxigênio —, a criança raramente "desliga" de repente sem aviso prévio. A parada cardíaca pediátrica é o **estágio terminal de uma deterioração respiratória ou choque progressivo** [1, 2].
+Em muitas crianças, a parada cardíaca é precedida por falta de oxigênio ou falência circulatória. Em outras, causas cardíacas podem provocar colapso súbito. Por isso, não é seguro presumir a origem do evento somente pela aparência. A técnica de RCP deve considerar a idade, o tamanho e a capacitação de quem socorre [1, 2].
 
 A criança asfixia-se por engasgo com comida ou brinquedo, afoga-se na piscina da escola, sofre choque séptico por infecção bacteriana galopante ou entra em exaustão ventilatória por crise asmática descontrolada. À medida que o oxigênio no sangue cai (**hipoxemia severa**), o músculo cardíaco infantil começa a bater cada vez mais devagar (**bradicardia extrema**), até entrar em assistolia definitiva [5]. Dessa realidade biológica decorre a regra mestra do socorro infantil: **em crianças, o ar nos pulmões (oxigenação e ventilação) é tão importante quanto a massagem no peito**.
 

@@ -95,9 +95,9 @@ Ao concluir o estudo deste módulo, o participante deverá ser capaz de:
 
 **LEITURA GUIADA — COMECE AQUI:** Falta de ar, alergia grave e queda da glicose podem piorar rapidamente. A resposta depende dos sinais: observar a respiração, reconhecer alterações da consciência e identificar se há um plano de emergência e medicamentos já prescritos.
 
-No ambiente de trabalho, nas escolas, em academias e no convívio familiar, as emergências não traumáticas (clínicas) superam numericamente os acidentes traumáticos mecânicos. Doenças crônicas altamente prevalentes na população brasileira — como a **asma brônquica** (que afeta mais de 20 milhões de brasileiros), o **diabetes mellitus** (com mais de 16 milhões de diagnósticos) e as **alergias graves a alimentos, medicamentos e picadas de insetos** — manifestam-se frequentemente sob a forma de descompensações agudas violentas [3, 4, 6].
+Crises de asma, reações alérgicas graves e hipoglicemia podem acontecer no trabalho, na escola, em atividades físicas ou em casa. Cada condição tem mecanismos e tratamentos diferentes. Nos primeiros socorros, o mais importante é reconhecer dificuldade respiratória, alterações de consciência e sinais de anafilaxia, além de saber quando acionar o 192 [3, 4, 6].
 
-Essas condições compartilham uma dinâmica temporal traiçoeira: muitas vezes iniciam-se com sintomas aparentemente brandos — uma tosse seca, uma sudorese leve ou placas avermelhadas na pele — e, em menos de 15 minutos, evoluem para insuficiência respiratória terminal, edema laríngeo asfixiante ou coma hipoglicêmico [1, 4].
+Os sintomas podem começar de modo discreto e evoluir, mas não seguem um tempo fixo. Chiado progressivo, dificuldade para falar, inchaço de língua, confusão ou incapacidade de engolir exigem atenção imediata. Sempre siga o plano de emergência individual quando existir; não tente adivinhar a causa nem administrar medicamentos não prescritos [1, 4].
 
 O socorrista comunitário e o brigadista são as primeiras barreiras de contenção entre o desajuste metabólico/alérgico e a lesão cerebral irreversível. Compreender o que ocorre no interior dos tecidos e saber como posicionar a vítima e apoiar no uso de dispositivos de alívio é a chave para evitar a intubação orotraqueal e o óbito hospitalar.
 
