@@ -33,6 +33,40 @@
 
 ---
 
+## GUIA DE ATUAÇÃO — PARA QUEM NÃO É DA ÁREA DA SAÚDE
+
+> **EM UMA EMERGÊNCIA REAL:** Proteja-se, peça ajuda e ligue **192 (SAMU)**. Para fogo, resgate em altura, água, espaço confinado ou ambiente perigoso, ligue **193 (Bombeiros)**. Diga o endereço e siga as instruções da central. Este roteiro orienta as primeiras ações, mas não substitui o treino supervisionado das técnicas práticas.
+
+### Situação: Como treinar controle de sangramento com segurança
+
+**Reconheça os sinais:** Simulado de hemorragia com necessidade de decidir entre pressão, packing treinado e torniquete.
+
+### O que fazer — passo a passo
+
+1. Use simuladores próprios e sangue artificial; não use feridas reais para aprender.
+2. Estação 1: identifique sangramento importante e acione ajuda.
+3. Estação 2: pressione continuamente o simulador sem levantar a compressa.
+4. Estação 3: faça packing apenas após demonstração por instrutor habilitado.
+5. Estação 4: ajuste torniquete de treinamento em modelo apropriado; confira se a 'hemorragia' cessa.
+6. Finalize com comunicação ao SAMU simulado e registro de horário.
+7. Repita até o aluno executar sem consultar o roteiro e sem ultrapassar seus limites de atuação.
+
+### Não faça isto
+
+Não treine torniquete apertado por tempo prolongado em colegas. Não use instrumento cortante para criar feridas.
+
+### Exercício prático de aprendizagem
+
+Avalie sequência, comunicação, técnica, segurança e reconhecimento da necessidade de ajuda profissional.
+
+**Ao entregar a vítima:** informe horário de início, mudanças na respiração e na consciência, riscos e medidas aplicadas.
+
+**Limites:** não faça procedimentos invasivos, administração de fármacos não prescritos, resgates técnicos ou intervenções que dependam de habilitação profissional. Pratique presencialmente RCP, DEA, controle de sangramento e desengasgo em manequins antes de assumir atendimento.
+
+**Referências operacionais:** Ministério da Saúde — SAMU 192 (https://www.gov.br/saude/pt-br/composicao/saes/samu-192/samu-192); AHA/AAP — RCP e primeiros socorros 2025 (https://cpr.heart.org/en/resuscitation-science/cpr-and-ecc-guidelines); AHA/Cruz Vermelha — Primeiros Socorros 2024 (https://cpr.heart.org/en/resuscitation-science/2024-first-aid-guidelines).
+
+---
+
 ## SEÇÃO 1 — EM 30 SEGUNDOS
 
 > **VISÃO RÁPIDA DE DESEMPENHO PRÁTICO EM HEMORRAGIA**

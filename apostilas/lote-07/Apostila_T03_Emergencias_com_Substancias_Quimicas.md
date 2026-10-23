@@ -11,11 +11,45 @@
 
 ---
 
+## GUIA DE ATUAÇÃO — PARA QUEM NÃO É DA ÁREA DA SAÚDE
+
+> **EM UMA EMERGÊNCIA REAL:** Proteja-se, peça ajuda e ligue **192 (SAMU)**. Para fogo, resgate em altura, água, espaço confinado ou ambiente perigoso, ligue **193 (Bombeiros)**. Diga o endereço e siga as instruções da central. Este roteiro orienta as primeiras ações, mas não substitui o treino supervisionado das técnicas práticas.
+
+### Situação: Exposição química: proteger, afastar e irrigar
+
+**Reconheça os sinais:** Vazamento, fumaça ou vapor irritante, cheiro químico, pele ardendo ou produto nos olhos.
+
+### O que fazer — passo a passo
+
+1. Não entre em nuvem química. Afaste pessoas para área ventilada e mantenha-se fora do vazamento.
+2. Acione 193 e o plano de emergência. Informe nome do produto, se conhecido.
+3. Se a pessoa já estiver em área segura, retire roupas contaminadas quando for possível fazê-lo sem contaminar você.
+4. Para respingos nos olhos, irrigue imediatamente com água abundante, mantendo as pálpebras abertas, conforme orientação de segurança do produto.
+5. Para pele exposta, remova o produto superficial com cuidado e lave com água abundante conforme ficha de segurança.
+6. Não retorne à área contaminada. Aguarde profissionais de descontaminação.
+7. Se houver falta de ar, confusão ou desmaio, acione também 192 e observe respiração.
+
+### Não faça isto
+
+Não neutralize ácidos com bases. Não provoque vômito, não dê leite e não tente resgate sem proteção adequada.
+
+### Exercício prático de aprendizagem
+
+Use ficha de segurança fictícia para treinar identificação de produto, isolamento e chamada.
+
+**Ao entregar a vítima:** informe horário de início, mudanças na respiração e na consciência, riscos e medidas aplicadas.
+
+**Limites:** não faça procedimentos invasivos, administração de fármacos não prescritos, resgates técnicos ou intervenções que dependam de habilitação profissional. Pratique presencialmente RCP, DEA, controle de sangramento e desengasgo em manequins antes de assumir atendimento.
+
+**Referências operacionais:** Ministério da Saúde — SAMU 192 (https://www.gov.br/saude/pt-br/composicao/saes/samu-192/samu-192); AHA/AAP — RCP e primeiros socorros 2025 (https://cpr.heart.org/en/resuscitation-science/cpr-and-ecc-guidelines); AHA/Cruz Vermelha — Primeiros Socorros 2024 (https://cpr.heart.org/en/resuscitation-science/2024-first-aid-guidelines).
+
+---
+
 ## 1. EM 30 SEGUNDOS (SUMÁRIO EXECUTIVO DE RESPOSTA RÁPIDA)
 
 Emergências com produtos químicos industriais exigem resposta metódica: **nunca se torne a segunda vítima**. A contaminação química ocorre por via cutânea, ocular, inalatória ou digestiva. Frente a respingos de substâncias corrosivas (ácidos e bases fortes), a única intervenção pré-hospitalar com evidência robusta para estancar a necrose tecidual e salvar a visão é a **descontaminação imediata por irrigação contínua com água corrente limpa e abundante (chuveiro de emergência e lava-olhos)** por no mínimo **15 a 20 minutos ininterruptos**, retirando roupas contaminadas sob a ducha.
 
-É estritamente proibido tentar "neutralizar" o produto químico na pele (aplicar vinagre sobre soda cáustica ou bicarbonato sobre ácido), pois a reação exotérmica violenta libera calor intenso, transformando queimadura química em queimadura térmica de terceiro grau. A identificação das substâncias pelo Sistema Globalmente Harmonizado (GHS) e Fichas com Dados de Segurança (FDS / SDS segundo ABNT NBR 14725) orienta a proteção da equipe e o suporte médico. Em contaminação inalatória, retire a vítima para o ar livre apenas se portar proteção respiratória autônoma; caso contrário, isole a área a barlavento, acione o PAE, Bombeiros (193), SAMU (192) e CIATox (0800 722 6001).
+É estritamente proibido tentar "neutralizar" o produto químico na pele (aplicar vinagre sobre soda cáustica ou bicarbonato sobre ácido), pois a reação exotérmica violenta libera calor intenso, transformando queimadura química em queimadura térmica de terceiro grau. A identificação das substâncias pelo Sistema Globalmente Harmonizado (GHS) e Fichas com Dados de Segurança (FDS / SDS segundo ABNT NBR 14725) orienta a proteção da equipe e o suporte médico. Em contaminação inalatória, a remoção da vítima de ambiente contaminado deve ficar a cargo de equipe treinada com proteção adequada; caso contrário, isole a área a barlavento, acione o PAE, Bombeiros (193), SAMU (192) e CIATox (0800 722 6001).
 
 ---
 

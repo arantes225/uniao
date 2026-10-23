@@ -33,6 +33,39 @@
 
 ---
 
+## GUIA DE ATUAÇÃO — PARA QUEM NÃO É DA ÁREA DA SAÚDE
+
+> **EM UMA EMERGÊNCIA REAL:** Proteja-se, peça ajuda e ligue **192 (SAMU)**. Para fogo, resgate em altura, água, espaço confinado ou ambiente perigoso, ligue **193 (Bombeiros)**. Diga o endereço e siga as instruções da central. Este roteiro orienta as primeiras ações, mas não substitui o treino supervisionado das técnicas práticas.
+
+### Situação: Sangramento em locais especiais
+
+**Reconheça os sinais:** Ferida na cabeça, pescoço, virilha, axila, tórax, abdome ou membro infantil.
+
+### O que fazer — passo a passo
+
+1. Ligue 192; em trauma complexo com risco ambiental, acione também 193.
+2. Use pressão direta na área sangrante quando isso for seguro. Não pressione objetos encravados.
+3. Em virilha e axila, mantenha compressão. Packing somente para pessoa treinada e local apropriado.
+4. Em tórax ou abdome, não introduza gaze na cavidade e não retire objeto profundamente encravado.
+5. Em lesão de crânio com afundamento ou suspeita de fratura, proteja a ferida sem pressionar o osso deformado.
+6. Em crianças, controle o sangramento sem atrasar ajuda, mantendo atenção à respiração.
+
+### Não faça isto
+
+Não use torniquete no pescoço ou tronco. Não tente explorar feridas profundas ou fechar perfurações.
+
+### Exercício prático de aprendizagem
+
+Separe modelos de braço, virilha e tórax e peça ao aluno escolher apenas medidas dentro do seu treinamento.
+
+**Ao entregar a vítima:** informe horário de início, mudanças na respiração e na consciência, riscos e medidas aplicadas.
+
+**Limites:** não faça procedimentos invasivos, administração de fármacos não prescritos, resgates técnicos ou intervenções que dependam de habilitação profissional. Pratique presencialmente RCP, DEA, controle de sangramento e desengasgo em manequins antes de assumir atendimento.
+
+**Referências operacionais:** Ministério da Saúde — SAMU 192 (https://www.gov.br/saude/pt-br/composicao/saes/samu-192/samu-192); AHA/AAP — RCP e primeiros socorros 2025 (https://cpr.heart.org/en/resuscitation-science/cpr-and-ecc-guidelines); AHA/Cruz Vermelha — Primeiros Socorros 2024 (https://cpr.heart.org/en/resuscitation-science/2024-first-aid-guidelines).
+
+---
+
 ## SEÇÃO 1 — EM 30 SEGUNDOS
 
 > **VISÃO RÁPIDA DE SOBREVIVÊNCIA EM CENÁRIOS COMPLEXOS**
@@ -122,7 +155,7 @@ Determinadas regiões anatômicas desafiam as regras convencionais do controle d
 
 #### 1. Região Glútea (Nádegas)
 - As artérias glúteas superior e inferior emergem diretamente da pelve através do forame isquiático maior. Lesões perfurantes nas nádegas podem sangrar para o interior da cavidade pélvica.
-- **Manejo:** A aplicação de torniquete é impossível. O tratamento obrigatório é o **Wound Packing agressivo com gaze hemostática**, direcionando o empacotamento em direção à asa do osso ilíaco, seguido de compressão com o peso do corpo [3, 5].
+- **Manejo:** A aplicação de torniquete é impossível. O tratamento obrigatório é o **pressão direta imediata; packing somente por pessoa treinada, quando indicado**, direcionando o empacotamento em direção à asa do osso ilíaco, seguido de compressão com o peso do corpo [3, 5].
 
 #### 2. Face e Couro Cabeludo
 - O couro cabeludo é alimentado por cinco grandes artérias com ricas anastomoses, vertendo volumes impressionantes de sangue que escorrem pelos olhos e assustam os presentes.

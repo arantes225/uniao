@@ -33,12 +33,46 @@
 
 ---
 
+## GUIA DE ATUAÇÃO — PARA QUEM NÃO É DA ÁREA DA SAÚDE
+
+> **EM UMA EMERGÊNCIA REAL:** Proteja-se, peça ajuda e ligue **192 (SAMU)**. Para fogo, resgate em altura, água, espaço confinado ou ambiente perigoso, ligue **193 (Bombeiros)**. Diga o endereço e siga as instruções da central. Este roteiro orienta as primeiras ações, mas não substitui o treino supervisionado das técnicas práticas.
+
+### Situação: Acidente com máquina e aprisionamento
+
+**Reconheça os sinais:** Operário preso, membro amputado, sangramento grave, ruído e movimento residual de máquina.
+
+### O que fazer — passo a passo
+
+1. Não toque na máquina em movimento. Acione parada de emergência se for seguro.
+2. Peça isolamento e bloqueio por equipe habilitada. Ligue 193 e 192.
+3. Não puxe membro preso nem tente desmontar a máquina por conta própria.
+4. Se puder alcançar uma ferida com segurança, faça pressão direta firme.
+5. Em hemorragia de extremidade ameaçadora à vida, use torniquete comercial se souber aplicar.
+6. Se houver parte amputada e estiver segura para recolher, envolva-a em material limpo e proteja em saco fechado, resfriado externamente sem contato direto com gelo.
+7. Registre horário, equipamento envolvido e medidas realizadas.
+
+### Não faça isto
+
+Não liberte vítimas presas sob carga sem equipe de resgate. Não coloque gelo direto no segmento amputado.
+
+### Exercício prático de aprendizagem
+
+Simule ativação da parada de emergência e acionamento dos serviços sem contato com máquina real energizada.
+
+**Ao entregar a vítima:** informe horário de início, mudanças na respiração e na consciência, riscos e medidas aplicadas.
+
+**Limites:** não faça procedimentos invasivos, administração de fármacos não prescritos, resgates técnicos ou intervenções que dependam de habilitação profissional. Pratique presencialmente RCP, DEA, controle de sangramento e desengasgo em manequins antes de assumir atendimento.
+
+**Referências operacionais:** Ministério da Saúde — SAMU 192 (https://www.gov.br/saude/pt-br/composicao/saes/samu-192/samu-192); AHA/AAP — RCP e primeiros socorros 2025 (https://cpr.heart.org/en/resuscitation-science/cpr-and-ecc-guidelines); AHA/Cruz Vermelha — Primeiros Socorros 2024 (https://cpr.heart.org/en/resuscitation-science/2024-first-aid-guidelines).
+
+---
+
 ## SEÇÃO 1 — EM 30 SEGUNDOS
 
 > **VISÃO RÁPIDA DE SOBREVIVÊNCIA EM ACIDENTES MECÂNICOS**
 > 1. **Desenergize antes de tocar na vítima:** NUNCA tente puxar um trabalhador preso em correias, engrenagens ou prensas sem antes acionar o botão de parada de emergência e bloquear a fonte de energia (sistema LOTO - *Lockout/Tagout*). O maquinário pode acionar um novo ciclo e esmagar o socorrista [1, 2].
 > 2. **O perigo invisível da Síndrome de Esmagamento (*Crush Syndrome*):** Quando um membro fica prensado por mais de 15 a 30 minutos sob carga pesada, as células musculares morrem e liberam **Potássio tóxico e Mioglobina**. Levantar a máquina de repente sem preparo médico libera essa enxurrada de toxinas para o coração, causando **arritmia fatal e parada cardíaca instantânea pós-descompressão** [3, 4].
-> 3. **Torniquete salva o operário com amputação:** O membro esmagado ou decepado por torno mecânico, guilhotina ou serra exige **aplicação imediata de torniquete comercial 5 a 7 cm acima do corte**. O sangramento arterial femoral ou braquial mata em menos de 180 segundos [2, 5].
+> 3. **Torniquete salva o operário com amputação:** O membro esmagado ou decepado por torno mecânico, guilhotina ou serra exige **aplicação imediata de torniquete comercial aproximadamente 5 a 7 cm acima da ferida, sem cobrir articulações, quando indicado e com socorrista treinado**. O sangramento arterial femoral ou braquial mata em menos de 180 segundos [2, 5].
 > 4. **Membro amputado não vai no gelo direto:** Limpe com soro estéril, envolva em gaze seca, feche em saco plástico vedado e coloque o saco em uma caixa com gelo e água. Congelar o membro destrói as artérias microscópicas e inviabiliza o reimplante [2, 6].
 > 5. **Ferramenta empalada no corpo:** NUNCA remova discos de corte, brocas de furadeira ou peças de aço cravadas no corpo do trabalhador. Estabilize o objeto com panos e ataduras ao redor; a remoção é exclusiva do centro cirúrgico [3, 5].
 > 6. **Conformidade estrita com a NR-12:** Máquinas sem sensores ópticos, enclausuramento ou comando bimanual são armadilhas letais ilegais que geram responsabilidade penal direta à diretoria da fábrica [1, 7].

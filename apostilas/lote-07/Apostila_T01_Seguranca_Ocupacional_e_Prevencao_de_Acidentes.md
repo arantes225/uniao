@@ -33,6 +33,39 @@
 
 ---
 
+## GUIA DE ATUAÇÃO — PARA QUEM NÃO É DA ÁREA DA SAÚDE
+
+> **EM UMA EMERGÊNCIA REAL:** Proteja-se, peça ajuda e ligue **192 (SAMU)**. Para fogo, resgate em altura, água, espaço confinado ou ambiente perigoso, ligue **193 (Bombeiros)**. Diga o endereço e siga as instruções da central. Este roteiro orienta as primeiras ações, mas não substitui o treino supervisionado das técnicas práticas.
+
+### Situação: Segurança no trabalho: não se torne outra vítima
+
+**Reconheça os sinais:** Máquina funcionando, produto químico, risco de queda, eletricidade, fogo ou trabalhador ferido.
+
+### O que fazer — passo a passo
+
+1. Pare e identifique o perigo. Não entre em área não liberada.
+2. Ative o plano de emergência e peça desligamento por pessoa autorizada, quando necessário.
+3. Acione 193 em resgate, fogo, vazamento ou espaço confinado; 192 para urgência em saúde.
+4. Isole o local e mantenha curiosos longe da fonte do acidente.
+5. Quando a área estiver segura, avalie resposta, respiração e sangramento grave.
+6. Preste primeiros socorros básicos conforme treinamento e entregue informações à equipe de resgate.
+
+### Não faça isto
+
+Não remova proteções de máquina, não toque em fios e não entre em atmosfera perigosa.
+
+### Exercício prático de aprendizagem
+
+Realize inspeção simulada de posto de trabalho e ensaie acionamento do plano interno.
+
+**Ao entregar a vítima:** informe horário de início, mudanças na respiração e na consciência, riscos e medidas aplicadas.
+
+**Limites:** não faça procedimentos invasivos, administração de fármacos não prescritos, resgates técnicos ou intervenções que dependam de habilitação profissional. Pratique presencialmente RCP, DEA, controle de sangramento e desengasgo em manequins antes de assumir atendimento.
+
+**Referências operacionais:** Ministério da Saúde — SAMU 192 (https://www.gov.br/saude/pt-br/composicao/saes/samu-192/samu-192); AHA/AAP — RCP e primeiros socorros 2025 (https://cpr.heart.org/en/resuscitation-science/cpr-and-ecc-guidelines); AHA/Cruz Vermelha — Primeiros Socorros 2024 (https://cpr.heart.org/en/resuscitation-science/2024-first-aid-guidelines).
+
+---
+
 ## SEÇÃO 1 — EM 30 SEGUNDOS
 
 > **VISÃO RÁPIDA DE SOBREVIVÊNCIA E CONFORMIDADE OCUPACIONAL**
