@@ -66,6 +66,10 @@ No ambiente aquático, a densidade do meio e a barreira líquida exigem que qual
 
 Nas atividades ao ar livre e em trilhas ecológicas, o fator complicador crítico é a **distância e o tempo de resposta das equipes públicas de resgate (SAMU 192 e Bombeiros 193)**. Se no centro da cidade a ambulância chega entre 8 e 15 minutos, em uma trilha florestal ou serra o resgate técnico pode demorar de 2 a 6 horas para acessar o local. Nesses cenários, a sobrevivência da vítima depende integralmente da autossuficiência técnica e dos suprimentos portados pelo guia esportivo e pela equipe de apoio [7, 8].
 
+
+![Figura 1 — Técnica segura de salvamento aquático a partir da borda sem entrada impulsiva.](../imagens/Proper_Rescue_Method.jpg)
+*Figura 1 — Técnica segura de salvamento aquático a partir da borda sem entrada impulsiva. Crédito: US Army Corps of Engineers. Licença: Domínio público. Fonte: Wikimedia Commons.*
+
 ---
 
 ## SEÇÃO 4 — FISIOPATOLOGIA DO AFOGAMENTO E DA EXPOSIÇÃO TÉRMICA AMBIENTAL
@@ -118,6 +122,10 @@ A prevenção é o pilar que evita 99% dos óbitos em ambientes aquáticos de tr
 ---
 
 ### 5.2 Prevenção de Afogamentos e Ralos de Sucção em Ambientes Coletivos
+
+
+![Figura 2 — Envoltório de isolamento térmico passivo e ativo para prevenção da hipotermia no trauma.](../imagens/Hypothermia-wrap.png)
+*Figura 2 — Envoltório de isolamento térmico passivo e ativo para prevenção da hipotermia no trauma. Crédito: Baedr-9439. Licença: CC0. Fonte: Wikimedia Commons.*
 
 O aprisionamento em ralos de fundo de piscinas é um mecanismo devastador de afogamento em academias e condomínios [5, 6]:
 - **Mecanismo da Sucção:** As bombas de circulação de água geram uma sucção de vácuo hidrodinâmico violenta no ralo de fundo. Quando o cabelo comprido de um aluno ou seu membro é sugado para o interior da tubulação, a força de retenção pode ultrapassar 200 a 300 kgf, tornando humanamente impossível desvencilhar a vítima puxando-a para cima.
@@ -175,6 +183,10 @@ Em ambientes externos, a termorregulação é desafiada pelo vento, umidade e ra
 - **Sinais Clínicos:** Tremores incontroláveis seguidos de fala arrastada, apatia, confusão mental e perda da capacidade de movimentar os dedos para abrir mochilas. Se a temperatura cair mais, os tremores cessam (sinal de esgotamento metabólico crítico).
 - **Manejo:** Trocar roupas molhadas por roupas secas imediatamente, envolver o corpo em **manta térmica aluminizada impermeável** (lado prateado voltado para o corpo para refletir a radiação infravermelha), proteger do vento e oferecer bebidas mornas açucaradas se a vítima estiver 100% consciente [1, 9].
 
+
+![Figura 3 — Quadro comparativo clínico entre exaustão térmica e golpe de calor (intermação).](../imagens/Heat-symptoms-2022-final.png)
+*Figura 3 — Quadro comparativo clínico entre exaustão térmica e golpe de calor (intermação). Crédito: National Weather Service / CDC / NIOSH. Licença: Domínio público. Fonte: Wikimedia Commons.*
+
 #### Insolação e Doenças do Calor em Corridas de Rua:
 - Hidratação planejada a cada 20 a 30 minutos em pontos de apoio com água e eletrólitos;
 - Uso de vestimentas técnicas respiráveis de cores claras e proteção solar com FPS elevado;
@@ -189,20 +201,6 @@ A evacuação de feridos em ambientes remotos é uma operação logística compl
 - **Construção de Macas Improvisadas:** Utilização de bastões de caminhada resistentes transpassados pelas mangas invertidas de jaquetas corta-vento ou amarrados a lonas impermeáveis para transporte de vítimas que não conseguem caminhar [7, 8].
 
 ---
-
-### Figuras de Apoio
-
-![Figura 1 - TÃ©cnica segura de salvamento aquÃ¡tico a partir da borda sem entrada impulsiva.](../imagens/Proper_Rescue_Method.jpg)
-*Figura 1 - TÃ©cnica segura de salvamento aquÃ¡tico a partir da borda sem entrada impulsiva. CrÃ©dito: US Army Corps of Engineers. LicenÃ§a: DomÃ­nio pÃºblico. Fonte: Wikimedia Commons.*
-
-![Figura 2 - EnvoltÃ³rio de isolamento tÃ©rmico passivo e ativo para prevenÃ§Ã£o da hipotermia no trauma.](../imagens/Hypothermia-wrap.png)
-*Figura 2 - EnvoltÃ³rio de isolamento tÃ©rmico passivo e ativo para prevenÃ§Ã£o da hipotermia no trauma. CrÃ©dito: Baedr-9439. LicenÃ§a: CC0. Fonte: Wikimedia Commons.*
-
-![Figura 3 - Quadro comparativo clÃ­nico entre exaustÃ£o tÃ©rmica e golpe de calor (intermaÃ§Ã£o).](../imagens/Heat-symptoms-2022-final.png)
-*Figura 3 - Quadro comparativo clÃ­nico entre exaustÃ£o tÃ©rmica e golpe de calor (intermaÃ§Ã£o). CrÃ©dito: National Weather Service / CDC / NIOSH. LicenÃ§a: DomÃ­nio pÃºblico. Fonte: Wikimedia Commons.*
-
-![Figura 4 - Posicionamento para compressÃµes torÃ¡cicas no adulto.](../imagens/Cardiopulmonary_Resuscitation_Adult.jpg)
-*Figura 4 - Posicionamento para compressÃµes torÃ¡cicas no adulto. CrÃ©dito: Illinois Waterway Visitor Center, US Army Corps of Engineers. LicenÃ§a: DomÃ­nio pÃºblico. Fonte: Wikimedia Commons.*
 
 ---
 
@@ -223,6 +221,10 @@ A SOBRASA e a literatura médica mundial adotam a **Classificação de Afogament
 ---
 
 ## SEÇÃO 7 — ERROS FREQUENTES E MITOS NO RESGATE AQUÁTICO E EM TRILHAS
+
+
+![Figura 4 — Posicionamento para compressões torácicas no adulto.](../imagens/Cardiopulmonary_Resuscitation_Adult.jpg)
+*Figura 4 — Posicionamento para compressões torácicas no adulto. Crédito: Illinois Waterway Visitor Center, US Army Corps of Engineers. Licença: Domínio público. Fonte: Wikimedia Commons.*
 
 1. **Tentar retirar água dos pulmões apertando a barriga da vítima:** A manobra de comprimir o estômago ou virar a pessoa de cabeça para baixo para "escorrer água" é **completamente inútil e perigosa**. A água ingerida no estômago é vomitada, entra nas vias aéreas e bloqueia a ventilação. **Não tente drenar água; forneça ar!** [1, 2].
 2. **Pular na água para salvar alguém sem flutuador:** Vítimas em pânico possuem força descontrolada e afundam o socorrista para tentar manter a própria cabeça fora d'água. Ofereça boia, vara ou corda da borda seca [2, 4].

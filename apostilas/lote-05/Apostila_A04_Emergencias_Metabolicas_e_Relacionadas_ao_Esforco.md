@@ -94,6 +94,10 @@ Em uma hora de treino vigoroso sob calor intenso, um adulto pode perder entre **
 - Se o atleta repuser apenas água mineral pura em volumes gigantescos sem eletrólitos, a concentração de sódio no plasma sanguíneo cai criticamente abaixo de 130–135 mEq/L (**Hiponatremia de Esforço**).
 - Pela lei da osmose, a água migra do sangue hipoosmolar para o interior das células cerebrais hipertônicas, provocando **edema cerebral agudo**, cefaleia latejante, desorientação temporal, convulsões generalizadas e herniação de tronco encefálico [1, 8].
 
+
+![Figura 1 — Quatro mecanismos físicos de perda de calor corporal: condução, convecção, radiação e evaporação.](../imagens/Mechanisms-of-heat-loss.png)
+*Figura 1 — Quatro mecanismos físicos de perda de calor corporal: condução, convecção, radiação e evaporação. Crédito: Baedr-9439. Licença: CC0. Fonte: Wikimedia Commons.*
+
 ---
 
 ## SEÇÃO 5 — DESENVOLVIMENTO DOS SUBTEMAS
@@ -129,6 +133,10 @@ A desidratação instala-se de forma progressiva durante a sessão de treinament
 | **Leve (1% a 2% do peso)** | Sede moderada, boca seca, urina concentrada amarelo-escuro. | Queda de 10% a 20% na força muscular e capacidade de foco. |
 | **Moderada (3% a 5% do peso)** | Sede intensa, apatia, dor de cabeça latejante, cãibras, taquicardia de repouso, tontura ao levantar (hipotensão ortostática). | Risco iminente de exaustão térmica; elevação acentuada da temperatura central. |
 | **Grave (> 6% do peso)** | Ausência de suor, confusão mental, olhos fundos, pulso fino e rápido, colapso circulatório. | **EMERGÊNCIA MÉDICA: Risco de choque hipovolêmico e falência renal aguda.** |
+
+
+![Figura 2 — Quadro comparativo clínico entre exaustão térmica e golpe de calor (intermação).](../imagens/Heat-symptoms-2022-final.png)
+*Figura 2 — Quadro comparativo clínico entre exaustão térmica e golpe de calor (intermação). Crédito: National Weather Service / CDC / NIOSH. Licença: Domínio público. Fonte: Wikimedia Commons.*
 
 - **Protocolo de Hidratação:** Para treinos com duração superior a 60 minutos sob calor, intercalar água mineral com **bebidas isotônicas comerciais ou soro de reidratação oral caseiro** (contendo sódio, potássio e glicose a 6%) [1, 9].
 
@@ -210,6 +218,10 @@ Ao sofrer lise celular maciça, os miócitos liberam no sangue intracelular gran
 +---------------------------------------------------------------------------------+
 ```
 
+
+![Figura 3 — Envoltório de isolamento térmico passivo e ativo para prevenção da hipotermia no trauma.](../imagens/Hypothermia-wrap.png)
+*Figura 3 — Envoltório de isolamento térmico passivo e ativo para prevenção da hipotermia no trauma. Crédito: Baedr-9439. Licença: CC0. Fonte: Wikimedia Commons.*
+
 #### Conduta e Prevenção pelo Educador Físico:
 - Ao identificar aluno com dor muscular intratável e urina escura nos dias seguintes ao treino, determine **proibição imediata de novos exercícios**, estimule ingestão oral abundante de água e encaminhe-o com urgência a um serviço hospitalar para dosagem sérica de CK e eletrólitos e hidratação venosa vigorosa [4, 5].
 
@@ -227,17 +239,6 @@ O profissional de educação física deve saber reconhecer o momento exato em qu
 - Queda ao solo sem capacidade de sustentação do próprio tronco [1, 2].
 
 ---
-
-### Figuras de Apoio
-
-![Figura 1 - Quadro comparativo clÃ­nico entre exaustÃ£o tÃ©rmica e golpe de calor (intermaÃ§Ã£o).](../imagens/Heat-symptoms-2022-final.png)
-*Figura 1 - Quadro comparativo clÃ­nico entre exaustÃ£o tÃ©rmica e golpe de calor (intermaÃ§Ã£o). CrÃ©dito: National Weather Service / CDC / NIOSH. LicenÃ§a: DomÃ­nio pÃºblico. Fonte: Wikimedia Commons.*
-
-![Figura 2 - Quatro mecanismos fÃ­sicos de perda de calor corporal: conduÃ§Ã£o, convecÃ§Ã£o, radiaÃ§Ã£o e evaporaÃ§Ã£o.](../imagens/Mechanisms-of-heat-loss.png)
-*Figura 2 - Quatro mecanismos fÃ­sicos de perda de calor corporal: conduÃ§Ã£o, convecÃ§Ã£o, radiaÃ§Ã£o e evaporaÃ§Ã£o. CrÃ©dito: Baedr-9439. LicenÃ§a: CC0. Fonte: Wikimedia Commons.*
-
-![Figura 3 - EnvoltÃ³rio de isolamento tÃ©rmico passivo e ativo para prevenÃ§Ã£o da hipotermia no trauma.](../imagens/Hypothermia-wrap.png)
-*Figura 3 - EnvoltÃ³rio de isolamento tÃ©rmico passivo e ativo para prevenÃ§Ã£o da hipotermia no trauma. CrÃ©dito: Baedr-9439. LicenÃ§a: CC0. Fonte: Wikimedia Commons.*
 
 ---
 

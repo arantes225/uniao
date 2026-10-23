@@ -60,6 +60,10 @@ Ao concluir o estudo deste módulo inaugural, o aluno e futuro operador de contr
 
 ## SEÇÃO 3 — INTRODUÇÃO E EPIDEMIOLOGIA DA MORTE EVITÁVEL POR HEMORRAGIA
 
+
+![Figura 1 — Envoltório de isolamento térmico passivo e ativo para prevenção da hipotermia no trauma.](../imagens/Hypothermia-wrap.png)
+*Figura 1 — Envoltório de isolamento térmico passivo e ativo para prevenção da hipotermia no trauma. Crédito: Baedr-9439. Licença: CC0. Fonte: Wikimedia Commons.*
+
 O trauma físico é a principal causa de morte em indivíduos entre 1 e 44 anos em escala global. Dentro do universo de óbitos por trauma no ambiente pré-hospitalar, **a hemorragia exsanguinante não controlada é responsável por mais de 35% de todas as mortes pré-hospitalares e por mais de 80% das mortes potencialmente evitáveis** [1, 2].
 
 Historicamente, as doutrinas de primeiros socorros civis priorizavam rigidamente a mnemônica "A-B-C" (Vias Aéreas, Respiração e Circulação). No entanto, lições extraídas de conflitos militares modernos pelo Comitê de Cuidados Táticos a Vítimas de Combate (TCCC) e transpostas para o meio civil pelo American College of Surgeons (ACS) no programa *STOP THE BLEED®* e pelo PHTLS 10ª Edição comprovaram que **uma via aérea pérvia é inútil em um corpo cujo sangue vazou completamente pelo chão** [1, 3].
@@ -95,6 +99,10 @@ Para controlar vazamentos hidráulicos no corpo humano, é mandatório entender 
 ### 4.1 Pressão Hidrostática e Dinâmica dos Vasos
 - **Artérias:** Operam sob pressões manométricas médias de 80 a 120 mmHg. A velocidade do sangue na aorta e artérias femorais atinge até 40 cm por segundo. Uma transecção arterial não permite formação de coágulo natural porque a pressão de ejeção simplesmente lava qualquer agregação de plaquetas para fora da lesão [3, 4].
 - **Veias:** Operam sob pressões baixas (5 a 15 mmHg). O fluxo é lento e contínuo. Em grandes veias centrais (jugular, veia cava, veia femoral), a lesão é grave pelo calibre volumoso do vaso e pelo risco de aspiração de ar para o interior do sistema circulatório (**embolia gasosa**) [2, 4].
+
+
+![Figura 2 — Comparação histológica e pressórica entre artérias e veias.](../imagens/2102_Comparison_of_Artery_and_Vein.jpg)
+*Figura 2 — Comparação histológica e pressórica entre artérias e veias. Crédito: OpenStax College. Licença: CC BY 3.0 (https://creativecommons.org/licenses/by/3.0/). Fonte: Wikimedia Commons.*
 
 ---
 
@@ -145,6 +153,10 @@ O socorrista deve identificar a origem do sangramento em menos de 3 segundos de 
 
 No calor da ocorrência traumática, não é possível medir mililitros de sangue com recipientes graduados. O socorrista utiliza os **Indicadores Visuais de Gravidade do Programa STOP THE BLEED®** [1, 2]:
 
+
+![Figura 3 — Mecanismo de bomba cardíaca e ejeção sanguínea durante a compressão torácica externa.](../imagens/CPR-heart-compression.png)
+*Figura 3 — Mecanismo de bomba cardíaca e ejeção sanguínea durante a compressão torácica externa. Crédito: Baedr-9439. Licença: CC0. Fonte: Wikimedia Commons.*
+
 ```
 +---------------------------------------------------------------------------------+
 |               SINAIS VISUAIS DE SANGRAMENTO COM AMEAÇA À VIDA                   |
@@ -188,25 +200,15 @@ Em pacientes traumatizados com perda sanguínea maciça, três desordens metabó
 
 ---
 
-### Figuras de Apoio
-
-![Figura 1 - ComparaÃ§Ã£o histolÃ³gica e pressÃ³rica entre artÃ©rias e veias.](../imagens/2102_Comparison_of_Artery_and_Vein.jpg)
-*Figura 1 - ComparaÃ§Ã£o histolÃ³gica e pressÃ³rica entre artÃ©rias e veias. CrÃ©dito: OpenStax College. LicenÃ§a: CC BY 3.0 (https://creativecommons.org/licenses/by/3.0/). Fonte: Wikimedia Commons.*
-
-![Figura 2 - Pele mosqueada (livedo/vasoconstriÃ§Ã£o perifÃ©rica) como sinal clÃ­nico precoce de hipoperfusÃ£o e choque.](../imagens/Mottled-skin.jpg)
-*Figura 2 - Pele mosqueada (livedo/vasoconstriÃ§Ã£o perifÃ©rica) como sinal clÃ­nico precoce de hipoperfusÃ£o e choque. CrÃ©dito: Another-anon-artist-234. LicenÃ§a: CC0. Fonte: Wikimedia Commons.*
-
-![Figura 3 - EnvoltÃ³rio de isolamento tÃ©rmico passivo e ativo para prevenÃ§Ã£o da hipotermia no trauma.](../imagens/Hypothermia-wrap.png)
-*Figura 3 - EnvoltÃ³rio de isolamento tÃ©rmico passivo e ativo para prevenÃ§Ã£o da hipotermia no trauma. CrÃ©dito: Baedr-9439. LicenÃ§a: CC0. Fonte: Wikimedia Commons.*
-
-![Figura 4 - Mecanismo de bomba cardÃ­aca e ejeÃ§Ã£o sanguÃ­nea durante a compressÃ£o torÃ¡cica externa.](../imagens/CPR-heart-compression.png)
-*Figura 4 - Mecanismo de bomba cardÃ­aca e ejeÃ§Ã£o sanguÃ­nea durante a compressÃ£o torÃ¡cica externa. CrÃ©dito: Baedr-9439. LicenÃ§a: CC0. Fonte: Wikimedia Commons.*
-
 ---
 
 ## SEÇÃO 6 — QUADROS PRÁTICOS, CLASSIFICAÇÃO DAS CLASSES DE CHOQUE E MATRIZES
 
 ### Classificação do Choque Hemorrágico (Padrão ATLS / American College of Surgeons)
+
+
+![Figura 4 — Pele mosqueada (livedo/vasoconstrição periférica) como sinal clínico precoce de hipoperfusão e choque.](../imagens/Mottled-skin.jpg)
+*Figura 4 — Pele mosqueada (livedo/vasoconstrição periférica) como sinal clínico precoce de hipoperfusão e choque. Crédito: Another-anon-artist-234. Licença: CC0. Fonte: Wikimedia Commons.*
 
 | PARÂMETRO CLÍNICO | CLASSE I (Compensado) | CLASSE II (Leve) | CLASSE III (Moderado) | CLASSE IV (Grave / Pré-terminal) |
 | :--- | :--- | :--- | :--- | :--- |

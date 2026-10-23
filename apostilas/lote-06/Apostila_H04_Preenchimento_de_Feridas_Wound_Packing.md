@@ -107,6 +107,10 @@ Quando uma lâmina, fragmento de estilhaço ou projétil de arma de fogo penetra
 
 ### 5.1 Conceitos Fundamentais e Indicações do Wound Packing
 
+
+![Figura 1 — Prática em simulador de preenchimento de feridas (wound packing) e pressão direta.](../imagens/Defenders_participate_in_TCCC_Combat_Lifesaver_training_9464952_.jpg)
+*Figura 1 — Prática em simulador de preenchimento de feridas (wound packing) e pressão direta. Crédito: U.S. Air Force, Tech. Sgt. Kristen Pittman. Licença: Domínio público. Fonte: Wikimedia Commons.*
+
 O preenchimento de feridas é uma manobra mecânica de suporte avançado de sangramento realizada por socorristas treinados [1, 2]:
 - **Indicações Formais:**
   - Ferimentos profundos, cavitários e perfurocortantes com sangramento ativo volumoso localizados em **virilhas, axilas ou nádegas/pelve**;
@@ -181,6 +185,10 @@ A execução do *Wound Packing* segue uma sequência cinemática precisa e biome
 5. **Formação do Montículo Externo:** Continue empacotando até que a gaze transborde ligeiramente da ferida, formando uma almofada densa e estufada de 2 a 3 cm acima da linha da pele.
 6. **Descarregamento do Peso Corporal:** Acomode as duas mãos espalmadas sobre a almofada de gaze, trave os cotovelos em extensão completa e jogue o peso do tronco para a frente, mantendo compressão manual máxima contínua [1, 4].
 
+
+![Figura 2 — Rolo de gaze estéril para compressão direta e preenchimento de cavidades.](../imagens/Gauze_bandage.png)
+*Figura 2 — Rolo de gaze estéril para compressão direta e preenchimento de cavidades. Crédito: im_tau. Licença: CC BY 4.0 (https://creativecommons.org/licenses/by/4.0/). Fonte: Wikimedia Commons.*
+
 ```
 +---------------------------------------------------------------------------------+
 |                       TEMPO DE COMPRESSÃO SUSTENTADA                            |
@@ -230,18 +238,11 @@ Após completar o tempo de compressão manual (3 ou 10 minutos), o socorrista de
    - Aplique uma bandagem de emergência (tipo israelense) ou atadura elástica compressiva em formato de "oito" ou cruzado sobre a virilha ou axila, garantindo que a pressão sobre o montículo de gaze se mantenha mesmo durante a movimentação da maca.
 3. **Reavaliação Contínua dos Sinais Vitais:** Monitore o nível de consciência e os pulsos da vítima a cada 2 a 3 minutos até a passagem do caso à equipe cirúrgica do SAMU ou hospital [2, 6].
 
+
+![Figura 3 — Atadura autoaderente aplicada para fixação de curativo compressivo hemostático.](../imagens/Self-adhering-bandage.png)
+*Figura 3 — Atadura autoaderente aplicada para fixação de curativo compressivo hemostático. Crédito: Baedr-9439. Licença: CC0. Fonte: Wikimedia Commons.*
+
 ---
-
-### Figuras de Apoio
-
-![Figura 1 - PrÃ¡tica em simulador de preenchimento de feridas (wound packing) e pressÃ£o direta.](../imagens/Defenders_participate_in_TCCC_Combat_Lifesaver_training_9464952_.jpg)
-*Figura 1 - PrÃ¡tica em simulador de preenchimento de feridas (wound packing) e pressÃ£o direta. CrÃ©dito: U.S. Air Force, Tech. Sgt. Kristen Pittman. LicenÃ§a: DomÃ­nio pÃºblico. Fonte: Wikimedia Commons.*
-
-![Figura 2 - Rolo de gaze estÃ©ril para compressÃ£o direta e preenchimento de cavidades.](../imagens/Gauze_bandage.png)
-*Figura 2 - Rolo de gaze estÃ©ril para compressÃ£o direta e preenchimento de cavidades. CrÃ©dito: im_tau. LicenÃ§a: CC BY 4.0 (https://creativecommons.org/licenses/by/4.0/). Fonte: Wikimedia Commons.*
-
-![Figura 3 - Atadura autoaderente aplicada para fixaÃ§Ã£o de curativo compressivo hemostÃ¡tico.](../imagens/Self-adhering-bandage.png)
-*Figura 3 - Atadura autoaderente aplicada para fixaÃ§Ã£o de curativo compressivo hemostÃ¡tico. CrÃ©dito: Baedr-9439. LicenÃ§a: CC0. Fonte: Wikimedia Commons.*
 
 ---
 

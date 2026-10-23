@@ -133,6 +133,10 @@ Manter uma força de 20 a 30 kgf com as mãos por 10 minutos exclusivamente atra
 
 Quando o socorrista precisa liberar as mãos para atender outra vítima, acionar o rádio de comunicação ou preparar a evacuação, a compressão manual direta deve ser convertida em um **Curativo Compressivo Estabilizado** [2, 7]:
 
+
+![Figura 1 — Bandagem compressiva tática de emergência para controle hemorrágico.](../imagens/The_Emergency_Bandage_in_different_forms_of_packaging.jpg)
+*Figura 1 — Bandagem compressiva tática de emergência para controle hemorrágico. Crédito: Struppig taucher. Licença: CC BY 4.0 (https://creativecommons.org/licenses/by/4.0/). Fonte: Wikimedia Commons.*
+
 #### A Bandagem de Emergência (Emergency Bandage / Bandagem Israelense):
 Projetada para combate e resgate militar, este dispositivo revolucionou o controle de sangramentos no meio civil:
 1. **Compressa Estéril Não Aderente Integrada:** Almofada central estéril que cobre a ferida sem grudar no coágulo recém-formado.
@@ -176,17 +180,6 @@ O socorrista deve manter vigilância ininterrupta sobre a ferida após a aplica�
 
 ---
 
-### Figuras de Apoio
-
-![Figura 1 - Bandagem compressiva tÃ¡tica de emergÃªncia para controle hemorrÃ¡gico.](../imagens/The_Emergency_Bandage_in_different_forms_of_packaging.jpg)
-*Figura 1 - Bandagem compressiva tÃ¡tica de emergÃªncia para controle hemorrÃ¡gico. CrÃ©dito: Struppig taucher. LicenÃ§a: CC BY 4.0 (https://creativecommons.org/licenses/by/4.0/). Fonte: Wikimedia Commons.*
-
-![Figura 2 - Rolo de gaze estÃ©ril para compressÃ£o direta e preenchimento de cavidades.](../imagens/Gauze_bandage.png)
-*Figura 2 - Rolo de gaze estÃ©ril para compressÃ£o direta e preenchimento de cavidades. CrÃ©dito: im_tau. LicenÃ§a: CC BY 4.0 (https://creativecommons.org/licenses/by/4.0/). Fonte: Wikimedia Commons.*
-
-![Figura 3 - Atadura autoaderente aplicada para fixaÃ§Ã£o de curativo compressivo hemostÃ¡tico.](../imagens/Self-adhering-bandage.png)
-*Figura 3 - Atadura autoaderente aplicada para fixaÃ§Ã£o de curativo compressivo hemostÃ¡tico. CrÃ©dito: Baedr-9439. LicenÃ§a: CC0. Fonte: Wikimedia Commons.*
-
 ---
 
 ## SEÇÃO 6 — QUADROS PRÁTICOS, MATRIZES COMPARATIVAS DE AGENTES E ALGORITMOS
@@ -202,6 +195,10 @@ O socorrista deve manter vigilância ininterrupta sobre a ferida após a aplica�
 | **Custo e Disponibilidade** | Baixíssimo custo; disponível universalmente em qualquer farmácia. | Custo mais elevado; requer aquisição para kits táticos e industriais. |
 
 ---
+
+
+![Figura 2 — Rolo de gaze estéril para compressão direta e preenchimento de cavidades.](../imagens/Gauze_bandage.png)
+*Figura 2 — Rolo de gaze estéril para compressão direta e preenchimento de cavidades. Crédito: im_tau. Licença: CC BY 4.0 (https://creativecommons.org/licenses/by/4.0/). Fonte: Wikimedia Commons.*
 
 ### Algoritmo Operacional da Compressão Direta e Transição
 
@@ -239,6 +236,10 @@ O socorrista deve manter vigilância ininterrupta sobre a ferida após a aplica�
 2. **"Pessoas alérgicas a camarão não podem usar curativo de quitosana":** Estudos imunológicos comprovaram que a alergia a frutos do mar decorre de proteínas musculares (tropomiosina). A quitosana de grau médico é um carboidrato purificado livre de proteínas, aprovado pelo FDA como hipoalergênico universal seguro [5, 6].
 3. **"Curativo compressivo pode substituir o torniquete em sangramento arterial femoral":** Em artérias de altíssima pressão e fluxo maciço, bandagens compressivas externas frequentemente transbordam em 2 minutos. Extremidade com sangramento arterial em jato exige torniquete [1, 4].
 4. **"Colocar gelo dentro da ferida para estancar o sangue":** Aplicar gelo no sangue que vaza resfria localmente os fatores de coagulação, inibindo a hemostasia e acelerando a Tríade Letal [2, 3].
+
+
+![Figura 3 — Atadura autoaderente aplicada para fixação de curativo compressivo hemostático.](../imagens/Self-adhering-bandage.png)
+*Figura 3 — Atadura autoaderente aplicada para fixação de curativo compressivo hemostático. Crédito: Baedr-9439. Licença: CC0. Fonte: Wikimedia Commons.*
 
 ---
 
