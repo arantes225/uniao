@@ -2,7 +2,8 @@ import { type CSSProperties, useState } from 'react';
 
 type Pose = 'sentada' | 'deitada';
 type MotionRegion = { x: number; y: number; rx: number; ry: number };
-type PatientPose = { open: string; closed: string; chest: MotionRegion; eyes: MotionRegion };
+type EyeRegion = { left: { x: number; y: number }; right: { x: number; y: number }; rx: number; ry: number };
+type PatientPose = { open: string; closed: string; chest: MotionRegion; eyes: EyeRegion };
 
 const schoolPatients = [
   {
@@ -14,12 +15,12 @@ const schoolPatients = [
       sentada: {
         open: '/simulador/personagens/escola-horizontal-v20261023/professora-sentada.png',
         closed: '/simulador/personagens/escola-horizontal-v20261023/blink/professora-sentada-olhos-fechados.png',
-        chest: { x: 49, y: 46, rx: 13, ry: 15 }, eyes: { x: 50, y: 25, rx: 5, ry: 3 }
+        chest: { x: 49, y: 48, rx: 12, ry: 10 }, eyes: { left: { x: 48.7, y: 25.4 }, right: { x: 51.7, y: 25.7 }, rx: 2.5, ry: 2.4 }
       },
       deitada: {
         open: '/simulador/personagens/escola-horizontal-v20261023/professora-deitada.png',
         closed: '/simulador/personagens/escola-horizontal-v20261023/blink/professora-deitada-olhos-fechados.png',
-        chest: { x: 47, y: 39, rx: 15, ry: 12 }, eyes: { x: 44, y: 21, rx: 5, ry: 3 }
+        chest: { x: 47, y: 40, rx: 14, ry: 9 }, eyes: { left: { x: 42.5, y: 21.8 }, right: { x: 45.5, y: 20 }, rx: 2.6, ry: 2.5 }
       }
     }
   },
@@ -32,12 +33,12 @@ const schoolPatients = [
       sentada: {
         open: '/simulador/personagens/escola-horizontal-v20261023/zelador-sentado.png',
         closed: '/simulador/personagens/escola-horizontal-v20261023/blink/zelador-sentado-olhos-fechados.png',
-        chest: { x: 49, y: 43, rx: 14, ry: 14 }, eyes: { x: 48, y: 25, rx: 5, ry: 3 }
+        chest: { x: 49, y: 43, rx: 13, ry: 10 }, eyes: { left: { x: 46.3, y: 21 }, right: { x: 49, y: 20.7 }, rx: 2.5, ry: 2.5 }
       },
       deitada: {
         open: '/simulador/personagens/escola-horizontal-v20261023/zelador-deitado.png',
         closed: '/simulador/personagens/escola-horizontal-v20261023/blink/zelador-deitado-olhos-fechados.png',
-        chest: { x: 49, y: 41, rx: 15, ry: 13 }, eyes: { x: 46, y: 25, rx: 5, ry: 3 }
+        chest: { x: 49, y: 41, rx: 14, ry: 9 }, eyes: { left: { x: 44.2, y: 22.8 }, right: { x: 47.1, y: 21.8 }, rx: 3.5, ry: 3.2 }
       }
     }
   },
@@ -50,12 +51,12 @@ const schoolPatients = [
       sentada: {
         open: '/simulador/personagens/escola-horizontal-v20261023/crianca-menina-sentada.png',
         closed: '/simulador/personagens/escola-horizontal-v20261023/blink/crianca-menina-sentada-olhos-fechados.png',
-        chest: { x: 50, y: 48, rx: 11, ry: 13 }, eyes: { x: 50, y: 31, rx: 4.5, ry: 2.5 }
+        chest: { x: 50, y: 48, rx: 10, ry: 9 }, eyes: { left: { x: 48.3, y: 29.6 }, right: { x: 52, y: 29 }, rx: 2.5, ry: 2.5 }
       },
       deitada: {
         open: '/simulador/personagens/escola-horizontal-v20261023/crianca-menina-deitada.png',
         closed: '/simulador/personagens/escola-horizontal-v20261023/blink/crianca-menina-deitada-olhos-fechados.png',
-        chest: { x: 50, y: 48, rx: 13, ry: 12 }, eyes: { x: 47, y: 37, rx: 4.5, ry: 2.5 }
+        chest: { x: 50, y: 49, rx: 12, ry: 8 }, eyes: { left: { x: 45.9, y: 38.4 }, right: { x: 49.1, y: 36.5 }, rx: 2.6, ry: 2.6 }
       }
     }
   },
@@ -68,12 +69,12 @@ const schoolPatients = [
       sentada: {
         open: '/simulador/personagens/escola-horizontal-v20261023/crianca-menino-sentado.png',
         closed: '/simulador/personagens/escola-horizontal-v20261023/blink/crianca-menino-sentado-olhos-fechados.png',
-        chest: { x: 49, y: 49, rx: 12, ry: 14 }, eyes: { x: 50, y: 34, rx: 4.5, ry: 2.5 }
+        chest: { x: 49, y: 49, rx: 11, ry: 9 }, eyes: { left: { x: 48.7, y: 32.1 }, right: { x: 52.1, y: 32.4 }, rx: 2.5, ry: 2.4 }
       },
       deitada: {
         open: '/simulador/personagens/escola-horizontal-v20261023/crianca-menino-deitado.png',
         closed: '/simulador/personagens/escola-horizontal-v20261023/blink/crianca-menino-deitado-olhos-fechados.png',
-        chest: { x: 46, y: 48, rx: 15, ry: 13 }, eyes: { x: 41, y: 35, rx: 5, ry: 3 }
+        chest: { x: 46, y: 49, rx: 14, ry: 9 }, eyes: { left: { x: 39.9, y: 33.8 }, right: { x: 42.8, y: 32.3 }, rx: 2.6, ry: 2.5 }
       }
     }
   },
@@ -86,12 +87,12 @@ const schoolPatients = [
       sentada: {
         open: '/simulador/personagens/escola-horizontal-v20261023/bebe-sentado.png',
         closed: '/simulador/personagens/escola-horizontal-v20261023/blink/bebe-sentado-olhos-fechados.png',
-        chest: { x: 50, y: 52, rx: 12, ry: 13 }, eyes: { x: 49, y: 32, rx: 6, ry: 3.5 }
+        chest: { x: 50, y: 52, rx: 11, ry: 10 }, eyes: { left: { x: 45.4, y: 30.1 }, right: { x: 50, y: 29.2 }, rx: 2.9, ry: 2.7 }
       },
       deitada: {
         open: '/simulador/personagens/escola-horizontal-v20261023/bebe-deitado.png',
         closed: '/simulador/personagens/escola-horizontal-v20261023/blink/bebe-deitado-olhos-fechados.png',
-        chest: { x: 50, y: 57, rx: 15, ry: 14 }, eyes: { x: 47, y: 42, rx: 6, ry: 3.5 }
+        chest: { x: 50, y: 58, rx: 14, ry: 9 }, eyes: { left: { x: 44.3, y: 41.4 }, right: { x: 47.5, y: 39.8 }, rx: 2.9, ry: 2.7 }
       }
     }
   }
@@ -118,8 +119,9 @@ function AnimatedPatientPhoto({
     '--school-patient-blink-delay': `${delay}s`,
     '--school-chest-x': `${pose.chest.x}%`, '--school-chest-y': `${pose.chest.y}%`,
     '--school-chest-rx': `${pose.chest.rx}%`, '--school-chest-ry': `${pose.chest.ry}%`,
-    '--school-eyes-x': `${pose.eyes.x}%`, '--school-eyes-y': `${pose.eyes.y}%`,
-    '--school-eyes-rx': `${pose.eyes.rx}%`, '--school-eyes-ry': `${pose.eyes.ry}%`
+    '--school-eye-left-x': `${pose.eyes.left.x}%`, '--school-eye-left-y': `${pose.eyes.left.y}%`,
+    '--school-eye-right-x': `${pose.eyes.right.x}%`, '--school-eye-right-y': `${pose.eyes.right.y}%`,
+    '--school-eye-rx': `${pose.eyes.rx}%`, '--school-eye-ry': `${pose.eyes.ry}%`
   } as CSSProperties;
 
   return (
