@@ -102,6 +102,114 @@ const renderInline = (text: string): React.ReactNode[] => {
 /**
  * Pure parser function that converts markdown text into React nodes.
  */
+/**
+ * Espalha as figuras pelo desenvolvimento do tema, com a legenda e os créditos.
+ * Os arquivos históricos mantêm o bloco "Figuras de Apoio" para rastreabilidade.
+ * A apresentação ao aluno não deve concentrar ilustrações em uma única página.
+ */
+const prepareIllustratedMarkdown = (markdown: string): string => {
+  if (!markdown.includes('### Figuras de Apoio')) return markdown;
+  const lines = prepareIllustratedMarkdown(markdown).replace(/\r\n/g, '\n').split('\n');
+  const beginning = lines.findIndex(line => line.trim() === '### Figuras de Apoio');
+  const ending = lines.findIndex((line, idx) => idx > beginning && line.trim() === '---');
+  if (beginning < 0 || ending < 0) return markdown;
+
+  const repairCaption = (value: string): string => {
+    const substitutions: Record<string, string> = {
+      'Ã¡': 'á', 'Ã©': 'é', 'Ã­': 'í', 'Ã³': 'ó', 'Ãº': 'ú',
+      'Ã¢': 'â', 'Ãª': 'ê', 'Ã´': 'ô', 'Ã£': 'ã', 'Ãµ': 'õ',
+      'Ã§': 'ç', 'Ã€': 'À', 'Ã': 'Á', 'Ã‰': 'É', 'Ã“': 'Ó',
+      'Ãš': 'Ú', 'Ã‡': 'Ç', 'Ãƒ': 'Ã', 'Ã•': 'Õ',
+      'â€“': '–', 'â€”': '—', 'â€œ': '“', 'â€': '”', 'â€™': '’',
+    };
+    return value.replace(/Ã.|â€.|â€“|â€”/g, match => substitutions[match] ?? match);
+  };
+
+  const figures: { alt: string; source: string; caption: string }[] = [];
+  for (let i = beginning + 1; i < ending; i++) {
+    const image = lines[i].match(/^!\[([^\]]+)\]\(([^)]+)\)\s*$/);
+    if (!image) continue;
+    const caption = lines[i + 1]?.trim().startsWith('*') ? lines[i + 1].trim() : '';
+    figures.push({ alt: repairCaption(image[1]), source: image[2], caption: repairCaption(caption) });
+  }
+  if (figures.length < 2) return markdown;
+
+  // Remove apenas a galeria agrupada. Preserva a divisão e o restante do texto.
+  const body = [...lines.slice(0, beginning), ...lines.slice(ending)];
+  const first = body.findIndex(line => /^## SEÇÃO 3\b/i.test(line));
+  const end = body.findIndex((line, index) => index > first && /^## SEÇÃO 8\b/i.test(line));
+  const lower = first >= 0 ? first : Math.round(body.length * 0.16);
+  const upper = end > lower ? end : Math.round(body.length * 0.8);
+  if (upper - lower < figures.length * 8) return markdown;
+
+  const normalized = (value: string): string => value.normalize('NFD')
+    .replace(/[\u0300-\u036f]/g, '').toLowerCase()
+    .replace(/[^a-z0-9\s]/g, ' ');
+  const stopwords = new Set([
+    'figura', 'credito', 'licenca', 'fonte', 'wikimedia', 'commons',
+    'emergencia', 'emergencias', 'primeiros', 'atendimento', 'medico',
+    'medica', 'com', 'para', 'das', 'dos', 'uma', 'quando', 'sobre',
+    'procedimento', 'aplicacao', 'tecnica', 'tecnicas', 'durante',
+    'apenas', 'como', 'mostra', 'esquema', 'demonstracao', 'treinamento'
+  ]);
+  const keywords = (value: string): Set<string> => new Set(
+    normalized(value).split(/\s+/).filter(word => word.length >= 4 && !stopwords.has(word))
+  );
+  const candidates: { index: number; words: Set<string> }[] = [];
+  let fenced = false;
+  let heading = '';
+  for (let i = lower + 1; i < upper; i++) {
+    const line = body[i].trim();
+    if (line.startsWith('```')) { fenced = !fenced; continue; }
+    if (fenced) continue;
+    if (/^#{2,4}\s/.test(line)) heading = line;
+    const isParagraph = line.length > 65 &&
+      !/^(#|>|\||\+|[-*]\s|\d+\.\s|```|---|│)/.test(line) &&
+      (i === body.length - 1 || !body[i + 1].trim());
+    if (isParagraph) candidates.push({ index: i, words: keywords(line + ' ' + heading) });
+  }
+  if (!candidates.length) return markdown;
+
+  const assigned: { index: number; figure: typeof figures[number] }[] = [];
+  for (let n = 0; n < figures.length; n++) {
+    const figure = figures[n];
+    const words = keywords(figure.alt);
+    const desired = lower + ((n + 1) / (figures.length + 1)) * (upper - lower);
+    let best = candidates[0];
+    let bestScore = -Infinity;
+    for (const candidate of candidates) {
+      let overlap = 0;
+      for (const word of words) if (candidate.words.has(word)) overlap++;
+      const distancePenalty = 8 * Math.abs(candidate.index - desired) / (upper - lower);
+      const crowdingPenalty = assigned.reduce((penalty, placed) => {
+        const gap = Math.abs(candidate.index - placed.index);
+        return penalty + (gap < 18 ? 40 : gap < 35 ? 12 : 0);
+      }, 0);
+      const score = Math.min(overlap, 4) * 7 - distancePenalty - crowdingPenalty;
+      if (score > bestScore) { bestScore = score; best = candidate; }
+    }
+    assigned.push({ index: best.index, figure });
+  }
+
+  assigned.sort((a, b) => a.index - b.index);
+  const placement = new Map<number, string[]>();
+  assigned.forEach(({ index, figure }, i) => {
+    const number = i + 1;
+    const alt = figure.alt.replace(/^Figura\s+\d+\s*[-–—]\s*/i, 'Figura ' + number + ' — ');
+    const caption = figure.caption.replace(/^(\*?)Figura\s+\d+\s*[-–—]\s*/i, '$1Figura ' + number + ' — ');
+    const block = ['', '![' + alt + '](' + figure.source + ')', caption, ''];
+    placement.set(index, [...(placement.get(index) ?? []), ...block]);
+  });
+
+  const output: string[] = [];
+  body.forEach((line, index) => {
+    output.push(line);
+    const figureLines = placement.get(index);
+    if (figureLines) output.push(...figureLines);
+  });
+  return output.join('\n');
+};
+
 const parseMarkdown = (markdown: string): React.ReactNode[] => {
   if (!markdown) return [];
   const lines = markdown.replace(/\r\n/g, '\n').split('\n');
