@@ -68,6 +68,8 @@ Ao concluir este módulo didático, o socorrista e trabalhador estará capacitad
 
 ## 3. INTRODUÇÃO, CONTEXTO INDUSTRIAL E RELEVÂNCIA EPIDEMIOLÓGICA
 
+**LEITURA GUIADA — COMECE AQUI:** Produto químico não identificado é risco também para quem tenta socorrer. Observe rótulos à distância, isole a área e peça a equipe competente. A lavagem de pele e olhos depende do produto e só deve ocorrer em local seguro.
+
 O uso de produtos químicos é ubíquo no parque produtivo brasileiro, abrangendo indústrias petroquímicas, metalúrgicas, alimentícias, galvanoplastia e serviços de manutenção. Segundo dados da Fundacentro e da OIT, acidentes químicos respondem por expressiva taxa de cegueira e incapacidade permanente de trabalhadores.
 
 Diferente do trauma mecânico, onde a energia lesiva dissipa-se no instante do impacto, o agente químico agressor **permanece ativo e destruindo tecido biológico enquanto não for removido ou diluído por completo**. Um atraso de meros 30 segundos no início da irrigação ocular ou cutânea pode significar a perda irreversível da visão ou a necrose profunda de tecidos moles. 
@@ -77,6 +79,9 @@ Conforme preconizam as Normas Regulamentadoras NR-01, NR-07 e NR-26, as organiza
 ---
 
 ## 4. FISIOPATOLOGIA DA AGRESSÃO QUÍMICA
+
+> [!NOTE]
+> **Por que isso acontece?** Algumas substâncias irritam tecidos, outras causam queimaduras químicas ou comprometem a respiração. A reação de neutralizar um ácido com uma base pode produzir calor e piorar a lesão. Por isso, a informação do produto e a lavagem orientada são essenciais.
 
 Para atuar com exatidão, o socorrista ocupacional precisa compreender o comportamento biológico dos agentes químicos:
 
@@ -252,6 +257,9 @@ A gestão de sinistros químicos fundamenta-se na organização espacial rígida
 
 ## 7. ERROS FREQUENTES E CONDUTAS PROIBIDAS NO AMBIENTE DE TRABALHO
 
+> [!CAUTION]
+> **Erro que pode prejudicar a vítima:** Não entre em nuvem química sem proteção especializada. Não provoque vômito, não dê leite e não misture produtos para neutralizar a pele. Em exposição ocular, inicie irrigação abundante quando houver segurança e siga o serviço de urgência.
+
 1. **Apostar na "Neutralização Caseira":** Aplicar vinagre sobre soda cáustica ou pasta de bicarbonato sobre ácido. A reação libera calor instantâneo extremo e agrava a queimadura para espessura total.
 2. **Resgate Impulsivo Desprotegido:** Adentrar locais com gases ou vapores sem proteção respiratória autônoma. O socorrista perde os sentidos em segundos e perece ao lado da vítima.
 3. **Interrupção Prematura da Irrigação:** Lavar por 1 ou 2 minutos para correr ao hospital. O atraso durante o transporte permite que o produto continue destruindo o tecido.
@@ -262,6 +270,9 @@ A gestão de sinistros químicos fundamenta-se na organização espacial rígida
 ---
 
 ## 8. ESTUDO DE CASO PRÁTICO AMBIENTADO NA INDÚSTRIA
+
+> [!TIP]
+> **Decisão no caso prático:** Durante limpeza, um líquido corrosivo atinge o olho de uma funcionária. A equipe identifica o produto na embalagem, leva-a à estação de lavagem segura, inicia irrigação e aciona o serviço de emergência.
 
 ### O Incidente: Ruptura de Mangote em Linha de Galvanoplastia
 Em uma metalúrgica de autopeças, no setor de tratamento químico de superfícies, o operador Marcos (38 anos) operava uma linha pressurizada com solução aquosa de **Ácido Clorídrico (HCl a 33%)**. Uma conexão flexível rompeu a 4 bar, projetando a solução ácida contra seu tórax, pescoço e olho esquerdo. Marcos levou as mãos aos olhos aos gritos de dor intensa.

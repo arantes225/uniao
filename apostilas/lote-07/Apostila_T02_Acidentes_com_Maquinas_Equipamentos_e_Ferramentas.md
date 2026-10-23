@@ -94,6 +94,8 @@ Ao concluir o estudo detalhado deste módulo técnico, o socorrista industrial, 
 
 ## SEÇÃO 3 — INTRODUÇÃO E A SEVERIDADE CINEMÁTICA DO TRAUMA MECÂNICO INDUSTRIAL
 
+**LEITURA GUIADA — COMECE AQUI:** Um acidente com máquina pode envolver ferida grave, amputação ou pessoa presa entre peças. A urgência não autoriza colocar as mãos em equipamento ainda energizado. Primeiro interrompa o perigo com ajuda autorizada.
+
 As plantas fabris, canteiros de obras da construção civil, oficinas metalúrgicas e centros logísticos utilizam diariamente máquinas de altíssima potência mecânica: prensas hidráulicas e excêntricas que exercem pressões de dezenas a centenas de toneladas, tornos mecânicos com eixos girando a milhares de rotações por minuto, serras circulares industriais, laminadoras e pontes rolantes de grande porte [1, 7].
 
 Diferente dos acidentes domésticos convencionais, **a transferência de energia cinética em um acidente com maquinário industrial é devastadora para os tecidos humanos**. O osso humano não apenas quebra, mas sofre cominuição (estilhaçamento em dezenas de fragmentos); os vasos sanguíneos não sofrem cortes limpos, mas sim avulsão e esgarçamento de suas túnicas elásticas, e a musculatura é submetida a forças de esmagamento contínuo [2, 3].
@@ -103,6 +105,9 @@ A Norma Regulamentadora nº 12 (NR-12) do MTE estabelece parâmetros técnicos r
 ---
 
 ## SEÇÃO 4 — FISIOPATOLOGIA DO ESMAGAMENTO, SÍNDROME DE ESMAGAMENTO E ISQUEMIA
+
+> [!NOTE]
+> **Por que isso acontece?** Máquinas podem comprimir e cortar tecidos em poucos instantes. Um membro preso pode sofrer lesão importante de músculos, nervos e vasos. A retirada inadequada pode causar mais trauma, além do risco de um novo movimento do equipamento.
 
 Para salvar o operário preso em maquinário, o socorrista deve dominar a complexa bioquímica celular do esmagamento muscular prolongado [3, 4]:
 
@@ -255,6 +260,9 @@ O socorro em acidentes com maquinário segue o rigoroso fluxo de comando de cena
 
 ## SEÇÃO 7 — ERROS CRÍTICOS E PRÁTICAS PROIBIDAS NO RESGATE COM MÁQUINAS
 
+> [!CAUTION]
+> **Erro que pode prejudicar a vítima:** Não puxe membro preso nem tente desmontar máquina sem equipe habilitada. Em amputação, não coloque a parte amputada diretamente no gelo. Em sangramento grave acessível e cena segura, faça pressão direta.
+
 1. **Tentar retirar o trabalhador sem desenergizar e bloquear a máquina:** É a causa número um de morte de socorristas industriais. O sistema hidráulico desce subitamente ou um colega desavisado aperta o botão de rearme, esmagando quem está tentando ajudar [1, 7].
 2. **Reverter a máquina no modo reverso (marcha a ré) para soltar o membro:** Passar o membro prensado novamente entre cilindros girando ao contrário duplica o esmagamento tecidual e amputa o que ainda estava vascularizado. A máquina deve ser desmontada lateralmente ou ter seus cilindros calçados e expandidos com desencarcerador hidráulico [1, 2].
 3. **Puxar a vítima presa pela força física:** Tracionar o tronco de alguém com a mão presa em engrenagens lacera nervos, arranca músculos da inserção óssea e converte uma lesão reparável em amputação total [2, 3].
@@ -264,6 +272,9 @@ O socorro em acidentes com maquinário segue o rigoroso fluxo de comando de cena
 ---
 
 ## SEÇÃO 8 — ESTUDO DE CASO PRÁTICO CONTEXTUALIZADO (APRISIONAMENTO EM PRENSA HIDRÁULICA)
+
+> [!TIP]
+> **Decisão no caso prático:** Um trabalhador fica preso em roletes. Os colegas acionam parada de emergência e resgate, não tracionam o braço e só iniciam medidas básicas quando a cena e o acesso estão seguros.
 
 ### Cenário: Acidente em Linha de Estamparia Pesada
 Na Fábrica de Implementos Rodoviários Carretas União, às 10h15min, o operário Ademir, 34 anos, realizava a conformação a frio de perfis estruturais de aço em uma prensa dobradeira hidráulica de 120 toneladas. A máquina operava sem cortina de luz intertravada de segurança (infração à NR-12). Ao posicionar uma chapa com as mãos enluvadas, Ademir acionou acidentalmente o pedal elétrico no solo.

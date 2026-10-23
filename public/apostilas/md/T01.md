@@ -93,6 +93,8 @@ Ao concluir o estudo deste módulo inaugural de segurança corporativa, o gestor
 
 ## SEÇÃO 3 — INTRODUÇÃO E O PANORAMA DA SEGURANÇA E SAÚDE NO TRABALHO NO BRASIL
 
+**LEITURA GUIADA — COMECE AQUI:** No trabalho, o primeiro socorro só começa quando o perigo foi controlado. Uma máquina ligada, um vazamento ou um cabo energizado pode ferir também quem tenta ajudar. O plano da empresa deve dizer como isolar e acionar profissionais.
+
 O ambiente de trabalho moderno concentra uma gama complexa de processos físicos, mecânicos, químicos e elétricos indispensáveis à produção econômica, mas que carregam potencial destrutivo inerente sobre a integridade biológica do trabalhador. Segundo dados oficiais do Observatório de Segurança e Saúde no Trabalho (SmartLab / MPT / OIT), o Brasil registra anualmente **mais de 600.000 acidentes de trabalho notificados**, resultando em mais de 2.500 mortes e dezenas de milhares de incapacitações permanentes a cada ano [1, 2].
 
 A legislação brasileira, ancorada no Capítulo V da Consolidação das Leis do Trabalho (CLT) e nas Normas Regulamentadoras (NRs) do Ministério do Trabalho e Emprego (MTE), impõe às empresas um dever legal inegociável de tutela da integridade psicofísica de seus colaboradores. Contudo, a experiência prática nas indústrias demonstra que a conformidade puramente burocrática — voltada apenas a "cumprir papel para evitar multas de fiscalização" — é ineficaz para conter acidentes graves [2, 3].
@@ -102,6 +104,9 @@ A União Serviços Médicos fundamenta a Biblioteca de Primeiros Socorros em Emp
 ---
 
 ## SEÇÃO 4 — FISIOPATOLOGIA DAS LESÕES OCUPACIONAIS E A TEORIA DOS DESVIOS
+
+> [!NOTE]
+> **Por que isso acontece?** Os riscos ocupacionais variam: energia mecânica esmaga, produtos podem intoxicar e eletricidade pode causar arritmias. Equipamentos de proteção servem para riscos específicos e não tornam toda situação segura para o leigo.
 
 Para intervir com eficácia, a equipe de segurança corporativa deve compreender como acidentes graves são gerados na dinâmica do chão de fábrica [1, 2]:
 
@@ -279,6 +284,9 @@ O socorrista corporativo e a liderança empresarial respondem legalmente pelas s
 
 ## SEÇÃO 7 — ERROS FREQUENTES E VULNERABILIDADES DE CONFORMIDADE LEGAL NAS EMPRESAS
 
+> [!CAUTION]
+> **Erro que pode prejudicar a vítima:** Não tente retirar alguém de maquinário em movimento nem entre em área com gás ou fumaça. Acione parada de emergência se puder fazê-lo com segurança e peça resgate especializado.
+
 1. **Fornecer comprimidos de dor de cabeça a pedido do operário:** Prática disseminada em portarias e ambulatórios sem médico. Se o trabalhador for alérgico ou sofrer choque anafilático, o funcionário e o diretor da fábrica respondem criminalmente por lesão corporal ou homicídio culposo [4, 5].
 2. **Desativar sensores de segurança da NR-12 para agilizar produção:** Manter esteiras ou prensas operando com travas burladas configura crime de perigo para a vida de terceiros (Art. 132 do Código Penal) e dolo eventual em caso de amputação [1, 3].
 3. **Maleta de primeiros socorros trancada a chave na sala do gerente ausente:** Em uma laceração por disco ou prensa com sangue jorrando, perder 5 minutos procurando chaves significa a morte da vítima no chão da fábrica [1, 4].
@@ -288,6 +296,9 @@ O socorrista corporativo e a liderança empresarial respondem legalmente pelas s
 ---
 
 ## SEÇÃO 8 — ESTUDO DE CASO PRÁTICO CONTEXTUALIZADO (AUDITORIA DE RISCO APÓS QUASE-ACIDENTE)
+
+> [!TIP]
+> **Decisão no caso prático:** Um operador cai ao lado de uma prensa. Um colega ativa a parada de emergência sem entrar na zona de esmagamento, isola o local, chama 193/192 e só se aproxima após liberação de segurança.
 
 ### Cenário: Quase-Amputação em Linha de Estamparia Automotiva
 Na montadora MetalTech Componentes, durante o turno da tarde, a prensa excêntrica de 60 toneladas nº 04 operava na estampagem de suportes metálicos. O operador Rafael, 26 anos, notou que uma chapa havia ficado travada na matriz. Para não paralisar a linha e evitar bronca da chefia de produção, Rafael utilizou uma chave de fenda para cutucar a chapa sem desenergizar a máquina.

@@ -97,6 +97,8 @@ Ao concluir o treinamento prático e a avaliação simulada deste módulo, o ope
 
 ## SEÇÃO 3 — INTRODUÇÃO E A PEDAGOGIA DA SIMULAÇÃO REALÍSTICA SOB ESTRESSE
 
+**LEITURA GUIADA — COMECE AQUI:** Conhecer uma técnica não é o mesmo que conseguir executá-la. A prática de controle de sangramento deve usar simuladores e materiais adequados. A avaliação precisa observar segurança, ordem das ações e eficácia no modelo.
+
 A instrução teórica sobre anatomia vascular, fisiopatologia do choque e mecanismos de coagulação fornece o embasamento cognitivo indispensável para que o socorrista entenda o propósito biológico de suas ações. Contudo, a medicina de emergência e as ciências militares comprovaram que **o conhecimento puramente teórico não se traduz automaticamente em destreza psicomotora sob estresse de combate ou catástrofe** [1, 2].
 
 Quando confrontado com uma cena real de mutilação corporal com sangue quente jorrando em alta pressão, o sistema nervoso simpático do socorrista deflagra uma descarga maciça de adrenalina:
@@ -113,6 +115,9 @@ A habilidade de usar torniquete exige prática repetida em simuladores. Nunca ap
 *Figura 1 — Esquema técnico de aplicação circunferencial e ajuste do molinete do torniquete. Crédito: Baedr-9439. Licença: CC0. Fonte: Wikimedia Commons.*
 
 ## SEÇÃO 4 — PSICOFISIOLOGIA DO DESEMPENHO HUMANO EM AMBIENTES CRÍTICOS
+
+> [!NOTE]
+> **Por que isso acontece?** Situações de emergência aumentam a tensão e dificultam lembrar sequências complexas. Repetir tarefas curtas e receber correção do instrutor ajuda a consolidar a resposta. Cronômetro não substitui qualidade da técnica.
 
 Compreender o estresse agudo permite modular os treinamentos para atingir a zona de performance ótima [2, 5]:
 
@@ -257,6 +262,9 @@ O fechamento pedagógico do módulo segue o modelo internacional de Exame Clíni
 
 ## SEÇÃO 7 — FALHAS OPERACIONAIS FREQUENTES OBSERVADAS EM SIMULAÇÕES
 
+> [!CAUTION]
+> **Erro que pode prejudicar a vítima:** Não aplique torniquete apertado por tempo prolongado em colegas. Não provoque feridas nem use objetos cortantes em simulações. Para técnicas de packing, use exclusivamente simuladores próprios.
+
 1. **Paralisia por Sobrecarga Sensorial:** Alunos que dominam a técnica sentados na cadeira entram em colapso motor quando expostos a fumaça, gritos e pressão de tempo. A dessensibilização exige repetição do exercício sob estresse progressivo [2, 5].
 2. **Girar o Molinete sem Puxar o Velcro:** É a falha mecânica número um do planeta. O aluno coloca a fita frouxa e tenta compensar girando o molinete: a haste quebra ou o velcro enrola como um cordão fino sem ocluir a artéria [1, 3].
 3. **Abandonar o Dedo que Segura a Artéria no Wound Packing:** O aluno encontra o vaso no fundo, mas ao pegar a gaze com a mão livre, solta o ponto de pressão para rasgar o pacote com as duas mãos. O sangue volta a jorrar e a vítima "morre" no simulador [2, 4].
@@ -270,6 +278,9 @@ O fechamento pedagógico do módulo segue o modelo internacional de Exame Clíni
 ---
 
 ## SEÇÃO 8 — ESTUDO DE CASO PRÁTICO CONTEXTUALIZADO (SIMULADO INTEGRADO EM FÁBRICA)
+
+> [!TIP]
+> **Decisão no caso prático:** Em uma estação prática, o aluno vê sangramento artificial intenso, reconhece a necessidade de ajuda, aplica pressão direta e comunica o cenário. O instrutor avalia se ele manteve a pressão sem interrupções.
 
 ### Cenário: Exercício Simulado Geral em Planta Metalúrgica
 Na Metalúrgica Aço Forte, a Diretoria de Segurança do Trabalho realizou um simulado surpresa de grande escala às 14h30min de uma quinta-feira. Um estrondo cenográfico disparou uma fumaça densa na linha de prensas hidráulicas. Dois figurantes com maquiagem de efeitos especiais e simuladores corporais sangrantes estavam posicionados:
