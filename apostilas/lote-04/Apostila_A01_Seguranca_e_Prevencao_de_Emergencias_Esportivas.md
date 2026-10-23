@@ -93,6 +93,8 @@ Ao concluir o estudo deste módulo, o profissional de Educação Física e a ges
 
 ## SEÇÃO 3 — INTRODUÇÃO E A CULTURA DE SEGURANÇA EM AMBIENTES DE TREINAMENTO FÍSICO
 
+**LEITURA GUIADA — COMECE AQUI:** Uma academia é um ambiente de saúde, mas também reúne pesos, equipamentos móveis e pessoas fazendo esforço. Se alguém passa mal ou se machuca, o primeiro passo não é descobrir a doença: é interromper o risco, observar a pessoa e pedir ajuda. Aprenda a organizar essa resposta antes de precisar usá-la.
+
 O setor de condicionamento físico, academias e centros de treinamento desportivo passou por uma expansão maciça nos últimos anos. Populações de todas as faixas etárias — desde adolescentes buscando hipertrofia até idosos portadores de hipertensão, aterosclerose coronariana e osteoporose — frequentam diariamente esses recintos. Concomitantemente, popularizaram-se modalidades de altíssima intensidade metabólica, como treinos intervalados de alta intensidade (HIIT) e crossfit, associados ao levantamento de cargas submáximas [1, 2].
 
 Esse ecossistema gera uma combinação singular de riscos:
@@ -104,6 +106,9 @@ Historicamente, muitas academias encaram a segurança de forma reativa: adotam m
 ---
 
 ## SEÇÃO 4 — FISIOLOGIA DO EXERCÍCIO EXTREMO E DINÂMICA DE RISCO FÍSICO
+
+> [!NOTE]
+> **Por que isso acontece?** Durante o exercício, o coração bate mais rápido, a respiração acelera e a temperatura sobe. Essas mudanças costumam ser normais. Dor no peito, confusão, queda inesperada e falta de ar intensa não devem ser atribuídas automaticamente ao cansaço.
 
 Para intervir preventivamente antes do colapso, o educador físico precisa dominar as respostas fisiológicas agudas do organismo sob esforço e os pontos de ruptura metabólica [3, 10]:
 
@@ -288,6 +293,9 @@ O Plano de Ação de Emergência (EAP - *Emergency Action Plan*) em academias de
 
 ## SEÇÃO 7 — ERROS FREQUENTES E CONDUTAS PERIGOSAS EM ACADEMIAS
 
+> [!CAUTION]
+> **Erro que pode prejudicar a vítima:** Uma pessoa que caiu perto de um aparelho pode ser atingida por pesos ou peças em movimento. Garanta a segurança do local antes do contato. Se ela não responde e não respira normalmente, a prioridade é RCP e DEA, não investigar o motivo do desmaio.
+
 
 ![Figura 3 — Mochila padronizada de Atendimento Pré-Hospitalar (APH) organizada por compartimentos.](../imagens/EMS-medic-backpack.png)
 *Figura 3 — Mochila padronizada de Atendimento Pré-Hospitalar (APH) organizada por compartimentos. Crédito: Baedr-9439. Licença: CC0. Fonte: Wikimedia Commons.*
@@ -301,6 +309,9 @@ O Plano de Ação de Emergência (EAP - *Emergency Action Plan*) em academias de
 ---
 
 ## SEÇÃO 8 — ESTUDO DE CASO PRÁTICO CONTEXTUALIZADO (COLAPSO COM SOBRECARGA MECÂNICA)
+
+> [!TIP]
+> **Decisão no caso prático:** Um aluno cai durante um exercício. Você primeiro afasta os riscos e verifica resposta e respiração. Se ele estiver inconsciente e sem respiração normal, peça 192, comece RCP e solicite o DEA. Outra pessoa libera a entrada da equipe.
 
 ### Cenário: Mal Súbito na Área de Musculação
 Às 18h30min, na Academia Iron Fitness, o aluno Rodrigo, 42 anos, executava sua quarta série pesada de agachamento livre com 140 kg na barra. Ao travar a barra no cavalete, Rodrigo coloca a mão sobre o peito com expressão de sofrimento extremo, dá dois passos cambaleantes para trás e desaba de bruços no piso emborrachado, ficando totalmente imóvel.

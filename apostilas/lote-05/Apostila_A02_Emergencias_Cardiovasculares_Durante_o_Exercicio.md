@@ -94,6 +94,8 @@ Ao concluir o estudo deste módulo, o profissional de Educação Física e a equ
 
 ## SEÇÃO 3 — INTRODUÇÃO E EPIDEMIOLOGIA DA MORTE SÚBITA NO ESPORTE
 
+**LEITURA GUIADA — COMECE AQUI:** Uma parada cardíaca pode parecer apenas um desmaio. A diferença que importa ao leigo é observar se a pessoa responde e respira normalmente. Se não responde e não respira normalmente, comece a ressuscitação enquanto alguém chama o socorro.
+
 A prática regular de atividade física é um dos pilares mais sólidos para a saúde metabólica e prevenção de eventos cardiovasculares crônicos. paradoxalmente, o período transitório durante o qual o indivíduo realiza esforço físico vigoroso representa uma **janela de risco relativo aumentado (de 2 a 5 vezes maior)** para a ocorrência de parada cardíaca súbita e infarto agudo do miocárdio [1, 2].
 
 Epidemiologicamente, a morte súbita relacionada ao exercício divide-se em duas populações distintas [2, 3]:
@@ -105,6 +107,9 @@ A imensa maioria desses colapsos ocorre sob ritmo chocável: **Fibrilação Vent
 ---
 
 ## SEÇÃO 4 — FISIOPATOLOGIA CARDIOVASCULAR DO EXERCÍCIO E MECANISMOS DA PCR ESPORTIVA
+
+> [!NOTE]
+> **Por que isso acontece?** O coração leva sangue e oxigênio ao cérebro. Quando ele deixa de bombear de modo eficaz, o cérebro rapidamente perde esse suprimento. As compressões ajudam a manter alguma circulação; o DEA identifica ritmos que podem precisar de choque.
 
 Para agir preventivamente, o educador físico precisa compreender as demandas mecânicas e metabólicas impostas ao sistema cardiovascular durante diferentes modalidades de treino [1, 4]:
 
@@ -322,6 +327,9 @@ A competência técnica sob estresse só se consolida mediante treinamentos real
 
 ## SEÇÃO 7 — ERROS CRÍTICOS E MITOS NO ATENDIMENTO A EVENTOS CARDÍACOS NO SALÃO
 
+> [!CAUTION]
+> **Erro que pode prejudicar a vítima:** Suspiros espaçados, boca abrindo e ruídos respiratórios ocasionais podem ser gasping. Isso não equivale à respiração normal. Não espere encontrar pulso: para o leigo, inconsciência e ausência de respiração normal indicam início imediato de RCP.
+
 1. **Achar que o atleta jovem não tem problema cardíaco:** A juventude não confere imunidade à morte súbita. Miocardiopatias congênitas matam indivíduos de 18 a 30 anos com físico escultural. Colapso sem respiração é PCR sempre [1, 2].
 2. **Confundir gasping com retorno espontâneo:** Interromper a massagem cardíaca porque a vítima "suspirou fundo ou abriu a boca" é uma das maiores causas de morte evitável no APH leigo [5, 6].
 3. **Tentar aplicar respiração boca a boca sem barreira e atrasar as compressões:** Para o socorrista leigo em adultos na academia, as diretrizes preconizam **RCP com ênfase nas mãos (Hands-Only CPR)**: compressões contínuas e ininterruptas até a chegada do DEA ou do resgate [5].
@@ -331,6 +339,9 @@ A competência técnica sob estresse só se consolida mediante treinamentos real
 ---
 
 ## SEÇÃO 8 — ESTUDO DE CASO PRÁTICO CONTEXTUALIZADO (COLAPSO NO TREINO INTERVALADO)
+
+> [!TIP]
+> **Decisão no caso prático:** Durante a corrida na esteira, um adulto cai e apresenta apenas suspiros irregulares. O instrutor desliga o aparelho, verifica segurança e resposta, aciona 192 em viva-voz e inicia compressões. Um colega traz o DEA sem interromper o atendimento.
 
 ### Cenário: Colapso Súbito na Pista de Spinning
 Durante a aula das 19h00 de ciclismo indoor (spinning) na Academia Corpo & Movimento, o aluno Roberto, 46 anos, executava uma subida simulada de alta resistência com frequência cardíaca elevada. No meio do tiro, Roberto solta o guidom da bicicleta estática, desmaia lateralmente e colide contra o piso de madeira da sala, ficando desacordado.

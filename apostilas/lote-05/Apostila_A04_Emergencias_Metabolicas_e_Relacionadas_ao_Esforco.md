@@ -94,6 +94,8 @@ Ao concluir o estudo deste módulo, o profissional de Educação Física e a ges
 
 ## SEÇÃO 3 — INTRODUÇÃO E RELEVÂNCIA DOS DESAFIOS HOMEOSTÁTICOS NO ESPORTE
 
+**LEITURA GUIADA — COMECE AQUI:** Durante o exercício, duas emergências podem começar com fraqueza e confusão: queda da glicose e doença causada por calor. Não tente adivinhar uma delas só pela aparência. Observe a consciência, interrompa o esforço e escolha uma medida que não coloque a pessoa em risco.
+
 Durante o exercício físico de média e alta intensidade, a taxa metabólica basal do organismo humano pode aumentar de 15 a 20 vezes acima dos valores de repouso. Uma consequência termodinâmica inevitável dessa atividade muscular é que **mais de 75% a 80% de toda a energia química gasta pelas células musculares é liberada na forma de calor puro**, e apenas 20% a 25% é convertida em trabalho mecânico útil [1, 10].
 
 Em climas tropicais como o brasileiro, associados a academias com ventilação deficiente ou boxes de crossfit com coberturas metálicas sem isolamento térmico, o organismo humano atinge rapidamente a sua capacidade máxima de dissipação de calor. Concomitantemente, a busca por resultados estéticos imediatos tem impulsionado a adoção de práticas perigosas entre os frequentadores de academias: treinos em jejum prolongado sem periodização adequada, uso inadvertido de estimulantes termogênicos de ação adrenérgica (cafeína em megadoses, efedrina, pré-treinos importados ilegais) e restrição deliberada de hidratação para "secar o abdômen" [1, 4].
@@ -103,6 +105,9 @@ Essa confluência de fatores gera descompensações metabólicas agudas gravíss
 ---
 
 ## SEÇÃO 4 — FISIOLOGIA DA TERMORREGULAÇÃO E EQUILÍBRIO HIDROELETROLÍTICO NO EXERCÍCIO
+
+> [!NOTE]
+> **Por que isso acontece?** A glicose é combustível importante para o cérebro. O calor produzido pelos músculos precisa ser eliminado pela pele e pelo suor. Quando falta glicose ou o corpo perde a capacidade de controlar a temperatura, podem surgir confusão, convulsão e colapso.
 
 Para prevenir e tratar emergências térmicas, é mandatório compreender a física da transferência de calor corporal [1, 2, 10]:
 
@@ -292,6 +297,9 @@ O profissional de educação física deve saber reconhecer o momento exato em qu
 
 ## SEÇÃO 7 — ERROS FREQUENTES E PRÁTICAS PERIGOSAS NO TREINAMENTO FÍSICO
 
+> [!CAUTION]
+> **Erro que pode prejudicar a vítima:** Nunca ofereça água, açúcar ou comida a alguém inconsciente ou incapaz de engolir. Em suspeita de intermação com alteração mental, inicie resfriamento e ligue 192 sem esperar por um termômetro.
+
 1. **Aguardar a ambulância chegar para começar a resfriar o paciente com intermação:** A mortalidade da intermação está diretamente ligada à duração da temperatura corporal acima de 40 ºC. Cada 10 minutos de atraso no resfriamento multiplicam a necrose cerebral e hepática [2, 3].
 2. **Forçar grandes volumes de água pura em atleta com delírio e dor de cabeça:** Se a causa for hiponatremia dilucional, inundar o organismo com água sem eletrólitos acelera o inchaço cerebral e desencadeia parada respiratória [1, 8].
 3. **Prescrever anti-inflamatórios para dores musculares intensas pós-treino suspeitas de rabdomiólise:** Medicamentos anti-inflamatórios (ibuprofeno, diclofenaco, cetoprofeno) inibem as prostaglandinas renais, reduzindo o fluxo sanguíneo nos rins. Administrar AINEs em paciente com rabdomiólise precipita insuficiência renal aguda terminal [4, 5].
@@ -301,6 +309,9 @@ O profissional de educação física deve saber reconhecer o momento exato em qu
 ---
 
 ## SEÇÃO 8 — ESTUDO DE CASO PRÁTICO CONTEXTUALIZADO (COLAPSO POR INTERMAÇÃO EM BOX)
+
+> [!TIP]
+> **Decisão no caso prático:** Em uma aula ao ar livre, um atleta fica confuso e cambaleia num dia muito quente. A equipe interrompe o esforço, leva-o para área segura, aciona 192 e começa a resfriar a pele enquanto acompanha sua respiração.
 
 ### Cenário: Treino Extenuante em Dia de Calor Extremo
 Em uma tarde de verão com temperatura de 36 ºC e umidade relativa de 80% no Box Cross Treino Litoral (galpão fechado com telhado de zinco), o aluno Gustavo, 31 anos, iniciou um treino no estilo "Murph" (corrida de 1,6 km, 100 barras, 200 flexões, 300 agachamentos e mais 1,6 km de corrida) utilizando um colete de peso de 10 kg. Gustavo estava com poucas horas de sono e havia consumido cápsulas de termogênico com alta concentração de cafeína antes da aula.

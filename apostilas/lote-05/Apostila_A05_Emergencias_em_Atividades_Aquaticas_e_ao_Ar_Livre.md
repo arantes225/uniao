@@ -94,6 +94,8 @@ Ao concluir o estudo deste módulo, o instrutor aquático e o treinador ao ar li
 
 ## SEÇÃO 3 — INTRODUÇÃO E A SINGULARIDADE DO MEIO AQUÁTICO E NATURAL
 
+**LEITURA GUIADA — COMECE AQUI:** No afogamento, a primeira regra é evitar uma segunda vítima. Pessoas em perigo na água nem sempre conseguem pedir socorro. Quem está em terra deve buscar alcance e flutuação antes de considerar qualquer entrada na água.
+
 As atividades esportivas praticadas em meios líquidos (natação, hidroginástica, polo aquático) e em ambientes abertos ao ar livre (corridas de rua, ultramaratonas, trilhas ecológicas e montanhismo) oferecem benefícios psicomotores incomparáveis, mas impõem desafios de segurança completamente distintos dos ambientes fechados de uma academia de musculação [1, 2].
 
 No ambiente aquático, a densidade do meio e a barreira líquida exigem que qualquer intervenção seja precedida de retirada segura da vítima para a borda seca antes que o suporte de vida convencional possa ser iniciado. Dados da Sociedade Brasileira de Salvamento Aquático (SOBRASA) revelam que o afogamento é responsável por mais de 5.700 mortes anuais no Brasil, sendo a segunda causa de morte acidental em crianças de 1 a 4 anos e a terceira entre jovens de 15 a 19 anos [2, 3].
@@ -107,6 +109,9 @@ Nas atividades ao ar livre e em trilhas ecológicas, o fator complicador crític
 ---
 
 ## SEÇÃO 4 — FISIOPATOLOGIA DO AFOGAMENTO E DA EXPOSIÇÃO TÉRMICA AMBIENTAL
+
+> [!NOTE]
+> **Por que isso acontece?** Quando a água impede a entrada de ar nos pulmões, o organismo sofre falta de oxigênio. Por isso, as ventilações têm papel especialmente importante na ressuscitação após afogamento. O resgate só pode preceder a RCP quando pode ser feito sem colocar o socorrista em risco.
 
 A fisiopatologia das emergências em meios naturais exige compreensão profunda dos impactos da água e do clima no corpo humano [1, 2, 9]:
 
@@ -256,6 +261,9 @@ A SOBRASA e a literatura médica mundial adotam a **Classificação de Afogament
 
 ## SEÇÃO 7 — ERROS FREQUENTES E MITOS NO RESGATE AQUÁTICO E EM TRILHAS
 
+> [!CAUTION]
+> **Erro que pode prejudicar a vítima:** Não entre em piscina profunda, rio ou mar para salvar alguém se você não tem preparo e condições seguras. Lance um objeto flutuante, use vara ou corda e acione 193. Não tente tirar água dos pulmões pressionando a barriga.
+
 
 ![Figura 4 — Posicionamento para compressões torácicas no adulto.](../imagens/Cardiopulmonary_Resuscitation_Adult.jpg)
 *Figura 4 — Posicionamento para compressões torácicas no adulto. Crédito: Illinois Waterway Visitor Center, US Army Corps of Engineers. Licença: Domínio público. Fonte: Wikimedia Commons.*
@@ -269,6 +277,9 @@ A SOBRASA e a literatura médica mundial adotam a **Classificação de Afogament
 ---
 
 ## SEÇÃO 8 — ESTUDO DE CASO PRÁTICO CONTEXTUALIZADO (AFOGAMENTO EM PISCINA TÉRMICA)
+
+> [!TIP]
+> **Decisão no caso prático:** Uma criança afunda numa piscina. Um responsável avisa o salva-vidas e lança apoio flutuante. Após retirada segura, verifica-se a respiração. Se a criança não responder e não respirar normalmente, iniciam-se RCP e ventilações conforme treinamento, com o 192 acionado.
 
 ### Cenário: Submersão Silenciosa em Aula de Hidroginástica
 Na Academia Aquática Ondas, durante uma aula de hidroginástica às 10h da manhã em piscina semiolímpica aquecida (profundidade de 1,50 m), a aluna Dona Teresa, 68 anos, sofre um episódio de síncope súbita na água e submerge sem emitir nenhum ruído. Cerca de 40 segundos depois, o professor Marcos nota um vulto estático no fundo da raia 3.
