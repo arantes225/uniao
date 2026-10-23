@@ -1,0 +1,235 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Personagens União — academia</title>
+  <style>
+    :root {
+      color-scheme: dark;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: #07131f;
+      color: #edf7ff;
+    }
+    * { box-sizing: border-box; }
+    body {
+      min-height: 100vh;
+      margin: 0;
+      padding: clamp(14px, 2.5vw, 30px);
+      background:
+        radial-gradient(circle at 12% 0%, #1c5272 0, transparent 34%),
+        linear-gradient(145deg, #07131f, #102b3e 58%, #07131f);
+    }
+    .app { width: min(1220px, 100%); margin: 0 auto; }
+    header { display: flex; gap: 18px; align-items: end; justify-content: space-between; margin-bottom: 16px; }
+    h1 { margin: 0; font-size: clamp(23px, 4vw, 38px); }
+    .status { color: #a9c9dc; font-size: 14px; }
+    .toolbar, .characters { display: flex; flex-wrap: wrap; gap: 8px; }
+    .characters { margin-bottom: 14px; }
+    button, select, input { font: inherit; }
+    button {
+      border: 1px solid #6b9bb8;
+      border-radius: 10px;
+      background: #12364e;
+      color: #edf7ff;
+      padding: 9px 12px;
+      cursor: pointer;
+    }
+    button:hover, button:focus-visible { background: #205270; outline: none; }
+    button[aria-pressed="true"] { border-color: #e8f7ff; background: #e8f7ff; color: #0a2639; }
+    .stage {
+      overflow: hidden;
+      border: 3px solid #b7d8e9;
+      border-radius: 18px;
+      background: #cedce2;
+      box-shadow: 0 18px 44px #0008;
+    }
+    canvas { display: block; width: 100%; aspect-ratio: 1672 / 941; object-fit: cover; }
+    .controls {
+      display: grid;
+      grid-template-columns: minmax(220px, 1fr) auto;
+      gap: 14px;
+      align-items: center;
+      margin-top: 14px;
+      padding: 14px;
+      border: 1px solid #315a71;
+      border-radius: 14px;
+      background: #0a2030cc;
+    }
+    .breathing { display: grid; grid-template-columns: auto minmax(150px, 1fr) auto; gap: 10px; align-items: center; }
+    .breathing output { min-width: 72px; text-align: right; color: #bfe9ff; }
+    .toolbar { justify-content: end; }
+    .error { margin-top: 12px; padding: 10px 12px; border-radius: 10px; background: #722c35; }
+    @media (max-width: 760px) {
+      header, .controls { display: block; }
+      .status { margin-top: 6px; }
+      .toolbar { justify-content: start; margin-top: 12px; }
+      .characters { flex-wrap: nowrap; overflow-x: auto; padding-bottom: 4px; }
+      .characters button { white-space: nowrap; }
+    }
+  </style>
+</head>
+<body>
+  <main class="app">
+    <header>
+      <div>
+        <h1>Personagens União — academia</h1>
+        <div class="status" id="status" aria-live="polite">Carregando movimentos…</div>
+      </div>
+    </header>
+
+    <nav class="characters" id="characters" aria-label="Escolher personagem e posição"></nav>
+
+    <section class="stage" aria-label="Prévia do paciente animado">
+      <canvas id="patient" role="img" aria-label="Paciente com piscada e respiração"></canvas>
+    </section>
+
+    <section class="controls" aria-label="Controles da animação">
+      <label class="breathing" for="rr">
+        <span>Respiração</span>
+        <input id="rr" type="range" min="0" max="32" value="17">
+        <output id="rr-value">17 irpm</output>
+      </label>
+      <div class="toolbar">
+        <button type="button" id="blink">Piscar agora</button>
+        <button type="button" id="closed" aria-pressed="false">Manter olhos fechados</button>
+        <button type="button" id="pause" aria-pressed="false">Pausar</button>
+      </div>
+    </section>
+    <div class="error" id="error" hidden></div>
+  </main>
+
+  <script src="academia-motion.js?v=20261022-breath-lids4"></script>
+  <script>
+    const CHARACTERS = [
+      {
+        id: 'homem-branco-sentado', name: 'Homem — sentado',
+        file: 'academia-homem-branco-sentado.png', closedFile: 'academia-homem-branco-sentado-fechado.png',
+        chest: [820, 455, 195, 110], refinedLids: true,
+        eyes: [[792,168,27,11,0],[865,171,26,11,.04]],
+        lids: [[[1,-3,-2],[2,5,0],[4,7,3]],[[-2,-3,2],[0,5,3],[4,7,5]]]
+      },
+      {
+        id: 'homem-branco-deitado', name: 'Homem — deitado',
+        file: 'academia-homem-branco-deitado.png', closedFile: 'academia-homem-branco-deitado-fechado.png',
+        chest: [820, 675, 230, 88],
+        eyes: [[901,311,27,12,.60],[995,377,27,12,.60]],
+        lids: [[[1,-5,-3],[2,1,1],[3,6,2]],[[0,-6,1],[1,2,3],[1,5,4]]]
+      },
+      {
+        id: 'mulher-negra-sentada', name: 'Mulher — sentada',
+        file: 'academia-mulher-negra-sentada.png', closedFile: 'academia-mulher-negra-sentada-fechado.png',
+        chest: [820, 485, 190, 82],
+        eyes: [[774,178,25,11,0],[872,178,25,11,0]],
+        lids: [[[5,-1,2],[6,6,3],[8,7,3]],[[3,-1,4],[4,6,5],[4,8,8]]]
+      },
+      {
+        id: 'mulher-negra-deitada', name: 'Mulher — deitada',
+        file: 'academia-mulher-negra-deitada.png', closedFile: 'academia-mulher-negra-deitada-fechado.png',
+        chest: [820, 695, 225, 115], refinedLids: true,
+        eyes: [[750,318,34,13,-.13],[880,318,34,13,.13]],
+        lids: [[[1,-4,0],[3,2,2],[3,2,0]],[[0,-5,2],[2,2,3],[0,1,2]]]
+      },
+      {
+        id: 'idoso-negro-sentado', name: 'Idoso — sentado',
+        file: 'academia-idoso-negro-sentado.png', closedFile: 'academia-idoso-negro-sentado-fechado.png',
+        chest: [820, 455, 190, 80],
+        eyes: [[760,154,24,10,.10],[842,168,24,10,.10]],
+        lids: [[[-4,-8,0],[-2,0,2],[-2,4,1]],[[-1,-3,4],[1,5,5],[1,10,10]]]
+      },
+      {
+        id: 'idoso-negro-deitado', name: 'Idoso — deitado',
+        file: 'academia-idoso-negro-deitado.png', closedFile: 'academia-idoso-negro-deitado-fechado.png',
+        chest: [900, 675, 235, 88],
+        eyes: [[630,345,27,12,-.61],[735,272,27,12,-.61]],
+        lids: [[[4,-5,-2],[5,2,0],[6,8,2]],[[0,-5,3],[1,2,4],[3,9,8]]]
+      },
+      {
+        id: 'idosa-branca-sentada', name: 'Idosa — sentada',
+        file: 'academia-idosa-branca-sentada.png', closedFile: 'academia-idosa-branca-sentada-fechado.png',
+        chest: [820, 475, 190, 80],
+        eyes: [[790,154,26,11,0],[874,154,26,11,0]],
+        lids: [[[3,-4,-1],[4,2,0],[6,3,-2]],[[-1,-3,4],[0,4,5],[2,5,8]]]
+      },
+      {
+        id: 'idosa-branca-deitada', name: 'Idosa — deitada',
+        file: 'academia-idosa-branca-deitada.png', closedFile: 'academia-idosa-branca-deitada-fechado.png',
+        chest: [850, 665, 230, 88],
+        eyes: [[870,246,28,12,.20],[990,270,28,12,.20]],
+        lids: [[[5,-2,0],[7,7,2],[11,10,5]],[[3,0,7],[5,10,10],[5,12,11]]]
+      }
+    ];
+
+    const $ = id => document.getElementById(id);
+    const canvas = $('patient');
+    const characterNav = $('characters');
+    let selected = 0;
+    let patient;
+
+    function options() {
+      return {
+        assetRoot: './', closedAssetRoot: './', assetVersion: '20261022-5',
+        rr: Number($('rr').value), amplitude: 1,
+        eyes: $('closed').getAttribute('aria-pressed') === 'true' ? 'closed' : 'auto',
+        gaze: false,
+        paused: $('pause').getAttribute('aria-pressed') === 'true'
+      };
+    }
+
+    function updateStatus() {
+      const opts = options();
+      $('rr-value').textContent = `${opts.rr} irpm`;
+      $('status').textContent = opts.paused ? 'Movimentos pausados' : opts.rr === 0 ? 'Piscada ativa · respiração parada' : 'Piscada e respiração ativas';
+      patient?.set(opts);
+    }
+
+    function selectCharacter(index) {
+      selected = index;
+      patient?.destroy();
+      $('error').hidden = true;
+      const config = CHARACTERS[index];
+      canvas.setAttribute('aria-label', `${config.name} com piscada e respiração`);
+      patient = new AcademiaPatient(canvas, config, options());
+      [...characterNav.children].forEach((button, itemIndex) => button.setAttribute('aria-pressed', String(itemIndex === index)));
+      updateStatus();
+    }
+
+    CHARACTERS.forEach((character, index) => {
+      const button = document.createElement('button');
+      button.type = 'button';
+      button.textContent = character.name;
+      button.setAttribute('aria-pressed', String(index === 0));
+      button.addEventListener('click', () => selectCharacter(index));
+      characterNav.append(button);
+    });
+
+    $('rr').addEventListener('input', updateStatus);
+    $('blink').addEventListener('click', () => {
+      $('closed').setAttribute('aria-pressed', 'false');
+      $('closed').textContent = 'Manter olhos fechados';
+      updateStatus();
+      patient?.blink();
+    });
+    $('closed').addEventListener('click', event => {
+      const button = event.currentTarget;
+      button.setAttribute('aria-pressed', String(button.getAttribute('aria-pressed') !== 'true'));
+      button.textContent = button.getAttribute('aria-pressed') === 'true' ? 'Retomar piscadas' : 'Manter olhos fechados';
+      updateStatus();
+    });
+    $('pause').addEventListener('click', event => {
+      const button = event.currentTarget;
+      button.setAttribute('aria-pressed', String(button.getAttribute('aria-pressed') !== 'true'));
+      button.textContent = button.getAttribute('aria-pressed') === 'true' ? 'Continuar' : 'Pausar';
+      updateStatus();
+    });
+    canvas.addEventListener('patienterror', event => {
+      $('error').hidden = false;
+      $('error').textContent = `Não foi possível carregar ${event.detail}.`;
+    });
+
+    selectCharacter(0);
+  </script>
+</body>
+</html>
+
+

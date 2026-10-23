@@ -1,0 +1,516 @@
+[
+  {
+    "id": "homem-branco-sentado",
+    "name": "Homem — sentado",
+    "file": "academia-homem-branco-sentado.png",
+    "closedFile": "academia-homem-branco-sentado-fechado.png",
+    "chest": [
+      820,
+      455,
+      195,
+      110
+    ],
+    "refinedLids": true,
+    "eyes": [
+      [
+        792,
+        168,
+        27,
+        11,
+        0
+      ],
+      [
+        865,
+        171,
+        26,
+        11,
+        0.04
+      ]
+    ],
+    "lids": [
+      [
+        [
+          1,
+          -3,
+          -2
+        ],
+        [
+          2,
+          5,
+          0
+        ],
+        [
+          4,
+          7,
+          3
+        ]
+      ],
+      [
+        [
+          -2,
+          -3,
+          2
+        ],
+        [
+          0,
+          5,
+          3
+        ],
+        [
+          4,
+          7,
+          5
+        ]
+      ]
+    ]
+  },
+  {
+    "id": "homem-branco-deitado",
+    "name": "Homem — deitado",
+    "file": "academia-homem-branco-deitado.png",
+    "closedFile": "academia-homem-branco-deitado-fechado.png",
+    "chest": [
+      820,
+      675,
+      230,
+      88
+    ],
+    "eyes": [
+      [
+        901,
+        311,
+        27,
+        12,
+        0.6
+      ],
+      [
+        995,
+        377,
+        27,
+        12,
+        0.6
+      ]
+    ],
+    "lids": [
+      [
+        [
+          1,
+          -5,
+          -3
+        ],
+        [
+          2,
+          1,
+          1
+        ],
+        [
+          3,
+          6,
+          2
+        ]
+      ],
+      [
+        [
+          0,
+          -6,
+          1
+        ],
+        [
+          1,
+          2,
+          3
+        ],
+        [
+          1,
+          5,
+          4
+        ]
+      ]
+    ]
+  },
+  {
+    "id": "mulher-negra-sentada",
+    "name": "Mulher — sentada",
+    "file": "academia-mulher-negra-sentada.png",
+    "closedFile": "academia-mulher-negra-sentada-fechado.png",
+    "chest": [
+      820,
+      485,
+      190,
+      82
+    ],
+    "eyes": [
+      [
+        774,
+        178,
+        25,
+        11,
+        0
+      ],
+      [
+        872,
+        178,
+        25,
+        11,
+        0
+      ]
+    ],
+    "lids": [
+      [
+        [
+          5,
+          -1,
+          2
+        ],
+        [
+          6,
+          6,
+          3
+        ],
+        [
+          8,
+          7,
+          3
+        ]
+      ],
+      [
+        [
+          3,
+          -1,
+          4
+        ],
+        [
+          4,
+          6,
+          5
+        ],
+        [
+          4,
+          8,
+          8
+        ]
+      ]
+    ]
+  },
+  {
+    "id": "mulher-negra-deitada",
+    "name": "Mulher — deitada",
+    "file": "academia-mulher-negra-deitada.png",
+    "closedFile": "academia-mulher-negra-deitada-fechado.png",
+    "chest": [
+      820,
+      695,
+      225,
+      115
+    ],
+    "refinedLids": true,
+    "eyes": [
+      [
+        750,
+        318,
+        34,
+        13,
+        -0.13
+      ],
+      [
+        880,
+        318,
+        34,
+        13,
+        0.13
+      ]
+    ],
+    "lids": [
+      [
+        [
+          1,
+          -4,
+          0
+        ],
+        [
+          3,
+          2,
+          2
+        ],
+        [
+          3,
+          2,
+          0
+        ]
+      ],
+      [
+        [
+          0,
+          -5,
+          2
+        ],
+        [
+          2,
+          2,
+          3
+        ],
+        [
+          0,
+          1,
+          2
+        ]
+      ]
+    ]
+  },
+  {
+    "id": "idoso-negro-sentado",
+    "name": "Idoso — sentado",
+    "file": "academia-idoso-negro-sentado.png",
+    "closedFile": "academia-idoso-negro-sentado-fechado.png",
+    "chest": [
+      820,
+      455,
+      190,
+      80
+    ],
+    "eyes": [
+      [
+        760,
+        154,
+        24,
+        10,
+        0.1
+      ],
+      [
+        842,
+        168,
+        24,
+        10,
+        0.1
+      ]
+    ],
+    "lids": [
+      [
+        [
+          -4,
+          -8,
+          0
+        ],
+        [
+          -2,
+          0,
+          2
+        ],
+        [
+          -2,
+          4,
+          1
+        ]
+      ],
+      [
+        [
+          -1,
+          -3,
+          4
+        ],
+        [
+          1,
+          5,
+          5
+        ],
+        [
+          1,
+          10,
+          10
+        ]
+      ]
+    ]
+  },
+  {
+    "id": "idoso-negro-deitado",
+    "name": "Idoso — deitado",
+    "file": "academia-idoso-negro-deitado.png",
+    "closedFile": "academia-idoso-negro-deitado-fechado.png",
+    "chest": [
+      900,
+      675,
+      235,
+      88
+    ],
+    "eyes": [
+      [
+        630,
+        345,
+        27,
+        12,
+        -0.61
+      ],
+      [
+        735,
+        272,
+        27,
+        12,
+        -0.61
+      ]
+    ],
+    "lids": [
+      [
+        [
+          4,
+          -5,
+          -2
+        ],
+        [
+          5,
+          2,
+          0
+        ],
+        [
+          6,
+          8,
+          2
+        ]
+      ],
+      [
+        [
+          0,
+          -5,
+          3
+        ],
+        [
+          1,
+          2,
+          4
+        ],
+        [
+          3,
+          9,
+          8
+        ]
+      ]
+    ]
+  },
+  {
+    "id": "idosa-branca-sentada",
+    "name": "Idosa — sentada",
+    "file": "academia-idosa-branca-sentada.png",
+    "closedFile": "academia-idosa-branca-sentada-fechado.png",
+    "chest": [
+      820,
+      475,
+      190,
+      80
+    ],
+    "eyes": [
+      [
+        790,
+        154,
+        26,
+        11,
+        0
+      ],
+      [
+        874,
+        154,
+        26,
+        11,
+        0
+      ]
+    ],
+    "lids": [
+      [
+        [
+          3,
+          -4,
+          -1
+        ],
+        [
+          4,
+          2,
+          0
+        ],
+        [
+          6,
+          3,
+          -2
+        ]
+      ],
+      [
+        [
+          -1,
+          -3,
+          4
+        ],
+        [
+          0,
+          4,
+          5
+        ],
+        [
+          2,
+          5,
+          8
+        ]
+      ]
+    ]
+  },
+  {
+    "id": "idosa-branca-deitada",
+    "name": "Idosa — deitada",
+    "file": "academia-idosa-branca-deitada.png",
+    "closedFile": "academia-idosa-branca-deitada-fechado.png",
+    "chest": [
+      850,
+      665,
+      230,
+      88
+    ],
+    "eyes": [
+      [
+        870,
+        246,
+        28,
+        12,
+        0.2
+      ],
+      [
+        990,
+        270,
+        28,
+        12,
+        0.2
+      ]
+    ],
+    "lids": [
+      [
+        [
+          5,
+          -2,
+          0
+        ],
+        [
+          7,
+          7,
+          2
+        ],
+        [
+          11,
+          10,
+          5
+        ]
+      ],
+      [
+        [
+          3,
+          0,
+          7
+        ],
+        [
+          5,
+          10,
+          10
+        ],
+        [
+          5,
+          12,
+          11
+        ]
+      ]
+    ]
+  }
+]

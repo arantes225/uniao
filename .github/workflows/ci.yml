@@ -26,3 +26,6 @@ jobs:
 
       - name: Run TypeScript Check & Production Build
         run: npm run build
+
+      - name: Verify simulator catalog and approved characters
+        run: npm run test:simulator

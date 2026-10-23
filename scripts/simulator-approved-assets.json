@@ -1,0 +1,77 @@
+{
+  "originalCaseSha256": "fa7d11b08c1de1c1471ea4a75a33d980031a82d367e49819fb7465c25c6f9825",
+  "assets": [
+    {
+      "path": "public/simulador/personagens/academia-v20261022/academia-homem-branco-deitado-fechado.png",
+      "sha256": "59d698d7b943a1fd9fec64a4dbe5b242d6a42ad2c3be6922afe203fd270634f7"
+    },
+    {
+      "path": "public/simulador/personagens/academia-v20261022/academia-homem-branco-deitado.png",
+      "sha256": "a5b08ca7780c96dd0e9bab4c1d5b9f882263b059f446310a657f93cee6ec3bca"
+    },
+    {
+      "path": "public/simulador/personagens/academia-v20261022/academia-homem-branco-sentado-fechado.png",
+      "sha256": "e24ebf83e619aead37bf5d65c2b3de80a0ab6110bf2f82b47a3d7044b70c3c2b"
+    },
+    {
+      "path": "public/simulador/personagens/academia-v20261022/academia-homem-branco-sentado.png",
+      "sha256": "e099ae4b6276da41ce10ccc83e9b4a0a63585db6dd33238cc45e84d90e6cf581"
+    },
+    {
+      "path": "public/simulador/personagens/academia-v20261022/academia-idosa-branca-deitada-fechado.png",
+      "sha256": "3fd809bf3aed807ce68e28105a462216c6ef0d7ef625dab049548114677adf8f"
+    },
+    {
+      "path": "public/simulador/personagens/academia-v20261022/academia-idosa-branca-deitada.png",
+      "sha256": "458ccba6dc99c2ad536c9a36f5f7824f88548520bdbe4d9b32326541404f13f7"
+    },
+    {
+      "path": "public/simulador/personagens/academia-v20261022/academia-idosa-branca-sentada-fechado.png",
+      "sha256": "eeb78ec3b465b210413a4145188e319d200a54900b739bae7f793591a49294d5"
+    },
+    {
+      "path": "public/simulador/personagens/academia-v20261022/academia-idosa-branca-sentada.png",
+      "sha256": "93b3d393063d0d78bdebb431e1632941494b13b290d2d07c9961bc832b4cceb1"
+    },
+    {
+      "path": "public/simulador/personagens/academia-v20261022/academia-idoso-negro-deitado-fechado.png",
+      "sha256": "048376241dd5708c8fa0a2fcefdc8e133b3175268bbea41d35ca88caa50795ca"
+    },
+    {
+      "path": "public/simulador/personagens/academia-v20261022/academia-idoso-negro-deitado.png",
+      "sha256": "55ec87538fb1be3a5119bbb9a89198657c6b4abc24691c66a3142036e7d46bed"
+    },
+    {
+      "path": "public/simulador/personagens/academia-v20261022/academia-idoso-negro-sentado-fechado.png",
+      "sha256": "37f82ab59b697557258b5c6166cb4de4b6a5718c801a8499b6f7b08d96c0e825"
+    },
+    {
+      "path": "public/simulador/personagens/academia-v20261022/academia-idoso-negro-sentado.png",
+      "sha256": "e8c833956d879fbeb3895c02852a8e0636d75edcb1b184029fa010e7c39ea492"
+    },
+    {
+      "path": "public/simulador/personagens/academia-v20261022/academia-motion.js",
+      "sha256": "48e39f7e16f944f0579ee68e3f7f4b766028cbc921d35cd166944007025e678c"
+    },
+    {
+      "path": "public/simulador/personagens/academia-v20261022/academia-mulher-negra-deitada-fechado.png",
+      "sha256": "40628a144298ea1284322b256ada3c43917aa267df0afa908f7170d9ce6f1562"
+    },
+    {
+      "path": "public/simulador/personagens/academia-v20261022/academia-mulher-negra-deitada.png",
+      "sha256": "2a8243500aa8b63382e0d2a2c89e6de6c66c2cb456d441c82e29086e0586fbb8"
+    },
+    {
+      "path": "public/simulador/personagens/academia-v20261022/academia-mulher-negra-sentada-fechado.png",
+      "sha256": "6eee32546ccd2eba7218e5a42caa924b6bb344d17b06594b09783f8986265be2"
+    },
+    {
+      "path": "public/simulador/personagens/academia-v20261022/academia-mulher-negra-sentada.png",
+      "sha256": "26df24ba8766057d57011599472bb2b70508c6d7fa425ca9f85751f8e7e7f983"
+    },
+    {
+      "path": "public/simulador/personagens/academia-v20261022/uniao-academia-animados.html",
+      "sha256": "daad64c5199b141adc08e891539f0e6b94421061dc8743e64e4c3270a084b18e"
+    }
+  ]
+}
