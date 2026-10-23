@@ -96,9 +96,9 @@ Ao concluir o estudo deste módulo, o participante deverá ser capaz de:
 
 **LEITURA GUIADA — COMECE AQUI:** Uma ligação clara faz parte do salvamento. O atendente precisa localizar a emergência e saber se alguém está sem respirar ou sangrando muito. Não é necessário conhecer nomes de doenças: relate o que você vê.
 
-Na cadeia do socorro às urgências, a etapa que costuma acumular o maior número de minutos perdidos de forma evitável não é a manobra manual de primeiros socorros, mas a **comunicação defeituosa inicial**. Ligações confusas, endereços incompletos, pessoas gritando sem relatar se a vítima respira ou desligando o telefone antes das perguntas básicas do atendente provocam atrasos graves no envio da viatura adequada [1, 4].
+Uma ligação de emergência funciona melhor quando transmite fatos observáveis. O serviço precisa saber onde está a vítima, quantas pessoas precisam de ajuda e se há respiração normal ou sangramento grave. Informações claras permitem orientar as primeiras medidas e organizar o recurso necessário [1, 4].
 
-No modelo brasileiro de APH público, regulado pela Portaria GM/MS nº 2.048/2002, toda solicitação telefônica discada para o 192 é submetida a um processo de **Regulação Médica das Urgências** [2]. Não se trata de uma simples central de despacho de táxi. Do outro lado da linha, há um médico com autoridade sanitária para avaliar a gravidade do quadro e decidir qual recurso despachar: uma Unidade de Suporte Básico (USB), uma Unidade de Suporte Avançado (USA / UTI móvel) ou mesmo orientar condutas imediatas pelo telefone [2, 3].
+No Brasil, o SAMU 192 utiliza uma central de regulação das urgências. A equipe de atendimento recolhe informações e, conforme o funcionamento local, orienta medidas iniciais e define o tipo de resposta. Quem liga deve seguir as perguntas feitas pelo serviço, sem tentar antecipar um diagnóstico [2, 3].
 
 Portanto, o cidadão que sabe como acionar o serviço transforma-se no "braço avançado" do médico regulador no local do evento. A clareza com que você descreve os sinais corporais da vítima determina a velocidade e o nível técnico da equipe que será enviada para salvar aquela vida.
 

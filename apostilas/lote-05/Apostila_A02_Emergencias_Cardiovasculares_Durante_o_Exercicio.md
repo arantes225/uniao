@@ -96,7 +96,7 @@ Ao concluir o estudo deste módulo, o profissional de Educação Física e a equ
 
 **LEITURA GUIADA — COMECE AQUI:** Uma parada cardíaca pode parecer apenas um desmaio. A diferença que importa ao leigo é observar se a pessoa responde e respira normalmente. Se não responde e não respira normalmente, comece a ressuscitação enquanto alguém chama o socorro.
 
-A prática regular de atividade física é um dos pilares mais sólidos para a saúde metabólica e prevenção de eventos cardiovasculares crônicos. paradoxalmente, o período transitório durante o qual o indivíduo realiza esforço físico vigoroso representa uma **janela de risco relativo aumentado (de 2 a 5 vezes maior)** para a ocorrência de parada cardíaca súbita e infarto agudo do miocárdio [1, 2].
+A atividade física regular protege o coração e contribui para prevenir doenças cardiovasculares. Em pessoas com determinadas doenças, porém, um esforço intenso pode desencadear sintomas ou eventos agudos. Por isso, dor no peito, desmaio durante o exercício e falta de ar desproporcional exigem interrupção do treino e avaliação adequada [1, 2].
 
 Epidemiologicamente, a morte súbita relacionada ao exercício divide-se em duas populações distintas [2, 3]:
 - **Praticantes Jovens (< 35 anos):** Incidência de 1 para cada 50.000 a 80.000 atletas/ano. As etiologias dominantes são doenças genéticas e anomalias congênitas silenciosas, encabeçadas pela **Miocardiopatia Hipertrófica (MCH)** — responsável por até um terço dos casos —, origem anômala de artérias coronárias, displasia arritmogênica do ventrículo direito e canalopatias elétricas (Síndrome do QT Longo, Síndrome de Brugada).

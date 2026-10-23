@@ -97,7 +97,7 @@ Ao concluir o estudo deste módulo, o participante deverá ser capaz de:
 
 **LEITURA GUIADA — COMECE AQUI:** O engasgo grave acontece quando algo bloqueia a passagem de ar. Uma pessoa que tosse com força pode conseguir eliminar o objeto sozinha. Já quem não consegue falar, chorar ou respirar precisa de ajuda imediata, com técnica adequada à idade.
 
-A Obstrução de Vias Aéreas por Corpo Estranho (OVACE) constitui uma das causas mais comuns de parada cardiorrespiratória e óbito acidental evitável no ambiente extra-hospitalar. No Brasil, dados do Ministério da Saúde e do Sistema de Informações sobre Mortalidade (SIM) apontam que mais de 900 crianças morrem anualmente vítimas de sufocamento e engasgo acidental, sendo a terceira principal causa de morte por lesão não intencional em crianças menores de quatro anos [6].
+O engasgo grave ocorre quando um alimento ou objeto bloqueia a passagem de ar. Crianças pequenas têm risco especial porque exploram objetos com a boca e ainda estão aprendendo a mastigar. Adultos também podem se engasgar, especialmente quando têm dificuldade para engolir. O sinal decisivo é a incapacidade de tossir com força, falar ou respirar [1, 6].
 
 Em adultos e idosos, o engasgo grave ocorre comumente associado à ingestão rápida de grandes pedaços de carne pouco mastigados (o clássico "bife de churrasco"), frequentemente agravado pelo uso concomitante de álcool, próteses dentárias mal adaptadas que diminuem a sensibilidade palatina ou doenças neurológicas degenerativas prévias (como sequelas de AVC, Doença de Parkinson ou demências senis) [2, 5].
 

@@ -101,7 +101,7 @@ Ao concluir o estudo teórico e a prática deste módulo, o participante deverá
 
 **LEITURA GUIADA — COMECE AQUI:** RCP significa ajudar o sangue a circular quando o coração deixa de bombear de modo eficaz. Ela não substitui a ambulância e não garante que a pessoa sobreviva. Sua importância está em não perder os minutos anteriores à chegada da equipe.
 
-A Parada Cardiorrespiratória (PCR) no ambiente extra-hospitalar representa um dos maiores desafios de saúde pública global. No Brasil, dados da Sociedade Brasileira de Cardiologia (SBC) estimam a ocorrência de mais de 250.000 mortes súbitas anuais, das quais aproximadamente metade ocorre fora de ambiente hospitalar — em domicílios, locais de trabalho, vias públicas, escolas e academias [6].
+A parada cardiorrespiratória (PCR) pode ocorrer em casa, na rua, na escola ou no trabalho. Nessa situação, a pessoa perde a capacidade de manter circulação suficiente e deixa de respirar normalmente. O socorro imediato envolve reconhecer a parada, chamar o serviço de emergência, iniciar RCP e utilizar o DEA quando disponível. Não é necessário conhecer uma estimativa nacional exata de casos para decidir agir [1, 6].
 
 Na imensa maioria dos casos em adultos (mais de 75%), a parada cardíaca súbita decorre de uma arritmia letal ventricular originada por isquemia miocárdica aguda (infarto agudo do miocárdio). Os ritmos colapsantes predominantes no primeiro minuto são a **Fibrilação Ventricular (FV)** e a **Taquicardia Ventricular sem Pulso (TVSP)** [1, 7].
 
