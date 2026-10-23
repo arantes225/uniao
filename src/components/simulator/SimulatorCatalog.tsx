@@ -5,6 +5,7 @@ import { simulationFolders } from '../../data/simulator';
 import type { SimulationCase, SimulationEnvironment } from '../../data/simulator/types';
 import { ClinicalScenario } from './ClinicalScenario';
 import { CharacterGallery } from './CharacterGallery';
+import { SchoolPatientGallery } from './SchoolPatientGallery';
 const environmentIcons = { academia: Dumbbell, escola: School, empresa: Building2 };
 export const SimulatorCatalog = () => {
   const { theme } = useTheme();
@@ -44,6 +45,7 @@ export const SimulatorCatalog = () => {
         </div> : <p role="status" className={`mt-4 rounded-xl border border-dashed p-5 text-sm ${dark ? 'border-slate-700 text-slate-300' : 'border-slate-300 text-slate-600'}`}>Nenhum caso clínico disponível nesta pasta.</p>}
       </section>
       {environment === 'academia' && <CharacterGallery />}
+      {environment === 'escola' && <SchoolPatientGallery />}
     </div>
   </div>;
 };
