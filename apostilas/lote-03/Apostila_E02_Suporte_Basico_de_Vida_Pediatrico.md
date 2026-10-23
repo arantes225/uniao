@@ -190,8 +190,6 @@ O Desfibrilador Externo Automático pode e deve ser utilizado em crianças de qu
   - Cole **uma pá no meio do peito** e a **outra pá no meio das costas** (técnica do sanduíche). Nenhuma pá encostará na outra e o coração ficará no centro da corrente elétrica.
 
 
-![Figura 4 — Posicionamento para compressões torácicas no adulto.](../imagens/Cardiopulmonary_Resuscitation_Adult.jpg)
-*Figura 4 — Posicionamento para compressões torácicas no adulto. Crédito: Illinois Waterway Visitor Center, US Army Corps of Engineers. Licença: Domínio público. Fonte: Wikimedia Commons.*
 
 ### 5.6 Treinamento Prático, Simulações Escolares e Troca de Socorristas
 Em ambiente escolar e de creches, o cansaço ao realizar compressões com 2 dedos no lactente instala-se rapidamente nos tendões da mão. A cada **2 minutos de RCP (cerca de 5 ciclos 30:2 ou 10 ciclos 15:2)**, os socorristas devem trocar de função em menos de 5 segundos para garantir que a profundidade de 4 ou 5 cm não seja perdida [1, 3].
