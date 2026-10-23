@@ -1,7 +1,8 @@
 import { type CSSProperties, useState } from 'react';
 
 type Pose = 'sentada' | 'deitada';
-type PatientPose = { open: string; closed: string };
+type MotionRegion = { x: number; y: number; rx: number; ry: number };
+type PatientPose = { open: string; closed: string; chest: MotionRegion; eyes: MotionRegion };
 
 const schoolPatients = [
   {
@@ -11,12 +12,14 @@ const schoolPatients = [
     color: 'teal',
     poses: {
       sentada: {
-        open: '/simulador/personagens/escola-v20261022-realista/professora-sentada.png',
-        closed: '/simulador/personagens/escola-v20261022-realista/blink/professora-sentada-olhos-fechados.png'
+        open: '/simulador/personagens/escola-horizontal-v20261023/professora-sentada.png',
+        closed: '/simulador/personagens/escola-horizontal-v20261023/blink/professora-sentada-olhos-fechados.png',
+        chest: { x: 49, y: 46, rx: 13, ry: 15 }, eyes: { x: 50, y: 25, rx: 5, ry: 3 }
       },
       deitada: {
-        open: '/simulador/personagens/escola-v20261022-realista/professora-deitada.png',
-        closed: '/simulador/personagens/escola-v20261022-realista/blink/professora-deitada-olhos-fechados.png'
+        open: '/simulador/personagens/escola-horizontal-v20261023/professora-deitada.png',
+        closed: '/simulador/personagens/escola-horizontal-v20261023/blink/professora-deitada-olhos-fechados.png',
+        chest: { x: 47, y: 39, rx: 15, ry: 12 }, eyes: { x: 44, y: 21, rx: 5, ry: 3 }
       }
     }
   },
@@ -27,12 +30,14 @@ const schoolPatients = [
     color: 'amber',
     poses: {
       sentada: {
-        open: '/simulador/personagens/escola-v20261022-realista/zelador-sentado.png',
-        closed: '/simulador/personagens/escola-v20261022-realista/blink/zelador-sentado-olhos-fechados.png'
+        open: '/simulador/personagens/escola-horizontal-v20261023/zelador-sentado.png',
+        closed: '/simulador/personagens/escola-horizontal-v20261023/blink/zelador-sentado-olhos-fechados.png',
+        chest: { x: 49, y: 43, rx: 14, ry: 14 }, eyes: { x: 48, y: 25, rx: 5, ry: 3 }
       },
       deitada: {
-        open: '/simulador/personagens/escola-v20261022-realista/zelador-deitado.png',
-        closed: '/simulador/personagens/escola-v20261022-realista/blink/zelador-deitado-olhos-fechados.png'
+        open: '/simulador/personagens/escola-horizontal-v20261023/zelador-deitado.png',
+        closed: '/simulador/personagens/escola-horizontal-v20261023/blink/zelador-deitado-olhos-fechados.png',
+        chest: { x: 49, y: 41, rx: 15, ry: 13 }, eyes: { x: 46, y: 25, rx: 5, ry: 3 }
       }
     }
   },
@@ -43,12 +48,14 @@ const schoolPatients = [
     color: 'violet',
     poses: {
       sentada: {
-        open: '/simulador/personagens/escola-v20261022-realista/crianca-menina-sentada.png',
-        closed: '/simulador/personagens/escola-v20261022-realista/blink/crianca-menina-sentada-olhos-fechados.png'
+        open: '/simulador/personagens/escola-horizontal-v20261023/crianca-menina-sentada.png',
+        closed: '/simulador/personagens/escola-horizontal-v20261023/blink/crianca-menina-sentada-olhos-fechados.png',
+        chest: { x: 50, y: 48, rx: 11, ry: 13 }, eyes: { x: 50, y: 31, rx: 4.5, ry: 2.5 }
       },
       deitada: {
-        open: '/simulador/personagens/escola-v20261022-realista/crianca-menina-deitada.png',
-        closed: '/simulador/personagens/escola-v20261022-realista/blink/crianca-menina-deitada-olhos-fechados.png'
+        open: '/simulador/personagens/escola-horizontal-v20261023/crianca-menina-deitada.png',
+        closed: '/simulador/personagens/escola-horizontal-v20261023/blink/crianca-menina-deitada-olhos-fechados.png',
+        chest: { x: 50, y: 48, rx: 13, ry: 12 }, eyes: { x: 47, y: 37, rx: 4.5, ry: 2.5 }
       }
     }
   },
@@ -59,12 +66,14 @@ const schoolPatients = [
     color: 'blue',
     poses: {
       sentada: {
-        open: '/simulador/personagens/escola-v20261022-realista/crianca-menino-sentado.png',
-        closed: '/simulador/personagens/escola-v20261022-realista/blink/crianca-menino-sentado-olhos-fechados.png'
+        open: '/simulador/personagens/escola-horizontal-v20261023/crianca-menino-sentado.png',
+        closed: '/simulador/personagens/escola-horizontal-v20261023/blink/crianca-menino-sentado-olhos-fechados.png',
+        chest: { x: 49, y: 49, rx: 12, ry: 14 }, eyes: { x: 50, y: 34, rx: 4.5, ry: 2.5 }
       },
       deitada: {
-        open: '/simulador/personagens/escola-v20261022-realista/crianca-menino-deitado.png',
-        closed: '/simulador/personagens/escola-v20261022-realista/blink/crianca-menino-deitado-olhos-fechados.png'
+        open: '/simulador/personagens/escola-horizontal-v20261023/crianca-menino-deitado.png',
+        closed: '/simulador/personagens/escola-horizontal-v20261023/blink/crianca-menino-deitado-olhos-fechados.png',
+        chest: { x: 46, y: 48, rx: 15, ry: 13 }, eyes: { x: 41, y: 35, rx: 5, ry: 3 }
       }
     }
   },
@@ -75,12 +84,14 @@ const schoolPatients = [
     color: 'rose',
     poses: {
       sentada: {
-        open: '/simulador/personagens/escola-v20261022-realista/bebe-sentado.png',
-        closed: '/simulador/personagens/escola-v20261022-realista/blink/bebe-sentado-olhos-fechados.png'
+        open: '/simulador/personagens/escola-horizontal-v20261023/bebe-sentado.png',
+        closed: '/simulador/personagens/escola-horizontal-v20261023/blink/bebe-sentado-olhos-fechados.png',
+        chest: { x: 50, y: 52, rx: 12, ry: 13 }, eyes: { x: 49, y: 32, rx: 6, ry: 3.5 }
       },
       deitada: {
-        open: '/simulador/personagens/escola-v20261022-realista/bebe-deitado.png',
-        closed: '/simulador/personagens/escola-v20261022-realista/blink/bebe-deitado-olhos-fechados.png'
+        open: '/simulador/personagens/escola-horizontal-v20261023/bebe-deitado.png',
+        closed: '/simulador/personagens/escola-horizontal-v20261023/blink/bebe-deitado-olhos-fechados.png',
+        chest: { x: 50, y: 57, rx: 15, ry: 14 }, eyes: { x: 47, y: 42, rx: 6, ry: 3.5 }
       }
     }
   }
@@ -103,7 +114,13 @@ function AnimatedPatientPhoto({
   label: string;
   delay: number;
 }) {
-  const style = { '--school-patient-blink-delay': `${delay}s` } as CSSProperties;
+  const style = {
+    '--school-patient-blink-delay': `${delay}s`,
+    '--school-chest-x': `${pose.chest.x}%`, '--school-chest-y': `${pose.chest.y}%`,
+    '--school-chest-rx': `${pose.chest.rx}%`, '--school-chest-ry': `${pose.chest.ry}%`,
+    '--school-eyes-x': `${pose.eyes.x}%`, '--school-eyes-y': `${pose.eyes.y}%`,
+    '--school-eyes-rx': `${pose.eyes.rx}%`, '--school-eyes-ry': `${pose.eyes.ry}%`
+  } as CSSProperties;
 
   return (
     <div
@@ -115,8 +132,9 @@ function AnimatedPatientPhoto({
       <img
         src={pose.open}
         alt={`${label}, animação individual de respiração`}
-        className="school-patient-photo__image school-patient-photo__image--open"
+        className="school-patient-photo__image school-patient-photo__image--base"
       />
+      <img src={pose.open} alt="" aria-hidden="true" className="school-patient-photo__image school-patient-photo__image--chest" />
       <img
         src={pose.closed}
         alt=""
@@ -145,7 +163,7 @@ export function SchoolPatientGallery() {
         </div>
       </div>
 
-      <div className="grid gap-4 lg:grid-cols-[minmax(0,1fr)_18rem]">
+      <div className="space-y-4">
         <div className="grid grid-cols-2 gap-2 sm:grid-cols-5" role="group" aria-label="Paciente escolar">
           {schoolPatients.map(patient => {
             const active = selected.id === patient.id;
@@ -169,8 +187,8 @@ export function SchoolPatientGallery() {
           })}
         </div>
 
-        <article className="overflow-hidden rounded-2xl border border-slate-300/30 bg-slate-950 shadow-xl" data-patient-card={selected.id}>
-          <div className="flex aspect-[1672/941] items-center justify-center bg-gradient-to-b from-slate-900 to-slate-950 p-3">
+        <article className="mx-auto max-w-5xl overflow-hidden rounded-2xl border border-slate-300/30 bg-slate-950 shadow-xl" data-patient-card={selected.id}>
+          <div className="aspect-[1672/941] bg-slate-950">
             <AnimatedPatientPhoto
               key={`${selected.id}-${pose}`}
               pose={selected.poses[pose]}
@@ -205,6 +223,14 @@ export function SchoolPatientGallery() {
                 </button>
               ))}
             </div>
+            <a
+              href={selected.poses[pose].open.replace(/\.png$/, '.html')}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex rounded-lg border border-emerald-400/50 px-3 py-2 text-xs font-bold text-emerald-200 hover:bg-emerald-400/10 focus-visible:outline focus-visible:outline-2 focus-visible:outline-emerald-400"
+            >
+              Abrir este paciente em HTML ↗
+            </a>
           </div>
         </article>
       </div>
