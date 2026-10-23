@@ -83,6 +83,10 @@ O encéfalo humano consome cerca de 120 gramas de glicose por dia. Diferente do 
 - Quando o nível de glicose no sangue cai abaixo de **70 mg/dL** (e especialmente abaixo de **50 mg/dL**), os neurônios corticais entram em colapso energético imediato (**neuroglicopenia**).
 - O cérebro dispara um sinal de alarme simpático maciço (adrenalina), gerando tremores, taquicardia, palidez e suor frio. Se a glicose não for reposta de imediato, a disfunção atinge o córtex motor e o tronco encefálico, desencadeando crises convulsivas, coma e morte neuronal irreversível [4, 7].
 
+
+![Figura 1 — Aplicação intramuscular de autoinjetor de adrenalina na face anterolateral da coxa.](../imagens/Epinephrine-injection.png)
+*Figura 1 — Aplicação intramuscular de autoinjetor de adrenalina na face anterolateral da coxa. Crédito: Baedr-9439. Licença: CC0. Fonte: Wikimedia Commons.*
+
 ### 4.3 A Tempestade de Mediadores da Anafilaxia
 A anafilaxia é uma reação de hipersensibilidade imunológica sistêmica imediata (Tipo I, mediada por anticorpos IgE).
 - Ao entrar em contato com um alérgeno potente (ex.: amendoim, frutos do mar, dipirona, anti-inflamatórios, contraste radiológico ou veneno de abelhas e vespas), mastócitos e basófilos desgranulam maciçamente em todo o corpo, liberando **histamina, leucotrienos e prostaglandinas** na circulação.
@@ -149,6 +153,10 @@ A hipoglicemia é a complicação aguda mais frequente em portadores de diabetes
 - **Sinais Clínicos Iniciais (Adrenérgicos):** Fome súbita insaciável, tremores finos nas mãos, sudorese fria abundante, pele pálida e taquicardia palpável.
 - **Sinais Avançados (Neuroglicopênicos):** Alteração súbita de comportamento (agressividade inexplicável, choro, confusão mental semelhante a estado de embriaguez alcoólica), fala arrastada, visão dupla, convulsões motoras e perda total da consciência (coma hipoglicêmico) [4, 7].
 
+
+![Figura 2 — Sinais e sintomas sistêmicos da reação anafilática.](../imagens/Signs_and_symptoms_of_anaphylaxis.png)
+*Figura 2 — Sinais e sintomas sistêmicos da reação anafilática. Crédito: Mikael HÃ¤ggstrÃ¶m. Licença: CC0. Fonte: Wikimedia Commons.*
+
 #### Conduta Prática Dividida pelo Nível de Consciência:
 - **Vítima CONSCIENTE e capaz de engolir:**
   - Forneça imediatamente **15 a 20 gramas de carboidrato simples de rápida absorção por via oral**:
@@ -160,6 +168,10 @@ A hipoglicemia é a complicação aguda mais frequente em portadores de diabetes
   - **PROIBIDO DAR QUALQUER LÍQUIDO OU SÓLIDO NA BOCA.**
   - Deite a vítima de lado em Posição Lateral de Segurança (PLS) para proteger a via aérea contra saliva e vômitos.
   - Ligue imediatamente para o SAMU 192 informando: *"Paciente diabético inconsciente em coma hipoglicêmico provável"*. A equipe médica administrará glicose a 50% diretamente na veia [4, 5].
+
+
+![Figura 3 — Posição Lateral de Segurança (PLS) para proteção da via aérea em vítima inconsciente que respira.](../imagens/Coma_Position.jpg)
+*Figura 3 — Posição Lateral de Segurança (PLS) para proteção da via aérea em vítima inconsciente que respira. Crédito: Department of the Army (EUA). Licença: Domínio público. Fonte: Wikimedia Commons.*
 
 ### 5.4 Hiperglicemia e Cetoacidose: Sinais de Alerta no Diabetes
 Diferente da hipoglicemia que se instala em minutos, a **hiperglicemia severa** (glicose > 250 a 400 mg/dL) evolui lentamente ao longo de horas ou dias por falta crônica de insulina, infecções bacterianas ocultas ou abandono de tratamento:
@@ -190,23 +202,6 @@ Suspeite e aja se a vítima apresentar sintomas de início súbito (segundos a m
 
 ---
 
-### Figuras de Apoio
-
-![Figura 1 - AplicaÃ§Ã£o intramuscular de autoinjetor de adrenalina na face anterolateral da coxa.](../imagens/Epinephrine-injection.png)
-*Figura 1 - AplicaÃ§Ã£o intramuscular de autoinjetor de adrenalina na face anterolateral da coxa. CrÃ©dito: Baedr-9439. LicenÃ§a: CC0. Fonte: Wikimedia Commons.*
-
-![Figura 2 - Sinais e sintomas sistÃªmicos da reaÃ§Ã£o anafilÃ¡tica.](../imagens/Signs_and_symptoms_of_anaphylaxis.png)
-*Figura 2 - Sinais e sintomas sistÃªmicos da reaÃ§Ã£o anafilÃ¡tica. CrÃ©dito: Mikael HÃ¤ggstrÃ¶m. LicenÃ§a: CC0. Fonte: Wikimedia Commons.*
-
-![Figura 3 - Inalador pressurizado dosimetrado para crise de broncoespasmo.](../imagens/AsthmaInhaler.jpg)
-*Figura 3 - Inalador pressurizado dosimetrado para crise de broncoespasmo. CrÃ©dito: Wikimedia Commons (Mendel, assumido). LicenÃ§a: DomÃ­nio pÃºblico. Fonte: Wikimedia Commons.*
-
-![Figura 4 - Fisiopatologia da crise asmÃ¡tica: broncoespasmo, edema de mucosa e hipersecreÃ§Ã£o.](../imagens/Asthma-bronchial-tube-cross-section.png)
-*Figura 4 - Fisiopatologia da crise asmÃ¡tica: broncoespasmo, edema de mucosa e hipersecreÃ§Ã£o. CrÃ©dito: Baedr-9439. LicenÃ§a: CC0. Fonte: Wikimedia Commons.*
-
-![Figura 5 - PosiÃ§Ã£o Lateral de SeguranÃ§a (PLS) para proteÃ§Ã£o da via aÃ©rea em vÃ­tima inconsciente que respira.](../imagens/Coma_Position.jpg)
-*Figura 5 - PosiÃ§Ã£o Lateral de SeguranÃ§a (PLS) para proteÃ§Ã£o da via aÃ©rea em vÃ­tima inconsciente que respira. CrÃ©dito: Department of the Army (EUA). LicenÃ§a: DomÃ­nio pÃºblico. Fonte: Wikimedia Commons.*
-
 ---
 
 ## SEÇÃO 6 — QUADROS PRÁTICOS E MATRIZES DECISÓRIAS
@@ -224,6 +219,10 @@ Suspeite e aja se a vítima apresentar sintomas de início súbito (segundos a m
 | **Conduta no Socorrista** | Fornecer carboidrato simples oral se consciente. | Hidratação oral se lúcido; acionar SAMU 192. |
 
 ---
+
+
+![Figura 4 — Inalador pressurizado dosimetrado para crise de broncoespasmo.](../imagens/AsthmaInhaler.jpg)
+*Figura 4 — Inalador pressurizado dosimetrado para crise de broncoespasmo. Crédito: Wikimedia Commons (Mendel, assumido). Licença: Domínio público. Fonte: Wikimedia Commons.*
 
 ### Quadro 6.2 — Escala de Gravidade da Crise de Asma no APH
 
@@ -262,6 +261,10 @@ Suspeite e aja se a vítima apresentar sintomas de início súbito (segundos a m
 > 5. **Obrigar uma pessoa em crise de asma a deitar-se de costas:**
 >    - *Por que não fazer:* Deitar de costas empurra as vísceras abdominais contra o diafragma, diminuindo o espaço torácico em mais de 20% e piorando a sensação de asfixia.
 >    - *Conduta correta:* Mantenha o asmático sentado inclinado para a frente em posição de tripé.
+
+
+![Figura 5 — Fisiopatologia da crise asmática: broncoespasmo, edema de mucosa e hipersecreção.](../imagens/Asthma-bronchial-tube-cross-section.png)
+*Figura 5 — Fisiopatologia da crise asmática: broncoespasmo, edema de mucosa e hipersecreção. Crédito: Baedr-9439. Licença: CC0. Fonte: Wikimedia Commons.*
 
 ---
 

@@ -84,6 +84,10 @@ Os vasos sanguíneos são revestidos por três camadas de tecidos (**túnicas va
 ### 4.2 A Cascata Fisiológica da Hemostasia Natural
 Quando um vaso sanguíneo sofre ruptura mecânica, o organismo humano inicia instantaneamente um processo biológico triplo para tentar conter a perda de sangue, conhecido como **Hemostasia Fisiológica** [7]:
 
+
+![Figura 1 — Aplicação de torniquete tático em treinamento prático.](../imagens/Tourniquet_application.jpg)
+*Figura 1 — Aplicação de torniquete tático em treinamento prático. Crédito: U.S. Navy, MC2 Barry R. Hirayama. Licença: Domínio público. Fonte: Wikimedia Commons.*
+
 ```
 +---------------------------------------------------------------------------------+
 |                         FASES DA HEMOSTASIA FISIOLÓGICA                         |
@@ -139,6 +143,10 @@ Para ferimentos cotidianos menores e sem sangramento arterial jorrante:
 ### 5.3 Reconhecimento e Classificação das Hemorragias Externas
 A velocidade de intervenção baseia-se na identificação da dinâmica do sangramento [1, 2]:
 
+
+![Figura 2 — Tesoura ponta-romba de APH para exposição rápida e segura de lesões graves.](../imagens/Trauma-shears.jpg)
+*Figura 2 — Tesoura ponta-romba de APH para exposição rápida e segura de lesões graves. Crédito: Another-anon-artist-234. Licença: CC0. Fonte: Wikimedia Commons.*
+
 ```
 +---------------------------------------------------------------------------------+
 |                       OS TRÊS TIPOS DE HEMORRAGIA EXTERNA                       |
@@ -183,6 +191,10 @@ Após conter o sangramento inicial com as mãos, ou para permitir a manutenção
    - Após terminar a bandagem, apalpe o pulso distal (pulso radial na mão ou pulso pedioso no pé) ou pressione a unha do dedo da vítima por 5 segundos.
    - Se o dedo ficar azulado, gelado, dormente ou o tempo de enchimento capilar for superior a 3 segundos, o curativo está apertado demais como um garrote acidental. Alivie ligeiramente a tensão da atadura e refaça a fixação [3].
 
+
+![Figura 3 — Atadura autoaderente aplicada para fixação de curativo compressivo hemostático.](../imagens/Self-adhering-bandage.png)
+*Figura 3 — Atadura autoaderente aplicada para fixação de curativo compressivo hemostático. Crédito: Baedr-9439. Licença: CC0. Fonte: Wikimedia Commons.*
+
 ### 5.6 Identificação Precoce de Gravidade e Sinais de Choque Hipovolêmico
 Em hemorragias internas ocultas (decorrentes de traumas contusos no tórax, abdome ou fraturas de bacia) ou em sangramentos externos volumosos antes da intervenção, o socorrista deve monitorar os sinais vitais do **Choque Hipovolêmico Descompensado** [2, 7]:
 - **Nível de Consciência:** Vítima agitada, muito ansiosa com medo de morrer, evoluindo para confusão mental, sonolência e torpor.
@@ -193,23 +205,6 @@ Em hemorragias internas ocultas (decorrentes de traumas contusos no tórax, abdo
 Diante desses sinais, acione imediatamente o SAMU 192, deite a vítima de costas, eleve os membros inferiores em 30 cm (se não houver fraturas nas pernas ou bacia) e proteja-a rigorosamente contra o frio com mantas térmicas [1, 2].
 
 ---
-
-### Figuras de Apoio
-
-![Figura 1 - AplicaÃ§Ã£o de torniquete tÃ¡tico em treinamento prÃ¡tico.](../imagens/Tourniquet_application.jpg)
-*Figura 1 - AplicaÃ§Ã£o de torniquete tÃ¡tico em treinamento prÃ¡tico. CrÃ©dito: U.S. Navy, MC2 Barry R. Hirayama. LicenÃ§a: DomÃ­nio pÃºblico. Fonte: Wikimedia Commons.*
-
-![Figura 2 - Esquema tÃ©cnico de aplicaÃ§Ã£o circunferencial e ajuste do molinete do torniquete.](../imagens/Tourniquet.png)
-*Figura 2 - Esquema tÃ©cnico de aplicaÃ§Ã£o circunferencial e ajuste do molinete do torniquete. CrÃ©dito: Baedr-9439. LicenÃ§a: CC0. Fonte: Wikimedia Commons.*
-
-![Figura 3 - Rolo de gaze estÃ©ril para compressÃ£o direta e preenchimento de cavidades.](../imagens/Gauze_bandage.png)
-*Figura 3 - Rolo de gaze estÃ©ril para compressÃ£o direta e preenchimento de cavidades. CrÃ©dito: im_tau. LicenÃ§a: CC BY 4.0 (https://creativecommons.org/licenses/by/4.0/). Fonte: Wikimedia Commons.*
-
-![Figura 4 - Atadura autoaderente aplicada para fixaÃ§Ã£o de curativo compressivo hemostÃ¡tico.](../imagens/Self-adhering-bandage.png)
-*Figura 4 - Atadura autoaderente aplicada para fixaÃ§Ã£o de curativo compressivo hemostÃ¡tico. CrÃ©dito: Baedr-9439. LicenÃ§a: CC0. Fonte: Wikimedia Commons.*
-
-![Figura 5 - Tesoura ponta-romba de APH para exposiÃ§Ã£o rÃ¡pida e segura de lesÃµes graves.](../imagens/Trauma-shears.jpg)
-*Figura 5 - Tesoura ponta-romba de APH para exposiÃ§Ã£o rÃ¡pida e segura de lesÃµes graves. CrÃ©dito: Another-anon-artist-234. LicenÃ§a: CC0. Fonte: Wikimedia Commons.*
 
 ---
 
@@ -224,6 +219,10 @@ Diante desses sinais, acione imediatamente o SAMU 192, deite a vítima de costas
 | **Cabeça e Couro Cabeludo** | Compressão manual direta com compressa espessa plana. | Bandagem compressiva circular na cabeça (touca). | Não pressionar com força excessiva se houver suspeita de afundamento de crânio. |
 | **Tórax com Ferimento Soprante (Pneumotórax)** | **Curativo de Três Pontas** (válvula unidirecional que deixa o ar sair). | Curativo valvulado comercial com membrana de alívio. | Não vedar os quatro lados completamente se não houver válvula (risco de pneumotórax hipertensivo). |
 | **Abdome com Evisceração (Intestino Exposto)** | Cobrir com compressas limpas **umedecidas em soro** e plástico estéril. | Manter a vítima deitada com joelhos dobrados para relaxar a barriga. | **NUNCA tentar empurrar as alças intestinais de volta para dentro da barriga.** |
+
+
+![Figura 4 — Rolo de gaze estéril para compressão direta e preenchimento de cavidades.](../imagens/Gauze_bandage.png)
+*Figura 4 — Rolo de gaze estéril para compressão direta e preenchimento de cavidades. Crédito: im_tau. Licença: CC BY 4.0 (https://creativecommons.org/licenses/by/4.0/). Fonte: Wikimedia Commons.*
 
 ---
 
@@ -266,6 +265,10 @@ Diante desses sinais, acione imediatamente o SAMU 192, deite a vítima de costas
 >    - *Conduta correta:* Use torniquetes comerciais homologados rígidos (mínimo de 3,8 cm de largura) ou compressão manual direta ininterrupta.
 
 ---
+
+
+![Figura 5 — Esquema técnico de aplicação circunferencial e ajuste do molinete do torniquete.](../imagens/Tourniquet.png)
+*Figura 5 — Esquema técnico de aplicação circunferencial e ajuste do molinete do torniquete. Crédito: Baedr-9439. Licença: CC0. Fonte: Wikimedia Commons.*
 
 ## SEÇÃO 8 — APLICAÇÃO PRÁTICA CONTEXTUALIZADA (ESTUDO DE CASO)
 

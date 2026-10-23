@@ -68,6 +68,10 @@ Para eliminar essa armadilha fatal, a doutrina mundial de emergência preconiza 
 
 ---
 
+
+![Figura 1 — Posição Lateral de Segurança (PLS) para proteção da via aérea em vítima inconsciente que respira.](../imagens/Coma_Position.jpg)
+*Figura 1 — Posição Lateral de Segurança (PLS) para proteção da via aérea em vítima inconsciente que respira. Crédito: Department of the Army (EUA). Licença: Domínio público. Fonte: Wikimedia Commons.*
+
 ## SEÇÃO 4 — FUNDAMENTAÇÃO FISIOLÓGICA DOS SINAIS VITAIS
 
 Os sinais externos apresentados pelo corpo humano refletem a resposta do organismo para manter o fluxo de oxigênio nos órgãos nobres (coração, pulmões e cérebro). Compreender a fisiologia permite ao socorrista antecipar a parada antes que ela aconteça:
@@ -128,6 +132,10 @@ Para graduar a integridade funcional do sistema nervoso central, o socorrista aj
 - **D — Responde à Dor / Estímulo Tátil (Doloroso):** A vítima não responde à sua voz. O socorrista realiza estímulo tátil firme, batendo com vigor com as duas mãos sobre ambos os ombros da vítima e chamando em voz alta. Se não responder, aplica-se leve pressão no músculo trapézio (base do pescoço) ou na região supraorbital. A vítima move o braço, contrai o rosto ou emite gemido de dor.
 - **I — Inconsciente (Arresponsiva):** A vítima não apresenta qualquer reação motora, ocular ou verbal a estímulos táteis ou dolorosos. Encontra-se completamente flácida.
 
+
+![Figura 2 — Manobra de inclinação da cabeça e elevação do mento (head-tilt/chin-lift).](../imagens/Head-tilt-chin-lift-maneuver.jpg)
+*Figura 2 — Manobra de inclinação da cabeça e elevação do mento (head-tilt/chin-lift). Crédito: Another-anon-artist-234. Licença: CC0. Fonte: Wikimedia Commons.*
+
 > [!DANGER]
 > **ATENÇÃO: VÍTIMA "I" É UMA EMERGÊNCIA CRÍTICA IMEDIATA**
 > Toda vítima classificada como "I" (Inconsciente) tem alto risco de obstrução mecânica de via aérea pela língua e parada respiratória. Deve-se checar a respiração imediatamente e solicitar socorro avançado (192/193) com prioridade máxima [1, 3].
@@ -179,6 +187,10 @@ Adotado pelos principais consensos mundiais de trauma (PHTLS 10ª Edição e com
 > **ENTENDA O PORQUÊ: O "X" ANTES DO "A" SALVA VIDAS NO TRAUMA**
 > Historicamente, o protocolo iniciava-se no "A" (Vias Aéreas). Todavia, a experiência clínica e militar com traumas severos comprovou que um paciente com secção da artéria femoral ou braquial perde 1 litro de sangue a cada 40 segundos. Se o socorrista gastar 2 minutos estabilizando o pescoço e abrindo a boca antes de comprimir a artéria que jorra sangue, o paciente morrerá exsanguinado com a via aérea perfeitamente limpa. O sangue que sai não pode ser reposto no APH; portanto, **estanque o sangue em jato primeiro** [5].
 
+
+![Figura 3 — Tração da mandíbula (jaw thrust) para abertura de via aérea no trauma.](../imagens/Jaw_thrust.jpg)
+*Figura 3 — Tração da mandíbula (jaw thrust) para abertura de via aérea no trauma. Crédito: Department of the Army (EUA). Licença: Domínio público. Fonte: Wikimedia Commons.*
+
 ### 5.5 Identificação de Sinais Clínicos de Gravidade
 Além das ameaças diretas, o socorrista deve estar atento a indicadores de deterioração iminente que exigem comunicação imediata ao médico do SAMU:
 - **Cianose labial ou de extremidades:** Coloração arroxeada ou azulada nas unhas, orelhas e lábios. Sinal inequívoco de dessaturação crítica de oxigênio na hemoglobina circulante [6].
@@ -193,23 +205,6 @@ A avaliação inicial não é uma foto estática tirada na chegada; ela é um fi
 - **Gatilhos para reavaliação imediata:** Toda vez que a vítima for movimentada, apresentar piora na fala, vomitar, queixar-se de nova dor ou após a aplicação de uma intervenção (ex.: verificar se o torniquete continua estancando o sangramento após mover a perna).
 
 ---
-
-### Figuras de Apoio
-
-![Figura 1 - Manobra de inclinaÃ§Ã£o da cabeÃ§a e elevaÃ§Ã£o do mento (head-tilt/chin-lift).](../imagens/Head-tilt-chin-lift-maneuver.jpg)
-*Figura 1 - Manobra de inclinaÃ§Ã£o da cabeÃ§a e elevaÃ§Ã£o do mento (head-tilt/chin-lift). CrÃ©dito: Another-anon-artist-234. LicenÃ§a: CC0. Fonte: Wikimedia Commons.*
-
-![Figura 2 - TraÃ§Ã£o da mandÃ­bula (jaw thrust) para abertura de via aÃ©rea no trauma.](../imagens/Jaw_thrust.jpg)
-*Figura 2 - TraÃ§Ã£o da mandÃ­bula (jaw thrust) para abertura de via aÃ©rea no trauma. CrÃ©dito: Department of the Army (EUA). LicenÃ§a: DomÃ­nio pÃºblico. Fonte: Wikimedia Commons.*
-
-![Figura 3 - PalpaÃ§Ã£o do pulso carotÃ­deo e manutenÃ§Ã£o da permeabilidade da via aÃ©rea.](../imagens/Carotidian_pulse_and_recovery_position.jpg)
-*Figura 3 - PalpaÃ§Ã£o do pulso carotÃ­deo e manutenÃ§Ã£o da permeabilidade da via aÃ©rea. CrÃ©dito: Michal MaÅˆas. LicenÃ§a: DomÃ­nio pÃºblico. Fonte: Wikimedia Commons.*
-
-![Figura 4 - PosiÃ§Ã£o Lateral de SeguranÃ§a (PLS) para proteÃ§Ã£o da via aÃ©rea em vÃ­tima inconsciente que respira.](../imagens/Coma_Position.jpg)
-*Figura 4 - PosiÃ§Ã£o Lateral de SeguranÃ§a (PLS) para proteÃ§Ã£o da via aÃ©rea em vÃ­tima inconsciente que respira. CrÃ©dito: Department of the Army (EUA). LicenÃ§a: DomÃ­nio pÃºblico. Fonte: Wikimedia Commons.*
-
-![Figura 5 - AvaliaÃ§Ã£o pupilar e inspeÃ§Ã£o ocular na abordagem primÃ¡ria.](../imagens/Medic-open-patients-eye-1.png)
-*Figura 5 - AvaliaÃ§Ã£o pupilar e inspeÃ§Ã£o ocular na abordagem primÃ¡ria. CrÃ©dito: Baedr-9439. LicenÃ§a: CC0. Fonte: Wikimedia Commons.*
 
 ---
 
@@ -234,6 +229,10 @@ A avaliação inicial não é uma foto estática tirada na chegada; ela é um fi
 | **V ou D (Rebaixado)** | Sim, normal | Trauma craniano, intoxicação, choque inicial ou hipoglicemia | Manter via aérea aberta, acionar SAMU 192, manter imobilização cervical se houve trauma. |
 | **I (Inconsciente)** | **SIM, normal** | Coma clínico, síncope profunda, concussão sem parada | **Posição Lateral de Segurança (PLS)** se não houver trauma; manter via aérea pérvia e chamar 192. |
 | **I (Inconsciente)** | **NÃO ou Gasping** | **PARADA CARDIORRESPIRATÓRIA (PCR)** | **Iniciar RCP imediatamente (100 a 120 compressões/minuto)** e instalar o DEA com urgência máxima. |
+
+
+![Figura 4 — Palpação do pulso carotídeo e manutenção da permeabilidade da via aérea.](../imagens/Carotidian_pulse_and_recovery_position.jpg)
+*Figura 4 — Palpação do pulso carotídeo e manutenção da permeabilidade da via aérea. Crédito: Michal MaÅˆas. Licença: Domínio público. Fonte: Wikimedia Commons.*
 
 ---
 
@@ -261,6 +260,10 @@ A avaliação inicial não é uma foto estática tirada na chegada; ela é um fi
 > 5. **Abandonar a vítima após a primeira avaliação achando que "já está tudo bem":**
 >    - *Por que não fazer:* Choques hipovolêmicos por hemorragias internas ocultas demoram de 10 a 20 minutos para provocar o colapso hemodinâmico completo. Uma vítima que conversa no início pode entrar em parada cardíaca silenciosa minutos depois.
 >    - *Conduta correta:* Mantenha vigilância e monitoramento contínuo a cada 2 a 5 minutos até a entrega da ocorrência.
+
+
+![Figura 5 — Avaliação pupilar e inspeção ocular na abordagem primária.](../imagens/Medic-open-patients-eye-1.png)
+*Figura 5 — Avaliação pupilar e inspeção ocular na abordagem primária. Crédito: Baedr-9439. Licença: CC0. Fonte: Wikimedia Commons.*
 
 ---
 

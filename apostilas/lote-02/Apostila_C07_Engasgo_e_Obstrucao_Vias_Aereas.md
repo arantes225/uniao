@@ -133,6 +133,10 @@ Antes de encostar as mãos na vítima, o socorrista deve fazer uma única pergun
 ### 5.3 Abordagem Sistemática no Adulto Consciente (Manobra de Heimlich)
 Na obstrução grave em adultos conscientes, as diretrizes AHA 2025 orientam alternar **5 pancadas firmes entre as escápulas** e **5 compressões abdominais**. Repita até a expulsão do objeto ou a perda de consciência. As instruções abaixo descrevem a etapa abdominal [1, 3]:
 
+
+![Figura 1 — Compressões abdominais em vítima consciente (manobra de Heimlich).](../imagens/Abdominal_thrusts_against_choking_cropped_.jpg)
+*Figura 1 — Compressões abdominais em vítima consciente (manobra de Heimlich). Crédito: US Army Medical Department Center and School. Licença: Domínio público. Fonte: Wikimedia Commons.*
+
 1. **Posicionamento do Socorrista:** Posicione-se em pé, atrás da vítima. Passe seus braços ao redor da cintura dela, por baixo das axilas.
 2. **Base de Apoio:** Afaste as pernas e coloque um de seus pés entre os pés da vítima. Isso cria uma base sólida de sustentação caso a vítima desmaie repentinamente, permitindo que você a deslize com segurança pelo seu corpo até o chão sem sofrer queda violenta.
 3. **Ponto de Compressão:**
@@ -206,17 +210,6 @@ A prevenção é o pilar mais eficiente da segurança da vida. Conforme preconiz
 
 ---
 
-### Figuras de Apoio
-
-![Figura 1 - CompressÃµes abdominais em vÃ­tima consciente (manobra de Heimlich).](../imagens/Abdominal_thrusts_against_choking_cropped_.jpg)
-*Figura 1 - CompressÃµes abdominais em vÃ­tima consciente (manobra de Heimlich). CrÃ©dito: US Army Medical Department Center and School. LicenÃ§a: DomÃ­nio pÃºblico. Fonte: Wikimedia Commons.*
-
-![Figura 2 - CompressÃµes em vÃ­tima de engasgo que evolui para inconsciÃªncia em decÃºbito dorsal.](../imagens/Supine-abdominal-thrust.jpg)
-*Figura 2 - CompressÃµes em vÃ­tima de engasgo que evolui para inconsciÃªncia em decÃºbito dorsal. CrÃ©dito: Another-anon-artist-234. LicenÃ§a: CC0. Fonte: Wikimedia Commons.*
-
-![Figura 3 - Manobra de inclinaÃ§Ã£o da cabeÃ§a e elevaÃ§Ã£o do mento (head-tilt/chin-lift).](../imagens/Head-tilt-chin-lift-maneuver.jpg)
-*Figura 3 - Manobra de inclinaÃ§Ã£o da cabeÃ§a e elevaÃ§Ã£o do mento (head-tilt/chin-lift). CrÃ©dito: Another-anon-artist-234. LicenÃ§a: CC0. Fonte: Wikimedia Commons.*
-
 ---
 
 ## SEÇÃO 6 — QUADROS PRÁTICOS E ALGORITMOS COMPARATIVOS
@@ -230,6 +223,10 @@ A prevenção é o pilar mais eficiente da segurança da vida. Conforme preconiz
 | **Gestante ou Obeso** | Não fala, não tosse, impossível abraçar o abdome. | **Obstrução Total Especial** | **Compressões Torácicas Subesternais** (no centro do peito). |
 | **Lactente (< 1 ano)** | Bebê não chora, tosse muda, boca arroxeada, sem ar. | **Obstrução Total Infantil** | **5 Pancadas Dorsais** alternadas com **5 Compressões Torácicas**. Sem Heimlich! |
 | **Vítima Inconsciente** | Desmaiou após o engasgo, arresponsiva no piso. | **Parada Respiratória por OVACE** | Chamar 192 e **iniciar ciclos de RCP (compressões torácicas)**. Olhar a boca antes de soprar. |
+
+
+![Figura 2 — Compressões em vítima de engasgo que evolui para inconsciência em decúbito dorsal.](../imagens/Supine-abdominal-thrust.jpg)
+*Figura 2 — Compressões em vítima de engasgo que evolui para inconsciência em decúbito dorsal. Crédito: Another-anon-artist-234. Licença: CC0. Fonte: Wikimedia Commons.*
 
 ---
 
@@ -267,6 +264,10 @@ A prevenção é o pilar mais eficiente da segurança da vida. Conforme preconiz
 > 
 > 5. **Levantar os braços da pessoa engasgada ("levanta os braços que passa"):**
 >    - *Por que não fazer:* Trata-se de uma lenda popular sem nenhum fundamento anatômico ou biofísico. Erguer os braços não altera o diâmetro da laringe nem desloca o corpo estranho, apenas posterga o início da Manobra de Heimlich real.
+
+
+![Figura 3 — Manobra de inclinação da cabeça e elevação do mento (head-tilt/chin-lift).](../imagens/Head-tilt-chin-lift-maneuver.jpg)
+*Figura 3 — Manobra de inclinação da cabeça e elevação do mento (head-tilt/chin-lift). Crédito: Another-anon-artist-234. Licença: CC0. Fonte: Wikimedia Commons.*
 
 ---
 

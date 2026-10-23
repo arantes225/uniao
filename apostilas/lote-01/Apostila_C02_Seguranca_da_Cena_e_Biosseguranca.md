@@ -74,6 +74,10 @@ Paralelamente aos riscos físicos imediatos, o risco microbiológico representa 
 
 ## SEÇÃO 4 — FUNDAMENTAÇÃO DE BIOSSEGURANÇA E DINÂMICA DE RISCOS
 
+
+![Figura 1 — Respirador semifacial filtrante (PFF2/N95) para biossegurança respiratória.](../imagens/Filtering-half-mask-respirator.jpg)
+*Figura 1 — Respirador semifacial filtrante (PFF2/N95) para biossegurança respiratória. Crédito: Another-anon-artist-234. Licença: CC0. Fonte: Wikimedia Commons.*
+
 ### 4.1 A Dinâmica da Cadeia de Transmissão Biológica
 A transmissão de patógenos no atendimento inicial a emergências exige a confluência de quatro fatores biológicos fundamentais:
 1. **Agente infeccioso:** Presença de vírus, bactérias ou fungos no sangue, secreções respiratórias, saliva com sangue, líquido amniótico ou outros fluidos corporais da vítima.
@@ -145,6 +149,10 @@ A doutrina de autoproteção fundamenta-se na prevenção do erro de heroísmo. 
 ### 5.3 Equipamentos de Proteção Individual (EPI)
 Os EPIs formam a barreira mecânica que separa o corpo do socorrista do ambiente e dos fluidos biológicos da vítima. De acordo com a Norma Regulamentadora nº 06 (NR-06) e diretrizes internacionais de primeiros socorros [4, 7]:
 
+
+![Figura 2 — Luva de proteção individual em nitrila para barreira biológica.](../imagens/Disposable_nitrile_glove.jpg)
+*Figura 2 — Luva de proteção individual em nitrila para barreira biológica. Crédito: Wikimedia Commons. Licença: Domínio público. Fonte: Wikimedia Commons.*
+
 #### 5.3.1 Luvas de Procedimento (Barreira Básica Universal)
 - **Nitrila (Altamente Recomendada):** Maior resistência mecânica a perfurações e rasgos por farpas ou fragmentos de roupas; livre de proteínas do látex (evitando crises anafiláticas no socorrista ou na vítima alérgica); excelente tolerância a derivados de hidrocarbonetos e graxas [4].
 - **Látex Natural:** Boa elasticidade e sensibilidade tátil, porém rompe-se facilmente com óleos minerais e possui potencial alergênico.
@@ -186,6 +194,10 @@ Caso ocorra acidente biológico durante o socorro (por exemplo: luva rasgada com
 +---------------------------------------------------------------------------------+
 ```
 
+
+![Figura 3 — Maleta e estação de primeiros socorros sinalizada e acessível.](../imagens/First_aid_kit_on_wall.png)
+*Figura 3 — Maleta e estação de primeiros socorros sinalizada e acessível. Crédito: Leigh Blackall. Licença: CC BY 2.0 (https://creativecommons.org/licenses/by/2.0/). Fonte: Wikimedia Commons.*
+
 > [!IMPORTANT]
 > **ENTENDA O PORQUÊ: A EFICÁCIA DA JANELA DE 72 HORAS NA PEP**
 > A Profilaxia Pós-Exposição (PEP) para o HIV impede a replicação inicial do vírus nas células dendríticas e nos linfócitos locais antes que o vírus atinja os linfonodos regionais e cause infecção sistêmica disseminada. Cada hora de atraso reduz a eficácia protetora. A eficácia máxima é obtida quando os antirretrovirais são iniciados **nas primeiras 2 horas**, perdendo efeito clínico protetor quase total após decorridas 72 horas do acidente biológico [3].
@@ -208,20 +220,6 @@ A gestão de uma emergência envolve também a liderança sobre as pessoas ao re
 
 ---
 
-### Figuras de Apoio
-
-![Figura 1 - Luva de proteÃ§Ã£o individual em nitrila para barreira biolÃ³gica.](../imagens/Disposable_nitrile_glove.jpg)
-*Figura 1 - Luva de proteÃ§Ã£o individual em nitrila para barreira biolÃ³gica. CrÃ©dito: Wikimedia Commons. LicenÃ§a: DomÃ­nio pÃºblico. Fonte: Wikimedia Commons.*
-
-![Figura 2 - Respirador semifacial filtrante (PFF2/N95) para biosseguranÃ§a respiratÃ³ria.](../imagens/Filtering-half-mask-respirator.jpg)
-*Figura 2 - Respirador semifacial filtrante (PFF2/N95) para biosseguranÃ§a respiratÃ³ria. CrÃ©dito: Another-anon-artist-234. LicenÃ§a: CC0. Fonte: Wikimedia Commons.*
-
-![Figura 3 - MÃ¡scara respiratÃ³ria facial inteira com filtro quÃ­mico para ambientes contaminados.](../imagens/Full-face-respirator.jpg)
-*Figura 3 - MÃ¡scara respiratÃ³ria facial inteira com filtro quÃ­mico para ambientes contaminados. CrÃ©dito: Another-anon-artist-234. LicenÃ§a: CC0. Fonte: Wikimedia Commons.*
-
-![Figura 4 - Maleta e estaÃ§Ã£o de primeiros socorros sinalizada e acessÃ­vel.](../imagens/First_aid_kit_on_wall.png)
-*Figura 4 - Maleta e estaÃ§Ã£o de primeiros socorros sinalizada e acessÃ­vel. CrÃ©dito: Leigh Blackall. LicenÃ§a: CC BY 2.0 (https://creativecommons.org/licenses/by/2.0/). Fonte: Wikimedia Commons.*
-
 ---
 
 ## SEÇÃO 6 — QUADROS PRÁTICOS E MATRIZES DECISÓRIAS
@@ -235,6 +233,10 @@ A gestão de uma emergência envolve também a liderança sobre as pessoas ao re
 | **Atropelamento Secundário** | Ocorrência em pista de rolamento; curva cega; chuva ou pista escorregadia. | Colisão de novos veículos contra os socorristas e as vítimas prévias. | Parar o veículo de apoio antes do acidente com pisca-alerta; sinalizar a pista a longa distância. |
 | **Contaminação Biológica** | Sangramento pulsátil arterial; tosse com sangue; vômito abundante. | Transmissão ocupacional de hepatites virais crônicas ou HIV. | Uso imediato de luvas de nitrila, óculos de proteção e máscara antes de tocar a vítima. |
 | **Incêndio Veicular** | Fumaça sob o capô; cheiro forte de gasolina derramada; vazamento no asfalto. | Explosão e queimaduras térmicas extensas de vias aéreas e tronco. | Desligar a ignição do carro; afastar curiosos; manter extintor de pó químico pronto para uso. |
+
+
+![Figura 4 — Máscara respiratória facial inteira com filtro químico para ambientes contaminados.](../imagens/Full-face-respirator.jpg)
+*Figura 4 — Máscara respiratória facial inteira com filtro químico para ambientes contaminados. Crédito: Another-anon-artist-234. Licença: CC0. Fonte: Wikimedia Commons.*
 
 ---
 
