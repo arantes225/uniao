@@ -74,3 +74,37 @@ Uma apostila só pode receber aprovação médico-editorial para publicação qu
 - SAMU 192: acionamento e competência regulatória — https://www.gov.br/saude/pt-br/composicao/saes/samu-192/samu-192
 - Lei Lucas: Lei nº 13.722/2018 — https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2018/lei/l13722.htm
 - ACS STOP THE BLEED — https://www.stopthebleed.org/
+
+## Terceira revisão: texto simples, aprofundamento e callouts
+
+- Abra a seção de introdução com linguagem comum e uma ideia principal: **o que pode acontecer e por que o aluno precisa saber agir**.
+- Mantenha a explicação da fisiologia e dos mecanismos. Traduza o termo técnico na primeira menção, sem substituir precisão por analogias imprecisas.
+- Nas instruções, prefira sujeito explícito e verbo de ação. Evite frases que reúnem condições e ordens diferentes sem pontuação clara.
+- Elimine números epidemiológicos e porcentagens sem fonte identificável. Evite prometer resultados, recuperação completa ou tempo rígido de evolução clínica.
+- Evite linguagem de impacto que não ajuda a decidir: “letal em segundos”, “absolutamente obrigatório”, “jamais” fora das contraindicações reais.
+- Cada callout deve ter **uma função didática própria**, não apenas repetir o parágrafo anterior.
+
+### Tipos de callout e distribuição recomendada
+
+| Marcador Markdown | Finalidade | Quando usar |
+| --- | --- | --- |
+| `> [!NOTE]` | **Entenda** | Traduzir conceito, mecanismo ou palavra técnica |
+| `> [!IMPORTANT]` | **Prioridade** | Destacar ação imediata de alto impacto |
+| `> [!CAUTION]` | **Não faça isso** | Contraindicação e gesto que pode causar dano |
+| `> [!WARNING]` | **Atenção** | Condição perigosa ou circunstância que exige prudência |
+| `> [!TIP]` | **Dica prática** | Aplicação em caso real, técnica de estudo ou decisão prática |
+
+Distribua no contexto do assunto: explicação após mecanismo, cautela na seção de erros, decisão na seção de casos. Não aglomere todas as caixas na abertura. Não transforme toda a apostila em callouts; o corpo do texto continua sendo a explicação principal.
+
+**Padrão visual do site:** o componente `BookletRenderer` aplica estilos diferentes aos marcadores acima (tipos, cores, rótulos e contraste claro/escuro). Não codifique cores nos arquivos Markdown.
+
+### Estrutura do texto completo
+
+1. **Roteiro imediato:** reconhecer, pedir ajuda e agir dentro do treinamento.
+2. **Explicação leiga:** começar por exemplos e termos comuns.
+3. **Mecanismo explicado:** conectar anatomia/fisiologia à decisão prática.
+4. **Sequência e contraindicações:** ações ordenadas, quando parar e quando transferir ao resgate.
+5. **Caso com perguntas:** reconhecer primeiro, agir segundo e justificar terceiro.
+6. **Referências e limites:** evidência, atualização e qualificação necessária.
+
+A instrução ASD-STE100 se refere ao inglês técnico. Use seus princípios de clareza e concisão **adaptados ao português**, sem declarar certificação ASD-STE100 do material.
