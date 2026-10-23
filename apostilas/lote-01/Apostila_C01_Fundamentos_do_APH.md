@@ -33,6 +33,39 @@
 
 ---
 
+## GUIA DE ATUAÇÃO — PARA QUEM NÃO É DA ÁREA DA SAÚDE
+
+> **EM UMA EMERGÊNCIA REAL:** Proteja-se, peça ajuda e ligue **192 (SAMU)**. Para fogo, resgate em altura, água, espaço confinado ou ambiente perigoso, ligue **193 (Bombeiros)**. Diga o endereço e siga as instruções da central. Este roteiro orienta as primeiras ações, mas não substitui o treino supervisionado das técnicas práticas.
+
+### Situação: Primeiros passos do atendimento pré-hospitalar
+
+**Reconheça os sinais:** Pessoa desacordada, sem respirar normalmente, com sangramento grave ou ferimento importante.
+
+### O que fazer — passo a passo
+
+1. Antes de se aproximar, procure riscos: trânsito, fios, fogo, gás, violência e máquinas.
+2. Se houver risco sem controle, afaste-se e ligue 193. Nunca se torne outra vítima.
+3. Verifique resposta falando alto e tocando o ombro com cuidado.
+4. Acione 192. Diga endereço, o que ocorreu e como a vítima está respirando.
+5. Se não houver respiração normal, inicie compressões e peça DEA. Se houver sangramento grave, faça pressão direta.
+6. Permaneça com a vítima até a chegada de ajuda, observando se ela continua respirando.
+
+### Não faça isto
+
+Não faça procedimentos invasivos, não administre medicamentos próprios e não mova a vítima sem necessidade de segurança.
+
+### Exercício prático de aprendizagem
+
+Simule um adulto caído: demonstre segurança da cena, avaliação, ligação ao SAMU e primeira ação.
+
+**Ao entregar a vítima:** informe horário de início, mudanças na respiração e na consciência, riscos e medidas aplicadas.
+
+**Limites:** não faça procedimentos invasivos, administração de fármacos não prescritos, resgates técnicos ou intervenções que dependam de habilitação profissional. Pratique presencialmente RCP, DEA, controle de sangramento e desengasgo em manequins antes de assumir atendimento.
+
+**Referências operacionais:** Ministério da Saúde — SAMU 192 (https://www.gov.br/saude/pt-br/composicao/saes/samu-192/samu-192); AHA/AAP — RCP e primeiros socorros 2025 (https://cpr.heart.org/en/resuscitation-science/cpr-and-ecc-guidelines); AHA/Cruz Vermelha — Primeiros Socorros 2024 (https://cpr.heart.org/en/resuscitation-science/2024-first-aid-guidelines).
+
+---
+
 ## SEÇÃO 1 — EM 30 SEGUNDOS
 
 > **VISÃO RÁPIDA DE SOBREVIVÊNCIA**

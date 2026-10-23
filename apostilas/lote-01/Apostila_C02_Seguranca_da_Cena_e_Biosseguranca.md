@@ -33,13 +33,46 @@
 
 ---
 
+## GUIA DE ATUAÇÃO — PARA QUEM NÃO É DA ÁREA DA SAÚDE
+
+> **EM UMA EMERGÊNCIA REAL:** Proteja-se, peça ajuda e ligue **192 (SAMU)**. Para fogo, resgate em altura, água, espaço confinado ou ambiente perigoso, ligue **193 (Bombeiros)**. Diga o endereço e siga as instruções da central. Este roteiro orienta as primeiras ações, mas não substitui o treino supervisionado das técnicas práticas.
+
+### Situação: Segurança da cena e proteção do socorrista
+
+**Reconheça os sinais:** Sangue, objetos cortantes, fumaça, fios energizados, vazamento químico, violência ou local fechado sem ventilação.
+
+### O que fazer — passo a passo
+
+1. Pare na entrada e observe. Identifique ao menos uma rota de saída segura.
+2. Afaste curiosos, sinalize o perigo e não aproxime pessoas da área contaminada.
+3. Se houver eletricidade, fogo, gás ou espaço confinado, chame 193 e aguarde profissionais habilitados.
+4. Use luvas e proteção adequadas se disponíveis, sem atrasar medidas básicas quando o risco puder ser controlado.
+5. Se ocorrer contato com sangue, lave a pele com água e sabão e procure orientação de saúde.
+6. Reavalie o ambiente: a cena pode deixar de ser segura durante o atendimento.
+
+### Não faça isto
+
+Não toque em fio, não entre em tanque ou poço e não tente neutralizar produtos químicos.
+
+### Exercício prático de aprendizagem
+
+Mostre imagens de cinco cenas e peça ao aluno decidir: aproximar, isolar ou aguardar resgate.
+
+**Ao entregar a vítima:** informe horário de início, mudanças na respiração e na consciência, riscos e medidas aplicadas.
+
+**Limites:** não faça procedimentos invasivos, administração de fármacos não prescritos, resgates técnicos ou intervenções que dependam de habilitação profissional. Pratique presencialmente RCP, DEA, controle de sangramento e desengasgo em manequins antes de assumir atendimento.
+
+**Referências operacionais:** Ministério da Saúde — SAMU 192 (https://www.gov.br/saude/pt-br/composicao/saes/samu-192/samu-192); AHA/AAP — RCP e primeiros socorros 2025 (https://cpr.heart.org/en/resuscitation-science/cpr-and-ecc-guidelines); AHA/Cruz Vermelha — Primeiros Socorros 2024 (https://cpr.heart.org/en/resuscitation-science/2024-first-aid-guidelines).
+
+---
+
 ## SEÇÃO 1 — EM 30 SEGUNDOS
 
 > **VISÃO RÁPIDA DE SOBREVIVÊNCIA**
 > 1. **Prioridade absoluta de vida:** Na escala operacional do APH, a ordem de proteção é inviolável: 1º Eu (o socorrista); 2º Minha equipe; 3º As testemunhas e o ambiente; 4º A vítima [1].
 > 2. **Cena insegura não se adentra:** Nenhum procedimento de suporte de vida pode ser iniciado em ambiente hostil ou instável. Se a cena não estiver sob controle, o dever do socorrista é isolar, sinalizar e acionar bombeiros (193) ou polícia (190) [2].
 > 3. **Precaução padrão universal:** Todo sangue e fluido corpóreo de qualquer ser humano deve ser tratado tecnicamente como potencialmente infectado por patógenos veiculados pelo sangue (HIV, Hepatite B, Hepatite C), independentemente de aparência, classe social ou idade da vítima [3].
-> 4. **EPI mínimo obrigatório:** Óculos de proteção e luvas de procedimento (nitrila ou látex) são indispensáveis antes de qualquer contato tátil com a vítima ou suas vestes ensopadas [4].
+> 4. **Proteção do socorrista:** use luvas e proteção ocular conforme o risco. Em parada cardíaca, não atrase compressões por falta de óculos se a cena estiver segura [4].
 > 5. **O perigo cinético invisível:** Em acidentes veiculares ou industriais, o risco elétrico, vazamento de combustível, tráfego descontrolado e desmoronamento matam mais socorristas do que as patologias clínicas primárias [5].
 > 6. **Descarte e higienização pós-evento:** Luvas contaminadas devem ser retiradas pela técnica de envelope reverso, sem contato da pele externa com a mão limpa, seguidas de higienização imediata com água e sabão ou álcool 70% [3].
 
