@@ -82,6 +82,10 @@ A identificação imediata de que a ocorrência ultrapassou a capacidade rotinei
 
 ---
 
+
+![Figura 1 — Fluxograma decisório do protocolo START para incidentes com múltiplas vítimas.](../imagens/START_Triage_algorithm.png)
+*Figura 1 — Fluxograma decisório do protocolo START para incidentes com múltiplas vítimas. Crédito: HZS ÄŒR (Corpo de Bombeiros da República Tcheca). Licença: Domínio público. Fonte: Wikimedia Commons.*
+
 ### 5.2. Autoproteção e Avaliação de Segurança da Cena
 
 Nenhum atendimento pode começar se a cena não oferecer segurança aos socorristas:
@@ -126,6 +130,10 @@ O espaço físico do desastre deve ser dividido com precisão milimétrica para 
 │  Equipes Resgate │    │  Rápida Inicial) │          │ Ambulâncias e PC │
 └──────────────────┘    └──────────────────┘          └──────────────────┘
 ```
+
+
+![Figura 2 — Manobra de Rautek para extração rápida de vítima inconsciente em risco iminente.](../imagens/Rautek-maneuver.png)
+*Figura 2 — Manobra de Rautek para extração rápida de vítima inconsciente em risco iminente. Crédito: Baedr-9439. Licença: CC0. Fonte: Wikimedia Commons.*
 
 1. **Posto de Comando (PC):** Ponto único e claramente identificado (bandeira ou luz estroboscópica) onde fica o Comandante do Incidente (líder da brigada ou oficial dos Bombeiros), coordenando comunicações e recursos.
 2. **Posto Médico Avançado (PMA) / Área de Tratamento:** Área limpa e segura na Zona Fria dividida em 4 setores visuais com **lonas coloridas estendidas no chão**:
@@ -200,6 +208,10 @@ Durante a execução da triagem START, o socorrista não perde tempo imobilizand
 1. **Abertura e manutenção de via aérea:** Manobra manual de elevação da mandíbula ou inserção de cânula orofaríngea (Guedel) / nasofaríngea.
 2. **Controle de hemorragia exanguinante em jato:** Aplicação de torniquete comercial ou compressão direta rápida com curativo de emergência.
 
+
+![Figura 3 — Tração da mandíbula (jaw thrust) para abertura de via aérea no trauma.](../imagens/Jaw_thrust.jpg)
+*Figura 3 — Tração da mandíbula (jaw thrust) para abertura de via aérea no trauma. Crédito: Department of the Army (EUA). Licença: Domínio público. Fonte: Wikimedia Commons.*
+
 ---
 
 ### 5.5. Comunicação Integrada e Apoio aos Serviços Públicos (SAMU 192 e Bombeiros 193)
@@ -225,23 +237,6 @@ A teoria sem treinamento sob estresse real é inútil em catástrofes:
 
 ---
 
-### Figuras de Apoio
-
-![Figura 1 - Fluxograma decisÃ³rio do protocolo START para incidentes com mÃºltiplas vÃ­timas.](../imagens/START_Triage_algorithm.png)
-*Figura 1 - Fluxograma decisÃ³rio do protocolo START para incidentes com mÃºltiplas vÃ­timas. CrÃ©dito: HZS ÄŒR (Corpo de Bombeiros da RepÃºblica Tcheca). LicenÃ§a: DomÃ­nio pÃºblico. Fonte: Wikimedia Commons.*
-
-![Figura 2 - TraÃ§Ã£o da mandÃ­bula (jaw thrust) para abertura de via aÃ©rea no trauma.](../imagens/Jaw_thrust.jpg)
-*Figura 2 - TraÃ§Ã£o da mandÃ­bula (jaw thrust) para abertura de via aÃ©rea no trauma. CrÃ©dito: Department of the Army (EUA). LicenÃ§a: DomÃ­nio pÃºblico. Fonte: Wikimedia Commons.*
-
-![Figura 3 - Manobra de Rautek para extraÃ§Ã£o rÃ¡pida de vÃ­tima inconsciente em risco iminente.](../imagens/Rautek-maneuver.png)
-*Figura 3 - Manobra de Rautek para extraÃ§Ã£o rÃ¡pida de vÃ­tima inconsciente em risco iminente. CrÃ©dito: Baedr-9439. LicenÃ§a: CC0. Fonte: Wikimedia Commons.*
-
-![Figura 4 - Transporte de apoio por dois socorristas para remoÃ§Ã£o controlada da zona de risco.](../imagens/Two-person-carry.png)
-*Figura 4 - Transporte de apoio por dois socorristas para remoÃ§Ã£o controlada da zona de risco. CrÃ©dito: Baedr-9439. LicenÃ§a: CC0. Fonte: Wikimedia Commons.*
-
-![Figura 5 - AplicaÃ§Ã£o de torniquete tÃ¡tico em treinamento prÃ¡tico.](../imagens/Tourniquet_application.jpg)
-*Figura 5 - AplicaÃ§Ã£o de torniquete tÃ¡tico em treinamento prÃ¡tico. CrÃ©dito: U.S. Navy, MC2 Barry R. Hirayama. LicenÃ§a: DomÃ­nio pÃºblico. Fonte: Wikimedia Commons.*
-
 ---
 
 ## 6. MATRIZ DE DECISÃO RÁPIDA NO MÉTODO START
@@ -256,6 +251,10 @@ A teoria sem treinamento sob estresse real é inútil em catástrofes:
 | **Perfusão Lenta / Sem Pulso** | Enchimento capilar > 2 segundos ou sem pulso radial. | **VERMELHO** | Alocar na lona vermelha; combater hipotermia com manta; transporte prioritário. |
 | **Não Atende a Comandos** | Inconsciente ou confuso; não aperta a mão. | **VERMELHO** | Estabilização cervical; proteção de via aérea; encaminhamento imediato. |
 | **Parâmetros Estáveis** | Respiração < 30, perfusão < 2s, atende comandos, mas não anda (fratura fechada). | **AMARELO** | Alocar na lona amarela; imobilização provisória; aguarda evacuação secundária. |
+
+
+![Figura 4 — Transporte de apoio por dois socorristas para remoção controlada da zona de risco.](../imagens/Two-person-carry.png)
+*Figura 4 — Transporte de apoio por dois socorristas para remoção controlada da zona de risco. Crédito: Baedr-9439. Licença: CC0. Fonte: Wikimedia Commons.*
 
 ---
 
@@ -293,6 +292,10 @@ A teoria sem treinamento sob estresse real é inútil em catástrofes:
 Em uma planta de processamento agroindustrial em Rio Verde/GO, a explosão de uma caldeira a vapor provocou a destruição da parede lateral do galpão de empacotamento e o desabamento de um mezanino metálico sobre o turno da tarde, deixando 16 operários soterrados e feridos sob ferragens e alvenaria em meio a vapor quente e poeira densa.
 
 O barulho da detonação ecoou por toda a fábrica. O técnico de segurança do trabalho e comandante da brigada de emergência Marcos (39 anos) correu para o setor e deparou-se com o cenário de destruição generalizada: escombros caídos, gritos de socorro, vapor sibilando e múltiplos trabalhadores ensanguentados no chão.
+
+
+![Figura 5 — Aplicação de torniquete tático em treinamento prático.](../imagens/Tourniquet_application.jpg)
+*Figura 5 — Aplicação de torniquete tático em treinamento prático. Crédito: U.S. Navy, MC2 Barry R. Hirayama. Licença: Domínio público. Fonte: Wikimedia Commons.*
 
 ### A Gestão Tática e Aplicação da Triagem START
 Marcos não se precipitou para dentro dos escombros. Atuando com frieza técnica:

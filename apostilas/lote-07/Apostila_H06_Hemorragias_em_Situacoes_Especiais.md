@@ -75,6 +75,10 @@ Nesses ambientes caóticos, a aplicação cega de procedimentos padronizados sem
 
 A resposta cardiovascular ao sangramento varia drasticamente nos extremos da idade humana [1, 2, 5]:
 
+
+![Figura 1 — Fisiopatologia do pneumotórax hipertensivo com colapso pulmonar e desvio mediastinal.](../imagens/Tension-pneumothorax.png)
+*Figura 1 — Fisiopatologia do pneumotórax hipertensivo com colapso pulmonar e desvio mediastinal. Crédito: Baedr-9439. Licença: CC0. Fonte: Wikimedia Commons.*
+
 ```
 +---------------------------------------------------------------------------------+
 |               PECULIARIDADES FISIOPATOLÓGICAS NAS IDADES EXTREMAS               |
@@ -112,6 +116,10 @@ Lesões provocadas por armas brancas de lâmina longa, explosões ou fragmentos 
 
 Determinadas regiões anatômicas desafiam as regras convencionais do controle de sangramento [1, 3]:
 
+
+![Figura 2 — Aplicação técnica de colar cervical para restrição de movimento.](../imagens/Cervical-collar-application.png)
+*Figura 2 — Aplicação técnica de colar cervical para restrição de movimento. Crédito: Baedr-9439. Licença: CC0. Fonte: Wikimedia Commons.*
+
 #### 1. Região Glútea (Nádegas)
 - As artérias glúteas superior e inferior emergem diretamente da pelve através do forame isquiático maior. Lesões perfurantes nas nádegas podem sangrar para o interior da cavidade pélvica.
 - **Manejo:** A aplicação de torniquete é impossível. O tratamento obrigatório é o **Wound Packing agressivo com gaze hemostática**, direcionando o empacotamento em direção à asa do osso ilíaco, seguido de compressão com o peso do corpo [3, 5].
@@ -132,6 +140,10 @@ A amputação traumática de extremidades impõe duas missões simultâneas e in
 - Nunca faça suturas provisórias nem lave o interior dos tecidos expostos com antissépticos irritantes [1, 2].
 
 #### 2. Preservação Correta do Segmento Decepado (A Regra dos Três Recipientes):
+
+
+![Figura 3 — Proteção com curativo úmido e oclusivo em ferimento abdominal aberto.](../imagens/Open-abdominal-wound-dressed.png)
+*Figura 3 — Proteção com curativo úmido e oclusivo em ferimento abdominal aberto. Crédito: Baedr-9439. Licença: CC0. Fonte: Wikimedia Commons.*
 
 ```
 +---------------------------------------------------------------------------------+
@@ -171,6 +183,10 @@ A adaptação técnica para perfis populacionais específicos salva vidas que se
 - Em crianças maiores de 2 anos, a fita do CAT oclui perfeitamente a artéria femoral ou braquial.
 - *Cenário Crítico (Membro Muito Fino):* Se a perna de um bebê for tão fina que a fita dê duas voltas completas e a fivela bata na base plástica sem conseguir apertar, a solução mandatória é **abandonar o torniquete e aplicar Compressão Direta Contínua com Gaze Hemostática ou Wound Packing com a ponta do dedo polegar** [1, 3].
 
+
+![Figura 4 — Apresentação clínica de trauma abdominal aberto com evisceração antes da proteção úmida.](../imagens/Open-abdominal-wound-exposed.png)
+*Figura 4 — Apresentação clínica de trauma abdominal aberto com evisceração antes da proteção úmida. Crédito: Baedr-9439. Licença: CC0. Fonte: Wikimedia Commons.*
+
 #### Gestantes com Hemorragia Grave:
 - A volemia da mulher grávida no terceiro trimestre aumenta em até 50%. A perda de sangue afeta inicialmente o fluxo placentário antes de alterar a pressão da mãe.
 - Ao posicionar a gestante deitada, **incline seu corpo suavemente para o lado esquerdo (decúbito lateral esquerdo a 15–30 graus)** colocando uma almofada ou mochila sob o quadril direito. Isso impede que o útero gravídico comprima a veia cava inferior contra a coluna, mantendo o retorno venoso [2, 4].
@@ -195,23 +211,6 @@ Ao chegar a equipe de Suporte Avançado do SAMU 192 ou ao desembarcar na sala de
 
 ---
 
-### Figuras de Apoio
-
-![Figura 1 - Selo de tÃ³rax valvulado aplicado em ferimento torÃ¡cico penetrante (pneumotÃ³rax aberto).](../imagens/Vented-chest-seal.png)
-*Figura 1 - Selo de tÃ³rax valvulado aplicado em ferimento torÃ¡cico penetrante (pneumotÃ³rax aberto). CrÃ©dito: Baedr-9439. LicenÃ§a: CC0. Fonte: Wikimedia Commons.*
-
-![Figura 2 - Fisiopatologia do pneumotÃ³rax hipertensivo com colapso pulmonar e desvio mediastinal.](../imagens/Tension-pneumothorax.png)
-*Figura 2 - Fisiopatologia do pneumotÃ³rax hipertensivo com colapso pulmonar e desvio mediastinal. CrÃ©dito: Baedr-9439. LicenÃ§a: CC0. Fonte: Wikimedia Commons.*
-
-![Figura 3 - ApresentaÃ§Ã£o clÃ­nica de trauma abdominal aberto com evisceraÃ§Ã£o antes da proteÃ§Ã£o Ãºmida.](../imagens/Open-abdominal-wound-exposed.png)
-*Figura 3 - ApresentaÃ§Ã£o clÃ­nica de trauma abdominal aberto com evisceraÃ§Ã£o antes da proteÃ§Ã£o Ãºmida. CrÃ©dito: Baedr-9439. LicenÃ§a: CC0. Fonte: Wikimedia Commons.*
-
-![Figura 4 - ProteÃ§Ã£o com curativo Ãºmido e oclusivo em ferimento abdominal aberto.](../imagens/Open-abdominal-wound-dressed.png)
-*Figura 4 - ProteÃ§Ã£o com curativo Ãºmido e oclusivo em ferimento abdominal aberto. CrÃ©dito: Baedr-9439. LicenÃ§a: CC0. Fonte: Wikimedia Commons.*
-
-![Figura 5 - AplicaÃ§Ã£o tÃ©cnica de colar cervical para restriÃ§Ã£o de movimento.](../imagens/Cervical-collar-application.png)
-*Figura 5 - AplicaÃ§Ã£o tÃ©cnica de colar cervical para restriÃ§Ã£o de movimento. CrÃ©dito: Baedr-9439. LicenÃ§a: CC0. Fonte: Wikimedia Commons.*
-
 ---
 
 ## SEÇÃO 6 — QUADROS PRÁTICOS, ALGORITMOS DE TRIAGEM E MATRIZES ANATÔMICAS
@@ -225,6 +224,10 @@ Ao chegar a equipe de Suporte Avançado do SAMU 192 ou ao desembarcar na sala de
 | **Criança com Coxa Fina** | Circunferência menor que a fivela do torniquete. | Compressão direta contínua com polegares sobre o osso fêmur + gaze hemostática. | Desistir do socorro; usar cadarço de sapato ou arame fino. |
 | **Ferimento no Couro Cabeludo** | Vascularização rica; calota craniana subjacente. | Compressão direta com gaze estéril + atadura elástica em turbante. | Fazer wound packing craniano se houver suspeita de afundamento ósseo. |
 | **Múltiplos Ferimentos Graves** | Múltiplos pontos de sangramento ativo simultâneos. | Priorizar virilhas/axilas com packing e instalar torniquetes sucessivos em membros. | Tentar fazer curativos perfeitos em escoriações antes de parar os jatos. |
+
+
+![Figura 5 — Selo de tórax valvulado aplicado em ferimento torácico penetrante (pneumotórax aberto).](../imagens/Vented-chest-seal.png)
+*Figura 5 — Selo de tórax valvulado aplicado em ferimento torácico penetrante (pneumotórax aberto). Crédito: Baedr-9439. Licença: CC0. Fonte: Wikimedia Commons.*
 
 ---
 

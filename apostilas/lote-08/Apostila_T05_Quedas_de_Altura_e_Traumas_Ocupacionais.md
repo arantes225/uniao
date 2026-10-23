@@ -84,6 +84,10 @@ A prevenção é o pilar estrutural do trabalho seguro em níveis elevados:
 - **Sistema de Proteção Individual Contra Quedas (SPIQ):** Composto por elemento de fixação (ancoragem), dispositivo de retenção (cinto de segurança tipo paraquedista) e elemento de ligação (talabarte duplo com absorvedor de energia ou trava-quedas retrátil).
 - **Fator de Queda (FQ):** Relação entre a distância da queda e o comprimento do talabarte ($FQ = \frac{\text{Distância}}{\text{Comprimento}}$). O FQ varia de 0 a 2. O ponto de ancoragem deve estar sempre posicionado **acima da cabeça do trabalhador** (Fator de Queda 0 ou 1) para reduzir a distância de aceleração livre. Trabalhar com a ancoragem nos pés (Fator de Queda 2) gera forças de impacto severas na retenção que podem ultrapassar os 6 kN tolerados pelo esqueleto humano, gerando lesões viscerais mesmo sem colisão no chão.
 
+
+![Figura 1 — Cinturão paraquedista e ancoragem para prevenção de quedas em altura (NR-35).](../imagens/Worker_with_safety_harness_9248564334_.jpg)
+*Figura 1 — Cinturão paraquedista e ancoragem para prevenção de quedas em altura (NR-35). Crédito: National Institute for Occupational Safety and Health (NIOSH). Licença: Domínio público. Fonte: Wikimedia Commons.*
+
 ---
 
 ### 5.2. Mecanismos de Queda e Forças de Desaceleração
@@ -121,6 +125,10 @@ Ao encontrar um trabalhador acidentado após colisão contra o piso:
 
 - **Estabilização Cervical Absoluta:** Um socorrista deve se posicionar atrás da cabeça da vítima e segurar firmemente as laterais do crânio com ambas as mãos, mantendo a cabeça alinhada na posição anatômica neutra. Não permita movimentos de rotação, flexão ou extensão até a imobilização formal com colar cervical e prancha longa pela equipe médica.
 - **Sinais de Gravidade Imediata:** Sangramento ou saída de líquido claro pelo nariz ou ouvidos (otoliquorreia/rinoliquorreia), equimose periorbital ("olhos de guaxinim") ou retroauricular (Sinal de Battle), assimetria de pupilas (anisocoria), deformidades na bacia com instabilidade ao toque e respiração agônica ou ausente.
+
+
+![Figura 2 — Estabilização manual alinhada (in-line) da cabeça e coluna cervical no trauma.](../imagens/In-line-traction.png)
+*Figura 2 — Estabilização manual alinhada (in-line) da cabeça e coluna cervical no trauma. Crédito: Baedr-9439. Licença: CC0. Fonte: Wikimedia Commons.*
 
 ---
 
@@ -181,20 +189,6 @@ A NR-35 exige que toda empresa que atue em altura possua uma equipe de emergênc
 
 ---
 
-### Figuras de Apoio
-
-![Figura 1 - CinturÃ£o paraquedista e ancoragem para prevenÃ§Ã£o de quedas em altura (NR-35).](../imagens/Worker_with_safety_harness_9248564334_.jpg)
-*Figura 1 - CinturÃ£o paraquedista e ancoragem para prevenÃ§Ã£o de quedas em altura (NR-35). CrÃ©dito: National Institute for Occupational Safety and Health (NIOSH). LicenÃ§a: DomÃ­nio pÃºblico. Fonte: Wikimedia Commons.*
-
-![Figura 2 - EstabilizaÃ§Ã£o manual alinhada (in-line) da cabeÃ§a e coluna cervical no trauma.](../imagens/In-line-traction.png)
-*Figura 2 - EstabilizaÃ§Ã£o manual alinhada (in-line) da cabeÃ§a e coluna cervical no trauma. CrÃ©dito: Baedr-9439. LicenÃ§a: CC0. Fonte: Wikimedia Commons.*
-
-![Figura 3 - AplicaÃ§Ã£o tÃ©cnica de colar cervical para restriÃ§Ã£o de movimento.](../imagens/Cervical-collar-application.png)
-*Figura 3 - AplicaÃ§Ã£o tÃ©cnica de colar cervical para restriÃ§Ã£o de movimento. CrÃ©dito: Baedr-9439. LicenÃ§a: CC0. Fonte: Wikimedia Commons.*
-
-![Figura 4 - Manobra de rolamento em bloco mantendo o alinhamento do eixo cranioespinal.](../imagens/Rolling-a-patient.jpg)
-*Figura 4 - Manobra de rolamento em bloco mantendo o alinhamento do eixo cranioespinal. CrÃ©dito: Another-anon-artist-234. LicenÃ§a: CC0. Fonte: Wikimedia Commons.*
-
 ---
 
 ## 6. MATRIZ DE DECISÃO RÁPIDA EM TRAUMAS DE ALTURA
@@ -229,6 +223,10 @@ A NR-35 exige que toda empresa que atue em altura possua uma equipe de emergênc
 └────────────────────────────────────────────────────────┘
 ```
 
+
+![Figura 3 — Aplicação técnica de colar cervical para restrição de movimento.](../imagens/Cervical-collar-application.png)
+*Figura 3 — Aplicação técnica de colar cervical para restrição de movimento. Crédito: Baedr-9439. Licença: CC0. Fonte: Wikimedia Commons.*
+
 1. **Movimentar a Vítima Precocemente:** Tentar erguer a pessoa caída no chão para verificar se ela "consegue andar". Se houver uma vértebra fraturada instável, esse movimento desalinha o canal vertebral e lesa a medula espinhal, transformando uma fratura consolidável em paralisia irreversível (tetraplegia ou paraplegia).
 2. **Deitar a Vítima de Suspensão com Pernas Elevadas (Posição de Trendelenburg):** É o erro mais comum e fatal cometido por socorristas despreparados. Acreditando estar tratando um choque comum, deitam a vítima e levantam suas pernas. O sangue tóxico e desoxigenado acumulado nos membros inferiores retorna violentamente ao coração desfalecido, levando à assistolia ou fibrilação ventricular (*rescue death*).
 3. **Improvisar Ancoragens Frágeis:** Ancorar o cinto de segurança em eletrocalhas, tubulações de PVC ou corrimãos que não resistem a 15 kN de força mecânica.
@@ -252,6 +250,10 @@ O técnico de segurança e líder de brigada Marcelo ouviu o estrondo da telha e
 4. **Posicionamento Crucial Pós-Resgate no Solo:** A plataforma desceu com a vítima desacordada aos 13 minutos. Marcelo e os brigadistas retiraram João da plataforma. Em vez de deitá-lo de costas na horizontal, **mantiveram João sentado no chão, encostado na parede do galpão com o tronco ereto e os joelhos flexionados junto ao peito**.
 5. **Estabilização e Retorno da Consciência:** Mantendo o alinhamento da cabeça para proteger a coluna cervical e monitorando a pulsação carotídea, a equipe administrou oxigênio medicinal a 100% via máscara facial e realizou curativo compressivo estéril no corte da face. Aos 4 minutos nessa posição sentada, com o retorno gradativo e controlado do fluxo sanguíneo cerebral, João recuperou a consciência, queixando-se de formigamento nas pernas e dor de cabeça.
 6. **Transferência para o SAMU:** A equipe da Unidade de Suporte Avançado (USA) do SAMU chegou aos 18 minutos. Marcelo relatou detalhadamente: suspensão por 13 minutos, síncope por estase venosa aos 8 minutos, resgate vertical por plataforma e manutenção do paciente na posição sentada/semissentada para prevenir colapso por reperfusão aguda.
+
+
+![Figura 4 — Manobra de rolamento em bloco mantendo o alinhamento do eixo cranioespinal.](../imagens/Rolling-a-patient.jpg)
+*Figura 4 — Manobra de rolamento em bloco mantendo o alinhamento do eixo cranioespinal. Crédito: Another-anon-artist-234. Licença: CC0. Fonte: Wikimedia Commons.*
 
 ### Desfecho Clínico
 No centro de trauma hospitalar, a tomografia computadorizada de crânio e coluna não revelou fraturas ou hemorragias intracranianas. Exames de sangue mostraram discreta elevação de creatinoquinase (CK) e potássio sérico normal, reflexo do resgate rápido e do correto manejo postural pós-descida que evitou a "morte do resgate". João recebeu alta hospitalar 48 horas depois sem sequelas neurológicas ou circulatórias.

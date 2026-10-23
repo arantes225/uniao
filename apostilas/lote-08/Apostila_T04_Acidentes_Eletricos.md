@@ -59,6 +59,10 @@ A intensidade da corrente ($I$) que atravessa o corpo humano é diretamente prop
 1. **Queimadura por Arco Elétrico / Flash:** Ocorre quando a corrente salta pelo ar entre dois condutores ou entre um condutor e a terra devido à falha de isolação. O arco atinge temperaturas de até 19.000 °C (quatro vezes a temperatura da superfície solar), vaporizando metais e gerando radiação térmica brutal com onda de choque mecânica (*arc blast*), causando queimaduras térmicas extensas de segundo e terceiro graus na pele e face sem que a corrente necessariamente percorra os tecidos internos da vítima.
 2. **Queimadura por Contato Direto:** A corrente entra por um ponto do corpo (frequentemente as mãos), viaja pelos membros e sai por outro ponto aterrado (frequentemente os pés). Provoca pequenas lesões carbonizadas deprimidas de "entrada" e lesões explosivas de "saída", associadas a necrose tecidual muscular interna difusa.
 
+
+![Figura 1 — Acometimento tecidual profundo nas queimaduras graves de espessura total.](../imagens/Fourth-degree-burn.png)
+*Figura 1 — Acometimento tecidual profundo nas queimaduras graves de espessura total. Crédito: Baedr-9439. Licença: CC0. Fonte: Wikimedia Commons.*
+
 ---
 
 ## 5. DESENVOLVIMENTO DOS SUBTEMAS OFICIAIS DO CURRÍCULO
@@ -128,6 +132,10 @@ A desenergização elétrica não consiste apenas em "apagar o interruptor". Um 
 ### 5.3. Segurança Absoluta Antes de Abordar a Vítima
 
 A primeira e mais inviolável atitude de qualquer socorrista frente a uma vítima de choque elétrico é a **garantia estrita da própria segurança**. Aproximar-se impensadamente de alguém em contato com condutor energizado resulta em choque imediato do socorrista.
+
+
+![Figura 2 — Procedimento de bloqueio e etiquetagem de energias perigosas (LOTO).](../imagens/Lockout_Tagout_14853353063_.jpg)
+*Figura 2 — Procedimento de bloqueio e etiquetagem de energias perigosas (LOTO). Crédito: NAVFAC (U.S. Navy). Licença: Domínio público. Fonte: Wikimedia Commons.*
 
 ```
        ┌────────────────────────────────────────────────────────┐
@@ -214,24 +222,11 @@ O atendimento pré-hospitalar ao acidentado elétrico deve seguir uma metodologi
 3. **Avaliação da Circulação Periférica:** Monitore pulsos distais (radial e pedioso), tempo de enchimento capilar e coloração das extremidades para identificar precocemente o desenvolvimento de isquemia de membros por síndrome compartimental.
 4. **Transporte e Comunicação com o Suporte Avançado:** Toda e qualquer vítima de choque elétrico que tenha apresentado perda de consciência, formigamento persistente em membros, queimadura cutânea visível ou choque sob tensão superior a 110V deve ser formalmente encaminhada a uma unidade hospitalar com suporte de emergência para realização de eletrocardiograma (ECG) de 12 derivações e dosagem sérica de enzimas musculares (creatinoquinase - CK total e CK-MB) e eletrólitos.
 
+
+![Figura 3 — Regra dos Nove de Wallace para estimativa da Superfície Corporal Queimada (SCQ).](../imagens/Wallace-rule-of-nines.jpg)
+*Figura 3 — Regra dos Nove de Wallace para estimativa da Superfície Corporal Queimada (SCQ). Crédito: Another-anon-artist-234. Licença: CC0. Fonte: Wikimedia Commons.*
+
 ---
-
-### Figuras de Apoio
-
-![Figura 1 - SinalizaÃ§Ã£o de advertÃªncia para risco de choque elÃ©trico e arco voltaico.](../imagens/High_voltage_warning_sign_Beromuenster.JPG)
-*Figura 1 - SinalizaÃ§Ã£o de advertÃªncia para risco de choque elÃ©trico e arco voltaico. CrÃ©dito: Timberwind. LicenÃ§a: DomÃ­nio pÃºblico. Fonte: Wikimedia Commons.*
-
-![Figura 2 - Procedimento de bloqueio e etiquetagem de energias perigosas (LOTO).](../imagens/Lockout_Tagout_14853353063_.jpg)
-*Figura 2 - Procedimento de bloqueio e etiquetagem de energias perigosas (LOTO). CrÃ©dito: NAVFAC (U.S. Navy). LicenÃ§a: DomÃ­nio pÃºblico. Fonte: Wikimedia Commons.*
-
-![Figura 3 - Acometimento tecidual profundo nas queimaduras graves de espessura total.](../imagens/Fourth-degree-burn.png)
-*Figura 3 - Acometimento tecidual profundo nas queimaduras graves de espessura total. CrÃ©dito: Baedr-9439. LicenÃ§a: CC0. Fonte: Wikimedia Commons.*
-
-![Figura 4 - Regra dos Nove de Wallace para estimativa da SuperfÃ­cie Corporal Queimada (SCQ).](../imagens/Wallace-rule-of-nines.jpg)
-*Figura 4 - Regra dos Nove de Wallace para estimativa da SuperfÃ­cie Corporal Queimada (SCQ). CrÃ©dito: Another-anon-artist-234. LicenÃ§a: CC0. Fonte: Wikimedia Commons.*
-
-![Figura 5 - Posicionamento anterolateral padrÃ£o das pÃ¡s adesivas do DEA no tÃ³rax desnudo.](../imagens/Aed-electrode-placement.png)
-*Figura 5 - Posicionamento anterolateral padrÃ£o das pÃ¡s adesivas do DEA no tÃ³rax desnudo. CrÃ©dito: Baedr-9439. LicenÃ§a: CC0. Fonte: Wikimedia Commons.*
 
 ---
 
@@ -274,6 +269,10 @@ O atendimento pré-hospitalar ao acidentado elétrico deve seguir uma metodologi
 4. **Desperdiçar Tempo com Medidas Populares:** Enterrar os pés da vítima na terra para "descarregar a energia do corpo" ou dar sal e água com açúcar para beber. Essas crenças populares retardam o início da RCP e a desfibrilação pelo DEA, que são as únicas medidas capazes de salvar a vida do paciente em parada.
 5. **Esquecer o Risco de Queda de Altura:** Tratar a ocorrência apenas como choque elétrico e esquecer que a vítima estava trabalhando sobre uma escada a 3 metros de altura e despencou após o choque, omitindo a imobilização cervical e a triagem de hemorragias internas decorrentes da queda.
 
+
+![Figura 4 — Sinalização de advertência para risco de choque elétrico e arco voltaico.](../imagens/High_voltage_warning_sign_Beromuenster.JPG)
+*Figura 4 — Sinalização de advertência para risco de choque elétrico e arco voltaico. Crédito: Timberwind. Licença: Domínio público. Fonte: Wikimedia Commons.*
+
 ---
 
 ## 8. ESTUDO DE CASO PRÁTICO AMBIENTADO NA INDÚSTRIA
@@ -293,6 +292,10 @@ O operador líder e brigadista industrial Cláudio estava na bancada a 5 metros 
 6. **Início da RCP e Desfibrilação com DEA:** Cláudio posicionou suas mãos sobre o esterno de Rodrigo e iniciou compressões torácicas rítmicas e profundas a 110 compressões por minuto. Aos 90 segundos de manobras, o segundo brigadista chegou correndo com o DEA. Cláudio manteve as compressões enquanto o colega ligava o DEA e colava os eletrodos autoadesivos no tórax desnudo de Rodrigo (abaixo da clavícula direita e na linha axilar média esquerda).
 7. **Choque do DEA e Retorno da Circulação:** O DEA emitiu o comando: *"Analisando o ritmo cardíaco... Não toque no paciente!"*. Cláudio ergueu as mãos e ordenou afastamento. O aparelho declarou: *"Choque recomendado! Carregando... Pressione o botão piscante agora!"*. O brigadista disparou o choque. Imediatamente após a descarga, Cláudio reiniciou as compressões torácicas contínuas. Durante o segundo ciclo de RCP, Rodrigo esboçou tosse, inspirou profundamente e movimentou o braço direito, recuperando a respiração espontânea.
 8. **Estabilização Pós-PCR e Alinhamento:** Cláudio suspendeu as massagens, manteve Rodrigo deitado de costas com alinhamento neutro da cabeça para proteger a coluna cervical (devido ao impacto da queda no chão) e monitorou a respiração até a chegada da Unidade de Suporte Avançado (USA) do SAMU aos 12 minutos do chamado.
+
+
+![Figura 5 — Posicionamento anterolateral padrão das pás adesivas do DEA no tórax desnudo.](../imagens/Aed-electrode-placement.png)
+*Figura 5 — Posicionamento anterolateral padrão das pás adesivas do DEA no tórax desnudo. Crédito: Baedr-9439. Licença: CC0. Fonte: Wikimedia Commons.*
 
 ### Desfecho Clínico
 No hospital geral de referência, o eletrocardiograma pós-reanimação revelou ritmo sinusal com taquicardia compensatória. Rodrigo apresentava uma queimadura elétrica profunda de terceiro grau de 2 cm na polpa digital do indicador direito (ponto de entrada) e uma lesão exsudativa no antebraço esquerdo (ponto de saída). Permaneceu internado na UTI por 48 horas sob monitorização cardíaca e hidratação venosa vigorosa com soro fisiológico e bicarbonato para prevenir lesão renal por mioglobinúria. Graças à disciplina do brigadista Cláudio — que priorizou a desenergização rápida antes de tocar na vítima, iniciou a RCP sem hesitação e utilizou o DEA nos primeiros minutos —, Rodrigo sobreviveu sem nenhum déficit neurológico e teve alta hospitalar plenamente recuperado.

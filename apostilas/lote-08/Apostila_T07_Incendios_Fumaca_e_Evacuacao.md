@@ -73,6 +73,10 @@ A inalação de produtos da combustão provoca lesão tecidual por três mecanis
    - **Monóxido de Carbono ($CO$):** Bloqueia a hemoglobina sanguínea formando Carboxiemoglobina (COHb), privando cérebro e miocárdio de oxigênio.
    - **Cianeto de Hidrogênio ($HCN$):** O produto de queima mais mortífero dos incêndios modernos. Bloqueia a enzima citocromo c oxidase nas mitocôndrias. A célula para de usar oxigênio mesmo com sangue saturado, gerando acidose lática grave e parada cardiorrespiratória em poucos minutos.
 
+
+![Figura 1 — Arrasto de emergência sobre manta para evacuação rápida por único socorrista.](../imagens/Blanket-drag.png)
+*Figura 1 — Arrasto de emergência sobre manta para evacuação rápida por único socorrista. Crédito: Baedr-9439. Licença: CC0. Fonte: Wikimedia Commons.*
+
 ---
 
 ## 5. DESENVOLVIMENTO DOS SUBTEMAS OFICIAIS DO CURRÍCULO
@@ -108,6 +112,10 @@ Para conter um princípio de incêndio em seu nascedouro com segurança, a briga
 │       │ (Fritadeiras, banha) │ Cria espuma saponificada│
 └───────┴──────────────────────┴─────────────────────────┘
 ```
+
+
+![Figura 2 — Regra dos Nove de Wallace para estimativa da Superfície Corporal Queimada (SCQ).](../imagens/Wallace-rule-of-nines.jpg)
+*Figura 2 — Regra dos Nove de Wallace para estimativa da Superfície Corporal Queimada (SCQ). Crédito: Another-anon-artist-234. Licença: CC0. Fonte: Wikimedia Commons.*
 
 #### Operação do Extintor Portátil — Regra P-A-M-P
 Ao operar qualquer extintor portátil, memorize os 4 passos universais:
@@ -167,6 +175,10 @@ A deflagração ordenada do abandono depende da comunicação estruturada:
 
 ---
 
+
+![Figura 3 — Queimadura de terceiro grau (espessura total) com destruição epidérmica e dérmica.](../imagens/Full-thickness-burn.png)
+*Figura 3 — Queimadura de terceiro grau (espessura total) com destruição epidérmica e dérmica. Crédito: Baedr-9439. Licença: CC0. Fonte: Wikimedia Commons.*
+
 ### 5.5. Técnicas de Evacuação Segura em Ambientes Tomados por Fumaça
 
 Se a fumaça invadir o corredor durante o processo de evacuação:
@@ -210,24 +222,11 @@ A interface entre a resposta corporativa interna e as forças públicas de socor
 - **Recepção da Guarnição pelo Chefe da Brigada:** Ao ouvir as sirenes do caminhão de combate a incêndio (Auto Bomba Tanque - ABT), o chefe da brigada posiciona-se na portaria principal, com a planta baixa do prédio e as chaves de acesso mestres, reportando: número de andares afetados, rotas acessíveis, status da evacuação dos funcionários e localização das válvulas de corte de gás e painéis elétricos gerais.
 - **Manejo Pré-Hospitalar no Ponto de Encontro:** O socorrista de brigada deve triar os trabalhadores reunidos no Ponto de Encontro. Qualquer vítima com tosse, rouquidão, queimadura ou fuligem deve receber **oxigenioterapia a 100% sob máscara com reservatório não reinalante a 15 L/min** imediatamente, em repouso sentado, aguardando a chegada da equipe do SAMU (192) para avaliação médica e transporte prioritário.
 
+
+![Figura 4 — Queimadura de segundo grau superficial com formação de flictenas (bolhas).](../imagens/Superficial-partial-thickness-burn.png)
+*Figura 4 — Queimadura de segundo grau superficial com formação de flictenas (bolhas). Crédito: Baedr-9439. Licença: CC0. Fonte: Wikimedia Commons.*
+
 ---
-
-### Figuras de Apoio
-
-![Figura 1 - Extintor portÃ¡til para combate inicial a princÃ­pios de incÃªndio.](../imagens/Fire_extinguisher.png)
-*Figura 1 - Extintor portÃ¡til para combate inicial a princÃ­pios de incÃªndio. CrÃ©dito: OpenClipart. LicenÃ§a: CC0. Fonte: Wikimedia Commons.*
-
-![Figura 2 - Queimadura de segundo grau superficial com formaÃ§Ã£o de flictenas (bolhas).](../imagens/Superficial-partial-thickness-burn.png)
-*Figura 2 - Queimadura de segundo grau superficial com formaÃ§Ã£o de flictenas (bolhas). CrÃ©dito: Baedr-9439. LicenÃ§a: CC0. Fonte: Wikimedia Commons.*
-
-![Figura 3 - Queimadura de terceiro grau (espessura total) com destruiÃ§Ã£o epidÃ©rmica e dÃ©rmica.](../imagens/Full-thickness-burn.png)
-*Figura 3 - Queimadura de terceiro grau (espessura total) com destruiÃ§Ã£o epidÃ©rmica e dÃ©rmica. CrÃ©dito: Baedr-9439. LicenÃ§a: CC0. Fonte: Wikimedia Commons.*
-
-![Figura 4 - Regra dos Nove de Wallace para estimativa da SuperfÃ­cie Corporal Queimada (SCQ).](../imagens/Wallace-rule-of-nines.jpg)
-*Figura 4 - Regra dos Nove de Wallace para estimativa da SuperfÃ­cie Corporal Queimada (SCQ). CrÃ©dito: Another-anon-artist-234. LicenÃ§a: CC0. Fonte: Wikimedia Commons.*
-
-![Figura 5 - Arrasto de emergÃªncia sobre manta para evacuaÃ§Ã£o rÃ¡pida por Ãºnico socorrista.](../imagens/Blanket-drag.png)
-*Figura 5 - Arrasto de emergÃªncia sobre manta para evacuaÃ§Ã£o rÃ¡pida por Ãºnico socorrista. CrÃ©dito: Baedr-9439. LicenÃ§a: CC0. Fonte: Wikimedia Commons.*
 
 ---
 
@@ -268,6 +267,10 @@ A interface entre a resposta corporativa interna e as forças públicas de socor
 3. **Retornar ao Prédio para Resgatar Objetos Pessoais:** O trabalhador que chega ao térreo e resolve "voltar para pegar a carteira ou a chave do carro". Ele se depara com a camada de fumaça descendo no corredor, perde a visibilidade, desorienta-se e falece asfixiado por monóxido de carbono e cianeto.
 4. **Abrir Portas sem Testar a Temperatura com o Dorso da Mão:** Girar a maçaneta de uma sala trancada onde o fogo consome o oxigênio. A entrada brusca de ar fresco atmosférico alimenta subitamente os gases superaquecidos, deflagrando uma explosão de fogo violenta (*Backdraft*) que engole o socorrista no corredor.
 5. **Combater Fogo Grande Sozinho com Extintor Portátil:** Extintores portáteis foram projetados exclusivamente para conter **princípios de incêndio** (fogo incipiente do tamanho de uma lixeira ou monitor). Se o fogo já atingiu cortinas, forro ou móveis altos, o tempo de combate com extintor acabou: abandone a sala, feche a porta e evacue.
+
+
+![Figura 5 — Extintor portátil para combate inicial a princípios de incêndio.](../imagens/Fire_extinguisher.png)
+*Figura 5 — Extintor portátil para combate inicial a princípios de incêndio. Crédito: OpenClipart. Licença: CC0. Fonte: Wikimedia Commons.*
 
 ---
 

@@ -104,6 +104,10 @@ Para intervir com eficácia, a equipe de segurança corporativa deve compreender
 
 ### 5.1 Identificação e Classificação dos Riscos Ocupacionais (Físicos, Químicos, Biológicos, Ergonômicos e Acidentes)
 
+
+![Figura 1 — Procedimento de bloqueio e etiquetagem de energias perigosas (LOTO).](../imagens/Lockout_Tagout_14853353063_.jpg)
+*Figura 1 — Procedimento de bloqueio e etiquetagem de energias perigosas (LOTO). Crédito: NAVFAC (U.S. Navy). Licença: Domínio público. Fonte: Wikimedia Commons.*
+
 A Portaria MTE nº 3.214/1978 e a NR-01 classificam os fatores de risco ambiental em **cinco grandes grupos cromáticos padronizados** [3, 4]:
 
 | GRUPO DE RISCO | COR PADRÃO | EXEMPLOS TÍPICOS NA INDÚSTRIA | DANOS POTENCIAIS À SAÚDE |
@@ -153,6 +157,10 @@ O sistema de gestão ocupacional brasileiro é articulado por normas regulamenta
 - **NR-07 (Programa de Controle Médico de Saúde Ocupacional - PCMSO):** Sob responsabilidade do Médico do Trabalho, define os exames admissionais, periódicos e demissionais, bem como a padronização e guarda do material de primeiros socorros adequado aos riscos da atividade empresarial.
 - **NR-12 (Segurança no Trabalho em Máquinas e Equipamentos):** Estabelece requisitos técnicos mandatórios para proteções fixas e móveis intertravadas, cortinas de luz infravermelha, comandos bimanual e botões de emergência de corte de energia imediato [3, 4].
 
+
+![Figura 2 — Cinturão paraquedista e ancoragem para prevenção de quedas em altura (NR-35).](../imagens/Worker_with_safety_harness_9248564334_.jpg)
+*Figura 2 — Cinturão paraquedista e ancoragem para prevenção de quedas em altura (NR-35). Crédito: National Institute for Occupational Safety and Health (NIOSH). Licença: Domínio público. Fonte: Wikimedia Commons.*
+
 ---
 
 ### 5.4 Mapeamento do Ambiente Laboral: Mapa de Riscos e PGR
@@ -196,23 +204,16 @@ A montagem e manutenção de materiais de primeiros socorros na empresa deve ate
 
 ### 5.6 Responsabilidades Legais, Éticas e Limites de Atuação do Socorrista de Empresa
 
+
+![Figura 3 — Respirador semifacial filtrante (PFF2/N95) para biossegurança respiratória.](../imagens/Filtering-half-mask-respirator.jpg)
+*Figura 3 — Respirador semifacial filtrante (PFF2/N95) para biossegurança respiratória. Crédito: Another-anon-artist-234. Licença: CC0. Fonte: Wikimedia Commons.*
+
 O socorrista corporativo e a liderança empresarial respondem legalmente pelas suas condutas ou omissões no ambiente de trabalho [3, 6]:
 - **Omissão de Socorro (Art. 135 do Código Penal Brasileiro):** Deixar de prestar assistência, quando possível fazê-lo sem risco pessoal, à pessoa ferida ou em perigo iminente é crime punível com detenção e multa. Na empresa, os brigadistas designados possuem o dever formal de agir imediatamente.
 - **Responsabilidade Civil da Empresa (Código Civil e CLT):** A empresa é civilmente responsável por indenizações materiais e morais caso um trabalhador sofra agravamento de lesões por imperícia ou falta de equipamentos de primeiros socorros regulamentares no estabelecimento.
 - **Abertura Imediata da CAT (Comunicação de Acidente de Trabalho):** Todo acidente de trabalho, com ou sem afastamento, deve ser formalmente comunicado ao Instituto Nacional do Seguro Social (INSS) por meio da emissão da CAT até o primeiro dia útil seguinte ao da ocorrência [3, 6].
 
 ---
-
-### Figuras de Apoio
-
-![Figura 1 - Procedimento de bloqueio e etiquetagem de energias perigosas (LOTO).](../imagens/Lockout_Tagout_14853353063_.jpg)
-*Figura 1 - Procedimento de bloqueio e etiquetagem de energias perigosas (LOTO). CrÃ©dito: NAVFAC (U.S. Navy). LicenÃ§a: DomÃ­nio pÃºblico. Fonte: Wikimedia Commons.*
-
-![Figura 2 - CinturÃ£o paraquedista e ancoragem para prevenÃ§Ã£o de quedas em altura (NR-35).](../imagens/Worker_with_safety_harness_9248564334_.jpg)
-*Figura 2 - CinturÃ£o paraquedista e ancoragem para prevenÃ§Ã£o de quedas em altura (NR-35). CrÃ©dito: National Institute for Occupational Safety and Health (NIOSH). LicenÃ§a: DomÃ­nio pÃºblico. Fonte: Wikimedia Commons.*
-
-![Figura 3 - Respirador semifacial filtrante (PFF2/N95) para biosseguranÃ§a respiratÃ³ria.](../imagens/Filtering-half-mask-respirator.jpg)
-*Figura 3 - Respirador semifacial filtrante (PFF2/N95) para biosseguranÃ§a respiratÃ³ria. CrÃ©dito: Another-anon-artist-234. LicenÃ§a: CC0. Fonte: Wikimedia Commons.*
 
 ---
 
