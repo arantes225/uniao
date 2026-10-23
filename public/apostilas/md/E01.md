@@ -93,6 +93,8 @@ Ao concluir o estudo deste módulo, o gestor e educador serão capazes de:
 
 ## SEÇÃO 3 — INTRODUÇÃO E CONTEXTO HISTÓRICO DA LEI LUCAS
 
+**LEITURA GUIADA — COMECE AQUI:** A escola convive com crianças que podem se engasgar, cair ou passar mal. A Lei Lucas reforça a importância de capacitar funcionários, mas a melhor proteção depende também de rotas claras, materiais acessíveis e pessoas que saibam agir juntas.
+
 A promulgação da Lei Federal nº 13.722, em 4 de outubro de 2018, representou um marco histórico e civilizatório nas políticas de proteção à infância e à juventude no Brasil [1]. Durante décadas, o ambiente escolar brasileiro foi considerado intuitivamente como um espaço imune a emergências médicas graves, delegando-se qualquer intercorrência à espera passiva pela chegada de viaturas de socorro público.
 
 Entretanto, em setembro de 2017, durante uma excursão escolar em Cordeirópolis/SP, o estudante **Lucas Begalli Zamora**, de apenas 10 anos de idade, engasgou-se com um pedaço de cachorro-quente servido durante o lanche. Nenhuma das professoras ou monitores presentes na viagem conhecia a Manobra de Heimlich ou sabia reconhecer o sinal de asfixia grave. O socorro especializado demorou mais de 20 minutos para chegar; quando o atendimento avançado iniciou-se, o cérebro de Lucas já havia sofrido morte encefálica por anóxia prolongada [2].
@@ -106,6 +108,9 @@ A dor transformou-se em luta por meio da incansável mobilização de sua mãe, 
 ---
 
 ## SEÇÃO 4 — FUNDAMENTAÇÃO JURÍDICA E RESPONSABILIDADES INSTITUCIONAIS
+
+> [!NOTE]
+> **Por que isso acontece?** Em uma emergência, o tempo se perde quando cada adulto espera que outro tome iniciativa. Dividir funções permite que alguém cuide da vítima enquanto outra pessoa chama o serviço de urgência e organiza o acesso da equipe.
 
 ### 4.1 A Natureza Jurídica do Dever de Custódia Escolar
 Quando os pais ou responsáveis matriculam uma criança ou adolescente em um estabelecimento de ensino (público ou privado), ocorre a transferência temporária do **dever de guarda e custódia**.
@@ -246,6 +251,9 @@ Toda ocorrência na escola exige registro formal para proteção do aluno e resp
 ## SEÇÃO 7 — ERROS FREQUENTES E INFRAÇÕES LEGAIS
 
 > [!CAUTION]
+> **Erro que pode prejudicar a vítima:** A obrigação de formação em primeiros socorros não autoriza procedimentos médicos invasivos. Use RCP, DEA e desengasgo somente com segurança e conforme capacitação. A escola deve respeitar protocolos e regras locais.
+
+> [!CAUTION]
 > ### CATÁLOGO DE ERROS ADMINISTRATIVOS E PEDAGÓGICOS CRÍTICOS
 > 
 > 1. **Guardar o Kit de Primeiros Socorros trancado na gaveta do diretor que saiu da escola:**
@@ -270,6 +278,9 @@ Toda ocorrência na escola exige registro formal para proteção do aluno e resp
 ---
 
 ## SEÇÃO 8 — APLICAÇÃO PRÁTICA CONTEXTUALIZADA (ESTUDO DE CASO)
+
+> [!TIP]
+> **Decisão no caso prático:** Uma criança para de responder no pátio. A professora verifica respiração; a auxiliar aciona 192; a direção libera o portão. A cooperação evita que todos façam a mesma tarefa enquanto outra fica esquecida.
 
 ### Cenário Simulado
 *Local:* Pátio interno de uma escola municipal de educação infantil e fundamental.  

@@ -93,6 +93,8 @@ Ao concluir o estudo deste módulo, você será capaz de:
 
 ## SEÇÃO 3 — INTRODUÇÃO E CINEMÁTICA DO TRAUMA ORTOPÉDICO E NEUROLÓGICO
 
+**LEITURA GUIADA — COMECE AQUI:** Uma queda pode causar lesões visíveis, como fratura, e também danos difíceis de reconhecer, como traumatismo da coluna. Quem ajuda deve evitar movimentos desnecessários, controlar sangramentos importantes e preservar respiração.
+
 O traumatismo físico decorrente de acidentes de trânsito, acidentes de trabalho com máquinas, quedas de lajes, acidentes esportivos em academias e quedas recreativas no pátio escolar compõe uma das maiores demandas de atendimento pré-hospitalar em território brasileiro [1, 5].
 
 
@@ -112,6 +114,9 @@ A atuação do socorrista comunitário fundamenta-se em **estabilizar, proteger 
 ---
 
 ## SEÇÃO 4 — ANATOMIA E FISIOPATOLOGIA ÓSSEA, ARTICULAR E MEDULAR
+
+> [!NOTE]
+> **Por que isso acontece?** O esqueleto sustenta e protege o corpo, mas forças intensas podem quebrar ossos e lesar vasos ou nervos próximos. Por isso, alinhar um membro à força ou levantar uma vítima com suspeita de lesão cervical pode agravar a situação.
 
 ### 4.1 A Estrutura Óssea e o Sangramento Oculto das Fraturas
 O esqueleto humano não é uma estrutura mineral inerte; os ossos são órgãos vivos altamente vascularizados, que contêm no seu interior a medula óssea hematopoiética e são circundados por uma membrana fibrosa ricamente inervada denominada periósteo (responsável pela dor excruciante nas fraturas) [6].
@@ -276,6 +281,9 @@ A movimentação de uma vítima de trauma só deve ser executada se houver perig
 ## SEÇÃO 7 — ERROS FREQUENTES E CONDUTAS PROIBIDAS
 
 > [!CAUTION]
+> **Erro que pode prejudicar a vítima:** Fratura exposta, deformidade acentuada, perda de movimento, dedos frios ou dor no pescoço após queda exigem avaliação urgente. Não empurre osso para dentro da pele nem tente 'desentortar' o membro.
+
+> [!CAUTION]
 > ### CATÁLOGO DE ERROS GRAVES EM TRAUMATISMOS
 > 
 > 1. **Tentar recolocar ossos expostos ou articulações luxadas no lugar:**
@@ -305,6 +313,9 @@ A movimentação de uma vítima de trauma só deve ser executada se houver perig
 ---
 
 ## SEÇÃO 8 — APLICAÇÃO PRÁTICA CONTEXTUALIZADA (ESTUDO DE CASO)
+
+> [!TIP]
+> **Decisão no caso prático:** Depois de cair de uma escada, um trabalhador refere dor forte no pescoço. Você pede que ele permaneça parado, evita movimentá-lo, chama 192 e observa respiração e nível de consciência.
 
 ### Cenário Simulado
 *Local:* Quadra de esportes de um condomínio residencial.  
