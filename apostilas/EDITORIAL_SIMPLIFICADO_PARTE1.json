@@ -1,0 +1,122 @@
+{
+  "A01": {
+    "intro": "Uma academia é um ambiente de saúde, mas também reúne pesos, equipamentos móveis e pessoas fazendo esforço. Se alguém passa mal ou se machuca, o primeiro passo não é descobrir a doença: é interromper o risco, observar a pessoa e pedir ajuda. Aprenda a organizar essa resposta antes de precisar usá-la.",
+    "mecanismo": "Durante o exercício, o coração bate mais rápido, a respiração acelera e a temperatura sobe. Essas mudanças costumam ser normais. Dor no peito, confusão, queda inesperada e falta de ar intensa não devem ser atribuídas automaticamente ao cansaço.",
+    "alerta": "Uma pessoa que caiu perto de um aparelho pode ser atingida por pesos ou peças em movimento. Garanta a segurança do local antes do contato. Se ela não responde e não respira normalmente, a prioridade é RCP e DEA, não investigar o motivo do desmaio.",
+    "decisao": "Um aluno cai durante um exercício. Você primeiro afasta os riscos e verifica resposta e respiração. Se ele estiver inconsciente e sem respiração normal, peça 192, comece RCP e solicite o DEA. Outra pessoa libera a entrada da equipe."
+  },
+  "A02": {
+    "intro": "Uma parada cardíaca pode parecer apenas um desmaio. A diferença que importa ao leigo é observar se a pessoa responde e respira normalmente. Se não responde e não respira normalmente, comece a ressuscitação enquanto alguém chama o socorro.",
+    "mecanismo": "O coração leva sangue e oxigênio ao cérebro. Quando ele deixa de bombear de modo eficaz, o cérebro rapidamente perde esse suprimento. As compressões ajudam a manter alguma circulação; o DEA identifica ritmos que podem precisar de choque.",
+    "alerta": "Suspiros espaçados, boca abrindo e ruídos respiratórios ocasionais podem ser gasping. Isso não equivale à respiração normal. Não espere encontrar pulso: para o leigo, inconsciência e ausência de respiração normal indicam início imediato de RCP.",
+    "decisao": "Durante a corrida na esteira, um adulto cai e apresenta apenas suspiros irregulares. O instrutor desliga o aparelho, verifica segurança e resposta, aciona 192 em viva-voz e inicia compressões. Um colega traz o DEA sem interromper o atendimento."
+  },
+  "A03": {
+    "intro": "Nem toda dor após o treino é apenas uma distensão. Uma queda, torção ou pancada pode romper ligamentos, deslocar articulações ou quebrar ossos. Para quem presta os primeiros socorros, importa reconhecer sinais de gravidade e evitar movimentos que aumentem a lesão.",
+    "mecanismo": "Os ossos sustentam o corpo; os ligamentos mantêm a estabilidade das articulações; os músculos produzem movimento. Quando uma força ultrapassa a resistência desses tecidos, aparecem dor, inchaço ou deformidade. A aparência da lesão nem sempre revela sua gravidade.",
+    "alerta": "Não tente colocar uma articulação ou osso de volta no lugar. Pode haver lesão de nervos e vasos sanguíneos. Dor intensa, deformidade, perda de sensibilidade, dedos frios ou osso exposto exigem avaliação urgente.",
+    "decisao": "Uma aluna cai com o halter e o antebraço fica deformado. Você remove o peso apenas se isso for seguro, pede que ela mantenha o braço parado, apoia o membro sem forçar e aciona 192 conforme a gravidade."
+  },
+  "A04": {
+    "intro": "Durante o exercício, duas emergências podem começar com fraqueza e confusão: queda da glicose e doença causada por calor. Não tente adivinhar uma delas só pela aparência. Observe a consciência, interrompa o esforço e escolha uma medida que não coloque a pessoa em risco.",
+    "mecanismo": "A glicose é combustível importante para o cérebro. O calor produzido pelos músculos precisa ser eliminado pela pele e pelo suor. Quando falta glicose ou o corpo perde a capacidade de controlar a temperatura, podem surgir confusão, convulsão e colapso.",
+    "alerta": "Nunca ofereça água, açúcar ou comida a alguém inconsciente ou incapaz de engolir. Em suspeita de intermação com alteração mental, inicie resfriamento e ligue 192 sem esperar por um termômetro.",
+    "decisao": "Em uma aula ao ar livre, um atleta fica confuso e cambaleia num dia muito quente. A equipe interrompe o esforço, leva-o para área segura, aciona 192 e começa a resfriar a pele enquanto acompanha sua respiração."
+  },
+  "A05": {
+    "intro": "No afogamento, a primeira regra é evitar uma segunda vítima. Pessoas em perigo na água nem sempre conseguem pedir socorro. Quem está em terra deve buscar alcance e flutuação antes de considerar qualquer entrada na água.",
+    "mecanismo": "Quando a água impede a entrada de ar nos pulmões, o organismo sofre falta de oxigênio. Por isso, as ventilações têm papel especialmente importante na ressuscitação após afogamento. O resgate só pode preceder a RCP quando pode ser feito sem colocar o socorrista em risco.",
+    "alerta": "Não entre em piscina profunda, rio ou mar para salvar alguém se você não tem preparo e condições seguras. Lance um objeto flutuante, use vara ou corda e acione 193. Não tente tirar água dos pulmões pressionando a barriga.",
+    "decisao": "Uma criança afunda numa piscina. Um responsável avisa o salva-vidas e lança apoio flutuante. Após retirada segura, verifica-se a respiração. Se a criança não responder e não respirar normalmente, iniciam-se RCP e ventilações conforme treinamento, com o 192 acionado."
+  },
+  "A06": {
+    "intro": "Saber fazer RCP é importante; conseguir fazê-la no momento certo depende também de organização. Em academias, a equipe precisa saber quem chama ajuda, quem traz o DEA e por onde a ambulância entra. Um plano simples e praticado reduz a confusão.",
+    "mecanismo": "A resposta à parada cardíaca envolve tarefas simultâneas. Enquanto uma pessoa comprime o tórax, outra chama a emergência e outra busca o desfibrilador. Sem divisão prévia de funções, essas atividades podem atrasar e competir entre si.",
+    "alerta": "Não confunda uma recomendação de segurança com obrigação legal universal. A exigência de DEA varia conforme as leis locais. Simulados de choque devem usar equipamentos de treinamento, nunca choque real em voluntários.",
+    "decisao": "Durante um simulado, o aluno está no terceiro piso e o DEA, na recepção. A equipe avalia se o acesso é rápido, se alguém conhece o endereço para informar ao SAMU e se o percurso da maca está livre."
+  },
+  "C01": {
+    "intro": "Primeiros socorros não são tentar fazer medicina no lugar do hospital. São ações iniciais para proteger a vida até que chegue ajuda especializada. Você começa pela segurança do local e pela respiração da vítima; o restante depende do que encontrar.",
+    "mecanismo": "O cérebro e outros órgãos precisam de sangue com oxigênio circulando continuamente. Uma parada cardíaca interrompe essa entrega. Sangramento grave também diminui o volume de sangue disponível. Reconhecer essas situações ajuda a priorizar as primeiras ações.",
+    "alerta": "Não se aproxime de fogo, fios elétricos, gás ou violência para prestar ajuda. Nesses casos, acione o resgate e preserve a própria segurança. Se a cena for segura, não deixe uma pessoa inconsciente sem avaliar sua respiração.",
+    "decisao": "Você encontra uma pessoa caída na calçada. Antes de tocar, observa o tráfego. Depois chama a vítima, verifica se respira normalmente e liga 192. A resposta seguinte depende dessa avaliação, não da aparência do ferimento."
+  },
+  "C02": {
+    "intro": "Antes de tocar em uma vítima, observe o que aconteceu ao redor. Uma pessoa pode ter caído por vazamento de gás, corrente elétrica ou fumaça. Aproximar-se sem reconhecer o perigo pode produzir outra emergência.",
+    "mecanismo": "Riscos de uma cena podem atingir também o socorrista: gases podem prejudicar a respiração, eletricidade pode atravessar o corpo e o tráfego pode causar novos impactos. Equipamentos de proteção reduzem alguns riscos, mas não tornam segura uma área perigosa.",
+    "alerta": "Luvas comuns e máscara cirúrgica não protegem contra atmosfera sem oxigênio nem contra produtos industriais desconhecidos. Não entre em espaços confinados e não toque em cabos energizados. Avise o Corpo de Bombeiros.",
+    "decisao": "Um funcionário está desacordado no fundo de uma caixa d'água. Mesmo ouvindo pedidos de ajuda, você não entra. Afasta curiosos, chama 193, informa o tipo de local e aguarda a equipe treinada."
+  },
+  "C03": {
+    "intro": "Uma ligação clara faz parte do salvamento. O atendente precisa localizar a emergência e saber se alguém está sem respirar ou sangrando muito. Não é necessário conhecer nomes de doenças: relate o que você vê.",
+    "mecanismo": "O serviço de urgência organiza recursos a partir das informações recebidas. Endereço, acesso, número de vítimas e respiração são dados mais úteis que hipóteses diagnósticas. O atendente também pode orientar medidas iniciais enquanto a equipe se desloca.",
+    "alerta": "Diga a cidade, o endereço completo e um ponto de referência. Não desligue antes de receber orientação. Se puder, use viva-voz para continuar ajudando sem abandonar a vítima.",
+    "decisao": "Ao ligar 192, diga: 'Estou na escola da Rua X, número Y. Uma criança não responde e não respira normalmente. Há um funcionário iniciando RCP. O portão lateral estará aberto'."
+  },
+  "C04": {
+    "intro": "A avaliação inicial de uma pessoa em emergência pode começar com três perguntas: o lugar é seguro? A pessoa responde? Ela respira normalmente? Essas respostas orientam as primeiras ações sem exigir aparelhos ou diagnóstico.",
+    "mecanismo": "Quando o cérebro recebe pouco sangue ou oxigênio, a pessoa pode ficar confusa ou perder a consciência. Uma respiração apenas ocasional ou em suspiros também pode ocorrer na parada cardíaca. O socorrista deve observar sinais simples, não tentar confirmar uma doença.",
+    "alerta": "Não perca tempo procurando o pulso no pescoço se você é leigo. Uma pessoa inconsciente e sem respiração normal precisa de RCP e acionamento do 192. Não confunda suspiros agônicos com respiração eficaz.",
+    "decisao": "Uma pessoa cai, abre a boca algumas vezes, mas não responde. Você verifica segurança, chama pelo nome e observa a respiração por até dez segundos. Se ela não for normal, aciona 192 e inicia compressões."
+  },
+  "C05": {
+    "intro": "RCP significa ajudar o sangue a circular quando o coração deixa de bombear de modo eficaz. Ela não substitui a ambulância e não garante que a pessoa sobreviva. Sua importância está em não perder os minutos anteriores à chegada da equipe.",
+    "mecanismo": "Cada compressão aperta o tórax e ajuda a impulsionar sangue para o cérebro e o coração. O relaxamento completo entre compressões permite que o tórax retorne e o sangue volte a preencher o circuito. Por isso, ritmo, profundidade e poucas interrupções importam.",
+    "alerta": "Adulto inconsciente e sem respiração normal: ligue 192 e inicie RCP. Para quem não sabe ventilar, compressões contínuas são uma opção adequada. Nunca deixe de comprimir só porque o adulto emite suspiros ocasionais.",
+    "decisao": "Num terminal de ônibus, um passageiro desaba e não respira normalmente. Você começa compressões; outra pessoa chama 192 e busca o DEA. Quando o aparelho chega, seguem as instruções de voz sem pausas desnecessárias."
+  },
+  "C06": {
+    "intro": "O DEA é o desfibrilador que pode ser usado por pessoas treinadas e também por leigos seguindo as instruções do aparelho. Ele analisa o ritmo do coração e indica quando o choque pode ajudar. Mesmo com DEA, as compressões continuam essenciais.",
+    "mecanismo": "Algumas paradas cardíacas têm um ritmo elétrico desorganizado, que impede o bombeamento eficaz. Em ritmos específicos, um choque pode interromper essa atividade e permitir recuperação do controle elétrico. O DEA não aplica choque em todas as paradas.",
+    "alerta": "Se o aparelho indicar análise ou choque, ninguém deve tocar na vítima. Se ele não indicar choque, retome compressões quando instruído. Não retire as pás após cada ciclo.",
+    "decisao": "Ao receber o DEA, ligue-o. Um colega continua as compressões enquanto você expõe o tórax e prepara as pás. Quando a voz mandar afastar, verifique visualmente que ninguém está tocando na pessoa."
+  },
+  "C07": {
+    "intro": "O engasgo grave acontece quando algo bloqueia a passagem de ar. Uma pessoa que tosse com força pode conseguir eliminar o objeto sozinha. Já quem não consegue falar, chorar ou respirar precisa de ajuda imediata, com técnica adequada à idade.",
+    "mecanismo": "As pancadas nas costas e os impulsos abdominais ou torácicos tentam movimentar ar e deslocar o objeto que impede a respiração. No lactente, as compressões abdominais podem causar lesões; por isso, a técnica usa pancadas dorsais e impulsos torácicos.",
+    "alerta": "Em obstrução grave, alterne cinco pancadas nas costas e cinco compressões abdominais em adultos e crianças maiores de um ano. Para bebês, são cinco pancadas dorsais e cinco impulsos torácicos com a base de uma mão. Não faça varredura cega na boca.",
+    "decisao": "Durante o lanche, uma criança de três anos não consegue tossir nem falar. Um adulto pede 192 e inicia a sequência de cinco pancadas nas costas e cinco compressões abdominais. Se ela desmaiar, a conduta muda para RCP."
+  },
+  "C08": {
+    "intro": "Dor no peito e sinais de AVC são situações em que o tempo importa. Quem presta primeiros socorros não precisa diferenciar todos os tipos de infarto ou AVC. Precisa reconhecer sinais preocupantes, acionar 192 e evitar atrasos.",
+    "mecanismo": "O coração e o cérebro precisam de circulação contínua. Quando uma artéria deixa de fornecer sangue, o tecido pode sofrer lesão. O tratamento hospitalar varia conforme a causa; oferecer remédios por conta própria pode atrapalhar.",
+    "alerta": "Boca torta, fraqueza em um braço ou fala alterada de início súbito são sinais de AVC. Anote a última hora em que a pessoa foi vista bem. Não dê comida, água ou aspirina em suspeita de AVC.",
+    "decisao": "Uma professora começa a falar de forma incompreensível e um braço fica fraco. Os colegas registram a hora de início, ligam 192 e não tentam fazê-la caminhar ou beber água enquanto aguardam orientações."
+  },
+  "C09": {
+    "intro": "Falta de ar, alergia grave e queda da glicose podem piorar rapidamente. A resposta depende dos sinais: observar a respiração, reconhecer alterações da consciência e identificar se há um plano de emergência e medicamentos já prescritos.",
+    "mecanismo": "Na asma, os brônquios se estreitam e o ar encontra dificuldade para passar. Na anafilaxia, a reação alérgica pode comprometer respiração e circulação. Na hipoglicemia, o cérebro pode ficar sem glicose suficiente para funcionar.",
+    "alerta": "Não ofereça alimentos ou líquidos a quem não engole com segurança. Um autoinjetor prescrito deve ser usado conforme o plano individual e as instruções do fabricante. Não improvise adrenalina em seringa para uma emergência.",
+    "decisao": "Uma pessoa desenvolve placas na pele, rouquidão e falta de ar após comer. Você chama 192, localiza o autoinjetor que lhe foi prescrito, segue o plano individual e acompanha consciência e respiração até o resgate."
+  },
+  "C10": {
+    "intro": "Quando um ferimento sangra, agir cedo pode salvar a vida. Antes de distinguir artérias e veias, observe a quantidade: o sangue está escorrendo continuamente, encharcando roupas ou formando poça? Nesses casos, pressão direta é a primeira medida.",
+    "mecanismo": "Um vaso rompido permite a saída de sangue. Ao pressionar diretamente o ferimento, você comprime a região do vaso e favorece a formação de um coágulo. Levantar o pano repetidamente pode desfazer parte dessa contenção.",
+    "alerta": "Não tente identificar gravidade apenas pela cor do sangue. Não retire objetos profundamente encravados. Em sangramento intenso de braço ou perna, torniquete comercial pode ser necessário para pessoa treinada.",
+    "decisao": "Um vidro corta profundamente o braço de um colega e a toalha logo fica ensopada. Você começa compressão direta firme, pede o 192 e solicita material adicional sem retirar a pressão."
+  },
+  "C11": {
+    "intro": "Uma queda pode causar lesões visíveis, como fratura, e também danos difíceis de reconhecer, como traumatismo da coluna. Quem ajuda deve evitar movimentos desnecessários, controlar sangramentos importantes e preservar respiração.",
+    "mecanismo": "O esqueleto sustenta e protege o corpo, mas forças intensas podem quebrar ossos e lesar vasos ou nervos próximos. Por isso, alinhar um membro à força ou levantar uma vítima com suspeita de lesão cervical pode agravar a situação.",
+    "alerta": "Fratura exposta, deformidade acentuada, perda de movimento, dedos frios ou dor no pescoço após queda exigem avaliação urgente. Não empurre osso para dentro da pele nem tente 'desentortar' o membro.",
+    "decisao": "Depois de cair de uma escada, um trabalhador refere dor forte no pescoço. Você pede que ele permaneça parado, evita movimentá-lo, chama 192 e observa respiração e nível de consciência."
+  },
+  "C12": {
+    "intro": "Queimaduras, intoxicações e acidentes com animais peçonhentos têm uma pergunta em comum: a fonte do risco ainda está presente? Antes de tratar a lesão, afaste-se do perigo. Depois faça apenas as medidas simples indicadas para aquele agente.",
+    "mecanismo": "Calor, substâncias químicas e toxinas podem danificar tecidos por mecanismos diferentes. Por isso, neutralizar um produto químico na pele ou aplicar receitas caseiras numa picada pode piorar a lesão. O primeiro socorro depende da natureza do risco.",
+    "alerta": "Em queimadura térmica, use água corrente fresca e procure atendimento quando houver sinais de gravidade. Em picadas de cobras, não faça cortes, sucção ou torniquete. Em gás ou produto desconhecido, não entre na área contaminada.",
+    "decisao": "Alguém derrama produto de limpeza concentrado nos olhos. Primeiro afasta-se a fonte e pede-se ajuda; em local seguro, começa-se irrigação abundante com água, seguindo a ficha do produto e orientação da emergência."
+  },
+  "E01": {
+    "intro": "A escola convive com crianças que podem se engasgar, cair ou passar mal. A Lei Lucas reforça a importância de capacitar funcionários, mas a melhor proteção depende também de rotas claras, materiais acessíveis e pessoas que saibam agir juntas.",
+    "mecanismo": "Em uma emergência, o tempo se perde quando cada adulto espera que outro tome iniciativa. Dividir funções permite que alguém cuide da vítima enquanto outra pessoa chama o serviço de urgência e organiza o acesso da equipe.",
+    "alerta": "A obrigação de formação em primeiros socorros não autoriza procedimentos médicos invasivos. Use RCP, DEA e desengasgo somente com segurança e conforme capacitação. A escola deve respeitar protocolos e regras locais.",
+    "decisao": "Uma criança para de responder no pátio. A professora verifica respiração; a auxiliar aciona 192; a direção libera o portão. A cooperação evita que todos façam a mesma tarefa enquanto outra fica esquecida."
+  },
+  "E02": {
+    "intro": "Crianças podem parar de respirar antes de sofrer parada cardíaca. Por isso, a RCP pediátrica combina compressões e, sempre que possível para quem foi treinado, ventilações. O primeiro passo é reconhecer rapidamente inconsciência e respiração anormal.",
+    "mecanismo": "O coração da criança depende de oxigenação adequada. Compressões ajudam a circular sangue; ventilações ajudam a levar oxigênio aos pulmões. A técnica muda com o tamanho da vítima, especialmente entre bebê e criança maior.",
+    "alerta": "Nas diretrizes de 2025, a compressão torácica do lactente usa a base de uma mão ou dois polegares envolvendo o tórax, não a antiga técnica de dois dedos. Use manequins apropriados para praticar profundidade, ritmo e ventilações.",
+    "decisao": "Um bebê da creche está inconsciente e não respira normalmente. A cuidadora pede ajuda e liga 192 em viva-voz; inicia RCP segundo seu treinamento. Outro funcionário traz o DEA e chama os responsáveis."
+  }
+}
