@@ -33,6 +33,40 @@
 
 ---
 
+## GUIA DE ATUAÇÃO — PARA QUEM NÃO É DA ÁREA DA SAÚDE
+
+> **EM UMA EMERGÊNCIA REAL:** Proteja-se, peça ajuda e ligue **192 (SAMU)**. Para fogo, resgate em altura, água, espaço confinado ou ambiente perigoso, ligue **193 (Bombeiros)**. Diga o endereço e siga as instruções da central. Este roteiro orienta as primeiras ações, mas não substitui o treino supervisionado das técnicas práticas.
+
+### Situação: Queimadura, intoxicação, calor, frio e animais peçonhentos
+
+**Reconheça os sinais:** Exposição a produto perigoso, queimadura, confusão pelo calor, hipotermia ou picada com sintomas gerais.
+
+### O que fazer — passo a passo
+
+1. Afaste a pessoa do risco somente se puder fazê-lo sem se expor.
+2. Em fogo, gás, eletricidade ou produto desconhecido, ligue 193 e 192. Isole a área.
+3. Em queimadura térmica, resfrie com água corrente fresca por cerca de 20 minutos; cubra com material limpo.
+4. Em acidente químico na pele ou nos olhos, retire a fonte com proteção adequada e lave com água abundante; siga orientações do produto e centro toxicológico.
+5. Em suspeita de intermação, inicie resfriamento rápido e acione 192.
+6. Em acidente com animal peçonhento, mantenha repouso, retire adornos apertados e procure urgência.
+7. Se a pessoa não responde e não respira normalmente, inicie RCP quando a cena estiver segura.
+
+### Não faça isto
+
+Não aplique gelo diretamente em queimaduras. Não faça cortes, sucção, torniquete ou remédio caseiro em picadas.
+
+### Exercício prático de aprendizagem
+
+Apresente três cartões: queimadura térmica, produto químico e picada. O aluno identifica a primeira ação.
+
+**Ao entregar a vítima:** informe horário de início, mudanças na respiração e na consciência, riscos e medidas aplicadas.
+
+**Limites:** não faça procedimentos invasivos, administração de fármacos não prescritos, resgates técnicos ou intervenções que dependam de habilitação profissional. Pratique presencialmente RCP, DEA, controle de sangramento e desengasgo em manequins antes de assumir atendimento.
+
+**Referências operacionais:** Ministério da Saúde — SAMU 192 (https://www.gov.br/saude/pt-br/composicao/saes/samu-192/samu-192); AHA/AAP — RCP e primeiros socorros 2025 (https://cpr.heart.org/en/resuscitation-science/cpr-and-ecc-guidelines); AHA/Cruz Vermelha — Primeiros Socorros 2024 (https://cpr.heart.org/en/resuscitation-science/2024-first-aid-guidelines).
+
+---
+
 ## SEÇÃO 1 — EM 30 SEGUNDOS
 
 > **VISÃO RÁPIDA DE SOBREVIVÊNCIA**

@@ -33,6 +33,40 @@
 
 ---
 
+## GUIA DE ATUAÇÃO — PARA QUEM NÃO É DA ÁREA DA SAÚDE
+
+> **EM UMA EMERGÊNCIA REAL:** Proteja-se, peça ajuda e ligue **192 (SAMU)**. Para fogo, resgate em altura, água, espaço confinado ou ambiente perigoso, ligue **193 (Bombeiros)**. Diga o endereço e siga as instruções da central. Este roteiro orienta as primeiras ações, mas não substitui o treino supervisionado das técnicas práticas.
+
+### Situação: Sangramento externo: compressão e chamada de ajuda
+
+**Reconheça os sinais:** Sangue escorre continuamente, ensopa roupas ou forma poça; ferida extensa; pessoa pálida ou confusa.
+
+### O que fazer — passo a passo
+
+1. Verifique segurança e use luvas, se disponíveis.
+2. Localize o sangramento. Peça a alguém para ligar 192.
+3. Pressione diretamente o ponto que sangra com gaze ou pano limpo, usando força firme e constante.
+4. Mantenha a pressão. Se o material encharcar, acrescente outro sem interromper a compressão.
+5. Se houver sangramento ameaçador à vida em braço ou perna, aplique torniquete comercial se disponível e você souber utilizá-lo.
+6. Anote a hora do torniquete. Não o afrouxe sem orientação da equipe de emergência.
+7. Proteja a pessoa do frio e observe sua resposta e respiração.
+
+### Não faça isto
+
+Não use garrote fino. Não retire objetos profundamente encravados. Não espere o sangue mudar de cor para agir.
+
+### Exercício prático de aprendizagem
+
+Pratique pressão contínua sobre simulador com sangue artificial, sem levantar o curativo para 'olhar'.
+
+**Ao entregar a vítima:** informe horário de início, mudanças na respiração e na consciência, riscos e medidas aplicadas.
+
+**Limites:** não faça procedimentos invasivos, administração de fármacos não prescritos, resgates técnicos ou intervenções que dependam de habilitação profissional. Pratique presencialmente RCP, DEA, controle de sangramento e desengasgo em manequins antes de assumir atendimento.
+
+**Referências operacionais:** Ministério da Saúde — SAMU 192 (https://www.gov.br/saude/pt-br/composicao/saes/samu-192/samu-192); AHA/AAP — RCP e primeiros socorros 2025 (https://cpr.heart.org/en/resuscitation-science/cpr-and-ecc-guidelines); AHA/Cruz Vermelha — Primeiros Socorros 2024 (https://cpr.heart.org/en/resuscitation-science/2024-first-aid-guidelines).
+
+---
+
 ## SEÇÃO 1 — EM 30 SEGUNDOS
 
 > **VISÃO RÁPIDA DE SOBREVIVÊNCIA**

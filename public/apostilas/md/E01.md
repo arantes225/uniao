@@ -33,12 +33,45 @@
 
 ---
 
+## GUIA DE ATUAÇÃO — PARA QUEM NÃO É DA ÁREA DA SAÚDE
+
+> **EM UMA EMERGÊNCIA REAL:** Proteja-se, peça ajuda e ligue **192 (SAMU)**. Para fogo, resgate em altura, água, espaço confinado ou ambiente perigoso, ligue **193 (Bombeiros)**. Diga o endereço e siga as instruções da central. Este roteiro orienta as primeiras ações, mas não substitui o treino supervisionado das técnicas práticas.
+
+### Situação: Lei Lucas: a primeira resposta na escola
+
+**Reconheça os sinais:** Aluno cai, engasga, convulsiona, sofre trauma ou fica sem responder em sala, pátio ou refeitório.
+
+### O que fazer — passo a passo
+
+1. Um adulto assume a liderança e verifica a segurança da cena.
+2. Outro liga 192 ou 193 e avisa direção e responsáveis conforme protocolo escolar.
+3. Verifique resposta e respiração. Se não houver respiração normal, inicie RCP e busque DEA.
+4. Em engasgo grave, siga a técnica específica à idade. Em sangramento grave, pressione diretamente.
+5. Afaste alunos curiosos e mantenha acesso livre à ambulância.
+6. Registre horários e fatos sem atrasar o atendimento. Transmita à equipe médica.
+
+### Não faça isto
+
+Não confunda treinamento anual exigido pela Lei Lucas com autorização para fazer procedimentos médicos invasivos.
+
+### Exercício prático de aprendizagem
+
+Simule atendimento no refeitório e distribuição de funções entre professor, auxiliar e direção.
+
+**Ao entregar a vítima:** informe horário de início, mudanças na respiração e na consciência, riscos e medidas aplicadas.
+
+**Limites:** não faça procedimentos invasivos, administração de fármacos não prescritos, resgates técnicos ou intervenções que dependam de habilitação profissional. Pratique presencialmente RCP, DEA, controle de sangramento e desengasgo em manequins antes de assumir atendimento.
+
+**Referências operacionais:** Ministério da Saúde — SAMU 192 (https://www.gov.br/saude/pt-br/composicao/saes/samu-192/samu-192); AHA/AAP — RCP e primeiros socorros 2025 (https://cpr.heart.org/en/resuscitation-science/cpr-and-ecc-guidelines); AHA/Cruz Vermelha — Primeiros Socorros 2024 (https://cpr.heart.org/en/resuscitation-science/2024-first-aid-guidelines).
+
+---
+
 ## SEÇÃO 1 — EM 30 SEGUNDOS
 
 > **VISÃO RÁPIDA DE SOBREVIVÊNCIA**
 > 1. **O que é a Lei Lucas (Lei Federal nº 13.722/2018):** Legislação nacional que torna **obrigatória a capacitação em noções básicas de primeiros socorros de professores e funcionários** de todos os estabelecimentos de ensino públicos e privados de educação básica e de recreação infantil [1].
 > 2. **Origem da lei:** Criada em memória do menino Lucas Begalli Zamora, de 10 anos, que faleceu em 2017 vítima de asfixia por engasgo durante um passeio escolar em Campinas/SP, sem que houvesse nenhum adulto capacitado para realizar a manobra básica de desengasgo [2].
-> 3. **Cursos periódicos obrigatórios:** O treinamento escolar não pode ser pontual ou único; a lei exige **recertificação periódica (usualmente anual)** para manter as equipes aptas frente à rotatividade funcional [1, 3].
+> 3. **Oferta anual de capacitação:** A Lei Lucas prevê curso anual de capacitação ou reciclagem de parte dos professores e funcionários, em proporção adequada ao porte da escola. Consulte a regulamentação local.
 > 4. **Composição da equipe escolar capacitada:** A escola deve possuir uma proporção mínima de colaboradores certificados presentes em todos os turnos de funcionamento, incluindo pátios, passeios externos e excursões pedagógicas [1].
 > 5. **O Kit Escolar não contém remédios:** O kit de primeiros socorros da escola destina-se a contenção física de sangramentos, curativos, imobilização e barreiras biológicas. **É vedado manter analgésicos, antitérmicos ou xaropes de administração livre** sem receita nominal arquivada e autorização expressa dos pais [4].
 > 6. **Responsabilidade civil e administrativa:** Estabelecimentos de ensino que descumprirem a Lei Lucas sofrem penalidades graduadas: notificação formal, multa pecuniária e até **cassação do alvará de funcionamento** ou fechamento da unidade escolar [1].
