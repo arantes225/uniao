@@ -9,8 +9,8 @@ const schoolPatients = [
     detail: 'Equipe pedagógica',
     color: 'teal',
     poses: {
-      sentada: '/simulador/personagens/escola-v20261022/professora-sentada.png',
-      deitada: '/simulador/personagens/escola-v20261022/professora-deitada.png'
+      sentada: '/simulador/personagens/escola-v20261022-realista/professora-sentada.png',
+      deitada: '/simulador/personagens/escola-v20261022-realista/professora-deitada.png'
     }
   },
   {
@@ -19,8 +19,8 @@ const schoolPatients = [
     detail: 'Equipe de apoio',
     color: 'amber',
     poses: {
-      sentada: '/simulador/personagens/escola-v20261022/zelador-sentado.png',
-      deitada: '/simulador/personagens/escola-v20261022/zelador-deitado.png'
+      sentada: '/simulador/personagens/escola-v20261022-realista/zelador-sentado.png',
+      deitada: '/simulador/personagens/escola-v20261022-realista/zelador-deitado.png'
     }
   },
   {
@@ -29,8 +29,8 @@ const schoolPatients = [
     detail: 'Idade escolar',
     color: 'violet',
     poses: {
-      sentada: '/simulador/personagens/escola-v20261022/crianca-menina-sentada.png',
-      deitada: '/simulador/personagens/escola-v20261022/crianca-menina-deitada.png'
+      sentada: '/simulador/personagens/escola-v20261022-realista/crianca-menina-sentada.png',
+      deitada: '/simulador/personagens/escola-v20261022-realista/crianca-menina-deitada.png'
     }
   },
   {
@@ -39,8 +39,8 @@ const schoolPatients = [
     detail: 'Idade escolar',
     color: 'blue',
     poses: {
-      sentada: '/simulador/personagens/escola-v20261022/crianca-menino-sentado.png',
-      deitada: '/simulador/personagens/escola-v20261022/crianca-menino-deitado.png'
+      sentada: '/simulador/personagens/escola-v20261022-realista/crianca-menino-sentado.png',
+      deitada: '/simulador/personagens/escola-v20261022-realista/crianca-menino-deitado.png'
     }
   },
   {
@@ -49,8 +49,8 @@ const schoolPatients = [
     detail: 'Lactente',
     color: 'rose',
     poses: {
-      sentada: '/simulador/personagens/escola-v20261022/bebe-sentado.png',
-      deitada: '/simulador/personagens/escola-v20261022/bebe-deitado.png'
+      sentada: '/simulador/personagens/escola-v20261022-realista/bebe-sentado.png',
+      deitada: '/simulador/personagens/escola-v20261022-realista/bebe-deitado.png'
     }
   }
 ] as const;
@@ -74,7 +74,7 @@ export function SchoolPatientGallery() {
         <div>
           <p className="text-xs font-bold uppercase tracking-widest text-emerald-600 dark:text-emerald-400">Ambiente escolar</p>
           <h3 id="school-patients-heading" className="text-lg font-bold">Pacientes do simulador</h3>
-          <p className="mt-1 text-sm opacity-70">Cinco perfis com posição sentada e deitada para os cenários da escola.</p>
+          <p className="mt-1 text-sm opacity-70">Cinco perfis realistas, com expressão neutra ou levemente triste, em posição sentada e deitada.</p>
         </div>
         <div className="rounded-full border border-emerald-600/30 px-3 py-1 text-xs font-semibold text-emerald-700 dark:text-emerald-300">
           10 variações
