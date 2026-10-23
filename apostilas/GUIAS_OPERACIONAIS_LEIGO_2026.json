@@ -1,0 +1,597 @@
+{
+  "version": "2026-10-23",
+  "purpose": "Roteiros de primeiros socorros para leigos — União Serviços Médicos",
+  "modules": {
+    "A01": {
+      "titulo": "Segurança da academia e resposta inicial",
+      "sinais": "Pessoa cai no treino; apresenta dor no peito, falta de ar, confusão, sangramento intenso ou lesão por equipamento.",
+      "passos": [
+        "Interrompa os aparelhos próximos. Afaste pesos e mantenha livre a passagem dos socorristas.",
+        "Pergunte se a pessoa consegue ouvir você. Observe se respira normalmente por até 10 segundos.",
+        "Peça que alguém ligue 192, informe a unidade e busque o DEA.",
+        "Se estiver inconsciente e não respirar normalmente, inicie compressões torácicas e use o DEA conforme instruções.",
+        "Se houver sangramento grave, pressione diretamente a ferida. Não abandone a vítima para buscar documentos.",
+        "Mostre aos profissionais do SAMU quando os sintomas começaram e quais medidas já foram feitas."
+      ],
+      "evite": "Não atribua desmaio a cansaço sem avaliação. Não dê água ou suplementos à pessoa confusa. Não use aparelhos sem isolamento seguro.",
+      "treino": "Simule uma queda junto à esteira: quem desliga, quem liga 192 e quem busca o DEA?"
+    },
+    "A02": {
+      "titulo": "Colapso e possível parada cardíaca durante exercício",
+      "sinais": "Colapso súbito, ausência de resposta, respiração ausente ou apenas suspiros ocasionais (gasping).",
+      "passos": [
+        "Verifique se o local está seguro. Se houver uma barra prendendo a vítima, peça ajuda para retirar a carga sem se machucar.",
+        "Chame a pessoa e toque seus ombros. Não gaste tempo procurando o pulso se você é leigo.",
+        "Acione 192 em viva-voz. Peça a alguém para buscar o DEA.",
+        "Sem respiração normal, comprima a metade inferior do esterno a 100–120 vezes por minuto, com 5–6 cm em adultos.",
+        "Deixe o tórax retornar após cada compressão. Revezem-se, quando possível, sem pausas longas.",
+        "Ligue o DEA, exponha e seque o tórax, cole as pás conforme desenho e siga a voz do aparelho.",
+        "Afaste todos durante análise e eventual choque. Retome compressões quando o DEA mandar."
+      ],
+      "evite": "Não trate gasping como respiração normal. Não espere a ambulância para começar a RCP. Não faça diagnóstico de infarto para decidir agir.",
+      "treino": "Treine o reconhecimento do gasping, a ligação em viva-voz, as compressões no manequim e o DEA de treinamento."
+    },
+    "A03": {
+      "titulo": "Entorse, fratura e luxação na academia",
+      "sinais": "Dor forte, deformidade, inchaço, incapacidade de apoiar o peso, formigamento ou osso exposto.",
+      "passos": [
+        "Interrompa o exercício e estabilize o equipamento para impedir novas lesões.",
+        "Peça que a pessoa não mova o membro lesionado. Avalie respiração e sangramento antes de cuidar do osso.",
+        "Se houver ferida, cubra com pano limpo. Se sangrar muito, faça pressão direta sem pressionar osso saliente.",
+        "Apoie o membro na posição encontrada. Imobilize apenas se souber fazer, sem forçar alinhamento.",
+        "Para lesão fechada leve, use compressa fria envolta em tecido por intervalos curtos. Observe a pele.",
+        "Ligue 192 se houver deformidade grave, fratura exposta, perda de sensibilidade, palidez ou dor intensa."
+      ],
+      "evite": "Não reduza luxações ou fraturas. Não puxe o membro, não massageie e não deixe a vítima voltar ao treino.",
+      "treino": "Treine como apoiar um braço suspeito de fratura sem apertar dedos ou provocar dor."
+    },
+    "A04": {
+      "titulo": "Hipoglicemia, exaustão pelo calor e intermação",
+      "sinais": "Tremor, suor frio e confusão durante o treino; ou calor intenso com tontura, desorientação, desmaio e pele quente.",
+      "passos": [
+        "Interrompa o esforço. Tire a pessoa da área quente e chame ajuda.",
+        "Se suspeitar de hipoglicemia e a pessoa estiver acordada, orientada e conseguir engolir, ofereça açúcar de ação rápida.",
+        "Se a pessoa não conseguir engolir, estiver convulsionando ou inconsciente, não dê nada pela boca. Ligue 192.",
+        "Se houver confusão, colapso ou convulsão durante exposição ao calor, suspeite de intermação e ligue 192.",
+        "Inicie resfriamento imediato: retire roupas excedentes e molhe a pele com água fresca, usando ventilação.",
+        "Se houver recursos e pessoal treinado, siga o protocolo local de resfriamento rápido sem atrasar o socorro.",
+        "Observe continuamente a respiração; se não for normal e a pessoa não responder, inicie RCP."
+      ],
+      "evite": "Não ofereça líquido a pessoa sonolenta ou confusa. Não force o retorno ao exercício. Não espere medir febre para resfriar.",
+      "treino": "Simule dois pacientes: um diabético acordado com tremor e um atleta confuso em dia muito quente."
+    },
+    "A05": {
+      "titulo": "Afogamento e emergência em ambiente aquático",
+      "sinais": "Pessoa submerge, não consegue manter a boca fora da água, sai da piscina com tosse intensa ou não responde.",
+      "passos": [
+        "Grite por ajuda. Lance boia, corda ou objeto flutuante; prefira alcançar a vítima sem entrar na água.",
+        "Acione 193 e 192. Resgate dentro da água somente se for treinado e a operação for segura.",
+        "Em local seguro, teste resposta e respiração normal por até 10 segundos.",
+        "Se não responder e não respirar normalmente, inicie RCP. Ventilações são muito importantes no afogamento.",
+        "Se você foi treinado e consegue ventilar, combine respirações de resgate e compressões. Se não consegue, faça compressões.",
+        "Traga o DEA, seque o tórax antes de aplicar as pás e siga as mensagens.",
+        "Mesmo após melhora, peça avaliação do serviço de urgência se houve submersão com sintomas respiratórios."
+      ],
+      "evite": "Não se jogue na água sem técnica. Não tente expulsar água apertando a barriga. Não atrase a RCP para transportar a vítima.",
+      "treino": "Pratique alcance e arremesso com boia, acionamento de 193 e RCP com ventilação no manequim."
+    },
+    "A06": {
+      "titulo": "Plano de emergência e simulado da academia",
+      "sinais": "Equipe hesita, não sabe onde fica o DEA, acesso ao salão está bloqueado ou ninguém coordena a resposta.",
+      "passos": [
+        "Atribua funções por turno: líder, ligação 192, busca do DEA e acesso da ambulância.",
+        "Deixe o endereço completo e as referências visíveis junto aos telefones de emergência.",
+        "Sinalize equipamentos de primeira resposta e confira sua validade e funcionamento conforme fabricante.",
+        "Simule o colapso de um aluno: quem reconhece a parada e inicia RCP?",
+        "Verifique se o DEA chega à vítima sem obstáculos e se a equipe conhece as mensagens do aparelho.",
+        "Após cada treino, registre falhas, corrija o fluxo e repita a simulação."
+      ],
+      "evite": "Não presuma obrigação legal federal universal de DEA. Verifique normas estaduais e municipais. Não simule choques reais em participantes.",
+      "treino": "Cronometre uma simulação completa e avalie qualidade, não um tempo arbitrário obrigatório."
+    },
+    "C01": {
+      "titulo": "Primeiros passos do atendimento pré-hospitalar",
+      "sinais": "Pessoa desacordada, sem respirar normalmente, com sangramento grave ou ferimento importante.",
+      "passos": [
+        "Antes de se aproximar, procure riscos: trânsito, fios, fogo, gás, violência e máquinas.",
+        "Se houver risco sem controle, afaste-se e ligue 193. Nunca se torne outra vítima.",
+        "Verifique resposta falando alto e tocando o ombro com cuidado.",
+        "Acione 192. Diga endereço, o que ocorreu e como a vítima está respirando.",
+        "Se não houver respiração normal, inicie compressões e peça DEA. Se houver sangramento grave, faça pressão direta.",
+        "Permaneça com a vítima até a chegada de ajuda, observando se ela continua respirando."
+      ],
+      "evite": "Não faça procedimentos invasivos, não administre medicamentos próprios e não mova a vítima sem necessidade de segurança.",
+      "treino": "Simule um adulto caído: demonstre segurança da cena, avaliação, ligação ao SAMU e primeira ação."
+    },
+    "C02": {
+      "titulo": "Segurança da cena e proteção do socorrista",
+      "sinais": "Sangue, objetos cortantes, fumaça, fios energizados, vazamento químico, violência ou local fechado sem ventilação.",
+      "passos": [
+        "Pare na entrada e observe. Identifique ao menos uma rota de saída segura.",
+        "Afaste curiosos, sinalize o perigo e não aproxime pessoas da área contaminada.",
+        "Se houver eletricidade, fogo, gás ou espaço confinado, chame 193 e aguarde profissionais habilitados.",
+        "Use luvas e proteção adequadas se disponíveis, sem atrasar medidas básicas quando o risco puder ser controlado.",
+        "Se ocorrer contato com sangue, lave a pele com água e sabão e procure orientação de saúde.",
+        "Reavalie o ambiente: a cena pode deixar de ser segura durante o atendimento."
+      ],
+      "evite": "Não toque em fio, não entre em tanque ou poço e não tente neutralizar produtos químicos.",
+      "treino": "Mostre imagens de cinco cenas e peça ao aluno decidir: aproximar, isolar ou aguardar resgate."
+    },
+    "C03": {
+      "titulo": "Ligação para 192 ou 193 sem perder tempo",
+      "sinais": "Emergência clínica ou traumática; ou ocorrência com fogo, produto perigoso, altura, soterramento e acesso difícil.",
+      "passos": [
+        "Ligue 192 para urgência em saúde; 193 para incêndio, salvamento e ambiente perigoso.",
+        "Informe o endereço completo, cidade, acesso, ponto de referência e telefone de retorno.",
+        "Diga quantas vítimas existem, se respondem e se respiram normalmente.",
+        "Descreva os riscos da cena: fios, fogo, gás, tráfego, água ou máquinas.",
+        "Conte o que já foi feito: RCP, DEA, compressão da ferida ou outra medida.",
+        "Deixe o telefone no viva-voz. Siga as orientações do atendente.",
+        "Escolha alguém para receber o socorro e abrir portões, elevadores e corredores."
+      ],
+      "evite": "Não encerre a chamada antes das instruções. Não abandone uma vítima em RCP para buscar papéis.",
+      "treino": "Use uma chamada simulada: aluno deve transmitir endereço, respiração, número de vítimas e acesso."
+    },
+    "C04": {
+      "titulo": "Avaliação rápida de uma vítima por quem é leigo",
+      "sinais": "Ausência de resposta, respiração irregular, sangramento intenso, confusão ou queixa súbita grave.",
+      "passos": [
+        "Confira se o local é seguro. Chame por ajuda.",
+        "Pergunte em voz alta: 'Você me ouve?' Toque suavemente o ombro; em bebê, toque a planta do pé.",
+        "Observe o tórax e a respiração por até 10 segundos. Suspiros isolados não são respiração normal.",
+        "Se não responde e não respira normalmente, ligue 192 em viva-voz e comece RCP.",
+        "Se responde, pergunte o que houve, quando começou e onde dói. Não cause movimento desnecessário.",
+        "Procure sangramento grave visível e pressione diretamente quando seguro.",
+        "Reavalie consciência e respiração enquanto espera socorro."
+      ],
+      "evite": "Leigo não precisa procurar pulso carotídeo; isso pode atrasar a RCP. Não dê água ou comprimidos a pessoa confusa.",
+      "treino": "Treine o reconhecimento da respiração normal e do gasping em vídeos e manequim."
+    },
+    "C05": {
+      "titulo": "Ressuscitação cardiopulmonar em adulto",
+      "sinais": "Adulto não responde e não respira ou só apresenta suspiros agônicos.",
+      "passos": [
+        "Verifique a segurança. Chame a pessoa e toque seus ombros.",
+        "Peça a alguém para ligar 192 e trazer o DEA. Se estiver só, ligue em viva-voz.",
+        "Deite a vítima de costas sobre superfície firme, sem atrasar as compressões.",
+        "Coloque a base de uma mão na metade inferior do esterno. Apoie a outra mão sobre a primeira.",
+        "Comprima 5–6 cm, em ritmo de 100–120 por minuto, permitindo retorno total do tórax.",
+        "Se você é leigo sem treino de ventilação, faça compressões contínuas. Se foi treinado, pode fazer 30 compressões e 2 ventilações.",
+        "Siga o DEA assim que chegar e retome as compressões quando indicado. Revezem-se aproximadamente a cada 2 minutos.",
+        "Continue até a equipe assumir, a pessoa voltar a apresentar sinais claros de vida ou o local deixar de ser seguro."
+      ],
+      "evite": "Não perca tempo procurando pulso. Não pare por suspiros isolados nem encoste durante análise ou choque do DEA.",
+      "treino": "Pratique 2 minutos em manequim com avaliação de ritmo, profundidade, retorno do tórax e pausas."
+    },
+    "C06": {
+      "titulo": "Uso de desfibrilador externo automático (DEA)",
+      "sinais": "Pessoa inconsciente e sem respiração normal; o DEA está disponível.",
+      "passos": [
+        "Ligue 192 e inicie RCP. Peça a outra pessoa que traga o DEA.",
+        "Ligue o DEA e ouça a voz do equipamento.",
+        "Descubra o peito e seque a pele molhada. Não use o aparelho com a vítima em poça de água.",
+        "Retire películas das pás e cole-as nos locais mostrados nos desenhos do equipamento.",
+        "Interrompa o contato com a vítima quando o aparelho anunciar análise do ritmo.",
+        "Se houver indicação de choque, confira que ninguém toca na vítima. Aperte o botão se o aparelho solicitar.",
+        "Retome as compressões imediatamente após o aviso do DEA. Mantenha as pás instaladas.",
+        "Siga os próximos avisos do DEA até a chegada do resgate."
+      ],
+      "evite": "Não retire as pás entre ciclos. Não aplique choque sem ordem do DEA. Não adie compressões enquanto procura o equipamento.",
+      "treino": "Cada aluno deve ligar um DEA de treinamento, colocar as pás no manequim e verbalizar 'Afastem-se!'."
+    },
+    "C07": {
+      "titulo": "Desengasgo de adultos, crianças e lactentes",
+      "sinais": "Tosse fraca ou silenciosa, incapacidade de falar ou chorar, dificuldade intensa para respirar, possível cianose.",
+      "passos": [
+        "Se a pessoa tosse com força e consegue falar, estimule a tosse e observe.",
+        "Se a obstrução for grave, peça ajuda e acione 192.",
+        "Em adultos e crianças acima de 1 ano, alterne 5 pancadas nas costas e 5 compressões abdominais.",
+        "Em gestante avançada ou quando não é possível comprimir o abdome, use compressões torácicas em vez de abdominais.",
+        "No bebê menor de 1 ano, alterne 5 pancadas entre as escápulas e 5 impulsos torácicos com a base de uma mão.",
+        "Apoie cabeça e pescoço do bebê e mantenha a cabeça abaixo do tronco durante essas manobras.",
+        "Se a vítima perder a consciência, deite-a com segurança e inicie RCP conforme a idade.",
+        "Ao abrir a boca para ventilar, retire somente objeto claramente visível. Nunca faça varredura cega com o dedo."
+      ],
+      "evite": "Não ofereça água. Não pendure bebê pelos pés. Nunca faça compressões abdominais em lactente.",
+      "treino": "Pratique em manequins adulto e lactente. Treine a diferença entre tosse eficaz e obstrução grave."
+    },
+    "C08": {
+      "titulo": "Dor no peito e sinais de AVC",
+      "sinais": "Dor/pressão no peito, suor frio, falta de ar; ou boca torta, braço fraco e fala alterada de início súbito.",
+      "passos": [
+        "Interrompa atividade e mantenha a pessoa em posição confortável. Ligue 192 imediatamente.",
+        "Em suspeita de AVC, peça sorriso, elevação dos dois braços e uma frase simples.",
+        "Anote a hora em que a pessoa foi vista bem pela última vez.",
+        "Não ofereça comida, líquidos nem medicamentos. Não transporte por conta própria se o SAMU orientar aguardar.",
+        "Se for dor torácica, não faça a vítima caminhar ou subir escadas.",
+        "Observe resposta e respiração. Se perder consciência e não respirar normalmente, inicie RCP e use DEA."
+      ],
+      "evite": "Não espere a dor passar nem meça pulso para decidir fazer RCP. Não dê aspirina em suspeita de AVC.",
+      "treino": "Simule alguém com fala arrastada; o aluno deve aplicar sinais FAST e registrar horário."
+    },
+    "C09": {
+      "titulo": "Falta de ar, reação alérgica e glicose baixa",
+      "sinais": "Chiado intenso, dificuldade para falar, inchaço de língua ou garganta, urticária com falta de ar, suor frio e confusão.",
+      "passos": [
+        "Avalie se a pessoa consegue falar e respirar. Chame 192 se houver falta de ar importante ou reação sistêmica.",
+        "Se a pessoa usa inalador prescrito, ajude-a a acessar o próprio medicamento conforme orientação e plano individual.",
+        "Em suspeita de anafilaxia, acione 192. Se houver autoinjetor prescrito, siga o plano e as instruções do dispositivo.",
+        "Se houver tremor e suor frio por possível hipoglicemia e a pessoa conseguir engolir, ofereça glicose oral.",
+        "Não ofereça nada pela boca a pessoa confusa, sonolenta ou inconsciente.",
+        "Observe respiração e consciência. Se não responder e não respirar normalmente, inicie RCP."
+      ],
+      "evite": "Não improvise doses de medicação, adrenalina em seringa ou oxigênio sem treinamento e protocolo.",
+      "treino": "Treine identificar as diferenças entre broncoespasmo, anafilaxia e hipoglicemia com planos individuais."
+    },
+    "C10": {
+      "titulo": "Sangramento externo: compressão e chamada de ajuda",
+      "sinais": "Sangue escorre continuamente, ensopa roupas ou forma poça; ferida extensa; pessoa pálida ou confusa.",
+      "passos": [
+        "Verifique segurança e use luvas, se disponíveis.",
+        "Localize o sangramento. Peça a alguém para ligar 192.",
+        "Pressione diretamente o ponto que sangra com gaze ou pano limpo, usando força firme e constante.",
+        "Mantenha a pressão. Se o material encharcar, acrescente outro sem interromper a compressão.",
+        "Se houver sangramento ameaçador à vida em braço ou perna, aplique torniquete comercial se disponível e você souber utilizá-lo.",
+        "Anote a hora do torniquete. Não o afrouxe sem orientação da equipe de emergência.",
+        "Proteja a pessoa do frio e observe sua resposta e respiração."
+      ],
+      "evite": "Não use garrote fino. Não retire objetos profundamente encravados. Não espere o sangue mudar de cor para agir.",
+      "treino": "Pratique pressão contínua sobre simulador com sangue artificial, sem levantar o curativo para 'olhar'."
+    },
+    "C11": {
+      "titulo": "Trauma: queda, fratura e lesão de coluna",
+      "sinais": "Queda forte, dor cervical, formigamento, fraqueza, osso exposto, deformidade ou confusão.",
+      "passos": [
+        "Impeça novos perigos. Peça que a vítima fique parada e evite movimentos desnecessários.",
+        "Acione 192 ou 193 se houver altura, vítima presa ou acesso difícil.",
+        "Verifique se a pessoa responde e respira normalmente. Priorize RCP se entrar em parada.",
+        "Controle sangramento grave com pressão direta. Cubra fratura exposta sem empurrar osso para dentro.",
+        "Apoie o membro na posição encontrada. Só imobilize se tiver treinamento e isso não causar dor.",
+        "Cubra a pessoa e observe consciência e respiração até a chegada dos profissionais."
+      ],
+      "evite": "Não puxe braços, cabeça ou pernas. Não retire capacete de motociclista sem necessidade para acesso a via aérea.",
+      "treino": "Simule fratura e possível lesão cervical: treine comunicação, estabilização simples e acionamento do resgate."
+    },
+    "C12": {
+      "titulo": "Queimadura, intoxicação, calor, frio e animais peçonhentos",
+      "sinais": "Exposição a produto perigoso, queimadura, confusão pelo calor, hipotermia ou picada com sintomas gerais.",
+      "passos": [
+        "Afaste a pessoa do risco somente se puder fazê-lo sem se expor.",
+        "Em fogo, gás, eletricidade ou produto desconhecido, ligue 193 e 192. Isole a área.",
+        "Em queimadura térmica, resfrie com água corrente fresca por cerca de 20 minutos; cubra com material limpo.",
+        "Em acidente químico na pele ou nos olhos, retire a fonte com proteção adequada e lave com água abundante; siga orientações do produto e centro toxicológico.",
+        "Em suspeita de intermação, inicie resfriamento rápido e acione 192.",
+        "Em acidente com animal peçonhento, mantenha repouso, retire adornos apertados e procure urgência.",
+        "Se a pessoa não responde e não respira normalmente, inicie RCP quando a cena estiver segura."
+      ],
+      "evite": "Não aplique gelo diretamente em queimaduras. Não faça cortes, sucção, torniquete ou remédio caseiro em picadas.",
+      "treino": "Apresente três cartões: queimadura térmica, produto químico e picada. O aluno identifica a primeira ação."
+    },
+    "E01": {
+      "titulo": "Lei Lucas: a primeira resposta na escola",
+      "sinais": "Aluno cai, engasga, convulsiona, sofre trauma ou fica sem responder em sala, pátio ou refeitório.",
+      "passos": [
+        "Um adulto assume a liderança e verifica a segurança da cena.",
+        "Outro liga 192 ou 193 e avisa direção e responsáveis conforme protocolo escolar.",
+        "Verifique resposta e respiração. Se não houver respiração normal, inicie RCP e busque DEA.",
+        "Em engasgo grave, siga a técnica específica à idade. Em sangramento grave, pressione diretamente.",
+        "Afaste alunos curiosos e mantenha acesso livre à ambulância.",
+        "Registre horários e fatos sem atrasar o atendimento. Transmita à equipe médica."
+      ],
+      "evite": "Não confunda treinamento anual exigido pela Lei Lucas com autorização para fazer procedimentos médicos invasivos.",
+      "treino": "Simule atendimento no refeitório e distribuição de funções entre professor, auxiliar e direção."
+    },
+    "E02": {
+      "titulo": "RCP em criança e bebê",
+      "sinais": "Criança ou bebê não responde e não apresenta respiração normal. Gasping não conta como respiração normal.",
+      "passos": [
+        "Garanta segurança. Chame a criança e toque o ombro; em lactente, toque suavemente a planta do pé.",
+        "Ligue 192 em viva-voz e peça DEA com pás pediátricas, se disponíveis.",
+        "Comece compressões no centro do peito, com 100–120 por minuto e profundidade aproximada de um terço do tórax.",
+        "Na criança, use a base de uma ou duas mãos conforme o tamanho; a profundidade costuma ser cerca de 5 cm.",
+        "No bebê, use dois polegares envolvendo o tórax ou a base de uma mão; cerca de 4 cm. Não use dois dedos.",
+        "Se você consegue ventilar, combine 30 compressões com 2 ventilações quando estiver sozinho; 15:2 com dois socorristas treinados.",
+        "Se não conseguir ventilar, faça compressões enquanto recebe orientação do 192. Em crianças, ventilações são especialmente importantes.",
+        "Use o DEA assim que disponível, preferindo atenuador pediátrico quando indicado; siga os desenhos para evitar sobreposição das pás."
+      ],
+      "evite": "Não balance o bebê, não faça compressões com a ponta de dois dedos e não espere confirmar ausência de pulso.",
+      "treino": "Treine separadamente no manequim de bebê e de criança. Confira posição de mãos, profundidade e ventilação."
+    },
+    "E03": {
+      "titulo": "Engasgo no refeitório e na creche",
+      "sinais": "Criança deixa de falar ou chorar, não consegue tossir com força, faz esforço para inspirar ou fica roxa.",
+      "passos": [
+        "Se tosse forte ou fala, incentive a tossir e permaneça perto.",
+        "Se a obstrução é grave, peça ligação imediata ao 192.",
+        "Acima de 1 ano: alterne 5 pancadas entre as escápulas e 5 compressões abdominais.",
+        "Menor de 1 ano: apoie bebê de bruços no antebraço, cabeça mais baixa; dê 5 pancadas firmes nas costas.",
+        "Vire o bebê apoiando cabeça e pescoço. Faça 5 impulsos torácicos com a base de uma mão.",
+        "Repita a sequência até sair o objeto ou perder a resposta.",
+        "Se perder a consciência, inicie RCP e retire apenas objeto que enxergar claramente na boca.",
+        "Após desobstrução grave, obtenha avaliação conforme orientação do SAMU."
+      ],
+      "evite": "Não aperte abdome de bebês. Não ofereça água. Não faça varredura com dedo sem enxergar o objeto.",
+      "treino": "Treine com manequins, nunca faça compressões abdominais fortes em colega para praticar."
+    },
+    "E04": {
+      "titulo": "Desmaio, convulsão, hipoglicemia e anafilaxia em alunos",
+      "sinais": "Perda de consciência, abalos musculares, suor frio, confusão, inchaço de face ou dificuldade para respirar.",
+      "passos": [
+        "Pare a atividade, proteja a criança contra quedas e peça ajuda.",
+        "Em convulsão, afaste objetos, proteja a cabeça e marque o tempo. Não restrinja movimentos.",
+        "Após o fim da convulsão, se respirar normalmente e não houver suspeita de trauma impeditivo, posicione de lado.",
+        "Ligue 192 se for primeira crise, durar mais de 5 minutos, repetir sem recuperação, houver trauma ou dificuldade respiratória.",
+        "Se suspeitar de hipoglicemia e a criança estiver acordada e engolindo, ofereça glicose conforme plano individual.",
+        "Em suspeita de anafilaxia, acione 192 e siga plano para uso de autoinjetor prescrito, se disponível.",
+        "Se não responder nem respirar normalmente, comece RCP."
+      ],
+      "evite": "Não coloque objetos na boca nem dê líquidos durante convulsão. Não dê açúcar à pessoa inconsciente.",
+      "treino": "Simule uma crise convulsiva e uma reação alérgica na sala de aula."
+    },
+    "E05": {
+      "titulo": "Quedas, ferimentos e acidentes no ambiente escolar",
+      "sinais": "Criança caiu de altura, bateu cabeça, tem osso aparente, dor forte, dente arrancado ou queimadura.",
+      "passos": [
+        "Afaste a turma do local e verifique se há piso, brinquedo ou equipamento ainda perigoso.",
+        "Pergunte o que aconteceu e observe resposta, respiração, sangramento e movimento espontâneo.",
+        "Se houver dor no pescoço, fraqueza ou alteração da consciência, não faça a criança levantar. Ligue 192.",
+        "Pressione feridas que sangram muito; cubra fraturas expostas sem empurrar fragmentos.",
+        "Se um dente permanente foi arrancado, pegue pela coroa, não pela raiz. Conserve-o úmido em leite ou soro e busque dentista rapidamente.",
+        "Não tente reimplantar um dente de leite. Procure avaliação odontológica.",
+        "Em queimadura térmica, resfrie com água corrente fresca e cubra com tecido limpo."
+      ],
+      "evite": "Não sacuda a criança, não mexa no pescoço e não use creme ou gelo diretamente em queimaduras.",
+      "treino": "Treine uma queda em escada e um caso de dente permanente avulsionado, com contato aos responsáveis."
+    },
+    "E06": {
+      "titulo": "Plano individual do aluno com condição de saúde",
+      "sinais": "Aluno com asma, diabetes, epilepsia ou alergia apresenta sinais previstos em seu plano de emergência.",
+      "passos": [
+        "Antes da aula, saiba onde ficam os planos individuais, contatos e medicamentos prescritos autorizados.",
+        "Na crise, interrompa atividade e confira se a criança responde e respira normalmente.",
+        "Para asma, auxilie o uso do inalador prescrito conforme plano e regras da escola.",
+        "Para hipoglicemia, ofereça glicose apenas se a criança estiver acordada e engolir com segurança.",
+        "Para anafilaxia, ligue 192 imediatamente e siga as instruções do autoinjetor prescrito, se disponível.",
+        "Em convulsão, proteja de lesões, cronometre e não ponha nada na boca.",
+        "Registre o que foi usado, doses fornecidas pelo dispositivo e horários; entregue à equipe de saúde."
+      ],
+      "evite": "Não substitua a prescrição por improvisos. Não aplique medicamento injetável não prescrito sem autorização e treinamento.",
+      "treino": "Simule duas condições por aluno, com os profissionais realmente localizando o plano individual e o material."
+    },
+    "E07": {
+      "titulo": "Plano de emergência escolar e exercícios práticos",
+      "sinais": "Desorganização após engasgo, queda ou convulsão; equipe desconhece função ou rota de ambulância.",
+      "passos": [
+        "Defina responsável por avaliar a vítima, por ligar 192 e por orientar a entrada da ambulância.",
+        "Mantenha lista acessível de contatos e locais dos kits e do DEA.",
+        "Treine as situações mais prováveis conforme idade: engasgo, trauma, convulsão e parada cardíaca.",
+        "Use manequim para praticar RCP e obstrução de vias aéreas. Não use manobras arriscadas em alunos.",
+        "Após o simulado, peça que cada participante diga a primeira ação e a ação proibida.",
+        "Corrija a falha observada, repita a atividade e registre a capacitação."
+      ],
+      "evite": "Não faça encenação com queda real, garroteamento ou choque elétrico. Não exponha dados de saúde dos alunos.",
+      "treino": "Planeje uma simulação na cantina e outra no pátio, com papéis e observadores definidos."
+    },
+    "H01": {
+      "titulo": "Como reconhecer hemorragia com risco de morte",
+      "sinais": "Roupa rapidamente encharcada, sangue acumulando no chão, amputação, palidez, fraqueza ou confusão.",
+      "passos": [
+        "Confirme que a cena é segura e proteja as mãos quando possível.",
+        "Ligue 192 ou peça a outro adulto que ligue.",
+        "Localize a fonte e comprima diretamente com as mãos sobre gaze ou tecido limpo.",
+        "Mantenha compressão firme e contínua. Peça ajuda para continuar se estiver cansado.",
+        "Se o sangramento for de membro e ameaçar a vida, use torniquete comercial se estiver disponível e souber aplicá-lo.",
+        "Mantenha a pessoa aquecida e observe sua respiração.",
+        "Conte ao resgate quando começou o sangramento e o que você fez."
+      ],
+      "evite": "Não use apenas cor do sangue para decidir gravidade. Não espere a pressão cair para agir.",
+      "treino": "Treine reconhecimento por fotografias de simuladores e pressão direta em modelo de ferida."
+    },
+    "H02": {
+      "titulo": "Sangramento perigoso: decisão em segundos",
+      "sinais": "Jato, fluxo contínuo intenso, grande poça ou sangue atravessando sucessivas compressas.",
+      "passos": [
+        "Acione 192 e peça um kit de controle de sangramento.",
+        "Comprima imediatamente a ferida, com peso das mãos e material limpo.",
+        "Para braço ou perna com hemorragia ameaçadora à vida, considere torniquete comercial se treinado.",
+        "Para virilha, axila e áreas sem possibilidade de torniquete, mantenha pressão direta; packing exige prática adequada.",
+        "Não interrompa o atendimento para identificar artéria ou veia.",
+        "Se a vítima ficar inconsciente, verifique respiração. Inicie RCP se não for normal."
+      ],
+      "evite": "Não atrase o controle para classificar o sangramento. Não use torniquete no pescoço, tronco ou cabeça.",
+      "treino": "Treine identificar, com fotos e simulação, quando pressão direta deve começar sem demora."
+    },
+    "H03": {
+      "titulo": "Compressão direta e curativo de emergência",
+      "sinais": "Ferida externa com sangue saindo continuamente ou ensopando roupa.",
+      "passos": [
+        "Use luvas, se disponíveis. Exponha a ferida somente o necessário.",
+        "Posicione gaze ou pano limpo sobre o ponto que sangra.",
+        "Pressione firmemente com as duas mãos. Mantenha a pressão contínua.",
+        "Se o sangue atravessar o pano, mantenha a pressão e acrescente outro por cima.",
+        "Peça ligação 192 se o sangramento for intenso ou não parar.",
+        "Se necessário, outra pessoa treinada prepara torniquete enquanto você mantém a pressão.",
+        "Quando a equipe chegar, explique localização, duração e materiais usados."
+      ],
+      "evite": "Não solte as mãos para espiar repetidamente. Não remova coágulos nem faça amarração fina para estrangular o membro.",
+      "treino": "Em simulador, realize pressão contínua por vários minutos e revise a postura para reduzir fadiga."
+    },
+    "H04": {
+      "titulo": "Preenchimento de ferida: quando NÃO improvisar",
+      "sinais": "Ferida profunda em virilha, axila ou extremidade com sangramento intenso e sem local para torniquete.",
+      "passos": [
+        "Acione 192 e pressione diretamente a ferida de imediato.",
+        "Peça gaze apropriada e ajuda de outra pessoa para manter compressão.",
+        "O preenchimento da ferida (wound packing) deve ser feito somente após treinamento prático específico.",
+        "Se você foi treinado, siga a técnica ensinada com gaze própria e mantenha pressão firme após o preenchimento.",
+        "Sem treinamento ou material, mantenha pressão direta contínua em vez de explorar a ferida.",
+        "Informe ao resgate onde foi aplicado curativo ou packing; não retire o material."
+      ],
+      "evite": "Não introduza dedos para procurar artérias. Não faça packing em ferida torácica ou abdominal; não comprima diretamente a traqueia.",
+      "treino": "Utilize exclusivamente simulador de feridas profundas, com supervisão e avaliação prática."
+    },
+    "H05": {
+      "titulo": "Torniquete comercial em braço ou perna",
+      "sinais": "Hemorragia maciça em membro, amputação traumática ou sangramento que não cessa sob pressão.",
+      "passos": [
+        "Peça ajuda e ligue 192. Pressione a ferida enquanto busca o material.",
+        "Use torniquete comercial apropriado. Ele serve apenas para braço ou perna.",
+        "Se a lesão estiver visível, posicione cerca de 5 a 7 cm acima da ferida, nunca sobre articulação.",
+        "Aperte a fita e gire o mecanismo até cessar o sangramento. Fixe conforme o fabricante.",
+        "Registre a hora da aplicação e mantenha o dispositivo visível.",
+        "Não afrouxe o torniquete. Se continuar sangrando, mantenha pressão e siga o treinamento para ajuste ou segundo dispositivo.",
+        "Informe a hora e a posição do torniquete à equipe de emergência."
+      ],
+      "evite": "Não use fios finos ou materiais improvisados como primeira opção. Dor não comprova que a hemorragia parou.",
+      "treino": "Pratique em simulador e avalie controle do sangramento, fixação e registro do horário."
+    },
+    "H06": {
+      "titulo": "Sangramento em locais especiais",
+      "sinais": "Ferida na cabeça, pescoço, virilha, axila, tórax, abdome ou membro infantil.",
+      "passos": [
+        "Ligue 192; em trauma complexo com risco ambiental, acione também 193.",
+        "Use pressão direta na área sangrante quando isso for seguro. Não pressione objetos encravados.",
+        "Em virilha e axila, mantenha compressão. Packing somente para pessoa treinada e local apropriado.",
+        "Em tórax ou abdome, não introduza gaze na cavidade e não retire objeto profundamente encravado.",
+        "Em lesão de crânio com afundamento ou suspeita de fratura, proteja a ferida sem pressionar o osso deformado.",
+        "Em crianças, controle o sangramento sem atrasar ajuda, mantendo atenção à respiração."
+      ],
+      "evite": "Não use torniquete no pescoço ou tronco. Não tente explorar feridas profundas ou fechar perfurações.",
+      "treino": "Separe modelos de braço, virilha e tórax e peça ao aluno escolher apenas medidas dentro do seu treinamento."
+    },
+    "H07": {
+      "titulo": "Como treinar controle de sangramento com segurança",
+      "sinais": "Simulado de hemorragia com necessidade de decidir entre pressão, packing treinado e torniquete.",
+      "passos": [
+        "Use simuladores próprios e sangue artificial; não use feridas reais para aprender.",
+        "Estação 1: identifique sangramento importante e acione ajuda.",
+        "Estação 2: pressione continuamente o simulador sem levantar a compressa.",
+        "Estação 3: faça packing apenas após demonstração por instrutor habilitado.",
+        "Estação 4: ajuste torniquete de treinamento em modelo apropriado; confira se a 'hemorragia' cessa.",
+        "Finalize com comunicação ao SAMU simulado e registro de horário.",
+        "Repita até o aluno executar sem consultar o roteiro e sem ultrapassar seus limites de atuação."
+      ],
+      "evite": "Não treine torniquete apertado por tempo prolongado em colegas. Não use instrumento cortante para criar feridas.",
+      "treino": "Avalie sequência, comunicação, técnica, segurança e reconhecimento da necessidade de ajuda profissional."
+    },
+    "T01": {
+      "titulo": "Segurança no trabalho: não se torne outra vítima",
+      "sinais": "Máquina funcionando, produto químico, risco de queda, eletricidade, fogo ou trabalhador ferido.",
+      "passos": [
+        "Pare e identifique o perigo. Não entre em área não liberada.",
+        "Ative o plano de emergência e peça desligamento por pessoa autorizada, quando necessário.",
+        "Acione 193 em resgate, fogo, vazamento ou espaço confinado; 192 para urgência em saúde.",
+        "Isole o local e mantenha curiosos longe da fonte do acidente.",
+        "Quando a área estiver segura, avalie resposta, respiração e sangramento grave.",
+        "Preste primeiros socorros básicos conforme treinamento e entregue informações à equipe de resgate."
+      ],
+      "evite": "Não remova proteções de máquina, não toque em fios e não entre em atmosfera perigosa.",
+      "treino": "Realize inspeção simulada de posto de trabalho e ensaie acionamento do plano interno."
+    },
+    "T02": {
+      "titulo": "Acidente com máquina e aprisionamento",
+      "sinais": "Operário preso, membro amputado, sangramento grave, ruído e movimento residual de máquina.",
+      "passos": [
+        "Não toque na máquina em movimento. Acione parada de emergência se for seguro.",
+        "Peça isolamento e bloqueio por equipe habilitada. Ligue 193 e 192.",
+        "Não puxe membro preso nem tente desmontar a máquina por conta própria.",
+        "Se puder alcançar uma ferida com segurança, faça pressão direta firme.",
+        "Em hemorragia de extremidade ameaçadora à vida, use torniquete comercial se souber aplicar.",
+        "Se houver parte amputada e estiver segura para recolher, envolva-a em material limpo e proteja em saco fechado, resfriado externamente sem contato direto com gelo.",
+        "Registre horário, equipamento envolvido e medidas realizadas."
+      ],
+      "evite": "Não liberte vítimas presas sob carga sem equipe de resgate. Não coloque gelo direto no segmento amputado.",
+      "treino": "Simule ativação da parada de emergência e acionamento dos serviços sem contato com máquina real energizada."
+    },
+    "T03": {
+      "titulo": "Exposição química: proteger, afastar e irrigar",
+      "sinais": "Vazamento, fumaça ou vapor irritante, cheiro químico, pele ardendo ou produto nos olhos.",
+      "passos": [
+        "Não entre em nuvem química. Afaste pessoas para área ventilada e mantenha-se fora do vazamento.",
+        "Acione 193 e o plano de emergência. Informe nome do produto, se conhecido.",
+        "Se a pessoa já estiver em área segura, retire roupas contaminadas quando for possível fazê-lo sem contaminar você.",
+        "Para respingos nos olhos, irrigue imediatamente com água abundante, mantendo as pálpebras abertas, conforme orientação de segurança do produto.",
+        "Para pele exposta, remova o produto superficial com cuidado e lave com água abundante conforme ficha de segurança.",
+        "Não retorne à área contaminada. Aguarde profissionais de descontaminação.",
+        "Se houver falta de ar, confusão ou desmaio, acione também 192 e observe respiração."
+      ],
+      "evite": "Não neutralize ácidos com bases. Não provoque vômito, não dê leite e não tente resgate sem proteção adequada.",
+      "treino": "Use ficha de segurança fictícia para treinar identificação de produto, isolamento e chamada."
+    },
+    "T04": {
+      "titulo": "Choque elétrico: interromper energia antes de tocar",
+      "sinais": "Pessoa em contato com fio ou equipamento energizado, arco elétrico, queimadura ou queda após choque.",
+      "passos": [
+        "Afaste-se. Não toque na vítima ou em objetos ligados à fonte elétrica.",
+        "Acione 193 e solicite desligamento por profissional habilitado.",
+        "Somente após confirmação de que a energia foi interrompida e de que a área está segura, aproxime-se.",
+        "Chame a vítima e verifique se respira normalmente. Acione 192.",
+        "Se não responde e não respira normalmente, inicie RCP e use DEA conforme instruções.",
+        "Cubra queimaduras com material limpo; não aplique pomadas.",
+        "Mantenha a pessoa em observação até a avaliação médica, mesmo se parecer recuperada."
+      ],
+      "evite": "Não use vassoura ou objeto de madeira para tocar fio energizado. Não se aproxime de alta tensão ou cabo caído.",
+      "treino": "Pratique decisão de NÃO TOCAR, isolamento e acionamento, sem exposição a energia real."
+    },
+    "T05": {
+      "titulo": "Queda de altura e trabalhador suspenso",
+      "sinais": "Pessoa caiu de andaime ou escada, está presa em arnês ou apresenta dor cervical e alteração de consciência.",
+      "passos": [
+        "Pare o trabalho e isole a área abaixo do acidente.",
+        "Acione 193 para resgate em altura e 192 para assistência médica.",
+        "Não suba sem equipamento e qualificação. Não tente cortar cordas ou soltar ancoragens.",
+        "Quando a vítima estiver em local seguro, avalie resposta e respiração.",
+        "Não mova o pescoço e evite mobilizações desnecessárias. Trate sangramento grave com pressão direta.",
+        "Se não respira normalmente e não responde, inicie RCP quando houver acesso seguro.",
+        "Transmita a altura da queda, tempo suspenso e mecanismos da lesão."
+      ],
+      "evite": "Não coloque outro trabalhador em risco para retirar a vítima. Não force a pessoa a ficar em pé.",
+      "treino": "Simule uma chamada ao 193 com descrição de altura, acesso, ancoragem e estado da vítima."
+    },
+    "T06": {
+      "titulo": "Espaço confinado: resgate sem entrada do leigo",
+      "sinais": "Trabalhador desmaia em tanque, poço, silo, câmara subterrânea ou ambiente pouco ventilado.",
+      "passos": [
+        "NÃO ENTRE no espaço. Você pode desmaiar pelo mesmo gás ou falta de oxigênio.",
+        "Acione 193, equipe de resgate e plano de emergência da empresa.",
+        "Impeça a entrada de colegas. Sinalize e isole o local.",
+        "Informe o último contato com a vítima, tipo de espaço, produto armazenado e riscos conhecidos.",
+        "Somente equipe habilitada deve realizar resgate, medição da atmosfera e uso de proteção respiratória apropriada.",
+        "Quando a vítima estiver fora e o ambiente seguro, avalie resposta e respiração; inicie RCP se indicada.",
+        "Entregue ao resgate as informações de exposição disponíveis."
+      ],
+      "evite": "Não desça mesmo que a vítima esteja perto. Máscara cirúrgica ou respirador comum não fornecem oxigênio.",
+      "treino": "Treine a ordem de não entrada, isolamento e dados essenciais para ligar ao 193."
+    },
+    "T07": {
+      "titulo": "Incêndio, fumaça e queimaduras",
+      "sinais": "Fumaça, cheiro de queimado, alarme, chamas, dificuldade respiratória ou queimaduras.",
+      "passos": [
+        "Ative o alarme, ligue 193 e inicie evacuação pela rota definida.",
+        "Saia sem usar elevador. Mantenha portas fechadas atrás de você, quando for seguro.",
+        "Não retorne ao local em chamas para buscar objetos ou vítimas sem equipe preparada.",
+        "Em local seguro, observe resposta e respiração de pessoas expostas à fumaça.",
+        "Se não responder e não respirar normalmente, inicie RCP quando a cena estiver segura.",
+        "Em queimadura térmica, resfrie com água corrente fresca por cerca de 20 minutos; cubra com tecido limpo.",
+        "Peça avaliação urgente se houver fumaça inalada, queimadura extensa, face atingida ou dificuldade de respirar."
+      ],
+      "evite": "Não aplique gelo, manteiga ou pasta de dente. Não tente atravessar fumaça intensa.",
+      "treino": "Simule evacuação com ponto de encontro, contagem de pessoas e chamada aos Bombeiros."
+    },
+    "T08": {
+      "titulo": "Incidente com várias vítimas: prioridades do leigo",
+      "sinais": "Acidente com muitas pessoas, múltiplos feridos, ambiente com riscos ou equipe de socorro ainda não presente.",
+      "passos": [
+        "Pare em local seguro e acione 193 e 192. Diga número aproximado de vítimas e perigos.",
+        "Não entre em área instável, contaminada ou com máquinas em funcionamento.",
+        "Siga as ordens dos serviços de resgate e do responsável pelo comando.",
+        "Se houver local seguro e você conseguir ajudar, faça pressão direta em sangramento grave acessível.",
+        "Oriente quem consegue caminhar a se afastar do perigo para área segura, se isso não aumentar o risco.",
+        "Não tente classificar alguém como morto ou decidir retirar atendimento de uma vítima.",
+        "Entregue às equipes a localização das pessoas, os riscos e o que já foi feito."
+      ],
+      "evite": "A triagem START e decisões de expectativa de vida exigem equipe treinada. Não as use como justificativa para abandonar pessoas.",
+      "treino": "Simule um acidente com cinco vítimas fictícias, focando chamada, segurança e informações para o comando."
+    }
+  }
+}
