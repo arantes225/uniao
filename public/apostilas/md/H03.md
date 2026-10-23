@@ -94,6 +94,8 @@ Ao concluir o estudo teórico e o treinamento prático deste módulo, o operador
 
 ## SEÇÃO 3 — INTRODUÇÃO E A PRIMAZIA DA PRESSÃO MECÂNICA FOCAL
 
+**LEITURA GUIADA — COMECE AQUI:** A compressão direta é a habilidade central do controle de sangramento. Ela não depende de aparelho complexo: exige localizar a ferida, pressionar com firmeza e manter essa pressão até que a ajuda assuma.
+
 Em um cenário de trauma penetrante ou contuso com sangramento externo, a primeira resposta motora intuitiva do ser humano é colocar a mão sobre o ferimento. A literatura médica militar e civil demonstra que essa reação intuitiva é, do ponto de vista biofísico, absolutamente correta: **a aplicação de pressão externa superior à pressão interna do vaso sanguíneo é o mecanismo mais eficaz para interromper o vazamento hidráulico do sistema circulatório** [1, 2].
 
 Entretanto, existe uma distância abissal entre colocar panos frouxos sobre uma perna sangrante e a execução técnica rigorosa da **Compressão Direta Focal de Alta Performance**. Muitos socorristas falham não por falta de vontade, mas por dispersão de força: pressionam uma área anatômica ampla de 15 centímetros de diâmetro com a palma da mão espalmada, dividindo a pressão exercida e permitindo que o sangue continue jorrando silenciosamente por baixo da gaze [1, 3].
@@ -103,6 +105,9 @@ Paralelamente, a biotecnologia militar dos últimos vinte anos revolucionou os c
 ---
 
 ## SEÇÃO 4 — FISIOPATOLOGIA DA OCLUSÃO VASCULAR POR COMPRESSÃO EXTERNA
+
+> [!NOTE]
+> **Por que isso acontece?** A mão comprime os tecidos sobre o vaso lesionado, reduzindo o fluxo de sangue para fora do corpo. Pressão contínua favorece o coágulo; levantar a gaze repetidamente pode reiniciar o sangramento.
 
 A mecânica do controle de sangramento responde aos princípios da hidrodinâmica e da biologia endotelial [2, 3]:
 
@@ -266,6 +271,9 @@ O socorrista deve manter vigilância ininterrupta sobre a ferida após a aplica�
 
 ## SEÇÃO 7 — MITOS E FALHAS OPERACIONAIS CRÍTICAS NO USO DE HEMOSTÁTICOS
 
+> [!CAUTION]
+> **Erro que pode prejudicar a vítima:** Não solte a pressão a cada minuto para verificar se melhorou. Não tente retirar um objeto profundamente encravado. Se o sangramento for intenso, ligue 192 desde o início.
+
 1. **"Gaze hemostática fecha o vaso sozinha sem precisar apertar":** O agente hemostático é um acelerador químico, não uma mágica. Sem compressão física contínua potente para manter a gaze em contato com a boca do vaso sob estase, o fluxo sanguíneo lava o produto e a vítima morre [1, 5].
 2. **"Pessoas alérgicas a camarão não podem usar curativo de quitosana":** Estudos imunológicos comprovaram que a alergia a frutos do mar decorre de proteínas musculares (tropomiosina). A quitosana de grau médico é um carboidrato purificado livre de proteínas, aprovado pelo FDA como hipoalergênico universal seguro [5, 6].
 3. **"Curativo compressivo pode substituir o torniquete em sangramento arterial femoral":** Em artérias de altíssima pressão e fluxo maciço, bandagens compressivas externas frequentemente transbordam em 2 minutos. Extremidade com sangramento arterial em jato exige torniquete [1, 4].
@@ -278,6 +286,9 @@ O socorrista deve manter vigilância ininterrupta sobre a ferida após a aplica�
 ---
 
 ## SEÇÃO 8 — ESTUDO DE CASO PRÁTICO CONTEXTUALIZADO (LACERAÇÃO POR LÂMINA CIRCULAR)
+
+> [!TIP]
+> **Decisão no caso prático:** Uma peça metálica provoca corte profundo no braço. Com a máquina segura, o colega coloca gaze, comprime e mantém as mãos firmes. Outro funcionário chama 192 e providencia material extra.
 
 ### Cenário: Acidente em Fábrica de Móveis Planejados
 Na marcenaria industrial Madeira Nobre, o operador de máquinas Juliano, 41 anos, realizava o corte longitudinal de pranchas de MDF em uma serra circular de bancada. Durante o avanço da madeira, a peça sofreu um coice violento (*kickback*) e o braço direito de Juliano foi arremessado contra a lâmina giratória desprotegida.

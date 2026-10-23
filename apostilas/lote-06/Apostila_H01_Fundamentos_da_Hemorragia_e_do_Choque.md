@@ -94,6 +94,8 @@ Ao concluir o estudo deste módulo inaugural, o aluno e futuro operador de contr
 
 ## SEÇÃO 3 — INTRODUÇÃO E EPIDEMIOLOGIA DA MORTE EVITÁVEL POR HEMORRAGIA
 
+**LEITURA GUIADA — COMECE AQUI:** Um sangramento importante pode matar antes da chegada da ambulância. A pessoa que presencia o acidente não precisa distinguir veia de artéria: precisa reconhecer o volume, comprimir a ferida e acionar ajuda.
+
 
 ![Figura 1 — Envoltório de isolamento térmico passivo e ativo para prevenção da hipotermia no trauma.](../imagens/Hypothermia-wrap.png)
 *Figura 1 — Envoltório de isolamento térmico passivo e ativo para prevenção da hipotermia no trauma. Crédito: Baedr-9439. Licença: CC0. Fonte: Wikimedia Commons.*
@@ -107,6 +109,9 @@ A doutrina moderna adota universalmente a abordagem **X-A-B-C-D-E**, onde o **"X
 ---
 
 ## SEÇÃO 4 — ANATOMIA VASCULAR E FISIOLOGIA DO SISTEMA CIRCULATÓRIO
+
+> [!NOTE]
+> **Por que isso acontece?** O sangue leva oxigênio aos órgãos. Quando uma grande quantidade sai do corpo, o coração tem menos volume para circular. Compressão direta diminui a saída de sangue enquanto o sistema de coagulação tenta fechar o ferimento.
 
 Para controlar vazamentos hidráulicos no corpo humano, é mandatório entender a tubulação e a bomba propulsora [2, 3]:
 
@@ -258,6 +263,9 @@ Em pacientes traumatizados com perda sanguínea maciça, três desordens metabó
 
 ## SEÇÃO 7 — ERROS FREQUENTES E CONDUTAS PERIGOSAS NO MANEJO DO SANGRAMENTO
 
+> [!CAUTION]
+> **Erro que pode prejudicar a vítima:** A cor vermelha clara ou escura não indica sozinha se o sangramento é fatal. Roupas rapidamente encharcadas, poças, fluxo intenso e palidez exigem ação. Não espere contar o pulso nem medir a pressão.
+
 1. **Retirar a gaze ensopada para colocar outra no lugar:** Ao remover a primeira gaze cheia de sangue, o socorrista arranca os primeiros filamentos de fibrina que estavam tentando selar o vaso. Se encharcar, coloque mais gazes por cima mantendo a pressão [1, 2].
 2. **Subestimar a perda sanguínea em vítimas jovens e saudáveis:** Atletas jovens conseguem manter a pressão arterial normal até perderem mais de 30% da volemia corporal (Classe II/III). Quando a pressão finalmente desaba, o colapso é catastrófico e imediato [2, 3].
 3. **Não aquecer a vítima traumatizada:** Concentrar-se exclusivamente no curativo e deixar o paciente deitado no asfalto frio em choque precipita a Tríade Letal. **Cubra a vítima com manta térmica aluminizada imediatamente** [3, 5].
@@ -267,6 +275,9 @@ Em pacientes traumatizados com perda sanguínea maciça, três desordens metabó
 ---
 
 ## SEÇÃO 8 — ESTUDO DE CASO PRÁTICO CONTEXTUALIZADO (LACERAÇÃO POR DISCO DE CORTE)
+
+> [!TIP]
+> **Decisão no caso prático:** Após um acidente, um homem apresenta sangramento intenso na coxa. Uma testemunha verifica segurança, inicia pressão direta e pede 192. A equipe de emergência recebe as informações sobre tempo e medidas feitas.
 
 ### Cenário: Acidente em Canteiro de Obras
 Em uma oficina de serralheria industrial, o trabalhador Roberto, 38 anos, operava uma esmerilhadeira angular com disco abrasivo de corte de 9 polegadas para desbaste de vigas de aço. O disco sofreu travamento violento na fenda metálica e estilhaçou em alta rotação. Um grande fragmento cortante de aço e carbeto colidiu contra a face medial da coxa direita de Roberto, produzindo uma laceração profunda de 12 centímetros de extensão.

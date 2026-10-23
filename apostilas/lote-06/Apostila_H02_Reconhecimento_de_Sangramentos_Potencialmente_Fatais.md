@@ -93,6 +93,8 @@ Ao concluir o estudo detalhado deste módulo, o operador de emergência, brigadi
 
 ## SEÇÃO 3 — INTRODUÇÃO E A JANELA CRÍTICA DE AÇÃO NO TRAUMA HEMORRÁGICO
 
+**LEITURA GUIADA — COMECE AQUI:** Nas hemorragias graves, alguns segundos são mais úteis aplicados na ferida do que tentando entender qual vaso sangra. Comece pressionando. Depois decida, conforme treinamento e local da lesão, se será preciso torniquete ou outra medida.
+
 No atendimento pré-hospitalar ao trauma, existe o consagrado conceito clássico da *"Hora de Ouro"* (*Golden Hour*), período dentro do qual a vítima politraumatizada deve idealmente receber tratamento definitivo em ambiente cirúrgico hospitalar. Todavia, quando se trata de **Hemorragia Exsanguinante Arterial**, a escala de tempo não é medida em horas, mas em **segundos e minutos**: é a chamada **"Janela dos Três Minutos"** [1, 2].
 
 Uma laceração completa da artéria femoral profunda ou da artéria braquial drena mais de 500 a 800 ml de sangue a cada 30 segundos. Em um adulto médio com 5 litros de volemia total, a perda de um terço do volume total (aproximadamente 1.500 ml) conduz à perda de consciência e ao colapso cardiovascular por choque hipovolêmico irreversível. Se os presentes na cena demorarem 2 minutos para decidir o que fazer e outros 2 minutos procurando panos ou discutindo quem vai ligar para a ambulância, a vítima estará clinicamente morta antes que qualquer curativo toque sua pele [1, 4].
@@ -104,6 +106,9 @@ A mortalidade pré-hospitalar por sangramento não controlado decorre, em sua qu
 ---
 
 ## SEÇÃO 4 — FISIOPATOLOGIA DA EXSANGUINAÇÃO RÁPIDA E PERDA CRÍTICA
+
+> [!NOTE]
+> **Por que isso acontece?** O sangue pode sair mais rápido do que o corpo consegue compensar. A pressão direta comprime o vaso rompido. Em membros, o torniquete pode interromper o fluxo para controlar hemorragia ameaçadora à vida. A região do corpo determina quais técnicas são possíveis.
 
 A velocidade de esvaziamento vascular dita a gravidade e a resposta biológica de sobrevivência do organismo traumatizado [2, 3]:
 
@@ -301,6 +306,9 @@ O profissional treinado e o cidadão socorrista devem conhecer com clareza a fro
 
 ## SEÇÃO 7 — ERROS FREQUENTES E FALHAS CRÍTICAS DE RECONHECIMENTO NA CENA
 
+> [!CAUTION]
+> **Erro que pode prejudicar a vítima:** Nunca coloque torniquete no pescoço, no tronco ou sobre uma articulação. Em axila e virilha, mantenha pressão direta; preenchimento de feridas exige prática supervisionada e material adequado.
+
 
 ![Figura 3 — Pele mosqueada (livedo/vasoconstrição periférica) como sinal clínico precoce de hipoperfusão e choque.](../imagens/Mottled-skin.jpg)
 *Figura 3 — Pele mosqueada (livedo/vasoconstrição periférica) como sinal clínico precoce de hipoperfusão e choque. Crédito: Another-anon-artist-234. Licença: CC0. Fonte: Wikimedia Commons.*
@@ -314,6 +322,9 @@ O profissional treinado e o cidadão socorrista devem conhecer com clareza a fro
 ---
 
 ## SEÇÃO 8 — ESTUDO DE CASO PRÁTICO CONTEXTUALIZADO (COLISÃO COM LÂMINA DE VIDRO)
+
+> [!TIP]
+> **Decisão no caso prático:** Um ferimento no braço sangra muito. Uma pessoa mantém compressão direta enquanto outra chama 192 e traz um kit. Um socorrista treinado avalia o uso de torniquete comercial caso a hemorragia ameace a vida.
 
 ### Cenário: Acidente em Edifício Comercial
 Em um centro empresarial movimentado de grande circulação, um jovem mensageiro de 24 anos correndo apressado colide violentamente contra uma grande porta de vidro blindex de 10 mm que não possuía sinalização reflexiva regulamentar. A vidraça estilhaça-se em grandes lâminas pontiagudas sob o impacto. Um fragmento cortante de formato triangular colide contra a face medial do braço esquerdo do jovem, logo acima da prega do cotovelo, seccionando profundamente a musculatura e a artéria braquial.
