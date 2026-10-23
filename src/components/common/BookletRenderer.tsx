@@ -109,7 +109,7 @@ const renderInline = (text: string): React.ReactNode[] => {
  */
 const prepareIllustratedMarkdown = (markdown: string): string => {
   if (!markdown.includes('### Figuras de Apoio')) return markdown;
-  const lines = prepareIllustratedMarkdown(markdown).replace(/\r\n/g, '\n').split('\n');
+  const lines = markdown.replace(/\r\n/g, '\n').split('\n');
   const beginning = lines.findIndex(line => line.trim() === '### Figuras de Apoio');
   const ending = lines.findIndex((line, idx) => idx > beginning && line.trim() === '---');
   if (beginning < 0 || ending < 0) return markdown;
@@ -212,7 +212,7 @@ const prepareIllustratedMarkdown = (markdown: string): string => {
 
 const parseMarkdown = (markdown: string): React.ReactNode[] => {
   if (!markdown) return [];
-  const lines = markdown.replace(/\r\n/g, '\n').split('\n');
+  const lines = prepareIllustratedMarkdown(markdown).replace(/\r\n/g, '\n').split('\n');
   const elements: React.ReactNode[] = [];
 
   let i = 0;
