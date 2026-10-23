@@ -95,6 +95,8 @@ Ao concluir o estudo deste módulo, você será capaz de:
 
 ## SEÇÃO 3 — INTRODUÇÃO E RELEVÂNCIA PÚBLICA DO DEA
 
+**LEITURA GUIADA — COMECE AQUI:** O DEA é o desfibrilador que pode ser usado por pessoas treinadas e também por leigos seguindo as instruções do aparelho. Ele analisa o ritmo do coração e indica quando o choque pode ajudar. Mesmo com DEA, as compressões continuam essenciais.
+
 Em emergências cardiovasculares comunitárias, a massagem cardíaca manual mantém o fluxo sanguíneo mínimo para o encéfalo, funcionando como um "suporte temporário de vida". No entanto, a massagem por si só raramente reverte a arritmia que causou o colapso. O único tratamento definitivo comprovado pela ciência médica para cessar a Fibrilação Ventricular e permitir que o coração volte a bater normalmente é a **desfibrilação elétrica precoce** [1, 2].
 
 A Fibrilação Ventricular (FV) é uma tempestade elétrica desorganizada onde milhares de células musculares do ventrículo contraem-se ao mesmo tempo de forma anárquica. O coração não contrai como bomba; ele apenas oscila passivamente. Sem choque para despolarizar esse caos elétrico, a FV esgota suas reservas bioquímicas e evolui em menos de 8 minutos para a assistolia (parada total da atividade elétrica), de onde raramente se consegue ressuscitar o paciente [5].
@@ -104,6 +106,9 @@ Legislações em diversos estados e municípios brasileiros (e projetos de lei f
 ---
 
 ## SEÇÃO 4 — FUNDAMENTAÇÃO BIOFÍSICA DA DESFIBRILAÇÃO
+
+> [!NOTE]
+> **Por que isso acontece?** Algumas paradas cardíacas têm um ritmo elétrico desorganizado, que impede o bombeamento eficaz. Em ritmos específicos, um choque pode interromper essa atividade e permitir recuperação do controle elétrico. O DEA não aplica choque em todas as paradas.
 
 ### 4.1 O Princípio da Despolarização Miocárdica Maciça
 Ao contrário da crença popular difundida por filmes de ficção, o choque elétrico do DEA **NÃO serve para "dar partida" em um coração parado (em linha reta/assistolia)** [1, 7].
@@ -258,6 +263,9 @@ O treinamento com o DEA deve utilizar aparelhos simuladores de treinamento (*DEA
 ## SEÇÃO 7 — ERROS FREQUENTES E MITOS OPERACIONAIS
 
 > [!CAUTION]
+> **Erro que pode prejudicar a vítima:** Se o aparelho indicar análise ou choque, ninguém deve tocar na vítima. Se ele não indicar choque, retome compressões quando instruído. Não retire as pás após cada ciclo.
+
+> [!CAUTION]
 > ### MITOS PERIGOSOS E ERROS CRÍTICOS COM O DEA
 > 
 > 1. **Mito: "O DEA pode dar choque por engano em alguém vivo e matar a pessoa":**
@@ -282,6 +290,9 @@ O treinamento com o DEA deve utilizar aparelhos simuladores de treinamento (*DEA
 *Figura 5 — Sinal ISO 7010 E010: localização do DEA. Crédito: M!dgard. Licença: CC0. Fonte: Wikimedia Commons.*
 
 ## SEÇÃO 8 — APLICAÇÃO PRÁTICA CONTEXTUALIZADA (ESTUDO DE CASO)
+
+> [!TIP]
+> **Decisão no caso prático:** Ao receber o DEA, ligue-o. Um colega continua as compressões enquanto você expõe o tórax e prepara as pás. Quando a voz mandar afastar, verifique visualmente que ninguém está tocando na pessoa.
 
 ### Cenário Simulado
 *Local:* Terminal de passageiros de um aeroporto internacional.  

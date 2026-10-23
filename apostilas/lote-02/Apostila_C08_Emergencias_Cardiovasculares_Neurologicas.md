@@ -93,6 +93,8 @@ Ao concluir o estudo deste módulo, o participante deverá ser capaz de:
 
 ## SEÇÃO 3 — INTRODUÇÃO E IMPACTO DAS DOENÇAS CIRCULATÓRIAS E CEREBRAIS
 
+**LEITURA GUIADA — COMECE AQUI:** Dor no peito e sinais de AVC são situações em que o tempo importa. Quem presta primeiros socorros não precisa diferenciar todos os tipos de infarto ou AVC. Precisa reconhecer sinais preocupantes, acionar 192 e evitar atrasos.
+
 As doenças cardiovasculares e cerebrovasculares lideram com folga as estatísticas de mortalidade e morbidade no Brasil e no mundo. De acordo com o Ministério da Saúde e a Sociedade Brasileira de Cardiologia, o infarto e o AVC são responsáveis por quase um terço de todos os óbitos anuais registrados no país, vitimando mais de 380 mil cidadãos a cada ano — número superior a todas as mortes decorrentes de câncer ou causas externas de trânsito somadas [3, 6].
 
 Além do impacto direto de óbitos súbitos, o AVC representa a principal causa de incapacidade física e cognitiva permanente em adultos em território brasileiro. Pacientes que sobrevivem a um derrame sem atendimento rápido frequentemente perdem a capacidade de deambular, falar, alimentar-se de forma independente e trabalhar, gerando um custo social e familiar imensurável [2, 4].
@@ -102,6 +104,9 @@ O cenário da emergência cardiovascular extra-hospitalar possui uma particulari
 ---
 
 ## SEÇÃO 4 — FUNDAMENTAÇÃO FISIOPATOLÓGICA DO IAM E DO AVC
+
+> [!NOTE]
+> **Por que isso acontece?** O coração e o cérebro precisam de circulação contínua. Quando uma artéria deixa de fornecer sangue, o tecido pode sofrer lesão. O tratamento hospitalar varia conforme a causa; oferecer remédios por conta própria pode atrapalhar.
 
 O coração e o cérebro compartilham a característica biológica de serem órgãos nobres extremamente dependentes de um fluxo contínuo de sangue oxigenado através de redes arteriais terminais:
 
@@ -271,6 +276,9 @@ A crise convulsiva decorre de uma descarga elétrica neuronal hipersincrônica, 
 ## SEÇÃO 7 — ERROS FREQUENTES E CONDUTAS PROIBIDAS
 
 > [!CAUTION]
+> **Erro que pode prejudicar a vítima:** Boca torta, fraqueza em um braço ou fala alterada de início súbito são sinais de AVC. Anote a última hora em que a pessoa foi vista bem. Não dê comida, água ou aspirina em suspeita de AVC.
+
+> [!CAUTION]
 > ### CATÁLOGO DE ERROS CRÍTICOS EM EMERGÊNCIAS CLÍNICAS
 > 
 > 1. **Dar comprimidos de ácido acetilsalicílico (AAS) por conta própria em suspeita de AVC:**
@@ -300,6 +308,9 @@ A crise convulsiva decorre de uma descarga elétrica neuronal hipersincrônica, 
 ---
 
 ## SEÇÃO 8 — APLICAÇÃO PRÁTICA CONTEXTUALIZADA (ESTUDO DE CASO)
+
+> [!TIP]
+> **Decisão no caso prático:** Uma professora começa a falar de forma incompreensível e um braço fica fraco. Os colegas registram a hora de início, ligam 192 e não tentam fazê-la caminhar ou beber água enquanto aguardam orientações.
 
 ### Cenário Simulado
 *Local:* Agência bancária em horário de pico.  

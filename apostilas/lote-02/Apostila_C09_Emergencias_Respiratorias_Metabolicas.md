@@ -93,6 +93,8 @@ Ao concluir o estudo deste módulo, o participante deverá ser capaz de:
 
 ## SEÇÃO 3 — INTRODUÇÃO E RELEVÂNCIA DOS AGRAVOS SISTÊMICOS
 
+**LEITURA GUIADA — COMECE AQUI:** Falta de ar, alergia grave e queda da glicose podem piorar rapidamente. A resposta depende dos sinais: observar a respiração, reconhecer alterações da consciência e identificar se há um plano de emergência e medicamentos já prescritos.
+
 No ambiente de trabalho, nas escolas, em academias e no convívio familiar, as emergências não traumáticas (clínicas) superam numericamente os acidentes traumáticos mecânicos. Doenças crônicas altamente prevalentes na população brasileira — como a **asma brônquica** (que afeta mais de 20 milhões de brasileiros), o **diabetes mellitus** (com mais de 16 milhões de diagnósticos) e as **alergias graves a alimentos, medicamentos e picadas de insetos** — manifestam-se frequentemente sob a forma de descompensações agudas violentas [3, 4, 6].
 
 Essas condições compartilham uma dinâmica temporal traiçoeira: muitas vezes iniciam-se com sintomas aparentemente brandos — uma tosse seca, uma sudorese leve ou placas avermelhadas na pele — e, em menos de 15 minutos, evoluem para insuficiência respiratória terminal, edema laríngeo asfixiante ou coma hipoglicêmico [1, 4].
@@ -102,6 +104,9 @@ O socorrista comunitário e o brigadista são as primeiras barreiras de contenç
 ---
 
 ## SEÇÃO 4 — FUNDAMENTAÇÃO FISIOPATOLÓGICA: OXIGÊNIO, GLICOSE E RESPOSTA IMUNE
+
+> [!NOTE]
+> **Por que isso acontece?** Na asma, os brônquios se estreitam e o ar encontra dificuldade para passar. Na anafilaxia, a reação alérgica pode comprometer respiração e circulação. Na hipoglicemia, o cérebro pode ficar sem glicose suficiente para funcionar.
 
 O funcionamento das células humanas depende criticamente de dois substratos metabólicos contínuos que não podem faltar: o **Oxigênio ($O_2$)** para a respiração aeróbica mitocondrial e a **Glicose** como combustível de alta energia para a produção de ATP [7]:
 
@@ -273,6 +278,9 @@ Suspeite e aja se a vítima apresentar sintomas de início súbito (segundos a m
 ## SEÇÃO 7 — ERROS FREQUENTES E CONDUTAS PROIBIDAS
 
 > [!CAUTION]
+> **Erro que pode prejudicar a vítima:** Não ofereça alimentos ou líquidos a quem não engole com segurança. Um autoinjetor prescrito deve ser usado conforme o plano individual e as instruções do fabricante. Não improvise adrenalina em seringa para uma emergência.
+
+> [!CAUTION]
 > ### CATÁLOGO DE ERROS CRÍTICOS EM EMERGÊNCIAS METABÓLICAS E ALÉRGICAS
 > 
 > 1. **Aplicar insulina por conta própria em pessoa desacordada sem saber o valor da glicemia:**
@@ -302,6 +310,9 @@ Suspeite e aja se a vítima apresentar sintomas de início súbito (segundos a m
 ---
 
 ## SEÇÃO 8 — APLICAÇÃO PRÁTICA CONTEXTUALIZADA (ESTUDO DE CASO)
+
+> [!TIP]
+> **Decisão no caso prático:** Uma pessoa desenvolve placas na pele, rouquidão e falta de ar após comer. Você chama 192, localiza o autoinjetor que lhe foi prescrito, segue o plano individual e acompanha consciência e respiração até o resgate.
 
 ### Cenário Simulado
 *Local:* Restaurante de um hotel fazenda durante um evento corporativo.  
