@@ -64,6 +64,15 @@ const ORDERED_LIST_REGEX = /^\s*\d+\.\s+/;
 const IMG_REGEX = /^!\[([^\]]*)\]\(([^)]+)\)/;
 const CALLOUT_HEADER_REGEX = /^\[!(TIP|NOTE|IMPORTANT|WARNING|CAUTION)\]/i;
 
+const CALLOUT_STYLES = {
+  TIP: { title: 'Dica prática', icon: '✓', box: 'border-emerald-500 bg-emerald-50 dark:bg-emerald-950/35', titleClass: 'text-emerald-800 dark:text-emerald-300' },
+  NOTE: { title: 'Entenda', icon: 'i', box: 'border-sky-500 bg-sky-50 dark:bg-sky-950/35', titleClass: 'text-sky-800 dark:text-sky-300' },
+  IMPORTANT: { title: 'Prioridade', icon: '!', box: 'border-indigo-500 bg-indigo-50 dark:bg-indigo-950/35', titleClass: 'text-indigo-800 dark:text-indigo-300' },
+  WARNING: { title: 'Atenção', icon: '!', box: 'border-amber-500 bg-amber-50 dark:bg-amber-950/35', titleClass: 'text-amber-900 dark:text-amber-300' },
+  CAUTION: { title: 'Não faça isso', icon: '×', box: 'border-rose-500 bg-rose-50 dark:bg-rose-950/35', titleClass: 'text-rose-800 dark:text-rose-300' },
+} as const;
+
+
 const renderInline = (text: string): React.ReactNode[] => {
   if (!text) return [];
   const parts = text.split(INLINE_REGEX);
@@ -222,27 +231,39 @@ const parseMarkdown = (markdown: string): React.ReactNode[] => {
       continue;
     }
 
-    // Blockquote / Callout
+    // Blockquote / callout: semantic distinction between teaching, priority and safety
     if (line.trim().startsWith('>')) {
       const quoteLines: string[] = [];
+      let calloutType: keyof typeof CALLOUT_STYLES | null = null;
       while (i < lines.length && lines[i].trim().startsWith('>')) {
-        const clean = lines[i].trim().replace(/^>\s?/, '');
-        if (!CALLOUT_HEADER_REGEX.test(clean)) {
+        const clean = lines[i].trim().replace(/^>\\s?/, '');
+        const match = clean.match(CALLOUT_HEADER_REGEX);
+        if (match) {
+          calloutType = match[1].toUpperCase() as keyof typeof CALLOUT_STYLES;
+        } else if (clean.trim()) {
           quoteLines.push(clean);
         }
         i++;
       }
+      const style = calloutType ? CALLOUT_STYLES[calloutType] : null;
       elements.push(
-        <div
+        <aside
           key={`quote-${i}`}
-          className="my-5 p-5 rounded-2xl bg-teal-500/10 border-l-4 border-teal-500 text-slate-800 dark:text-slate-200 space-y-2 text-sm"
+          role={calloutType === 'WARNING' || calloutType === 'CAUTION' ? 'note' : undefined}
+          className={`my-6 rounded-2xl border border-l-4 p-5 shadow-sm ${style ? style.box : 'border-teal-500 bg-teal-500/10'} text-slate-800 dark:text-slate-200`}
         >
-          {quoteLines.map((ql, qIdx) => (
-            <p key={qIdx} className="leading-relaxed">
-              {renderInline(ql)}
-            </p>
-          ))}
-        </div>
+          {style && (
+            <div className={`mb-3 flex items-center gap-2 text-sm font-extrabold ${style.titleClass}`}>
+              <span aria-hidden="true" className="flex h-6 w-6 items-center justify-center rounded-full border border-current text-xs">{style.icon}</span>
+              <span>{style.title}</span>
+            </div>
+          )}
+          <div className="space-y-2 text-sm leading-relaxed">
+            {quoteLines.map((ql, qIdx) => (
+              <p key={qIdx}>{renderInline(ql)}</p>
+            ))}
+          </div>
+        </aside>
       );
       continue;
     }
