@@ -42,6 +42,8 @@ export default defineConfig({
       },
       workbox: {
         globPatterns: ['**/*.{js,css,html,ico,png,svg,woff2}'],
+        // Standalone patient pages must not be replaced by the SPA navigation fallback.
+        navigateFallbackDenylist: [/\/simulador\/personagens\/.*\.html(?:$|\?)/],
         // Full-resolution patient photos are cached on demand, after the first visit.
         globIgnores: ['**/simulador/personagens/**/*.png'],
         maximumFileSizeToCacheInBytes: 5 * 1024 * 1024,
