@@ -6,7 +6,7 @@
 **MÓDULO C06 — DESFIBRILADOR EXTERNO AUTOMÁTICO (DEA)**
 *Biblioteca Curricular: Núcleo Compartilhado (Core Skills)*
 *Versão Editorial: 1.0.0 — Padrão Editorial USM*
-*Carga Horária Teórica: 1h | Prática: 1h | Diretrizes: AHA 2020-2025 / ILCOR / Lei Federal do DEA*
+*Carga Horária Teórica: 1h | Prática: 1h | Diretrizes: AHA 2020-2025 / ILCOR / verificação da legislação local sobre DEA*
 
 ---
 
@@ -30,6 +30,41 @@
 - [Seção 10 — Mapa Mental da Desfibrilação](#seção-10--mapa-mental-da-desfibrilação)
 - [Seção 11 — O Que Você Precisa Lembrar](#seção-11--o-que-você-precisa-lembrar)
 - [Seção 12 — Referências Bibliográficas e Metadados Editoriais](#seção-12--referências-bibliográficas-e-metadados-editoriais)
+
+---
+
+## GUIA DE ATUAÇÃO — PARA QUEM NÃO É DA ÁREA DA SAÚDE
+
+> **EM UMA EMERGÊNCIA REAL:** Proteja-se, peça ajuda e ligue **192 (SAMU)**. Para fogo, resgate em altura, água, espaço confinado ou ambiente perigoso, ligue **193 (Bombeiros)**. Diga o endereço e siga as instruções da central. Este roteiro orienta as primeiras ações, mas não substitui o treino supervisionado das técnicas práticas.
+
+### Situação: Uso de desfibrilador externo automático (DEA)
+
+**Reconheça os sinais:** Pessoa inconsciente e sem respiração normal; o DEA está disponível.
+
+### O que fazer — passo a passo
+
+1. Ligue 192 e inicie RCP. Peça a outra pessoa que traga o DEA.
+2. Ligue o DEA e ouça a voz do equipamento.
+3. Descubra o peito e seque a pele molhada. Não use o aparelho com a vítima em poça de água.
+4. Retire películas das pás e cole-as nos locais mostrados nos desenhos do equipamento.
+5. Interrompa o contato com a vítima quando o aparelho anunciar análise do ritmo.
+6. Se houver indicação de choque, confira que ninguém toca na vítima. Aperte o botão se o aparelho solicitar.
+7. Retome as compressões imediatamente após o aviso do DEA. Mantenha as pás instaladas.
+8. Siga os próximos avisos do DEA até a chegada do resgate.
+
+### Não faça isto
+
+Não retire as pás entre ciclos. Não aplique choque sem ordem do DEA. Não adie compressões enquanto procura o equipamento.
+
+### Exercício prático de aprendizagem
+
+Cada aluno deve ligar um DEA de treinamento, colocar as pás no manequim e verbalizar 'Afastem-se!'.
+
+**Ao entregar a vítima:** informe horário de início, mudanças na respiração e na consciência, riscos e medidas aplicadas.
+
+**Limites:** não faça procedimentos invasivos, administração de fármacos não prescritos, resgates técnicos ou intervenções que dependam de habilitação profissional. Pratique presencialmente RCP, DEA, controle de sangramento e desengasgo em manequins antes de assumir atendimento.
+
+**Referências operacionais:** Ministério da Saúde — SAMU 192 (https://www.gov.br/saude/pt-br/composicao/saes/samu-192/samu-192); AHA/AAP — RCP e primeiros socorros 2025 (https://cpr.heart.org/en/resuscitation-science/cpr-and-ecc-guidelines); AHA/Cruz Vermelha — Primeiros Socorros 2024 (https://cpr.heart.org/en/resuscitation-science/2024-first-aid-guidelines).
 
 ---
 

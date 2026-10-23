@@ -33,6 +33,39 @@
 
 ---
 
+## GUIA DE ATUAÇÃO — PARA QUEM NÃO É DA ÁREA DA SAÚDE
+
+> **EM UMA EMERGÊNCIA REAL:** Proteja-se, peça ajuda e ligue **192 (SAMU)**. Para fogo, resgate em altura, água, espaço confinado ou ambiente perigoso, ligue **193 (Bombeiros)**. Diga o endereço e siga as instruções da central. Este roteiro orienta as primeiras ações, mas não substitui o treino supervisionado das técnicas práticas.
+
+### Situação: Falta de ar, reação alérgica e glicose baixa
+
+**Reconheça os sinais:** Chiado intenso, dificuldade para falar, inchaço de língua ou garganta, urticária com falta de ar, suor frio e confusão.
+
+### O que fazer — passo a passo
+
+1. Avalie se a pessoa consegue falar e respirar. Chame 192 se houver falta de ar importante ou reação sistêmica.
+2. Se a pessoa usa inalador prescrito, ajude-a a acessar o próprio medicamento conforme orientação e plano individual.
+3. Em suspeita de anafilaxia, acione 192. Se houver autoinjetor prescrito, siga o plano e as instruções do dispositivo.
+4. Se houver tremor e suor frio por possível hipoglicemia e a pessoa conseguir engolir, ofereça glicose oral.
+5. Não ofereça nada pela boca a pessoa confusa, sonolenta ou inconsciente.
+6. Observe respiração e consciência. Se não responder e não respirar normalmente, inicie RCP.
+
+### Não faça isto
+
+Não improvise doses de medicação, adrenalina em seringa ou oxigênio sem treinamento e protocolo.
+
+### Exercício prático de aprendizagem
+
+Treine identificar as diferenças entre broncoespasmo, anafilaxia e hipoglicemia com planos individuais.
+
+**Ao entregar a vítima:** informe horário de início, mudanças na respiração e na consciência, riscos e medidas aplicadas.
+
+**Limites:** não faça procedimentos invasivos, administração de fármacos não prescritos, resgates técnicos ou intervenções que dependam de habilitação profissional. Pratique presencialmente RCP, DEA, controle de sangramento e desengasgo em manequins antes de assumir atendimento.
+
+**Referências operacionais:** Ministério da Saúde — SAMU 192 (https://www.gov.br/saude/pt-br/composicao/saes/samu-192/samu-192); AHA/AAP — RCP e primeiros socorros 2025 (https://cpr.heart.org/en/resuscitation-science/cpr-and-ecc-guidelines); AHA/Cruz Vermelha — Primeiros Socorros 2024 (https://cpr.heart.org/en/resuscitation-science/2024-first-aid-guidelines).
+
+---
+
 ## SEÇÃO 1 — EM 30 SEGUNDOS
 
 > **VISÃO RÁPIDA DE SOBREVIVÊNCIA**
@@ -196,7 +229,7 @@ Suspeite e aja se a vítima apresentar sintomas de início súbito (segundos a m
   2. Segure a caneta com punho fechado (polegar afastado das pontas para não disparar contra a própria mão).
   3. Pressione a ponta ativa perpendicularmente contra a parte externa da coxa da vítima (pode ser aplicada diretamente através da roupa fina).
   4. Pressione com firmeza até ouvir o clique de disparo da mola da agulha.
-  5. **Mantenha a caneta pressionada no local contando mentalmente até 10 segundos** para garantir a injeção completa do fármaco.
+  5. **Mantenha o autoinjetor pelo tempo indicado pelo fabricante**, pois os dispositivos diferem. Siga o plano prescrito e a orientação do SAMU.
   6. Remova a caneta e massageie o local da injeção por 10 segundos [1, 2].
 - **Posicionamento da Vítima:** Mantenha a vítima **deitada de costas com as pernas elevadas**. **NÃO permita que a pessoa fique em pé ou caminhe.** Levantar repentinamente em anafilaxia pode provocar a "síndrome da veia cava vazia", com colapso hemodinâmico e morte súbita por falta de enchimento do coração [1]. Se houver vômitos ou dificuldade respiratória predominante, mantenha-a sentada com suporte ou deitada de lado.
 

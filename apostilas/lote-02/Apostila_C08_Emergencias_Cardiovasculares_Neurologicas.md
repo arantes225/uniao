@@ -33,6 +33,39 @@
 
 ---
 
+## GUIA DE ATUAÇÃO — PARA QUEM NÃO É DA ÁREA DA SAÚDE
+
+> **EM UMA EMERGÊNCIA REAL:** Proteja-se, peça ajuda e ligue **192 (SAMU)**. Para fogo, resgate em altura, água, espaço confinado ou ambiente perigoso, ligue **193 (Bombeiros)**. Diga o endereço e siga as instruções da central. Este roteiro orienta as primeiras ações, mas não substitui o treino supervisionado das técnicas práticas.
+
+### Situação: Dor no peito e sinais de AVC
+
+**Reconheça os sinais:** Dor/pressão no peito, suor frio, falta de ar; ou boca torta, braço fraco e fala alterada de início súbito.
+
+### O que fazer — passo a passo
+
+1. Interrompa atividade e mantenha a pessoa em posição confortável. Ligue 192 imediatamente.
+2. Em suspeita de AVC, peça sorriso, elevação dos dois braços e uma frase simples.
+3. Anote a hora em que a pessoa foi vista bem pela última vez.
+4. Não ofereça comida, líquidos nem medicamentos. Não transporte por conta própria se o SAMU orientar aguardar.
+5. Se for dor torácica, não faça a vítima caminhar ou subir escadas.
+6. Observe resposta e respiração. Se perder consciência e não respirar normalmente, inicie RCP e use DEA.
+
+### Não faça isto
+
+Não espere a dor passar nem meça pulso para decidir fazer RCP. Não dê aspirina em suspeita de AVC.
+
+### Exercício prático de aprendizagem
+
+Simule alguém com fala arrastada; o aluno deve aplicar sinais FAST e registrar horário.
+
+**Ao entregar a vítima:** informe horário de início, mudanças na respiração e na consciência, riscos e medidas aplicadas.
+
+**Limites:** não faça procedimentos invasivos, administração de fármacos não prescritos, resgates técnicos ou intervenções que dependam de habilitação profissional. Pratique presencialmente RCP, DEA, controle de sangramento e desengasgo em manequins antes de assumir atendimento.
+
+**Referências operacionais:** Ministério da Saúde — SAMU 192 (https://www.gov.br/saude/pt-br/composicao/saes/samu-192/samu-192); AHA/AAP — RCP e primeiros socorros 2025 (https://cpr.heart.org/en/resuscitation-science/cpr-and-ecc-guidelines); AHA/Cruz Vermelha — Primeiros Socorros 2024 (https://cpr.heart.org/en/resuscitation-science/2024-first-aid-guidelines).
+
+---
+
 ## SEÇÃO 1 — EM 30 SEGUNDOS
 
 > **VISÃO RÁPIDA DE SOBREVIVÊNCIA**
@@ -308,7 +341,7 @@ A viatura do SAMU chega em 11 minutos. A paciente é transferida com dados preci
 ## SEÇÃO 9 — PULO DO GATO
 
 > [!TIP]
-> ### O PULO DO GATO DA UNIÃO: A REGRA DO "PULSO CAROTÍDEO NA SÍNCOPE DUVIDOSA"
+> ### O PULO DO GATO DA UNIÃO: A REGRA DA RESPIRAÇÃO NA SÍNCOPE DUVIDOSA
 > Em locais públicos, quando uma pessoa desaba de repente no chão após relatar tontura, o erro mais frequente de leigos é assumir que *"foi apenas uma queda de pressão ou desmaio de calor"* e perder minutos preciosos elevando as pernas de uma pessoa que, na verdade, **acabou de entrar em Parada Cardíaca por Fibrilação Ventricular Primária**.
 > 
 > **A Regra de Ouro da Diferenciação nos Primeiros 5 Segundos:**

@@ -33,6 +33,41 @@
 
 ---
 
+## GUIA DE ATUAÇÃO — PARA QUEM NÃO É DA ÁREA DA SAÚDE
+
+> **EM UMA EMERGÊNCIA REAL:** Proteja-se, peça ajuda e ligue **192 (SAMU)**. Para fogo, resgate em altura, água, espaço confinado ou ambiente perigoso, ligue **193 (Bombeiros)**. Diga o endereço e siga as instruções da central. Este roteiro orienta as primeiras ações, mas não substitui o treino supervisionado das técnicas práticas.
+
+### Situação: Ressuscitação cardiopulmonar em adulto
+
+**Reconheça os sinais:** Adulto não responde e não respira ou só apresenta suspiros agônicos.
+
+### O que fazer — passo a passo
+
+1. Verifique a segurança. Chame a pessoa e toque seus ombros.
+2. Peça a alguém para ligar 192 e trazer o DEA. Se estiver só, ligue em viva-voz.
+3. Deite a vítima de costas sobre superfície firme, sem atrasar as compressões.
+4. Coloque a base de uma mão na metade inferior do esterno. Apoie a outra mão sobre a primeira.
+5. Comprima 5–6 cm, em ritmo de 100–120 por minuto, permitindo retorno total do tórax.
+6. Se você é leigo sem treino de ventilação, faça compressões contínuas. Se foi treinado, pode fazer 30 compressões e 2 ventilações.
+7. Siga o DEA assim que chegar e retome as compressões quando indicado. Revezem-se aproximadamente a cada 2 minutos.
+8. Continue até a equipe assumir, a pessoa voltar a apresentar sinais claros de vida ou o local deixar de ser seguro.
+
+### Não faça isto
+
+Não perca tempo procurando pulso. Não pare por suspiros isolados nem encoste durante análise ou choque do DEA.
+
+### Exercício prático de aprendizagem
+
+Pratique 2 minutos em manequim com avaliação de ritmo, profundidade, retorno do tórax e pausas.
+
+**Ao entregar a vítima:** informe horário de início, mudanças na respiração e na consciência, riscos e medidas aplicadas.
+
+**Limites:** não faça procedimentos invasivos, administração de fármacos não prescritos, resgates técnicos ou intervenções que dependam de habilitação profissional. Pratique presencialmente RCP, DEA, controle de sangramento e desengasgo em manequins antes de assumir atendimento.
+
+**Referências operacionais:** Ministério da Saúde — SAMU 192 (https://www.gov.br/saude/pt-br/composicao/saes/samu-192/samu-192); AHA/AAP — RCP e primeiros socorros 2025 (https://cpr.heart.org/en/resuscitation-science/cpr-and-ecc-guidelines); AHA/Cruz Vermelha — Primeiros Socorros 2024 (https://cpr.heart.org/en/resuscitation-science/2024-first-aid-guidelines).
+
+---
+
 ## SEÇÃO 1 — EM 30 SEGUNDOS
 
 > **VISÃO RÁPIDA DE SOBREVIVÊNCIA**
