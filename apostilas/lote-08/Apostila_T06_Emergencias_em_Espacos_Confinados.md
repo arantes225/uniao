@@ -62,7 +62,7 @@ Ao concluir o estudo deste módulo didático e seus treinamentos técnicos, o pr
 3. **Compreender o fenômeno da fadiga olfatória do gás sulfídrico ($H_2S$)** e banir o olfato humano como método de detecção de atmosferas perigosas.
 4. **Analisar a epidemiologia do resgate impulsivo desprotegido**, incorporando a autoproteção intransigente como diretriz máxima de sobrevivência.
 5. **Operar os sistemas mecânicos de resgate sem entrada** (tripés, guinchos retráteis e linhas de vida conectadas ao anel dorsal do cinto).
-6. **Organizar o fluxo de atendimento pré-hospitalar fora do espaço confinado**, ofertando suporte básico de vida, oxigenioterapia a 100% sob máscara e compressões torácicas com ventilação em bolsa-válvula-máscara equipada com filtro viral/químico.
+6. **Organizar o fluxo de atendimento pré-hospitalar fora do espaço confinado**, realizando avaliação inicial e RCP quando indicada; oxigenoterapia e ventilação com equipamento devem ficar com equipe habilitada.
 
 ---
 
@@ -290,7 +290,7 @@ Assim que a vítima for extraída para a atmosfera livre:
 | **Trabalhador Conectado à Linha do Tripé Perde os Sentidos** | Síncope anóxica ou inalação de gás; risco de PCR em minutos. | Vigia aciona manivela do guincho imediatamente da superfície; resgatar sem entrar; SAMU 192. | Descer ao espaço antes de usar o guincho mecânico da superfície; desacoplar o tripé. |
 | **Alarme do Detector de 4 Gases Dispara Enquanto Há Pessoas Dentro** | Contaminação por $H_2S$, $CO$ ou queda de $O_2$ (< 19,5%). | Vigia ordena EVACUAÇÃO IMEDIATA em voz alta; trabalhadores sobem imediatamente pela escada. | Ignorar o alarme achando que é "defeito do aparelho"; mandar continuar a solda ou pintura. |
 | **Vítima Resgatada em Parada Cardiorrespiratória (PCR)** | Parada hipóxica por anóxia; ausência de pulso e respiração. | Iniciar compressões torácicas; aplicar DEA; ventilar com bolsa-válvula-máscara e filtro. | Realizar ventilação boca a boca direta; dar tapas; perder tempo procurando pulso fraco. |
-| **Vítima Resgatada Consciente mas Confusa e Sonolenta** | Hipóxia cerebral aguda ou intoxicação por monóxido de carbono. | Administrar oxigênio a 100% via máscara com reservatório (15 L/min); repouso absoluto. | Permitir que a vítima levante e vá embora dirigindo; dar café ou água para beber. |
+| **Vítima Resgatada Consciente mas Confusa e Sonolenta** | Hipóxia cerebral aguda ou intoxicação por monóxido de carbono. | Acionar 192, observar respiração e manter repouso; oxigênio somente por equipe habilitada e conforme protocolo. | Permitir que a vítima levante e vá embora dirigindo; dar café ou água para beber. |
 
 
 ![Figura 3 — Máscara respiratória facial inteira com filtro químico para ambientes contaminados.](../imagens/Full-face-respirator.jpg)
@@ -401,7 +401,7 @@ No hospital, Roberto foi admitido na UTI, submetido a suporte ventilatório não
                    • Zona limpa a barlavento (ar livre)
                    • Se em PCR: RCP contínua + DEA
                    • PROIBIDO BOCA A BOCA: Usar ambu + filtro
-                   • Se respirando: Oxigênio a 100% (15 L/min)
+                   • Se respirando: observar até atendimento 192
                    • Encaminhamento hospitalar urgente
 ```
 

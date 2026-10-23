@@ -271,7 +271,7 @@ A interface entre a resposta corporativa interna e as forças públicas de socor
 | **Princípio de Fogo em Painel Elétrico** | Chamas e fumaça saindo de quadro de disjuntores energizado. | Desligar chave geral se acessível; usar extintor de CO₂ ou Pó ABC a 2 metros de distância. | Jogar balde d'água ou usar extintor de água pressurizada (choque elétrico mortal). |
 | **Corredor Tomado por Fumaça Escura** | Fumaça descendo do teto, ardência ocular, visibilidade baixa. | Engatinhar rente ao piso (< 50 cm do chão); guiar-se pela parede até a saída de emergência. | Andar ereto aspirando fumaça superaquecida; correr desorientado no escuro. |
 | **Colega com Roupas Pegando Fogo** | Chamas nas calças ou camisa do trabalhador em pânico. | Derrubá-lo ao chão e fazê-lo rolar (PARE, DEITE E ROLE); abafar com cobertor ou pano pesado. | Deixar a vítima correr gritando; aplicar extintor de CO₂ direto no rosto (risco de asfixia/gelo). |
-| **Vítima Resgatada com Escarro Negro e Rouquidão** | Fuligem no nariz e boca, voz rouca, tosse metálica frequente. | Oxigênio a 100% contínuo sob máscara com reservatório; posição sentada; SAMU 192 urgente. | Oferecer água ou leite para beber; deitar o paciente de costas na horizontal. |
+| **Vítima Resgatada com Escarro Negro e Rouquidão** | Fuligem no nariz e boca, voz rouca, tosse metálica frequente. | Acionar SAMU 192 imediatamente; observar a respiração e permitir posição confortável; oxigênio apenas pela equipe habilitada. | Oferecer água ou leite para beber; deitar o paciente de costas na horizontal. |
 | **Alarme de Incêndio Tocou no Andar** | Sirenes tocando, luz estroboscópica piscando no corredor. | Iniciar evacuação imediata pela escada de emergência em fila; fechar portas sem trancar. | Pegar elevador para "descer mais rápido"; voltar para buscar mochila, celular ou casaco. |
 
 ---
@@ -371,7 +371,7 @@ No hospital terciário, o médico da UTI realizou laringoscopia de urgência e c
    (Fuligem oronasal, estridor, rouquidão,            • Recepção do Corpo de Bombeiros
    tosse com escarro negro, queimadura)               • Informar localização do foco e
  • Acomodar sentado (Posição de Fowler)                 eventuais pessoas presas
- • OXIGÊNIO A 100% sob máscara (15 L/min)
+ • Acionar 192; oxigênio apenas pela equipe habilitada
  • Transferência para USA do SAMU 192
 ```
 

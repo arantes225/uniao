@@ -49,7 +49,7 @@ Pratique decisão de NÃO TOCAR, isolamento e acionamento, sem exposição a ene
 
 Acidentes com eletricidade industrial e predial constituem emergências críticas onde o princípio inviolável de segurança é: **NUNCA TOQUE NA VÍTIMA ANTES DA CONFIRMAÇÃO ABSOLUTA DA DESENERGIZAÇÃO**. A corrente elétrica não é visível; tocar em uma pessoa ainda conectada ao circuito transfere a descarga para o socorrista, gerando uma segunda vítima letal. A passagem da corrente pelo organismo vivo gera danos por três vias: efeito térmico (efeito Joule causando queimaduras profundas na entrada e saída), perturbação eletrofisiológica direta sobre o sistema de condução cardíaco (desencadeando fibrilação ventricular ou assistolia) e tetanização muscular (espasmo violento que impede a vítima de soltar o cabo elétrico ou contrai os músculos respiratórios, provocando asfixia).
 
-Se houver contato com eletricidade, não toque na vítima nem tente afastar fios com objetos. Acione 193 e solicite desligamento por profissional autorizado. Só se aproxime após confirmação de segurança. Em alta tensão (acima de 1.000 V / redes de distribuição), mantenha **distância de segurança de no mínimo 10 metros**, pois a eletricidade rompe a rigidez dielétrica do ar e forma arcos elétricos sem necessidade de toque direto; isole a área e acione a concessionária de energia e o Corpo de Bombeiros (193). Se a vítima estiver inconsciente e sem respiração após a desenergização, inicie imediatamente a Ressuscitação Cardiopulmonar (RCP) com compressões torácicas contínuas e instale o Desfibrilador Externo Automático (DEA) o mais rápido possível. Toda vítima de choque elétrico com perda de consciência, mesmo que momentânea, exige internação hospitalar para monitoramento eletrocardiográfico por risco de arritmias cardíacas tardias e síndrome de compartimento por necrose muscular profunda (rabdomiólise).
+Se houver contato com eletricidade, não toque na vítima nem tente afastar fios com objetos. Acione 193 e solicite desligamento por profissional autorizado. Só se aproxime após confirmação de segurança. Em alta tensão (acima de 1.000 V / redes de distribuição), mantenha distância ampla e não se aproxime de cabos caídos ou arcos elétricos. A distância segura depende da instalação; peça orientação ao Corpo de Bombeiros e à concessionária; isole a área e acione a concessionária de energia e o Corpo de Bombeiros (193). Se a vítima estiver inconsciente e sem respiração após a desenergização, inicie imediatamente a Ressuscitação Cardiopulmonar (RCP) com compressões torácicas contínuas e instale o Desfibrilador Externo Automático (DEA) o mais rápido possível. Toda vítima de choque elétrico com perda de consciência, mesmo que momentânea, exige internação hospitalar para monitoramento eletrocardiográfico por risco de arritmias cardíacas tardias e síndrome de compartimento por necrose muscular profunda (rabdomiólise).
 
 ---
 
@@ -187,8 +187,8 @@ A primeira e mais inviolável atitude de qualquer socorrista frente a uma vítim
 ┌───────────────────────────────┐     ┌───────────────────────────────────┐
 │ 1. Desligar disjuntor geral   │     │ 1. NÃO SE APROXIMAR (Raio de 10m) │
 │ 2. Se inacessível: afastar o  │     │ 2. Risco de arco voltaico no ar   │
-│    cabo com bastão isolante,  │     │ 3. Risco de tensão de passo       │
-│    madeira seca ou PVC        │     │ 4. Chamar concessionária e 193    │
+│    NÃO TOCAR EM CABOS!       │     │ 3. Risco de tensão de passo       │
+│    CHAMAR 193 E ISOLAR ÁREA  │     │ 4. Chamar concessionária e 193    │
 │ 3. Pisar sobre superfície seca│     │ 5. Resgate somente após corte     │
 │ 4. NUNCA TOCAR na vítima antes│     │    formal da rede pela operadora  │
 └───────────────────────────────┘     └───────────────────────────────────┘

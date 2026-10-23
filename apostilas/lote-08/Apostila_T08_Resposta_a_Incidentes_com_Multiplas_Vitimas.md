@@ -280,7 +280,7 @@ A teoria sem treinamento sob estresse real é inútil em catástrofes:
 | **Trabalhador Anda** | Consegue levantar e caminhar ao comando. | **VERDE** | Direcionar para a Área Verde fora da rota; monitorar ferimentos leves. |
 | **Respiração Ausente** | Não respira; via aérea aberta e continua apneia. | **PRETO** | Não iniciar massagem cardíaca; passar para o próximo paciente. |
 | **Respiração Retorna** | Não respirava; voltou a respirar ao abrir via aérea. | **VERMELHO** | Manter via aérea aberta (cânula de Guedel ou posição lateral); prioridade máxima. |
-| **Respiração Muito Rápida** | Frequência respiratória acima de 30 irpm. | **VERMELHO** | Oxigênio a 100% se disponível; transferência imediata para o PMA Vermelho. |
+| **Respiração Muito Rápida** | Frequência respiratória acima de 30 irpm. | **VERMELHO** | Equipe treinada aplica protocolo de triagem; oxigênio e remoção sob comando do resgate. |
 | **Sangramento em Jato** | Amputação ou laceração com esguicho arterial ativo. | **VERMELHO** | Aplicar torniquete comercial imediatamente; marcar horário; transferir. |
 | **Perfusão Lenta / Sem Pulso** | Enchimento capilar > 2 segundos ou sem pulso radial. | **VERMELHO** | Alocar na lona vermelha; combater hipotermia com manta; transporte prioritário. |
 | **Não Atende a Comandos** | Inconsciente ou confuso; não aperta a mão. | **VERMELHO** | Estabilização cervical; proteção de via aérea; encaminhamento imediato. |
@@ -298,7 +298,7 @@ A teoria sem treinamento sob estresse real é inútil em catástrofes:
 ┌────────────────────────────────────────────────────────┐
 │ ERROS CRÍTICOS EM INCIDENTES COM MÚLTIPLAS VÍTIMAS     │
 ├────────────────────────────────────────────────────────┤
-│ 1. REALIZAR RCP EM VÍTIMA PRETA: Consome a equipe e   │
+│ 1. CLASSIFICAR ÓBITO SEM HABILITAÇÃO: decisão técnica que compete à equipe de triagem e   │
 │    mata dezenas de feridos vermelhos ao lado.          │
 ├────────────────────────────────────────────────────────┤
 │ 2. EVACUAÇÃO DESORDENADA EM CARROS PARTICULARES:       │
