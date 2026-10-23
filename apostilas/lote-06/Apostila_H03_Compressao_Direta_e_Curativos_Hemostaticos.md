@@ -33,6 +33,40 @@
 
 ---
 
+## GUIA DE ATUAÇÃO — PARA QUEM NÃO É DA ÁREA DA SAÚDE
+
+> **EM UMA EMERGÊNCIA REAL:** Proteja-se, peça ajuda e ligue **192 (SAMU)**. Para fogo, resgate em altura, água, espaço confinado ou ambiente perigoso, ligue **193 (Bombeiros)**. Diga o endereço e siga as instruções da central. Este roteiro orienta as primeiras ações, mas não substitui o treino supervisionado das técnicas práticas.
+
+### Situação: Compressão direta e curativo de emergência
+
+**Reconheça os sinais:** Ferida externa com sangue saindo continuamente ou ensopando roupa.
+
+### O que fazer — passo a passo
+
+1. Use luvas, se disponíveis. Exponha a ferida somente o necessário.
+2. Posicione gaze ou pano limpo sobre o ponto que sangra.
+3. Pressione firmemente com as duas mãos. Mantenha a pressão contínua.
+4. Se o sangue atravessar o pano, mantenha a pressão e acrescente outro por cima.
+5. Peça ligação 192 se o sangramento for intenso ou não parar.
+6. Se necessário, outra pessoa treinada prepara torniquete enquanto você mantém a pressão.
+7. Quando a equipe chegar, explique localização, duração e materiais usados.
+
+### Não faça isto
+
+Não solte as mãos para espiar repetidamente. Não remova coágulos nem faça amarração fina para estrangular o membro.
+
+### Exercício prático de aprendizagem
+
+Em simulador, realize pressão contínua por vários minutos e revise a postura para reduzir fadiga.
+
+**Ao entregar a vítima:** informe horário de início, mudanças na respiração e na consciência, riscos e medidas aplicadas.
+
+**Limites:** não faça procedimentos invasivos, administração de fármacos não prescritos, resgates técnicos ou intervenções que dependam de habilitação profissional. Pratique presencialmente RCP, DEA, controle de sangramento e desengasgo em manequins antes de assumir atendimento.
+
+**Referências operacionais:** Ministério da Saúde — SAMU 192 (https://www.gov.br/saude/pt-br/composicao/saes/samu-192/samu-192); AHA/AAP — RCP e primeiros socorros 2025 (https://cpr.heart.org/en/resuscitation-science/cpr-and-ecc-guidelines); AHA/Cruz Vermelha — Primeiros Socorros 2024 (https://cpr.heart.org/en/resuscitation-science/2024-first-aid-guidelines).
+
+---
+
 ## SEÇÃO 1 — EM 30 SEGUNDOS
 
 > **VISÃO RÁPIDA DE SOBREVIVÊNCIA NA COMPRESSÃO E HEMOSTÁTICOS**

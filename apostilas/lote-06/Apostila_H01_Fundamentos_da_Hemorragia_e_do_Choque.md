@@ -33,12 +33,46 @@
 
 ---
 
+## GUIA DE ATUAÇÃO — PARA QUEM NÃO É DA ÁREA DA SAÚDE
+
+> **EM UMA EMERGÊNCIA REAL:** Proteja-se, peça ajuda e ligue **192 (SAMU)**. Para fogo, resgate em altura, água, espaço confinado ou ambiente perigoso, ligue **193 (Bombeiros)**. Diga o endereço e siga as instruções da central. Este roteiro orienta as primeiras ações, mas não substitui o treino supervisionado das técnicas práticas.
+
+### Situação: Como reconhecer hemorragia com risco de morte
+
+**Reconheça os sinais:** Roupa rapidamente encharcada, sangue acumulando no chão, amputação, palidez, fraqueza ou confusão.
+
+### O que fazer — passo a passo
+
+1. Confirme que a cena é segura e proteja as mãos quando possível.
+2. Ligue 192 ou peça a outro adulto que ligue.
+3. Localize a fonte e comprima diretamente com as mãos sobre gaze ou tecido limpo.
+4. Mantenha compressão firme e contínua. Peça ajuda para continuar se estiver cansado.
+5. Se o sangramento for de membro e ameaçar a vida, use torniquete comercial se estiver disponível e souber aplicá-lo.
+6. Mantenha a pessoa aquecida e observe sua respiração.
+7. Conte ao resgate quando começou o sangramento e o que você fez.
+
+### Não faça isto
+
+Não use apenas cor do sangue para decidir gravidade. Não espere a pressão cair para agir.
+
+### Exercício prático de aprendizagem
+
+Treine reconhecimento por fotografias de simuladores e pressão direta em modelo de ferida.
+
+**Ao entregar a vítima:** informe horário de início, mudanças na respiração e na consciência, riscos e medidas aplicadas.
+
+**Limites:** não faça procedimentos invasivos, administração de fármacos não prescritos, resgates técnicos ou intervenções que dependam de habilitação profissional. Pratique presencialmente RCP, DEA, controle de sangramento e desengasgo em manequins antes de assumir atendimento.
+
+**Referências operacionais:** Ministério da Saúde — SAMU 192 (https://www.gov.br/saude/pt-br/composicao/saes/samu-192/samu-192); AHA/AAP — RCP e primeiros socorros 2025 (https://cpr.heart.org/en/resuscitation-science/cpr-and-ecc-guidelines); AHA/Cruz Vermelha — Primeiros Socorros 2024 (https://cpr.heart.org/en/resuscitation-science/2024-first-aid-guidelines).
+
+---
+
 ## SEÇÃO 1 — EM 30 SEGUNDOS
 
 > **VISÃO RÁPIDA DE SOBREVIVÊNCIA NO CONTROLE DE SANGRAMENTO**
 > 1. **A hemorragia grave é a causa número 1 de morte evitável no trauma:** Um indivíduo com laceração de grande vaso (como a artéria femoral ou braquial) pode exsanguinar até a morte em **menos de 3 a 5 minutos**, muito antes da chegada de qualquer ambulância [1, 2].
 > 2. **O volume de sangue é finito:** Um adulto possui cerca de **5 litros de sangue** (aproximadamente 7% do peso corporal). A perda súbita de 1,5 a 2,0 litros desaba a pressão arterial e desencadeia choque irreversível [2, 3].
-> 3. **Identifique o sangramento arterial:** Sangue vermelho-vivo, pulsátil, ejetado em jato ritmado com as batidas do coração. É o mais veloz e letal de todos os tipos de hemorragia [1, 4].
+> 3. **Reconheça o sangramento ameaçador à vida:** Fluxo intenso, roupas rapidamente encharcadas ou sangue acumulado indicam urgência, seja o sangue vermelho claro ou escuro. Comece compressão direta e acione 192.
 > 4. **A Tríade Letal do trauma mata o paciente que sangra:** **Hipotermia + Acidose Metabólica + Coagulopatia**. O sangue frio não coagula. Vítima com hemorragia deve ser mantida aquecida com manta térmica mesmo em dias quentes [3, 5].
 > 5. **Choque hemorrágico é falência de oxigênio:** Choque não significa susto ou desmaio psicológico; significa que o volume sanguíneo restante é incapaz de perfundir o cérebro e os órgãos vitais, provocando hipóxia celular e parada cardíaca [2, 3].
 > 6. **Tempo é sangue e sangue é vida:** A intervenção mecânica (compressão direta e torniquete) deve ser iniciada nos primeiros segundos da abordagem [1, 2].

@@ -33,6 +33,39 @@
 
 ---
 
+## GUIA DE ATUAÇÃO — PARA QUEM NÃO É DA ÁREA DA SAÚDE
+
+> **EM UMA EMERGÊNCIA REAL:** Proteja-se, peça ajuda e ligue **192 (SAMU)**. Para fogo, resgate em altura, água, espaço confinado ou ambiente perigoso, ligue **193 (Bombeiros)**. Diga o endereço e siga as instruções da central. Este roteiro orienta as primeiras ações, mas não substitui o treino supervisionado das técnicas práticas.
+
+### Situação: Sangramento perigoso: decisão em segundos
+
+**Reconheça os sinais:** Jato, fluxo contínuo intenso, grande poça ou sangue atravessando sucessivas compressas.
+
+### O que fazer — passo a passo
+
+1. Acione 192 e peça um kit de controle de sangramento.
+2. Comprima imediatamente a ferida, com peso das mãos e material limpo.
+3. Para braço ou perna com hemorragia ameaçadora à vida, considere torniquete comercial se treinado.
+4. Para virilha, axila e áreas sem possibilidade de torniquete, mantenha pressão direta; packing exige prática adequada.
+5. Não interrompa o atendimento para identificar artéria ou veia.
+6. Se a vítima ficar inconsciente, verifique respiração. Inicie RCP se não for normal.
+
+### Não faça isto
+
+Não atrase o controle para classificar o sangramento. Não use torniquete no pescoço, tronco ou cabeça.
+
+### Exercício prático de aprendizagem
+
+Treine identificar, com fotos e simulação, quando pressão direta deve começar sem demora.
+
+**Ao entregar a vítima:** informe horário de início, mudanças na respiração e na consciência, riscos e medidas aplicadas.
+
+**Limites:** não faça procedimentos invasivos, administração de fármacos não prescritos, resgates técnicos ou intervenções que dependam de habilitação profissional. Pratique presencialmente RCP, DEA, controle de sangramento e desengasgo em manequins antes de assumir atendimento.
+
+**Referências operacionais:** Ministério da Saúde — SAMU 192 (https://www.gov.br/saude/pt-br/composicao/saes/samu-192/samu-192); AHA/AAP — RCP e primeiros socorros 2025 (https://cpr.heart.org/en/resuscitation-science/cpr-and-ecc-guidelines); AHA/Cruz Vermelha — Primeiros Socorros 2024 (https://cpr.heart.org/en/resuscitation-science/2024-first-aid-guidelines).
+
+---
+
 ## SEÇÃO 1 — EM 30 SEGUNDOS
 
 > **VISÃO RÁPIDA DE IDENTIFICAÇÃO DE SANGRAMENTO LETAL**

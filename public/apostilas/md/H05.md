@@ -33,6 +33,40 @@
 
 ---
 
+## GUIA DE ATUAÇÃO — PARA QUEM NÃO É DA ÁREA DA SAÚDE
+
+> **EM UMA EMERGÊNCIA REAL:** Proteja-se, peça ajuda e ligue **192 (SAMU)**. Para fogo, resgate em altura, água, espaço confinado ou ambiente perigoso, ligue **193 (Bombeiros)**. Diga o endereço e siga as instruções da central. Este roteiro orienta as primeiras ações, mas não substitui o treino supervisionado das técnicas práticas.
+
+### Situação: Torniquete comercial em braço ou perna
+
+**Reconheça os sinais:** Hemorragia maciça em membro, amputação traumática ou sangramento que não cessa sob pressão.
+
+### O que fazer — passo a passo
+
+1. Peça ajuda e ligue 192. Pressione a ferida enquanto busca o material.
+2. Use torniquete comercial apropriado. Ele serve apenas para braço ou perna.
+3. Se a lesão estiver visível, posicione cerca de 5 a 7 cm acima da ferida, nunca sobre articulação.
+4. Aperte a fita e gire o mecanismo até cessar o sangramento. Fixe conforme o fabricante.
+5. Registre a hora da aplicação e mantenha o dispositivo visível.
+6. Não afrouxe o torniquete. Se continuar sangrando, mantenha pressão e siga o treinamento para ajuste ou segundo dispositivo.
+7. Informe a hora e a posição do torniquete à equipe de emergência.
+
+### Não faça isto
+
+Não use fios finos ou materiais improvisados como primeira opção. Dor não comprova que a hemorragia parou.
+
+### Exercício prático de aprendizagem
+
+Pratique em simulador e avalie controle do sangramento, fixação e registro do horário.
+
+**Ao entregar a vítima:** informe horário de início, mudanças na respiração e na consciência, riscos e medidas aplicadas.
+
+**Limites:** não faça procedimentos invasivos, administração de fármacos não prescritos, resgates técnicos ou intervenções que dependam de habilitação profissional. Pratique presencialmente RCP, DEA, controle de sangramento e desengasgo em manequins antes de assumir atendimento.
+
+**Referências operacionais:** Ministério da Saúde — SAMU 192 (https://www.gov.br/saude/pt-br/composicao/saes/samu-192/samu-192); AHA/AAP — RCP e primeiros socorros 2025 (https://cpr.heart.org/en/resuscitation-science/cpr-and-ecc-guidelines); AHA/Cruz Vermelha — Primeiros Socorros 2024 (https://cpr.heart.org/en/resuscitation-science/2024-first-aid-guidelines).
+
+---
+
 ## SEÇÃO 1 — EM 30 SEGUNDOS
 
 > **VISÃO RÁPIDA DE SOBREVIVÊNCIA COM TORNIQUETES**
