@@ -133,6 +133,13 @@ foreach($code in $plan.Keys){
   $f=Get-ChildItem -Path $PSScriptRoot -Recurse -Filter "Apostila_${code}_*.md" | Select-Object -First 1
   if(-not $f){ "SEM ARQUIVO $code"; continue }
   $t=[IO.File]::ReadAllText($f.FullName,[Text.Encoding]::UTF8)
+
+  # Não duplicar figuras após a redistribuição editorial de outubro de 2026.
+  # Apostilas com imagens distribuídas devem ser editadas diretamente no Markdown.
+  if ($t -match '(?m)^!\\[' -and $t -notmatch '(?m)^### Figuras de Apoio') {
+    "FIGURAS JÁ DISTRIBUÍDAS: $code (não reinserir galeria)"
+    continue
+  }
   
   # Remove previous Figuras de Apoio block if present to cleanly update
   $t=[regex]::Replace($t,'(?ms)^### Figuras de Apoio\r?\n.*?^---\r?\n\r?\n','')
