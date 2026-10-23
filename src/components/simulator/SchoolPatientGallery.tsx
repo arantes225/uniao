@@ -161,6 +161,14 @@ export function SchoolPatientGallery() {
         <div className="rounded-full border border-emerald-600/30 px-3 py-1 text-xs font-semibold text-emerald-700 dark:text-emerald-300">
           10 variações
         </div>
+        <a
+          href="/uniao/simulador/personagens/escola-horizontal-v20261023/todos.html"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="rounded-full border border-emerald-600/40 px-3 py-1 text-xs font-bold text-emerald-700 hover:bg-emerald-500/10 dark:text-emerald-300"
+        >
+          Abrir todos em HTML ↗
+        </a>
       </div>
 
       <div className="space-y-4">
