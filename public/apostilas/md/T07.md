@@ -68,6 +68,8 @@ Ao concluir o estudo deste módulo didático e seus treinamentos práticos de br
 
 ## 3. INTRODUÇÃO, CONTEXTO INDUSTRIAL E RELEVÂNCIA EPIDEMIOLÓGICA
 
+**LEITURA GUIADA — COMECE AQUI:** Em incêndio, a primeira prioridade é sair e avisar. A fumaça pode intoxicar e impedir a visão, mesmo quando a chama parece distante. Depois da evacuação segura, pessoas expostas precisam ser avaliadas conforme os sintomas.
+
 Os incêndios industriais e comerciais causam perdas humanas irreparáveis e prejuízos materiais bilionários. A presença massiva de polímeros sintéticos, solventes inflamáveis, embalagens de papelão e redes elétricas de alta potência nas edificações modernas altera drasticamente a dinâmica da combustão: hoje, o tempo médio para uma sala atingir o fenômeno de combustão súbita generalizada (*flashover* — momento em que todos os materiais combustíveis do recinto se inflamam simultaneamente) caiu de 15 a 20 minutos (na era da madeira maciça e algodão) para menos de **3 a 5 minutos**.
 
 A velocidade com que a fumaça tóxica se propaga pelos corredores e dutos de ar-condicionado é estarrecedora: ela viaja a velocidades de até 1,5 a 2,0 metros por segundo, ultrapassando com folga o passo humano de caminhada. Em tragédias históricas de grande comoção — como os incêndios dos edifícios Joelma e Andorinhas e da Boate Kiss —, as autópsias comprovaram que a imensa maioria dos ocupantes não faleceu queimada pelas chamas, mas sucumbiu à asfixia química aguda provocada por gases letais inodoros e invisíveis misturados à fuligem antes mesmo de serem tocados pelo fogo.
@@ -77,6 +79,9 @@ Diante dessa realidade, os primeiros socorros em incêndios não se restringem a
 ---
 
 ## 4. QUÍMICA DO FOGO E FISIOPATOLOGIA DA INALAÇÃO DE FUMAÇA
+
+> [!NOTE]
+> **Por que isso acontece?** A fumaça contém partículas e gases que irritam os pulmões e prejudicam a oxigenação. Algumas lesões da via aérea pioram com o tempo. A aparência da pele não revela necessariamente a gravidade da exposição.
 
 Para agir com eficácia preventiva e combativa, o brigadista deve dominar os fundamentos físicos e médicos da combustão:
 
@@ -278,6 +283,9 @@ A interface entre a resposta corporativa interna e as forças públicas de socor
 
 ## 7. ERROS FREQUENTES E CONDUTAS PROIBIDAS NO COMBATE E FUGA
 
+> [!CAUTION]
+> **Erro que pode prejudicar a vítima:** Não atravesse fumaça para buscar objetos ou vítimas. Não use elevadores. Em dificuldade para respirar, rouquidão após fumaça ou queimaduras relevantes, acione 192 e 193. Oxigênio é medida para equipe habilitada.
+
 ```
 ┌────────────────────────────────────────────────────────┐
 │ ERROS CRÍTICOS EM INCÊNDIOS E EVACUAÇÃO                │
@@ -309,6 +317,9 @@ A interface entre a resposta corporativa interna e as forças públicas de socor
 ---
 
 ## 8. ESTUDO DE CASO PRÁTICO AMBIENTADO NA INDÚSTRIA
+
+> [!TIP]
+> **Decisão no caso prático:** O alarme dispara em um depósito e há fumaça no corredor. A brigada orienta saída pela rota segura, registra o ponto de encontro e informa ao 193 o local e possíveis pessoas não localizadas.
 
 ### O Incidente: Princípio de Incêndio no Almoxarifado Central
 No almoxarifado de insumos químicos e embalagens de uma grande indústria gráfica em Curitiba/PR, um curto-circuito em uma luminária fluorescente sobreaquecida projetou fagulhas incandescentes sobre fardos empilhados de bobinas de filme plástico e caixas de papelão. O fogo propagou-se com extrema rapidez pela pilha vertical, gerando uma coluna espessa de fumaça negra carregada de cianeto de hidrogênio e monóxido de carbono que rapidamente saturou o teto do galpão de 1.200 m².

@@ -68,6 +68,8 @@ Ao concluir o estudo deste módulo didático e seus treinamentos técnicos, o pr
 
 ## 3. INTRODUÇÃO, CONTEXTO INDUSTRIAL E RELEVÂNCIA EPIDEMIOLÓGICA
 
+**LEITURA GUIADA — COMECE AQUI:** Tanques, silos, poços e galerias podem ter pouco oxigênio ou gases tóxicos. Quem entra para resgatar sem preparo pode cair pelo mesmo motivo. A decisão correta para o leigo é não entrar e acionar resgate técnico.
+
 Os espaços confinados são componentes estruturais corriqueiros na infraestrutura brasileira: galerias de esgoto e drenagem pluvial, caixas de passagem subterrâneas de cabos elétricos, reatores químicos, colunas de destilação, tanques de armazenamento de combustíveis, digestores de vinhaça, silos de grãos, porões de navios e tubulações industriais. Segundo relatórios da National Institute for Occupational Safety and Health (NIOSH) e da Fundacentro, acidentes em espaços confinados possuem taxa de letalidade superior a 80%, sendo desproporcionalmente mais mortais do que qualquer outro tipo de ocorrência industrial.
 
 A natureza trágica dessas ocorrências reside na invisibilidade das ameaças. Ao contrário de uma máquina em rotação ou de um incêndio visível, o ar dentro de um espaço confinado pode parecer completamente calmo, silencioso e límpido, enquanto esconde concentrações letais de sulfeto de hidrogênio gerado por matéria orgânica em decomposição, ou uma atmosfera anóxica onde o oxigênio foi totalmente consumido por oxidação da carcaça metálica (ferrugem). O trabalhador desce a escada de acesso e, ao respirar dois ciclos em um ambiente com menos de 10% de oxigênio, sofre dessaturação cerebral fulminante e cai desacordado no fundo do espaço.
@@ -77,6 +79,9 @@ Ao testemunhar a queda do companheiro de trabalho, o operador da superfície ou 
 ---
 
 ## 4. FISIOPATOLOGIA DA DEFICIÊNCIA DE OXIGÊNIO E TOXICOLOGIA DE GASES
+
+> [!NOTE]
+> **Por que isso acontece?** A respiração depende de oxigênio no ar. Em ambiente confinado, essa concentração pode cair, e gases tóxicos podem impedir o organismo de usar oxigênio. Não é possível reconhecer uma atmosfera segura apenas pelo cheiro.
 
 Para atuar com consciência técnica, o socorrista deve dominar os impactos fisiológicos das atmosferas anormais:
 
@@ -300,6 +305,9 @@ Assim que a vítima for extraída para a atmosfera livre:
 
 ## 7. ERROS FREQUENTES E CONDUTAS PROIBIDAS NO AMBIENTE INDUSTRIAL
 
+> [!CAUTION]
+> **Erro que pode prejudicar a vítima:** Nunca entre para buscar a vítima. Máscara cirúrgica, PFF2 e respirador comum não fornecem oxigênio. Só equipe treinada, com monitoramento atmosférico e equipamentos adequados, pode fazer resgate com entrada.
+
 ```
 ┌────────────────────────────────────────────────────────┐
 │ ERROS CRÍTICOS EM ESPAÇOS CONFINADOS                   │
@@ -327,6 +335,9 @@ Assim que a vítima for extraída para a atmosfera livre:
 ---
 
 ## 8. ESTUDO DE CASO PRÁTICO AMBIENTADO NA INDÚSTRIA
+
+> [!TIP]
+> **Decisão no caso prático:** Um funcionário desmaia dentro de um tanque. O vigia impede a entrada de colegas, liga 193 e informa produto armazenado, acesso e tempo desde o último contato.
 
 ### O Incidente: Colapso por Gás Sulfídrico em Estação de Efluentes
 Na estação de tratamento de efluentes industriais (ETEI) de uma fábrica de celulose em Três Lagoas/MS, foi programada a limpeza corretiva do fundo de um poço de decantação de lodo de 4 metros de profundidade, classificado formalmente como Espaço Confinado. O operador de utilidades Roberto (35 anos) desceu pela escada de marinheiro com cinto tipo paraquedista conectado ao guincho mecânico do tripé montado sobre a boca de visita de 80 cm de diâmetro. O vigia Carlos (42 anos) permaneceu na superfície ao lado do tripé.

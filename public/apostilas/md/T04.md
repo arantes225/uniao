@@ -68,6 +68,8 @@ Ao concluir o estudo deste módulo didático e seus treinamentos operacionais, o
 
 ## 3. INTRODUÇÃO, CONTEXTO INDUSTRIAL E RELEVÂNCIA EPIDEMIOLÓGICA
 
+**LEITURA GUIADA — COMECE AQUI:** No choque elétrico, tocar na vítima pode causar outra descarga. O leigo deve reconhecer o risco, isolar a área e solicitar corte seguro da energia. A avaliação de respiração e RCP só começa depois da confirmação de segurança.
+
 A energia elétrica é a força motriz essencial das plantas fabris, escritórios e canteiros de obras. Contudo, segundo estatísticas da Associação Brasileira de Conscientização para os Perigos da Eletricidade (Abracopel) e relatórios do Ministério do Trabalho e Emprego, o Brasil registra anualmente centenas de acidentes fatais por choque elétrico, grande parte no ambiente de trabalho. As ocorrências concentram-se na manutenção improvisada, intervenção em painéis sem desenergização formal, contato acidental de caminhões basculantes e guindastes com redes aéreas e uso de ferramentas elétricas com isolamento degradado.
 
 A lesão por eletricidade é frequentemente enganosa. A pele, por possuir alta resistência ôhmica inicial, pode apresentar apenas pequenas marcas pontilhadas cinzentas ou escaras carbonizadas milimétricas nos pontos de contato. Sob a derme, no entanto, tecidos de baixa resistência (músculos, nervos e vasos sanguíneos) funcionam como condutores preferenciais da corrente. A energia elétrica dissipa-se ao longo desses feixes na forma de calor maciço (Efeito Joule), "cozinhando" grupos musculares internos, trombosando artérias profundas e necrosando nervos motores. Horas após o acidente, a tumefação desses músculos oclui o fluxo vascular nas extremidades (síndrome de compartimento) e a destruição muscular maciça lança mioglobina na corrente sanguínea, entupindo os túbulos renais e provocando insuficiência renal aguda anúrica.
@@ -77,6 +79,9 @@ Diante desse quadro patológico oculto e da severidade das perturbações do rit
 ---
 
 ## 4. FISIOPATOLOGIA DO CHOQUE ELÉTRICO E EFEITOS BIOLÓGICOS
+
+> [!NOTE]
+> **Por que isso acontece?** A corrente elétrica pode interferir no ritmo do coração, contrair músculos e produzir queimaduras profundas. A eletricidade nem sempre deixa marcas externas proporcionais ao dano. Um cabo caído pode continuar energizado mesmo sem faíscas.
 
 O impacto biológico da eletricidade depende da interação entre as leis da física e a fisiologia humana:
 
@@ -278,6 +283,9 @@ O atendimento pré-hospitalar ao acidentado elétrico deve seguir uma metodologi
 
 ## 7. ERROS FREQUENTES E CONDUTAS PROIBIDAS NO AMBIENTE DE TRABALHO
 
+> [!CAUTION]
+> **Erro que pode prejudicar a vítima:** Não use madeira, vassoura ou PVC improvisado para afastar fios. Não confie apenas na ausência de luz ou faíscas. Em rede elétrica, mantenha distância e siga orientação de Bombeiros e concessionária.
+
 ```
 ┌────────────────────────────────────────────────────────┐
 │ ERROS CRÍTICOS EM RESGATE E PRIMEIROS SOCORROS         │
@@ -310,6 +318,9 @@ O atendimento pré-hospitalar ao acidentado elétrico deve seguir uma metodologi
 ---
 
 ## 8. ESTUDO DE CASO PRÁTICO AMBIENTADO NA INDÚSTRIA
+
+> [!TIP]
+> **Decisão no caso prático:** Um trabalhador cai perto de um painel elétrico com fumaça. Os colegas mantêm distância, isolam a área e chamam 193 e o profissional autorizado. Só após desenergização confirmada avaliam a vítima.
 
 ### O Incidente: Choque em Painel de Distribuição de Baixa Tensão
 Na oficina de manutenção de uma fábrica têxtil, o técnico de manutenção elétrica Rodrigo (32 anos) foi designado para substituir um contator no painel secundário trifásico (380V). Pressionado pelo atraso na linha de tecelagem, Rodrigo descumpriu o procedimento operacional da NR-10 e não desligou o disjuntor geral daquele barramento, optando por intervir "com o painel a quente".
