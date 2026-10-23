@@ -38,10 +38,10 @@
 > **VISÃO RÁPIDA DE SOBREVIVÊNCIA E SEGURANÇA ESPORTIVA**
 > 1. **Academias concentram alto estresse metabólico e mecânico:** Salas de musculação, boxes de crossfit e estúdios combinam cargas pesadas, cabos sob tensão, pisos escorregadios e alunos levando a frequência cardíaca ao limite fisiológico [1, 2].
 > 2. **Sinais de alerta cardiovascular não são "moleza":** Dor torácica com irradiação, dispneia desproporcional à carga, tontura súbita, palidez acinzentada e sudorese fria exigem **interrupção imediata do exercício**. Ignorar esses sinais pode precipitar parada cardiorrespiratória (PCR) [3, 4].
-> 3. **O Desfibrilador (DEA) é equipamento obrigatório de segurança:** Em caso de mal súbito, a desfibrilação entregue em menos de 3 minutos eleva a sobrevida para mais de 70%. O DEA deve ficar desimpedido, visível e com bateria checada diariamente [4, 5].
+> 3. ****Acesso rápido ao DEA melhora a resposta à parada cardíaca:** As exigências legais para instalação do equipamento variam conforme a localidade. Deixe o DEA visível, acessível e com manutenção em dia. Treine a equipe para buscá-lo sem atrasar a RCP [4, 5].
 > 4. **Acidentes por fadiga mecânica:** Cabos de aço desfiados em polias, anilhas empilhadas instáveis e falta de travas de segurança em barras olímpicas causam lacerações e esmagamentos graves evitáveis por inspeção diária [2, 6].
 > 5. **Limites do profissional de educação física:** O treinador é o primeiro socorrista do salão. Sua função é reconhecer a gravidade, prestar o Suporte Básico de Vida, imobilizar e acionar o 192 (SAMU). **É estritamente vedado prescrever ou fornecer remédios, termogênicos ou suplementos não autorizados** [7, 8].
-> 6. **Cultura de segurança integrada:** Ter um Plano de Ação de Emergência (EAP) com divisão clara de funções entre recepção, professores e limpeza é o que garante socorro rápido em menos de 2 minutos [1, 9].
+> 6. **Cultura de segurança integrada:** Ter um Plano de Ação de Emergência (EAP) com divisão clara de funções entre recepção, professores e limpeza reduz atrasos no reconhecimento e no acionamento do socorro [1, 9].
 
 ---
 
@@ -154,7 +154,7 @@ O profissional de salão deve monitorar visualmente o comportamento biomecânico
 ### 5.3 Prevenção de Acidentes Operacionais e Sobrecarga Biomecânica
 
 Acidentes traumáticos em academias decorrem frequentemente de práticas operacionais inseguras [2, 6]:
-- **A Manobra do Supino Reto sem Trava ou sem Auxílio ("Bench Press Trap"):** O supino é o exercício mais letal da musculação mundial. O aluno que treina com carga máxima sem ajudante (*spotter*) e atinge a falha concêntrica fica com a barra pesada presa diretamente sobre seu esterno ou pescoço. O aprisionamento da traqueia pela barra sob fadiga muscular provoca asfixia mecânica e óbito em poucos minutos se ninguém notar.
+- **A Manobra do Supino Reto sem Trava ou sem Auxílio ("Bench Press Trap"):** O supino sem dispositivos de segurança ou auxílio pode provocar lesões graves. O aluno que treina com carga máxima sem ajudante (*spotter*) e atinge a falha concêntrica fica com a barra pesada presa diretamente sobre seu esterno ou pescoço. O aprisionamento da traqueia pela barra sob fadiga muscular provoca asfixia mecânica e óbito em poucos minutos se ninguém notar.
   - *Medida de Prevenção:* Barras de segurança laterais (*safety bars*) ajustadas na altura correta no rack de supino, impedindo que a barra desça abaixo do nível do peito caso caia.
 - **Cilindros de Peso Soltos em Máquinas:** Pinos seletores de carga devem ser originais com trava magnética. Usar canetas, parafusos ou pedaços de ferro como pino de peso causa ejeção do pino durante a repetição e impacto descontrolado da pilha de placas.
 - **Piso e Armazenamento de Anilhas:** Anilhas e halteres devem ser devolvidos aos suportes apropriados imediatamente após a utilização. Halteres soltos pelo piso acarretam entorses de tornozelo e tropeços catastróficos [2, 6].
@@ -167,7 +167,7 @@ A manutenção preventiva em academias salva vidas e resguarda juridicamente os 
 
 #### Rotina de Auditoria dos Cabos de Aço e Polias:
 1. **Inspeção Visual da Capa Plástica:** Cabos de aço de estações de musculação possuem revestimento protetor de náilon ou poliuretano. Se a capa estiver rachada, ressecada ou rompida, o cabo deve ser substituído imediatamente.
-2. **Identificação de "Gaiolas de Passarinho" e Fios Partidos:** O rompimento de apenas 2 a 3 fios microscópicos do trançado interno de aço enfraquece a resistência mecânica do cabo em mais de 50%. Sob carga, o cabo rompe repentinamente durante o movimento de puxada, lançando a barra contra a face ou dentes do aluno.
+2. **Identificação de "Gaiolas de Passarinho" e Fios Partidos:** Fios rompidos, deformações e corrosão podem comprometer a resistência do cabo. Retire o equipamento de uso e solicite avaliação técnica. Siga os critérios de substituição definidos pelo fabricante.
 3. **Alinhamento das Roldanas:** Checagem de folgas nos rolamentos e travas das polias para evitar que o cabo salte para fora do canal da roldana, travando o sistema sob carga máxima [2, 6].
 
 ---
@@ -208,8 +208,8 @@ O Plano de Ação de Emergência (EAP - *Emergency Action Plan*) em academias de
 1. **Localização Estratégica do Desfibrilador Externo Automático (DEA):**
    - O DEA deve ser afixado em suporte de parede visível e iluminado, na área central do salão de musculação ou ao lado da recepção principal.
    - O acesso ao aparelho deve estar **100% desobstruído** (nunca trancado em armários com chave ou atrás de balcões fechados).
-   - O tempo máximo para o socorrista alcançar o DEA, retornar à vítima e aplicar as pás não deve ultrapassar **90 segundos** de qualquer ponto da academia [4, 5].
-2. **Escala de Prontidão Operacional:** Em todos os turnos de funcionamento da academia (manhã, tarde, noite e fins de semana), deve haver no mínimo **dois profissionais no salão formalmente certificados em Suporte Básico de Vida e DEA** [1, 9].
+   - O plano deve reduzir ao máximo o tempo entre o colapso e a utilização do DEA. Faça simulações para medir o percurso e remover obstáculos [4, 5].
+2. **Escala de Prontidão Operacional:** Mantenha profissionais treinados em primeiros socorros, RCP e uso do DEA em todos os turnos. Defina responsáveis e suplentes conforme as exigências locais [1, 9].
 3. **Fluxo de Evacuação e Acesso para Viaturas:** A portaria ou catraca deve possuir botão manual de liberação rápida de passagem de maca retrátil do SAMU ou Corpo de Bombeiros, com estacionamento frontal desimpedido para viaturas de resgate [2, 5].
 
 ---

@@ -116,7 +116,7 @@ O organismo infantil não é uma réplica em miniatura do corpo adulto; ele poss
 O diagnóstico de parada deve ser feito em **menos de 10 segundos** [1]:
 1. **Verificar a responsividade:**
    - *Na Criança:* Bater nos dois ombros com firmeza e chamar em voz alta: *"Filho! Você me ouve?"*.
-   - *No Lactente (Bebê):* **Bater com firmeza nas solas dos pés do bebê** (estímulo proprioceptivo plantar) e chamar pelo nome. Nunca sacuda o tronco ou o pescoço do bebê (risco de lesão medular e hemorragia cerebral por Síndrome do Bebê Sacudido) [1, 2].
+   - *No Lactente (Bebê):* **Toque suavemente a planta de um pé do bebê** e observe se ele responde. Nunca sacuda o tronco ou o pescoço do bebê (risco de lesão medular e hemorragia cerebral por Síndrome do Bebê Sacudido) [1, 2].
 2. **Observar a respiração simultaneamente:**
    - Olhe o tórax e abdome por 5 a 10 segundos: ausência total de movimento torácico ou presença de respiração agônica (*gasping*).
    - **DIAGNÓSTICO: PCR PEDIÁTRICA.**
@@ -142,7 +142,7 @@ A biomecânica na criança equilibra força e delicadeza para deprimir o tórax 
    - **2 Socorristas treinados:** **15 compressões para 2 ventilações de resgate** (a relação 15:2 fornece maior suporte ventilatório e menor acúmulo de $CO_2$ no sangue da criança) [1, 3].
 
 ### 5.4 Técnica da Ressuscitação no Lactente (Bebês < 1 ano)
-No bebê, a anatomia exige técnicas com os dedos para não esmagar a caixa torácica [1, 2]:
+No lactente, a AHA/AAP 2025 recomenda compressões com dois polegares envolvendo o tórax ou com a base de uma mão. A técnica de dois dedos não é recomendada, pois pode não atingir a profundidade adequada [1, 2]:
 
 ```
 +---------------------------------------------------------------------------------+
@@ -383,3 +383,10 @@ ETIOLOGIA PEDIÁTRICA             LACTENTE (< 1 ANO)              CRIANÇA (1 AN
 | **Versão:** | 1.0.0 |
 | **Validação Científica por IA:** | Conforme diretrizes AHA PALS 2020-2025, SBP e ERC Paediatrics |
 | **Próxima Revisão:** | Outubro de 2027 |
+
+
+---
+
+## ATUALIZAÇÃO CIENTÍFICA — DIRETRIZES AHA/AAP 2025
+
+As técnicas descritas devem ser interpretadas conforme as diretrizes publicadas em 2025. Consulte: American Heart Association, *2025 CPR and ECC Guidelines* — https://cpr.heart.org/en/resuscitation-science/cpr-and-ecc-guidelines; American Academy of Pediatrics, *Pediatric Basic Life Support 2025* — https://publications.aap.org/pediatrics/article/157/1/e2025074350/205235/.
