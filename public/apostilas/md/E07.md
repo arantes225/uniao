@@ -33,6 +33,39 @@
 
 ---
 
+## GUIA DE ATUAÇÃO — PARA QUEM NÃO É DA ÁREA DA SAÚDE
+
+> **EM UMA EMERGÊNCIA REAL:** Proteja-se, peça ajuda e ligue **192 (SAMU)**. Para fogo, resgate em altura, água, espaço confinado ou ambiente perigoso, ligue **193 (Bombeiros)**. Diga o endereço e siga as instruções da central. Este roteiro orienta as primeiras ações, mas não substitui o treino supervisionado das técnicas práticas.
+
+### Situação: Plano de emergência escolar e exercícios práticos
+
+**Reconheça os sinais:** Desorganização após engasgo, queda ou convulsão; equipe desconhece função ou rota de ambulância.
+
+### O que fazer — passo a passo
+
+1. Defina responsável por avaliar a vítima, por ligar 192 e por orientar a entrada da ambulância.
+2. Mantenha lista acessível de contatos e locais dos kits e do DEA.
+3. Treine as situações mais prováveis conforme idade: engasgo, trauma, convulsão e parada cardíaca.
+4. Use manequim para praticar RCP e obstrução de vias aéreas. Não use manobras arriscadas em alunos.
+5. Após o simulado, peça que cada participante diga a primeira ação e a ação proibida.
+6. Corrija a falha observada, repita a atividade e registre a capacitação.
+
+### Não faça isto
+
+Não faça encenação com queda real, garroteamento ou choque elétrico. Não exponha dados de saúde dos alunos.
+
+### Exercício prático de aprendizagem
+
+Planeje uma simulação na cantina e outra no pátio, com papéis e observadores definidos.
+
+**Ao entregar a vítima:** informe horário de início, mudanças na respiração e na consciência, riscos e medidas aplicadas.
+
+**Limites:** não faça procedimentos invasivos, administração de fármacos não prescritos, resgates técnicos ou intervenções que dependam de habilitação profissional. Pratique presencialmente RCP, DEA, controle de sangramento e desengasgo em manequins antes de assumir atendimento.
+
+**Referências operacionais:** Ministério da Saúde — SAMU 192 (https://www.gov.br/saude/pt-br/composicao/saes/samu-192/samu-192); AHA/AAP — RCP e primeiros socorros 2025 (https://cpr.heart.org/en/resuscitation-science/cpr-and-ecc-guidelines); AHA/Cruz Vermelha — Primeiros Socorros 2024 (https://cpr.heart.org/en/resuscitation-science/2024-first-aid-guidelines).
+
+---
+
 ## SEÇÃO 1 — EM 30 SEGUNDOS
 
 > **VISÃO RÁPIDA DE SOBREVIVÊNCIA E PRONTIDÃO INSTITUCIONAL**

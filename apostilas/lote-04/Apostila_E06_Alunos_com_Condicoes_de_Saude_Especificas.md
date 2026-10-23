@@ -33,6 +33,40 @@
 
 ---
 
+## GUIA DE ATUAÇÃO — PARA QUEM NÃO É DA ÁREA DA SAÚDE
+
+> **EM UMA EMERGÊNCIA REAL:** Proteja-se, peça ajuda e ligue **192 (SAMU)**. Para fogo, resgate em altura, água, espaço confinado ou ambiente perigoso, ligue **193 (Bombeiros)**. Diga o endereço e siga as instruções da central. Este roteiro orienta as primeiras ações, mas não substitui o treino supervisionado das técnicas práticas.
+
+### Situação: Plano individual do aluno com condição de saúde
+
+**Reconheça os sinais:** Aluno com asma, diabetes, epilepsia ou alergia apresenta sinais previstos em seu plano de emergência.
+
+### O que fazer — passo a passo
+
+1. Antes da aula, saiba onde ficam os planos individuais, contatos e medicamentos prescritos autorizados.
+2. Na crise, interrompa atividade e confira se a criança responde e respira normalmente.
+3. Para asma, auxilie o uso do inalador prescrito conforme plano e regras da escola.
+4. Para hipoglicemia, ofereça glicose apenas se a criança estiver acordada e engolir com segurança.
+5. Para anafilaxia, ligue 192 imediatamente e siga as instruções do autoinjetor prescrito, se disponível.
+6. Em convulsão, proteja de lesões, cronometre e não ponha nada na boca.
+7. Registre o que foi usado, doses fornecidas pelo dispositivo e horários; entregue à equipe de saúde.
+
+### Não faça isto
+
+Não substitua a prescrição por improvisos. Não aplique medicamento injetável não prescrito sem autorização e treinamento.
+
+### Exercício prático de aprendizagem
+
+Simule duas condições por aluno, com os profissionais realmente localizando o plano individual e o material.
+
+**Ao entregar a vítima:** informe horário de início, mudanças na respiração e na consciência, riscos e medidas aplicadas.
+
+**Limites:** não faça procedimentos invasivos, administração de fármacos não prescritos, resgates técnicos ou intervenções que dependam de habilitação profissional. Pratique presencialmente RCP, DEA, controle de sangramento e desengasgo em manequins antes de assumir atendimento.
+
+**Referências operacionais:** Ministério da Saúde — SAMU 192 (https://www.gov.br/saude/pt-br/composicao/saes/samu-192/samu-192); AHA/AAP — RCP e primeiros socorros 2025 (https://cpr.heart.org/en/resuscitation-science/cpr-and-ecc-guidelines); AHA/Cruz Vermelha — Primeiros Socorros 2024 (https://cpr.heart.org/en/resuscitation-science/2024-first-aid-guidelines).
+
+---
+
 ## SEÇÃO 1 — EM 30 SEGUNDOS
 
 > **VISÃO RÁPIDA DE SOBREVIVÊNCIA E RESPOSTA IMEDIATA**
@@ -41,7 +75,7 @@
 > 3. **Hipoglicemia no diabetes tipo 1:** Glicemia < 70 mg/dL provoca tremores, suor frio e confusão mental. Consciente: **15 g de carboidrato simples** (150 ml de suco ou refrigerante comum). Inconsciente: **nada pela boca**, posição lateral e acionamento do 192 (SAMU) [5, 6].
 > 4. **Crise convulsiva epiléptica:** Apoie a cabeça com objeto macio, afaste obstáculos, lateralize o corpo para drenagem de secreções, cronometre o tempo e **nunca coloque objetos ou dedos na boca** [7, 8].
 > 5. **Broncoespasmo na asma:** Sente a criança com o tronco para frente, auxilie no uso da bombinha de alívio acoplada a espaçador e chame socorro se houver tiragem ou fala entrecortada [9, 10].
-> 6. **Plano Individual de Emergência (PIE):** Documento obrigatório com foto, alergias, medicações de urgência e contatos médicos arquivado na escola com autorização dos pais [1, 11].
+> 6. **Plano Individual de Emergência (PIE):** Documento recomendado para alunos com condições que exigem resposta específica. Deve incluir contatos, sinais de alerta e medicações prescritas, respeitando consentimento, confidencialidade e regras locais [1, 11].
 
 ---
 

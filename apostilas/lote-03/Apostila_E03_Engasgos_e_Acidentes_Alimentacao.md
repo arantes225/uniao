@@ -33,6 +33,41 @@
 
 ---
 
+## GUIA DE ATUAÇÃO — PARA QUEM NÃO É DA ÁREA DA SAÚDE
+
+> **EM UMA EMERGÊNCIA REAL:** Proteja-se, peça ajuda e ligue **192 (SAMU)**. Para fogo, resgate em altura, água, espaço confinado ou ambiente perigoso, ligue **193 (Bombeiros)**. Diga o endereço e siga as instruções da central. Este roteiro orienta as primeiras ações, mas não substitui o treino supervisionado das técnicas práticas.
+
+### Situação: Engasgo no refeitório e na creche
+
+**Reconheça os sinais:** Criança deixa de falar ou chorar, não consegue tossir com força, faz esforço para inspirar ou fica roxa.
+
+### O que fazer — passo a passo
+
+1. Se tosse forte ou fala, incentive a tossir e permaneça perto.
+2. Se a obstrução é grave, peça ligação imediata ao 192.
+3. Acima de 1 ano: alterne 5 pancadas entre as escápulas e 5 compressões abdominais.
+4. Menor de 1 ano: apoie bebê de bruços no antebraço, cabeça mais baixa; dê 5 pancadas firmes nas costas.
+5. Vire o bebê apoiando cabeça e pescoço. Faça 5 impulsos torácicos com a base de uma mão.
+6. Repita a sequência até sair o objeto ou perder a resposta.
+7. Se perder a consciência, inicie RCP e retire apenas objeto que enxergar claramente na boca.
+8. Após desobstrução grave, obtenha avaliação conforme orientação do SAMU.
+
+### Não faça isto
+
+Não aperte abdome de bebês. Não ofereça água. Não faça varredura com dedo sem enxergar o objeto.
+
+### Exercício prático de aprendizagem
+
+Treine com manequins, nunca faça compressões abdominais fortes em colega para praticar.
+
+**Ao entregar a vítima:** informe horário de início, mudanças na respiração e na consciência, riscos e medidas aplicadas.
+
+**Limites:** não faça procedimentos invasivos, administração de fármacos não prescritos, resgates técnicos ou intervenções que dependam de habilitação profissional. Pratique presencialmente RCP, DEA, controle de sangramento e desengasgo em manequins antes de assumir atendimento.
+
+**Referências operacionais:** Ministério da Saúde — SAMU 192 (https://www.gov.br/saude/pt-br/composicao/saes/samu-192/samu-192); AHA/AAP — RCP e primeiros socorros 2025 (https://cpr.heart.org/en/resuscitation-science/cpr-and-ecc-guidelines); AHA/Cruz Vermelha — Primeiros Socorros 2024 (https://cpr.heart.org/en/resuscitation-science/2024-first-aid-guidelines).
+
+---
+
 ## SEÇÃO 1 — EM 30 SEGUNDOS
 
 > **VISÃO RÁPIDA DE SOBREVIVÊNCIA**
@@ -235,7 +270,7 @@ O plano de segurança escolar deve conter um **Protocolo de Resposta ao Engasgo 
 > 
 > 3. **Virar a criança de cabeça para baixo segurando pelos pés como um saco de batatas:**
 >    - *Por que não fazer:* Chacoalhar uma criança pendurada pelos tornozelos pode provocar fraturas e luxações nos quadris, traumatismo craniano severo por queda acidental e traumatismos abdominais, além de não gerar a pressão intrapleural necessária para expulsar o objeto.
->    - *Conduta correta:* Utilize as manobras anatômicas consagradas (Heimlich na criança ou apoio no antebraço no lactente).
+>    - *Conduta correta:* Utilize 5 pancadas nas costas alternadas com 5 compressões abdominais na criança; no lactente, 5 pancadas alternadas com 5 impulsos torácicos.
 > 
 > 4. **Tentar retirar o alimento com colheres, pinças de sobrancelha ou garfos:**
 >    - *Por que não fazer:* Instrumentos metálicos rígidos lacerações graves na faringe e língua da criança, além de agirem como uma pá que empurra o alimento ainda mais fundo para dentro das cordas vocais.
@@ -272,7 +307,7 @@ O plano de segurança escolar deve conter um **Protocolo de Resposta ao Engasgo 
 
 #### 3. Avaliação e Giro para as Compressões Torácicas (30 a 50 segundos)
 - O alimento não saiu na primeira tentativa. A professora apoia o outro antebraço sobre as costas do bebê, segurando a nuca com firmeza, e **gira a criança em bloco como um sanduíche**, deitando-a de barriga para cima sobre o antebraço esquerdo, mantendo a cabeça em declive.
-- Com os dedos indicador e médio da mão direita, aplica **5 compressões no centro do peito** (logo abaixo dos mamilos), afundando 4 cm com firmeza.
+- Usando a base de uma mão, aplica **5 impulsos torácicos no centro do peito**, com a cabeça do bebê apoiada e mais baixa do que o tronco. Esta técnica de desengasgo não deve ser confundida com RCP.
 - Ao final da quinta compressão torácica, a pressão residual do ar pulmonar desloca o pedaço de carne: o cubo de carne salta na cavidade oral anterior do bebê.
 
 #### 4. Remoção do Alimento e Recuperação do Bebê
@@ -334,7 +369,7 @@ VULNERABILIDADE INFANTIL         PREVENÇÃO E CORTE SEGURO          CONDUTA NA 
 2. **Criança sem molares não mastiga:** Até os 3 anos a criança não consegue moer carnes duras. Sirva carnes desfiadas ou moídas finas.
 3. **Comer é momento de tranquilidade:** Criança come sentada à mesa. Proíba correr, pular ou assistir a telas enquanto engole o alimento.
 4. **Bebê engasgado recebe 5 e 5:** Alterne 5 pancadas firmes nas costas de cabeça para baixo e 5 compressões no peito com a base de uma mão. Nunca aperte a barriga de bebês.
-5. **Criança maior recebe Heimlich:** Ajoelhe-se atrás e faça compressões abdominais para dentro e para cima acima do umbigo.
+5. **Criança maior com obstrução grave:** Alterne 5 pancadas nas costas e 5 compressões abdominais. Se perder a consciência, inicie RCP.
 6. **Nunca dê água a quem está engasgando:** A água não desentala o sólido e causa afogamento pulmonar imediato.
 
 ---
