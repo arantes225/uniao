@@ -1,0 +1,122 @@
+{
+  "E03": {
+    "intro": "O engasgo costuma acontecer durante refeições ou brincadeiras com objetos pequenos. A pessoa pode tossir, ficar em silêncio ou ter dificuldade para respirar. A diferença entre tosse forte e obstrução grave determina o que fazer.",
+    "mecanismo": "A passagem de ar das crianças é estreita, e objetos ou alimentos podem bloqueá-la. As técnicas de desengasgo tentam deslocar o objeto com movimento do ar. O procedimento é diferente no bebê, cuja barriga não deve ser comprimida.",
+    "alerta": "No bebê menor de um ano, alterne cinco pancadas nas costas e cinco impulsos torácicos com a base de uma mão. Em crianças maiores com obstrução grave, alterne cinco pancadas nas costas e cinco compressões abdominais. Não coloque dedos na boca sem enxergar o objeto.",
+    "decisao": "Na creche, um bebê fica silencioso e não consegue chorar após comer. Uma cuidadora pede 192 enquanto outra executa a técnica para lactentes no manequim de treinamento ou, na emergência real, conforme capacitação."
+  },
+  "E04": {
+    "intro": "Uma criança que desmaia, convulsiona ou tem dificuldade para respirar não precisa de um diagnóstico feito pela escola. Precisa de segurança, observação da respiração e ajuda no momento certo. Saber o que não fazer é tão importante quanto agir.",
+    "mecanismo": "Convulsões ocorrem por atividade elétrica anormal no cérebro. A glicose baixa pode prejudicar o funcionamento cerebral; alergias e crises de asma podem comprometer a respiração. Esses problemas parecem diferentes, mas todos exigem atenção à consciência e ao ar que entra.",
+    "alerta": "Nunca contenha à força uma convulsão nem coloque objetos na boca. Se a criança estiver sonolenta ou não conseguir engolir, não ofereça água, açúcar ou comida. Observe a duração da crise e acione 192 nos sinais de gravidade.",
+    "decisao": "Durante a aula, uma criança cai e começa a convulsionar. A professora afasta cadeiras, protege a cabeça e marca o tempo. Ao terminar, verifica respiração e mantém observação até a avaliação indicada."
+  },
+  "E05": {
+    "intro": "Quedas em escolas parecem comuns, mas nem toda criança deve levantar e voltar à aula. Dor forte, confusão, vômitos repetidos, deformidade ou perda de força podem indicar uma lesão que merece avaliação imediata.",
+    "mecanismo": "A cabeça da criança é proporcionalmente maior que a do adulto, e o esqueleto ainda está em crescimento. Quedas podem afetar cabeça, articulações e dentes. Evitar movimentos desnecessários reduz risco adicional quando há suspeita de lesão grave.",
+    "alerta": "Depois de impacto importante, não force a criança a caminhar. Em fratura, não alinhe à força. Dente de leite avulsionado não deve ser reimplantado; um dente permanente perdido precisa de avaliação odontológica urgente.",
+    "decisao": "Um estudante escorrega na escada e bate a cabeça. O professor isola a área, avalia resposta e respiração, pergunta sobre dor e observa sinais neurológicos. Se houver rebaixamento ou vômitos repetidos, chama 192."
+  },
+  "E06": {
+    "intro": "Um aluno com asma, diabetes, epilepsia ou alergia pode participar das atividades escolares com segurança quando a equipe conhece seu plano individual. O documento deve dizer quais sinais observar, que providência tomar e quem chamar.",
+    "mecanismo": "As doenças crônicas mudam os riscos e as respostas necessárias. O inalador prescrito pode aliviar broncoespasmo; a glicose oral ajuda na hipoglicemia quando a criança consegue engolir; o autoinjetor prescrito pode ser necessário na anafilaxia. Nenhuma dessas medidas substitui a avaliação de emergência.",
+    "alerta": "Não improvise doses nem medicamentos. Cada plano individual deve ser atualizado com os responsáveis e profissionais assistentes, com acesso restrito aos funcionários que precisam dele. Em anafilaxia com dificuldade respiratória, ligue 192.",
+    "decisao": "Uma aluna apresenta urticária extensa e dificuldade para respirar. A equipe chama 192, localiza o plano de alergia e o dispositivo prescrito e segue a orientação enquanto monitora sua respiração."
+  },
+  "E07": {
+    "intro": "Um plano escolar só funciona quando os funcionários conseguem executá-lo durante uma emergência. Não basta guardar contatos em uma pasta. É necessário saber quem reconhece o problema, quem liga 192, quem busca material e quem organiza os demais alunos.",
+    "mecanismo": "Emergências causam distração e muitas pessoas tentam agir ao mesmo tempo. A divisão de funções diminui tarefas esquecidas. Simulações ajudam a transformar uma sequência escrita em resposta coordenada.",
+    "alerta": "Não use crianças reais para simular desmaios, choques, engasgo com manobras físicas ou compressões torácicas. Essas técnicas devem ser praticadas em manequins e ambientes seguros.",
+    "decisao": "A direção organiza um simulado de engasgo no refeitório. Um adulto chama 192 de modo fictício, outro atende o manequim, um terceiro afasta a turma. O grupo registra o que funcionou e o que deve mudar."
+  },
+  "H01": {
+    "intro": "Um sangramento importante pode matar antes da chegada da ambulância. A pessoa que presencia o acidente não precisa distinguir veia de artéria: precisa reconhecer o volume, comprimir a ferida e acionar ajuda.",
+    "mecanismo": "O sangue leva oxigênio aos órgãos. Quando uma grande quantidade sai do corpo, o coração tem menos volume para circular. Compressão direta diminui a saída de sangue enquanto o sistema de coagulação tenta fechar o ferimento.",
+    "alerta": "A cor vermelha clara ou escura não indica sozinha se o sangramento é fatal. Roupas rapidamente encharcadas, poças, fluxo intenso e palidez exigem ação. Não espere contar o pulso nem medir a pressão.",
+    "decisao": "Após um acidente, um homem apresenta sangramento intenso na coxa. Uma testemunha verifica segurança, inicia pressão direta e pede 192. A equipe de emergência recebe as informações sobre tempo e medidas feitas."
+  },
+  "H02": {
+    "intro": "Nas hemorragias graves, alguns segundos são mais úteis aplicados na ferida do que tentando entender qual vaso sangra. Comece pressionando. Depois decida, conforme treinamento e local da lesão, se será preciso torniquete ou outra medida.",
+    "mecanismo": "O sangue pode sair mais rápido do que o corpo consegue compensar. A pressão direta comprime o vaso rompido. Em membros, o torniquete pode interromper o fluxo para controlar hemorragia ameaçadora à vida. A região do corpo determina quais técnicas são possíveis.",
+    "alerta": "Nunca coloque torniquete no pescoço, no tronco ou sobre uma articulação. Em axila e virilha, mantenha pressão direta; preenchimento de feridas exige prática supervisionada e material adequado.",
+    "decisao": "Um ferimento no braço sangra muito. Uma pessoa mantém compressão direta enquanto outra chama 192 e traz um kit. Um socorrista treinado avalia o uso de torniquete comercial caso a hemorragia ameace a vida."
+  },
+  "H03": {
+    "intro": "A compressão direta é a habilidade central do controle de sangramento. Ela não depende de aparelho complexo: exige localizar a ferida, pressionar com firmeza e manter essa pressão até que a ajuda assuma.",
+    "mecanismo": "A mão comprime os tecidos sobre o vaso lesionado, reduzindo o fluxo de sangue para fora do corpo. Pressão contínua favorece o coágulo; levantar a gaze repetidamente pode reiniciar o sangramento.",
+    "alerta": "Não solte a pressão a cada minuto para verificar se melhorou. Não tente retirar um objeto profundamente encravado. Se o sangramento for intenso, ligue 192 desde o início.",
+    "decisao": "Uma peça metálica provoca corte profundo no braço. Com a máquina segura, o colega coloca gaze, comprime e mantém as mãos firmes. Outro funcionário chama 192 e providencia material extra."
+  },
+  "H04": {
+    "intro": "Algumas feridas profundas ficam perto da virilha ou axila. Nesses locais, um torniquete convencional de braço ou perna não se encaixa. A medida inicial do leigo é pressão direta; técnicas de preenchimento precisam ser ensinadas na prática.",
+    "mecanismo": "Quando a ferida forma um espaço profundo, o sangue pode continuar saindo apesar de uma compressa superficial. O preenchimento com gaze, feito por socorrista treinado em região indicada, ajuda a transmitir pressão ao interior da ferida.",
+    "alerta": "Não introduza dedos para procurar vasos. Não faça preenchimento em pescoço, tórax ou abdome. Se não recebeu treinamento prático, mantenha pressão externa firme e contínua enquanto aguarda o resgate.",
+    "decisao": "Uma pessoa sofre corte profundo na virilha. O primeiro socorrista comprime a lesão, chama 192 e pede material. A técnica de packing só será usada se houver alguém com treinamento específico e indicação adequada."
+  },
+  "H05": {
+    "intro": "O torniquete é um dispositivo para controlar sangramento grave em braços ou pernas. Ele não substitui a avaliação do local nem serve para qualquer ferimento. Sua aplicação deve ser treinada, pois uma fita frouxa pode falhar.",
+    "mecanismo": "O mecanismo do torniquete aperta os vasos do membro e pode impedir a passagem de sangue para a região ferida. A eficácia é avaliada pelo controle do sangramento, não apenas pela dor ou pelo número de voltas na haste.",
+    "alerta": "Não aplique sobre articulações nem no pescoço ou tronco. Não afrouxe para 'deixar o sangue circular'. Anote o horário e comunique-o ao resgate. Aprenda a aplicar em simulador.",
+    "decisao": "Depois de corte profundo no antebraço com hemorragia maciça, um socorrista treinado posiciona torniquete comercial acima da lesão, confirma controle do sangramento, fixa e registra a hora enquanto outro liga 192."
+  },
+  "H06": {
+    "intro": "Feridas no tórax, pescoço, cabeça e abdome não são tratadas da mesma forma que um corte no braço. A região anatômica pode limitar ou proibir certas técnicas. O leigo deve controlar o que for possível sem explorar a lesão.",
+    "mecanismo": "No tórax e no abdome há órgãos vitais e cavidades profundas. Introduzir gaze ou objetos nessas regiões pode causar danos adicionais. Na cabeça, o sangramento pode ser intenso, mas pressão sobre fratura com afundamento também pode ser perigosa.",
+    "alerta": "Nunca use torniquete no pescoço ou tronco. Não introduza materiais em feridas profundas do tórax ou abdome. Em suspeita de fratura de crânio com afundamento, evite pressionar diretamente a deformidade.",
+    "decisao": "Um trabalhador cai e apresenta ferida no tórax com respiração difícil. A equipe aciona 192 e 193 se houver risco no local; não introduz gaze nem retira objetos encravados e observa continuamente a respiração."
+  },
+  "H07": {
+    "intro": "Conhecer uma técnica não é o mesmo que conseguir executá-la. A prática de controle de sangramento deve usar simuladores e materiais adequados. A avaliação precisa observar segurança, ordem das ações e eficácia no modelo.",
+    "mecanismo": "Situações de emergência aumentam a tensão e dificultam lembrar sequências complexas. Repetir tarefas curtas e receber correção do instrutor ajuda a consolidar a resposta. Cronômetro não substitui qualidade da técnica.",
+    "alerta": "Não aplique torniquete apertado por tempo prolongado em colegas. Não provoque feridas nem use objetos cortantes em simulações. Para técnicas de packing, use exclusivamente simuladores próprios.",
+    "decisao": "Em uma estação prática, o aluno vê sangramento artificial intenso, reconhece a necessidade de ajuda, aplica pressão direta e comunica o cenário. O instrutor avalia se ele manteve a pressão sem interrupções."
+  },
+  "T01": {
+    "intro": "No trabalho, o primeiro socorro só começa quando o perigo foi controlado. Uma máquina ligada, um vazamento ou um cabo energizado pode ferir também quem tenta ajudar. O plano da empresa deve dizer como isolar e acionar profissionais.",
+    "mecanismo": "Os riscos ocupacionais variam: energia mecânica esmaga, produtos podem intoxicar e eletricidade pode causar arritmias. Equipamentos de proteção servem para riscos específicos e não tornam toda situação segura para o leigo.",
+    "alerta": "Não tente retirar alguém de maquinário em movimento nem entre em área com gás ou fumaça. Acione parada de emergência se puder fazê-lo com segurança e peça resgate especializado.",
+    "decisao": "Um operador cai ao lado de uma prensa. Um colega ativa a parada de emergência sem entrar na zona de esmagamento, isola o local, chama 193/192 e só se aproxima após liberação de segurança."
+  },
+  "T02": {
+    "intro": "Um acidente com máquina pode envolver ferida grave, amputação ou pessoa presa entre peças. A urgência não autoriza colocar as mãos em equipamento ainda energizado. Primeiro interrompa o perigo com ajuda autorizada.",
+    "mecanismo": "Máquinas podem comprimir e cortar tecidos em poucos instantes. Um membro preso pode sofrer lesão importante de músculos, nervos e vasos. A retirada inadequada pode causar mais trauma, além do risco de um novo movimento do equipamento.",
+    "alerta": "Não puxe membro preso nem tente desmontar máquina sem equipe habilitada. Em amputação, não coloque a parte amputada diretamente no gelo. Em sangramento grave acessível e cena segura, faça pressão direta.",
+    "decisao": "Um trabalhador fica preso em roletes. Os colegas acionam parada de emergência e resgate, não tracionam o braço e só iniciam medidas básicas quando a cena e o acesso estão seguros."
+  },
+  "T03": {
+    "intro": "Produto químico não identificado é risco também para quem tenta socorrer. Observe rótulos à distância, isole a área e peça a equipe competente. A lavagem de pele e olhos depende do produto e só deve ocorrer em local seguro.",
+    "mecanismo": "Algumas substâncias irritam tecidos, outras causam queimaduras químicas ou comprometem a respiração. A reação de neutralizar um ácido com uma base pode produzir calor e piorar a lesão. Por isso, a informação do produto e a lavagem orientada são essenciais.",
+    "alerta": "Não entre em nuvem química sem proteção especializada. Não provoque vômito, não dê leite e não misture produtos para neutralizar a pele. Em exposição ocular, inicie irrigação abundante quando houver segurança e siga o serviço de urgência.",
+    "decisao": "Durante limpeza, um líquido corrosivo atinge o olho de uma funcionária. A equipe identifica o produto na embalagem, leva-a à estação de lavagem segura, inicia irrigação e aciona o serviço de emergência."
+  },
+  "T04": {
+    "intro": "No choque elétrico, tocar na vítima pode causar outra descarga. O leigo deve reconhecer o risco, isolar a área e solicitar corte seguro da energia. A avaliação de respiração e RCP só começa depois da confirmação de segurança.",
+    "mecanismo": "A corrente elétrica pode interferir no ritmo do coração, contrair músculos e produzir queimaduras profundas. A eletricidade nem sempre deixa marcas externas proporcionais ao dano. Um cabo caído pode continuar energizado mesmo sem faíscas.",
+    "alerta": "Não use madeira, vassoura ou PVC improvisado para afastar fios. Não confie apenas na ausência de luz ou faíscas. Em rede elétrica, mantenha distância e siga orientação de Bombeiros e concessionária.",
+    "decisao": "Um trabalhador cai perto de um painel elétrico com fumaça. Os colegas mantêm distância, isolam a área e chamam 193 e o profissional autorizado. Só após desenergização confirmada avaliam a vítima."
+  },
+  "T05": {
+    "intro": "Quem cai de altura pode apresentar fraturas, lesões de cabeça ou coluna e sangramentos. Quem fica suspenso pelo cinto também precisa de resgate rápido. Em ambos os casos, não improvise acesso em altura.",
+    "mecanismo": "A queda transfere energia ao corpo no impacto, podendo lesar tecidos internos mesmo sem grandes feridas visíveis. A suspensão prolongada em equipamento também pode causar mal-estar. A equipe de resgate precisa ter plano e equipamentos específicos.",
+    "alerta": "Não suba em estrutura sem treinamento, não corte talabartes e não solte ancoragens por impulso. Acione 193. Após retirada segura, evite movimentar a vítima e verifique respiração.",
+    "decisao": "Um trabalhador está suspenso pelo cinto após queda. Um colega aciona o plano de resgate, informa ao 193 a altura e a situação da vítima, mantém a área isolada e aguarda os profissionais habilitados."
+  },
+  "T06": {
+    "intro": "Tanques, silos, poços e galerias podem ter pouco oxigênio ou gases tóxicos. Quem entra para resgatar sem preparo pode cair pelo mesmo motivo. A decisão correta para o leigo é não entrar e acionar resgate técnico.",
+    "mecanismo": "A respiração depende de oxigênio no ar. Em ambiente confinado, essa concentração pode cair, e gases tóxicos podem impedir o organismo de usar oxigênio. Não é possível reconhecer uma atmosfera segura apenas pelo cheiro.",
+    "alerta": "Nunca entre para buscar a vítima. Máscara cirúrgica, PFF2 e respirador comum não fornecem oxigênio. Só equipe treinada, com monitoramento atmosférico e equipamentos adequados, pode fazer resgate com entrada.",
+    "decisao": "Um funcionário desmaia dentro de um tanque. O vigia impede a entrada de colegas, liga 193 e informa produto armazenado, acesso e tempo desde o último contato."
+  },
+  "T07": {
+    "intro": "Em incêndio, a primeira prioridade é sair e avisar. A fumaça pode intoxicar e impedir a visão, mesmo quando a chama parece distante. Depois da evacuação segura, pessoas expostas precisam ser avaliadas conforme os sintomas.",
+    "mecanismo": "A fumaça contém partículas e gases que irritam os pulmões e prejudicam a oxigenação. Algumas lesões da via aérea pioram com o tempo. A aparência da pele não revela necessariamente a gravidade da exposição.",
+    "alerta": "Não atravesse fumaça para buscar objetos ou vítimas. Não use elevadores. Em dificuldade para respirar, rouquidão após fumaça ou queimaduras relevantes, acione 192 e 193. Oxigênio é medida para equipe habilitada.",
+    "decisao": "O alarme dispara em um depósito e há fumaça no corredor. A brigada orienta saída pela rota segura, registra o ponto de encontro e informa ao 193 o local e possíveis pessoas não localizadas."
+  },
+  "T08": {
+    "intro": "Em acidentes com muitas vítimas, uma pessoa sozinha não consegue atender a todos. A tarefa do leigo é manter segurança, informar o número aproximado de feridos e começar ações básicas permitidas, sem assumir decisões de triagem profissional.",
+    "mecanismo": "O socorro especializado organiza recursos conforme a gravidade e a disponibilidade de equipes. Sistemas de triagem ajudam profissionais treinados a definir prioridades. Para leigos, a melhor contribuição inicial é transmitir informação correta e evitar ampliar o desastre.",
+    "alerta": "Não classifique alguém como morto com base em uma cor de triagem ou em um único sinal. Não entre em cenário instável e não abandone sua segurança para mover feridos. Siga o comando do resgate.",
+    "decisao": "Após um acidente de ônibus, você vê várias pessoas feridas. Afasta-se do tráfego, liga 193 e 192, informa o acesso e quantas pessoas parecem envolvidas. Só oferece ajuda no local seguro conforme orientação."
+  }
+}
