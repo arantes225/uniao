@@ -236,7 +236,7 @@ const parseMarkdown = (markdown: string): React.ReactNode[] => {
       const quoteLines: string[] = [];
       let calloutType: keyof typeof CALLOUT_STYLES | null = null;
       while (i < lines.length && lines[i].trim().startsWith('>')) {
-        const clean = lines[i].trim().replace(/^>\\s?/, '');
+        const clean = lines[i].trim().replace(/^>\s?/, '');
         const match = clean.match(CALLOUT_HEADER_REGEX);
         if (match) {
           calloutType = match[1].toUpperCase() as keyof typeof CALLOUT_STYLES;
