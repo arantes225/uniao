@@ -33,6 +33,40 @@
 
 ---
 
+## GUIA DE ATUAÇÃO — PARA QUEM NÃO É DA ÁREA DA SAÚDE
+
+> **EM UMA EMERGÊNCIA REAL:** Proteja-se, peça ajuda e ligue **192 (SAMU)**. Para fogo, resgate em altura, água, espaço confinado ou ambiente perigoso, ligue **193 (Bombeiros)**. Diga o endereço e siga as instruções da central. Este roteiro orienta as primeiras ações, mas não substitui o treino supervisionado das técnicas práticas.
+
+### Situação: Colapso e possível parada cardíaca durante exercício
+
+**Reconheça os sinais:** Colapso súbito, ausência de resposta, respiração ausente ou apenas suspiros ocasionais (gasping).
+
+### O que fazer — passo a passo
+
+1. Verifique se o local está seguro. Se houver uma barra prendendo a vítima, peça ajuda para retirar a carga sem se machucar.
+2. Chame a pessoa e toque seus ombros. Não gaste tempo procurando o pulso se você é leigo.
+3. Acione 192 em viva-voz. Peça a alguém para buscar o DEA.
+4. Sem respiração normal, comprima a metade inferior do esterno a 100–120 vezes por minuto, com 5–6 cm em adultos.
+5. Deixe o tórax retornar após cada compressão. Revezem-se, quando possível, sem pausas longas.
+6. Ligue o DEA, exponha e seque o tórax, cole as pás conforme desenho e siga a voz do aparelho.
+7. Afaste todos durante análise e eventual choque. Retome compressões quando o DEA mandar.
+
+### Não faça isto
+
+Não trate gasping como respiração normal. Não espere a ambulância para começar a RCP. Não faça diagnóstico de infarto para decidir agir.
+
+### Exercício prático de aprendizagem
+
+Treine o reconhecimento do gasping, a ligação em viva-voz, as compressões no manequim e o DEA de treinamento.
+
+**Ao entregar a vítima:** informe horário de início, mudanças na respiração e na consciência, riscos e medidas aplicadas.
+
+**Limites:** não faça procedimentos invasivos, administração de fármacos não prescritos, resgates técnicos ou intervenções que dependam de habilitação profissional. Pratique presencialmente RCP, DEA, controle de sangramento e desengasgo em manequins antes de assumir atendimento.
+
+**Referências operacionais:** Ministério da Saúde — SAMU 192 (https://www.gov.br/saude/pt-br/composicao/saes/samu-192/samu-192); AHA/AAP — RCP e primeiros socorros 2025 (https://cpr.heart.org/en/resuscitation-science/cpr-and-ecc-guidelines); AHA/Cruz Vermelha — Primeiros Socorros 2024 (https://cpr.heart.org/en/resuscitation-science/2024-first-aid-guidelines).
+
+---
+
 ## SEÇÃO 1 — EM 30 SEGUNDOS
 
 > **VISÃO RÁPIDA DE SOBREVIVÊNCIA CARDIOVASCULAR NO SALÃO**

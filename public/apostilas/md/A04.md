@@ -33,6 +33,40 @@
 
 ---
 
+## GUIA DE ATUAÇÃO — PARA QUEM NÃO É DA ÁREA DA SAÚDE
+
+> **EM UMA EMERGÊNCIA REAL:** Proteja-se, peça ajuda e ligue **192 (SAMU)**. Para fogo, resgate em altura, água, espaço confinado ou ambiente perigoso, ligue **193 (Bombeiros)**. Diga o endereço e siga as instruções da central. Este roteiro orienta as primeiras ações, mas não substitui o treino supervisionado das técnicas práticas.
+
+### Situação: Hipoglicemia, exaustão pelo calor e intermação
+
+**Reconheça os sinais:** Tremor, suor frio e confusão durante o treino; ou calor intenso com tontura, desorientação, desmaio e pele quente.
+
+### O que fazer — passo a passo
+
+1. Interrompa o esforço. Tire a pessoa da área quente e chame ajuda.
+2. Se suspeitar de hipoglicemia e a pessoa estiver acordada, orientada e conseguir engolir, ofereça açúcar de ação rápida.
+3. Se a pessoa não conseguir engolir, estiver convulsionando ou inconsciente, não dê nada pela boca. Ligue 192.
+4. Se houver confusão, colapso ou convulsão durante exposição ao calor, suspeite de intermação e ligue 192.
+5. Inicie resfriamento imediato: retire roupas excedentes e molhe a pele com água fresca, usando ventilação.
+6. Se houver recursos e pessoal treinado, siga o protocolo local de resfriamento rápido sem atrasar o socorro.
+7. Observe continuamente a respiração; se não for normal e a pessoa não responder, inicie RCP.
+
+### Não faça isto
+
+Não ofereça líquido a pessoa sonolenta ou confusa. Não force o retorno ao exercício. Não espere medir febre para resfriar.
+
+### Exercício prático de aprendizagem
+
+Simule dois pacientes: um diabético acordado com tremor e um atleta confuso em dia muito quente.
+
+**Ao entregar a vítima:** informe horário de início, mudanças na respiração e na consciência, riscos e medidas aplicadas.
+
+**Limites:** não faça procedimentos invasivos, administração de fármacos não prescritos, resgates técnicos ou intervenções que dependam de habilitação profissional. Pratique presencialmente RCP, DEA, controle de sangramento e desengasgo em manequins antes de assumir atendimento.
+
+**Referências operacionais:** Ministério da Saúde — SAMU 192 (https://www.gov.br/saude/pt-br/composicao/saes/samu-192/samu-192); AHA/AAP — RCP e primeiros socorros 2025 (https://cpr.heart.org/en/resuscitation-science/cpr-and-ecc-guidelines); AHA/Cruz Vermelha — Primeiros Socorros 2024 (https://cpr.heart.org/en/resuscitation-science/2024-first-aid-guidelines).
+
+---
+
 ## SEÇÃO 1 — EM 30 SEGUNDOS
 
 > **VISÃO RÁPIDA DE SOBREVIVÊNCIA METABÓLICA NO SALÃO**

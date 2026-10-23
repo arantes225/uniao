@@ -33,6 +33,39 @@
 
 ---
 
+## GUIA DE ATUAÇÃO — PARA QUEM NÃO É DA ÁREA DA SAÚDE
+
+> **EM UMA EMERGÊNCIA REAL:** Proteja-se, peça ajuda e ligue **192 (SAMU)**. Para fogo, resgate em altura, água, espaço confinado ou ambiente perigoso, ligue **193 (Bombeiros)**. Diga o endereço e siga as instruções da central. Este roteiro orienta as primeiras ações, mas não substitui o treino supervisionado das técnicas práticas.
+
+### Situação: Segurança da academia e resposta inicial
+
+**Reconheça os sinais:** Pessoa cai no treino; apresenta dor no peito, falta de ar, confusão, sangramento intenso ou lesão por equipamento.
+
+### O que fazer — passo a passo
+
+1. Interrompa os aparelhos próximos. Afaste pesos e mantenha livre a passagem dos socorristas.
+2. Pergunte se a pessoa consegue ouvir você. Observe se respira normalmente por até 10 segundos.
+3. Peça que alguém ligue 192, informe a unidade e busque o DEA.
+4. Se estiver inconsciente e não respirar normalmente, inicie compressões torácicas e use o DEA conforme instruções.
+5. Se houver sangramento grave, pressione diretamente a ferida. Não abandone a vítima para buscar documentos.
+6. Mostre aos profissionais do SAMU quando os sintomas começaram e quais medidas já foram feitas.
+
+### Não faça isto
+
+Não atribua desmaio a cansaço sem avaliação. Não dê água ou suplementos à pessoa confusa. Não use aparelhos sem isolamento seguro.
+
+### Exercício prático de aprendizagem
+
+Simule uma queda junto à esteira: quem desliga, quem liga 192 e quem busca o DEA?
+
+**Ao entregar a vítima:** informe horário de início, mudanças na respiração e na consciência, riscos e medidas aplicadas.
+
+**Limites:** não faça procedimentos invasivos, administração de fármacos não prescritos, resgates técnicos ou intervenções que dependam de habilitação profissional. Pratique presencialmente RCP, DEA, controle de sangramento e desengasgo em manequins antes de assumir atendimento.
+
+**Referências operacionais:** Ministério da Saúde — SAMU 192 (https://www.gov.br/saude/pt-br/composicao/saes/samu-192/samu-192); AHA/AAP — RCP e primeiros socorros 2025 (https://cpr.heart.org/en/resuscitation-science/cpr-and-ecc-guidelines); AHA/Cruz Vermelha — Primeiros Socorros 2024 (https://cpr.heart.org/en/resuscitation-science/2024-first-aid-guidelines).
+
+---
+
 ## SEÇÃO 1 — EM 30 SEGUNDOS
 
 > **VISÃO RÁPIDA DE SOBREVIVÊNCIA E SEGURANÇA ESPORTIVA**

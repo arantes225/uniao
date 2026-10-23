@@ -33,6 +33,39 @@
 
 ---
 
+## GUIA DE ATUAÇÃO — PARA QUEM NÃO É DA ÁREA DA SAÚDE
+
+> **EM UMA EMERGÊNCIA REAL:** Proteja-se, peça ajuda e ligue **192 (SAMU)**. Para fogo, resgate em altura, água, espaço confinado ou ambiente perigoso, ligue **193 (Bombeiros)**. Diga o endereço e siga as instruções da central. Este roteiro orienta as primeiras ações, mas não substitui o treino supervisionado das técnicas práticas.
+
+### Situação: Entorse, fratura e luxação na academia
+
+**Reconheça os sinais:** Dor forte, deformidade, inchaço, incapacidade de apoiar o peso, formigamento ou osso exposto.
+
+### O que fazer — passo a passo
+
+1. Interrompa o exercício e estabilize o equipamento para impedir novas lesões.
+2. Peça que a pessoa não mova o membro lesionado. Avalie respiração e sangramento antes de cuidar do osso.
+3. Se houver ferida, cubra com pano limpo. Se sangrar muito, faça pressão direta sem pressionar osso saliente.
+4. Apoie o membro na posição encontrada. Imobilize apenas se souber fazer, sem forçar alinhamento.
+5. Para lesão fechada leve, use compressa fria envolta em tecido por intervalos curtos. Observe a pele.
+6. Ligue 192 se houver deformidade grave, fratura exposta, perda de sensibilidade, palidez ou dor intensa.
+
+### Não faça isto
+
+Não reduza luxações ou fraturas. Não puxe o membro, não massageie e não deixe a vítima voltar ao treino.
+
+### Exercício prático de aprendizagem
+
+Treine como apoiar um braço suspeito de fratura sem apertar dedos ou provocar dor.
+
+**Ao entregar a vítima:** informe horário de início, mudanças na respiração e na consciência, riscos e medidas aplicadas.
+
+**Limites:** não faça procedimentos invasivos, administração de fármacos não prescritos, resgates técnicos ou intervenções que dependam de habilitação profissional. Pratique presencialmente RCP, DEA, controle de sangramento e desengasgo em manequins antes de assumir atendimento.
+
+**Referências operacionais:** Ministério da Saúde — SAMU 192 (https://www.gov.br/saude/pt-br/composicao/saes/samu-192/samu-192); AHA/AAP — RCP e primeiros socorros 2025 (https://cpr.heart.org/en/resuscitation-science/cpr-and-ecc-guidelines); AHA/Cruz Vermelha — Primeiros Socorros 2024 (https://cpr.heart.org/en/resuscitation-science/2024-first-aid-guidelines).
+
+---
+
 ## SEÇÃO 1 — EM 30 SEGUNDOS
 
 > **VISÃO RÁPIDA DE SOBREVIVÊNCIA E SUPORTE TRAUMÁTICO NO TREINO**
