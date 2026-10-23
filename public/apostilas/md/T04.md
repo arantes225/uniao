@@ -11,11 +11,45 @@
 
 ---
 
+## GUIA DE ATUAÇÃO — PARA QUEM NÃO É DA ÁREA DA SAÚDE
+
+> **EM UMA EMERGÊNCIA REAL:** Proteja-se, peça ajuda e ligue **192 (SAMU)**. Para fogo, resgate em altura, água, espaço confinado ou ambiente perigoso, ligue **193 (Bombeiros)**. Diga o endereço e siga as instruções da central. Este roteiro orienta as primeiras ações, mas não substitui o treino supervisionado das técnicas práticas.
+
+### Situação: Choque elétrico: interromper energia antes de tocar
+
+**Reconheça os sinais:** Pessoa em contato com fio ou equipamento energizado, arco elétrico, queimadura ou queda após choque.
+
+### O que fazer — passo a passo
+
+1. Afaste-se. Não toque na vítima ou em objetos ligados à fonte elétrica.
+2. Acione 193 e solicite desligamento por profissional habilitado.
+3. Somente após confirmação de que a energia foi interrompida e de que a área está segura, aproxime-se.
+4. Chame a vítima e verifique se respira normalmente. Acione 192.
+5. Se não responde e não respira normalmente, inicie RCP e use DEA conforme instruções.
+6. Cubra queimaduras com material limpo; não aplique pomadas.
+7. Mantenha a pessoa em observação até a avaliação médica, mesmo se parecer recuperada.
+
+### Não faça isto
+
+Não use vassoura ou objeto de madeira para tocar fio energizado. Não se aproxime de alta tensão ou cabo caído.
+
+### Exercício prático de aprendizagem
+
+Pratique decisão de NÃO TOCAR, isolamento e acionamento, sem exposição a energia real.
+
+**Ao entregar a vítima:** informe horário de início, mudanças na respiração e na consciência, riscos e medidas aplicadas.
+
+**Limites:** não faça procedimentos invasivos, administração de fármacos não prescritos, resgates técnicos ou intervenções que dependam de habilitação profissional. Pratique presencialmente RCP, DEA, controle de sangramento e desengasgo em manequins antes de assumir atendimento.
+
+**Referências operacionais:** Ministério da Saúde — SAMU 192 (https://www.gov.br/saude/pt-br/composicao/saes/samu-192/samu-192); AHA/AAP — RCP e primeiros socorros 2025 (https://cpr.heart.org/en/resuscitation-science/cpr-and-ecc-guidelines); AHA/Cruz Vermelha — Primeiros Socorros 2024 (https://cpr.heart.org/en/resuscitation-science/2024-first-aid-guidelines).
+
+---
+
 ## 1. EM 30 SEGUNDOS (SUMÁRIO EXECUTIVO DE RESPOSTA RÁPIDA)
 
 Acidentes com eletricidade industrial e predial constituem emergências críticas onde o princípio inviolável de segurança é: **NUNCA TOQUE NA VÍTIMA ANTES DA CONFIRMAÇÃO ABSOLUTA DA DESENERGIZAÇÃO**. A corrente elétrica não é visível; tocar em uma pessoa ainda conectada ao circuito transfere a descarga para o socorrista, gerando uma segunda vítima letal. A passagem da corrente pelo organismo vivo gera danos por três vias: efeito térmico (efeito Joule causando queimaduras profundas na entrada e saída), perturbação eletrofisiológica direta sobre o sistema de condução cardíaco (desencadeando fibrilação ventricular ou assistolia) e tetanização muscular (espasmo violento que impede a vítima de soltar o cabo elétrico ou contrai os músculos respiratórios, provocando asfixia).
 
-Em acidentes de baixa tensão (menos de 1.000 V), corte a fonte no disjuntor geral ou afaste o condutor utilizando materiais secos e não condutores (madeira seca, fibra de vidro ou bastão isolante homologado). Em alta tensão (acima de 1.000 V / redes de distribuição), mantenha **distância de segurança de no mínimo 10 metros**, pois a eletricidade rompe a rigidez dielétrica do ar e forma arcos elétricos sem necessidade de toque direto; isole a área e acione a concessionária de energia e o Corpo de Bombeiros (193). Se a vítima estiver inconsciente e sem respiração após a desenergização, inicie imediatamente a Ressuscitação Cardiopulmonar (RCP) com compressões torácicas contínuas e instale o Desfibrilador Externo Automático (DEA) o mais rápido possível. Toda vítima de choque elétrico com perda de consciência, mesmo que momentânea, exige internação hospitalar para monitoramento eletrocardiográfico por risco de arritmias cardíacas tardias e síndrome de compartimento por necrose muscular profunda (rabdomiólise).
+Se houver contato com eletricidade, não toque na vítima nem tente afastar fios com objetos. Acione 193 e solicite desligamento por profissional autorizado. Só se aproxime após confirmação de segurança. Em alta tensão (acima de 1.000 V / redes de distribuição), mantenha **distância de segurança de no mínimo 10 metros**, pois a eletricidade rompe a rigidez dielétrica do ar e forma arcos elétricos sem necessidade de toque direto; isole a área e acione a concessionária de energia e o Corpo de Bombeiros (193). Se a vítima estiver inconsciente e sem respiração após a desenergização, inicie imediatamente a Ressuscitação Cardiopulmonar (RCP) com compressões torácicas contínuas e instale o Desfibrilador Externo Automático (DEA) o mais rápido possível. Toda vítima de choque elétrico com perda de consciência, mesmo que momentânea, exige internação hospitalar para monitoramento eletrocardiográfico por risco de arritmias cardíacas tardias e síndrome de compartimento por necrose muscular profunda (rabdomiólise).
 
 ---
 
@@ -234,7 +268,7 @@ O atendimento pré-hospitalar ao acidentado elétrico deve seguir uma metodologi
 
 | Cenário Clínico | Quadro Observado | Ação Primária Obrigatória | Ação Terminantemente Proibida |
 | :--- | :--- | :--- | :--- |
-| **Vítima Conectada à Baixa Tensão (Tomada/Quadro 220V)** | Espasmo muscular, vítima "grudada" ao cabo, gemidos ou inconsciência. | Desligar disjuntor geral imediatamente; na impossibilidade, afastar o fio com bastão de fibra ou madeira seca. | Agarrar a vítima pelas mãos ou corpo diretamente sem ter desligado a chave geral da energia. |
+| **Vítima Conectada à Baixa Tensão (Tomada/Quadro 220V)** | Espasmo muscular, vítima "grudada" ao cabo, gemidos ou inconsciência. | Isolar a área e solicitar desenergização por pessoa autorizada; não tocar na vítima antes de confirmar segurança. | Agarrar a vítima pelas mãos ou corpo diretamente sem ter desligado a chave geral da energia. |
 | **Cabo de Alta Tensão Rompido no Solo da Fábrica** | Fio faiscando no pátio, fumaça no asfalto, potencial arco no ar. | Manter distância mínima de 10 metros; isolar perímetro; acionar concessionária e Bombeiros (193). | Tentar empurrar o cabo de alta tensão com pedaços de madeira, canos plásticos ou vassouras. |
 | **Vítima em Parada Cardiorrespiratória Pós-Choque** | Inconsciente, apneia ou respiração tipo gasping, sem pulso central. | Iniciar compressões torácicas (100-120/min); conectar e aplicar o DEA assim que disponível na cena. | Perder tempo procurando queimaduras ou tentando dar tapas no rosto; ventilar boca a boca sem ambu. |
 | **Veículo Energizado por Fios Elétricos Caídos** | Cabo sobre a carroceria de caminhão/carro; passageiros ilesos dentro. | Ordenar que permaneçam sentados dentro da cabine; isolar o solo até o corte da rede externa. | Mandar descer do caminhão normalmente colocando um pé na lataria e o outro no solo úmido. |
@@ -307,7 +341,7 @@ No hospital geral de referência, o eletrocardiograma pós-reanimação revelou 
 > [!TIP]
 > **1. A Regra do Olho nas Mãos:** Ao se deparar com alguém caído dentro de uma sala elétrica ou oficina, olhe imediatamente para as mãos da vítima antes de dar qualquer passo. Se a pessoa estiver segurando um fio, ferramenta ou alavanca metálica, pare imediatamente! Trata-se de choque elétrico ativo por tetanização. Corte o disjuntor antes de qualquer outra atitude.
 > 
-> **2. Nunca Confie no "Acho que Desliguei":** Se você desligou o disjuntor mas o painel não possui identificação confiável de circuitos, use um bastão isolante ou um pedaço de madeira perfeitamente seca para afastar o condutor da vítima, ou empurre a vítima utilizando o bastão. Jamais encoste nela com a pele desprotegida sem confirmação de ausência de tensão.
+> **2. Nunca Confie no "Acho que Desliguei":** Se o circuito não estiver identificado, trate-o como energizado. Não use madeira, vassoura ou outros objetos improvisados para afastar cabos. Afaste-se, isole a área e solicite equipe habilitada para confirmar a desenergização.
 > 
 > **3. Cuidado com o Suor e a Água:** Pisos molhados, poças d'água na fábrica ou suor abundante no corpo da vítima reduzem drasticamente a resistência elétrica da pele, tornando qualquer contato elétrico muito mais destrutivo e expandindo a zona condutora de perigo ao redor do paciente.
 > 

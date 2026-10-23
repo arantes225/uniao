@@ -11,9 +11,43 @@
 
 ---
 
+## GUIA DE ATUAÇÃO — PARA QUEM NÃO É DA ÁREA DA SAÚDE
+
+> **EM UMA EMERGÊNCIA REAL:** Proteja-se, peça ajuda e ligue **192 (SAMU)**. Para fogo, resgate em altura, água, espaço confinado ou ambiente perigoso, ligue **193 (Bombeiros)**. Diga o endereço e siga as instruções da central. Este roteiro orienta as primeiras ações, mas não substitui o treino supervisionado das técnicas práticas.
+
+### Situação: Espaço confinado: resgate sem entrada do leigo
+
+**Reconheça os sinais:** Trabalhador desmaia em tanque, poço, silo, câmara subterrânea ou ambiente pouco ventilado.
+
+### O que fazer — passo a passo
+
+1. NÃO ENTRE no espaço. Você pode desmaiar pelo mesmo gás ou falta de oxigênio.
+2. Acione 193, equipe de resgate e plano de emergência da empresa.
+3. Impeça a entrada de colegas. Sinalize e isole o local.
+4. Informe o último contato com a vítima, tipo de espaço, produto armazenado e riscos conhecidos.
+5. Somente equipe habilitada deve realizar resgate, medição da atmosfera e uso de proteção respiratória apropriada.
+6. Quando a vítima estiver fora e o ambiente seguro, avalie resposta e respiração; inicie RCP se indicada.
+7. Entregue ao resgate as informações de exposição disponíveis.
+
+### Não faça isto
+
+Não desça mesmo que a vítima esteja perto. Máscara cirúrgica ou respirador comum não fornecem oxigênio.
+
+### Exercício prático de aprendizagem
+
+Treine a ordem de não entrada, isolamento e dados essenciais para ligar ao 193.
+
+**Ao entregar a vítima:** informe horário de início, mudanças na respiração e na consciência, riscos e medidas aplicadas.
+
+**Limites:** não faça procedimentos invasivos, administração de fármacos não prescritos, resgates técnicos ou intervenções que dependam de habilitação profissional. Pratique presencialmente RCP, DEA, controle de sangramento e desengasgo em manequins antes de assumir atendimento.
+
+**Referências operacionais:** Ministério da Saúde — SAMU 192 (https://www.gov.br/saude/pt-br/composicao/saes/samu-192/samu-192); AHA/AAP — RCP e primeiros socorros 2025 (https://cpr.heart.org/en/resuscitation-science/cpr-and-ecc-guidelines); AHA/Cruz Vermelha — Primeiros Socorros 2024 (https://cpr.heart.org/en/resuscitation-science/2024-first-aid-guidelines).
+
+---
+
 ## 1. EM 30 SEGUNDOS (SUMÁRIO EXECUTIVO DE RESPOSTA RÁPIDA)
 
-Emergências em espaços confinados (Norma Regulamentadora nº 33 — NR-33) apresentam uma estatística alarmante e incontestável em todo o mundo: **mais de 60% das pessoas que morrem dentro de espaços confinados são pretendidos socorristas que tentaram realizar resgate impulsivo sem equipamento autônomo de ar**. A regra basilar, soberana e inegociável é: **É TERMINANTEMENTE PROIBIDO ENTRAR NO ESPAÇO CONFINADO PARA RESGATAR UMA VÍTIMA SEM EQUIPAMENTO DE PROTEÇÃO RESPIRATÓRIA AUTÔNOMA (EPR / SCBA) OU SISTEMA DE AR MANDADO COM CILINDRO DE ESCAPE**. O instinto humano de pular para dentro de um poço, tanque, silo ou bueiro para puxar um colega desmaiado resulta invariavelmente em síncope por anóxia ou intoxicação em meros 15 a 30 segundos, transformando uma ocorrência com uma vítima em uma tragédia com múltiplas fatalidades.
+Emergências em espaços confinados (Norma Regulamentadora nº 33 — NR-33) apresentam uma estatística alarmante e incontestável em todo o mundo: **tentativas de resgate improvisadas também podem causar mortes entre os socorristas**. A regra basilar, soberana e inegociável é: **É TERMINANTEMENTE PROIBIDO ENTRAR NO ESPAÇO CONFINADO PARA RESGATAR UMA VÍTIMA SEM EQUIPAMENTO DE PROTEÇÃO RESPIRATÓRIA AUTÔNOMA (EPR / SCBA) OU SISTEMA DE AR MANDADO COM CILINDRO DE ESCAPE**. O instinto humano de pular para dentro de um poço, tanque, silo ou bueiro para puxar um colega desmaiado pode provocar perda de consciência e intoxicação grave rapidamente, transformando uma ocorrência com uma vítima em uma tragédia com múltiplas fatalidades.
 
 As principais causas de desmaio e óbito rápido são atmosferas perigosas: **deficiência crítica de oxigênio** ($O_2 < 19,5\%$), **gases asfixiantes químicos letais** (como o Sulfeto de Hidrogênio / Gás Sulfídrico - $H_2S$, que paralisa o nervo olfatório no primeiro suspiro e causa colapso respiratório fulminante, e o Monóxido de Carbono - $CO$) e **gases inflamáveis** em concentrações explosivas (como o metano - $CH_4$). Todo resgate prioritário deve ser executado **a partir do exterior do espaço (resgate sem entrada)**, utilizando tripé estrutural, guincho mecânico com trava-quedas e linha de vida pré-conectada ao cinto do trabalhador antes da entrada. Caso o resgate exija entrada física, esta só poderá ser realizada por brigadistas técnicos de resgate com treinamento especializado, utilizando vestimentas adequadas, EPR de pressão positiva e monitoramento contínuo de 4 gases. Acione imediatamente o Plano de Ação de Emergência (PAE), o Corpo de Bombeiros (193) e o SAMU (192).
 

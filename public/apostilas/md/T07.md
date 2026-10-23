@@ -11,11 +11,45 @@
 
 ---
 
+## GUIA DE ATUAÇÃO — PARA QUEM NÃO É DA ÁREA DA SAÚDE
+
+> **EM UMA EMERGÊNCIA REAL:** Proteja-se, peça ajuda e ligue **192 (SAMU)**. Para fogo, resgate em altura, água, espaço confinado ou ambiente perigoso, ligue **193 (Bombeiros)**. Diga o endereço e siga as instruções da central. Este roteiro orienta as primeiras ações, mas não substitui o treino supervisionado das técnicas práticas.
+
+### Situação: Incêndio, fumaça e queimaduras
+
+**Reconheça os sinais:** Fumaça, cheiro de queimado, alarme, chamas, dificuldade respiratória ou queimaduras.
+
+### O que fazer — passo a passo
+
+1. Ative o alarme, ligue 193 e inicie evacuação pela rota definida.
+2. Saia sem usar elevador. Mantenha portas fechadas atrás de você, quando for seguro.
+3. Não retorne ao local em chamas para buscar objetos ou vítimas sem equipe preparada.
+4. Em local seguro, observe resposta e respiração de pessoas expostas à fumaça.
+5. Se não responder e não respirar normalmente, inicie RCP quando a cena estiver segura.
+6. Em queimadura térmica, resfrie com água corrente fresca por cerca de 20 minutos; cubra com tecido limpo.
+7. Peça avaliação urgente se houver fumaça inalada, queimadura extensa, face atingida ou dificuldade de respirar.
+
+### Não faça isto
+
+Não aplique gelo, manteiga ou pasta de dente. Não tente atravessar fumaça intensa.
+
+### Exercício prático de aprendizagem
+
+Simule evacuação com ponto de encontro, contagem de pessoas e chamada aos Bombeiros.
+
+**Ao entregar a vítima:** informe horário de início, mudanças na respiração e na consciência, riscos e medidas aplicadas.
+
+**Limites:** não faça procedimentos invasivos, administração de fármacos não prescritos, resgates técnicos ou intervenções que dependam de habilitação profissional. Pratique presencialmente RCP, DEA, controle de sangramento e desengasgo em manequins antes de assumir atendimento.
+
+**Referências operacionais:** Ministério da Saúde — SAMU 192 (https://www.gov.br/saude/pt-br/composicao/saes/samu-192/samu-192); AHA/AAP — RCP e primeiros socorros 2025 (https://cpr.heart.org/en/resuscitation-science/cpr-and-ecc-guidelines); AHA/Cruz Vermelha — Primeiros Socorros 2024 (https://cpr.heart.org/en/resuscitation-science/2024-first-aid-guidelines).
+
+---
+
 ## 1. EM 30 SEGUNDOS (SUMÁRIO EXECUTIVO DE RESPOSTA RÁPIDA)
 
-Em sinistros de incêndio no ambiente corporativo e fabril, a principal causa de mortes imediatas não são as labaredas ou o calor radiante, mas sim a **inalação de fumaça aquecida carregada de gases tóxicos e asfixiantes**, responsável por mais de **75% dos óbitos em incêndios estruturais**. A fumaça é uma mistura densa e letal contendo fuligem superaquecida, Monóxido de Carbono ($CO$) e Cianeto de Hidrogênio ($HCN$ — liberado na combustão de espumas de poliuretano, plásticos, carpetes e solventes), que bloqueiam a respiração celular em minutos. A regra prioritária de sobrevivência durante a fuga é: **mantenha-se abaixo da camada de fumaça (engatinhe se necessário)**, pois o ar limpo e respirável concentra-se nos primeiros 30 a 50 centímetros acima do piso, onde a temperatura também é muito inferior à do teto.
+Em sinistros de incêndio no ambiente corporativo e fabril, a principal causa de mortes imediatas não são as labaredas ou o calor radiante, mas sim a **inalação de fumaça aquecida carregada de gases tóxicos e asfixiantes**, capaz de causar intoxicação grave, perda de consciência e morte. A fumaça é uma mistura densa e letal contendo fuligem superaquecida, Monóxido de Carbono ($CO$) e Cianeto de Hidrogênio ($HCN$ — liberado na combustão de espumas de poliuretano, plásticos, carpetes e solventes), que bloqueiam a respiração celular em minutos. A regra prioritária de sobrevivência durante a fuga é: **mantenha-se abaixo da camada de fumaça (engatinhe se necessário)**, pois o calor e a fumaça costumam se acumular nas partes mais altas. Isso não garante ar respirável: evacue sem entrar em áreas tomadas por fumaça.
 
-O socorrista e a brigada de emergência devem dominar a **Tetraedro do Fogo** e as classes de incêndio (A, B, C, D e K) para selecionar o agente extintor correto, sabendo que combater fogo em equipamentos elétricos energizados (Classe C) com água causa choque elétrico fatal no operador. A evacuação predial deve ser metódica, sem tumultos, utilizando rotas de fuga desobstruídas, portas corta-fogo com barra antipânico e ponto de encontro externo previamente sinalizado. Nunca utilize elevadores em caso de incêndio. Vítimas resgatadas com queimadura de vias aéreas (sinais: fuligem no nariz/boca, escarro negro, pelos nasais chamuscados, estridor ou rouquidão) possuem risco crítico de edema de glote obstrutivo em poucas horas; posicione-as sentadas, administre **oxigênio a 100% de alto fluxo contínuo** e acione o Corpo de Bombeiros (193) e o SAMU (192).
+O socorrista e a brigada de emergência devem dominar a **Tetraedro do Fogo** e as classes de incêndio (A, B, C, D e K) para selecionar o agente extintor correto, sabendo que combater fogo em equipamentos elétricos energizados (Classe C) com água causa choque elétrico fatal no operador. A evacuação predial deve ser metódica, sem tumultos, utilizando rotas de fuga desobstruídas, portas corta-fogo com barra antipânico e ponto de encontro externo previamente sinalizado. Nunca utilize elevadores em caso de incêndio. Vítimas resgatadas com queimadura de vias aéreas (sinais: fuligem no nariz/boca, escarro negro, pelos nasais chamuscados, estridor ou rouquidão) possuem risco crítico de edema de glote obstrutivo em poucas horas; afaste-as da exposição quando for seguro, acione o Corpo de Bombeiros (193) e o SAMU (192) e deixe a administração de oxigênio para equipe habilitada.
 
 ---
 

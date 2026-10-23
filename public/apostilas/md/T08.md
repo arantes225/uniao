@@ -11,6 +11,40 @@
 
 ---
 
+## GUIA DE ATUAÇÃO — PARA QUEM NÃO É DA ÁREA DA SAÚDE
+
+> **EM UMA EMERGÊNCIA REAL:** Proteja-se, peça ajuda e ligue **192 (SAMU)**. Para fogo, resgate em altura, água, espaço confinado ou ambiente perigoso, ligue **193 (Bombeiros)**. Diga o endereço e siga as instruções da central. Este roteiro orienta as primeiras ações, mas não substitui o treino supervisionado das técnicas práticas.
+
+### Situação: Incidente com várias vítimas: prioridades do leigo
+
+**Reconheça os sinais:** Acidente com muitas pessoas, múltiplos feridos, ambiente com riscos ou equipe de socorro ainda não presente.
+
+### O que fazer — passo a passo
+
+1. Pare em local seguro e acione 193 e 192. Diga número aproximado de vítimas e perigos.
+2. Não entre em área instável, contaminada ou com máquinas em funcionamento.
+3. Siga as ordens dos serviços de resgate e do responsável pelo comando.
+4. Se houver local seguro e você conseguir ajudar, faça pressão direta em sangramento grave acessível.
+5. Oriente quem consegue caminhar a se afastar do perigo para área segura, se isso não aumentar o risco.
+6. Não tente classificar alguém como morto ou decidir retirar atendimento de uma vítima.
+7. Entregue às equipes a localização das pessoas, os riscos e o que já foi feito.
+
+### Não faça isto
+
+A triagem START e decisões de expectativa de vida exigem equipe treinada. Não as use como justificativa para abandonar pessoas.
+
+### Exercício prático de aprendizagem
+
+Simule um acidente com cinco vítimas fictícias, focando chamada, segurança e informações para o comando.
+
+**Ao entregar a vítima:** informe horário de início, mudanças na respiração e na consciência, riscos e medidas aplicadas.
+
+**Limites:** não faça procedimentos invasivos, administração de fármacos não prescritos, resgates técnicos ou intervenções que dependam de habilitação profissional. Pratique presencialmente RCP, DEA, controle de sangramento e desengasgo em manequins antes de assumir atendimento.
+
+**Referências operacionais:** Ministério da Saúde — SAMU 192 (https://www.gov.br/saude/pt-br/composicao/saes/samu-192/samu-192); AHA/AAP — RCP e primeiros socorros 2025 (https://cpr.heart.org/en/resuscitation-science/cpr-and-ecc-guidelines); AHA/Cruz Vermelha — Primeiros Socorros 2024 (https://cpr.heart.org/en/resuscitation-science/2024-first-aid-guidelines).
+
+---
+
 ## 1. EM 30 SEGUNDOS (SUMÁRIO EXECUTIVO DE RESPOSTA RÁPIDA)
 
 Um Incidente com Múltiplas Vítimas (IMV) instala-se quando a magnitude do desastre e a quantidade de feridos desequilibram agudamente a capacidade de resposta imediata dos recursos de socorro locais da empresa. Em um cenário caótico gerado por explosão fabril, desabamento estrutural, colisão coletiva ou vazamento tóxico maciço, o atendimento individualizado tradicional ("atender o primeiro que gritar") deve ser formal e imediatamente suspenso, dando lugar à **doutrina de triagem de massa e priorização de recursos para salvar o maior número possível de vidas**. 
@@ -19,7 +53,7 @@ A regra absoluta número um do socorrista ocupacional é a **autoproteção intr
 1. **Verde (Leve):** Vítimas que conseguem andar sozinhas após comando verbal (são direcionadas a uma área segura);
 2. **Vermelho (Imediato):** Vítimas graves com risco iminente de morte, mas com alta chance de sobrevivência se intervencionadas agora (apenas 2 intervenções de suporte básico são permitidas durante a triagem: abertura manual da via aérea e contenção de hemorragia exanguinante com torniquete comercial);
 3. **Amarelo (Urgente / Retardado):** Vítimas feridas graves que não andam, mas com parâmetros vitais compensados que toleram aguardar transporte;
-4. **Cinza / Preto (Expectante / Morto):** Vítimas em parada cardiorrespiratória ou com lesões incompatíveis com a vida em catástrofes. Acione imediatamente o Corpo de Bombeiros (193), o SAMU (192) e estruture a rota desimpedida para viaturas externas.
+4. **Classificação de triagem reservada às equipes treinadas:** Cores e categorias do método START são ferramentas de triagem operacional, não autorização para leigos declararem óbito ou interromperem socorro. Acione 193 e 192 e organize acesso seguro.
 
 ---
 
@@ -68,7 +102,7 @@ Compreender a diferença doutrinária entre emergência convencional e desastre 
 Em um atendimento de rotina com uma única vítima, todo o esforço da equipe converge para a Ressuscitação Cardiopulmonar (RCP) com massagem torácica ininterrupta e uso do DEA. **Em um Incidente com Múltiplas Vítimas com dezenas de feridos graves, a realização de RCP é contraindicada e eticamente proibida durante a triagem inicial.**
 - Realizar RCP de alta qualidade consome dois ou três socorristas exclusivamente para um paciente cujo prognóstico de sobrevida neurológica em trauma é inferior a 1%.
 - Enquanto três brigadistas tentam reanimar uma vítima em PCR traumática, cinco outras vítimas ao lado com hemorragias arteriais ou vias aéreas obstruídas evoluem para choque irreversível e morrem por falta de uma intervenção simples de 30 segundos (um torniquete ou uma abertura de via aérea).
-- Na triagem de catástrofe, a vítima que não respira após desobstrução da via aérea é classificada como **Preta (Óbito/Expectante)**, e os socorristas devem passar imediatamente para a próxima vítima viva.
+- Em incidentes com múltiplas vítimas, apenas equipes formalmente treinadas aplicam protocolos de triagem para priorizar recursos. Leigos não devem classificar pessoas como mortas ou decidir suspender RCP por conta própria. A conduta é acionar 192/193, preservar a segurança e seguir orientação do comando.
 
 ---
 
