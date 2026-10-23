@@ -136,7 +136,7 @@ foreach($code in $plan.Keys){
 
   # Não duplicar figuras após a redistribuição editorial de outubro de 2026.
   # Apostilas com imagens distribuídas devem ser editadas diretamente no Markdown.
-  if ($t -match '(?m)^!\\[' -and $t -notmatch '(?m)^### Figuras de Apoio') {
+  if ($t -match '(?m)^!\[' -and $t -notmatch '(?m)^### Figuras de Apoio') {
     "FIGURAS JÁ DISTRIBUÍDAS: $code (não reinserir galeria)"
     continue
   }
