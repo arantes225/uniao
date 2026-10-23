@@ -62,18 +62,22 @@
 }
 
 .school-patient-photo__image--chest {
-  -webkit-mask-image: radial-gradient(ellipse var(--school-chest-rx) var(--school-chest-ry) at var(--school-chest-x) var(--school-chest-y), #000 40%, transparent 100%);
-  mask-image: radial-gradient(ellipse var(--school-chest-rx) var(--school-chest-ry) at var(--school-chest-x) var(--school-chest-y), #000 40%, transparent 100%);
+  -webkit-mask-image: radial-gradient(ellipse var(--school-chest-rx) var(--school-chest-ry) at var(--school-chest-x) var(--school-chest-y), #000 52%, transparent 100%);
+  mask-image: radial-gradient(ellipse var(--school-chest-rx) var(--school-chest-ry) at var(--school-chest-x) var(--school-chest-y), #000 52%, transparent 100%);
   transform-origin: var(--school-chest-x) var(--school-chest-y);
-  animation: school-patient-breathe 3.8s ease-in-out infinite;
+  animation: school-patient-breathe 4.1s ease-in-out infinite;
   will-change: transform;
 }
 
 .school-patient-photo__image--closed {
   opacity: 0;
-  -webkit-mask-image: radial-gradient(ellipse var(--school-eyes-rx) var(--school-eyes-ry) at var(--school-eyes-x) var(--school-eyes-y), #000 50%, transparent 100%);
-  mask-image: radial-gradient(ellipse var(--school-eyes-rx) var(--school-eyes-ry) at var(--school-eyes-x) var(--school-eyes-y), #000 50%, transparent 100%);
-  animation: school-patient-blink 5.8s ease-in-out var(--school-patient-blink-delay) infinite;
+  -webkit-mask-image:
+    radial-gradient(ellipse var(--school-eye-rx) var(--school-eye-ry) at var(--school-eye-left-x) var(--school-eye-left-y), #000 58%, transparent 100%),
+    radial-gradient(ellipse var(--school-eye-rx) var(--school-eye-ry) at var(--school-eye-right-x) var(--school-eye-right-y), #000 58%, transparent 100%);
+  mask-image:
+    radial-gradient(ellipse var(--school-eye-rx) var(--school-eye-ry) at var(--school-eye-left-x) var(--school-eye-left-y), #000 58%, transparent 100%),
+    radial-gradient(ellipse var(--school-eye-rx) var(--school-eye-ry) at var(--school-eye-right-x) var(--school-eye-right-y), #000 58%, transparent 100%);
+  animation: school-patient-blink 6.4s linear var(--school-patient-blink-delay) infinite;
   will-change: opacity;
 }
 
@@ -84,7 +88,7 @@
   border-radius: 9999px;
   background: #34d399;
   box-shadow: 0 0 0 0.25rem rgba(52, 211, 153, 0.12);
-  animation: school-patient-breath-dot 3.8s ease-in-out infinite;
+  animation: school-patient-breath-dot 4.1s ease-in-out infinite;
 }
 
 @keyframes school-patient-breathe {
@@ -93,29 +97,26 @@
     transform: scale(1);
   }
 
-  42% {
-    transform: scale(1.025, 1.09);
-  }
-
-  58% {
-    transform: scale(1.018, 1.065);
+  48% {
+    transform: scale(1.04, 1.11);
   }
 }
 
 @keyframes school-patient-blink {
   0%,
-  91%,
+  17%,
+  21%,
+  70%,
+  74%,
   100% {
     opacity: 0;
   }
 
-  94%,
-  96% {
+  18%,
+  20%,
+  71%,
+  73% {
     opacity: 1;
-  }
-
-  98% {
-    opacity: 0;
   }
 }
 

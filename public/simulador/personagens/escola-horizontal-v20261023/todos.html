@@ -37,8 +37,8 @@
     .pose-tag { white-space:nowrap; border:1px solid #38d6b055; border-radius:999px; padding:4px 8px; color:var(--accent); font-size:.68rem; font-weight:800; text-transform:uppercase; letter-spacing:.09em; }
     .patient { position:relative; aspect-ratio:1672/941; overflow:hidden; background:#081a28; }
     .patient img { position:absolute; inset:0; width:100%; height:100%; object-fit:cover; }
-    .patient .chest { -webkit-mask-image:radial-gradient(ellipse var(--chest-rx) var(--chest-ry) at var(--chest-x) var(--chest-y), #000 40%, transparent 100%); mask-image:radial-gradient(ellipse var(--chest-rx) var(--chest-ry) at var(--chest-x) var(--chest-y), #000 40%, transparent 100%); transform-origin:var(--chest-x) var(--chest-y); animation:breathe 3.8s ease-in-out infinite; }
-    .patient .blink { opacity:0; -webkit-mask-image:radial-gradient(ellipse var(--eyes-rx) var(--eyes-ry) at var(--eyes-x) var(--eyes-y), #000 50%, transparent 100%); mask-image:radial-gradient(ellipse var(--eyes-rx) var(--eyes-ry) at var(--eyes-x) var(--eyes-y), #000 50%, transparent 100%); animation:blink 5.8s ease-in-out infinite; }
+    .patient .chest { -webkit-mask-image:radial-gradient(ellipse var(--chest-rx) var(--chest-ry) at var(--chest-x) var(--chest-y), #000 52%, transparent 100%); mask-image:radial-gradient(ellipse var(--chest-rx) var(--chest-ry) at var(--chest-x) var(--chest-y), #000 52%, transparent 100%); transform-origin:var(--chest-x) var(--chest-y); animation:breathe 4.1s ease-in-out infinite; }
+    .patient .blink { opacity:0; -webkit-mask-image:radial-gradient(ellipse var(--eye-rx) var(--eye-ry) at var(--eye-left-x) var(--eye-left-y), #000 58%, transparent 100%),radial-gradient(ellipse var(--eye-rx) var(--eye-ry) at var(--eye-right-x) var(--eye-right-y), #000 58%, transparent 100%); mask-image:radial-gradient(ellipse var(--eye-rx) var(--eye-ry) at var(--eye-left-x) var(--eye-left-y), #000 58%, transparent 100%),radial-gradient(ellipse var(--eye-rx) var(--eye-ry) at var(--eye-right-x) var(--eye-right-y), #000 58%, transparent 100%); animation:blink 6.4s linear var(--blink-delay, 0s) infinite; }
     .patient.paused img { animation-play-state:paused !important; }
     .patient.no-breath .chest { animation:none; }
     .patient.no-blink .blink { animation:none; opacity:0; }
@@ -47,8 +47,8 @@
     .card-controls button { padding:7px 10px; font-size:.73rem; }
     .card-controls .command-state { width:100%; color:var(--muted); font-size:.72rem; }
     .empty { display:none; padding:30px; color:var(--muted); text-align:center; }
-    @keyframes breathe { 0%,100% { transform:scale(1); } 42% { transform:scale(1.025,1.09); } 58% { transform:scale(1.018,1.065); } }
-    @keyframes blink { 0%,91%,100% { opacity:0; } 94%,96% { opacity:1; } 98% { opacity:0; } }
+    @keyframes breathe { 0%,100% { transform:scale(1); } 48% { transform:scale(1.04,1.11); } }
+    @keyframes blink { 0%,17%,21%,70%,74%,100% { opacity:0; } 18%,20%,71%,73% { opacity:1; } }
     @media (max-width:700px) { header { display:block; } .status { margin:8px 0 0; } .toolbar { position:static; } .pager { display:block; } .pager > button { width:100%; margin-bottom:8px; } .page-buttons { justify-content:stretch; } .page-buttons button { flex:1 1 42px; } .page-counter { margin-top:8px; } }
     @media (prefers-reduced-motion:reduce) { .patient .chest, .patient .blink { animation:none; } }
   </style>
@@ -67,8 +67,9 @@
     <nav class="toolbar" aria-label="Comandos gerais">
       <button class="primary" id="playAll" type="button">▶ Iniciar todos</button>
       <button id="pauseAll" type="button">Ⅱ Pausar todos</button>
-      <button id="breathAll" type="button" aria-pressed="true">♨ Respiração</button>
-      <button id="blinkAll" type="button" aria-pressed="true">◉ Piscar</button>
+      <button id="breathAll" type="button" aria-pressed="true">♨ Pausar respiração de todos</button>
+      <button id="blinkAll" type="button" aria-pressed="true">◉ Pausar piscadas de todos</button>
+      <button id="blinkNowAll" type="button">◉ Piscar agora (todos)</button>
       <button id="eyesClosedAll" type="button" aria-pressed="false">◉ Manter olhos fechados</button>
       <button id="resetAll" type="button">↻ Reiniciar</button>
       <a class="link-button" href="/uniao/#/aluno/simulador">← Voltar ao simulador</a>
@@ -82,16 +83,16 @@
     </nav>
 
     <section class="gallery" id="gallery" aria-label="Pacientes escolares">
-      <article class="card" data-group="adultos" data-pose="sentada"><div class="card-head"><div><h2>Professora</h2><p>Equipe pedagógica</p></div><span class="pose-tag">Sentada</span></div><div class="patient" style="--chest-x:49%;--chest-y:46%;--chest-rx:13%;--chest-ry:15%;--eyes-x:50%;--eyes-y:25%;--eyes-rx:5%;--eyes-ry:3%"><img src="professora-sentada.png" alt="Professora sentada na sala de aula"><img class="chest" src="professora-sentada.png" alt="" aria-hidden="true"><img class="blink" src="blink/professora-sentada-olhos-fechados.png" alt="" aria-hidden="true"></div><div class="card-controls"><button type="button" data-command="pause">Ⅱ Pausar</button><button type="button" data-command="breath" aria-pressed="true">Respirar</button><button type="button" data-command="blink" aria-pressed="true">Piscar</button><button type="button" data-command="eyes" aria-pressed="false">Manter olhos fechados</button><span class="command-state">Controle individual pronto</span></div></article>
-      <article class="card" data-group="adultos" data-pose="deitada"><div class="card-head"><div><h2>Professora</h2><p>Equipe pedagógica</p></div><span class="pose-tag">Deitada</span></div><div class="patient" style="--chest-x:47%;--chest-y:39%;--chest-rx:15%;--chest-ry:12%;--eyes-x:44%;--eyes-y:21%;--eyes-rx:5%;--eyes-ry:3%"><img src="professora-deitada.png" alt="Professora deitada no colchonete escolar"><img class="chest" src="professora-deitada.png" alt="" aria-hidden="true"><img class="blink" src="blink/professora-deitada-olhos-fechados.png" alt="" aria-hidden="true"></div><div class="card-controls"><button type="button" data-command="pause">Ⅱ Pausar</button><button type="button" data-command="breath" aria-pressed="true">Respirar</button><button type="button" data-command="blink" aria-pressed="true">Piscar</button><button type="button" data-command="eyes" aria-pressed="false">Manter olhos fechados</button><span class="command-state">Controle individual pronto</span></div></article>
-      <article class="card" data-group="adultos" data-pose="sentada"><div class="card-head"><div><h2>Zelador</h2><p>Equipe de apoio</p></div><span class="pose-tag">Sentado</span></div><div class="patient" style="--chest-x:49%;--chest-y:43%;--chest-rx:14%;--chest-ry:14%;--eyes-x:48%;--eyes-y:25%;--eyes-rx:5%;--eyes-ry:3%"><img src="zelador-sentado.png" alt="Zelador sentado no corredor escolar"><img class="chest" src="zelador-sentado.png" alt="" aria-hidden="true"><img class="blink" src="blink/zelador-sentado-olhos-fechados.png" alt="" aria-hidden="true"></div><div class="card-controls"><button type="button" data-command="pause">Ⅱ Pausar</button><button type="button" data-command="breath" aria-pressed="true">Respirar</button><button type="button" data-command="blink" aria-pressed="true">Piscar</button><button type="button" data-command="eyes" aria-pressed="false">Manter olhos fechados</button><span class="command-state">Controle individual pronto</span></div></article>
-      <article class="card" data-group="adultos" data-pose="deitada"><div class="card-head"><div><h2>Zelador</h2><p>Equipe de apoio</p></div><span class="pose-tag">Deitado</span></div><div class="patient" style="--chest-x:49%;--chest-y:41%;--chest-rx:15%;--chest-ry:13%;--eyes-x:46%;--eyes-y:25%;--eyes-rx:5%;--eyes-ry:3%"><img src="zelador-deitado.png" alt="Zelador deitado no corredor escolar"><img class="chest" src="zelador-deitado.png" alt="" aria-hidden="true"><img class="blink" src="blink/zelador-deitado-olhos-fechados.png" alt="" aria-hidden="true"></div><div class="card-controls"><button type="button" data-command="pause">Ⅱ Pausar</button><button type="button" data-command="breath" aria-pressed="true">Respirar</button><button type="button" data-command="blink" aria-pressed="true">Piscar</button><button type="button" data-command="eyes" aria-pressed="false">Manter olhos fechados</button><span class="command-state">Controle individual pronto</span></div></article>
-      <article class="card" data-group="criancas" data-pose="sentada"><div class="card-head"><div><h2>Criança menina</h2><p>Idade escolar</p></div><span class="pose-tag">Sentada</span></div><div class="patient" style="--chest-x:50%;--chest-y:48%;--chest-rx:11%;--chest-ry:13%;--eyes-x:50%;--eyes-y:31%;--eyes-rx:4.5%;--eyes-ry:2.5%"><img src="crianca-menina-sentada.png" alt="Criança menina sentada na sala de aula"><img class="chest" src="crianca-menina-sentada.png" alt="" aria-hidden="true"><img class="blink" src="blink/crianca-menina-sentada-olhos-fechados.png" alt="" aria-hidden="true"></div><div class="card-controls"><button type="button" data-command="pause">Ⅱ Pausar</button><button type="button" data-command="breath" aria-pressed="true">Respirar</button><button type="button" data-command="blink" aria-pressed="true">Piscar</button><button type="button" data-command="eyes" aria-pressed="false">Manter olhos fechados</button><span class="command-state">Controle individual pronto</span></div></article>
-      <article class="card" data-group="criancas" data-pose="deitada"><div class="card-head"><div><h2>Criança menina</h2><p>Idade escolar</p></div><span class="pose-tag">Deitada</span></div><div class="patient" style="--chest-x:50%;--chest-y:48%;--chest-rx:13%;--chest-ry:12%;--eyes-x:47%;--eyes-y:37%;--eyes-rx:4.5%;--eyes-ry:2.5%"><img src="crianca-menina-deitada.png" alt="Criança menina deitada na sala de atividades"><img class="chest" src="crianca-menina-deitada.png" alt="" aria-hidden="true"><img class="blink" src="blink/crianca-menina-deitada-olhos-fechados.png" alt="" aria-hidden="true"></div><div class="card-controls"><button type="button" data-command="pause">Ⅱ Pausar</button><button type="button" data-command="breath" aria-pressed="true">Respirar</button><button type="button" data-command="blink" aria-pressed="true">Piscar</button><button type="button" data-command="eyes" aria-pressed="false">Manter olhos fechados</button><span class="command-state">Controle individual pronto</span></div></article>
-      <article class="card" data-group="criancas" data-pose="sentada"><div class="card-head"><div><h2>Criança menino</h2><p>Idade escolar</p></div><span class="pose-tag">Sentado</span></div><div class="patient" style="--chest-x:49%;--chest-y:49%;--chest-rx:12%;--chest-ry:14%;--eyes-x:50%;--eyes-y:34%;--eyes-rx:4.5%;--eyes-ry:2.5%"><img src="crianca-menino-sentado.png" alt="Criança menino sentado na sala de aula"><img class="chest" src="crianca-menino-sentado.png" alt="" aria-hidden="true"><img class="blink" src="blink/crianca-menino-sentado-olhos-fechados.png" alt="" aria-hidden="true"></div><div class="card-controls"><button type="button" data-command="pause">Ⅱ Pausar</button><button type="button" data-command="breath" aria-pressed="true">Respirar</button><button type="button" data-command="blink" aria-pressed="true">Piscar</button><button type="button" data-command="eyes" aria-pressed="false">Manter olhos fechados</button><span class="command-state">Controle individual pronto</span></div></article>
-      <article class="card" data-group="criancas" data-pose="deitada"><div class="card-head"><div><h2>Criança menino</h2><p>Idade escolar</p></div><span class="pose-tag">Deitado</span></div><div class="patient" style="--chest-x:46%;--chest-y:48%;--chest-rx:15%;--chest-ry:13%;--eyes-x:41%;--eyes-y:35%;--eyes-rx:5%;--eyes-ry:3%"><img src="crianca-menino-deitado.png" alt="Criança menino deitado na sala de atividades"><img class="chest" src="crianca-menino-deitado.png" alt="" aria-hidden="true"><img class="blink" src="blink/crianca-menino-deitado-olhos-fechados.png" alt="" aria-hidden="true"></div><div class="card-controls"><button type="button" data-command="pause">Ⅱ Pausar</button><button type="button" data-command="breath" aria-pressed="true">Respirar</button><button type="button" data-command="blink" aria-pressed="true">Piscar</button><button type="button" data-command="eyes" aria-pressed="false">Manter olhos fechados</button><span class="command-state">Controle individual pronto</span></div></article>
-      <article class="card" data-group="criancas" data-pose="sentada"><div class="card-head"><div><h2>Bebê</h2><p>Lactente</p></div><span class="pose-tag">Sentado</span></div><div class="patient" style="--chest-x:50%;--chest-y:52%;--chest-rx:12%;--chest-ry:13%;--eyes-x:49%;--eyes-y:32%;--eyes-rx:6%;--eyes-ry:3.5%"><img src="bebe-sentado.png" alt="Bebê sentado na sala de atividades"><img class="chest" src="bebe-sentado.png" alt="" aria-hidden="true"><img class="blink" src="blink/bebe-sentado-olhos-fechados.png" alt="" aria-hidden="true"></div><div class="card-controls"><button type="button" data-command="pause">Ⅱ Pausar</button><button type="button" data-command="breath" aria-pressed="true">Respirar</button><button type="button" data-command="blink" aria-pressed="true">Piscar</button><button type="button" data-command="eyes" aria-pressed="false">Manter olhos fechados</button><span class="command-state">Controle individual pronto</span></div></article>
-      <article class="card" data-group="criancas" data-pose="deitada"><div class="card-head"><div><h2>Bebê</h2><p>Lactente</p></div><span class="pose-tag">Deitado</span></div><div class="patient" style="--chest-x:50%;--chest-y:57%;--chest-rx:15%;--chest-ry:14%;--eyes-x:47%;--eyes-y:42%;--eyes-rx:6%;--eyes-ry:3.5%"><img src="bebe-deitado.png" alt="Bebê deitado na sala de atividades"><img class="chest" src="bebe-deitado.png" alt="" aria-hidden="true"><img class="blink" src="blink/bebe-deitado-olhos-fechados.png" alt="" aria-hidden="true"></div><div class="card-controls"><button type="button" data-command="pause">Ⅱ Pausar</button><button type="button" data-command="breath" aria-pressed="true">Respirar</button><button type="button" data-command="blink" aria-pressed="true">Piscar</button><button type="button" data-command="eyes" aria-pressed="false">Manter olhos fechados</button><span class="command-state">Controle individual pronto</span></div></article>
+      <article class="card" data-group="adultos" data-pose="sentada"><div class="card-head"><div><h2>Professora</h2><p>Equipe pedagógica</p></div><span class="pose-tag">Sentada</span></div><div class="patient" style="--chest-x:49%;--chest-y:48%;--chest-rx:12%;--chest-ry:10%;--eye-left-x:48.7%;--eye-left-y:25.4%;--eye-right-x:51.7%;--eye-right-y:25.7%;--eye-rx:2.5%;--eye-ry:2.4%;--blink-delay:-0.2s"><img src="professora-sentada.png" alt="Professora sentada na sala de aula"><img class="chest" src="professora-sentada.png" alt="" aria-hidden="true"><img class="blink" src="blink/professora-sentada-olhos-fechados.png" alt="" aria-hidden="true"></div><div class="card-controls"><button type="button" data-command="pause">Ⅱ Pausar</button><button type="button" data-command="breath" aria-pressed="true">Pausar respiração</button><button type="button" data-command="blink" aria-pressed="true">Pausar piscadas</button><button type="button" data-command="blink-now">Piscar agora</button><button type="button" data-command="eyes" aria-pressed="false">Manter olhos fechados</button><span class="command-state">Controle individual pronto</span></div></article>
+      <article class="card" data-group="adultos" data-pose="deitada"><div class="card-head"><div><h2>Professora</h2><p>Equipe pedagógica</p></div><span class="pose-tag">Deitada</span></div><div class="patient" style="--chest-x:47%;--chest-y:40%;--chest-rx:14%;--chest-ry:9%;--eye-left-x:42.5%;--eye-left-y:21.8%;--eye-right-x:45.5%;--eye-right-y:20%;--eye-rx:2.6%;--eye-ry:2.5%;--blink-delay:-1.1s"><img src="professora-deitada.png" alt="Professora deitada no colchonete escolar"><img class="chest" src="professora-deitada.png" alt="" aria-hidden="true"><img class="blink" src="blink/professora-deitada-olhos-fechados.png" alt="" aria-hidden="true"></div><div class="card-controls"><button type="button" data-command="pause">Ⅱ Pausar</button><button type="button" data-command="breath" aria-pressed="true">Pausar respiração</button><button type="button" data-command="blink" aria-pressed="true">Pausar piscadas</button><button type="button" data-command="blink-now">Piscar agora</button><button type="button" data-command="eyes" aria-pressed="false">Manter olhos fechados</button><span class="command-state">Controle individual pronto</span></div></article>
+      <article class="card" data-group="adultos" data-pose="sentada"><div class="card-head"><div><h2>Zelador</h2><p>Equipe de apoio</p></div><span class="pose-tag">Sentado</span></div><div class="patient" style="--chest-x:49%;--chest-y:43%;--chest-rx:13%;--chest-ry:10%;--eye-left-x:46.3%;--eye-left-y:21%;--eye-right-x:49%;--eye-right-y:20.7%;--eye-rx:2.5%;--eye-ry:2.5%;--blink-delay:-2s"><img src="zelador-sentado.png" alt="Zelador sentado no corredor escolar"><img class="chest" src="zelador-sentado.png" alt="" aria-hidden="true"><img class="blink" src="blink/zelador-sentado-olhos-fechados.png" alt="" aria-hidden="true"></div><div class="card-controls"><button type="button" data-command="pause">Ⅱ Pausar</button><button type="button" data-command="breath" aria-pressed="true">Pausar respiração</button><button type="button" data-command="blink" aria-pressed="true">Pausar piscadas</button><button type="button" data-command="blink-now">Piscar agora</button><button type="button" data-command="eyes" aria-pressed="false">Manter olhos fechados</button><span class="command-state">Controle individual pronto</span></div></article>
+      <article class="card" data-group="adultos" data-pose="deitada"><div class="card-head"><div><h2>Zelador</h2><p>Equipe de apoio</p></div><span class="pose-tag">Deitado</span></div><div class="patient" style="--chest-x:49%;--chest-y:41%;--chest-rx:14%;--chest-ry:9%;--eye-left-x:44.2%;--eye-left-y:22.8%;--eye-right-x:47.1%;--eye-right-y:21.8%;--eye-rx:3.5%;--eye-ry:3.2%;--blink-delay:-2.9s"><img src="zelador-deitado.png" alt="Zelador deitado no corredor escolar"><img class="chest" src="zelador-deitado.png" alt="" aria-hidden="true"><img class="blink" src="blink/zelador-deitado-olhos-fechados.png" alt="" aria-hidden="true"></div><div class="card-controls"><button type="button" data-command="pause">Ⅱ Pausar</button><button type="button" data-command="breath" aria-pressed="true">Pausar respiração</button><button type="button" data-command="blink" aria-pressed="true">Pausar piscadas</button><button type="button" data-command="blink-now">Piscar agora</button><button type="button" data-command="eyes" aria-pressed="false">Manter olhos fechados</button><span class="command-state">Controle individual pronto</span></div></article>
+      <article class="card" data-group="criancas" data-pose="sentada"><div class="card-head"><div><h2>Criança menina</h2><p>Idade escolar</p></div><span class="pose-tag">Sentada</span></div><div class="patient" style="--chest-x:50%;--chest-y:48%;--chest-rx:10%;--chest-ry:9%;--eye-left-x:48.3%;--eye-left-y:29.6%;--eye-right-x:52%;--eye-right-y:29%;--eye-rx:2.5%;--eye-ry:2.5%;--blink-delay:-3.7s"><img src="crianca-menina-sentada.png" alt="Criança menina sentada na sala de aula"><img class="chest" src="crianca-menina-sentada.png" alt="" aria-hidden="true"><img class="blink" src="blink/crianca-menina-sentada-olhos-fechados.png" alt="" aria-hidden="true"></div><div class="card-controls"><button type="button" data-command="pause">Ⅱ Pausar</button><button type="button" data-command="breath" aria-pressed="true">Pausar respiração</button><button type="button" data-command="blink" aria-pressed="true">Pausar piscadas</button><button type="button" data-command="blink-now">Piscar agora</button><button type="button" data-command="eyes" aria-pressed="false">Manter olhos fechados</button><span class="command-state">Controle individual pronto</span></div></article>
+      <article class="card" data-group="criancas" data-pose="deitada"><div class="card-head"><div><h2>Criança menina</h2><p>Idade escolar</p></div><span class="pose-tag">Deitada</span></div><div class="patient" style="--chest-x:50%;--chest-y:49%;--chest-rx:12%;--chest-ry:8%;--eye-left-x:45.9%;--eye-left-y:38.4%;--eye-right-x:49.1%;--eye-right-y:36.5%;--eye-rx:2.6%;--eye-ry:2.6%;--blink-delay:-4.5s"><img src="crianca-menina-deitada.png" alt="Criança menina deitada na sala de atividades"><img class="chest" src="crianca-menina-deitada.png" alt="" aria-hidden="true"><img class="blink" src="blink/crianca-menina-deitada-olhos-fechados.png" alt="" aria-hidden="true"></div><div class="card-controls"><button type="button" data-command="pause">Ⅱ Pausar</button><button type="button" data-command="breath" aria-pressed="true">Pausar respiração</button><button type="button" data-command="blink" aria-pressed="true">Pausar piscadas</button><button type="button" data-command="blink-now">Piscar agora</button><button type="button" data-command="eyes" aria-pressed="false">Manter olhos fechados</button><span class="command-state">Controle individual pronto</span></div></article>
+      <article class="card" data-group="criancas" data-pose="sentada"><div class="card-head"><div><h2>Criança menino</h2><p>Idade escolar</p></div><span class="pose-tag">Sentado</span></div><div class="patient" style="--chest-x:49%;--chest-y:49%;--chest-rx:11%;--chest-ry:9%;--eye-left-x:48.7%;--eye-left-y:32.1%;--eye-right-x:52.1%;--eye-right-y:32.4%;--eye-rx:2.5%;--eye-ry:2.4%;--blink-delay:-5.3s"><img src="crianca-menino-sentado.png" alt="Criança menino sentado na sala de aula"><img class="chest" src="crianca-menino-sentado.png" alt="" aria-hidden="true"><img class="blink" src="blink/crianca-menino-sentado-olhos-fechados.png" alt="" aria-hidden="true"></div><div class="card-controls"><button type="button" data-command="pause">Ⅱ Pausar</button><button type="button" data-command="breath" aria-pressed="true">Pausar respiração</button><button type="button" data-command="blink" aria-pressed="true">Pausar piscadas</button><button type="button" data-command="blink-now">Piscar agora</button><button type="button" data-command="eyes" aria-pressed="false">Manter olhos fechados</button><span class="command-state">Controle individual pronto</span></div></article>
+      <article class="card" data-group="criancas" data-pose="deitada"><div class="card-head"><div><h2>Criança menino</h2><p>Idade escolar</p></div><span class="pose-tag">Deitado</span></div><div class="patient" style="--chest-x:46%;--chest-y:49%;--chest-rx:14%;--chest-ry:9%;--eye-left-x:39.9%;--eye-left-y:33.8%;--eye-right-x:42.8%;--eye-right-y:32.3%;--eye-rx:2.6%;--eye-ry:2.5%;--blink-delay:-1.6s"><img src="crianca-menino-deitado.png" alt="Criança menino deitado na sala de atividades"><img class="chest" src="crianca-menino-deitado.png" alt="" aria-hidden="true"><img class="blink" src="blink/crianca-menino-deitado-olhos-fechados.png" alt="" aria-hidden="true"></div><div class="card-controls"><button type="button" data-command="pause">Ⅱ Pausar</button><button type="button" data-command="breath" aria-pressed="true">Pausar respiração</button><button type="button" data-command="blink" aria-pressed="true">Pausar piscadas</button><button type="button" data-command="blink-now">Piscar agora</button><button type="button" data-command="eyes" aria-pressed="false">Manter olhos fechados</button><span class="command-state">Controle individual pronto</span></div></article>
+      <article class="card" data-group="criancas" data-pose="sentada"><div class="card-head"><div><h2>Bebê</h2><p>Lactente</p></div><span class="pose-tag">Sentado</span></div><div class="patient" style="--chest-x:50%;--chest-y:52%;--chest-rx:11%;--chest-ry:10%;--eye-left-x:45.4%;--eye-left-y:30.1%;--eye-right-x:50%;--eye-right-y:29.2%;--eye-rx:2.9%;--eye-ry:2.7%;--blink-delay:-3.2s"><img src="bebe-sentado.png" alt="Bebê sentado na sala de atividades"><img class="chest" src="bebe-sentado.png" alt="" aria-hidden="true"><img class="blink" src="blink/bebe-sentado-olhos-fechados.png" alt="" aria-hidden="true"></div><div class="card-controls"><button type="button" data-command="pause">Ⅱ Pausar</button><button type="button" data-command="breath" aria-pressed="true">Pausar respiração</button><button type="button" data-command="blink" aria-pressed="true">Pausar piscadas</button><button type="button" data-command="blink-now">Piscar agora</button><button type="button" data-command="eyes" aria-pressed="false">Manter olhos fechados</button><span class="command-state">Controle individual pronto</span></div></article>
+      <article class="card" data-group="criancas" data-pose="deitada"><div class="card-head"><div><h2>Bebê</h2><p>Lactente</p></div><span class="pose-tag">Deitado</span></div><div class="patient" style="--chest-x:50%;--chest-y:58%;--chest-rx:14%;--chest-ry:9%;--eye-left-x:44.3%;--eye-left-y:41.4%;--eye-right-x:47.5%;--eye-right-y:39.8%;--eye-rx:2.9%;--eye-ry:2.7%;--blink-delay:-4.8s"><img src="bebe-deitado.png" alt="Bebê deitado na sala de atividades"><img class="chest" src="bebe-deitado.png" alt="" aria-hidden="true"><img class="blink" src="blink/bebe-deitado-olhos-fechados.png" alt="" aria-hidden="true"></div><div class="card-controls"><button type="button" data-command="pause">Ⅱ Pausar</button><button type="button" data-command="breath" aria-pressed="true">Pausar respiração</button><button type="button" data-command="blink" aria-pressed="true">Pausar piscadas</button><button type="button" data-command="blink-now">Piscar agora</button><button type="button" data-command="eyes" aria-pressed="false">Manter olhos fechados</button><span class="command-state">Controle individual pronto</span></div></article>
     </section>
   </main>
   <script>
@@ -110,18 +111,126 @@
     previousPage.addEventListener('click', () => showPage(currentPage - 1));
     nextPage.addEventListener('click', () => showPage(currentPage + 1));
     showPage(0);
-    const setRunning = running => { body.classList.toggle('is-running', running); patients().forEach(patient => patient.classList.toggle('paused', !running)); statusText.textContent = running ? 'Animações ativas' : 'Animações pausadas'; };
+    const updateCommandState = (card, message) => { card.querySelector('.command-state').textContent = message; };
+    const syncGlobalState = () => {
+      const allBreathing = patients().every(patient => !patient.classList.contains('no-breath'));
+      const allBlinking = patients().every(patient => !patient.classList.contains('no-blink'));
+      const allEyesClosed = patients().every(patient => patient.classList.contains('eyes-closed'));
+      const activeCount = patients().filter(patient => !patient.classList.contains('paused')).length;
+      body.classList.toggle('is-running', activeCount > 0);
+      statusText.textContent = activeCount === cards.length ? 'Animações ativas' : activeCount ? 'Alguns pacientes pausados' : 'Animações pausadas';
+      const breathButton = document.querySelector('#breathAll');
+      breathButton.setAttribute('aria-pressed', String(allBreathing));
+      breathButton.textContent = allBreathing ? '♨ Pausar respiração de todos' : '♨ Iniciar respiração de todos';
+      const blinkButton = document.querySelector('#blinkAll');
+      blinkButton.setAttribute('aria-pressed', String(allBlinking));
+      blinkButton.textContent = allBlinking ? '◉ Pausar piscadas de todos' : '◉ Iniciar piscadas de todos';
+      const eyesButton = document.querySelector('#eyesClosedAll');
+      eyesButton.setAttribute('aria-pressed', String(allEyesClosed));
+      eyesButton.textContent = allEyesClosed ? '◉ Abrir olhos de todos' : '◉ Manter olhos fechados';
+    };
+    const setRunning = running => {
+      cards.forEach(card => {
+        card.querySelector('.patient').classList.toggle('paused', !running);
+        card.querySelector('[data-command="pause"]').textContent = running ? 'Ⅱ Pausar' : '▶ Retomar';
+        updateCommandState(card, running ? 'Animações ativas' : 'Paciente pausado');
+      });
+      syncGlobalState();
+    };
+    const setBreathing = enabled => {
+      cards.forEach(card => {
+        card.querySelector('.patient').classList.toggle('no-breath', !enabled);
+        const button = card.querySelector('[data-command="breath"]');
+        button.setAttribute('aria-pressed', String(enabled));
+        button.textContent = enabled ? 'Pausar respiração' : 'Iniciar respiração';
+        updateCommandState(card, enabled ? 'Respiração ativada' : 'Respiração pausada');
+      });
+      syncGlobalState();
+    };
+    const setBlinking = enabled => {
+      cards.forEach(card => {
+        card.querySelector('.patient').classList.toggle('no-blink', !enabled);
+        const button = card.querySelector('[data-command="blink"]');
+        button.setAttribute('aria-pressed', String(enabled));
+        button.textContent = enabled ? 'Pausar piscadas' : 'Iniciar piscadas';
+        updateCommandState(card, enabled ? 'Piscadas automáticas ativas' : 'Piscadas automáticas pausadas');
+      });
+      syncGlobalState();
+    };
+    const setEyesClosed = enabled => {
+      cards.forEach(card => {
+        card.querySelector('.patient').classList.toggle('eyes-closed', enabled);
+        const button = card.querySelector('[data-command="eyes"]');
+        button.setAttribute('aria-pressed', String(enabled));
+        button.textContent = enabled ? 'Abrir olhos' : 'Manter olhos fechados';
+        updateCommandState(card, enabled ? 'Olhos mantidos fechados' : 'Olhos abertos');
+      });
+      syncGlobalState();
+    };
+    const blinkNow = card => {
+      const patient = card.querySelector('.patient');
+      if (patient.classList.contains('eyes-closed')) {
+        patient.classList.remove('eyes-closed');
+        const eyesButton = card.querySelector('[data-command="eyes"]');
+        eyesButton.setAttribute('aria-pressed', 'false');
+        eyesButton.textContent = 'Manter olhos fechados';
+      }
+      patient.querySelector('.blink').animate(
+        [{ opacity: 0 }, { opacity: 1, offset: .32 }, { opacity: 1, offset: .62 }, { opacity: 0 }],
+        { duration: 420, easing: 'linear' }
+      );
+      updateCommandState(card, 'Piscada executada');
+      syncGlobalState();
+    };
     document.querySelector('#playAll').addEventListener('click', () => setRunning(true));
     document.querySelector('#pauseAll').addEventListener('click', () => setRunning(false));
-    const updateCommandState = (card, message) => { card.querySelector('.command-state').textContent = message; };
-    const setPressed = (selector, value) => document.querySelectorAll(selector).forEach(button => button.setAttribute('aria-pressed', String(value)));
-    document.querySelector('#resetAll').addEventListener('click', () => { setRunning(true); patients().forEach(patient => { patient.classList.remove('no-breath', 'no-blink', 'eyes-closed'); }); setPressed('[data-command="breath"], [data-command="blink"]', true); setPressed('[data-command="eyes"]', false); setPressed('#breathAll, #blinkAll', true); document.querySelector('#eyesClosedAll').setAttribute('aria-pressed', 'false'); document.querySelector('#eyesClosedAll').textContent = '◉ Manter olhos fechados'; document.querySelectorAll('[data-command="pause"]').forEach(button => { button.textContent = 'Ⅱ Pausar'; }); document.querySelectorAll('[data-command="eyes"]').forEach(button => { button.textContent = 'Manter olhos fechados'; }); });
-    document.querySelector('#breathAll').addEventListener('click', event => { const enabled = event.currentTarget.getAttribute('aria-pressed') !== 'true'; event.currentTarget.setAttribute('aria-pressed', String(enabled)); patients().forEach(patient => patient.classList.toggle('no-breath', !enabled)); });
-    document.querySelector('#blinkAll').addEventListener('click', event => { const enabled = event.currentTarget.getAttribute('aria-pressed') !== 'true'; event.currentTarget.setAttribute('aria-pressed', String(enabled)); patients().forEach(patient => patient.classList.toggle('no-blink', !enabled)); });
-    document.querySelector('#eyesClosedAll').addEventListener('click', event => { const enabled = event.currentTarget.getAttribute('aria-pressed') !== 'true'; event.currentTarget.setAttribute('aria-pressed', String(enabled)); event.currentTarget.textContent = enabled ? '◉ Abrir olhos de todos' : '◉ Manter olhos fechados'; patients().forEach(patient => patient.classList.toggle('eyes-closed', enabled)); setPressed('[data-command="eyes"]', enabled); });
-    cards.forEach(card => card.addEventListener('click', event => { const button = event.target.closest('button[data-command]'); if (!button) return; const patient = card.querySelector('.patient'); const command = button.dataset.command; if (command === 'pause') { patient.classList.toggle('paused'); const paused = patient.classList.contains('paused'); button.textContent = paused ? '▶ Retomar' : 'Ⅱ Pausar'; updateCommandState(card, paused ? 'Paciente pausado' : 'Animações ativas'); } if (command === 'breath') { const enabled = button.getAttribute('aria-pressed') !== 'true'; button.setAttribute('aria-pressed', String(enabled)); patient.classList.toggle('no-breath', !enabled); updateCommandState(card, enabled ? 'Respiração ativada' : 'Respiração pausada'); } if (command === 'blink') { const enabled = button.getAttribute('aria-pressed') !== 'true'; button.setAttribute('aria-pressed', String(enabled)); patient.classList.toggle('no-blink', !enabled); updateCommandState(card, enabled ? 'Piscar ativado' : 'Piscar pausado'); } if (command === 'eyes') { const enabled = button.getAttribute('aria-pressed') !== 'true'; button.setAttribute('aria-pressed', String(enabled)); patient.classList.toggle('eyes-closed', enabled); button.textContent = enabled ? 'Abrir olhos' : 'Manter olhos fechados'; updateCommandState(card, enabled ? 'Olhos mantidos fechados' : 'Olhos liberados'); } }));
+    document.querySelector('#breathAll').addEventListener('click', () => setBreathing(document.querySelector('#breathAll').getAttribute('aria-pressed') !== 'true'));
+    document.querySelector('#blinkAll').addEventListener('click', () => setBlinking(document.querySelector('#blinkAll').getAttribute('aria-pressed') !== 'true'));
+    document.querySelector('#eyesClosedAll').addEventListener('click', () => setEyesClosed(document.querySelector('#eyesClosedAll').getAttribute('aria-pressed') !== 'true'));
+    document.querySelector('#blinkNowAll').addEventListener('click', () => cards.forEach(blinkNow));
+    document.querySelector('#resetAll').addEventListener('click', () => {
+      setRunning(true);
+      setBreathing(true);
+      setBlinking(true);
+      setEyesClosed(false);
+      cards.forEach(card => updateCommandState(card, 'Controle individual pronto'));
+    });
+    cards.forEach(card => card.addEventListener('click', event => {
+      const button = event.target.closest('button[data-command]');
+      if (!button) return;
+      const patient = card.querySelector('.patient');
+      const enabled = button.getAttribute('aria-pressed') !== 'true';
+      switch (button.dataset.command) {
+        case 'pause':
+          patient.classList.toggle('paused');
+          button.textContent = patient.classList.contains('paused') ? '▶ Retomar' : 'Ⅱ Pausar';
+          updateCommandState(card, patient.classList.contains('paused') ? 'Paciente pausado' : 'Animações ativas');
+          break;
+        case 'breath':
+          patient.classList.toggle('no-breath', !enabled);
+          button.setAttribute('aria-pressed', String(enabled));
+          button.textContent = enabled ? 'Pausar respiração' : 'Iniciar respiração';
+          updateCommandState(card, enabled ? 'Respiração ativada' : 'Respiração pausada');
+          break;
+        case 'blink':
+          patient.classList.toggle('no-blink', !enabled);
+          button.setAttribute('aria-pressed', String(enabled));
+          button.textContent = enabled ? 'Pausar piscadas' : 'Iniciar piscadas';
+          updateCommandState(card, enabled ? 'Piscadas automáticas ativas' : 'Piscadas automáticas pausadas');
+          break;
+        case 'blink-now':
+          blinkNow(card);
+          break;
+        case 'eyes':
+          patient.classList.toggle('eyes-closed', enabled);
+          button.setAttribute('aria-pressed', String(enabled));
+          button.textContent = enabled ? 'Abrir olhos' : 'Manter olhos fechados';
+          updateCommandState(card, enabled ? 'Olhos mantidos fechados' : 'Olhos abertos');
+          break;
+      }
+      syncGlobalState();
+    }));
     window.addEventListener('keydown', event => { if (event.code === 'Space' && event.target.tagName !== 'BUTTON') { event.preventDefault(); setRunning(body.classList.contains('is-running') ? false : true); } if (event.code === 'ArrowLeft') showPage(currentPage - 1); if (event.code === 'ArrowRight') showPage(currentPage + 1); });
   </script>
 </body>
 </html>
-
