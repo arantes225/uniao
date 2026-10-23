@@ -93,6 +93,8 @@ Ao concluir o estudo deste módulo, o gestor, coordenador e professor de academi
 
 ## SEÇÃO 3 — INTRODUÇÃO E GOVERNANÇA DA RESPOSTA EMERGENCIAL NO ESPORTE
 
+**LEITURA GUIADA — COMECE AQUI:** Saber fazer RCP é importante; conseguir fazê-la no momento certo depende também de organização. Em academias, a equipe precisa saber quem chama ajuda, quem traz o DEA e por onde a ambulância entra. Um plano simples e praticado reduz a confusão.
+
 As instalações dedicadas à prática de exercícios físicos concentram diariamente centenas de indivíduos submetendo seus sistemas cardiovascular, respiratório e musculoesquelético a exigências mecânicas e metabólicas intensas. Conforme demonstrado nos módulos anteriores da Biblioteca de Emergências em Academias, eventos graves — como infartos do miocárdio, paradas cardíacas por arritmias ventriculares, concussões cerebrais, fraturas e crises térmicas — são ocorrências perfeitamente previsíveis ao longo da operação anual de uma academia [1, 2].
 
 A existência de equipamentos de ponta e de professores tecnicamente graduados não garante, por si só, um atendimento seguro se a instituição não dispuser de **governança e organização procedimental de emergência**. A desorganização institucional diante de um colapso súbito é caracterizada por comportamentos caóticos clássicos: funcionários correndo sem rumo pelo salão, ligações desencontradas para familiares antes de chamar a ambulância, ausência da chave do armário do DEA e a ambulância do SAMU presa do lado de fora porque ninguém sabe quem tem o controle do portão de carga [1, 5].
@@ -102,6 +104,9 @@ O Plano de Ação de Emergência (EAP) é a espinha dorsal da segurança jurídi
 ---
 
 ## SEÇÃO 4 — FUNDAMENTOS DO PLANO DE AÇÃO DE EMERGÊNCIA (EAP) EM FITNESS
+
+> [!NOTE]
+> **Por que isso acontece?** A resposta à parada cardíaca envolve tarefas simultâneas. Enquanto uma pessoa comprime o tórax, outra chama a emergência e outra busca o desfibrilador. Sem divisão prévia de funções, essas atividades podem atrasar e competir entre si.
 
 O EAP moderno baseia-se nos padrões do American College of Sports Medicine (ACSM) e da National Athletic Trainers' Association (NATA) [1, 2]:
 
@@ -268,6 +273,9 @@ A realização periódica de simulações com cenários realísticos é o coraç
 
 ## SEÇÃO 7 — ERROS FREQUENTES E VULNERABILIDADES ADMINISTRATIVAS EM ACADEMIAS
 
+> [!CAUTION]
+> **Erro que pode prejudicar a vítima:** Não confunda uma recomendação de segurança com obrigação legal universal. A exigência de DEA varia conforme as leis locais. Simulados de choque devem usar equipamentos de treinamento, nunca choque real em voluntários.
+
 1. **Inexistência de um plano formal escrito:** Achar que "cada um sabe o que fazer na hora" resulta em pânico desordenado e atropelo de funções em situações de estresse severo [1, 2].
 2. **DEA instalado em local escondido ou atrás de balcões:** O DEA deve ser tão visível quanto um extintor de incêndio; perder minutos preciosos procurando o aparelho condena o atleta em parada cardíaca [3, 4].
 3. **Catracas eletrônicas que travam no corte de energia:** Se houver um apagão ou pane no sistema de controle de acesso, a catraca deve ter destravamento mecânico automático à prova de falhas para evacuação e passagem de macas [2, 6].
@@ -277,6 +285,9 @@ A realização periódica de simulações com cenários realísticos é o coraç
 ---
 
 ## SEÇÃO 8 — ESTUDO DE CASO PRÁTICO CONTEXTUALIZADO (SIMULAÇÃO DE PCR NO SALÃO)
+
+> [!TIP]
+> **Decisão no caso prático:** Durante um simulado, o aluno está no terceiro piso e o DEA, na recepção. A equipe avalia se o acesso é rápido, se alguém conhece o endereço para informar ao SAMU e se o percurso da maca está livre.
 
 ### Cenário: Simulação Semestral de PCR na Área de Musculação
 Às 15h de uma terça-feira, a gerência da Academia Performance Total dispara uma simulação sem aviso de horário. Um estagiário simula um colapso súbito ao lado do rack de agachamento, caindo desacordado no chão sobre um manequim de reanimação pré-posicionado.

@@ -93,6 +93,8 @@ Ao concluir o estudo aprofundado deste módulo, o aluno deverá ser capaz de:
 
 ## SEÇÃO 3 — INTRODUÇÃO E JUSTIFICATIVA DE SEGURANÇA
 
+**LEITURA GUIADA — COMECE AQUI:** Antes de tocar em uma vítima, observe o que aconteceu ao redor. Uma pessoa pode ter caído por vazamento de gás, corrente elétrica ou fumaça. Aproximar-se sem reconhecer o perigo pode produzir outra emergência.
+
 No cenário pré-hospitalar, o ambiente é inerentemente imprevisível, hostil e dinâmico. Diferente do ambiente hospitalar controlado — onde há climatização, iluminação cirúrgica, pisos antiderrapantes e barreiras assépticas —, as emergências comunitárias ocorrem em rodovias movimentadas, salas de máquinas barulhentas, pátios escolares molhados, escadarias e espaços confinados [1, 5].
 
 Dados históricos e epidemiológicos dos serviços de salvamento demonstram que uma fração considerável das fatalidades envolvendo socorristas decorre da precipitação emocional. O impulso natural de prestar auxílio imediato a um colega ferido faz com que o indivíduo negligencie fios elétricos energizados no chão, vapores tóxicos asfixiantes mais pesados que o ar acumulados em fossos, ou veículos desgovernados aproximando-se em alta velocidade [2, 5].
@@ -106,6 +108,9 @@ Paralelamente aos riscos físicos imediatos, o risco microbiológico representa 
 ---
 
 ## SEÇÃO 4 — FUNDAMENTAÇÃO DE BIOSSEGURANÇA E DINÂMICA DE RISCOS
+
+> [!NOTE]
+> **Por que isso acontece?** Riscos de uma cena podem atingir também o socorrista: gases podem prejudicar a respiração, eletricidade pode atravessar o corpo e o tráfego pode causar novos impactos. Equipamentos de proteção reduzem alguns riscos, mas não tornam segura uma área perigosa.
 
 
 ![Figura 1 — Respirador semifacial filtrante (PFF2/N95) para biossegurança respiratória.](../imagens/Filtering-half-mask-respirator.jpg)
@@ -288,6 +293,9 @@ A gestão de uma emergência envolve também a liderança sobre as pessoas ao re
 ## SEÇÃO 7 — ERROS FREQUENTES E CONDUTAS PROIBIDAS
 
 > [!CAUTION]
+> **Erro que pode prejudicar a vítima:** Luvas comuns e máscara cirúrgica não protegem contra atmosfera sem oxigênio nem contra produtos industriais desconhecidos. Não entre em espaços confinados e não toque em cabos energizados. Avise o Corpo de Bombeiros.
+
+> [!CAUTION]
 > ### CATÁLOGO DE ATOS INSEGUROS E ERROS CRÍTICOS DE BIOSSEGURANÇA
 > 
 > 1. **Entrar em poços, galerias subterrâneas ou fossas para tentar retirar alguém desmaiado:**
@@ -313,6 +321,9 @@ A gestão de uma emergência envolve também a liderança sobre as pessoas ao re
 ---
 
 ## SEÇÃO 8 — APLICAÇÃO PRÁTICA CONTEXTUALIZADA (ESTUDO DE CASO)
+
+> [!TIP]
+> **Decisão no caso prático:** Um funcionário está desacordado no fundo de uma caixa d'água. Mesmo ouvindo pedidos de ajuda, você não entra. Afasta curiosos, chama 193, informa o tipo de local e aguarda a equipe treinada.
 
 ### Cenário Simulado
 *Local:* Laboratório químico de uma escola técnica estadual.  

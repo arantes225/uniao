@@ -93,6 +93,8 @@ Ao concluir o estudo deste módulo, você será capaz de:
 
 ## SEÇÃO 3 — INTRODUÇÃO E RELEVÂNCIA
 
+**LEITURA GUIADA — COMECE AQUI:** Primeiros socorros não são tentar fazer medicina no lugar do hospital. São ações iniciais para proteger a vida até que chegue ajuda especializada. Você começa pela segurança do local e pela respiração da vítima; o restante depende do que encontrar.
+
 O Atendimento Pré-Hospitalar (APH) moderno surgiu da necessidade de reduzir mortes evitáveis entre o momento do agravo e a chegada ao hospital [6]. No Brasil, a estruturação pública consolidou-se com o SAMU 192 (Decreto nº 5.055/2004 e Portaria GM/MS nº 2.048/2002) e o serviço de resgate dos Corpos de Bombeiros Militares (193) [3, 7].
 
 Mesmo com serviços ágeis, ambulâncias levam habitualmente entre 7 e 15 minutos para chegar ao local da ocorrência. Entretanto, a anóxia cerebral definitiva instala-se entre 4 e 6 minutos de parada cardíaca, e uma hemorragia arterial severa pode causar exanguinação fatal em menos de 3 minutos [4, 8].
@@ -102,6 +104,9 @@ Por esse motivo, o **primeiro respondente comunitário** — professores, brigad
 ---
 
 ## SEÇÃO 4 — FUNDAMENTAÇÃO ANATÔMICA E FISIOLÓGICA
+
+> [!NOTE]
+> **Por que isso acontece?** O cérebro e outros órgãos precisam de sangue com oxigênio circulando continuamente. Uma parada cardíaca interrompe essa entrega. Sangramento grave também diminui o volume de sangue disponível. Reconhecer essas situações ajuda a priorizar as primeiras ações.
 
 Toda ação de primeiros socorros tem por objetivo proteger os sistemas biológicos essenciais, conhecidos como a **Tríade Vital**:
 
@@ -245,6 +250,9 @@ A abordagem do socorrista obedece a uma ordem operacional clara:
 ## SEÇÃO 7 — ERROS FREQUENTES E CONDUTAS PROIBIDAS
 
 > [!CAUTION]
+> **Erro que pode prejudicar a vítima:** Não se aproxime de fogo, fios elétricos, gás ou violência para prestar ajuda. Nesses casos, acione o resgate e preserve a própria segurança. Se a cena for segura, não deixe uma pessoa inconsciente sem avaliar sua respiração.
+
+> [!CAUTION]
 > ### CONDUTAS CONTRAINDICADAS NA ATUAÇÃO INICIAL
 > 1. **Puxar a língua da vítima em convulsão:** A mandíbula contrai com força extrema durante a crise convulsiva. Introduzir dedos ou objetos quebra dentes, lacera mucosas e pode amputar os dedos do socorrista. Proteja apenas a cabeça contra impactos.
 > 2. **Oferecer água, álcool para cheirar ou café para vítimas semiconscientes:** Vítimas com rebaixamento da consciência perdem os reflexos de deglutição. Qualquer líquido ingerido pode desviar para a traqueia e os pulmões, provocando asfixia ou pneumonia por aspiração.
@@ -259,6 +267,9 @@ A abordagem do socorrista obedece a uma ordem operacional clara:
 ---
 
 ## SEÇÃO 8 — APLICAÇÃO PRÁTICA (ESTUDO DE CASO)
+
+> [!TIP]
+> **Decisão no caso prático:** Você encontra uma pessoa caída na calçada. Antes de tocar, observa o tráfego. Depois chama a vítima, verifica se respira normalmente e liga 192. A resposta seguinte depende dessa avaliação, não da aparência do ferimento.
 
 ### Cenário
 Em uma indústria de logística, às 10h, um funcionário de 45 anos desmaia subitamente próximo ao setor de expedição, onde empilhadeiras realizam manobras contínuas.

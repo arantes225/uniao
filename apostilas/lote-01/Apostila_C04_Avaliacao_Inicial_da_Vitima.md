@@ -94,6 +94,8 @@ Ao concluir o estudo deste módulo, você será capaz de:
 
 ## SEÇÃO 3 — INTRODUÇÃO E SISTEMATIZAÇÃO DO EXAME
 
+**LEITURA GUIADA — COMECE AQUI:** A avaliação inicial de uma pessoa em emergência pode começar com três perguntas: o lugar é seguro? A pessoa responde? Ela respira normalmente? Essas respostas orientam as primeiras ações sem exigir aparelhos ou diagnóstico.
+
 Em situações de emergência grave, o impulso instintivo da maioria das pessoas sem treinamento é fixar a atenção na lesão visualmente mais chocante — por exemplo, uma fratura exposta de tíbia com osso aparente, um corte profundo na testa com muito sangue no rosto ou uma deformidade ortopédica evidente. Na medicina de emergência, esse fenômeno é conhecido como **distração pela lesão dramática** [5].
 
 Muitas vítimas morrem no APH não pela fratura na perna, mas porque estavam em parada respiratória silenciosa por relaxamento da língua, com hemorragia oculta no abdome ou com asfixia que passou despercebida enquanto os presentes tentavam enfaixar o pé.
@@ -107,6 +109,9 @@ Para eliminar essa armadilha fatal, a doutrina mundial de emergência preconiza 
 *Figura 1 — Posição Lateral de Segurança (PLS) para proteção da via aérea em vítima inconsciente que respira. Crédito: Department of the Army (EUA). Licença: Domínio público. Fonte: Wikimedia Commons.*
 
 ## SEÇÃO 4 — FUNDAMENTAÇÃO FISIOLÓGICA DOS SINAIS VITAIS
+
+> [!NOTE]
+> **Por que isso acontece?** Quando o cérebro recebe pouco sangue ou oxigênio, a pessoa pode ficar confusa ou perder a consciência. Uma respiração apenas ocasional ou em suspiros também pode ocorrer na parada cardíaca. O socorrista deve observar sinais simples, não tentar confirmar uma doença.
 
 Os sinais externos apresentados pelo corpo humano refletem a resposta do organismo para manter o fluxo de oxigênio nos órgãos nobres (coração, pulmões e cérebro). Compreender a fisiologia permite ao socorrista antecipar a parada antes que ela aconteça:
 
@@ -273,6 +278,9 @@ A avaliação inicial não é uma foto estática tirada na chegada; ela é um fi
 ## SEÇÃO 7 — ERROS FREQUENTES E CONDUTAS PROIBIDAS
 
 > [!CAUTION]
+> **Erro que pode prejudicar a vítima:** Não perca tempo procurando o pulso no pescoço se você é leigo. Uma pessoa inconsciente e sem respiração normal precisa de RCP e acionamento do 192. Não confunda suspiros agônicos com respiração eficaz.
+
+> [!CAUTION]
 > ### CATÁLOGO DE ERROS CRÍTICOS NA AVALIAÇÃO INICIAL
 > 
 > 1. **Fazer a vítima se levantar ou caminhar para "ver se quebrou nada":**
@@ -302,6 +310,9 @@ A avaliação inicial não é uma foto estática tirada na chegada; ela é um fi
 ---
 
 ## SEÇÃO 8 — APLICAÇÃO PRÁTICA CONTEXTUALIZADA (ESTUDO DE CASO)
+
+> [!TIP]
+> **Decisão no caso prático:** Uma pessoa cai, abre a boca algumas vezes, mas não responde. Você verifica segurança, chama pelo nome e observa a respiração por até dez segundos. Se ela não for normal, aciona 192 e inicia compressões.
 
 ### Cenário Simulado
 *Local:* Canteiro de obras de um edifício comercial.  
