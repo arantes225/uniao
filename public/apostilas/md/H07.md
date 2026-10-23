@@ -104,7 +104,7 @@ Quando confrontado com uma cena real de mutilação corporal com sangue quente j
 - Instala-se o fenômeno da visão em túnel (*tunnel vision*) e da exclusão auditiva;
 - O córtex pré-frontal perde a capacidade de raciocínio abstrato complexo, e o cérebro passa a operar exclusivamente por padrões motores automáticos previamente gravados no cerebelo e gânglios da base [2, 5].
 
-Se o profissional apenas leu sobre o torniquete ou assistiu a vídeos na internet sem manusear fisicamente a fita, puxar o velcro com força total e girar o molinete até a dor do colega, ele invariavelmente congelará ou cometerá erros primários no momento da tragédia. A metodologia de estações práticas e simulações sequenciais da União Serviços Médicos foi desenhada para criar reflexos condicionados inquebráveis, transformando o socorrista em uma máquina calma de preservação da vida [1, 3, 5].
+A habilidade de usar torniquete exige prática repetida em simuladores. Nunca aperte o dispositivo até provocar dor ou isquemia em colegas: a força necessária deve ser avaliada no modelo de treinamento. A metodologia de estações práticas e simulações sequenciais da União Serviços Médicos foi desenhada para criar reflexos condicionados inquebráveis, transformando o socorrista em uma máquina calma de preservação da vida [1, 3, 5].
 
 ---
 
@@ -188,7 +188,7 @@ Esta é a estação de maior exigência técnica e tática do programa de contro
 A estação de torniquetes desenvolve a memória muscular em membros superiores e inferiores [1, 3]:
 - **Modalidades de Treino:**
   - **Autoaplicação em Braço Próprio:** Simulação de ferimento no membro superior dominante; o operador deve abrir, posicionar, apertar o velcro com uma mão e dentes, girar o molinete e travar em **menos de 30 segundos**.
-  - **Aplicação em Terceiros na Coxa:** O operador deve passar o torniquete na perna de um colega, eliminar 100% da folga do velcro com força máxima, girar o molinete por 2 a 3 voltas e travar no clipe em **menos de 25 segundos**.
+  - **Aplicação em Terceiros na Coxa:** O operador deve praticar em simulador de membro, remover folgas e ajustar o mecanismo segundo o fabricante e os sinais de controle do sangramento simulados. Tempo de execução não substitui segurança e técnica.
   - **Instalação do Segundo Torniquete:** Cenário de simulação de coxa obesa ou falha do primeiro aparelho: aplicação do segundo torniquete colado imediatamente acima do primeiro em menos de **20 segundos adicionais** [1, 3].
 
 

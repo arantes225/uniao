@@ -72,9 +72,9 @@ Utilize exclusivamente simulador de feridas profundas, com supervisão e avalia�
 > 1. **O que é Wound Packing:** É a técnica de introduzir física e progressivamente metros de gaze estéril sanfonada (*Z-fold*) para dentro de uma ferida cavitária profunda até o fundo da lesão, comprimindo o vaso sangrante diretamente contra o osso [1, 2].
 > 2. **Onde o torniquete não alcança:** Ferimentos em **áreas juncionais** — virilhas (onde a perna se une ao tronco), axilas (onde o braço se une ao ombro) e base do pescoço — **não permitem a colocação de torniquetes de membros**. O *wound packing* é a única salvação para essas regiões [1, 3].
 > 3. **Vá até o fundo com a ponta dos dedos:** Colocar gaze superficial na borda da ferida não serve para nada. O socorrista deve introduzir a ponta de um ou dois dedos no fundo da cavidade anatômica para encontrar o ponto exato de onde o sangue está jorrando [2, 4].
-> 4. **Mantenha a pressão constante enquanto alimenta a gaze:** Nunca retire o dedo que está comprimindo a artéria para pegar mais gaze. Use a técnica do "dedo sobre dedo" (*finger-over-finger*), alternando as mãos para que a pressão nunca caia para zero durante o empacotamento [2, 3].
+> 4. **Prioridade para todos:** Acione 192 e mantenha pressão direta sem interrupções. O packing é uma habilidade prática para pessoas treinadas em ferida adequada.
 > 5. **ONDE É PROIBIDO EMPACOTAR:** **JAMAIS faça preenchimento no TÓRAX ou no ABDÔMEN**. O tórax e a cavidade abdominal são cavidades gigantescas e expansíveis; enfiar gaze no tórax empurra a gaze para dentro do pulmão sem gerar pressão mecânica alguma contra os vasos [1, 5].
-> 6. **Tempo de compressão após empacotar:** Após preencher toda a cavidade até formar um montículo externo firme, pressione com o peso do tronco por **3 minutos inteiros** (se usar gaze hemostática com quitosana ou caulim) ou por **10 minutos inteiros** (se usar gaze comum de algodão) [1, 2].
+> 6. **Depois da intervenção:** Mantenha a pressão sobre a ferida até a chegada do resgate. O tempo de compressão depende do tipo de material e do protocolo ensinado ao socorrista.
 
 ---
 
@@ -344,37 +344,26 @@ Em uma loja de conveniência de um posto de combustíveis durante a madrugada, o
 
 O agressor foge. Cláudio desaba ao lado da bomba de gasolina. Um jato maciço e pulsátil de sangue arterial vermelho-vivo jorra em arco contínuo, cobrindo o chão da pista. Cláudio empalidece em segundos, grita em desespero e entra em colapso motor.
 
-### Aplicação da Doutrina de Wound Packing USM:
-1. **Reconhecimento da Lesão Juncional Crítica:** O policial militar de folga Sargento Eduardo, cliente do posto capacitado na doutrina USM, corre até a cena com luvas calçadas. Ele avalia em 2 segundos: ferimento pulsátil violento na dobra da virilha = **Lesão de Artéria Femoral Comum em Zona Juncional**. Um torniquete convencional de membro não tem apoio anatômico para ser fixado na prega da virilha; a única solução técnica viável é o *Wound Packing*.
-2. **Acionamento Estruturado de Emergência:**
-   - Eduardo grita para o caixa da loja: *"Ligue para o 192 e 190 agora! Diga que temos um policial atendendo ferimento grave de artéria femoral na virilha por faca, choque hemorrágico Classe III, necessitando de suporte avançado urgente!"*.
-3. **Localização Digital da Artéria e Compressão Inicial:**
-   - Eduardo ajoelha-se sobre o piso de concreto rente à bacia de Cláudio.
-   - Introduz os dois polegares diretamente no interior do orifício da virilha, aprofundando os dedos por 5 centímetros através dos planos musculares até tocar a cabeça óssea do fêmur.
-   - Ao esmagar a artéria femoral contra o osso, o jato violento cessa instantaneamente sob a força dos polegares. Cláudio geme de dor aguda, mas a perda volêmica é interrompida.
-4. **Execução do Wound Packing com Celox Z-Fold:**
-   - Eduardo retira com a boca a embalagem estéril de gaze de quitosana (*Celox Gauze Z-Fold*) que portava em seu kit individual de trauma (IFAK).
-   - Mantendo a pressão do polegar direito no fundo da artéria, utiliza o indicador da mão esquerda para introduzir a ponta da gaze sanfonada até o fundo ósseo.
-   - Aplica a técnica "dedo sobre dedo": alterna a pressão dos dedos de forma ritmada, empacotando centímetro por centímetro de gaze para dentro da cavidade da virilha com força máxima.
-   - Toda a fita de 3 metros de gaze é introduzida, preenchendo todos os recessos anatômicos e formando um montículo firme de 3 cm acima da pele.
-5. **Aplicação do Peso Corporal e Cronometragem:**
-   - Eduardo apoia as duas mãos sobre a almofada de gaze, estende os cotovelos a 90 graus e joga o peso do seu tronco (85 kg) diretamente sobre a virilha de Cláudio.
-   - Olha o cronômetro do relógio: comprime por 3 minutos ininterruptos sem aliviar um milímetro.
-   - Ao final dos 180 segundos, o sangramento está 100% estancado, sem vazamentos pelas bordas.
-6. **Curativo de Fixação e Prevenção do Choque:**
-   - Eduardo aplica uma bandagem elástica cruzada em "oito", passando a faixa ao redor da cintura de Cláudio e sob a coxa direita, travando o curativo com pressão mecânica contínua.
-   - Cobre Cláudio com a manta térmica aluminizada para evitar a hipotermia da Tríade Letal.
-7. **Desfecho:** A viatura de Suporte Avançado do SAMU chega em 8 minutos. O médico socorrista encontra a hemorragia completamente controlada, infunde ácido tranexâmico e transporta a vítima em estabilidade hemodinâmica para o hospital de trauma, onde a artéria femoral é suturada com sucesso. Cláudio sobreviveu sem sequelas graças ao preenchimento cavitário rápido realizado nos primeiros 90 segundos do ataque.
+### Resolução segura do caso — primeiro respondedor
+
+1. **Segurança:** Antes de se aproximar, confirme que o agressor se afastou. Não intervenha se ainda existir ameaça.
+2. **Acionamento:** Peça ligação ao 192. Informe o endereço do posto e descreva hemorragia intensa na virilha. Havendo risco de violência, comunique o 190.
+3. **Pressão direta:** Com luvas, se disponíveis, pressione firmemente o ferimento com gaze ou pano limpo. Não solte para conferir o sangramento repetidamente.
+4. **Ajuda qualificada:** Peça kit de controle de sangramento. Packing com gaze hemostática é opção apenas para socorrista que recebeu treinamento prático e segue protocolo apropriado.
+5. **Monitoramento:** Mantenha a vítima protegida do frio. Observe consciência e respiração. Não ofereça alimentos ou líquidos.
+6. **Entrega:** Informe a hora da lesão, o que foi feito, o local da compressão e quaisquer mudanças no estado da vítima.
+
+**Desfecho didático:** A equipe de emergência assume o atendimento e leva a vítima para avaliação hospitalar. O resultado não pode ser previsto apenas pela aplicação de um curativo; a prioridade é reduzir o sangramento e acelerar o atendimento.
 
 ---
 
 ## SEÇÃO 9 — PULO DO GATO
 
-> **MACETES OPERACIONAIS DE ALTO IMPACTO NO WOUND PACKING**
+> **Se o sangue está saindo muito, a primeira pergunta não é "qual artéria foi atingida?". É: "como manter pressão direta e chamar ajuda agora?"**
 >
-> 1. **O Ângulo do Osso na Virilha:** Ao enfiar os dedos na virilha para preencher uma ferida femoral, não empurre os dedos na vertical pura (para o chão). O relevo do ramo púbico e a cabeça do fêmur estão ligeiramente angulados. Empurre seus dedos em um ângulo de **45 graus na direção da cabeça da vítima (para cima e para dentro)**, esmagando a artéria diretamente contra a borda do osso ilíaco [2, 3].
-> 2. **A Embalagem como "Placa de Pressão":** Depois de empacotar toda a gaze na cavidade e formar o montículo externo, pegue a própria embalagem plástica vazia e grossa da gaze (que é estéril por dentro), coloque-a sobre o montículo de gaze e apoie as suas mãos por cima da embalagem plástica. O plástico impermeável impede que o sangue da gaze manche suas luvas e distribui a força do seu peso de maneira muito mais uniforme sobre toda a massa de gaze [1, 4].
-> 3. **A Fixação em "Oito" na Virilha:** Uma bandagem enrolada apenas na perna escorrega para baixo assim que a vítima é movida. Para prender um curativo na virilha, passe a atadura elástica **duas voltas ao redor da coxa, suba cruzando a virilha e dê duas voltas completas ao redor da cintura (pelve)**, retornando para a coxa em formato de "oito". Esse desenho em suspensório impede que o curativo desloque durante o transporte na prancha rígida [2, 7].
+> - **Virilha e axila:** não há local adequado para torniquete convencional de braço ou perna. Faça pressão direta; packing somente com treino e material correto.
+> - **Não explore a ferida:** não procure vasos com os dedos nem execute técnicas de compressão profunda sem capacitação específica.
+> - **Nunca faça packing no pescoço, tórax ou abdome:** preserve respiração, mantenha o controle externo seguro e entregue à equipe especializada.
 
 ---
 
