@@ -111,24 +111,9 @@ Por esse motivo, o **primeiro respondente comunitário** — professores, brigad
 Toda ação de primeiros socorros tem por objetivo proteger os sistemas biológicos essenciais, conhecidos como a **Tríade Vital**:
 
 
-![Figura 1 — Maleta e estação de primeiros socorros sinalizada e acessível.](../imagens/First_aid_kit_on_wall.png)
-*Figura 1 — Maleta e estação de primeiros socorros sinalizada e acessível. Crédito: Leigh Blackall. Licença: CC BY 2.0 (https://creativecommons.org/licenses/by/2.0/). Fonte: Wikimedia Commons.*
 
-```
-           +---------------------------------------+
-           |     SISTEMA NERVOSO CENTRAL (SNC)     |
-           |      Controle neural e consciência    |
-           +-------------------+-------------------+
-                               |
-            Trocas             |  Comando
-          gasosas              |  autônomo
-                               |
-+--------------------+         |         +--------------------+
-| SISTEMA RESPIRATÓRIO| <---------------+ |SISTEMA CARDIOVASC. |
-| Hematose alveolar  | ----------------> | Bomba e transporte |
-+--------------------+   Oxigenação do   +--------------------+
-                           sangue
-```
+![Ilustração conectando pulmões, coração e cérebro para mostrar a interdependência entre respiração, circulação e consciência.](../imagens/usm-triade-vital-ilustrada.svg)
+*Ilustração autoral USM — visão integrada das funções vitais para o primeiro respondedor.*
 
 ### 4.1 Coração e Hemodinâmica
 O sistema circulatório é um circuito fechado formado por bomba (coração), condutores (vasos sanguíneos) e fluido (sangue). Em um adulto de 70 kg, circulam cerca de 5 litros de sangue [9].
@@ -147,7 +132,7 @@ O ar atmosférico contém aproximadamente 21% de oxigênio. Pela respiração, o
 O encéfalo consome cerca de 20% do oxigênio corporal. Sem suprimento de oxigênio:
 - Em **10 a 15 segundos**, a pessoa perde a consciência.
 - A partir de **4 a 6 minutos**, iniciam-se lesões neuronais irreversíveis [4].
-- Após **10 minutos**, a morte encefálica é a regra geral.
+- Quanto maior o tempo sem oxigenação e circulação, maior o risco de lesão neurológica. Não use um tempo fixo para prever desfecho: reconheça a PCR, inicie RCP e use DEA sem demora.
 
 Isso justifica por que o reconhecimento imediato da parada cardiorrespiratória e o início rápido das compressões torácicas são inegociáveis.
 
@@ -160,6 +145,10 @@ Isso justifica por que o reconhecimento imediato da parada cardiorrespiratória 
 *Figura 2 — Mochila padronizada de Atendimento Pré-Hospitalar (APH) organizada por compartimentos. Crédito: Baedr-9439. Licença: CC0. Fonte: Wikimedia Commons.*
 
 ### 5.1 Introdução ao Atendimento Pré-Hospitalar
+
+![Figura 1 — Maleta e estação de primeiros socorros sinalizada e acessível.](../imagens/First_aid_kit_on_wall.png)
+*Figura 1 — Maleta e estação de primeiros socorros sinalizada e acessível. Crédito: Leigh Blackall. Licença: CC BY 2.0 (https://creativecommons.org/licenses/by/2.0/). Fonte: Wikimedia Commons.*
+
 O APH divide-se em dois níveis operacionais:
 1. **Suporte Básico de Vida (SBV):** Medidas não invasivas de suporte ventilatório e circulatório, desobstrução de via aérea, uso do DEA e controle de hemorragias externas. Pode ser realizado por leigos treinados [1, 2].
 2. **Suporte Avançado de Vida (SAV):** Procedimentos invasivos executados privativamente por médicos e enfermeiros, incluindo intubação traqueal, acesso vascular, drogas vasoativas e desfibrilação manual [3].
@@ -183,6 +172,10 @@ A regra central de conduta é a não maleficência (*primum non nocere* — prim
 - **Não atestar óbito:** O socorrista leigo não tem competência para atestar morte. Apenas lesões biológicas indiscutíveis (decapitação, carbonização completa ou rigidez cadavérica total) dispensam o início da RCP [1].
 
 ### 5.3 Anatomia e Fisiologia Básica Aplicada
+
+![Figura 3 — Avaliação pupilar e inspeção ocular na abordagem primária.](../imagens/Medic-open-patients-eye-1.png)
+*Figura 3 — Avaliação pupilar e inspeção ocular na abordagem primária. Crédito: Baedr-9439. Licença: CC0. Fonte: Wikimedia Commons.*
+
 - **Pulso periférico versus leigo:** Diretrizes internacionais (AHA e ILCOR) determinam que o socorrista leigo **não deve checar pulso**. Estudos mostram altas taxas de erro na palpação por leigos, atrasando o início da reanimação. Regra prática: inconsciente + não respira normalmente = **iniciar compressões imediatamente** [1, 2].
 - **Padrões de respiração:** A respiração normal em repouso no adulto varia de 12 a 20 incursões por minuto. Movimentos espasmódicos e irregulares de suspiro (*gasping*) são reflexos agônicos de parada cardíaca e exigem início imediato da RCP.
 
@@ -196,8 +189,6 @@ Compreender essa distinção evita subestimar casos gravíssimos e impede a sobr
 ### 5.5 Princípios Éticos e Legais no Brasil
 
 
-![Figura 3 — Avaliação pupilar e inspeção ocular na abordagem primária.](../imagens/Medic-open-patients-eye-1.png)
-*Figura 3 — Avaliação pupilar e inspeção ocular na abordagem primária. Crédito: Baedr-9439. Licença: CC0. Fonte: Wikimedia Commons.*
 
 #### 5.5.1 Omissão de Socorro (Artigo 135 do Código Penal)
 O crime de omissão de socorro ocorre ao deixar de prestar assistência a quem se encontra em grave perigo, quando possível fazê-lo sem risco pessoal, ou não pedir o socorro público [5].
@@ -377,5 +368,5 @@ Em uma indústria de logística, às 10h, um funcionário de 45 anos desmaia sub
 | **Status:** | `Aguardando Aprovação Científica` |
 | **Data da Redação:** | 19 de outubro de 2026 |
 | **Versão:** | 1.0.0 |
-| **Validação Científica por IA:** | Conforme diretrizes AHA/ILCOR/ERC e Legislação Brasileira |
+| **Situação científica:** | Revisado editorialmente; requer homologação por profissional habilitado antes do uso instrucional. |
 | **Próxima Revisão:** | Outubro de 2027 |
