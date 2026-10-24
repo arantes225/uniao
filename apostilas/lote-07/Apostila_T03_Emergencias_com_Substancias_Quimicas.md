@@ -47,7 +47,7 @@ Use ficha de segurança fictícia para treinar identificação de produto, isola
 
 ## 1. EM 30 SEGUNDOS (SUMÁRIO EXECUTIVO DE RESPOSTA RÁPIDA)
 
-Emergências com produtos químicos industriais exigem resposta metódica: **nunca se torne a segunda vítima**. A contaminação química ocorre por via cutânea, ocular, inalatória ou digestiva. Frente a respingos de substâncias corrosivas (ácidos e bases fortes), a única intervenção pré-hospitalar com evidência robusta para estancar a necrose tecidual e salvar a visão é a **descontaminação imediata por irrigação contínua com água corrente limpa e abundante (chuveiro de emergência e lava-olhos)** por no mínimo **15 a 20 minutos ininterruptos**, retirando roupas contaminadas sob a ducha.
+Emergências com produtos químicos industriais exigem resposta metódica: **nunca se torne a segunda vítima**. A contaminação química ocorre por via cutânea, ocular, inalatória ou digestiva. Frente a respingos de substâncias corrosivas, inicie imediatamente irrigação abundante com água corrente limpa e remova roupas contaminadas com segurança. A duração e as exceções dependem do agente e da FDS/SDS: não interrompa a irrigação para “cumprir um tempo” nem atrase o contato com CIATox/serviço de emergência.
 
 É estritamente proibido tentar "neutralizar" o produto químico na pele (aplicar vinagre sobre soda cáustica ou bicarbonato sobre ácido), pois a reação exotérmica violenta libera calor intenso, transformando queimadura química em queimadura térmica de terceiro grau. A identificação das substâncias pelo Sistema Globalmente Harmonizado (GHS) e Fichas com Dados de Segurança (FDS / SDS segundo ABNT NBR 14725) orienta a proteção da equipe e o suporte médico. Em contaminação inalatória, a remoção da vítima de ambiente contaminado deve ficar a cargo de equipe treinada com proteção adequada; caso contrário, isole a área a barlavento, acione o PAE, Bombeiros (193), SAMU (192) e CIATox (0800 722 6001).
 
@@ -90,7 +90,7 @@ Para atuar com exatidão, o socorrista ocupacional precisa compreender o comport
 - Provocam desnaturação imediata das proteínas teciduais com formação de coágulos insolúveis.
 - Produzem uma escara espessa e relativamente impermeável no ponto de contato (necrose de coagulação).
 - Essa escara funciona como uma barreira física parcial que limita a penetração rápida em planos anatômicos profundos.
-- **Exceção crítica — Ácido Fluorídrico (HF):** O íon fluoreto (F⁻) penetra profundamente sem formar escara superficial precoce, sequestra cálcio e magnésio séricos e celulares, gerando hipocalcemia fulminante com arritmias cardíacas ventriculares fatais e dor óssea extrema. Exige aplicação imediata de gel de gluconato de cálcio e suporte médico urgente.
+- **Exceção crítica — Ácido Fluorídrico (HF):** pode causar lesão profunda e toxicidade sistêmica mesmo com área pequena. Irrigue e acione imediatamente CIATox/emergência; gel de gluconato de cálcio e outras medidas só devem ser administrados sob protocolo ocupacional e por equipe habilitada.
 
 ### B. Queimaduras por Bases / Álcalis Fortes (Necrose de Liquefação)
 Bases fortes (hidróxido de sódio/soda cáustica - NaOH, hidróxido de potássio - KOH e amônia) possuem pH superior a 11,5 e causam as lesões químicas mais destrutivas:
@@ -179,7 +179,15 @@ Nunca aplique vinagre ou limão sobre queimaduras por álcalis, nem bicarbonato 
 
 ### 5.4. Contaminação Cutânea e Ocular: Chuveiros de Emergência e Lava-Olhos
 
-![Condutas de primeiros socorros diante de exposição química ocular](../../public/apostilas/imagens/usm-lavagem-ocular.svg)
+![Figura 5 — Técnica bimanual de abertura palpebral para lavagem contínua da superfície ocular.](../imagens/Open-eye-two-hands.png)
+*Figura 5 — Técnica bimanual de abertura palpebral para lavagem contínua da superfície ocular. Crédito: Baedr-9439. Licença: CC0. Fonte: Wikimedia Commons.*
+
+
+![Figura 4 — Irrigação ocular imediata com frasco lava-olhos portátil em exposição química.](../imagens/Eye-wash-with-pneumatic-bottle.png)
+*Figura 4 — Irrigação ocular imediata com frasco lava-olhos portátil em exposição química. Crédito: Baedr-9439. Licença: CC0. Fonte: Wikimedia Commons.*
+
+
+![Condutas de primeiros socorros diante de exposição química ocular](../imagens/usm-lavagem-ocular.svg)
 *Figura complementar — Condutas de primeiros socorros diante de exposição química ocular. Ilustração original União Serviços Médicos (2026), baseada em AHA/Cruz Vermelha 2024; não reproduz imagens de terceiros.*
 
 
@@ -189,7 +197,7 @@ As estações combinadas de chuveiro e lava-olhos de emergência devem estar ace
 1. Conduza o acidentado imediatamente para baixo da ducha e acione a haste de fluxo contínuo.
 2. Inicie a retirada de roupas, sapatos e adornos **com o chuveiro em pleno fluxo**. Roupas encharcadas funcionam como compressas tóxicas contínuas.
 3. Se a camisa for de vestir pela cabeça, corte-a com tesoura de resgate de baixo para cima, evitando que a gola contaminada esfregue no rosto e nos olhos.
-4. Mantenha a irrigação por **no mínimo 15 a 20 minutos contínuos**.
+4. Mantenha a irrigação contínua enquanto obtém a FDS/SDS e orientação de CIATox/equipe de emergência; muitos protocolos usam ao menos 15–20 minutos como ponto de partida, mas o agente e a avaliação clínica podem exigir mais tempo.
 5. Finalizada a lavagem, envolva o paciente em lençóis limpos e manta térmica metalizada para prevenir a hipotermia.
 
 #### B. Lavagem Ocular de Emergência
@@ -206,8 +214,8 @@ A inalação de compostos tóxicos apresenta alta letalidade devido à rápida a
 
 1. **Prioridade de Autoproteção:** Jamais adentre recintos com gases ou vapores sem Equipamento de Proteção Respiratória Autônoma (EPR). O socorrista sem proteção perde a consciência em segundos, transformando-se em vítima fatal adicional.
 2. **Remoção e Posicionamento:** Evacue a vítima para ar fresco (zona fria, contra o vento) e mantenha-a em repouso absoluto na posição sentada ou semissentada (Fowler) para favorecer a dinâmica respiratória.
-3. **Oxigenioterapia:** Administre oxigênio a 100% sob máscara com reservatório não reinalante assim que as equipes de socorro chegarem ao local.
-4. **Vítima Inconsciente:** Em caso de parada cardiorrespiratória associada a gases como cianeto ou organofosforados, **é proibida a ventilação boca a boca direta**; use exclusivamente bolsa-válvula-máscara (ambu) com filtro.
+3. **Oxigenioterapia:** é intervenção de equipe habilitada, na zona fria e após descontaminação quando aplicável.
+4. **Vítima inconsciente ou em PCR:** não faça boca a boca em vítima potencialmente contaminada. Não entre em ambiente inseguro e não assuma que uma bolsa-válvula-máscara com “filtro” torna a cena segura. Retire-se para zona fria somente com resgate habilitado/EPI adequado e siga RCP quando a cena estiver segura.
 
 
 ![Figura 3 — Respirador filtrante requer indicação específica conforme contaminante e concentração de oxigênio.](../imagens/Full-face-respirator.jpg)
@@ -251,11 +259,8 @@ A gestão de sinistros químicos fundamenta-se na organização espacial rígida
 | **Bases Fortes (Soda cáustica, Amônia)** | Sensação viscosa e escorregadia, necrose de liquefação. | Lavagem abundante contínua por 20 a 45 min; corte de roupas. | Aplicar vinagre ou limão; interromper a lavagem precocemente. |
 | **Pós Cáusticos (Cal viva seca)** | Calor intenso ao umedecer; queimação rápida. | Escovar a seco completamente antes de lavar com água farta. | Jogar borrifos finos de água sobre o pó; umedecer sem retirar pó. |
 | **Respingo Ocular Corrosivo** | Blefaroespasmo doloroso, hiperemia, turvação visual. | Lava-olhos com abertura forçada manual das pálpebras por 15-20 min. | Lavar de olhos fechados; pingar colírios anestésicos sem médico. |
-| **Inalação de Gases (Amônia, Cloro, CO)** | Tosse asfixiante, estridor, sufocação, confusão mental. | Retirar para ar livre com EPR; repouso sentado; oxigênio 100%. | Resgate impulsivo desprotegido sem máscara autônoma de ar. |
+| **Inalação de Gases (Amônia, Cloro, CO)** | Tosse asfixiante, estridor, sufocação, confusão mental. | Isolar a área, acionar resgate especializado e remover para zona fria somente se a cena for segura e a equipe estiver protegida. | Resgate impulsivo desprotegido ou ventilação em área contaminada. |
 
-
-![Figura 4 — Irrigação ocular imediata com frasco lava-olhos portátil em exposição química.](../imagens/Eye-wash-with-pneumatic-bottle.png)
-*Figura 4 — Irrigação ocular imediata com frasco lava-olhos portátil em exposição química. Crédito: Baedr-9439. Licença: CC0. Fonte: Wikimedia Commons.*
 
 ---
 
@@ -290,9 +295,6 @@ A brigadista Patrícia estava a 8 metros e atuou com rigor metódico:
 5. **Pós-Lavagem e Estabilização:** Após 20 minutos, Marcos apresentava eritema cutâneo sem bolhas e hiperemia ocular moderada. Foi envolvido em manta térmica para evitar hipotermia e entregue à equipe da USA do SAMU com a FDS impressa.
 
 
-![Figura 5 — Técnica bimanual de abertura palpebral para lavagem contínua da superfície ocular.](../imagens/Open-eye-two-hands.png)
-*Figura 5 — Técnica bimanual de abertura palpebral para lavagem contínua da superfície ocular. Crédito: Baedr-9439. Licença: CC0. Fonte: Wikimedia Commons.*
-
 ### Desfecho Clínico
 No serviço oftalmológico especializado, a avaliação com fluoresceína diagnosticou apenas ceratite superficial sem perda do estroma da córnea. A rápida ação de Patrícia na irrigação contínua de 20 minutos com afastamento ativo das pálpebras impediu a perda visual de Marcos, que retornou integralmente ao trabalho em duas semanas.
 
@@ -311,9 +313,6 @@ No serviço oftalmológico especializado, a avaliação com fluoresceína diagno
 > 
 > **5. Entregue a FDS Impressa ao SAMU:** Entregar a ficha de segurança com o nome exato e CAS do produto economiza tempo valioso da equipe médica no pronto-socorro.
 
-
-![Figura 6 — Equipamento de ventilação utilizado por profissionais capacitados, não para uso espontâneo de leigos.](../imagens/Bag-valve-mask.jpg)
-*Figura 6 — Equipamento de ventilação utilizado por profissionais capacitados, não para uso espontâneo de leigos. Crédito: Another-anon-artist-234. Licença: CC0. Fonte: Wikimedia Commons.*
 
 ---
 
@@ -341,8 +340,8 @@ No serviço oftalmológico especializado, a avaliação com fluoresceína diagno
  • Pó: escovar a seco    • Lava-olhos imediato   • Não entrar sem EPR!
  • Chuveiro imediato     • Abrir pálpebras       • Ar livre a barlavento
  • Tirar roupas sob água • Movimentar os olhos   • Posição de Fowler
- • Lavar 15 a 20 min     • Lavar 15 a 20 min     • Oxigênio 100%
- • NÃO NEUTRALIZAR       • Sem colírio caseiro   • Ambu com filtro se PCR
+ • Irrigar e seguir FDS  • Irrigar e seguir FDS  • Zona fria/equipe habilitada
+ • NÃO NEUTRALIZAR       • Sem colírio caseiro   • Não ventilar em área contaminada
        │                       │                       │
        └───────────────────────┼───────────────────────┘
                                │
