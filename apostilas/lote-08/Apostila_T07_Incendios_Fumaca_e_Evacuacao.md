@@ -153,9 +153,6 @@ Para conter um princípio de incêndio em seu nascedouro com segurança, a briga
 ```
 
 
-![Figura 2 — Regra dos Nove de Wallace para estimativa da Superfície Corporal Queimada (SCQ).](../imagens/Wallace-rule-of-nines.jpg)
-*Figura 2 — Regra dos Nove de Wallace para estimativa da Superfície Corporal Queimada (SCQ). Crédito: Another-anon-artist-234. Licença: CC0. Fonte: Wikimedia Commons.*
-
 #### Operação do Extintor Portátil — Regra P-A-M-P
 Ao operar qualquer extintor portátil, memorize os 4 passos universais:
 1. **P**uxar a trava e romper o lacre plástico.
@@ -198,6 +195,10 @@ Qualquer indivíduo retirado de um ambiente fechado com fumaça deve ser minucio
 
 ### 5.3. Rotas de Fuga, Sinalização e Saídas de Emergência
 
+![Esquema de planta com rota de saída sinalizada, área com fumaça, elevador proibido e ponto de encontro.](../imagens/usm-evacuacao-rota-segura.svg)
+*Ilustração autoral USM — exemplo didático; substitua pela planta real de evacuação da instituição, aprovada pelos responsáveis de segurança.*
+
+
 As saídas de emergência e rotas de abandono em plantas prediais e industriais são regulamentadas pela norma **ABNT NBR 9077** e instruções técnicas do Corpo de Bombeiros:
 - **Desobstrução Permanente:** É expressamente proibido armazenar paletes, caixas de papelão, carrinhos ou lixeiras nos corredores de saída, escadas de emergência ou em frente a extintores e hidrantes.
 - **Portas Corta-Fogo (P-60 / P-90 / P-120):** Projetadas para resistir ao fogo e conter a passagem de fumaça por 60, 90 ou 120 minutos. Devem estar providas de dispositivo de fechamento automático e **barra antipânico**. **É PROIBIDO calçar portas corta-fogo com cunhas de madeira, extintores ou pedras para mantê-las abertas.** A porta aberta canaliza a fumaça tóxica diretamente para a caixa de escada, transformando a única via de fuga dos andares superiores em uma chaminé da morte.
@@ -214,11 +215,8 @@ A deflagração ordenada do abandono depende da comunicação estruturada:
 
 ---
 
-
-![Figura 3 — Queimadura de terceiro grau (espessura total) com destruição epidérmica e dérmica.](../imagens/Full-thickness-burn.png)
-*Figura 3 — Queimadura de terceiro grau (espessura total) com destruição epidérmica e dérmica. Crédito: Baedr-9439. Licença: CC0. Fonte: Wikimedia Commons.*
-
 ### 5.5. Técnicas de Evacuação Segura em Ambientes Tomados por Fumaça
+
 
 Se a fumaça invadir o corredor durante o processo de evacuação:
 
@@ -261,9 +259,6 @@ A interface entre a resposta corporativa interna e as forças públicas de socor
 - **Recepção da Guarnição pelo Chefe da Brigada:** Ao ouvir as sirenes do caminhão de combate a incêndio (Auto Bomba Tanque - ABT), o chefe da brigada posiciona-se na portaria principal, com a planta baixa do prédio e as chaves de acesso mestres, reportando: número de andares afetados, rotas acessíveis, status da evacuação dos funcionários e localização das válvulas de corte de gás e painéis elétricos gerais.
 - **Manejo Pré-Hospitalar no Ponto de Encontro:** O socorrista de brigada deve triar os trabalhadores reunidos no Ponto de Encontro. Qualquer vítima com tosse, rouquidão, queimadura ou fuligem deve receber **oxigenioterapia a 100% sob máscara com reservatório não reinalante a 15 L/min** imediatamente, em repouso sentado, aguardando a chegada da equipe do SAMU (192) para avaliação médica e transporte prioritário.
 
-
-![Figura 4 — Queimadura de segundo grau superficial com formação de flictenas (bolhas).](../imagens/Superficial-partial-thickness-burn.png)
-*Figura 4 — Queimadura de segundo grau superficial com formação de flictenas (bolhas). Crédito: Baedr-9439. Licença: CC0. Fonte: Wikimedia Commons.*
 
 ---
 
@@ -390,12 +385,12 @@ No hospital terciário, o médico da UTI realizou laringoscopia de urgência e c
 
 ## 11. O QUE VOCÊ PRECISA LEMBRAR (PONTOS INEGOCIÁVEIS)
 
-- **A inalação de fumaça mata mais que o fogo:** Mais de 75% dos óbitos em incêndios são causados por asfixia por Monóxido de Carbono e Cianeto de Hidrogênio.
+- **Inalação de fumaça é emergência:** monóxido de carbono, cianeto, lesão térmica e hipóxia podem coexistir. A frequência varia pelo incêndio e não deve ser resumida em um percentual único sem fonte específica.
 - **Rasteje abaixo da fumaça:** O ar respirável, frio e transparente concentra-se nos primeiros 50 centímetros acima do piso da edificação.
 - **Nunca use elevadores em caso de incêndio:** O risco de parada de energia e asfixia no poço por efeito chaminé é letal.
 - **Portas corta-fogo devem permanecer sempre fechadas e destravadas:** Jamais calce portas de escada de emergência com madeira ou extintores.
 - **Sinais de fuligem e rouquidão exigem hospitalização imediata:** O edema de glote se instala horas após o evento e oclui as vias aéreas de forma fulminante.
-- **Oxigênio a 100% de alto fluxo é o tratamento prioritário:** Vítimas resgatadas devem receber oxigênio sob máscara com reservatório a 15 L/min imediatamente.
+- **Oxigênio e via aérea exigem equipe habilitada:** vítimas resgatadas com sintomas respiratórios, fuligem, rouquidão, confusão ou queimaduras relevantes devem ser avaliadas com urgência. Oxigenoterapia e manejo de via aérea são definidos por equipe treinada.
 
 ---
 
@@ -413,6 +408,9 @@ No hospital terciário, o médico da UTI realizou laringoscopia de urgência e c
 ---
 
 ### Metadados e Controle Editorial
+
+> [!IMPORTANT]
+> **Fumaça e queimadura:** priorize saída segura, resgate especializado e avaliação de via aérea. Não administre tratamento empírico para inalação de fumaça; queimaduras profundas, extensas, elétricas ou com dificuldade respiratória exigem atendimento urgente.
 - **Instituição Proprietária:** União Serviços Médicos Ltda. — Todos os direitos reservados
 - **Plataforma Pedagógica:** LURIA Framework Educacional
 - **Revisor Científico Responsável:** Equipe de Medicina do Trabalho e Emergência USM
