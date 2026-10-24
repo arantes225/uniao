@@ -118,7 +118,8 @@ export const LoginPage: React.FC = () => {
       const { error: accessError } = await supabase.auth.signInWithOtp({
         email: normalizedEmail,
         options: {
-          shouldCreateUser: false,
+          // Usuários existentes entram; usuários autorizados sem conta concluem o cadastro.
+          shouldCreateUser: true,
           emailRedirectTo: postAuthRedirect(),
         },
       });

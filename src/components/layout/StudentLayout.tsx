@@ -18,7 +18,17 @@ export const StudentLayout: React.FC = () => {
 
   useEffect(() => {
     let mounted = true;
-    loadStudentCohortAccess()
+    const completeRegistrationAndLoad = async () => {
+      const { data, error } = await supabase.functions.invoke('complete-student-registration');
+      if (error) throw error;
+      if (data?.authorized === false) {
+        await supabase.auth.signOut();
+        throw new Error('Seu e-mail não está autorizado em uma turma da União.');
+      }
+      return loadStudentCohortAccess();
+    };
+
+    completeRegistrationAndLoad()
       .then(result => {
         if (!mounted) return;
         setCohorts(result);

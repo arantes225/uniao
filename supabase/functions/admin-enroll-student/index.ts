@@ -45,21 +45,41 @@ Deno.serve(async (request) => {
     .from('cohorts').select('id, max_students').eq('id', cohortId).maybeSingle();
   if (cohortError || !cohort) return json({ error: 'Turma não encontrada' }, 404);
 
-  const { count } = await admin
-    .from('enrollments').select('id', { count: 'exact', head: true })
-    .eq('cohort_id', cohortId).eq('status', 'active');
-  if ((cohort.max_students ?? 30) <= (count ?? 0)) return json({ error: 'A turma atingiu a capacidade máxima' }, 409);
-
-  let user = null;
   const { data: users, error: usersError } = await admin.auth.admin.listUsers({ page: 1, perPage: 1000 });
   if (usersError) return json({ error: 'Não foi possível consultar os usuários' }, 500);
-  user = users.users.find((candidate) => candidate.email?.toLowerCase() === email) ?? null;
+  const user = users.users.find((candidate) => candidate.email?.toLowerCase() === email) ?? null;
+
   if (!user) {
-    const { data: invitation, error: inviteError } = await admin.auth.admin.inviteUserByEmail(email, {
-      data: { full_name: name },
+    const { count: activeCount } = await admin
+      .from('enrollments').select('id', { count: 'exact', head: true })
+      .eq('cohort_id', cohortId).eq('status', 'active');
+    const { count: pendingCount } = await admin
+      .from('pending_student_enrollments').select('id', { count: 'exact', head: true })
+      .eq('cohort_id', cohortId).eq('status', 'pending');
+    if ((cohort.max_students ?? 30) <= (activeCount ?? 0) + (pendingCount ?? 0)) {
+      return json({ error: 'A turma atingiu a capacidade máxima' }, 409);
+    }
+
+    const { data: pending, error: pendingError } = await admin
+      .from('pending_student_enrollments')
+      .upsert({
+        email,
+        full_name: name,
+        cpf,
+        cohort_id: cohortId,
+        status: 'pending',
+        updated_at: new Date().toISOString(),
+      }, { onConflict: 'email,cohort_id' })
+      .select('id')
+      .single();
+    if (pendingError) return json({ error: 'Não foi possível liberar o cadastro deste e-mail' }, 400);
+
+    return json({
+      registration_required: true,
+      pending_id: pending.id,
+      email,
+      message: 'E-mail autorizado para cadastro. O aluno poderá concluir o primeiro acesso com este endereço.',
     });
-    if (inviteError || !invitation.user) return json({ error: inviteError?.message || 'Não foi possível convidar o aluno' }, 400);
-    user = invitation.user;
   }
 
   const { error: profileError } = await admin.from('profiles').upsert({
@@ -72,12 +92,23 @@ Deno.serve(async (request) => {
 
   const { data: existing } = await admin.from('enrollments')
     .select('id, status').eq('cohort_id', cohortId).eq('user_id', user.id).maybeSingle();
+
   if (existing) {
     if (existing.status !== 'active') {
       const { error } = await admin.from('enrollments').update({ status: 'active' }).eq('id', existing.id);
       if (error) return json({ error: 'Não foi possível reativar a matrícula' }, 400);
     }
-    return json({ user_id: user.id, enrollment_id: existing.id, invited: false, reactivated: true });
+    await admin.from('pending_student_enrollments')
+      .update({ status: 'completed', updated_at: new Date().toISOString() })
+      .eq('email', email).eq('cohort_id', cohortId).eq('status', 'pending');
+    return json({ user_id: user.id, enrollment_id: existing.id, access_granted: true, reactivated: true });
+  }
+
+  const { count } = await admin
+    .from('enrollments').select('id', { count: 'exact', head: true })
+    .eq('cohort_id', cohortId).eq('status', 'active');
+  if ((cohort.max_students ?? 30) <= (count ?? 0)) {
+    return json({ error: 'A turma atingiu a capacidade máxima' }, 409);
   }
 
   const { data: enrollment, error: enrollmentError } = await admin.from('enrollments').insert({
@@ -86,6 +117,10 @@ Deno.serve(async (request) => {
     status: 'active',
   }).select('id').single();
   if (enrollmentError) return json({ error: enrollmentError.message }, 400);
-  return json({ user_id: user.id, enrollment_id: enrollment.id, invited: !user.last_sign_in_at });
-});
 
+  await admin.from('pending_student_enrollments')
+    .update({ status: 'completed', updated_at: new Date().toISOString() })
+    .eq('email', email).eq('cohort_id', cohortId).eq('status', 'pending');
+
+  return json({ user_id: user.id, enrollment_id: enrollment.id, access_granted: true });
+});
