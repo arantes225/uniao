@@ -24,7 +24,7 @@ buildSync({
 });
 global.localStorage = { getItem: () => 'dark' };
 const { simulationFolders, SimulatorCatalog, ClinicalScenario, ThemeProvider } = require(bundle);
-assert.deepEqual(simulationFolders.map(folder => folder.id), ['academia', 'escola', 'empresa']);
+assert.deepEqual(simulationFolders.map(folder => folder.id), ['academia', 'escola', 'empresa', 'stop-the-bleed']);
 assert.equal(simulationFolders[0].cases.length, 0, 'Do not invent gym cases');
 const existingCase = simulationFolders[2].cases[0];
 assert.equal(hash(JSON.stringify(existingCase.steps)), manifest.originalCaseSha256, 'Existing clinical content must remain intact');
@@ -40,11 +40,17 @@ for (const character of characters) {
   }
 }
 const render = component => renderToStaticMarkup(React.createElement(ThemeProvider, null, component));
+const stopTheBleedFolder = simulationFolders[3];
+assert.equal(stopTheBleedFolder.cases.length, 3);
+assert(stopTheBleedFolder.cases.every(simulationCase => simulationCase.steps.every(step => step.bleedingFocus)), 'Stop the Bleed cases must expose a clickable bleeding focus');
 const catalog = render(React.createElement(SimulatorCatalog));
-for (const name of ['Academia', 'Escola', 'Empresa', 'Personagens da academia']) assert(catalog.includes(name));
-assert.equal((catalog.match(/aria-controls="simulation-folder"/g) || []).length, 3);
+for (const name of ['Academia', 'Escola', 'Empresa', 'Stop the Bleed', 'Personagens da academia']) assert(catalog.includes(name));
+assert.equal((catalog.match(/aria-controls="simulation-folder"/g) || []).length, 4);
 const scenario = render(React.createElement(ClinicalScenario, { scenario: existingCase, onBack() {} }));
 assert(scenario.includes('Voltar aos casos'));
 assert(scenario.includes('canvas'));
+const stopScenario = render(React.createElement(ClinicalScenario, { scenario: stopTheBleedFolder.cases[0], onBack() {} }));
+assert(stopScenario.includes('Clique no foco vermelho para ampliar'));
+assert.equal(stopTheBleedFolder.cases[0].steps[0].bleedingFocus.title, 'Sangramento arterial pulsátil');
 for (const option of existingCase.steps[0].options) assert(scenario.includes(option.text));
-console.log('PASS: 18 approved files unchanged; 8 characters; 3 folders; original clinical case intact; catalog and case render.');
+console.log('PASS: 18 approved files unchanged; 8 characters; 4 folders; original clinical case intact; Stop the Bleed focus and catalog render.');

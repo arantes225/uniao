@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useRef, useState, type ReactNode } from 'react';
 import characters from '../../data/simulator/characters.json';
 
 export const characterAssets = `${import.meta.env.BASE_URL}simulador/personagens/academia-v20261022/`;
@@ -25,8 +25,8 @@ function loadRenderer() {
   return rendererPromise;
 }
 
-export function AnimatedPatient({ characterId, respiratoryRate = 17, paused = false }: {
-  characterId: string; respiratoryRate?: number; paused?: boolean;
+export function AnimatedPatient({ characterId, respiratoryRate = 17, paused = false, overlay }: {
+  characterId: string; respiratoryRate?: number; paused?: boolean; overlay?: ReactNode;
 }) {
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const patientRef = useRef<Patient>();
@@ -75,6 +75,7 @@ export function AnimatedPatient({ characterId, respiratoryRate = 17, paused = fa
     <figure className="overflow-hidden rounded-2xl border border-slate-300/30 bg-slate-950">
       <div className="relative aspect-[1672/941]">
         <canvas ref={canvasRef} role="img" aria-label={`${character.name}, com piscada e respiração`} className="block h-full w-full" />
+        {!loading && !error && overlay}
         {loading && <p role="status" className="absolute inset-0 flex items-center justify-center bg-slate-950 text-sm text-slate-200">Carregando personagem…</p>}
         {error && <div role="alert" className="absolute inset-0 flex flex-col items-center justify-center gap-3 bg-slate-950 p-4 text-center text-white">
           <p>Não foi possível carregar o personagem.</p>
