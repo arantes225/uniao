@@ -474,6 +474,36 @@ export const AdminDashboard: React.FC = () => {
         setSelectedCertCohortId(coh[0].id);
       }
     }
+
+    const { data: enrollmentRows, error: enrollmentsError } = await supabase
+      .from('enrollments')
+      .select('id, cohort_id, user_id, status, profiles!enrollments_user_id_fkey(full_name, email, cpf)')
+      .eq('status', 'active')
+      .order('enrolled_at', { ascending: false });
+    if (enrollmentsError) {
+      alert('Erro ao carregar matrículas: ' + enrollmentsError.message);
+      return;
+    }
+    const cohortById = new Map((coh || []).map(c => [c.id, c]));
+    setStudents((enrollmentRows || []).map((row: any): StudentRecord => {
+      const profile = Array.isArray(row.profiles) ? row.profiles[0] : row.profiles;
+      const cohort = cohortById.get(row.cohort_id);
+      return {
+        id: row.user_id,
+        name: profile?.full_name || 'Aluno sem nome',
+        email: profile?.email || '',
+        cpf: profile?.cpf || '',
+        cohortId: row.cohort_id,
+        cohortName: cohort?.name || 'Turma',
+        progress: 0,
+        lessonsCompleted: 0,
+        totalLessons: 0,
+        scoreQuiz: 0,
+        simFinished: false,
+        practicalAuthorized: false,
+        daysRemaining: cohort?.access_days_limit || 90,
+      };
+    }));
   };
 
   useEffect(() => {
@@ -579,28 +609,23 @@ export const AdminDashboard: React.FC = () => {
   };
 
   // Adicionar Aluno a uma Turma
-  const handleAddStudent = (e: React.FormEvent) => {
+  const handleAddStudent = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!newStudentName || !newStudentEmail || !newStudentCohortId) return;
 
-    const cohort = cohorts.find(c => c.id === newStudentCohortId);
-    const newEntry: StudentRecord = {
-      id: Date.now().toString(),
-      name: newStudentName,
-      email: newStudentEmail,
-      cpf: newStudentCpf || '000.000.000-00',
-      cohortId: newStudentCohortId,
-      cohortName: cohort ? cohort.name : 'Turma Selecionada',
-      progress: 0,
-      lessonsCompleted: 0,
-      totalLessons: 12,
-      scoreQuiz: 0,
-      simFinished: false,
-      practicalAuthorized: false,
-      daysRemaining: cohort ? (cohort.access_days_limit || 90) : 90,
-    };
-
-    setStudents([newEntry, ...students]);
+    const { error } = await supabase.functions.invoke('admin-enroll-student', {
+      body: {
+        name: newStudentName.trim(),
+        email: newStudentEmail.trim().toLowerCase(),
+        cpf: newStudentCpf.trim() || null,
+        cohort_id: newStudentCohortId,
+      },
+    });
+    if (error) {
+      alert('Erro ao matricular aluno: ' + error.message);
+      return;
+    }
+    await loadData();
     setNewStudentName('');
     setNewStudentEmail('');
     setNewStudentCpf('');
@@ -705,34 +730,44 @@ export const AdminDashboard: React.FC = () => {
   };
 
   // Salvar Edição do Aluno
-  const handleSaveEditStudent = (e: React.FormEvent) => {
+  const handleSaveEditStudent = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!editingStudent) return;
 
-    const targetCohort = cohorts.find(c => c.id === editStudentCohortId);
-
-    setStudents(students.map(s => {
-      if (s.id === editingStudent.id) {
-        return {
-          ...s,
-          name: editStudentName,
-          email: editStudentEmail,
-          cpf: editStudentCpf,
-          cohortId: editStudentCohortId,
-          cohortName: targetCohort ? targetCohort.name : s.cohortName,
-        };
+    const { error } = await supabase.from('profiles').update({
+      full_name: editStudentName.trim(),
+      email: editStudentEmail.trim().toLowerCase(),
+      cpf: editStudentCpf.trim() || null,
+    }).eq('id', editingStudent.id);
+    if (error) {
+      alert('Erro ao atualizar aluno: ' + error.message);
+      return;
+    }
+    if (editStudentCohortId !== editingStudent.cohortId) {
+      const { error: enrollmentError } = await supabase.from('enrollments')
+        .update({ cohort_id: editStudentCohortId })
+        .eq('user_id', editingStudent.id);
+      if (enrollmentError) {
+        alert('Erro ao alterar a turma do aluno: ' + enrollmentError.message);
+        return;
       }
-      return s;
-    }));
-
+    }
+    await loadData();
     setIsEditStudentOpen(false);
     setEditingStudent(null);
   };
 
   // Remover Aluno de uma Turma
-  const handleRemoveStudent = (studentId: string, studentName: string) => {
+  const handleRemoveStudent = async (studentId: string, studentName: string) => {
     if (confirm(`Deseja realmente desmatricular ${studentName}?`)) {
-      setStudents(students.filter(s => s.id !== studentId));
+      const { error } = await supabase.from('enrollments')
+        .update({ status: 'suspended' })
+        .eq('user_id', studentId);
+      if (error) {
+        alert('Erro ao desmatricular aluno: ' + error.message);
+        return;
+      }
+      await loadData();
     }
   };
 
