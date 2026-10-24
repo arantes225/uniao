@@ -70,7 +70,7 @@ Pratique alcance e arremesso com boia, acionamento de 193 e RCP com ventilação
 ## SEÇÃO 1 — EM 30 SEGUNDOS
 
 > **VISÃO RÁPIDA DE SOBREVIVÊNCIA AQUÁTICA E EM TRILHAS**
-> 1. **Afogamento é primariamente um evento respiratório:** Diferente da PCR cardíaca de adultos no salão de musculação (onde as compressões vêm primeiro), **a PCR por afogamento exige o fornecimento imediato de ventilações de resgate (5 ventilações iniciais)** para reverter a hipóxia alveolar antes das compressões [1, 2].
+> 1. **Afogamento é primariamente um evento respiratório:** ventilações de resgate são particularmente importantes para socorristas treinados e capazes. Inicie RCP sem demora, use barreira quando disponível e aplique DEA assim que possível; não transforme um número fixo de ventilações em pré-requisito que atrase o atendimento [1, 2].
 > 2. **Afogamento é silencioso:** A vítima em apuros aquáticos quase nunca grita por socorro nem acena com as mãos (mito do cinema). O instinto de sobrevivência força a boca a afundar e reaparecer apenas para tentar respirar, com braços batendo lateralmente na água de forma ineficaz [2, 3].
 > 3. **Prioridade do resgatador: autoproteção:** *"Vítima molhada, socorrista seco"*. Priorize resgate com alcance de vara, arremesso de boia ou corda. Nunca pule na água para abraçar uma pessoa em pânico se você não tiver treinamento e flutuador [2, 4].
 > 4. **Cuidado com o ralo da piscina:** A sucção mecânica de ralos de fundo sem grade anti-aprisionamento pode prender cabelos ou membros com força superior a 200 kg. O desligamento manual da bomba deve estar visível e acessível [5, 6].
@@ -102,9 +102,6 @@ No ambiente aquático, a densidade do meio e a barreira líquida exigem que qual
 
 Nas atividades ao ar livre e em trilhas ecológicas, o fator complicador crítico é a **distância e o tempo de resposta das equipes públicas de resgate (SAMU 192 e Bombeiros 193)**. Se no centro da cidade a ambulância chega entre 8 e 15 minutos, em uma trilha florestal ou serra o resgate técnico pode demorar de 2 a 6 horas para acessar o local. Nesses cenários, a sobrevivência da vítima depende integralmente da autossuficiência técnica e dos suprimentos portados pelo guia esportivo e pela equipe de apoio [7, 8].
 
-
-![Figura 1 — Técnica segura de salvamento aquático a partir da borda sem entrada impulsiva.](../imagens/Proper_Rescue_Method.jpg)
-*Figura 1 — Técnica segura de salvamento aquático a partir da borda sem entrada impulsiva. Crédito: US Army Corps of Engineers. Licença: Domínio público. Fonte: Wikimedia Commons.*
 
 ---
 
@@ -163,9 +160,6 @@ A prevenção é o pilar que evita 99% dos óbitos em ambientes aquáticos de tr
 ### 5.2 Prevenção de Afogamentos e Ralos de Sucção em Ambientes Coletivos
 
 
-![Figura 2 — Envoltório de isolamento térmico passivo e ativo para prevenção da hipotermia no trauma.](../imagens/Hypothermia-wrap.png)
-*Figura 2 — Envoltório de isolamento térmico passivo e ativo para prevenção da hipotermia no trauma. Crédito: Baedr-9439. Licença: CC0. Fonte: Wikimedia Commons.*
-
 O aprisionamento em ralos de fundo de piscinas é um mecanismo devastador de afogamento em academias e condomínios [5, 6]:
 - **Mecanismo da Sucção:** As bombas de circulação de água geram uma sucção de vácuo hidrodinâmico violenta no ralo de fundo. Quando o cabelo comprido de um aluno ou seu membro é sugado para o interior da tubulação, a força de retenção pode ultrapassar 200 a 300 kgf, tornando humanamente impossível desvencilhar a vítima puxando-a para cima.
 - **Requisitos Mandatórios da Lei Federal nº 14.327/2022 (Segurança em Piscinas):**
@@ -177,7 +171,15 @@ O aprisionamento em ralos de fundo de piscinas é um mecanismo devastador de afo
 
 ### 5.3 Resposta Inicial ao Afogamento: Cadeia de Sobrevivência e Ventilação
 
-![Alcance, arremesso de flutuação e resposta segura após afogamento](../../public/apostilas/imagens/usm-resgate-aquatico-seguro.svg)
+![Esquema de resgate aquático a partir da borda por alcance de haste ou arremesso de boia com corda.](../imagens/usm-resgate-aquatico-alcance-arremesso.svg)
+*Ilustração autoral USM — segurança no alcance e arremesso de flutuação; nunca entrar na água sem preparo específico.*
+
+
+![Figura 4 — Posicionamento para compressões torácicas no adulto.](../imagens/Cardiopulmonary_Resuscitation_Adult.jpg)
+*Figura 4 — Posicionamento para compressões torácicas no adulto. Crédito: Illinois Waterway Visitor Center, US Army Corps of Engineers. Licença: Domínio público. Fonte: Wikimedia Commons.*
+
+
+![Alcance, arremesso de flutuação e resposta segura após afogamento](../imagens/usm-resgate-aquatico-seguro.svg)
 *Figura complementar — Alcance, arremesso de flutuação e resposta segura após afogamento. Ilustração original União Serviços Médicos (2026), baseada em Princípios internacionais de segurança aquática e RCP após afogamento; não reproduz material gráfico de terceiros.*
 
 
@@ -195,12 +197,12 @@ A Cadeia de Sobrevivência do Afogamento da SOBRASA e Federação Internacional 
 +---------------------------------------------------------------------------------+
 ```
 
-#### A Grande Diferença na RCP do Afogado (As 5 Ventilações Iniciais):
+#### RCP no Afogamento: ênfase em oxigenação
 Na parada cardiorrespiratória clássica de adulto por infarto, o sangue possui oxigênio residual e o problema primário é a falta de bomba (compressão primeiro - C-A-B).
 - **NO AFOGAMENTO, O CORAÇÃO PAROU PORQUE FICOU SEM OXIGÊNIO (HIPÓXIA PURA):**
-- Ao retirar a vítima inconsciente da água para a borda seca, após constatar ausência de respiração normal, **FORNEÇA IMEDIATAMENTE 5 VENTILAÇÕES DE RESGATE** (utilizando máscara de bolso ou bolsa-válvula-máscara com filtro) [1, 2].
-- Em muitos casos de afogamento recente, as 5 ventilações oxigenam o sangue o suficiente para o coração retomar os batimentos espontâneos imediatamente!
-- Se a vítima permanecer sem pulso após as 5 ventilações, inicie ciclos de **30 compressões torácicas alternadas com 2 ventilações** [1, 2].
+- Após retirar a vítima para local seguro, verifique responsividade e respiração. Inicie RCP sem demora conforme treinamento; ventilações de resgate com barreira são recomendadas para quem é capaz de realizá-las [1, 2].
+- Não espere retorno espontâneo após um número predeterminado de ventilações. Instale DEA assim que disponível e siga os comandos do aparelho.
+- Socorrista sem treinamento ou sem condição de ventilar deve iniciar compressões e acionar o resgate, em vez de atrasar o cuidado [1, 2].
 
 #### Cuidados com o DEA em Vítimas Molhadas:
 - **Água conduz eletricidade:** Nunca dispare o choque com a vítima deitada em uma poça profunda de água ou com o tórax completamente molhado.
@@ -219,6 +221,14 @@ Atividades em áreas naturais expõem praticantes a terrenos irregulares e isola
 
 ### 5.5 Exposição a Temperaturas Extremas: Hipotermia e Insolação ao Ar Livre
 
+![Figura 3 — Quadro comparativo clínico entre exaustão térmica e golpe de calor (intermação).](../imagens/Heat-symptoms-2022-final.png)
+*Figura 3 — Quadro comparativo clínico entre exaustão térmica e golpe de calor (intermação). Crédito: National Weather Service / CDC / NIOSH. Licença: Domínio público. Fonte: Wikimedia Commons.*
+
+
+![Figura 2 — Envoltório de isolamento térmico passivo e ativo para prevenção da hipotermia no trauma.](../imagens/Hypothermia-wrap.png)
+*Figura 2 — Envoltório de isolamento térmico passivo e ativo para prevenção da hipotermia no trauma. Crédito: Baedr-9439. Licença: CC0. Fonte: Wikimedia Commons.*
+
+
 Em ambientes externos, a termorregulação é desafiada pelo vento, umidade e radiação solar direta [1, 9]:
 
 #### Hipotermia ao Ar Livre:
@@ -226,9 +236,6 @@ Em ambientes externos, a termorregulação é desafiada pelo vento, umidade e ra
 - **Sinais Clínicos:** Tremores incontroláveis seguidos de fala arrastada, apatia, confusão mental e perda da capacidade de movimentar os dedos para abrir mochilas. Se a temperatura cair mais, os tremores cessam (sinal de esgotamento metabólico crítico).
 - **Manejo:** Trocar roupas molhadas por roupas secas imediatamente, envolver o corpo em **manta térmica aluminizada impermeável** (lado prateado voltado para o corpo para refletir a radiação infravermelha), proteger do vento e oferecer bebidas mornas açucaradas se a vítima estiver 100% consciente [1, 9].
 
-
-![Figura 3 — Quadro comparativo clínico entre exaustão térmica e golpe de calor (intermação).](../imagens/Heat-symptoms-2022-final.png)
-*Figura 3 — Quadro comparativo clínico entre exaustão térmica e golpe de calor (intermação). Crédito: National Weather Service / CDC / NIOSH. Licença: Domínio público. Fonte: Wikimedia Commons.*
 
 #### Insolação e Doenças do Calor em Corridas de Rua:
 - Hidratação planejada a cada 20 a 30 minutos em pontos de apoio com água e eletrólitos;
@@ -259,7 +266,7 @@ A SOBRASA e a literatura médica mundial adotam a **Classificação de Afogament
 | **Grau 3** | Muita espuma na boca e nariz; **PULSO RADIAL PALPÁVEL**. | Oxigênio em alto fluxo, posição lateral de segurança, 192. | **UTI Hospitalar urgente.** | 5,2% |
 | **Grau 4** | Muita espuma na boca e nariz; **SEM PULSO RADIAL** (hipotensão). | Oxigênio, posição lateral, vigilância estrita de PCR, 192. | **UTI Hospitalar com suporte avançado.** | 19,4% |
 | **Grau 5** | Parada respiratória isolada; **TEM PULSO CAROTÍDEO**. | **Ventilação de resgate imediata (boca-máscara) até voltar.** | **Suporte Avançado do SAMU 192.** | 44% |
-| **Grau 6** | **PARADA CARDIORRESPIRATÓRIA (SEM PULSO E SEM RESPIRAÇÃO).** | **5 Ventilações Iniciais + RCP 30:2 contínua + Uso do DEA.** | **SAMU 192 com transporte com manobras.** | 93% |
+| **Grau 6** | **PARADA CARDIORRESPIRATÓRIA (SEM RESPIRAÇÃO NORMAL).** | **RCP precoce; ventilações se treinado/capaz; DEA assim que disponível.** | **SAMU 192 com transporte com manobras.** | Prognóstico depende de múltiplos fatores. |
 
 ---
 
@@ -268,9 +275,6 @@ A SOBRASA e a literatura médica mundial adotam a **Classificação de Afogament
 > [!CAUTION]
 > **Erro que pode prejudicar a vítima:** Não entre em piscina profunda, rio ou mar para salvar alguém se você não tem preparo e condições seguras. Lance um objeto flutuante, use vara ou corda e acione 193. Não tente tirar água dos pulmões pressionando a barriga.
 
-
-![Figura 4 — Posicionamento para compressões torácicas no adulto.](../imagens/Cardiopulmonary_Resuscitation_Adult.jpg)
-*Figura 4 — Posicionamento para compressões torácicas no adulto. Crédito: Illinois Waterway Visitor Center, US Army Corps of Engineers. Licença: Domínio público. Fonte: Wikimedia Commons.*
 
 1. **Tentar retirar água dos pulmões apertando a barriga da vítima:** A manobra de comprimir o estômago ou virar a pessoa de cabeça para baixo para "escorrer água" é **completamente inútil e perigosa**. A água ingerida no estômago é vomitada, entra nas vias aéreas e bloqueia a ventilação. **Não tente drenar água; forneça ar!** [1, 2].
 2. **Pular na água para salvar alguém sem flutuador:** Vítimas em pânico possuem força descontrolada e afundam o socorrista para tentar manter a própria cabeça fora d'água. Ofereça boia, vara ou corda da borda seca [2, 4].
@@ -295,7 +299,7 @@ Na Academia Aquática Ondas, durante uma aula de hidroginástica às 10h da manh
    - Presença de quantidade moderada de espuma esbranquiçada saindo pelas narinas e boca.
    - Ausência de movimentos respiratórios regulares e ausência de pulso central (Grau 6 de Szpilman - Parada Cardiorrespiratória por Afogamento).
 3. **Execução da RCP Especializada de Afogamento:**
-   - Marcos posiciona a máscara de bolso (Pocket Mask) com válvula unidirecional sobre a face da vítima, veda com as duas mãos elevando o queixo e aplica **5 ventilações de resgate lentas e profundas**. Observa a expansão satisfatória do tórax.
+   - Marcos posiciona a máscara de bolso com válvula unidirecional, abre a via aérea e inicia RCP conforme treinamento, buscando elevação visível do tórax sem ventilações excessivas. Um segundo socorrista busca o DEA.
    - Imediatamente após a quinta ventilação, inicia ciclos de **30 compressões torácicas profundas seguidas de 2 ventilações**.
 4. **Instalação do DEA:**
    - O estagiário corre à recepção e retorna com o DEA e toalhas secas.
@@ -305,7 +309,7 @@ Na Academia Aquática Ondas, durante uma aula de hidroginástica às 10h da manh
    - Marcos mantém a RCP 30:2 com trocas a cada 2 minutos.
    - Ao término do segundo ciclo de compressões, Dona Teresa tosse vigorosamente, expele secreção aquosa pela boca e apresenta respiração espontânea presente.
    - É colocada na Posição Lateral de Segurança sobre uma toalha seca para drenagem de secreções, mantida aquecida com a manta térmica aluminizada.
-6. **Desfecho:** A equipe do SAMU 192 chega em 8 minutos, assume a paciente consciente com saturação de 92%, administra oxigenoterapia sob máscara com reservatório e a transporta ao hospital. Dona Teresa recuperou-se plenamente sem déficit cognitivo devido à oxigenação imediata com as 5 ventilações iniciais.
+6. **Desfecho:** A equipe do SAMU 192 assume o atendimento e transporta a paciente para avaliação. O caso não permite prometer recuperação neurológica por uma única intervenção; enfatiza resgate seguro, RCP precoce e acionamento rápido.
 
 ---
 
@@ -340,7 +344,7 @@ Na Academia Aquática Ondas, durante uma aula de hidroginástica às 10h da manh
   ┌─────┴─────────────────────────┐                     Manta térmica               eletrólitos e
   ▼                               ▼                     aluminizada                 resfriamento
 Graus 1 a 5:                Grau 6: PCR Afogado         Bebidas mornas              sombra
-Oxigênio + PLS              5 Ventilações Iniciais!
+Oxigênio + PLS              RCP precoce + ventilações se capaz
 Aquecimento                 depois RCP 30:2
 Chamar 192                  Secar tórax + DEA
 ```
@@ -349,7 +353,7 @@ Chamar 192                  Secar tórax + DEA
 
 ## SEÇÃO 11 — O QUE VOCÊ PRECISA LEMBRAR
 
-- Na PCR por afogamento, forneça obrigatoriamente 5 ventilações de resgate iniciais antes das compressões torácicas.
+- Na PCR por afogamento, inicie RCP precocemente; ventilações são importantes para quem tem treinamento e condição de realizá-las, sem atrasar DEA e acionamento do resgate.
 - O afogamento é silencioso; não espere pedidos de socorro extravagantes para identificar alguém em perigo na água.
 - Priorize sempre o resgate sem entrar na água (use varas, boias e cordas).
 - Piscinas coletivas devem possuir ralos anti-aprisionamento e botão de emergência da bomba de fácil acesso.
