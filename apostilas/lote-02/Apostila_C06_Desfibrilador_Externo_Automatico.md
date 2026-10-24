@@ -167,6 +167,14 @@ A evolução dos DEAs trouxe as correntes **bifásicas truncadas exponenciais**.
 *Figura 2 — Conjunto completo de Desfibrilador Externo Automático conectado aos eletrodos. Crédito: Baedr-9439. Licença: CC0. Fonte: Wikimedia Commons.*
 
 ### 5.2 Identificação e Operação Passo a Passo do DEA
+
+![Figura 5 — Sinal ISO 7010 E010: localização do DEA.](../imagens/ISO_7010_E010.png)
+*Figura 5 — Sinal ISO 7010 E010: localização do DEA. Crédito: M!dgard. Licença: CC0. Fonte: Wikimedia Commons.*
+
+
+![Figura 4 — DEA de acesso público em gabinete sinalizado.](../imagens/Public_access_AED_with_coded_lock.jpg)
+*Figura 4 — DEA de acesso público em gabinete sinalizado. Crédito: Christian P. Nielsen. Licença: CC0. Fonte: Wikimedia Commons.*
+
 Independentemente da marca ou fabricante comercial, a operação de qualquer DEA obedece a uma sequência padronizada internacionalmente em quatro etapas operacionais [1, 3]:
 
 ```
@@ -243,9 +251,6 @@ O treinamento com o DEA deve utilizar aparelhos simuladores de treinamento (*DEA
 | **Vítima em Piso Metálico (Doca, Navio, Passarela)** | Risco de condução periférica de corrente para a estrutura de ferro. | O choque pode ser disparado com segurança no piso metálico desde que as pás adesivas estejam coladas exclusivamente na pele da vítima e ninguém encoste no corpo dela [4]. |
 
 
-![Figura 4 — DEA de acesso público em gabinete sinalizado.](../imagens/Public_access_AED_with_coded_lock.jpg)
-*Figura 4 — DEA de acesso público em gabinete sinalizado. Crédito: Christian P. Nielsen. Licença: CC0. Fonte: Wikimedia Commons.*
-
 ---
 
 ### Quadro 6.2 — Ciclo Operacional de 2 Minutos com o DEA
@@ -285,9 +290,6 @@ O treinamento com o DEA deve utilizar aparelhos simuladores de treinamento (*DEA
 
 ---
 
-
-![Figura 5 — Sinal ISO 7010 E010: localização do DEA.](../imagens/ISO_7010_E010.png)
-*Figura 5 — Sinal ISO 7010 E010: localização do DEA. Crédito: M!dgard. Licença: CC0. Fonte: Wikimedia Commons.*
 
 ## SEÇÃO 8 — APLICAÇÃO PRÁTICA CONTEXTUALIZADA (ESTUDO DE CASO)
 
@@ -383,7 +385,7 @@ BIOFÍSICA DO CHOQUE               OS 4 PASSOS UNIVERSAIS              SITUAÇÕ
 
 ## SEÇÃO 11 — O QUE VOCÊ PRECISA LEMBRAR
 
-1. **O DEA é 100% seguro:** Ele não dispara choque se a vítima não estiver em parada com ritmo chocável (FV/TVSP). Não tenha medo de usá-lo.
+1. **O DEA deve ser usado conforme suas instruções:** ele analisa o ritmo e só recomenda choque quando identifica ritmo chocável. Afaste todos durante análise/choque, siga os comandos do aparelho e retome RCP imediatamente quando orientado.
 2. **Tempo é o fator crítico:** Cada minuto sem choque reduz a chance de reversão em 10%. Peça o DEA no primeiro segundo da ocorrência.
 3. **Sequência dos 4 passos:** Ligue o aparelho, cole as pás adesivas no peito nu e seco, afaste todos durante a análise e aperte o botão de choque quando indicado.
 4. **Posicionamento padrão das pás:** Abaixo da clavícula direita e na linha axilar média esquerda (costela inferior esquerda).
@@ -421,5 +423,5 @@ BIOFÍSICA DO CHOQUE               OS 4 PASSOS UNIVERSAIS              SITUAÇÕ
 | **Status:** | `Aguardando Aprovação Científica` |
 | **Data da Redação:** | 19 de outubro de 2026 |
 | **Versão:** | 1.0.0 |
-| **Validação Científica por IA:** | Conforme diretrizes AHA/ILCOR/ERC e SBC |
+| **Situação científica:** | Revisado editorialmente; requer homologação por profissional habilitado antes do uso instrucional. |
 | **Próxima Revisão:** | Outubro de 2027 |
