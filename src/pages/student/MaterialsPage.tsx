@@ -130,7 +130,7 @@ export const MaterialsPage: React.FC = () => {
       </div>
 
       {/* Grid das 40 Apostilas */}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div className="grid grid-cols-1 gap-7 md:grid-cols-2 lg:grid-cols-3">
         {filteredModules.map(mod => {
           const lib = INITIAL_LIBRARIES.find(l => l.id === mod.libraryId);
           const isStudied = studiedCodes.includes(mod.code);
@@ -180,7 +180,7 @@ export const MaterialsPage: React.FC = () => {
                 <div className="text-[11px] text-slate-500 mt-3 flex items-center gap-2 font-medium">
                   <span>{mod.subtopics.length} subtemas oficiais</span>
                   <span>•</span>
-                  <span>Ilustrada (Wikimedia Commons)</span>
+                  <span>Diagramas e ilustrações didáticas</span>
                 </div>
               </div>
 
@@ -229,10 +229,10 @@ export const MaterialsPage: React.FC = () => {
               </div>
 
               <div className="flex items-center gap-2">
-                <TextHighlightToolbar />
+                <div className="hidden sm:block"><TextHighlightToolbar /></div>
                 <button
                   onClick={() => setActiveModule(null)}
-                  className="p-2 rounded-xl bg-red-500/10 text-red-400 hover:bg-red-500/20 border border-red-500/20"
+                  className="rounded-xl p-2.5 text-slate-500 hover:bg-slate-200 dark:text-slate-300 dark:hover:bg-slate-800 focus-visible:outline-2 focus-visible:outline-teal-500"
                   title="Fechar Leitor (ESC)"
                 >
                   <X className="w-5 h-5" />
@@ -243,6 +243,7 @@ export const MaterialsPage: React.FC = () => {
             {/* Corpo da Apostila */}
             <div className="styled-scrollbar min-h-0 flex-1 overflow-y-auto bg-slate-100/90 px-3 py-6 dark:bg-slate-950/85 sm:px-7 sm:py-10">
               <div className="max-w-5xl mx-auto">
+                <div className="mb-5 flex justify-end sm:hidden"><TextHighlightToolbar /></div>
                 {loadingMd ? (
                   <div className="py-24 text-center space-y-3">
                     <BookOpen className="w-10 h-10 text-uniao-400 animate-pulse mx-auto" />
