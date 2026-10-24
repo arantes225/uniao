@@ -101,7 +101,7 @@ O engasgo grave ocorre quando um alimento ou objeto bloqueia a passagem de ar. C
 
 Em adultos e idosos, o engasgo grave ocorre comumente associado à ingestão rápida de grandes pedaços de carne pouco mastigados (o clássico "bife de churrasco"), frequentemente agravado pelo uso concomitante de álcool, próteses dentárias mal adaptadas que diminuem a sensibilidade palatina ou doenças neurológicas degenerativas prévias (como sequelas de AVC, Doença de Parkinson ou demências senis) [2, 5].
 
-O fator definidor no engasgo é a **velocidade da anóxia**. Uma via aérea completamente ocluída interrompe o aporte alveolar de oxigênio de forma instantânea. O oxigênio dissolvido no sangue esgota-se em 90 a 120 segundos. A vítima perde a consciência em menos de 2 minutos e entra em parada cardíaca por anóxia tecidual entre 4 e 6 minutos [1, 7]. Nenhuma ambulância, por mais veloz que seja, consegue vencer o trânsito urbano em 2 minutos. Portanto, **o salvamento da pessoa engasgada depende exclusivamente da ação imediata e correta da pessoa que está ao lado dela**.
+Uma obstrução grave pode deteriorar rapidamente, mas o tempo até inconsciência ou parada varia com idade, condição clínica e grau de obstrução. Reconheça incapacidade de falar, tossir ou respirar, acione o serviço de emergência cedo e aplique a sequência apropriada à faixa etária. A ação imediata de quem presencia é importante, mas não substitui o acionamento do resgate.
 
 ---
 
@@ -172,7 +172,7 @@ Antes de encostar as mãos na vítima, o socorrista deve fazer uma única pergun
 
 ### 5.3 Abordagem Sistemática no Adulto Consciente (Manobra de Heimlich)
 
-![Sequência atual de desengasgo no adulto: cinco pancadas dorsais e cinco compressões abdominais](../../public/apostilas/imagens/usm-engasgo-adulto-2025.svg)
+![Sequência atual de desengasgo no adulto: cinco pancadas dorsais e cinco compressões abdominais](../imagens/usm-engasgo-adulto-2025.svg)
 *Figura complementar — Sequência atual de desengasgo no adulto: cinco pancadas dorsais e cinco compressões abdominais. Ilustração original União Serviços Médicos (2026), baseada em AHA 2025; não reproduz material gráfico de terceiros.*
 
 Na obstrução grave em adultos conscientes, as diretrizes AHA 2025 orientam alternar **5 pancadas firmes entre as escápulas** e **5 compressões abdominais**. Repita até a expulsão do objeto ou a perda de consciência. As instruções abaixo descrevem a etapa abdominal [1, 3]:
@@ -203,7 +203,11 @@ Na obstrução grave em adultos conscientes, as diretrizes AHA 2025 orientam alt
 
 ### 5.4 Particularidades Críticas: Manejo no Lactente e na Criança
 
-![Sequência de desengasgo em lactentes: cinco pancadas nas costas e cinco impulsos torácicos](../../public/apostilas/imagens/usm-engasgo-lactente-2025.svg)
+![Demonstração esquemática de posição de lactente para desengasgo: costas e tórax, com suporte à cabeça e ao pescoço.](../imagens/usm-desengasgo-lactente-posicoes.svg)
+*Ilustração autoral USM — apoio para estudo do desengasgo em lactentes; nunca realizar compressões abdominais em bebês.*
+
+
+![Sequência de desengasgo em lactentes: cinco pancadas nas costas e cinco impulsos torácicos](../imagens/usm-engasgo-lactente-2025.svg)
 *Figura complementar — Sequência de desengasgo em lactentes: cinco pancadas nas costas e cinco impulsos torácicos. Ilustração original União Serviços Médicos (2026), baseada em AHA/AAP 2025; não reproduz material gráfico de terceiros.*
 
 
@@ -219,9 +223,13 @@ Se o bebê parar de chorar, não emitir som, apresentar tosse muda e ficar arrox
 **Nunca faça compressões abdominais em lactentes.**
 
 #### 5.4.2 Manejo em Crianças Maiores (> 1 ano):
-Em crianças com mais de um ano que deambulam, a Manobra de Heimlich pode ser realizada, porém com o socorrista **ajoelhado no piso** para nivelar-se à altura da criança, dosando a intensidade da força para a estrutura corporal infantil [1, 4].
+Em crianças com mais de um ano com obstrução grave e ainda conscientes, alterne 5 golpes nas costas e 5 compressões abdominais; posicione-se de modo estável e adequado ao tamanho da criança. Em lactentes, faça 5 golpes nas costas alternados com 5 compressões torácicas — **nunca compressões abdominais** [1, 4].
 
 ### 5.5 Atendimento da Vítima com Perda de Consciência
+
+![Figura 2 — Manobra de inclinação da cabeça e elevação do mento (head-tilt/chin-lift).](../imagens/Head-tilt-chin-lift-maneuver.jpg)
+*Figura 2 — Manobra de inclinação da cabeça e elevação do mento (head-tilt/chin-lift). Crédito: Another-anon-artist-234. Licença: CC0. Fonte: Wikimedia Commons.*
+
 Se o corpo estranho não for desobstruído a tempo e a vítima desmaiar (arresponsividade):
 1. **Amparo na queda:** Apoie o corpo da vítima suavemente até o piso firme em decúbito dorsal.
 2. **Acione o Suporte Avançado:** Aponte para alguém e mande ligar 192 e trazer o DEA.
@@ -253,10 +261,6 @@ A prevenção é o pilar mais eficiente da segurança da vida. Conforme preconiz
 | **Lactente (< 1 ano)** | Bebê não chora, tosse muda, boca arroxeada, sem ar. | **Obstrução Total Infantil** | **5 Pancadas Dorsais** alternadas com **5 Compressões Torácicas**. Sem Heimlich! |
 | **Vítima Inconsciente** | Desmaiou após o engasgo, arresponsiva no piso. | **Parada Respiratória por OVACE** | Chamar 192 e **iniciar ciclos de RCP (compressões torácicas)**. Olhar a boca antes de soprar. |
 
-
-![Figura 2 — Compressões em vítima de engasgo que evolui para inconsciência em decúbito dorsal.](../imagens/Supine-abdominal-thrust.jpg)
-*Figura 2 — Compressões em vítima de engasgo que evolui para inconsciência em decúbito dorsal. Crédito: Another-anon-artist-234. Licença: CC0. Fonte: Wikimedia Commons.*
-
 ---
 
 ### Quadro 6.2 — Comparativo das Técnicas de Desobstrução por Faixa Etária
@@ -267,6 +271,7 @@ A prevenção é o pilar mais eficiente da segurança da vida. Conforme preconiz
 | **Técnica Dorsal** | 5 pancadas firmes com calcanhar da mão na escápula. | Parte da sequência AHA 2025: 5 pancadas dorsais alternadas com 5 compressões abdominais [3]. |
 | **Técnica Abdominal** | **TERMINANTEMENTE PROIBIDA.** | Manobra de Heimlich suave com punho fechado. | Manobra de Heimlich vigorosa em formato de "J". |
 | **Técnica no Inconsciente** | RCP pediátrica (30:2 ou 15:2) no solo; olhar a boca. | RCP pediátrica no solo; olhar a boca. | RCP adulta (compressões contínuas ou 30:2); olhar a boca. |
+
 
 ---
 
@@ -296,10 +301,6 @@ A prevenção é o pilar mais eficiente da segurança da vida. Conforme preconiz
 > 
 > 5. **Levantar os braços da pessoa engasgada ("levanta os braços que passa"):**
 >    - *Por que não fazer:* Trata-se de uma lenda popular sem nenhum fundamento anatômico ou biofísico. Erguer os braços não altera o diâmetro da laringe nem desloca o corpo estranho, apenas posterga o início da Manobra de Heimlich real.
-
-
-![Figura 3 — Manobra de inclinação da cabeça e elevação do mento (head-tilt/chin-lift).](../imagens/Head-tilt-chin-lift-maneuver.jpg)
-*Figura 3 — Manobra de inclinação da cabeça e elevação do mento (head-tilt/chin-lift). Crédito: Another-anon-artist-234. Licença: CC0. Fonte: Wikimedia Commons.*
 
 ---
 
@@ -398,7 +399,7 @@ A prevenção é o pilar mais eficiente da segurança da vida. Conforme preconiz
 
 ### Referências Consultadas (Padrão ABNT NBR 6023)
 
-[1] AMERICAN HEART ASSOCIATION (AHA). **2020 American Heart Association Guidelines for Cardiopulmonary Resuscitation and Emergency Cardiovascular Care: Part 3: Adult Basic Life Support and Foreign Body Airway Obstruction**. *Circulation*, Dallas, v. 142, n. 16, supl. 2, p. S366-S468, 2020. DOI: 10.1161/CIR.0000000000000916. [Com atualizações 2021-2025].
+[1] AMERICAN HEART ASSOCIATION (AHA). **2025 American Heart Association Guidelines for Cardiopulmonary Resuscitation and Emergency Cardiovascular Care: Adult Basic Life Support and Foreign-Body Airway Obstruction**. Disponível em: https://cpr.heart.org/en/resuscitation-science/cpr-and-ecc-guidelines/adult-basic-life-support.
 
 [2] INTERNATIONAL LIAISON COMMITTEE ON RESUSCITATION (ILCOR). **Consensus on Science and Treatment Recommendations for Foreign Body Airway Obstruction**. *Resuscitation*, v. 156, p. A1-A240, 2020. Disponível em: https://www.ilcor.org.
 
@@ -427,7 +428,7 @@ A prevenção é o pilar mais eficiente da segurança da vida. Conforme preconiz
 | **Status:** | `Aguardando Aprovação Científica` |
 | **Data da Redação:** | 19 de outubro de 2026 |
 | **Versão:** | 1.0.0 |
-| **Validação Científica por IA:** | Conforme diretrizes AHA/ILCOR/ERC, SBP e Lei Lucas |
+| **Situação científica:** | Revisado editorialmente; requer homologação por profissional habilitado antes do uso instrucional. |
 | **Próxima Revisão:** | Outubro de 2027 |
 
 
