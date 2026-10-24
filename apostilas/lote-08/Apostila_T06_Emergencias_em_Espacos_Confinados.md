@@ -114,7 +114,6 @@ O $H_2S$ é gerado pela decomposição bacteriana anaeróbia de esgotos, águas 
 - **Mecanismo Tóxico Celular:** Em concentrações elevadas (> 500 ppm), uma única inalação atua de forma análoga ao cianeto, inibindo a enzima citocromo c oxidase na cadeia respiratória das mitocôndrias celulares. A produção de ATP desaba instantaneamente, provocando parada respiratória central e colapso circulatório imediato ("efeito raio" ou *knockdown*).
 
 
-
 ### C. Monóxido de Carbono ($CO$)
 Emitido por motores a combustão interna (geradores, compressores e bombas a gasolina operando perto da boca do espaço confinado):
 - Possui afinidade pela hemoglobina cerca de 200 a 250 vezes superior à do oxigênio, formando a **Carboxiemoglobina (COHb)**.
@@ -154,6 +153,14 @@ Legalmente, de acordo com a Norma Regulamentadora nº 33 do MTE e a ABNT NBR 165
 
 ### 5.2. Deficiência de Oxigênio e Atmosferas Tóxicas/Inflamáveis
 
+![Esquema de tanque industrial com atmosfera potencialmente perigosa e socorrista fora da área isolada, com alerta de que máscara filtrante não fornece oxigênio.](../imagens/usm-espaco-confinado-perigo-visual.svg)
+*Ilustração autoral USM — não entre em espaços confinados para resgate improvisado; acione 193 e equipes habilitadas.*
+
+
+> [!CAUTION]
+> **Máscara com filtro não fornece oxigênio.** Respiradores filtrantes comuns não protegem em atmosfera deficiente de oxigênio, desconhecida ou imediatamente perigosa à vida. Não entre para socorrer. Isole o local e acione 193. A entrada e o resgate exigem equipe especializada com equipamentos adequados.
+
+
 Antes de qualquer abertura ou entrada em espaço confinado, é obrigatória a realização de testes atmosféricos utilizando **detector portátil de 4 gases devidamente calibrado e testado (*bump test*)**:
 
 ```
@@ -190,7 +197,7 @@ O vigia deve manter vigilância ininterrupta e reconhecer os sinais de colapso n
 
 ### 5.4. Prevenção do Resgate Impulsivo Desprotegido
 
-![Proibição de entrada improvisada para socorrer vítimas em espaço confinado](../../public/apostilas/imagens/usm-espaco-confinado.svg)
+![Proibição de entrada improvisada para socorrer vítimas em espaço confinado](../imagens/usm-espaco-confinado.svg)
 *Figura complementar — Proibição de entrada improvisada para socorrer vítimas em espaço confinado. Ilustração original União Serviços Médicos (2026), baseada em NR-33 e procedimentos de salvamento; não reproduz imagens de terceiros.*
 
 
@@ -300,9 +307,6 @@ Assim que a vítima for extraída para a atmosfera livre:
 | **Vítima Resgatada Consciente mas Confusa e Sonolenta** | Hipóxia cerebral aguda ou intoxicação por monóxido de carbono. | Acionar 192, observar respiração e manter repouso; oxigênio somente por equipe habilitada e conforme protocolo. | Permitir que a vítima levante e vá embora dirigindo; dar café ou água para beber. |
 
 
-![Figura 3 — Respirador filtrante NÃO fornece oxigênio e não autoriza entrada em espaço confinado.](../imagens/Full-face-respirator.jpg)
-*Figura 3 — Respirador filtrante NÃO fornece oxigênio e não autoriza entrada em espaço confinado. Crédito: Another-anon-artist-234. Licença: CC0. Fonte: Wikimedia Commons.*
-
 ---
 
 ## 7. ERROS FREQUENTES E CONDUTAS PROIBIDAS NO AMBIENTE INDUSTRIAL
@@ -358,9 +362,6 @@ Carlos sentiu a adrenalina disparar e o impulso de descer a escada para resgatar
 8. **Transferência para a USA do SAMU:** Com a oxigenação cerebral restabelecida a 100%, Roberto recuperou os movimentos respiratórios espontâneos aos 6 minutos e esboçou reflexo de tosse. A Unidade de Suporte Avançado (USA) do SAMU chegou aos 11 minutos, assumindo o paciente com suporte ventilatório mecânico e encaminhamento para o hospital terciário com diagnóstico de intoxicação aguda por gás sulfídrico.
 
 
-![Figura 4 — Equipamento de ventilação reservado a equipe habilitada após a retirada segura da vítima.](../imagens/Bag-valve-mask.jpg)
-*Figura 4 — Equipamento de ventilação reservado a equipe habilitada após a retirada segura da vítima. Crédito: Another-anon-artist-234. Licença: CC0. Fonte: Wikimedia Commons.*
-
 ### Desfecho Clínico
 No hospital, Roberto foi admitido na UTI, submetido a suporte ventilatório não invasivo com FiO₂ a 100% e monitoramento eletrocardiográfico e gasométrico. Não houve evolução para edema agudo de pulmão. A tomografia cerebral demonstrou integridade dos núcleos da base. Roberto teve alta da UTI em 48 horas e alta hospitalar no quarto dia, completamente são e sem nenhum déficit neurológico motor ou cognitivo. O relatório da perícia de segurança do trabalho destacou que, **se o vigia Carlos tivesse descido para resgatar Roberto, ambos teriam falecido em menos de 3 minutos no fundo do poço**.
 
@@ -377,7 +378,7 @@ No hospital, Roberto foi admitido na UTI, submetido a suporte ventilatório não
 > 
 > **4. Pré-Conexão do Tripé é Obrigatória:** O trabalhador não pode descer desamarrado e "esperar passar mal para jogar uma corda". A linha de vida do guincho deve descer engatada no cinto dele. Se ele desmaiar, é só rodar a manivela da superfície e puxá-lo em menos de 2 minutos.
 > 
-> **5. Boca a Boca em Gás Mata o Socorrista:** Nunca encoste sua boca na boca de quem foi resgatado de esgoto, fossa ou tanque químico. O gás tóxico estocado no pulmão dele vai direto para o seu. Use sempre o ambu com filtro!
+> **5. Não ventile em ambiente contaminado:** nunca faça boca a boca nem use BVM como justificativa para entrar ou permanecer em atmosfera insegura. A ventilação deve ocorrer apenas na zona fria, após resgate/descontaminação, por equipe habilitada e com proteção adequada.
 
 ---
 
