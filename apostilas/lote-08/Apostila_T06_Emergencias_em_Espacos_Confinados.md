@@ -190,7 +190,7 @@ O vigia deve manter vigilância ininterrupta e reconhecer os sinais de colapso n
 
 ### 5.4. Prevenção do Resgate Impulsivo Desprotegido
 
-![Proibição de entrada improvisada para socorrer vítimas em espaço confinado](./apostilas/imagens/usm-espaco-confinado.svg)
+![Proibição de entrada improvisada para socorrer vítimas em espaço confinado](../../public/apostilas/imagens/usm-espaco-confinado.svg)
 *Figura complementar — Proibição de entrada improvisada para socorrer vítimas em espaço confinado. Ilustração original União Serviços Médicos (2026), baseada em NR-33 e procedimentos de salvamento; não reproduz imagens de terceiros.*
 
 
