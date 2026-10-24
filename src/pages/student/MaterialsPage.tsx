@@ -77,7 +77,7 @@ export const MaterialsPage: React.FC = () => {
             Apostilas Didáticas & Ilustrações
           </h1>
           <p className={`text-xs sm:text-sm ${theme === 'dark' ? 'text-slate-400' : 'text-slate-600'}`}>
-            Material didático oficial da União Serviços Médicos com figuras certificadas, algoritmos e casos clínicos.
+            Material didático da União Serviços Médicos, organizado por capítulos, ilustrações, algoritmos e casos práticos.
           </p>
         </div>
 
@@ -204,13 +204,13 @@ export const MaterialsPage: React.FC = () => {
       {activeModule && (
         <div className="apostila-leitor fixed inset-0 z-50 bg-black/80 backdrop-blur-xs flex items-center justify-center p-0">
           <div
-            className={`w-full h-screen rounded-none border-0 shadow-2xl flex flex-col overflow-hidden ${
+            className={`w-full h-[100dvh] rounded-none border-0 shadow-2xl flex flex-col overflow-hidden ${
               theme === 'dark' ? 'bg-slate-900 border-slate-700 text-white' : 'bg-white border-slate-200 text-slate-900'
             }`}
           >
             {/* Header do Leitor */}
             <div
-              className={`px-6 py-4 border-b flex items-center justify-between shrink-0 ${
+              className={`px-4 py-4 sm:px-8 border-b flex items-center justify-between gap-3 shrink-0 ${
                 theme === 'dark' ? 'bg-slate-950 border-slate-800' : 'bg-slate-50 border-slate-200'
               }`}
             >
@@ -241,8 +241,8 @@ export const MaterialsPage: React.FC = () => {
             </div>
 
             {/* Corpo da Apostila */}
-            <div className="styled-scrollbar flex-1 overflow-y-auto p-6 sm:p-12">
-              <div className="max-w-3xl mx-auto">
+            <div className="styled-scrollbar min-h-0 flex-1 overflow-y-auto bg-slate-100/90 px-3 py-6 dark:bg-slate-950/85 sm:px-7 sm:py-10">
+              <div className="max-w-5xl mx-auto">
                 {loadingMd ? (
                   <div className="py-24 text-center space-y-3">
                     <BookOpen className="w-10 h-10 text-uniao-400 animate-pulse mx-auto" />
