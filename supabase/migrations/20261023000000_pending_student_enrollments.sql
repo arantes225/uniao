@@ -13,6 +13,9 @@ create table if not exists public.pending_student_enrollments (
 create index if not exists pending_student_enrollments_email_idx
   on public.pending_student_enrollments (lower(email));
 
+create index if not exists pending_student_enrollments_cohort_idx
+  on public.pending_student_enrollments (cohort_id);
+
 alter table public.pending_student_enrollments enable row level security;
 
 revoke all on public.pending_student_enrollments from anon, authenticated;
