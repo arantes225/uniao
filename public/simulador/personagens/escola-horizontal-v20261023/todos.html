@@ -37,7 +37,7 @@
     .pose-tag { white-space:nowrap; border:1px solid #38d6b055; border-radius:999px; padding:4px 8px; color:var(--accent); font-size:.68rem; font-weight:800; text-transform:uppercase; letter-spacing:.09em; }
     .patient { position:relative; aspect-ratio:1672/941; overflow:hidden; background:#081a28; }
     .patient img { position:absolute; inset:0; width:100%; height:100%; object-fit:cover; }
-    .patient .chest { -webkit-mask-image:radial-gradient(ellipse var(--chest-rx) var(--chest-ry) at var(--chest-x) var(--chest-y), #000 52%, transparent 100%); mask-image:radial-gradient(ellipse var(--chest-rx) var(--chest-ry) at var(--chest-x) var(--chest-y), #000 52%, transparent 100%); transform-origin:var(--chest-x) var(--chest-y); animation:breathe 4.1s ease-in-out infinite; }
+    .patient .chest { -webkit-mask-image:radial-gradient(ellipse var(--chest-rx) var(--chest-ry) at var(--chest-x) var(--chest-y), #000 42%, transparent 100%); mask-image:radial-gradient(ellipse var(--chest-rx) var(--chest-ry) at var(--chest-x) var(--chest-y), #000 42%, transparent 100%); transform-origin:var(--chest-x) var(--chest-y); animation:breathe 4.1s ease-in-out infinite; }
     .patient .blink { opacity:0; -webkit-mask-image:radial-gradient(ellipse var(--eye-rx) var(--eye-ry) at var(--eye-left-x) var(--eye-left-y), #000 58%, transparent 100%),radial-gradient(ellipse var(--eye-rx) var(--eye-ry) at var(--eye-right-x) var(--eye-right-y), #000 58%, transparent 100%); mask-image:radial-gradient(ellipse var(--eye-rx) var(--eye-ry) at var(--eye-left-x) var(--eye-left-y), #000 58%, transparent 100%),radial-gradient(ellipse var(--eye-rx) var(--eye-ry) at var(--eye-right-x) var(--eye-right-y), #000 58%, transparent 100%); animation:blink 6.4s linear var(--blink-delay, 0s) infinite; }
     .patient.paused img { animation-play-state:paused !important; }
     .patient.no-breath .chest { animation:none; }
@@ -47,7 +47,7 @@
     .card-controls button { padding:7px 10px; font-size:.73rem; }
     .card-controls .command-state { width:100%; color:var(--muted); font-size:.72rem; }
     .empty { display:none; padding:30px; color:var(--muted); text-align:center; }
-    @keyframes breathe { 0%,100% { transform:scale(1); } 48% { transform:scale(1.04,1.11); } }
+    @keyframes breathe { 0%,100% { transform:scale(1); } 48% { transform:scale(1.015,1.045); } }
     @keyframes blink { 0%,17%,21%,70%,74%,100% { opacity:0; } 18%,20%,71%,73% { opacity:1; } }
     @media (max-width:700px) { header { display:block; } .status { margin:8px 0 0; } .toolbar { position:static; } .pager { display:block; } .pager > button { width:100%; margin-bottom:8px; } .page-buttons { justify-content:stretch; } .page-buttons button { flex:1 1 42px; } .page-counter { margin-top:8px; } }
     @media (prefers-reduced-motion:reduce) { .patient .chest, .patient .blink { animation:none; } }
