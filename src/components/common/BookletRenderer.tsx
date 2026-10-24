@@ -1,4 +1,4 @@
-import React, { useMemo } from 'react';
+import React, { useEffect, useMemo, useState } from 'react';
 import { Highlighter, Eraser } from 'lucide-react';
 
 interface BookletRendererProps {
@@ -108,6 +108,73 @@ const renderInline = (text: string): React.ReactNode[] => {
   });
 };
 
+interface ZoomableBookletImageProps {
+  src: string;
+  alt: string;
+  caption: string;
+}
+
+const ZoomableBookletImage: React.FC<ZoomableBookletImageProps> = ({ src, alt, caption }) => {
+  const [expanded, setExpanded] = useState(false);
+
+  useEffect(() => {
+    if (!expanded) return;
+    const closeOnEscape = (event: KeyboardEvent) => {
+      if (event.key === 'Escape') setExpanded(false);
+    };
+    window.addEventListener('keydown', closeOnEscape);
+    return () => window.removeEventListener('keydown', closeOnEscape);
+  }, [expanded]);
+
+  return (
+    <>
+      <figure className="my-6 p-4 rounded-2xl bg-slate-50 dark:bg-slate-950/80 border border-slate-200 dark:border-slate-800 flex flex-col items-center text-center shadow-md">
+        <button
+          type="button"
+          aria-label={`Ampliar imagem: ${alt || 'ilustração da apostila'}`}
+          title="Clique para ampliar a imagem"
+          className="max-w-full cursor-zoom-in rounded-xl focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-teal-500"
+          onClick={() => setExpanded(true)}
+        >
+          <img
+            src={src}
+            alt={alt}
+            loading="lazy"
+            className="max-h-96 max-w-full w-auto h-auto rounded-xl object-contain border border-slate-200 dark:border-slate-800 bg-white p-2"
+          />
+        </button>
+        {caption && (
+          <figcaption className="mt-3 text-xs text-slate-600 dark:text-slate-400 max-w-2xl leading-relaxed italic">
+            {renderInline(caption)}
+          </figcaption>
+        )}
+        <span className="mt-2 text-[11px] text-teal-700 dark:text-teal-300">Toque ou clique para ampliar</span>
+      </figure>
+      {expanded && (
+        <div
+          role="dialog"
+          aria-modal="true"
+          aria-label={`Imagem ampliada: ${alt || 'ilustração'}`}
+          className="fixed inset-0 z-[9999] flex flex-col items-center justify-center gap-3 bg-slate-950/95 p-3 sm:p-8"
+        >
+          <button
+            type="button"
+            aria-label="Fechar imagem ampliada"
+            onClick={() => setExpanded(false)}
+            className="self-end rounded-xl bg-white px-4 py-2 text-sm font-bold text-slate-900"
+          >
+            Fechar ✕
+          </button>
+          <div className="w-full flex-1 min-h-0 overflow-auto flex items-center justify-center">
+            <img src={src} alt={alt} className="max-w-full max-h-full w-auto h-auto object-contain rounded-xl bg-white" />
+          </div>
+          {caption && <p className="max-w-4xl text-center text-xs text-slate-200">{caption}</p>}
+        </div>
+      )}
+    </>
+  );
+};
+
 /**
  * Pure parser function that converts markdown text into React nodes.
  */
@@ -209,24 +276,7 @@ const parseMarkdown = (markdown: string): React.ReactNode[] => {
         caption = lines[i + 1].trim().slice(1, -1);
         i++;
       }
-      elements.push(
-        <figure
-          key={`img-${i}`}
-          className="my-6 p-4 rounded-2xl bg-slate-50 dark:bg-slate-950/80 border border-slate-200 dark:border-slate-800 flex flex-col items-center text-center shadow-md"
-        >
-          <img
-            src={src}
-            alt={alt}
-            loading="lazy"
-            className="max-h-96 w-auto rounded-xl object-contain border border-slate-200 dark:border-slate-800 bg-white p-2"
-          />
-          {caption && (
-            <figcaption className="mt-3 text-xs text-slate-600 dark:text-slate-400 max-w-2xl leading-relaxed italic">
-              {renderInline(caption)}
-            </figcaption>
-          )}
-        </figure>
-      );
+      elements.push(<ZoomableBookletImage key={`img-${i}`} src={src} alt={alt} caption={caption} />);
       i++;
       continue;
     }
