@@ -160,7 +160,7 @@ Desenvolvido pela Academia Americana de Pediatria (AAP), o **Triângulo de Avali
 
 ### 5.1 Convulsões Febris e Crises Convulsivas Pediátricas
 
-![Ações iniciais durante crise convulsiva e sinais para chamar emergência](./apostilas/imagens/usm-convulsao-primeiros-socorros.svg)
+![Ações iniciais durante crise convulsiva e sinais para chamar emergência](../../public/apostilas/imagens/usm-convulsao-primeiros-socorros.svg)
 *Figura complementar — Ações iniciais durante crise convulsiva e sinais para chamar emergência. Ilustração original União Serviços Médicos (2026), baseada em AHA/Cruz Vermelha 2024; não reproduz imagens de terceiros.*
 
 Quando uma criança apresentar movimentos involuntários espasmódicos e perda de consciência na sala de aula ou berçário [1, 2]:
