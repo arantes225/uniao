@@ -146,6 +146,10 @@ A metodologia de resposta a acidentes em escolas fundamenta-se nos princípios d
 
 ### 5.1 Estruturação do Plano de Emergência Escolar (PEE)
 
+![Planta esquemática de escola com salas, refeitório, pátio, secretaria, saída, DEA e primeiros socorros.](../imagens/usm-planta-resposta-escola.svg)
+*Ilustração autoral USM — exemplo não operacional. Substituir por planta real da escola, com responsáveis e pontos de atendimento definidos.*
+
+
 O Plano de Emergência Escolar (PEE) é o documento orientador de todas as medidas de contingência do estabelecimento de ensino. Ele deve ser elaborado de forma colaborativa entre a direção, a coordenação pedagógica, os representantes dos funcionários e, idealmente, assessorado pelo Corpo de Bombeiros ou serviço médico pré-hospitalar parceiro [1, 3].
 
 #### Componentes Mandatórios do PEE:
@@ -174,12 +178,9 @@ A clareza de funções é o antídoto contra a desorganização. Em situações 
 ---
 
 
-![Figura 1 — Sinal ISO 7010 E010: localização do DEA.](../imagens/ISO_7010_E010.png)
-*Figura 1 — Sinal ISO 7010 E010: localização do DEA. Crédito: M!dgard. Licença: CC0. Fonte: Wikimedia Commons.*
-
 ### 5.3 Protocolo Padronizado de Acionamento dos Serviços de Saúde (SAMU 192 e Bombeiros 193)
 
-![Informações que a equipe escolar deve transmitir ao 192 e 193](../../public/apostilas/imagens/usm-chamada-samu-bombeiros.svg)
+![Informações que a equipe escolar deve transmitir ao 192 e 193](../imagens/usm-chamada-samu-bombeiros.svg)
 *Figura complementar — Informações que a equipe escolar deve transmitir ao 192 e 193. Ilustração original União Serviços Médicos (2026), baseada em Ministério da Saúde — SAMU 192; não reproduz imagens de terceiros.*
 
 
@@ -215,6 +216,9 @@ O contato com os pais de um aluno acidentado é um momento delicado que exige em
 ---
 
 ### 5.5 Padronização, Inspeção e Preparo de Equipamentos e Maletas de Primeiros Socorros
+
+![Figura 1 — Sinal ISO 7010 E010: localização do DEA.](../imagens/ISO_7010_E010.png)
+*Figura 1 — Sinal ISO 7010 E010: localização do DEA. Crédito: M!dgard. Licença: CC0. Fonte: Wikimedia Commons.*
 
 
 ![Figura 2 — Maleta e estação de primeiros socorros sinalizada e acessível.](../imagens/First_aid_kit_on_wall.png)
@@ -276,9 +280,6 @@ A teoria só se transforma em reflexo motor se for praticada fisicamente em simu
 | **Nível 2 (Moderado)** | Entorses articulares com edema, cortes profundos, febre > 38,5 ºC. | Aplicar gelo local/pressão, colocar em repouso no acolhimento, ligar para os pais. | Pais retiram a criança para atendimento ambulatorial. |
 | **Nível 3 (Grave / Risco Vital)** | Parada cardiorrespiratória, engasgo total, convulsão > 5 min, TCE grave. | **Socorro imediato no local (RCP/Heimlich), acionamento de emergência (192) e portão aberto.** | **Transporte imediato por viatura do SAMU / Bombeiros.** |
 
-
-![Figura 3 — Transporte de apoio por dois socorristas para remoção controlada da zona de risco.](../imagens/Two-person-carry.png)
-*Figura 3 — Transporte de apoio por dois socorristas para remoção controlada da zona de risco. Crédito: Baedr-9439. Licença: CC0. Fonte: Wikimedia Commons.*
 
 ---
 
@@ -401,6 +402,9 @@ No Colégio Estadual Horizonte, durante o recreio unificado, dois alunos de 11 a
 ---
 
 ### Metadados Editoriais Institucionais
+
+> [!IMPORTANT]
+> **Limite de simulação:** exercícios servem para treinar comunicação, cena segura e acionamento. Não autorizam diagnóstico, administração de medicamentos ou técnicas avançadas fora de plano individual e treinamento válido.
 
 | CAMPO | ESPECIFICAÇÃO TÉCNICA |
 | :--- | :--- |
