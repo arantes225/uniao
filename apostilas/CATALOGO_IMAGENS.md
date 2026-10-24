@@ -18,20 +18,20 @@ Os gráficos abaixo são **originais da União Serviços Médicos**. Sua redaç�
 
 | Arquivo | Módulos publicados | Base técnica para conteúdo |
 | --- | --- | --- |
-| [`usm-engasgo-lactente-2025.svg`](../../public/apostilas/imagens/usm-engasgo-lactente-2025.svg) | C07, E03 | AHA/AAP 2025 |
-| [`usm-rcp-lactente-2025.svg`](../../public/apostilas/imagens/usm-rcp-lactente-2025.svg) | E02 | AHA/AAP 2025 |
-| [`usm-engasgo-adulto-2025.svg`](../../public/apostilas/imagens/usm-engasgo-adulto-2025.svg) | C07 | AHA 2025 |
-| [`usm-compressao-direta.svg`](../../public/apostilas/imagens/usm-compressao-direta.svg) | C10, H01, H02, H03 | AHA/Cruz Vermelha 2024 |
-| [`usm-torniquete-seguranca.svg`](../../public/apostilas/imagens/usm-torniquete-seguranca.svg) | H05, T02 | AHA/Cruz Vermelha 2024 |
-| [`usm-resgate-aquatico-seguro.svg`](../../public/apostilas/imagens/usm-resgate-aquatico-seguro.svg) | A05 | Diretrizes de segurança aquática e RCP após afogamento |
-| [`usm-risco-eletrico.svg`](../../public/apostilas/imagens/usm-risco-eletrico.svg) | T04 | NR-10 e orientações de resgate seguro |
-| [`usm-espaco-confinado.svg`](../../public/apostilas/imagens/usm-espaco-confinado.svg) | T06 | NR-33 e orientação sobre resgate especializado |
-| [`usm-lavagem-ocular.svg`](../../public/apostilas/imagens/usm-lavagem-ocular.svg) | T03 | AHA/Cruz Vermelha 2024 |
-| [`usm-chamada-samu-bombeiros.svg`](../../public/apostilas/imagens/usm-chamada-samu-bombeiros.svg) | C03, E07 | Ministério da Saúde — SAMU 192 |
-| [`usm-packing-somente-treinado.svg`](../../public/apostilas/imagens/usm-packing-somente-treinado.svg) | H04, H07 | AHA/Cruz Vermelha 2024 |
-| [`usm-convulsao-primeiros-socorros.svg`](../../public/apostilas/imagens/usm-convulsao-primeiros-socorros.svg) | E04 | AHA/Cruz Vermelha 2024 |
-| [`usm-dente-avulsionado.svg`](../../public/apostilas/imagens/usm-dente-avulsionado.svg) | E05 | AHA/Cruz Vermelha 2024 |
-| [`usm-intermacao-resfriamento.svg`](../../public/apostilas/imagens/usm-intermacao-resfriamento.svg) | A04 | AHA/Cruz Vermelha 2024 |
+| [`usm-engasgo-lactente-2025.svg`](../public/apostilas/imagens/usm-engasgo-lactente-2025.svg) | C07, E03 | AHA/AAP 2025 |
+| [`usm-rcp-lactente-2025.svg`](../public/apostilas/imagens/usm-rcp-lactente-2025.svg) | E02 | AHA/AAP 2025 |
+| [`usm-engasgo-adulto-2025.svg`](../public/apostilas/imagens/usm-engasgo-adulto-2025.svg) | C07 | AHA 2025 |
+| [`usm-compressao-direta.svg`](../public/apostilas/imagens/usm-compressao-direta.svg) | C10, H01, H02, H03 | AHA/Cruz Vermelha 2024 |
+| [`usm-torniquete-seguranca.svg`](../public/apostilas/imagens/usm-torniquete-seguranca.svg) | H05, T02 | AHA/Cruz Vermelha 2024 |
+| [`usm-resgate-aquatico-seguro.svg`](../public/apostilas/imagens/usm-resgate-aquatico-seguro.svg) | A05 | Diretrizes de segurança aquática e RCP após afogamento |
+| [`usm-risco-eletrico.svg`](../public/apostilas/imagens/usm-risco-eletrico.svg) | T04 | NR-10 e orientações de resgate seguro |
+| [`usm-espaco-confinado.svg`](../public/apostilas/imagens/usm-espaco-confinado.svg) | T06 | NR-33 e orientação sobre resgate especializado |
+| [`usm-lavagem-ocular.svg`](../public/apostilas/imagens/usm-lavagem-ocular.svg) | T03 | AHA/Cruz Vermelha 2024 |
+| [`usm-chamada-samu-bombeiros.svg`](../public/apostilas/imagens/usm-chamada-samu-bombeiros.svg) | C03, E07 | Ministério da Saúde — SAMU 192 |
+| [`usm-packing-somente-treinado.svg`](../public/apostilas/imagens/usm-packing-somente-treinado.svg) | H04, H07 | AHA/Cruz Vermelha 2024 |
+| [`usm-convulsao-primeiros-socorros.svg`](../public/apostilas/imagens/usm-convulsao-primeiros-socorros.svg) | E04 | AHA/Cruz Vermelha 2024 |
+| [`usm-dente-avulsionado.svg`](../public/apostilas/imagens/usm-dente-avulsionado.svg) | E05 | AHA/Cruz Vermelha 2024 |
+| [`usm-intermacao-resfriamento.svg`](../public/apostilas/imagens/usm-intermacao-resfriamento.svg) | A04 | AHA/Cruz Vermelha 2024 |
 
 ## Imagem aberta identificada e reutilizada
 
