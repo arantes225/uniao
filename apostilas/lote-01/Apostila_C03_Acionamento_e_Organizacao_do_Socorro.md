@@ -110,9 +110,6 @@ Portanto, o cidadão que sabe como acionar o serviço transforma-se no "braço a
 > **Por que isso acontece?** O serviço de urgência organiza recursos a partir das informações recebidas. Endereço, acesso, número de vítimas e respiração são dados mais úteis que hipóteses diagnósticas. O atendente também pode orientar medidas iniciais enquanto a equipe se desloca.
 
 
-![Figura 1 — Mochila padronizada de Atendimento Pré-Hospitalar (APH) organizada por compartimentos.](../imagens/EMS-medic-backpack.png)
-*Figura 1 — Mochila padronizada de Atendimento Pré-Hospitalar (APH) organizada por compartimentos. Crédito: Baedr-9439. Licença: CC0. Fonte: Wikimedia Commons.*
-
 ### 4.1 O Papel do Complexo Regulador de Urgência
 A central de regulação do SAMU opera com dois profissionais principais:
 1. **Telefonista Auxiliar de Regulação Médica (TARM):** É o primeiro a atender o 192. Sua função é colher o endereço completo do evento, o número do telefone de retorno e o motivo sumário da ligação. Essa triagem cadastral inicial dura habitualmente menos de 60 segundos.
@@ -154,6 +151,10 @@ Ao identificar esses cenários complexos, o socorrista deve solicitar o apoio de
 ## SEÇÃO 5 — DESENVOLVIMENTO DOS SUBTEMAS
 
 ### 5.1 SAMU 192 e Corpo de Bombeiros 193: Competências e Integração
+
+![Figura 2 — Unidades de resposta rápida (motolâncias) do SAMU 192.](../imagens/Motolancias_SAMU_Distrito_Federal.jpg)
+*Figura 2 — Unidades de resposta rápida (motolâncias) do SAMU 192. Crédito: Antonio Cruz/Agência Brasil. Licença: CC BY 3.0 BR (https://creativecommons.org/licenses/by/3.0/br/). Fonte: Wikimedia Commons.*
+
 Para evitar atrasos no despacho de viaturas, memorize a distinção operacional dos números públicos de socorro no Brasil:
 
 - **SAMU — Disque 192:**
@@ -167,7 +168,7 @@ Para evitar atrasos no despacho de viaturas, memorize a distinção operacional 
 
 ### 5.2 Informações Essenciais ao Chamado Telefônico
 
-![Informações essenciais ao telefonar para SAMU 192 e Bombeiros 193](../../public/apostilas/imagens/usm-chamada-samu-bombeiros.svg)
+![Informações essenciais ao telefonar para SAMU 192 e Bombeiros 193](../imagens/usm-chamada-samu-bombeiros.svg)
 *Figura complementar — Informações essenciais ao telefonar para SAMU 192 e Bombeiros 193. Ilustração original União Serviços Médicos (2026), baseada em Ministério da Saúde — SAMU 192; não reproduz material gráfico de terceiros.*
 
 Ao ligar para o serviço de emergência, o socorrista deve falar de forma calma, clara e pausada. Organize o relato mentalmente segundo o mnemônico **O-N-D-E-V-A-I**:
@@ -211,12 +212,13 @@ Para garantir precisão e rapidez (menos de 45 segundos), utilize o padrão inte
 - **T (Treatment / Tratamento já realizado):** *"Realizados 3 ciclos de RCP pela brigada, DEA instalado no local com 1 choque administrado há 2 minutos. Massagem em andamento"*.
 
 
-![Figura 2 — Unidades de resposta rápida (motolâncias) do SAMU 192.](../imagens/Motolancias_SAMU_Distrito_Federal.jpg)
-*Figura 2 — Unidades de resposta rápida (motolâncias) do SAMU 192. Crédito: Antonio Cruz/Agência Brasil. Licença: CC BY 3.0 BR (https://creativecommons.org/licenses/by/3.0/br/). Fonte: Wikimedia Commons.*
-
 Essa objetividade permite que a equipe médica do SAMU assuma a ressuscitação imediatamente com medicamentos venosos sem precisar recomeçar todo o interrogatório do zero.
 
 ### 5.6 Organização da Resposta até a Chegada do Socorro
+
+![Figura 1 — Mochila padronizada de Atendimento Pré-Hospitalar (APH) organizada por compartimentos.](../imagens/EMS-medic-backpack.png)
+*Figura 1 — Mochila padronizada de Atendimento Pré-Hospitalar (APH) organizada por compartimentos. Crédito: Baedr-9439. Licença: CC0. Fonte: Wikimedia Commons.*
+
 Enquanto a ambulância desloca-se, o socorrista deve otimizar o ambiente:
 - **Desobstrução física de acessos:** Abrir cancelas eletrônicas, travar portões abertos, retirar cadeiras e mesas de corredores para permitir a passagem livre da maca com rodas.
 - **Iluminação da cena:** Acender todas as lâmpadas do recinto ou apontar lanternas para o local da abordagem se for período noturno.
@@ -235,7 +237,7 @@ Enquanto a ambulância desloca-se, o socorrista deve otimizar o ambiente:
 |---|---|---|---|
 | **Dor forte no peito irradiando para o braço esquerdo** | **SAMU 192** | Emergência cardiológica pura. Necessita de médico para eletrocardiograma e medicamentos trombolíticos. | Manter a vítima em repouso absoluto sentado e afrouxar roupas. |
 | **Colisão carro x poste com passageiro preso nas ferragens** | **BOMBEIROS 193** | Necessita de ferramentas hidráulicas de corte e desencarceramento mecânico. | Informar se há fiação elétrica caída sobre o teto do carro. |
-| **Queda de escada de 4 metros com suspeita de trauma cervical** | **BOMBEIROS 193 / SAMU** | Trauma musculoesquelético de alta energia. Demanda imobilização em prancha longa e colar cervical. | Não mover a cabeça ou o pescoço da vítima; manter estabilização manual. |
+| **Queda de escada de 4 metros com suspeita de trauma cervical** | **BOMBEIROS 193 / SAMU** | Trauma de alta energia. Exige avaliação especializada; reduzir movimentos desnecessários e priorizar via aérea, respiração e hemorragia. | Não forçar posição da cabeça/pescoço nem movimentar a vítima sem necessidade. |
 | **Criança com febre alta e convulsão generalizada na escola** | **SAMU 192** | Emergência neurológica pediátrica. Necessita de avaliação médica e controle medicamentoso. | Proteger a cabeça da criança e cronometrar a duração da crise. |
 | **Vítima retirada de piscina desacordada (afogamento)** | **BOMBEIROS 193 / SAMU** | Parada respiratória hipóxica por aspiração líquida. | Iniciar imediatamente ciclo de ventilações e compressões torácicas. |
 | **Ferimento por faca no abdome em briga de bar** | **POLÍCIA 190 + SAMU 192** | Crime violento ativo. A equipe médica só entra com o agressor desarmado e cena isolada. | Não retirar a faca se ela estiver cravada no corpo; estabilizá-la. |
@@ -252,9 +254,6 @@ Enquanto a ambulância desloca-se, o socorrista deve otimizar o ambiente:
 | **4. Pessoas** | Quantidade total de vítimas envolvidas | *"É apenas uma vítima"* ou *"São 3 feridos no acidente de moto"* | Deixar de contar todas as vítimas, gerando falta de ambulâncias. |
 | **5. Apoio** | Procedimentos já em execução no local | *"Iniciamos a massagem cardíaca e o DEA está sendo trazido"* | Omitir que já há manobras em curso. |
 
-
-![Figura 3 — Manobra de Rautek para extração rápida de vítima inconsciente em risco iminente.](../imagens/Rautek-maneuver.png)
-*Figura 3 — Manobra de Rautek para extração rápida de vítima inconsciente em risco iminente. Crédito: Baedr-9439. Licença: CC0. Fonte: Wikimedia Commons.*
 
 ---
 
@@ -417,5 +416,5 @@ DEFINIÇÃO DO SERVIÇO             PROTOCOLO DO CHAMADO              ORGANIZAÇ
 | **Status:** | `Aguardando Aprovação Científica` |
 | **Data da Redação:** | 19 de outubro de 2026 |
 | **Versão:** | 1.0.0 |
-| **Validação Científica por IA:** | Conforme diretrizes Portaria 2.048/MS e PHTLS 10ª Ed. |
+| **Situação científica:** | Revisado editorialmente; requer homologação por profissional habilitado antes do uso instrucional. |
 | **Próxima Revisão:** | Outubro de 2027 |
