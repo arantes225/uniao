@@ -177,7 +177,7 @@ O aprisionamento em ralos de fundo de piscinas é um mecanismo devastador de afo
 
 ### 5.3 Resposta Inicial ao Afogamento: Cadeia de Sobrevivência e Ventilação
 
-![Alcance, arremesso de flutuação e resposta segura após afogamento](./apostilas/imagens/usm-resgate-aquatico-seguro.svg)
+![Alcance, arremesso de flutuação e resposta segura após afogamento](../../public/apostilas/imagens/usm-resgate-aquatico-seguro.svg)
 *Figura complementar — Alcance, arremesso de flutuação e resposta segura após afogamento. Ilustração original União Serviços Médicos (2026), baseada em Princípios internacionais de segurança aquática e RCP após afogamento; não reproduz material gráfico de terceiros.*
 
 

@@ -172,7 +172,7 @@ Antes de encostar as mãos na vítima, o socorrista deve fazer uma única pergun
 
 ### 5.3 Abordagem Sistemática no Adulto Consciente (Manobra de Heimlich)
 
-![Sequência atual de desengasgo no adulto: cinco pancadas dorsais e cinco compressões abdominais](./apostilas/imagens/usm-engasgo-adulto-2025.svg)
+![Sequência atual de desengasgo no adulto: cinco pancadas dorsais e cinco compressões abdominais](../../public/apostilas/imagens/usm-engasgo-adulto-2025.svg)
 *Figura complementar — Sequência atual de desengasgo no adulto: cinco pancadas dorsais e cinco compressões abdominais. Ilustração original União Serviços Médicos (2026), baseada em AHA 2025; não reproduz material gráfico de terceiros.*
 
 Na obstrução grave em adultos conscientes, as diretrizes AHA 2025 orientam alternar **5 pancadas firmes entre as escápulas** e **5 compressões abdominais**. Repita até a expulsão do objeto ou a perda de consciência. As instruções abaixo descrevem a etapa abdominal [1, 3]:
@@ -200,7 +200,7 @@ Na obstrução grave em adultos conscientes, as diretrizes AHA 2025 orientam alt
 
 ### 5.4 Particularidades Críticas: Manejo no Lactente e na Criança
 
-![Sequência de desengasgo em lactentes: cinco pancadas nas costas e cinco impulsos torácicos](./apostilas/imagens/usm-engasgo-lactente-2025.svg)
+![Sequência de desengasgo em lactentes: cinco pancadas nas costas e cinco impulsos torácicos](../../public/apostilas/imagens/usm-engasgo-lactente-2025.svg)
 *Figura complementar — Sequência de desengasgo em lactentes: cinco pancadas nas costas e cinco impulsos torácicos. Ilustração original União Serviços Médicos (2026), baseada em AHA/AAP 2025; não reproduz material gráfico de terceiros.*
 
 
