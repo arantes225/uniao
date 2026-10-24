@@ -204,7 +204,7 @@ As amputações em indústrias atingem frequentemente dedos, mãos e antebraços
 
 ### 5.5 Hemorragias Graves em Fábricas: A Doutrina do Torniquete Industrial
 
-![Indicação e aplicação segura de torniquete no trauma industrial](./apostilas/imagens/usm-torniquete-seguranca.svg)
+![Indicação e aplicação segura de torniquete no trauma industrial](../../public/apostilas/imagens/usm-torniquete-seguranca.svg)
 *Figura complementar — Indicação e aplicação segura de torniquete no trauma industrial. Ilustração original União Serviços Médicos (2026), baseada em AHA/Cruz Vermelha 2024; não reproduz imagens de terceiros.*
 
 
