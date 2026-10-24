@@ -70,8 +70,8 @@ Utilize exclusivamente simulador de feridas profundas, com supervisão e avalia�
 
 > **VISÃO RÁPIDA DE SOBREVIVÊNCIA NO PREENCHIMENTO CAVITÁRIO**
 > 1. **O que é Wound Packing:** É a técnica de introduzir física e progressivamente metros de gaze estéril sanfonada (*Z-fold*) para dentro de uma ferida cavitária profunda até o fundo da lesão, comprimindo o vaso sangrante diretamente contra o osso [1, 2].
-> 2. **Onde o torniquete não alcança:** Ferimentos em **áreas juncionais** — virilhas (onde a perna se une ao tronco), axilas (onde o braço se une ao ombro) e base do pescoço — **não permitem a colocação de torniquetes de membros**. O *wound packing* é a única salvação para essas regiões [1, 3].
-> 3. **Vá até o fundo com a ponta dos dedos:** Colocar gaze superficial na borda da ferida não serve para nada. O socorrista deve introduzir a ponta de um ou dois dedos no fundo da cavidade anatômica para encontrar o ponto exato de onde o sangue está jorrando [2, 4].
+> 2. **Ferimentos em áreas juncionais:** virilha e axila não comportam torniquete de membro convencional. A pressão direta é a primeira ação. O preenchimento de ferida (*wound packing*) pode ser indicado em ferida profunda de virilha/axila para socorrista treinado, com material adequado e evacuação urgente; não é técnica para tórax, abdome ou pescoço [1, 3].
+> 3. **Técnica restrita a treinamento prático:** em ferida profunda apropriada de virilha/axila, o socorrista treinado pode preencher a cavidade com gaze conforme protocolo e manter compressão. Não tente “procurar” vasos com os dedos e não execute a técnica em pescoço, tórax ou abdome [2, 4].
 > 4. **Prioridade para todos:** Acione 192 e mantenha pressão direta sem interrupções. O packing é uma habilidade prática para pessoas treinadas em ferida adequada.
 > 5. **ONDE É PROIBIDO EMPACOTAR:** **JAMAIS faça preenchimento no TÓRAX ou no ABDÔMEN**. O tórax e a cavidade abdominal são cavidades gigantescas e expansíveis; enfiar gaze no tórax empurra a gaze para dentro do pulmão sem gerar pressão mecânica alguma contra os vasos [1, 5].
 > 6. **Depois da intervenção:** Mantenha a pressão sobre a ferida até a chegada do resgate. O tempo de compressão depende do tipo de material e do protocolo ensinado ao socorrista.
@@ -102,9 +102,10 @@ As áreas juncionais — onde os membros se conectam ao tronco (fossa axilar e t
 - A artéria e veia axilares no oco do braço;
 - As artérias carótidas e veias jugulares na base cervical [2, 3].
 
-Devido à geometria do corpo humano, é fisicamente impossível posicionar uma fita de torniquete circunferencial na virilha ou na axila (a fita escorrega para a perna ou para o braço, deixando a ferida sangrante desprotegida acima do garrote). Nesses cenários, a tentativa ingênua de colocar um curativo plano superficial sobre a pele resulta em morte por exsanguinação interna rápida. A única intervenção pré-hospitalar com respaldo científico comprovado para salvar essas vítimas é o **Preenchimento de Feridas (*Wound Packing*)** [1, 4].
+Virilha e axila exigem reconhecimento rápido e evacuação. Enquanto o resgate é acionado, aplique pressão direta firme com gaze/tecido limpo. Quando houver treinamento prático e ferida profunda apropriada, o preenchimento de ferida pode complementar a compressão. Não faça afirmação de que uma única técnica serve para todos os cenários ou substitui atendimento cirúrgico [1, 4].
 
 ---
+
 
 ## SEÇÃO 4 — ANATOMIA CIRÚRGICA E FISIOPATOLOGIA DAS ZONAS JUNCIONAIS
 
@@ -146,12 +147,9 @@ Quando uma lâmina, fragmento de estilhaço ou projétil de arma de fogo penetra
 ### 5.1 Conceitos Fundamentais e Indicações do Wound Packing
 
 
-![Figura 1 — Prática em simulador de preenchimento de feridas (wound packing) e pressão direta.](../imagens/Defenders_participate_in_TCCC_Combat_Lifesaver_training_9464952_.jpg)
-*Figura 1 — Prática em simulador de preenchimento de feridas (wound packing) e pressão direta. Crédito: U.S. Air Force, Tech. Sgt. Kristen Pittman. Licença: Domínio público. Fonte: Wikimedia Commons.*
-
 O preenchimento de feridas é uma manobra mecânica de suporte avançado de sangramento realizada por socorristas treinados [1, 2]:
 - **Indicações Formais:**
-  - Ferimentos profundos, cavitários e perfurocortantes com sangramento ativo volumoso localizados em **virilhas, axilas ou nádegas/pelve**;
+- Ferimentos profundos em **virilha ou axila** com sangramento ativo importante, somente por pessoa treinada e dentro do protocolo local;
   - Ferimentos profundos em extremidades (braços ou coxas) em situações onde não há torniquete disponível ou onde um primeiro torniquete falhou e não há um segundo dispositivo à mão [2, 3].
 - **Princípio Operacional da Densidade:** O empacotamento só funciona se a gaze for empacotada de forma **extremamente densa e compacta**. Uma gaze colocada frouxamente é esponjosa: ela absorve sangue, fica pesada e encharcada, mas não exerce contrapressão mecânica alguma contra a parede do vaso lesionado [1, 4].
 
@@ -182,6 +180,10 @@ A aplicação varia conforme as particularidades anatômicas de cada junção co
 
 ### 5.3 Materiais Utilizados: Gazes Z-Fold, Rolos e Hemostáticos Impregnados
 
+![Figura 1 — Rolo de gaze estéril para compressão direta e preenchimento de cavidades.](../imagens/Gauze_bandage.png)
+*Figura 1 — Rolo de gaze estéril para compressão direta e preenchimento de cavidades. Crédito: im_tau. Licença: CC BY 4.0 (https://creativecommons.org/licenses/by/4.0/). Fonte: Wikimedia Commons.*
+
+
 O tipo de material empregado determina a velocidade da técnica e a eficácia biológica do coágulo [1, 5]:
 
 ```
@@ -208,7 +210,11 @@ O tipo de material empregado determina a velocidade da técnica e a eficácia bi
 
 ### 5.4 Demonstração Técnica e Prática Supervisionada do Empacotamento
 
-![Limites do primeiro respondedor e necessidade de treinamento no preenchimento de feridas](../../public/apostilas/imagens/usm-packing-somente-treinado.svg)
+![Figura 2 — Prática em simulador de preenchimento de feridas (wound packing) e pressão direta.](../imagens/Defenders_participate_in_TCCC_Combat_Lifesaver_training_9464952_.jpg)
+*Figura 2 — Prática em simulador de preenchimento de feridas (wound packing) e pressão direta. Crédito: U.S. Air Force, Tech. Sgt. Kristen Pittman. Licença: Domínio público. Fonte: Wikimedia Commons.*
+
+
+![Limites do primeiro respondedor e necessidade de treinamento no preenchimento de feridas](../imagens/usm-packing-somente-treinado.svg)
 *Figura complementar — Limites do primeiro respondedor e necessidade de treinamento no preenchimento de feridas. Ilustração original União Serviços Médicos (2026), baseada em AHA/Cruz Vermelha 2024; não reproduz imagens de terceiros.*
 
 
@@ -226,10 +232,6 @@ A execução do *Wound Packing* segue uma sequência cinemática precisa e biome
    - Continue introduzindo a gaze centímetro por centímetro, compactando as dobras com força no fundo e nas laterais da cavidade.
 5. **Formação do Montículo Externo:** Continue empacotando até que a gaze transborde ligeiramente da ferida, formando uma almofada densa e estufada de 2 a 3 cm acima da linha da pele.
 6. **Descarregamento do Peso Corporal:** Acomode as duas mãos espalmadas sobre a almofada de gaze, trave os cotovelos em extensão completa e jogue o peso do tronco para a frente, mantendo compressão manual máxima contínua [1, 4].
-
-
-![Figura 2 — Rolo de gaze estéril para compressão direta e preenchimento de cavidades.](../imagens/Gauze_bandage.png)
-*Figura 2 — Rolo de gaze estéril para compressão direta e preenchimento de cavidades. Crédito: im_tau. Licença: CC BY 4.0 (https://creativecommons.org/licenses/by/4.0/). Fonte: Wikimedia Commons.*
 
 ```
 +---------------------------------------------------------------------------------+
@@ -411,7 +413,7 @@ O agressor foge. Cláudio desaba ao lado da bomba de gasolina. Um jato maciço e
 
 ## SEÇÃO 11 — O QUE VOCÊ PRECISA LEMBRAR
 
-- *Wound Packing* é a técnica mandatória para conter sangramentos graves em áreas juncionais (virilhas, axilas e pescoço), onde o torniquete não funciona.
+- Em feridas profundas de virilha/axila, *wound packing* é técnica para pessoa treinada e pode complementar pressão direta. Não realize em pescoço, tórax ou abdome; acione atendimento avançado imediatamente.
 - O socorrista deve introduzir a gaze até o fundo da cavidade anatômica com a técnica "dedo sobre dedo", esmagando o vaso contra o osso.
 - É terminantemente proibido realizar *wound packing* no tórax ou no abdômen (risco de pneumotórax e perfuração visceral).
 - Utilize preferencialmente gazes sanfonadas *Z-fold* impregnadas com hemostáticos de última geração (Quitosana ou Caulim).
