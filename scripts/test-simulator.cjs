@@ -52,11 +52,12 @@ assert(scenario.includes('canvas'));
 const stopScenario = render(React.createElement(ClinicalScenario, { scenario: stopTheBleedFolder.cases[0], onBack() {} }));
 assert(stopScenario.includes('Clique na máscara de corte para ampliar'));
 assert.equal(stopTheBleedFolder.cases.filter(simulationCase => simulationCase.patientKind === 'stop-the-bleed').length, 6);
-for (const file of ['stb-rua-ciclista-coxa.png', 'stb-rua-vidro-antebraco.png', 'stb-rua-juncao-virilha.png', 'stb-clube-braco.png', 'stb-clube-perna.png', 'stb-clube-axila.png']) assert(fs.existsSync(path.join(root, 'public/simulador/personagens/stop-the-bleed', file)));
+for (const file of ['stb-rua-ciclista-coxa.jpg', 'stb-rua-vidro-antebraco.jpg', 'stb-rua-juncao-virilha.jpg', 'stb-clube-braco.jpg', 'stb-clube-perna.jpg', 'stb-clube-axila.jpg']) assert(fs.existsSync(path.join(root, 'public/simulador/personagens/stop-the-bleed', file)));
 for (const file of ['arterial.svg', 'venous.svg', 'junctional.svg']) assert(fs.existsSync(path.join(root, 'public/simulador/personagens/stop-the-bleed/masks', file)));
 assert.equal(stopTheBleedFolder.cases[0].steps[0].bleedingFocus.title, 'Sangramento arterial na coxa');
 for (const option of existingCase.steps[0].options) assert(scenario.includes(option.text));
 console.log('PASS: 18 approved files unchanged; 8 characters; 4 folders; original clinical case intact; Stop the Bleed characters, masks, focus and catalog render.');
+
 
 
 
