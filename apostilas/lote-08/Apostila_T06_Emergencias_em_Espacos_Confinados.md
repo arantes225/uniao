@@ -300,8 +300,8 @@ Assim que a vítima for extraída para a atmosfera livre:
 | **Vítima Resgatada Consciente mas Confusa e Sonolenta** | Hipóxia cerebral aguda ou intoxicação por monóxido de carbono. | Acionar 192, observar respiração e manter repouso; oxigênio somente por equipe habilitada e conforme protocolo. | Permitir que a vítima levante e vá embora dirigindo; dar café ou água para beber. |
 
 
-![Figura 3 — Máscara respiratória facial inteira com filtro químico para ambientes contaminados.](../imagens/Full-face-respirator.jpg)
-*Figura 3 — Máscara respiratória facial inteira com filtro químico para ambientes contaminados. Crédito: Another-anon-artist-234. Licença: CC0. Fonte: Wikimedia Commons.*
+![Figura 3 — Respirador filtrante NÃO fornece oxigênio e não autoriza entrada em espaço confinado.](../imagens/Full-face-respirator.jpg)
+*Figura 3 — Respirador filtrante NÃO fornece oxigênio e não autoriza entrada em espaço confinado. Crédito: Another-anon-artist-234. Licença: CC0. Fonte: Wikimedia Commons.*
 
 ---
 
@@ -358,8 +358,8 @@ Carlos sentiu a adrenalina disparar e o impulso de descer a escada para resgatar
 8. **Transferência para a USA do SAMU:** Com a oxigenação cerebral restabelecida a 100%, Roberto recuperou os movimentos respiratórios espontâneos aos 6 minutos e esboçou reflexo de tosse. A Unidade de Suporte Avançado (USA) do SAMU chegou aos 11 minutos, assumindo o paciente com suporte ventilatório mecânico e encaminhamento para o hospital terciário com diagnóstico de intoxicação aguda por gás sulfídrico.
 
 
-![Figura 4 — Dispositivo bolsa-válvula-máscara (ambu) para ventilação de resgate.](../imagens/Bag-valve-mask.jpg)
-*Figura 4 — Dispositivo bolsa-válvula-máscara (ambu) para ventilação de resgate. Crédito: Another-anon-artist-234. Licença: CC0. Fonte: Wikimedia Commons.*
+![Figura 4 — Equipamento de ventilação reservado a equipe habilitada após a retirada segura da vítima.](../imagens/Bag-valve-mask.jpg)
+*Figura 4 — Equipamento de ventilação reservado a equipe habilitada após a retirada segura da vítima. Crédito: Another-anon-artist-234. Licença: CC0. Fonte: Wikimedia Commons.*
 
 ### Desfecho Clínico
 No hospital, Roberto foi admitido na UTI, submetido a suporte ventilatório não invasivo com FiO₂ a 100% e monitoramento eletrocardiográfico e gasométrico. Não houve evolução para edema agudo de pulmão. A tomografia cerebral demonstrou integridade dos núcleos da base. Roberto teve alta da UTI em 48 horas e alta hospitalar no quarto dia, completamente são e sem nenhum déficit neurológico motor ou cognitivo. O relatório da perícia de segurança do trabalho destacou que, **se o vigia Carlos tivesse descido para resgatar Roberto, ambos teriam falecido em menos de 3 minutos no fundo do poço**.
