@@ -6,7 +6,7 @@ import {
   Settings, Clock, BookOpen, FileText, Check, Plus,
   UserPlus, UserMinus, Eye, Filter, Sparkles, X,
   GraduationCap,
-  Upload, Move, RotateCcw,
+  Upload, RotateCcw,
   KeyRound, Copy, Send
 } from 'lucide-react';
 import { supabase } from '../../services/supabase/client';
@@ -15,6 +15,7 @@ import { PrompterTab } from './PrompterTab';
 import { CurriculumService } from '../../services/CurriculumService';
 import { LearningModule } from '../../data/curriculumData';
 import { CohortCurriculumSelector, CurriculumLessonOption } from '../../components/admin/CohortCurriculumSelector';
+import { CertificateSignatory, CertificateSignatures, defaultCertificateSigners, FittedCertificate, printCertificate } from '../../components/admin/CertificateComponents';
 
 const normalizeDate = (input: string): string | null => {
   if (!input.trim()) return null;
@@ -316,13 +317,11 @@ export const AdminDashboard: React.FC = () => {
   const [newCustomModule, setNewCustomModule] = useState('');
   const [certSavedSuccess, setCertSavedSuccess] = useState(false);
 
-  // Assinatura Digital do Instrutor & Ajuste Fino de Posição
-  const [instructorSigUrl, setInstructorSigUrl] = useState<string>('');
-  const [sigPosX, setSigPosX] = useState<number>(0);
-  const [sigPosY, setSigPosY] = useState<number>(0);
-  const [sigScale, setSigScale] = useState<number>(1);
-  const [isDraggingSig, setIsDraggingSig] = useState<boolean>(false);
-  const [dragStart, setDragStart] = useState<{ x: number; y: number }>({ x: 0, y: 0 });
+  // Responsáveis distintos, inclusive uma pessoa que acumula as funções de instrutor e diretor.
+  const [certSigners, setCertSigners] = useState<CertificateSignatory[]>(() => defaultCertificateSigners(PRESET_MODELS[0]));
+  const [signerImageUrls, setSignerImageUrls] = useState<Record<string, string>>({});
+  const [certificateZoom, setCertificateZoom] = useState(1);
+  const [signatureUploadingId, setSignatureUploadingId] = useState<string | null>(null);
 
   // Modal de Prévia Visual do Certificado
   const [isPreviewOpen, setIsPreviewOpen] = useState(false);
