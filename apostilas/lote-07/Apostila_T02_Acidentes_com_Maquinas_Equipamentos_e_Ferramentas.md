@@ -136,9 +136,6 @@ Para salvar o operário preso em maquinário, o socorrista deve dominar a comple
 ```
 
 
-![Figura 1 — Procedimento de bloqueio e etiquetagem de energias perigosas (LOTO).](../imagens/Lockout_Tagout_14853353063_.jpg)
-*Figura 1 — Procedimento de bloqueio e etiquetagem de energias perigosas (LOTO). Crédito: NAVFAC (U.S. Navy). Licença: Domínio público. Fonte: Wikimedia Commons.*
-
 ---
 
 ## SEÇÃO 5 — DESENVOLVIMENTO DOS SUBTEMAS
@@ -154,6 +151,10 @@ As máquinas industriais produzem lesões através de quatro vetores cinemático
 ---
 
 ### 5.2 Cortes Profundos e Lacerações Extensas por Serras e Ferramentas Cortantes
+
+![Figura 4 — Atadura autoaderente aplicada para fixação de curativo compressivo hemostático.](../imagens/Self-adhering-bandage.png)
+*Figura 4 — Atadura autoaderente aplicada para fixação de curativo compressivo hemostático. Crédito: Baedr-9439. Licença: CC0. Fonte: Wikimedia Commons.*
+
 
 Serras circulares de madeira, esmerilhadeiras com disco abrasivo, serras de fita de corte de carne e estiletes industriais provocam ferimentos com bordas irregulares e dano extenso a planos profundos [2, 5]:
 - **Características Clínicas:** Secção de tendões com retração elástica para o interior da bainha muscular, lesões nervosas com perda de sensibilidade distal e ruptura de artérias profundas com sangramento arterial em jato.
@@ -204,7 +205,7 @@ As amputações em indústrias atingem frequentemente dedos, mãos e antebraços
 
 ### 5.5 Hemorragias Graves em Fábricas: A Doutrina do Torniquete Industrial
 
-![Indicação e aplicação segura de torniquete no trauma industrial](../../public/apostilas/imagens/usm-torniquete-seguranca.svg)
+![Indicação e aplicação segura de torniquete no trauma industrial](../imagens/usm-torniquete-seguranca.svg)
 *Figura complementar — Indicação e aplicação segura de torniquete no trauma industrial. Ilustração original União Serviços Médicos (2026), baseada em AHA/Cruz Vermelha 2024; não reproduz imagens de terceiros.*
 
 
@@ -215,6 +216,10 @@ O ambiente industrial exige que o torniquete esteja acessível e pronto para uso
 ---
 
 ### 5.6 Segurança da Cena, Desenergização e Organização do Socorro Integrado
+
+![Figura 1 — Procedimento de bloqueio e etiquetagem de energias perigosas (LOTO).](../imagens/Lockout_Tagout_14853353063_.jpg)
+*Figura 1 — Procedimento de bloqueio e etiquetagem de energias perigosas (LOTO). Crédito: NAVFAC (U.S. Navy). Licença: Domínio público. Fonte: Wikimedia Commons.*
+
 
 O socorro em acidentes com maquinário segue o rigoroso fluxo de comando de cena industrial [1, 2, 7]:
 
@@ -241,9 +246,6 @@ O socorro em acidentes com maquinário segue o rigoroso fluxo de comando de cena
 +---------------------------------------------------------------------------------+
 ```
 
-
-![Figura 4 — Atadura autoaderente aplicada para fixação de curativo compressivo hemostático.](../imagens/Self-adhering-bandage.png)
-*Figura 4 — Atadura autoaderente aplicada para fixação de curativo compressivo hemostático. Crédito: Baedr-9439. Licença: CC0. Fonte: Wikimedia Commons.*
 
 ---
 
@@ -381,6 +383,9 @@ Ademir solta um grito estarrecedor de dor que ecoa por todo o galpão industrial
 ---
 
 ### Metadados Editoriais Institucionais
+
+> [!IMPORTANT]
+> **Limite científico:** desligar/isolar a fonte de energia e acionar o plano de emergência precedem o atendimento. Não remova partes presas, não tente reduzir fraturas e não ultrapasse o treinamento de primeiros socorros.
 
 | CAMPO | ESPECIFICAÇÃO TÉCNICA |
 | :--- | :--- |
