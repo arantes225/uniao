@@ -75,7 +75,7 @@ Pratique pressão contínua sobre simulador com sangue artificial, sem levantar 
 >    - *Arterial:* Sangue vermelho-vivo que jorra em jatos pulsáteis no ritmo dos batimentos cardíacos (emergência máxima).
 >    - *Venoso:* Sangue vermelho-escuro que escorre em fluxo contínuo e laminar abundante.
 >    - *Capilar:* Sangramento superficial em "orvalho" que para espontaneamente em poucos minutos [3].
-> 3. **Compressão direta é a rainha do socorro:** Pressione firmemente o ponto exato da ferida sangrante com gaze estéril ou pano limpo, utilizando todo o peso do seu corpo. Mantenha a pressão ininterrupta por no mínimo **5 a 10 minutos** [1, 4].
+> 3. **Compressão direta é a primeira medida:** Pressione firmemente a ferida com gaze ou pano limpo e mantenha a pressão sem levantar repetidamente para “espiar”. Em hemorragia ameaçadora à vida de extremidade, não espere um tempo fixo de compressão: use torniquete se treinado e disponível e acione o resgate [1, 4].
 > 4. **Nunca retire o primeiro pano ensopado:** Se o sangue transbordar a primeira compressa, **NÃO a remova** (isso arrancaria o coágulo biológico em formação). Coloque novas compressas por cima e aumente a força da compressão [4, 5].
 > 5. **Objetos cravados (empalados):** **JAMAIS retire uma faca, vidro ou vergalhão preso no corpo da vítima.** O objeto atua como um tampão mecânico; retirá-lo provoca hemorragia interna maciça instantânea. Apenas estabilize o objeto no local com ataduras ao redor [2, 3].
 > 6. **Prevenção do choque e hipotermia:** Vítimas com perda expressiva de sangue perdem calor rapidamente, o que bloqueia a coagulação sanguínea. Mantenha a pessoa **deitada, quieta e aquecida com manta** [2].
@@ -107,6 +107,10 @@ Paralelamente aos sangramentos catastróficos, o manejo cotidiano de ferimentos 
 
 ---
 
+
+![Figura 1 — Tesoura ponta-romba de APH para exposição rápida e segura de lesões graves.](../imagens/Trauma-shears.jpg)
+*Figura 1 — Tesoura ponta-romba de APH para exposição rápida e segura de lesões graves. Crédito: Another-anon-artist-234. Licença: CC0. Fonte: Wikimedia Commons.*
+
 ## SEÇÃO 4 — ANATOMIA E FISIOLOGIA DO SISTEMA VASCULAR E HEMOSTASIA
 
 > [!NOTE]
@@ -122,10 +126,6 @@ Os vasos sanguíneos são revestidos por três camadas de tecidos (**túnicas va
 
 ### 4.2 A Cascata Fisiológica da Hemostasia Natural
 Quando um vaso sanguíneo sofre ruptura mecânica, o organismo humano inicia instantaneamente um processo biológico triplo para tentar conter a perda de sangue, conhecido como **Hemostasia Fisiológica** [7]:
-
-
-![Figura 1 — Aplicação de torniquete tático em treinamento prático.](../imagens/Tourniquet_application.jpg)
-*Figura 1 — Aplicação de torniquete tático em treinamento prático. Crédito: U.S. Navy, MC2 Barry R. Hirayama. Licença: Domínio público. Fonte: Wikimedia Commons.*
 
 ```
 +---------------------------------------------------------------------------------+
@@ -152,7 +152,7 @@ Quando um vaso sanguíneo sofre ruptura mecânica, o organismo humano inicia ins
 
 > [!CRITICAL]
 > **ENTENDA O PORQUÊ: O PERIGO DE RETIRAR A GAZE ENSOPADA**
-> A formação da rede de fibrina e a agregação das plaquetas levam de **5 a 8 minutos ininterruptos** para adquirir estabilidade mecânica. Se o socorrista pressiona um ferimento por 1 ou 2 minutos, fica curioso e "levanta a gaze" para espiar se o sangramento parou, ele rompe mecanicamente a delicada malha de fibrina microscópica em formação. A cascata é reiniciada do zero e o vaso volta a sangrar profusamente. A compressão deve ser contínua e sem interrupção [4, 7].
+> Mantenha pressão contínua e não retire a primeira gaze apenas para inspecionar. Se ela encharcar, adicione material por cima e reavalie a gravidade. Não há tempo único de coagulação aplicável a toda ferida, e sangramento ameaçador à vida não deve aguardar a formação de coágulo antes do uso de medidas apropriadas [4, 7].
 
 ### 4.3 A Tríade Letal do Trauma e a Hipotermia
 Em pacientes com sangramentos volumosos, o socorrista deve combater ativamente o ciclo vicioso mais temido da medicina de trauma: a **Tríade Letal** [2, 7]:
@@ -179,12 +179,12 @@ Para ferimentos cotidianos menores e sem sangramento arterial jorrante:
 2. **Cobertura Estéril:** Seque as bordas ao redor da ferida com gaze e cubra com curativo estéril ou gaze limpa fixada com micropore ou esparadrapo.
 3. **Imunização Antitetânica:** Verifique sempre o histórico de vacinação contra o tétano da vítima. Em ferimentos sujos com terra, fezes ou metais oxidados, se a última dose de vacina foi há mais de **5 anos** (ou mais de 10 anos em feridas limpas), a vítima deve ser encaminhada a um posto de saúde para reforço vacinal [3, 5].
 
+
+![Figura 2 — Atadura autoaderente aplicada para fixação de curativo compressivo hemostático.](../imagens/Self-adhering-bandage.png)
+*Figura 2 — Atadura autoaderente aplicada para fixação de curativo compressivo hemostático. Crédito: Baedr-9439. Licença: CC0. Fonte: Wikimedia Commons.*
+
 ### 5.3 Reconhecimento e Classificação das Hemorragias Externas
 A velocidade de intervenção baseia-se na identificação da dinâmica do sangramento [1, 2]:
-
-
-![Figura 2 — Tesoura ponta-romba de APH para exposição rápida e segura de lesões graves.](../imagens/Trauma-shears.jpg)
-*Figura 2 — Tesoura ponta-romba de APH para exposição rápida e segura de lesões graves. Crédito: Another-anon-artist-234. Licença: CC0. Fonte: Wikimedia Commons.*
 
 ```
 +---------------------------------------------------------------------------------+
@@ -212,7 +212,15 @@ A velocidade de intervenção baseia-se na identificação da dinâmica do sangr
 
 ### 5.4 A Técnica Padrão Ouro: Compressão Direta Contínua
 
-![Sequência de compressão manual contínua em ferida com sangramento grave](../../public/apostilas/imagens/usm-compressao-direta.svg)
+![Ilustração de mão mantendo gaze pressionada diretamente sobre a ferida no braço.](../imagens/usm-compressao-direta-ilustrada.svg)
+*Ilustração autoral USM — compressão manual contínua para sangramento externo; não substitui demonstração supervisionada.*
+
+
+![Figura 4 — Rolo de gaze estéril para compressão direta e preenchimento de cavidades.](../imagens/Gauze_bandage.png)
+*Figura 4 — Rolo de gaze estéril para compressão direta e preenchimento de cavidades. Crédito: im_tau. Licença: CC BY 4.0 (https://creativecommons.org/licenses/by/4.0/). Fonte: Wikimedia Commons.*
+
+
+![Sequência de compressão manual contínua em ferida com sangramento grave](../imagens/usm-compressao-direta.svg)
 *Figura complementar — Sequência de compressão manual contínua em ferida com sangramento grave. Ilustração original União Serviços Médicos (2026), baseada em AHA/Cruz Vermelha 2024; não reproduz imagens de terceiros.*
 
 A compressão manual direta sobre a ferida é a conduta universal inicial mais eficaz e recomendada pelas diretrizes mundiais (AHA, ILCOR, ACS) para a grande maioria das hemorragias [1, 4]:
@@ -224,7 +232,8 @@ A compressão manual direta sobre a ferida é a conduta universal inicial mais e
    - Apoie o calcanhar da sua mão dominante diretamente sobre as gazes.
    - Posicione a outra mão por cima e estique os cotovelos travados a 90 graus, alinhando seus ombros verticalmente sobre o ponto do ferimento.
    - **Utilize o peso do seu tronco para empurrar com força constante para baixo**, comprimindo o vaso lesionado diretamente contra a estrutura óssea subjacente.
-5. **Tempo Inegociável:** Mantenha a força contínua por **no mínimo 5 a 10 minutos ininterruptos** sem aliviar a pressão e sem levantar o pano para espiar [1, 4].
+5. **Reavaliação segura:** mantenha pressão contínua e evite levantar o material repetidamente. Se o sangramento for maciço, persistir ou estiver em extremidade, escale imediatamente para torniquete por pessoa treinada e acione o resgate [1, 4].
+
 
 ### 5.5 Curativos Compressivos e Estabilização
 Após conter o sangramento inicial com as mãos, ou para permitir a manutenção da pressão durante o transporte da vítima:
@@ -233,10 +242,6 @@ Após conter o sangramento inicial com as mãos, ou para permitir a manutenção
 3. **Checagem de Perfusão Distal (Segurança Circulatória):** Um curativo compressivo serve para estancar o sangramento na ferida, mas **NÃO pode bloquear toda a circulação da mão ou do pé**.
    - Após terminar a bandagem, apalpe o pulso distal (pulso radial na mão ou pulso pedioso no pé) ou pressione a unha do dedo da vítima por 5 segundos.
    - Se o dedo ficar azulado, gelado, dormente ou o tempo de enchimento capilar for superior a 3 segundos, o curativo está apertado demais como um garrote acidental. Alivie ligeiramente a tensão da atadura e refaça a fixação [3].
-
-
-![Figura 3 — Atadura autoaderente aplicada para fixação de curativo compressivo hemostático.](../imagens/Self-adhering-bandage.png)
-*Figura 3 — Atadura autoaderente aplicada para fixação de curativo compressivo hemostático. Crédito: Baedr-9439. Licença: CC0. Fonte: Wikimedia Commons.*
 
 ### 5.6 Identificação Precoce de Gravidade e Sinais de Choque Hipovolêmico
 Em hemorragias internas ocultas (decorrentes de traumas contusos no tórax, abdome ou fraturas de bacia) ou em sangramentos externos volumosos antes da intervenção, o socorrista deve monitorar os sinais vitais do **Choque Hipovolêmico Descompensado** [2, 7]:
@@ -255,17 +260,18 @@ Diante desses sinais, acione imediatamente o SAMU 192, deite a vítima de costas
 
 ### Quadro 6.1 — Matriz Decisória: Técnicas de Controle Hemorrágico por Região Corporal
 
+![Figura 3 — Aplicação de torniquete tático em treinamento prático.](../imagens/Tourniquet_application.jpg)
+*Figura 3 — Aplicação de torniquete tático em treinamento prático. Crédito: U.S. Navy, MC2 Barry R. Hirayama. Licença: Domínio público. Fonte: Wikimedia Commons.*
+
+
 | Região Anatômica da Ferida | Técnica de Escolha Inicial | Segunda Opção / Falha | Conduta Expressamente Proibida |
 |---|---|---|---|
 | **Membros (Braço, Antebraço, Coxa, Perna)** | Compressão manual direta firme com gazes. | **Torniquete Comercial Homologado** alto e apertado no membro. | Não usar barbantes finos, fios elétricos ou arames. |
-| **Áreas de Junção (Axila, Virilha, Base do Pescoço)** | Compressão manual direta vigorosa com dedos em pinça. | **Preenchimento de Ferida (*Wound Packing*)** com gaze hemostática ou comum. | **NUNCA aplicar torniquete** (anatomicamente impossível garrotear junções). |
+| **Áreas de Junção (Axila ou Virilha)** | Pressão manual direta firme sobre a ferida e acionamento imediato do resgate. | *Wound packing* somente por pessoa treinada, em ferida profunda apropriada e conforme protocolo. | Não aplicar torniquete de membro na virilha/axila; não realizar *wound packing* em pescoço, tórax ou abdome. |
 | **Cabeça e Couro Cabeludo** | Compressão manual direta com compressa espessa plana. | Bandagem compressiva circular na cabeça (touca). | Não pressionar com força excessiva se houver suspeita de afundamento de crânio. |
 | **Tórax com Ferimento Soprante (Pneumotórax)** | **Curativo de Três Pontas** (válvula unidirecional que deixa o ar sair). | Curativo valvulado comercial com membrana de alívio. | Não vedar os quatro lados completamente se não houver válvula (risco de pneumotórax hipertensivo). |
 | **Abdome com Evisceração (Intestino Exposto)** | Cobrir com compressas limpas **umedecidas em soro** e plástico estéril. | Manter a vítima deitada com joelhos dobrados para relaxar a barriga. | **NUNCA tentar empurrar as alças intestinais de volta para dentro da barriga.** |
 
-
-![Figura 4 — Rolo de gaze estéril para compressão direta e preenchimento de cavidades.](../imagens/Gauze_bandage.png)
-*Figura 4 — Rolo de gaze estéril para compressão direta e preenchimento de cavidades. Crédito: im_tau. Licença: CC BY 4.0 (https://creativecommons.org/licenses/by/4.0/). Fonte: Wikimedia Commons.*
 
 ---
 
@@ -408,7 +414,7 @@ CLASSIFICAÇÃO DO VASO          TÉCNICAS DE CONTROLE              CONDUTAS PRO
 ## SEÇÃO 11 — O QUE VOCÊ PRECISA LEMBRAR
 
 1. **Sangramento massivo mata em 3 minutos:** Aja com rapidez. A prioridade máxima do trauma é o estancamento de sangramentos externos volumosos.
-2. **Compressão direta firme e contínua:** Pressione o ponto exato da ferida com gaze limpa e use o peso do corpo por no mínimo 5 a 10 minutos sem aliviar a pressão.
+2. **Compressão direta firme e contínua:** pressione a ferida com gaze limpa sem levantar repetidamente. Se houver sinais de hemorragia ameaçadora à vida, acione o resgate e escale a medida conforme treinamento.
 3. **Não retire a primeira gaze ensopada:** Se o sangue vazar, coloque mais panos limpos por cima e aumente a força. Retirar a gaze desfaz o coágulo.
 4. **Nunca retire facas ou objetos cravados:** Mantenha o objeto no lugar e estabilize-o com bandagens ao redor. Retirar o objeto provoca hemorragia interna fatal.
 5. **Combata a hipotermia da vítima:** Quem perde sangue perde calor e perde a capacidade de coagular. Aqueça a vítima com cobertores ou manta térmica.
@@ -445,5 +451,5 @@ CLASSIFICAÇÃO DO VASO          TÉCNICAS DE CONTROLE              CONDUTAS PRO
 | **Status:** | `Aguardando Aprovação Científica` |
 | **Data da Redação:** | 19 de outubro de 2026 |
 | **Versão:** | 1.0.0 |
-| **Validação Científica por IA:** | Conforme diretrizes ACS/PHTLS 10ª Ed., STOP THE BLEED® e AHA First Aid |
+| **Situação científica:** | Revisado editorialmente; requer homologação por profissional habilitado antes do uso instrucional. |
 | **Próxima Revisão:** | Outubro de 2027 |
