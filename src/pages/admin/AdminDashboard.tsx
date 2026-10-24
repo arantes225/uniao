@@ -542,8 +542,32 @@ export const AdminDashboard: React.FC = () => {
       setCertInstructorRole(found.instructorRole);
       setCertDirector(found.technicalDirector);
       setCertModules([...found.modules]);
+      setCertSigners(defaultCertificateSigners(found));
     }
   };
+
+  useEffect(() => {
+    if (cohorts.length && !cohorts.some(cohort => cohort.id === selectedCertCohortId)) {
+      setSelectedCertCohortId(cohorts[0].id);
+    }
+  }, [cohorts, selectedCertCohortId]);
+
+  useEffect(() => {
+    if (!pinAuthorized || !cohorts.some(cohort => cohort.id === selectedCertCohortId)) return;
+    let cancelled = false;
+    const preset = PRESET_MODELS.find(item => item.id === selectedPresetId) || PRESET_MODELS[0];
+    setCertSigners(defaultCertificateSigners(preset));
+    supabase.from('certificate_signature_sets').select('signers')
+      .eq('cohort_id', selectedCertCohortId).eq('preset_id', selectedPresetId)
+      .maybeSingle()
+      .then(({ data, error }) => {
+        if (cancelled || error || !Array.isArray(data?.signers)) return;
+        setCertSigners((data.signers as CertificateSignatory[]).filter(
+          person => !!person && typeof person.id === 'string' && typeof person.name === 'string'
+        ));
+      });
+    return () => { cancelled = true; };
+  }, [pinAuthorized, selectedCertCohortId, selectedPresetId, cohorts]);
 
   // Upload da Galeria
   const handleUploadImage = async (e: React.FormEvent) => {
@@ -810,6 +834,16 @@ export const AdminDashboard: React.FC = () => {
   const handleSaveCertificate = async (e: React.FormEvent) => {
     e.preventDefault();
     setCertSavedSuccess(false);
+    if (!currentCertCohort || signatureUploadingId) {
+      alert('Selecione uma turma válida e aguarde o envio das assinaturas.');
+      return;
+    }
+    if (!certSigners.some(person => person.enabled && person.name.trim())) {
+      alert('Selecione pelo menos um responsável para assinar.');
+      return;
+    }
+    const primaryInstructor = certSigners.find(person => person.isInstructor);
+    const technicalDirector = certSigners.find(person => person.isTechnicalDirector);
 
     const { error } = await supabase
       .from('certificate_templates')
@@ -819,13 +853,25 @@ export const AdminDashboard: React.FC = () => {
         validity_months: Number(certValidity),
         legal_framework: certLegal,
         syllabus: certModules.join('\n'),
-        instructor_name: certInstructor,
-        instructor_role: certInstructorRole,
-        technical_director: certDirector,
+        instructor_name: primaryInstructor?.name || certInstructor,
+        instructor_role: primaryInstructor?.role || certInstructorRole,
+        technical_director: technicalDirector?.name || certDirector,
         updated_at: new Date().toISOString(),
       });
 
     if (!error) {
+      const { error: signersError } = await supabase
+        .from('certificate_signature_sets')
+        .upsert({
+          cohort_id: currentCertCohort.id,
+          preset_id: selectedPresetId,
+          signers: certSigners,
+          updated_at: new Date().toISOString(),
+        }, { onConflict: 'cohort_id,preset_id' });
+      if (signersError) {
+        alert('Modelo salvo, mas não foi possível salvar as assinaturas: ' + signersError.message);
+        return;
+      }
       setCertSavedSuccess(true);
       setTimeout(() => setCertSavedSuccess(false), 4000);
     } else {
