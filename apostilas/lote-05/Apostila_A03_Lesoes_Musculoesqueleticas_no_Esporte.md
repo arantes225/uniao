@@ -95,16 +95,13 @@ Ao concluir o estudo aprofundado deste módulo, o treinador e instrutor esportiv
 
 **LEITURA GUIADA — COMECE AQUI:** Nem toda dor após o treino é apenas uma distensão. Uma queda, torção ou pancada pode romper ligamentos, deslocar articulações ou quebrar ossos. Para quem presta os primeiros socorros, importa reconhecer sinais de gravidade e evitar movimentos que aumentem a lesão.
 
-O ambiente de treinamento de força, crossfit, lutas e esportes coletivos é caracterizado por cargas mecânicas elevadas, acelerações, mudanças abruptas de direção e impactos corporais diretos. De acordo com o Conselho Federal de Educação Física e a Sociedade Brasileira de Medicina do Exercício e do Esporte, as lesões do aparelho locomotor representam **mais de 85% de todas as intercorrências médicas atendidas em academias e centros esportivos** [1, 2].
+O ambiente de treinamento de força, lutas e esportes coletivos é caracterizado por cargas mecânicas elevadas, acelerações, mudanças de direção e impactos. Lesões musculoesqueléticas são frequentes nesses cenários, mas sua proporção varia por modalidade, população e sistema de vigilância; não use um percentual único sem uma fonte específica e atual [1, 2].
 
 Embora a maioria das lesões musculoesqueléticas não ameace imediatamente a vida (ao contrário da parada cardíaca abordada no Módulo A02), **a conduta adotada nos primeiros 15 minutos pelo educador físico determina o prognóstico funcional definitivo do atleta** [1, 3]:
 - Uma entorse grave de tornozelo tratada incorretamente com calor ou massagens vigorosas pode transformar um estiramento parcial de ligamentos em uma instabilidade articular crônica invalidante.
 - Uma fratura fechada de perna manipulada de forma desajeitada por pessoas destreinadas pode perfurar a pele (transformando-se em fratura exposta contaminada) ou dilacerar a artéria tibial anterior, provocando síndrome compartimental e risco de amputação do membro [3, 4].
 - Uma concussão cerebral subestimada em uma luta de artes marciais pode culminar na letal **Síndrome do Segundo Impacto**, na qual um novo trauma craniano menor provoca edema cerebral fulminante e óbito em poucos minutos [5, 6].
 
-
-![Figura 1 — Enfaixamento compressivo funcional em entorse articular de tornozelo.](../imagens/Ankle-wrap.png)
-*Figura 1 — Enfaixamento compressivo funcional em entorse articular de tornozelo. Crédito: Baedr-9439. Licença: CC0. Fonte: Wikimedia Commons.*
 
 ---
 
@@ -148,6 +145,14 @@ A maioria das distensões musculares agudas não ocorre no meio do ventre do mú
 
 ### 5.1 Entorses Articulares: Fisiopatologia Ligamentar e Manejo Inicial
 
+![Figura 2 — Bandagem de contenção e estabilização articular em trauma de joelho.](../imagens/Knee-wrap.png)
+*Figura 2 — Bandagem de contenção e estabilização articular em trauma de joelho. Crédito: Baedr-9439. Licença: CC0. Fonte: Wikimedia Commons.*
+
+
+![Figura 1 — Enfaixamento compressivo funcional em entorse articular de tornozelo.](../imagens/Ankle-wrap.png)
+*Figura 1 — Enfaixamento compressivo funcional em entorse articular de tornozelo. Crédito: Baedr-9439. Licença: CC0. Fonte: Wikimedia Commons.*
+
+
 A entorse é a lesão traumática dos ligamentos que estabilizam uma articulação, decorrente de uma força rotacional ou angular que ultrapassa a amplitude articular anatômica normal [1, 7].
 
 #### Classificação Clínica das Entorses:
@@ -158,11 +163,8 @@ A entorse é a lesão traumática dos ligamentos que estabilizam uma articulaç�
 #### Conduta Inicial no Salão:
 1. **Interrompa a atividade imediatamente:** Proíba o aluno de "tentar andar para ver se passa".
 2. **Retire calçados e meias com cuidado:** Avalie a anatomia do tornozelo ou joelho antes que o inchaço mascare deformidades.
-3. **Aplique o protocolo POLICE:** Proteja a articulação, aplique compressa fria (gelo com barreira) por 15 a 20 minutos e enfaixe com atadura elástica suave [1, 7].
+3. **Proteja e encaminhe quando necessário:** interrompa a atividade, proteja a articulação de nova carga e avalie sinais de gravidade. Frio com barreira pode ser usado por curto período apenas para conforto; não há um tempo obrigatório nem garantia de reduzir lesão. Compressão leve e elevação podem ser consideradas se não aumentarem a dor ou comprometerem circulação [1, 7].
 
-
-![Figura 2 — Bandagem de contenção e estabilização articular em trauma de joelho.](../imagens/Knee-wrap.png)
-*Figura 2 — Bandagem de contenção e estabilização articular em trauma de joelho. Crédito: Baedr-9439. Licença: CC0. Fonte: Wikimedia Commons.*
 
 ---
 
@@ -203,12 +205,17 @@ A luxação ocorre quando as extremidades ósseas de uma articulação sofrem de
 3. **Encaminhamento Médico Rápido:** Conduza o atleta com imobilização firme até um pronto-socorro ortopédico.
 
 
-![Figura 3 — Imobilização de membro superior com tala moldável.](../imagens/Splinting-an-arm.png)
-*Figura 3 — Imobilização de membro superior com tala moldável. Crédito: Baedr-9439. Licença: CC0. Fonte: Wikimedia Commons.*
-
 ---
 
 ### 5.4 Fraturas Ósseas no Esporte: Impacto Direto, Sobrecarga e Avulsão
+
+![Figura 4 — Imobilização solidária (buddy taping) em trauma fechado de falanges.](../imagens/Buddy-taping-finger.png)
+*Figura 4 — Imobilização solidária (buddy taping) em trauma fechado de falanges. Crédito: Baedr-9439. Licença: CC0. Fonte: Wikimedia Commons.*
+
+
+![Figura 3 — Imobilização de membro superior com tala moldável.](../imagens/Splinting-an-arm.png)
+*Figura 3 — Imobilização de membro superior com tala moldável. Crédito: Baedr-9439. Licença: CC0. Fonte: Wikimedia Commons.*
+
 
 As fraturas em ambientes esportivos podem decorrer de quedas de altura considerável (barra fixa, argolas), impacto direto de cargas pesadas (queda de barra com anilhas sobre o corpo) ou forças de torção biomecânica extrema [3, 4].
 
@@ -258,16 +265,17 @@ Diferente do mito popular, **mais de 90% das concussões no esporte NÃO envolve
 
 ### 5.6 Cuidados Iniciais no Salão: Protocolo POLICE/PEACE & LOVE e Encaminhamento
 
+![Figura 5 — Imobilização funcional elástica em entorse ou contusão de punho.](../imagens/Wrist-wrap.png)
+*Figura 5 — Imobilização funcional elástica em entorse ou contusão de punho. Crédito: Baedr-9439. Licença: CC0. Fonte: Wikimedia Commons.*
+
+
 A moderna medicina esportiva atualizou as clássicas diretrizes de atendimento a lesões agudas de partes moles [1, 7]:
 
-
-![Figura 4 — Imobilização solidária (buddy taping) em trauma fechado de falanges.](../imagens/Buddy-taping-finger.png)
-*Figura 4 — Imobilização solidária (buddy taping) em trauma fechado de falanges. Crédito: Baedr-9439. Licença: CC0. Fonte: Wikimedia Commons.*
 
 #### O Protocolo POLICE:
 - **P - Protect (Proteger):** Proteger o tecido machucado de nova sobrecarga nas primeiras 24 a 48 horas (uso de tipoia, muleta ou tala).
 - **OL - Optimal Loading (Carga Ótima):** Estimular o movimento suave e precoce quando tolerado, acelerando a orientação das novas fibras colágenas sem causar dor aguda.
-- **I - Ice (Gelo):** Crioterapia local por **15 a 20 minutos a cada 2 a 3 horas**, promovendo vasoconstrição periférica temporária para controlar o edema excessivo e atuar como analgésico natural. **Sempre com uma toalha ou tecido entre o gelo e a pele**.
+- **I - Ice (Frio):** O frio com barreira pode aliviar dor em alguns pacientes. Use sessões curtas e interrompa se houver dor, palidez intensa ou dormência; não o apresente como tratamento que acelera cicatrização. Nunca aplique gelo diretamente à pele.
 - **C - Compression (Compressão):** Enfaixamento compressivo elástico no sentido distal para proximal (da ponta do membro em direção ao corpo) para limitar o acúmulo de líquido intersticial.
 - **E - Elevation (Elevação):** Manter o membro machucado acima do nível do coração sempre que a vítima estiver em repouso, favorecendo a drenagem venosa e linfática [1, 7].
 
@@ -298,16 +306,13 @@ Pesquisas recentes em fisiologia tecidual comprovam que a inflamação inicial p
 > **Erro que pode prejudicar a vítima:** Não tente colocar uma articulação ou osso de volta no lugar. Pode haver lesão de nervos e vasos sanguíneos. Dor intensa, deformidade, perda de sensibilidade, dedos frios ou osso exposto exigem avaliação urgente.
 
 1. **"Puxar o dedo ou o ombro no salão para colocar no lugar":** Erro grosseiro que pode transformar uma luxação simples em uma lesão neurovascular cirúrgica definitiva [2, 3].
-2. **Aplicar gelo diretamente sobre a pele nua por 1 hora:** O gelo sem proteção queima a pele por congelamento (*frostbite* químico), lesiona nervos cutâneos superficiais e desencadeia vasodilatação reflexa rebote [1, 7].
+2. **Aplicar gelo diretamente sobre a pele ou mantê-lo por tempo excessivo:** pode causar lesão por frio e irritação cutânea. Use sempre uma barreira e reavalie conforto e pele; o objetivo é analgesia, não “congelar” a lesão [1, 7].
 3. **Fazer massagens vigorosas ou alongar músculo com distensão aguda:** Tracionar ou massagear um músculo que acabou de sofrer microrrupturas abre ainda mais o hematoma interno [1, 7].
 4. **Liberar o atleta para continuar jogando após "ficar tonto por uma pancada":** É a principal causa de mortes evitáveis por concussão cerebral secundária em modalidades esportivas [5, 6].
 5. **Permitir que o aluno caminhe apoiando peso sobre fratura de tornozelo:** Destrói a congruência dos maléolos tibial e fibular, convertendo uma fratura passível de tratamento conservador em uma fratura cirúrgica complexa [3, 4].
 
 ---
 
-
-![Figura 5 — Imobilização funcional elástica em entorse ou contusão de punho.](../imagens/Wrist-wrap.png)
-*Figura 5 — Imobilização funcional elástica em entorse ou contusão de punho. Crédito: Baedr-9439. Licença: CC0. Fonte: Wikimedia Commons.*
 
 ## SEÇÃO 8 — ESTUDO DE CASO PRÁTICO CONTEXTUALIZADO (ENTORSE COM SUSPEITA DE FRATURA)
 
@@ -343,8 +348,8 @@ O treinador Gustavo aproxima-se rapidamente e pede que a turma interrompa a pass
 > **MACETES OPERACIONAIS DE ALTO VALOR NO SALÃO DE TREINO**
 >
 > 1. **O Teste da Moeda na Tala Moldável:** Ao aplicar uma tala de alumínio com atadura no antebraço ou tornozelo fraturado, deslize uma moeda ou uma caneta entre a atadura e a pele do aluno. Se a caneta passar com leve resistência, a compressão está perfeita. Se entrar frouxa, a tala não estabiliza; se você não conseguir introduzir nem a ponta da unha, a atadura está operando como um torniquete garroteando as veias e precisa ser afrouxada imediatamente [3, 4].
-> 2. **A "Regra dos 4 Passos de Ottawa":** Diante de uma entorse feia de tornozelo, se o atleta for fisicamente incapaz de dar 4 passos completos (mesmo mancando) logo após o trauma e na hora da avaliação no salão, há 98% de chance de existir fratura óssea oculta associada. Não trate como "apenas um estiramentozinho"; envie diretamente ao raio-X [8].
-> 3. **A Toalha Úmida no Gelo:** Para acelerar a troca térmica do gelo com a articulação lesionada sem queimar a pele, umedeça levemente a toalha de tecido antes de envolver a bolsa de gelo. O tecido úmido conduz a temperatura fria 4 vezes mais rápido para o tecido inflamado do que uma toalha totalmente seca [1, 7].
+> 2. **Regras de Ottawa:** são regras de decisão para profissionais que avaliam necessidade de radiografia; não fornecem a probabilidade individual de fratura e não são diagnóstico para aplicação autônoma no salão. Incapacidade de apoiar, dor óssea localizada, deformidade, alteração neurovascular ou dor intensa justificam avaliação presencial.
+> 3. **Frio com barreira:** não é necessário molhar a toalha nem buscar resfriamento máximo. Priorize conforto, proteção da pele e encaminhamento quando houver suspeita de lesão relevante.
 
 ---
 
@@ -377,7 +382,7 @@ O treinador Gustavo aproxima-se rapidamente e pede que a turma interrompa a pass
 - Luxação articular jamais deve ser reduzida (colocada no lugar) no ambiente leigo da academia.
 - Fraturas demandam imobilização com tala que englobe a articulação acima e a articulação abaixo da lesão.
 - Concussão esportiva na maioria das vezes não tem desmaio; tontura e lentidão cognitiva exigem afastamento imediato.
-- O protocolo POLICE (Proteger, Carga Ótima, Gelo com barreira, Compressão e Elevação) é o padrão ouro de atendimento a partes moles.
+- POLICE/PEACE & LOVE são estruturas didáticas, não protocolos universais. Em primeiros socorros, a prioridade é proteger, reconhecer sinais de gravidade e encaminhar; retorno progressivo à carga deve ser orientado por profissional.
 - Sempre cheque o pulso periférico e a temperatura dos dedos antes e após imobilizar membros traumatizados.
 
 ---
