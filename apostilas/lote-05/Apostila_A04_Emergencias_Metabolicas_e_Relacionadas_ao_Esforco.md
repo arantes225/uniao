@@ -174,14 +174,15 @@ A desidratação instala-se de forma progressiva durante a sessão de treinament
 | **Grave (> 6% do peso)** | Ausência de suor, confusão mental, olhos fundos, pulso fino e rápido, colapso circulatório. | **EMERGÊNCIA MÉDICA: Risco de choque hipovolêmico e falência renal aguda.** |
 
 
-![Figura 2 — Quadro comparativo clínico entre exaustão térmica e golpe de calor (intermação).](../imagens/Heat-symptoms-2022-final.png)
-*Figura 2 — Quadro comparativo clínico entre exaustão térmica e golpe de calor (intermação). Crédito: National Weather Service / CDC / NIOSH. Licença: Domínio público. Fonte: Wikimedia Commons.*
-
 - **Protocolo de Hidratação:** Para treinos com duração superior a 60 minutos sob calor, intercalar água mineral com **bebidas isotônicas comerciais ou soro de reidratação oral caseiro** (contendo sódio, potássio e glicose a 6%) [1, 9].
 
 ---
 
 ### 5.3 Cãibras por Calor e Exaustão Térmica: Mecanismos e Abordagem
+
+![Figura 2 — Quadro comparativo clínico entre exaustão térmica e golpe de calor (intermação).](../imagens/Heat-symptoms-2022-final.png)
+*Figura 2 — Quadro comparativo clínico entre exaustão térmica e golpe de calor (intermação). Crédito: National Weather Service / CDC / NIOSH. Licença: Domínio público. Fonte: Wikimedia Commons.*
+
 
 As doenças relacionadas ao calor representam um espectro contínuo de deterioração fisiológica [1, 2]:
 
@@ -200,7 +201,11 @@ Incapacidade do sistema cardiovascular de manter o débito cardíaco adequado pa
 
 ### 5.4 Hipertermia Grave e Intermação (*Exertional Heat Stroke*): Emergência Letal
 
-![Resposta imediata à suspeita de intermação durante exercício](../../public/apostilas/imagens/usm-intermacao-resfriamento.svg)
+![Desenho de resfriamento ativo de pessoa sob sombra, com água fria, ventilação e acionamento de emergência.](../imagens/usm-intermacao-visual.svg)
+*Ilustração autoral USM — atendimento inicial à suspeita de intermação durante exercício. Não atrase o SAMU 192.*
+
+
+![Resposta imediata à suspeita de intermação durante exercício](../imagens/usm-intermacao-resfriamento.svg)
 *Figura complementar — Resposta imediata à suspeita de intermação durante exercício. Ilustração original União Serviços Médicos (2026), baseada em AHA/Cruz Vermelha 2024; não reproduz imagens de terceiros.*
 
 
@@ -261,9 +266,6 @@ Ao sofrer lise celular maciça, os miócitos liberam no sangue intracelular gran
 +---------------------------------------------------------------------------------+
 ```
 
-
-![Figura 3 — Envoltório de isolamento térmico passivo e ativo para prevenção da hipotermia no trauma.](../imagens/Hypothermia-wrap.png)
-*Figura 3 — Envoltório de isolamento térmico passivo e ativo para prevenção da hipotermia no trauma. Crédito: Baedr-9439. Licença: CC0. Fonte: Wikimedia Commons.*
 
 #### Conduta e Prevenção pelo Educador Físico:
 - Ao identificar aluno com dor muscular intratável e urina escura nos dias seguintes ao treino, determine **proibição imediata de novos exercícios**, estimule ingestão oral abundante de água e encaminhe-o com urgência a um serviço hospitalar para dosagem sérica de CK e eletrólitos e hidratação venosa vigorosa [4, 5].
@@ -407,6 +409,9 @@ Inconsciente: médica                                     Hidratação fria     
 ---
 
 ### Metadados Editoriais Institucionais
+
+> [!IMPORTANT]
+> **Limite científico:** confusão, desmaio, convulsão, temperatura elevada ou incapacidade de ingerir líquido são sinais de emergência. O resfriamento e a glicose oral devem ser adequados ao estado de consciência e nunca atrasar o resgate.
 
 | CAMPO | ESPECIFICAÇÃO TÉCNICA |
 | :--- | :--- |
