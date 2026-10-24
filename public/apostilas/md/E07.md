@@ -179,6 +179,10 @@ A clareza de funções é o antídoto contra a desorganização. Em situações 
 
 ### 5.3 Protocolo Padronizado de Acionamento dos Serviços de Saúde (SAMU 192 e Bombeiros 193)
 
+![Informações que a equipe escolar deve transmitir ao 192 e 193](./apostilas/imagens/usm-chamada-samu-bombeiros.svg)
+*Figura complementar — Informações que a equipe escolar deve transmitir ao 192 e 193. Ilustração original União Serviços Médicos (2026), baseada em Ministério da Saúde — SAMU 192; não reproduz imagens de terceiros.*
+
+
 A ligação para a central de regulação médica do SAMU (192) ou Corpo de Bombeiros (193) não pode ser desordenada. A velocidade de envio da viatura adequada (USA - Unidade de Suporte Avançado com médico ou USB - Unidade de Suporte Básico) depende inteiramente da precisão das respostas dadas pelo comunicador escolar [2, 5].
 
 ```

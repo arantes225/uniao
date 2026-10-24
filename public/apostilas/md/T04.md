@@ -170,6 +170,10 @@ A desenergização elétrica não consiste apenas em "apagar o interruptor". Um 
 
 ### 5.3. Segurança Absoluta Antes de Abordar a Vítima
 
+![Sequência segura em acidente elétrico antes de tocar na vítima](./apostilas/imagens/usm-risco-eletrico.svg)
+*Figura complementar — Sequência segura em acidente elétrico antes de tocar na vítima. Ilustração original União Serviços Médicos (2026), baseada em NR-10 e orientações de emergência; não reproduz imagens de terceiros.*
+
+
 A primeira e mais inviolável atitude de qualquer socorrista frente a uma vítima de choque elétrico é a **garantia estrita da própria segurança**. Aproximar-se impensadamente de alguém em contato com condutor energizado resulta em choque imediato do socorrista.
 
 

@@ -179,6 +179,10 @@ Nunca aplique vinagre ou limão sobre queimaduras por álcalis, nem bicarbonato 
 
 ### 5.4. Contaminação Cutânea e Ocular: Chuveiros de Emergência e Lava-Olhos
 
+![Condutas de primeiros socorros diante de exposição química ocular](./apostilas/imagens/usm-lavagem-ocular.svg)
+*Figura complementar — Condutas de primeiros socorros diante de exposição química ocular. Ilustração original União Serviços Médicos (2026), baseada em AHA/Cruz Vermelha 2024; não reproduz imagens de terceiros.*
+
+
 As estações combinadas de chuveiro e lava-olhos de emergência devem estar acessíveis a no máximo **10 segundos de deslocamento desobstruído** da área de risco (norma ANSI/ISEA Z358.1).
 
 #### A. Descontaminação no Chuveiro de Emergência

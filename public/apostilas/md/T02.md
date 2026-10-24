@@ -204,6 +204,10 @@ As amputações em indústrias atingem frequentemente dedos, mãos e antebraços
 
 ### 5.5 Hemorragias Graves em Fábricas: A Doutrina do Torniquete Industrial
 
+![Indicação e aplicação segura de torniquete no trauma industrial](./apostilas/imagens/usm-torniquete-seguranca.svg)
+*Figura complementar — Indicação e aplicação segura de torniquete no trauma industrial. Ilustração original União Serviços Médicos (2026), baseada em AHA/Cruz Vermelha 2024; não reproduz imagens de terceiros.*
+
+
 O ambiente industrial exige que o torniquete esteja acessível e pronto para uso em pontos estratégicos de risco elevado [1, 5]:
 - Em indústrias metalúrgicas, madeireiras, frigoríficos e papel e celulose, o torniquete comercial não pode ficar guardado apenas no ambulatório central a 500 metros do galpão de máquinas.
 - **Kits de Resgate em Zonas de Risco:** Toda linha com prensas, serras ou tornos deve dispor de uma caixa de trauma de parede com torniquete CAT, bandagem israelense e luvas a menos de **30 segundos de caminhada** dos operadores [1, 5].
