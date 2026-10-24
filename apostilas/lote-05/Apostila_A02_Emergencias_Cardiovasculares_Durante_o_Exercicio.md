@@ -192,9 +192,6 @@ O reconhecimento precoce do IAM no ambiente de treino reduz o tempo até a angio
 A perda transitória da consciência seguida de recuperação espontânea e rápida (síncope) no ambiente esportivo exige diferenciação cronológica imediata [3, 4]:
 
 
-![Figura 2 — Posicionamento anterolateral padrão das pás adesivas do DEA no tórax desnudo.](../imagens/Aed-electrode-placement.png)
-*Figura 2 — Posicionamento anterolateral padrão das pás adesivas do DEA no tórax desnudo. Crédito: Baedr-9439. Licença: CC0. Fonte: Wikimedia Commons.*
-
 ```
 +---------------------------------------------------------------------------------+
 |                       AVALIAÇÃO DA SÍNCOPE NO EXERCÍCIO                         |
@@ -235,6 +232,14 @@ O *gasping* é um padrão reflexo de respiração agônica em que a vítima emit
 ---
 
 ### 5.5 RCP de Alta Qualidade e Aplicação Ultrarrápida do DEA em Academias
+
+![Figura 4 — Posicionamento correto das mãos na metade inferior do esterno durante a RCP.](../imagens/Chest-compression-hand-placement.jpg)
+*Figura 4 — Posicionamento correto das mãos na metade inferior do esterno durante a RCP. Crédito: Another-anon-artist-234. Licença: CC0. Fonte: Wikimedia Commons.*
+
+
+![Figura 2 — Posicionamento anterolateral padrão das pás adesivas do DEA no tórax desnudo.](../imagens/Aed-electrode-placement.png)
+*Figura 2 — Posicionamento anterolateral padrão das pás adesivas do DEA no tórax desnudo. Crédito: Baedr-9439. Licença: CC0. Fonte: Wikimedia Commons.*
+
 
 A sobrevivência na PCR esportiva depende da execução estrita dos parâmetros da ressuscitação de alta qualidade [5, 6, 7]:
 
@@ -319,9 +324,6 @@ A competência técnica sob estresse só se consolida mediante treinamentos real
 | **Síncope Cardíaca** | Arritmia ventricular ou estenose da aorta. | Ocorre *durante* a execução do esforço máximo. | RCP imediata se PCR; avaliação cardiológica urgente. | **ALTÍSSIMO.** |
 | **Intermação / Calor** | Falência aguda dos mecanismos térmicos. | Pele muito quente, confusão mental grave, delírio. | Resfriamento corporal agressivo imediato + 192. | **ALTÍSSIMO.** |
 
-
-![Figura 4 — Posicionamento correto das mãos na metade inferior do esterno durante a RCP.](../imagens/Chest-compression-hand-placement.jpg)
-*Figura 4 — Posicionamento correto das mãos na metade inferior do esterno durante a RCP. Crédito: Another-anon-artist-234. Licença: CC0. Fonte: Wikimedia Commons.*
 
 ---
 
@@ -442,6 +444,9 @@ Retorno total            Choque se FV/TV
 ---
 
 ### Metadados Editoriais Institucionais
+
+> [!IMPORTANT]
+> **Atualização de RCP/DEA:** usar os algoritmos AHA 2025 vigentes, respeitando treinamento do socorrista. Os sintomas descritos orientam acionamento do resgate e não confirmam diagnóstico de infarto ou arritmia.
 
 | CAMPO | ESPECIFICAÇÃO TÉCNICA |
 | :--- | :--- |
