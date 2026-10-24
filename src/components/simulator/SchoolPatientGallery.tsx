@@ -38,7 +38,7 @@ const schoolPatients = [
       deitada: {
         open: '/simulador/personagens/escola-horizontal-v20261023/zelador-deitado.png',
         closed: '/simulador/personagens/escola-horizontal-v20261023/blink/zelador-deitado-olhos-fechados.png',
-        chest: { x: 49, y: 41, rx: 14, ry: 9 }, eyes: { left: { x: 44.2, y: 22.8 }, right: { x: 47.1, y: 21.8 }, rx: 3.5, ry: 3.2 }
+        chest: { x: 49, y: 41, rx: 14, ry: 9 }, eyes: { left: { x: 44.2, y: 25.4 }, right: { x: 47.1, y: 24.4 }, rx: 3.5, ry: 3.2 }
       }
     }
   },
@@ -92,7 +92,7 @@ const schoolPatients = [
       deitada: {
         open: '/simulador/personagens/escola-horizontal-v20261023/bebe-deitado.png',
         closed: '/simulador/personagens/escola-horizontal-v20261023/blink/bebe-deitado-olhos-fechados.png',
-        chest: { x: 50, y: 58, rx: 14, ry: 9 }, eyes: { left: { x: 44.3, y: 41.4 }, right: { x: 47.5, y: 39.8 }, rx: 2.9, ry: 2.7 }
+        chest: { x: 50, y: 58, rx: 14, ry: 9 }, eyes: { left: { x: 42.8, y: 41.4 }, right: { x: 47.5, y: 39.8 }, rx: 2.9, ry: 2.7 }
       }
     }
   }
