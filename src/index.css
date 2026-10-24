@@ -62,8 +62,8 @@
 }
 
 .school-patient-photo__image--chest {
-  -webkit-mask-image: radial-gradient(ellipse var(--school-chest-rx) var(--school-chest-ry) at var(--school-chest-x) var(--school-chest-y), #000 52%, transparent 100%);
-  mask-image: radial-gradient(ellipse var(--school-chest-rx) var(--school-chest-ry) at var(--school-chest-x) var(--school-chest-y), #000 52%, transparent 100%);
+  -webkit-mask-image: radial-gradient(ellipse var(--school-chest-rx) var(--school-chest-ry) at var(--school-chest-x) var(--school-chest-y), #000 42%, transparent 100%);
+  mask-image: radial-gradient(ellipse var(--school-chest-rx) var(--school-chest-ry) at var(--school-chest-x) var(--school-chest-y), #000 42%, transparent 100%);
   transform-origin: var(--school-chest-x) var(--school-chest-y);
   animation: school-patient-breathe 4.1s ease-in-out infinite;
   will-change: transform;
@@ -98,7 +98,7 @@
   }
 
   48% {
-    transform: scale(1.04, 1.11);
+    transform: scale(1.015, 1.045);
   }
 }
 
