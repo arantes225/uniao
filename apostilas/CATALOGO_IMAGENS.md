@@ -1,60 +1,72 @@
-# Catálogo de Imagens — Apostilas USM (40/40 Módulos Cobertos)
+# Catálogo atual de imagens — União Serviços Médicos
 
-Todas as licenças foram **verificadas programaticamente via API do Wikimedia Commons** (`extmetadata`) em 19/10/2026.
-Página de cada arquivo: `https://commons.wikimedia.org/wiki/File:<nome>`
+**Atualizado em 24/10/2026.** O catálogo anterior foi preservado em `CATALOGO_IMAGENS_HISTORICO_2026-10-19.md` por conter denominações antigas que já não correspondem integralmente aos arquivos publicados. Esse registro histórico **não deve ser tratado como inventário atual nem como nova verificação individual de licença**.
 
-**Política de Licenciamento aplicada em todas as 40 apostilas:**
-- **Grupo A (Domínio Público / CC0):** Uso comercial irrestrito. Atribuição registrada por rigor editorial.
-- **Grupo B (CC BY 2.0 / 3.0 / 4.0):** Uso comercial permitido com crédito ao autor e indicação da licença.
-- **Nenhuma imagem CC BY-SA, NC ou ND foi utilizada nas apostilas publicadas.**
+## Resultado do levantamento
 
-## Grupo A — Domínio Público / CC0 (25 arquivos)
+- **40 apostilas publicadas:** `public/apostilas/md/`.
+- **97 arquivos gráficos locais** em `public/apostilas/imagens/`: 83 preexistentes e **14 novos arquivos SVG originais**.
+- **181 inserções** de imagens nos textos publicados: incluem imagens reutilizadas por diferentes módulos.
+- **21 inserções** dos 14 infográficos originais desta revisão.
+- **1 inserção externa** de imagem do Wikimedia Commons, verificada como domínio público.
+- **5 referências visuais descontextualizadas removidas** nesta revisão.
+- **0 referências locais a arquivos inexistentes**, após confronto por nome com o inventário do GitHub.
 
-| Arquivo | Licença | Autor / Fonte | Apostilas onde está aplicada |
-|---|---|---|---|
-| `First_aid_symbol_ISO_7010_E003.svg` | Domínio Público | ISO 7010 | C01, E01, E07, A01 |
-| `Cardiopulmonary_Resuscitation_Adult.jpg` | Domínio Público | US Army Corps of Engineers | C05, E02 |
-| `CardiopulmonaryResuscitationBabyDummy.jpg` | Domínio Público | Uniformed Services University | E02 |
-| `Modern_AED_Automated_external_defibrillator.png` | CC0 | VoLid27 | C06, A02, A06 |
-| `Public_access_AED_with_coded_lock.jpg` | CC0 | Christian P. Nielsen | C06, A06, T08 |
-| `ISO_7010_E010.svg` | CC0 | M!dgard | C06, A06 |
-| `ISO_7010_E011.svg` | Domínio Público | MaxxL | T03 |
-| `ISO_7010_W012_electricity_warning.svg` | Domínio Público | ISO 7010 | C02, T04 |
-| `ISO_7010_W016_biohazard.svg` | Domínio Público | ISO 7010 | C02 |
-| `Abdominal_thrusts_against_choking_(cropped).jpg` | Domínio Público | US Army AMEDDC&S | C07, E03 |
-| `Jaw_thrust.jpg` | Domínio Público | US Dept. of the Army | C04, T08 |
-| `Recovery_position.svg` | Domínio Público | US Dept. of Health | C04, C09 |
-| `Tourniquet_application.jpg` | Domínio Público | US Navy / MC2 Barry Hirayama | C10, H05, H06, H07 |
-| `Splinting-an-arm.png` | CC0 | Baedr-9439 | C11, E05, A03 |
-| `Cervical-collar-application.png` | CC0 | Baedr-9439 | C11, T05, T08 |
-| `Bag-valve-mask.jpg` | CC0 | Another-anon-artist-234 | C05, T03, T06 |
-| `Epinephrine-injection.png` | CC0 | Baedr-9439 | C09, E04, E06 |
-| `Signs_and_symptoms_of_anaphylaxis.svg` | CC0 | Mikael Häggström | C09, E04 |
-| `Identify_the_symptoms_of_a_stroke_using_the_FAST_method.svg` | Domínio Público | US FDA / Fvasconcellos | C08 |
-| `Act_FAST.svg` | Domínio Público | CDC / NCCDPHP | C08 |
-| `Fire_extinguisher.svg` | CC0 | OpenClipart | T07 |
-| `NFPA_704.svg` | Domínio Público | Denelson83 | T03 |
-| `Lockout_Tagout_(14853353063).jpg` | Domínio Público | US Navy / NAVFAC | T01, T02, T04 |
-| `AsthmaInhaler.jpg` | Domínio Público | Mendel | C09, E06 |
-| `Combat_Application_Tourniquet.jpg` | Domínio Público | US Army | H02, H05, H07 |
-| `Hemostatic_gauze_combat_gauze.jpg` | Domínio Público | US Navy | H04, H06 |
-| `Emergency_Trauma_Dressing_Israeli_bandage.jpg` | Domínio Público | US Army | C10, H03 |
-| `Lifeguard_rescue_can_and_tube.jpg` | Domínio Público | FEMA / USCG | A05 |
-| `Heat_stroke_symptoms_CDC.png` | Domínio Público | CDC / NIOSH | C12, A04 |
-| `Circulation_of_blood_through_the_heart.jpg` | Domínio Público | National Cancer Institute | H01 |
+## Infográficos originais incluídos nesta revisão
 
-## Grupo B — CC BY (Atribuição Obrigatória — Uso Comercial Permitido) (9 arquivos)
+Os gráficos abaixo são **originais da União Serviços Médicos**. Sua redação foi fundamentada em orientações científicas oficiais. **Não são figuras reproduzidas das publicações da AHA, AAP, ACS ou STOP THE BLEED.**
 
-| Arquivo | Licença | Crédito Exigido | Apostilas onde está aplicada |
-|---|---|---|---|
-| `Blausen_0463_HeartAttack.png` | CC BY 3.0 | Blausen Medical Communications, Inc. | C08, A02 |
-| `Blausen_0092_Burns.png` | CC BY 3.0 | Blausen Medical Communications, Inc. | C12, T04, T07 |
-| `Blausen_0317_Diabetic Ketoacidosis.png` | CC BY 3.0 | Blausen Medical Communications, Inc. | A04 |
-| `Blausen_0355_EpilepsySeizure.png` | CC BY 3.0 | Blausen Medical Communications, Inc. | E05 |
-| `Blausen_0426_Fracture.png` | CC BY 3.0 | Blausen Medical Communications, Inc. | A03 |
-| `Depiction_of_a_person_in_hypovolemic_shock.png` | CC BY 4.0 | myUpchar | H01, H06 |
-| `Types_of_bleeding.png` | CC BY 4.0 | OpenStax / Wikimedia Commons | H01, H02, H03 |
-| `Confined_Space_Entry_(32884133734).jpg` | CC BY 2.0 | Georgia National Guard | T06 |
-| `Motolâncias_SAMU_Distrito_Federal.jpg` | CC BY 3.0 BR | Antonio Cruz / Agência Brasil | C03 |
-| `Safety_harness_fall_protection.jpg` | CC BY 2.0 | US OSHA / NIOSH | T05 |
-| `Infant_back_slaps_choking.jpg` | CC BY 4.0 | St John Ambulance / OpenStax | E03 |
+| Arquivo | Módulos publicados | Base técnica para conteúdo |
+| --- | --- | --- |
+| [`usm-engasgo-lactente-2025.svg`](../../public/apostilas/imagens/usm-engasgo-lactente-2025.svg) | C07, E03 | AHA/AAP 2025 |
+| [`usm-rcp-lactente-2025.svg`](../../public/apostilas/imagens/usm-rcp-lactente-2025.svg) | E02 | AHA/AAP 2025 |
+| [`usm-engasgo-adulto-2025.svg`](../../public/apostilas/imagens/usm-engasgo-adulto-2025.svg) | C07 | AHA 2025 |
+| [`usm-compressao-direta.svg`](../../public/apostilas/imagens/usm-compressao-direta.svg) | C10, H01, H02, H03 | AHA/Cruz Vermelha 2024 |
+| [`usm-torniquete-seguranca.svg`](../../public/apostilas/imagens/usm-torniquete-seguranca.svg) | H05, T02 | AHA/Cruz Vermelha 2024 |
+| [`usm-resgate-aquatico-seguro.svg`](../../public/apostilas/imagens/usm-resgate-aquatico-seguro.svg) | A05 | Diretrizes de segurança aquática e RCP após afogamento |
+| [`usm-risco-eletrico.svg`](../../public/apostilas/imagens/usm-risco-eletrico.svg) | T04 | NR-10 e orientações de resgate seguro |
+| [`usm-espaco-confinado.svg`](../../public/apostilas/imagens/usm-espaco-confinado.svg) | T06 | NR-33 e orientação sobre resgate especializado |
+| [`usm-lavagem-ocular.svg`](../../public/apostilas/imagens/usm-lavagem-ocular.svg) | T03 | AHA/Cruz Vermelha 2024 |
+| [`usm-chamada-samu-bombeiros.svg`](../../public/apostilas/imagens/usm-chamada-samu-bombeiros.svg) | C03, E07 | Ministério da Saúde — SAMU 192 |
+| [`usm-packing-somente-treinado.svg`](../../public/apostilas/imagens/usm-packing-somente-treinado.svg) | H04, H07 | AHA/Cruz Vermelha 2024 |
+| [`usm-convulsao-primeiros-socorros.svg`](../../public/apostilas/imagens/usm-convulsao-primeiros-socorros.svg) | E04 | AHA/Cruz Vermelha 2024 |
+| [`usm-dente-avulsionado.svg`](../../public/apostilas/imagens/usm-dente-avulsionado.svg) | E05 | AHA/Cruz Vermelha 2024 |
+| [`usm-intermacao-resfriamento.svg`](../../public/apostilas/imagens/usm-intermacao-resfriamento.svg) | A04 | AHA/Cruz Vermelha 2024 |
+
+## Imagem aberta identificada e reutilizada
+
+- **Arquivo:** `Chest_thrusts_against_choking.jpg` (URL externa na apostila C07).
+- **Autor:** U.S. Army Medical Department Center and School.
+- **Licença:** domínio público — obra de governo federal dos Estados Unidos.
+- **Origem:** [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Chest_thrusts_against_choking.jpg).
+- **URL do arquivo:** https://upload.wikimedia.org/wikipedia/commons/7/7e/Chest_thrusts_against_choking.jpg
+- **Indicação precisa:** compressões torácicas como alternativa às abdominais em gestação avançada ou quando não se pode circundar o abdome. **A sequência atual continua começando com cinco pancadas dorsais.**
+- **Limitação:** imagem carregada externamente; depende da disponibilidade de Wikimedia Commons.
+
+## Cinco figuras retiradas por inadequação didática
+
+1. C04 — fotografia de palpação de pulso carotídeo, incompatível com a ênfase no reconhecimento da PCR pelo leigo sem busca de pulso.
+2. E03 — figura de compressão abdominal em vítima inconsciente, incompatível com RCP na obstrução com perda de consciência.
+3. A06 — ventilação com bolsa-válvula-máscara por dois profissionais, sem pertinência com plano de emergência para leigos.
+4. H01 — figura de compressões torácicas, deslocada num trecho destinado ao reconhecimento de hemorragia.
+5. T06 — manobra de extração de vítima (Rautek), potencialmente confundida com permissão de entrada em espaço confinado.
+
+## Política de aquisição e licença
+
+1. **Referências científicas prioritárias:** Ministério da Saúde, sociedades nacionais, AHA/AAP, AHA/Cruz Vermelha, normas brasileiras aplicáveis e outras autoridades técnicas.
+2. **Imagens externas:** usar apenas arquivos cujo autor, licença, descrição e aplicação didática possam ser conferidos; preservar crédito na legenda.
+3. **Wikimedia Commons:** conferir a página do arquivo e a licença **de cada imagem**; a mera presença no Commons não equivale a domínio público.
+4. **CDC Public Health Image Library:** conferir copyright de cada item; o CDC avisa que parte do acervo é histórica e pode mostrar procedimentos desatualizados.
+5. **STOP THE BLEED / ACS:** usar como fonte de informação clínica sem reproduzir sua arte, slides, documentos ou marca em materiais comerciais sem a autorização aplicável. Consulte as [exigências de permissão](https://www.facs.org/about-acs/content-use/).
+6. **Evitar:** material de cursinhos, marca alheia, imagens sem licença verificável ou visuais que ensinem gesto anterior às atualizações de 2025.
+
+## Páginas de verificação científica
+
+- Ministério da Saúde, SAMU 192: https://www.gov.br/saude/pt-br/composicao/saes/samu-192/samu-192
+- AHA/AAP, 2025 Pediatric Basic Life Support: https://cpr.heart.org/en/resuscitation-science/cpr-and-ecc-guidelines/pediatric-basic-life-support
+- AHA, 2025 Adult Basic Life Support: https://cpr.heart.org/en/resuscitation-science/cpr-and-ecc-guidelines/adult-basic-life-support
+- AHA/Cruz Vermelha, 2024 First Aid: https://cpr.heart.org/en/resuscitation-science/2024-first-aid-guidelines
+- American College of Surgeons, uso de conteúdo protegido: https://www.facs.org/about-acs/content-use/
+- CDC PHIL, questões de licença: https://wwwn.cdc.gov/PHIL/FAQ.aspx
+
+**Próxima exigência para homologação médica:** inspeção visual manual, em celular e desktop, de cada ilustração e conferência da legenda e licença de todas as 83 imagens históricas individualmente; a auditoria automática de existência não substitui isso.
