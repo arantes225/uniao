@@ -5,8 +5,8 @@ Escopo: 40 apostilas da versão entregue ao aluno (`public/apostilas/md/`), 8 lo
 ## Resultado técnico
 - Os 40 módulos (C01–C12, A01–A06, E01–E07, H01–H07, T01–T08) tiveram inserções de figuras revisadas no Markdown publicado.
 - Reposicionadas imagens em subtemas adequados. Foram excluídos do fluxo de leitura exemplos inadequados, sem contexto ou que poderiam confundir o público leigo (incluindo manipulações de via aérea, remoções e elementos de resgate técnico).
-- Adicionados 14 diagramas vetoriais originais para demonstrar relações fisiológicas, segurança, compressão direta, reconhecimento de sangramento, RCP, desengasgo pediátrico e fluxos de emergência.
-- Totais conferidos por busca de referências Markdown ao final: **180 inserções de imagem nas 40 apostilas**, **111 ativos na pasta publicada**. Um ativo pode aparecer em várias apostilas.
+- Adicionados 16 diagramas vetoriais originais para demonstrar relações fisiológicas, segurança, compressão direta, reconhecimento de sangramento, RCP, desengasgo pediátrico e fluxos de emergência.
+- Totais conferidos por busca de referências Markdown ao final: **179 inserções de imagem nas 40 apostilas**, **113 ativos na pasta publicada**. Um ativo pode aparecer em várias apostilas.
 - Em C01, o esquema ASCII da tríade vital foi substituído por figura vetorial.
 - H06 teve retirada de ilustrações abdominais posicionadas em explicações de amputação e revisão de instrução arriscada sobre exploração digital de ferida.
 - T06 ganhou aviso ilustrado de que respiradores filtrantes comuns não fornecem oxigênio e não permitem resgate em atmosfera perigosa.
@@ -39,3 +39,19 @@ Escopo: 40 apostilas da versão entregue ao aluno (`public/apostilas/md/`), 8 lo
 - ACS STOP THE BLEED: https://www.stopthebleed.org/
 
 Esta revisão é editorial e de integridade dos arquivos, não uma avaliação médica integral nem inspeção microscópica das fotos. 
+
+
+## Segunda revisão — 24/10/2026
+
+- C07: substituída a ilustração externa da Wikimedia por SVG autoral local, corrigindo a sequência de cinco pancadas dorsais alternadas com cinco impulsos torácicos para adultos em gestação avançada ou quando não é possível envolver o abdome (AHA 2025).
+- C04, C05, E02: removidas fotografias pequenas, redundantes ou potencialmente confusas em instruções para leigos; conteúdo dos procedimentos de treinamento especializado diferenciado.
+- A02, A05, C04: ampliado o uso da ilustração anatômica vetorial de RCP adulta e removida a fotografia de pequena resolução quando redundante.
+- A01 e E01: colocados mapas de risco e emergência no início da abordagem, reforçando sua função como exemplos a adaptar, não plantas reais.
+- E03: acrescentado infográfico autoral de formatos e cortes de alimentos associados ao risco de engasgo, orientado pelo Ministério da Saúde e pela Sociedade Brasileira de Pediatria.
+- Implantado `scripts/audit-booklet-images.mjs` com comando `npm run audit:images` no CI. Verifica todos os 40 módulos publicados, espelhamento de versões-fonte, disponibilidade de imagens e legendas, ligações externas e resolução técnica de fotografias; falhas de integridade impedem aprovação do CI, e problemas editoriais são alertas.
+- A curadoria automatizada **não certifica qualidade clínica ou anatômica** das imagens nem substitui teste presencial com instrutor ou avaliação de legibilidade real em dispositivos.
+
+### Pendências editoriais ainda abertas
+- Fotografias rasterizadas pequenas: priorizar novas origens com qualidade visual adequada e direitos de uso comercial verificáveis, em vez de ampliá-las artificialmente.
+- Rever a nitidez efetiva de todos os arquivos em celular e desktop; a detecção dimensional não avalia nitidez óptica, artefatos ou correção clínica.
+- Certificar com responsável técnico os esquemas de mãos, vias aéreas e controle hemorrágico antes da homologação final do conteúdo prático.
