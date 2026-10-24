@@ -179,7 +179,7 @@ A clareza de funções é o antídoto contra a desorganização. Em situações 
 
 ### 5.3 Protocolo Padronizado de Acionamento dos Serviços de Saúde (SAMU 192 e Bombeiros 193)
 
-![Informações que a equipe escolar deve transmitir ao 192 e 193](./apostilas/imagens/usm-chamada-samu-bombeiros.svg)
+![Informações que a equipe escolar deve transmitir ao 192 e 193](../../public/apostilas/imagens/usm-chamada-samu-bombeiros.svg)
 *Figura complementar — Informações que a equipe escolar deve transmitir ao 192 e 193. Ilustração original União Serviços Médicos (2026), baseada em Ministério da Saúde — SAMU 192; não reproduz imagens de terceiros.*
 
 
