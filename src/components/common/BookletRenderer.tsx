@@ -12,7 +12,7 @@ const slugify = (value: string) =>
     .replace(/[\u0300-\u036f]/g, '')
     .replace(/[^a-z0-9\s-]/g, '')
     .trim()
-    .replace(/\s+/g, '-');
+    .replace(/[\s-]+/g, '-');
 
 export const TextHighlightToolbar: React.FC = () => {
   const applyHighlight = (color: string) => {
@@ -128,7 +128,7 @@ const ZoomableBookletImage: React.FC<ZoomableBookletImageProps> = ({ src, alt, c
 
   return (
     <>
-      <figure className="my-6 p-4 rounded-2xl bg-slate-50 dark:bg-slate-950/80 border border-slate-200 dark:border-slate-800 flex flex-col items-center text-center shadow-md">
+      <figure className="my-9 sm:my-12 rounded-2xl border border-slate-200/80 bg-slate-50/80 p-5 sm:p-7 dark:border-slate-700/70 dark:bg-slate-950/50 flex flex-col items-center text-center">
         <button
           type="button"
           aria-label={`Ampliar imagem: ${alt || 'ilustração da apostila'}`}
@@ -140,15 +140,15 @@ const ZoomableBookletImage: React.FC<ZoomableBookletImageProps> = ({ src, alt, c
             src={src}
             alt={alt}
             loading="lazy"
-            className="max-h-96 max-w-full w-auto h-auto rounded-xl object-contain border border-slate-200 dark:border-slate-800 bg-white p-2"
+            className="max-h-[34rem] max-w-full w-auto h-auto rounded-xl object-contain bg-white p-2.5 dark:bg-slate-100"
           />
         </button>
         {caption && (
-          <figcaption className="mt-3 text-xs text-slate-600 dark:text-slate-400 max-w-2xl leading-relaxed italic">
+          <figcaption className="mt-5 text-[13px] sm:text-sm text-slate-600 dark:text-slate-400 max-w-2xl leading-[1.75] italic">
             {renderInline(caption)}
           </figcaption>
         )}
-        <span className="mt-2 text-[11px] text-teal-700 dark:text-teal-300">Toque ou clique para ampliar</span>
+        <span className="mt-3 text-xs text-teal-700 dark:text-teal-300">Toque ou clique para ampliar</span>
       </figure>
       {expanded && (
         <div
@@ -195,7 +195,7 @@ const parseMarkdown = (markdown: string): React.ReactNode[] => {
 
     // Horizontal Rule
     if (HR_REGEX.test(line.trim())) {
-      elements.push(<hr key={`hr-${i}`} className="my-6 border-slate-200 dark:border-slate-800" />);
+      elements.push(<hr key={`hr-${i}`} className="my-9 border-slate-200/90 dark:border-slate-800/90" />);
       i++;
       continue;
     }
@@ -212,7 +212,7 @@ const parseMarkdown = (markdown: string): React.ReactNode[] => {
       elements.push(
         <pre
           key={`pre-${i}`}
-          className="my-5 p-4 rounded-2xl bg-slate-950 text-teal-300 border border-teal-500/30 overflow-x-auto text-xs font-mono leading-relaxed shadow-inner"
+          className="my-8 rounded-2xl border border-slate-700 bg-slate-950 p-5 sm:p-7 text-slate-100 overflow-x-auto text-xs sm:text-sm font-mono leading-[1.85]"
         >
           {codeLines.join('\n')}
         </pre>
@@ -238,12 +238,12 @@ const parseMarkdown = (markdown: string): React.ReactNode[] => {
       const rows = tableLines.slice(2).map(parseRow);
 
       elements.push(
-        <div key={`tbl-${i}`} className="my-6 overflow-x-auto rounded-2xl border border-slate-200 dark:border-slate-700 shadow-sm">
-          <table className="w-full text-left border-collapse text-xs sm:text-sm">
+        <div key={`tbl-${i}`} className="my-9 sm:my-11 overflow-x-auto rounded-2xl border border-slate-200/90 dark:border-slate-700/80 bg-white dark:bg-slate-900/70">
+          <table className="w-full text-left border-collapse text-sm leading-[1.7]">
             <thead>
               <tr className="bg-teal-600/10 dark:bg-teal-950/70 border-b border-slate-200 dark:border-slate-700 text-teal-900 dark:text-teal-300">
                 {headers.map((h, hIdx) => (
-                  <th key={hIdx} className="p-3 font-bold">
+                  <th key={hIdx} className="px-4 py-4 sm:px-5 font-bold">
                     {renderInline(h)}
                   </th>
                 ))}
@@ -253,7 +253,7 @@ const parseMarkdown = (markdown: string): React.ReactNode[] => {
               {rows.map((r, rIdx) => (
                 <tr key={rIdx} className="hover:bg-slate-50/80 dark:hover:bg-slate-800/40 transition-colors">
                   {r.map((cell, cIdx) => (
-                    <td key={cIdx} className="p-3 text-slate-700 dark:text-slate-300 align-top">
+                    <td key={cIdx} className="px-4 py-4 sm:px-5 text-slate-700 dark:text-slate-300 align-top">
                       {renderInline(cell)}
                     </td>
                   ))}
@@ -300,7 +300,7 @@ const parseMarkdown = (markdown: string): React.ReactNode[] => {
         <aside
           key={`quote-${i}`}
           role={calloutType === 'WARNING' || calloutType === 'CAUTION' ? 'note' : undefined}
-          className={`my-6 rounded-2xl border border-l-4 p-5 shadow-sm ${style ? style.box : 'border-teal-500 bg-teal-500/10'} text-slate-800 dark:text-slate-200`}
+          className={`my-9 rounded-2xl border border-l-[3px] p-5 sm:p-7 ${style ? style.box : 'border-teal-400/50 bg-slate-50 dark:bg-slate-900/70'} text-slate-800 dark:text-slate-200`}
         >
           {style && (
             <div className={`mb-3 flex items-center gap-2 text-sm font-extrabold ${style.titleClass}`}>
@@ -308,7 +308,7 @@ const parseMarkdown = (markdown: string): React.ReactNode[] => {
               <span>{style.title}</span>
             </div>
           )}
-          <div className="space-y-2 text-sm leading-relaxed">
+          <div className="space-y-3 text-[15px] leading-[1.85]">
             {quoteLines.map((ql, qIdx) => (
               <p key={qIdx}>{renderInline(ql)}</p>
             ))}
@@ -321,7 +321,7 @@ const parseMarkdown = (markdown: string): React.ReactNode[] => {
     // Headings
     if (line.startsWith('# ')) {
       elements.push(
-        <h1 key={`h1-${i}`} className="text-2xl sm:text-3xl font-black text-teal-700 dark:text-teal-400 mt-6 mb-3 tracking-tight">
+        <h1 id={slugify(line.slice(2))} key={`h1-${i}`} className="text-2xl sm:text-3xl font-extrabold text-slate-900 dark:text-white mt-2 mb-5 tracking-tight leading-tight">
           {renderInline(line.slice(2))}
         </h1>
       );
@@ -331,8 +331,9 @@ const parseMarkdown = (markdown: string): React.ReactNode[] => {
     if (line.startsWith('## ')) {
       elements.push(
         <h2
+          id={slugify(line.slice(3))}
           key={`h2-${i}`}
-          className="text-lg sm:text-xl font-extrabold text-slate-900 dark:text-white mt-8 mb-3 pb-2 border-b border-teal-500/30 flex items-center gap-2"
+          className="text-xl sm:text-2xl font-extrabold leading-snug text-slate-900 dark:text-white mt-12 mb-5 pb-4 border-b border-slate-200 dark:border-slate-700"
         >
           {renderInline(line.slice(3))}
         </h2>
@@ -342,7 +343,7 @@ const parseMarkdown = (markdown: string): React.ReactNode[] => {
     }
     if (line.startsWith('### ')) {
       elements.push(
-        <h3 key={`h3-${i}`} className="text-base sm:text-lg font-bold text-teal-700 dark:text-teal-300 mt-6 mb-2">
+        <h3 id={slugify(line.slice(4))} key={`h3-${i}`} className="scroll-mt-24 mt-12 mb-5 border-l-[3px] border-teal-500/70 pl-4 text-lg sm:text-xl font-bold leading-snug text-slate-900 dark:text-slate-100">
           {renderInline(line.slice(4))}
         </h3>
       );
@@ -351,7 +352,7 @@ const parseMarkdown = (markdown: string): React.ReactNode[] => {
     }
     if (line.startsWith('#### ')) {
       elements.push(
-        <h4 key={`h4-${i}`} className="text-sm sm:text-base font-bold text-slate-800 dark:text-slate-200 mt-4 mb-1.5">
+        <h4 id={slugify(line.slice(5))} key={`h4-${i}`} className="scroll-mt-24 mt-8 mb-4 text-base sm:text-lg font-bold leading-snug text-slate-800 dark:text-slate-200">
           {renderInline(line.slice(5))}
         </h4>
       );
@@ -367,9 +368,9 @@ const parseMarkdown = (markdown: string): React.ReactNode[] => {
         i++;
       }
       elements.push(
-        <ul key={`ul-${i}`} className="my-3 pl-5 list-disc space-y-1.5 text-sm text-slate-700 dark:text-slate-300">
+        <ul key={`ul-${i}`} className="my-6 pl-6 list-disc space-y-3 text-[15px] sm:text-base text-slate-700 dark:text-slate-300">
           {items.map((it, idx) => (
-            <li key={idx} className="leading-relaxed">
+            <li key={idx} className="leading-[1.85] pl-1">
               {renderInline(it)}
             </li>
           ))}
@@ -386,7 +387,7 @@ const parseMarkdown = (markdown: string): React.ReactNode[] => {
         i++;
       }
       elements.push(
-        <ol key={`ol-${i}`} className="my-3 pl-5 list-decimal space-y-1.5 text-sm text-slate-700 dark:text-slate-300">
+        <ol key={`ol-${i}`} className="my-6 pl-6 list-decimal space-y-3 text-[15px] sm:text-base text-slate-700 dark:text-slate-300">
           {items.map((it, idx) => (
             <li key={idx} className="leading-relaxed">
               {renderInline(it)}
@@ -399,7 +400,7 @@ const parseMarkdown = (markdown: string): React.ReactNode[] => {
 
     // Regular Paragraph
     elements.push(
-      <p key={`p-${i}`} className="my-2.5 text-sm leading-relaxed text-slate-700 dark:text-slate-300">
+      <p key={`p-${i}`} className="my-5 text-[15px] sm:text-base leading-[1.9] text-slate-700 dark:text-slate-300">
         {renderInline(line)}
       </p>
     );
@@ -410,12 +411,124 @@ const parseMarkdown = (markdown: string): React.ReactNode[] => {
 };
 
 /**
- * Bolt Performance Optimization:
- * 1. Wrapped in React.memo to prevent unnecessary re-renders when parent state updates.
- * 2. Memoized AST line parsing using useMemo based on the `markdown` prop.
+ * The editorial Markdown files have the same "##" chapter structure.
+ * Split only at top-level chapter headings (outside code fences) so all
+ * 40 modules inherit a calm layout without changing any medical text.
  */
-export const BookletRenderer: React.FC<BookletRendererProps> = React.memo(({ markdown }) => {
-  const elements = useMemo(() => parseMarkdown(markdown), [markdown]);
+interface BookletSection {
+  heading: string | null;
+  markdown: string;
+  kind: 'cover' | 'index' | 'guide' | 'chapter' | 'extra';
+  chapterNumber?: string;
+}
 
-  return <div className="space-y-1">{elements}</div>;
+const splitBookletSections = (markdown: string): BookletSection[] => {
+  if (!markdown.trim()) return [];
+  const groups: Array<{ heading: string | null; lines: string[] }> = [{ heading: null, lines: [] }];
+  let fenced = false;
+
+  for (const line of markdown.replace(/\r\n/g, '\n').split('\n')) {
+    if (line.trim().startsWith('```')) fenced = !fenced;
+    const heading = !fenced && line.match(/^## (.+)$/);
+
+    // The editorial masthead belongs to the cover, not to an empty chapter card.
+    if (heading && !/^DIRETORIA DE /i.test(heading[1])) {
+      groups.push({ heading: heading[1].trim(), lines: [] });
+    } else {
+      groups[groups.length - 1].lines.push(line);
+    }
+  }
+
+  return groups.filter(group => group.heading || group.lines.some(line => line.trim())).map(group => {
+    if (!group.heading) return { heading: null, markdown: group.lines.join('\n'), kind: 'cover' as const };
+
+    const chapter = group.heading.match(/^(?:SEÇÃO\s+)?(\d{1,2})(?:\s|\.|—|-)/i);
+    const kind: BookletSection['kind'] = /^SUMÁRIO\b/i.test(group.heading)
+      ? 'index'
+      : /^GUIA DE ATUAÇÃO/i.test(group.heading)
+        ? 'guide'
+        : chapter
+          ? 'chapter'
+          : 'extra';
+
+    return {
+      heading: group.heading,
+      markdown: group.lines.join('\n'),
+      kind,
+      chapterNumber: chapter?.[1],
+    };
+  });
+};
+
+/** Shared, chapter-based reading design for the Materials and Lesson views. */
+export const BookletRenderer: React.FC<BookletRendererProps> = React.memo(({ markdown }) => {
+  const sections = useMemo(() => splitBookletSections(markdown), [markdown]);
+
+  return (
+    <article className="mx-auto w-full max-w-4xl space-y-7 pb-6 sm:space-y-10">
+      {sections.map((section, index) => {
+        const headingId = section.heading ? slugify(section.heading) : undefined;
+
+        if (section.kind === 'cover') {
+          return (
+            <header key={`cover-${index}`} className="overflow-hidden rounded-[28px] border border-teal-200/70 bg-gradient-to-br from-teal-50 via-white to-slate-50 px-6 py-8 sm:px-10 sm:py-10 dark:border-teal-900/60 dark:from-slate-900 dark:via-slate-900 dark:to-teal-950/40">
+              <span className="mb-5 inline-block rounded-full bg-teal-600/10 px-3 py-1.5 text-[11px] font-bold uppercase tracking-[0.15em] text-teal-700 dark:text-teal-300">
+                União • Material de estudo
+              </span>
+              <div className="booklet-masthead">
+                {parseMarkdown(section.markdown)}
+              </div>
+            </header>
+          );
+        }
+
+        if (section.kind === 'index') {
+          return (
+            <nav key={`index-${index}`} aria-label="Sumário da apostila">
+              <details className="group rounded-2xl border border-slate-200 bg-white/90 px-6 py-5 dark:border-slate-700/80 dark:bg-slate-900/85 sm:px-8">
+                <summary className="flex cursor-pointer list-none items-center justify-between gap-4 font-semibold text-slate-900 marker:hidden dark:text-slate-100 [&::-webkit-details-marker]:hidden">
+                  <span className="flex flex-col gap-1">
+                    <span className="text-base sm:text-lg">Sumário da apostila</span>
+                    <span className="text-xs font-normal text-slate-500 dark:text-slate-400">Toque para ver os capítulos e navegar rapidamente</span>
+                  </span>
+                  <span aria-hidden="true" className="text-teal-600 text-xl transition-transform group-open:rotate-180">⌄</span>
+                </summary>
+                <div className="mt-6 border-t border-slate-200 pt-5 dark:border-slate-700">
+                  {parseMarkdown(section.markdown)}
+                </div>
+              </details>
+            </nav>
+          );
+        }
+
+        if (section.kind === 'guide') {
+          return (
+            <section key={`guide-${index}`} aria-labelledby={headingId} className="overflow-hidden rounded-[28px] border border-teal-200/80 bg-white dark:border-teal-800/60 dark:bg-slate-900">
+              <div className="border-b border-teal-100 bg-teal-50/80 px-6 py-6 dark:border-teal-900/60 dark:bg-teal-950/30 sm:px-9">
+                <span className="mb-2 block text-xs font-bold uppercase tracking-[0.15em] text-teal-700 dark:text-teal-300">Comece por aqui</span>
+                <h2 id={headingId} className="scroll-mt-24 text-xl font-bold leading-snug text-slate-900 dark:text-white sm:text-2xl">{renderInline(section.heading ?? '')}</h2>
+              </div>
+              <div className="px-6 py-6 sm:px-9 sm:py-9">{parseMarkdown(section.markdown)}</div>
+            </section>
+          );
+        }
+
+        return (
+          <section key={`chapter-${index}`} aria-labelledby={headingId} className="overflow-hidden rounded-[28px] border border-slate-200/90 bg-white shadow-[0_8px_32px_rgba(15,23,42,0.035)] dark:border-slate-700/70 dark:bg-slate-900">
+            <div className="border-b border-slate-100 bg-slate-50/65 px-6 py-7 dark:border-slate-800 dark:bg-slate-800/40 sm:px-10 sm:py-9">
+              <span className="mb-3 block text-[11px] font-bold uppercase tracking-[0.16em] text-teal-700 dark:text-teal-300">
+                {section.chapterNumber ? `Capítulo ${section.chapterNumber.padStart(2, '0')}` : 'Material complementar'}
+              </span>
+              <h2 id={headingId} className="scroll-mt-24 text-xl font-bold leading-snug tracking-tight text-slate-900 dark:text-white sm:text-[26px]">
+                {renderInline(section.heading ?? '')}
+              </h2>
+            </div>
+            <div className="min-w-0 px-6 py-7 sm:px-10 sm:py-10">
+              {parseMarkdown(section.markdown)}
+            </div>
+          </section>
+        );
+      })}
+    </article>
+  );
 });
