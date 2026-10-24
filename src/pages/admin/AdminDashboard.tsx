@@ -622,7 +622,13 @@ export const AdminDashboard: React.FC = () => {
       },
     });
     if (error) {
-      alert('Erro ao matricular aluno: ' + error.message);
+      let detail = error.message;
+      const response = (error as any).context;
+      if (response && typeof response.json === 'function') {
+        const payload = await response.json().catch(() => null);
+        if (payload?.error) detail = payload.error;
+      }
+      alert('Erro ao matricular aluno: ' + detail);
       return;
     }
     await loadData();
