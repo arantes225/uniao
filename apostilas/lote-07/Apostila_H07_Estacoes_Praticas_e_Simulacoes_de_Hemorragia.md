@@ -176,7 +176,7 @@ A segunda estação foca na conversão da compressão manual em estabilização 
 
 ### 5.3 Estação Prática 3: Preenchimento de Feridas Cavitárias (Wound Packing)
 
-![Treinamento de wound packing apenas em simulador e por orientação habilitada](./apostilas/imagens/usm-packing-somente-treinado.svg)
+![Treinamento de wound packing apenas em simulador e por orientação habilitada](../../public/apostilas/imagens/usm-packing-somente-treinado.svg)
 *Figura complementar — Treinamento de wound packing apenas em simulador e por orientação habilitada. Ilustração original União Serviços Médicos (2026), baseada em AHA/Cruz Vermelha 2024; não reproduz imagens de terceiros.*
 
 
