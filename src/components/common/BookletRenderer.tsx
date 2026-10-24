@@ -65,11 +65,11 @@ const IMG_REGEX = /^!\[([^\]]*)\]\(([^)]+)\)/;
 const CALLOUT_HEADER_REGEX = /^\[!(TIP|NOTE|IMPORTANT|WARNING|CAUTION)\]/i;
 
 const CALLOUT_STYLES = {
-  TIP: { title: 'Dica prática', icon: '✓', box: 'border-emerald-500 bg-emerald-50 dark:bg-emerald-950/35', titleClass: 'text-emerald-800 dark:text-emerald-300' },
-  NOTE: { title: 'Entenda', icon: 'i', box: 'border-sky-500 bg-sky-50 dark:bg-sky-950/35', titleClass: 'text-sky-800 dark:text-sky-300' },
-  IMPORTANT: { title: 'Prioridade', icon: '!', box: 'border-indigo-500 bg-indigo-50 dark:bg-indigo-950/35', titleClass: 'text-indigo-800 dark:text-indigo-300' },
-  WARNING: { title: 'Atenção', icon: '!', box: 'border-amber-500 bg-amber-50 dark:bg-amber-950/35', titleClass: 'text-amber-900 dark:text-amber-300' },
-  CAUTION: { title: 'Não faça isso', icon: '×', box: 'border-rose-500 bg-rose-50 dark:bg-rose-950/35', titleClass: 'text-rose-800 dark:text-rose-300' },
+  TIP: { title: 'Dica prática', icon: '✓', box: 'border-slate-200 border-l-emerald-500 bg-slate-50 dark:border-slate-700 dark:border-l-emerald-500 dark:bg-slate-800/50', titleClass: 'text-emerald-800 dark:text-emerald-300' },
+  NOTE: { title: 'Entenda', icon: 'i', box: 'border-slate-200 border-l-sky-500 bg-slate-50 dark:border-slate-700 dark:border-l-sky-500 dark:bg-slate-800/50', titleClass: 'text-sky-800 dark:text-sky-300' },
+  IMPORTANT: { title: 'Prioridade', icon: '!', box: 'border-slate-200 border-l-indigo-500 bg-slate-50 dark:border-slate-700 dark:border-l-indigo-500 dark:bg-slate-800/50', titleClass: 'text-indigo-800 dark:text-indigo-300' },
+  WARNING: { title: 'Atenção', icon: '!', box: 'border-slate-200 border-l-amber-500 bg-slate-50 dark:border-slate-700 dark:border-l-amber-500 dark:bg-slate-800/50', titleClass: 'text-amber-900 dark:text-amber-300' },
+  CAUTION: { title: 'Não faça isso', icon: '×', box: 'border-slate-200 border-l-rose-500 bg-slate-50 dark:border-slate-700 dark:border-l-rose-500 dark:bg-slate-800/50', titleClass: 'text-rose-800 dark:text-rose-300' },
 } as const;
 
 
