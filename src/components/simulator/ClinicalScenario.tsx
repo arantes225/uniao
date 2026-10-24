@@ -10,6 +10,7 @@ import { useTheme } from '../../context/ThemeContext';
 import type { SimulationCase } from '../../data/simulator/types';
 import { AnimatedPatient } from './AnimatedPatient';
 import { BleedingScene } from './BleedingScene';
+import { StopTheBleedScene } from './StopTheBleedScene';
 
 export const ClinicalScenario: React.FC<{ scenario: SimulationCase; onBack: () => void }> = ({ scenario, onBack }) => {
   const { theme } = useTheme();
@@ -129,7 +130,11 @@ export const ClinicalScenario: React.FC<{ scenario: SimulationCase; onBack: () =
         {!simulationCompleted ? (
           <div className="relative z-10 flex-1 flex flex-col max-w-6xl w-full mx-auto p-4 sm:p-6 justify-between gap-6">
 
-            {currentStep.bleedingFocus ? <BleedingScene characterId={scenario.characterId} respiratoryRate={Number(currentStep.vitalSigns.breathing.match(/\d+/)?.[0] || 0)} focus={currentStep.bleedingFocus} /> : <AnimatedPatient characterId={scenario.characterId} respiratoryRate={Number(currentStep.vitalSigns.breathing.match(/\d+/)?.[0] || 0)} />}
+            {currentStep.bleedingFocus
+              ? scenario.patientKind === 'stop-the-bleed'
+                ? <StopTheBleedScene characterId={scenario.characterId} focus={currentStep.bleedingFocus} />
+                : <BleedingScene characterId={scenario.characterId} respiratoryRate={Number(currentStep.vitalSigns.breathing.match(/\d+/)?.[0] || 0)} focus={currentStep.bleedingFocus} />
+              : <AnimatedPatient characterId={scenario.characterId} respiratoryRate={Number(currentStep.vitalSigns.breathing.match(/\d+/)?.[0] || 0)} />}
             {/* TOPO: PAINEL DE MONITORAMENTO CLÍNICO / TELEMETRIA DO PACIENTE */}
             <div className="rounded-2xl bg-slate-900/85 backdrop-blur-xl border border-white/10 shadow-2xl p-4 sm:p-5 space-y-4">
               <div className="flex items-center justify-between border-b border-white/10 pb-3">
