@@ -1,13 +1,12 @@
 import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import { Lock, Mail, ArrowRight, ShieldCheck, AlertCircle, CheckCircle2, KeyRound, Sparkles } from 'lucide-react';
+import { Lock, Mail, ArrowRight, ShieldCheck, AlertCircle, CheckCircle2, Sparkles } from 'lucide-react';
 import { supabase } from '../../services/supabase/client';
 
 export const LoginPage: React.FC = () => {
   const navigate = useNavigate();
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-  const [confirmPassword, setConfirmPassword] = useState('');
   const [rememberMe, setRememberMe] = useState(false);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
@@ -15,6 +14,9 @@ export const LoginPage: React.FC = () => {
   
   // Modos de visualização da tela de login: 'login' | 'reset' | 'first_access'
   const [viewMode, setViewMode] = useState<'login' | 'reset' | 'first_access'>('login');
+
+  // O HashRouter precisa receber o destino depois que o link de acesso for confirmado.
+  const postAuthRedirect = () => `${window.location.origin}${window.location.pathname}#/aluno/dashboard`;
 
   const handleLogin = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -24,7 +26,7 @@ export const LoginPage: React.FC = () => {
     try {
       // 1. Autenticação no Supabase Auth
       const { data, error: authError } = await supabase.auth.signInWithPassword({
-        email,
+        email: email.trim().toLowerCase(),
         password,
       });
 
@@ -70,7 +72,7 @@ export const LoginPage: React.FC = () => {
       const { error: googleError } = await supabase.auth.signInWithOAuth({
         provider: 'google',
         options: {
-          redirectTo: `${window.location.origin}/aluno/dashboard`,
+          redirectTo: postAuthRedirect(),
         },
       });
       if (googleError) throw googleError;
@@ -86,7 +88,7 @@ export const LoginPage: React.FC = () => {
     setError(null);
     try {
       const { error: resetErr } = await supabase.auth.resetPasswordForEmail(email, {
-        redirectTo: `${window.location.origin}/redefinir-senha`,
+        redirectTo: `${window.location.origin}${window.location.pathname}#/redefinir-senha`,
       });
       if (resetErr) throw resetErr;
       setSuccessMessage('E-mail de recuperação enviado! Se o e-mail estiver cadastrado, você receberá um link seguro.');
@@ -97,50 +99,38 @@ export const LoginPage: React.FC = () => {
     }
   };
 
-  // Fluxo de Primeiro Acesso: cadastrar/definir a senha da conta matriculada
+  // Primeiro acesso e reativação usam o e-mail já cadastrado pela administração.
+  // O link é emitido pelo Supabase Auth e não cria cadastro espontâneo.
   const handleFirstAccess = async (e: React.FormEvent) => {
     e.preventDefault();
     setLoading(true);
     setError(null);
+    setSuccessMessage(null);
 
-    if (password.length < 6) {
-      setError('A senha deve conter no mínimo 6 caracteres.');
-      setLoading(false);
-      return;
-    }
-
-    if (password !== confirmPassword) {
-      setError('A confirmação de senha não confere com a senha digitada.');
+    const normalizedEmail = email.trim().toLowerCase();
+    if (!normalizedEmail) {
+      setError('Informe o e-mail cadastrado pela administração.');
       setLoading(false);
       return;
     }
 
     try {
-      // 1. Tenta cadastrar ou ativar credencial no Supabase Auth
-      const { data: signUpData, error: signUpError } = await supabase.auth.signUp({
-        email,
-        password,
+      const { error: accessError } = await supabase.auth.signInWithOtp({
+        email: normalizedEmail,
+        options: {
+          shouldCreateUser: false,
+          emailRedirectTo: postAuthRedirect(),
+        },
       });
+      if (accessError) throw accessError;
 
-      if (signUpError) {
-        // Se o usuário já existir (pré-cadastrado pela administração), dispara o link de definição
-        if (signUpError.message?.toLowerCase().includes('already registered')) {
-          const { error: resetErr } = await supabase.auth.resetPasswordForEmail(email, {
-            redirectTo: `${window.location.origin}/aluno/dashboard`,
-          });
-          if (resetErr) throw resetErr;
-          setSuccessMessage('Sua matrícula já foi identificada! Enviamos um link de confirmação para o seu e-mail para ativar e registrar sua nova senha imediatamente.');
-          return;
-        }
-        throw signUpError;
-      }
-
-      if (signUpData.user) {
-        setSuccessMessage('Senha cadastrada com sucesso! Você já pode realizar o login com suas novas credenciais.');
-        setViewMode('login');
-      }
+      setSuccessMessage(
+        'E-mail reconhecido. Enviamos um link seguro de acesso para você entrar imediatamente na sua conta e visualizar suas turmas.'
+      );
     } catch (err: any) {
-      setError(err.message || 'Erro ao definir senha no primeiro acesso.');
+      setError(
+        'Este e-mail ainda não está provisionado pela administração ou não pode ser acessado. Confirme o endereço informado ou peça à administração para cadastrá-lo.'
+      );
     } finally {
       setLoading(false);
     }
@@ -225,15 +215,15 @@ export const LoginPage: React.FC = () => {
               </div>
             </form>
           ) : viewMode === 'first_access' ? (
-            /* FORMULÁRIO DE PRIMEIRO ACESSO / CADASTRO DA SENHA DA CONTA */
+            /* PRIMEIRO ACESSO POR LINK SEGURO DA CONTA PROVISIONADA */
             <form onSubmit={handleFirstAccess} className="space-y-4">
               <div className="space-y-1">
                 <div className="flex items-center gap-2 text-uniao-400 font-bold text-sm">
                   <Sparkles className="w-4 h-4" />
-                  <span>Primeiro Acesso à Plataforma</span>
+                  <span>Primeiro Acesso ou Novo Acesso</span>
                 </div>
                 <p className="text-xs text-slate-400">
-                  Informe o seu e-mail cadastrado na sua turma e defina a senha da sua conta de aluno:
+                  Use o mesmo e-mail cadastrado pela administração. O sistema reconhece seu nome completo e envia um link seguro; depois do acesso, suas turmas e o switch de turma aparecem automaticamente.
                 </p>
               </div>
 
@@ -256,42 +246,8 @@ export const LoginPage: React.FC = () => {
                 </div>
               </div>
 
-              <div>
-                <label className="block text-xs font-semibold text-slate-300 uppercase mb-1.5">
-                  Criar Nova Senha (mínimo 6 caracteres)
-                </label>
-                <div className="relative">
-                  <div className="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-slate-500">
-                    <KeyRound className="w-4 h-4" />
-                  </div>
-                  <input
-                    type="password"
-                    required
-                    value={password}
-                    onChange={(e) => setPassword(e.target.value)}
-                    placeholder="••••••••"
-                    className="w-full pl-10 pr-4 py-2.5 rounded-lg bg-slate-900 border border-slate-700 text-white placeholder-slate-500 text-sm focus:outline-none focus:border-uniao-500"
-                  />
-                </div>
-              </div>
-
-              <div>
-                <label className="block text-xs font-semibold text-slate-300 uppercase mb-1.5">
-                  Confirmar Senha
-                </label>
-                <div className="relative">
-                  <div className="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-slate-500">
-                    <Lock className="w-4 h-4" />
-                  </div>
-                  <input
-                    type="password"
-                    required
-                    value={confirmPassword}
-                    onChange={(e) => setConfirmPassword(e.target.value)}
-                    placeholder="••••••••"
-                    className="w-full pl-10 pr-4 py-2.5 rounded-lg bg-slate-900 border border-slate-700 text-white placeholder-slate-500 text-sm focus:outline-none focus:border-uniao-500"
-                  />
-                </div>
+              <div className="rounded-xl border border-uniao-500/20 bg-uniao-500/5 px-4 py-3 text-xs text-slate-300">
+                O link de acesso é válido para o primeiro acesso e também para quem já usou a plataforma antes. Ao entrar, o nome completo cadastrado e todas as turmas ativas serão carregados automaticamente.
               </div>
 
               <div className="flex items-center justify-between pt-2">
@@ -307,7 +263,7 @@ export const LoginPage: React.FC = () => {
                   disabled={loading}
                   className="px-6 py-2.5 rounded-xl text-xs font-bold text-slate-950 bg-gradient-to-r from-uniao-400 to-teal-300 hover:brightness-110 shadow disabled:opacity-50"
                 >
-                  {loading ? 'Cadastrando...' : 'Cadastrar Senha e Ativar'}
+                  {loading ? 'Enviando link...' : 'Enviar link e acessar'}
                 </button>
               </div>
             </form>
