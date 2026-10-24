@@ -197,8 +197,6 @@ O socorrista deve identificar a origem do sangramento em menos de 3 segundos de 
 No calor da ocorrência traumática, não é possível medir mililitros de sangue com recipientes graduados. O socorrista utiliza os **Indicadores Visuais de Gravidade do Programa STOP THE BLEED®** [1, 2]:
 
 
-![Figura 3 — Mecanismo de bomba cardíaca e ejeção sanguínea durante a compressão torácica externa.](../imagens/CPR-heart-compression.png)
-*Figura 3 — Mecanismo de bomba cardíaca e ejeção sanguínea durante a compressão torácica externa. Crédito: Baedr-9439. Licença: CC0. Fonte: Wikimedia Commons.*
 
 ```
 +---------------------------------------------------------------------------------+
