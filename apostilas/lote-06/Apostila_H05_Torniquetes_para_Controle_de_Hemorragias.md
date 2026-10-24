@@ -70,7 +70,7 @@ Pratique em simulador e avalie controle do sangramento, fixação e registro do 
 ## SEÇÃO 1 — EM 30 SEGUNDOS
 
 > **VISÃO RÁPIDA DE SOBREVIVÊNCIA COM TORNIQUETES**
-> 1. **O mito de que o torniquete amputa o membro foi destruído:** Evidências científicas massivas de mais de 50.000 aplicações em conflitos militares e serviços civis de trauma comprovam que um torniquete comercial bem aplicado é **100% seguro por até 2 horas consecutivas sem causar lesão nervosa ou perda do membro** [1, 2].
+> 1. **Torniquete salva vidas quando bem indicado:** um torniquete comercial adequadamente aplicado pode controlar hemorragia ameaçadora à vida em extremidade. Ele não garante ausência de lesão, nem há “tempo seguro” universal; registre o horário, mantenha-o visível e não o afrouxe ou retire fora de protocolo/equipe habilitada [1, 2].
 > 2. **O torniquete é a primeira linha em sangramento de membros:** Se o sangue estiver jorrando em jato arterial, saindo em poça rápida ou se houver amputação traumática no braço ou na perna, **NÃO perca tempo com curativos comuns: APLIQUE O TORNIQUETE IMEDIATAMENTE** [1, 3].
 > 3. **Aperte a fita antes de girar o molinete:** O erro mais comum é deixar a fita de velcro frouxa. O velcro deve ser puxado com força máxima ("tão apertado quanto você conseguir puxar com as mãos") para tirar toda a folga. Se a fita estiver justa, o molinete só precisará de **2 a 3 voltas** para estancar o sangue completamente [2, 4].
 > 4. **Dor não comprova eficácia:** A aplicação pode provocar dor, mas a eficácia é avaliada pelo controle da hemorragia. Quando possível e apropriado, verifique também o pulso distal. Não afrouxe nem retire o torniquete fora de protocolo e avaliação por equipe habilitada [2, 5].
@@ -98,9 +98,9 @@ Ao concluir o estudo teórico e a prática com simuladores deste módulo, o soco
 
 Por quase um século — desde a Primeira Guerra Mundial até o final da década de 1990 —, o torniquete foi tratado pela literatura médica convencional como um dispositivo maldito, rotulado pejorativamente como "instrumento de último recurso que cobra o preço de uma amputação para salvar uma vida". Socorristas civis eram formalmente instruídos a nunca utilizá-lo, sob o dogma infundado de que garrotear um membro levaria invariavelmente à gangrena e à perda cirúrgica do braço ou da perna [1, 2].
 
-A eclosão dos conflitos militares no Afeganistão e no Iraque nos anos 2000 forçou uma revisão científica radical desse paradigma. O Comitê de Cuidados Táticos a Vítimas de Combate (CoTCCC) do Departamento de Defesa dos EUA documentou milhares de casos de militares que sangravam até a morte no campo de batalha por ferimentos isolados em extremidades que poderiam ter sido facilmente contidos por um torniquete. Com a introdução sistemática do torniquete comercial moderno (como o *Combat Application Tourniquet - C-A-T*), **a mortalidade por hemorragia exsanguinante em combate desabou em mais de 85%, sem que nenhum militar perdesse o membro em decorrência do uso do torniquete por períodos inferiores a duas horas** [2, 5].
+A experiência militar e civil mostra que torniquetes comerciais são ferramentas importantes para hemorragia de extremidade ameaçadora à vida. Os resultados dependem da gravidade do trauma, rapidez de controle, evacuação e tratamento cirúrgico; não é científico prometer um percentual único de redução de mortalidade ou ausência de lesão do membro [2, 5].
 
-Essa revolução militar foi integralmente transportada para a medicina de emergência civil pelo *American College of Surgeons* (ACS) por meio do Consenso de Hartford e do programa mundial *STOP THE BLEED®*. No Brasil e no mundo civil contemporâneo, **o torniquete é a intervenção inicial padrão-ouro número 1 para hemorragias graves em extremidades**, sendo obrigatório em viaturas do SAMU, Corpo de Bombeiros, Polícias Militares e brigadas de emergência industriais [1, 3].
+Programas como STOP THE BLEED® ensinam a escolha entre pressão direta, curativo/empacotamento e torniquete conforme local e gravidade do sangramento. Para extremidade com hemorragia maciça, amputação traumática ou sangramento que não cessa com pressão, o torniquete é apropriado quando disponível e o socorrista foi treinado. Requisitos de equipamentos para serviços brasileiros devem ser verificados na norma/localidade aplicável [1, 3].
 
 ---
 
@@ -142,7 +142,11 @@ Estudos de engenharia biomecânica comprovam que a eficácia e a segurança do t
 
 O torniquete comercial de emergência funciona convertendo a força rotacional de uma haste rígida de polímero ou alumínio (molinete) em encurtamento longitudinal de uma cinta interna que traciona uma fita circunferencial de náilon balístico de 360 graus [2, 4]:
 - **Oclusão Arterial Total:** O dispositivo não deve atuar apenas como garrote venoso. Para estancar a hemorragia, a pressão aplicada deve superar a pressão arterial sistólica máxima, eliminando o fluxo pulsátil e abolindo o pulso distal no punho ou no pé.
-- **Tempo de Isquemia Segura:** O tecido muscular e os nervos periféricos de um membro saudável toleram **até 120 minutos (2 horas) de isquemia total contínua sem nenhuma lesão neurológica ou funcional permanente**. Entre 2 e 4 horas, o risco de lesões nervosas transitórias aumenta gradualmente; somente após 6 horas consecutivas de isquemia o membro desenvolve necrose tecidual irreversível com necessidade de amputação cirúrgica [2, 5].
+- **Tempo e transferência:** não existe “tempo seguro” que permita adiar evacuação. Registre o horário, mantenha o torniquete visível e não o afrouxe ou remova fora de protocolo/equipe habilitada. A equipe de emergência decidirá o manejo conforme o trauma e o tempo decorrido [2, 5].
+
+
+![Figura 1 — Esquema técnico de aplicação circunferencial e ajuste do molinete do torniquete.](../imagens/Tourniquet.png)
+*Figura 1 — Esquema técnico de aplicação circunferencial e ajuste do molinete do torniquete. Crédito: Baedr-9439. Licença: CC0. Fonte: Wikimedia Commons.*
 
 ---
 
@@ -174,13 +178,13 @@ O Comitê de TCCC (CoTCCC) do Departamento de Defesa dos EUA testa e homologa an
 
 ### 5.4 Protocolo Operacional de Aplicação Prática em Braços e Pernas
 
-![Posicionamento, verificação do efeito e registro do torniquete](../../public/apostilas/imagens/usm-torniquete-seguranca.svg)
+![Figura 3 — Tesoura ponta-romba de APH para exposição rápida e segura de lesões graves.](../imagens/Trauma-shears.jpg)
+*Figura 3 — Tesoura ponta-romba de APH para exposição rápida e segura de lesões graves. Crédito: Another-anon-artist-234. Licença: CC0. Fonte: Wikimedia Commons.*
+
+
+![Posicionamento, verificação do efeito e registro do torniquete](../imagens/usm-torniquete-seguranca.svg)
 *Figura complementar — Posicionamento, verificação do efeito e registro do torniquete. Ilustração original União Serviços Médicos (2026), baseada em AHA/Cruz Vermelha 2024; não reproduz imagens de terceiros.*
 
-
-
-![Figura 1 — Aplicação de torniquete tático em treinamento prático.](../imagens/Tourniquet_application.jpg)
-*Figura 1 — Aplicação de torniquete tático em treinamento prático. Crédito: U.S. Navy, MC2 Barry R. Hirayama. Licença: Domínio público. Fonte: Wikimedia Commons.*
 
 A aplicação do torniquete divide-se em duas doutrinas táticas conforme a segurança da cena e a visibilidade da ferida [1, 2, 4]:
 
@@ -224,18 +228,18 @@ O socorrista deve avaliar criticamente o resultado da manobra logo após travar 
 1. Verifique se o molinete foi girado com força máxima até travar.
 2. Se o molinete já estiver completamente torcido e o sangramento na ferida persistir (situação comum em coxas grossas e musculosas de atletas ou pacientes obesos, onde uma única fita não vence a profundidade da artéria femoral contra o osso):
 3. **APLIQUE UM SEGUNDO TORNIQUETE IMEDIATAMENTE COLADO AO PRIMEIRO (LADO A LADO), LOGO ACIMA DELE.**
-4. O segundo torniquete soma sua área de constricção circunferencial à do primeiro, vencendo a resistência tecidual profunda e estancando 100% das hemorragias refratárias [1, 4].
-
-
-![Figura 2 — Esquema técnico de aplicação circunferencial e ajuste do molinete do torniquete.](../imagens/Tourniquet.png)
-*Figura 2 — Esquema técnico de aplicação circunferencial e ajuste do molinete do torniquete. Crédito: Baedr-9439. Licença: CC0. Fonte: Wikimedia Commons.*
+4. Reavalie a ferida. Se o sangramento persistir e você tiver treinamento, aplique um segundo torniquete lado a lado, acima do primeiro, e comunique isso à equipe de emergência. Mesmo assim, não há garantia de controle completo: pressione diretamente onde for possível e acelere a evacuação [1, 4].
 
 ---
+
+
+![Figura 2 — Aplicação de torniquete tático em treinamento prático.](../imagens/Tourniquet_application.jpg)
+*Figura 2 — Aplicação de torniquete tático em treinamento prático. Crédito: U.S. Navy, MC2 Barry R. Hirayama. Licença: Domínio público. Fonte: Wikimedia Commons.*
 
 ### 5.6 Erros Críticos, Mitos Históricos e Cuidados Pós-Aplicação
 
 Erros no manejo do torniquete podem anular todo o benefício da intervenção [1, 2, 5]:
-- **NUNCA cubra o torniquete com cobertores ou bandagens:** O torniquete deve permanecer **completamente visível** aos olhos de qualquer socorrista ou médico que assuma o paciente. Esconder o torniquete sob roupas grossas faz com que ele passe despercebido na triagem hospitalar, ultrapassando o tempo de isquemia segura sem monitoramento.
+- **Mantenha o torniquete visível e registre o horário:** isso facilita a transferência de cuidado. Não use uma suposta “janela segura” para atrasar evacuação ou decidir retirar o dispositivo.
 - **NUNCA afrouxe o torniquete periodicamente:** A antiga prática de soltar o torniquete a cada 15 ou 20 minutos para "oxigenar o membro" é letal. Afrouxar o dispositivo remove a cascata de coagulação, drena mais 500 ml de sangue novo e libera trombos e toxinas para a circulação central, matando o paciente em choque irreversível. **O torniquete é mantido fechado até o hospital** [1, 2].
 - **Manejo da Dor:** Explique à vítima consciente que a dor intensa sentida no membro é normal e esperada devido à interrupção do fluxo sanguíneo. Não alivie a torção do molinete sob alegação de compaixão pela dor [2, 5].
 
@@ -293,19 +297,16 @@ Erros no manejo do torniquete podem anular todo o benefício da intervenção [1
 ---
 
 
-![Figura 3 — Tesoura ponta-romba de APH para exposição rápida e segura de lesões graves.](../imagens/Trauma-shears.jpg)
-*Figura 3 — Tesoura ponta-romba de APH para exposição rápida e segura de lesões graves. Crédito: Another-anon-artist-234. Licença: CC0. Fonte: Wikimedia Commons.*
-
 ## SEÇÃO 7 — FALHAS OPERACIONAIS GRAVES E MITOS POPULARES A SEREM BANIDOS
 
 > [!CAUTION]
 > **Erro que pode prejudicar a vítima:** Não aplique sobre articulações nem no pescoço ou tronco. Não afrouxe para 'deixar o sangue circular'. Anote o horário e comunique-o ao resgate. Aprenda a aplicar em simulador.
 
-1. **Achar que colocar torniquete significa perder o braço ou perna:** O torniquete é seguro por até 2 horas sem qualquer dano celular permanente. A amputação decorre da gravidade do trauma original (esmagamento ou explosão), nunca da ação hemostática do torniquete [2, 5].
+1. **Achar que torniquete elimina todos os riscos:** ele é indicado para salvar a vida diante de hemorragia de extremidade ameaçadora. Pode haver dor e complicações; o risco da hemorragia descontrolada geralmente é maior. Não prometa tempo livre de dano nem resultado do membro [2, 5].
 2. **Deixar a fita de velcro frouxa antes de girar a haste:** Se a fita tiver folga, o molinete girará 6, 8 ou 10 vezes sem conseguir apertar o membro, quebrando a haste plástica ou dobrando o tecido sem fechar o vaso [2, 4].
 3. **Colocar o torniquete diretamente sobre o cotovelo ou joelho:** As articulações possuem estruturas ósseas duras e tendões densos que protegem a artéria contra o esmagamento externo. O torniquete deve ficar no osso único (braço ou coxa) [1, 2].
 4. **Usar garrote de borracha de coleta de sangue como torniquete:** O garrote fino é elástico e fraco: ele interrompe o retorno venoso, mas deixa a artéria enchendo o membro de sangue sob pressão, aumentando a perda de sangue em vez de estancar [1, 4].
-5. **Esconder o torniquete sob roupas durante o transporte:** Se a equipe médica do hospital não enxergar o dispositivo imediatamente na chegada da ambulância, o tempo de isquemia segura poderá ser ultrapassado por desatenção visual [2, 3].
+5. **Esconder o torniquete sob roupas durante o transporte:** o dispositivo deve permanecer visível e seu horário deve ser comunicado na transferência. Isso reduz o risco de perda de informação crítica [2, 3].
 
 ---
 
@@ -328,7 +329,7 @@ O trabalhador sofreu uma **amputação traumática completa da perna direita no 
    - Gira o molinete de polímero com firmeza: na primeira volta o sangramento diminui; na segunda volta o jato arterial cessa completamente; na terceira meia volta, qualquer escorrimento no coto de amputação desaparece por completo.
    - Encaixa a haste do molinete dentro do clipe de retenção em "C".
    - Passa a tira branca de travamento (*TIME*) e anota com marcador permanente: "09h20min".
-4. **Verificação da Oclusão:** Marcelo palpa a fossa poplítea e confirma ausência de pulso. O sangramento está 100% estancado.
+4. **Verificação do controle:** Marcelo observa se o sangramento cessou. Na presença de treinamento apropriado, ausência de pulso distal pode ajudar a confirmar oclusão em alguns cenários; não deve atrasar evacuação nem substituir a observação direta da ferida.
 5. **Preservação do Membro Amputado e Cuidados com o Choque:**
    - O membro amputado na máquina é recolhido, envolvido em compressas de gaze limpas e colocado dentro de um saco plástico vedado. Esse saco plástico é colocado dentro de uma caixa de isopor com gelo e água (resfriamento indireto sem congelamento).
    - Sebastião está pálido, com pulso carotídeo rápido e sudorese fria (Choque Classe III). Marcelo deita o trabalhador de costas no chão, eleva a perna esquerda sadia a 30 graus e o envolve completamente na manta térmica aluminizada impermeável.
@@ -370,7 +371,7 @@ O trabalhador sofreu uma **amputação traumática completa da perna direita no 
                                          │
                                          ▼
                                [ MITOS DERRUBADOS ]
-                               - Seguro por até 2 horas contínuas
+                               - Registrar horário e evacuar sem demora
                                - NUNCA afrouxar a cada 15 minutos
                                - NUNCA cobrir com roupas ou mantas
 ```
@@ -379,7 +380,7 @@ O trabalhador sofreu uma **amputação traumática completa da perna direita no 
 
 ## SEÇÃO 11 — O QUE VOCÊ PRECISA LEMBRAR
 
-- O torniquete comercial moderno é seguro por até 2 horas contínuas e não causa amputação do membro; a amputação decorre do trauma original.
+- Torniquete é intervenção temporária de controle de hemorragia: registre o horário, mantenha visível, não afrouxe por rotina e transporte sem demora.
 - É a primeira intervenção em ferimentos de extremidades com sangramento arterial em jato, poça de expansão rápida ou amputações.
 - Elimine 100% da folga da fita de velcro antes de girar o molinete; fita frouxa impede o estancamento e quebra a haste.
 - Gire a haste do molinete até o sangramento parar totalmente e o pulso distal desaparecer por completo.
