@@ -1722,83 +1722,68 @@ export const AdminDashboard: React.FC = () => {
                     />
                   </div>
 
-                  <div className="grid grid-cols-2 gap-4">
-                    <div className="space-y-1.5">
-                      <label className="text-xs font-semibold text-slate-300">Instrutor Responsável</label>
-                      <input
-                        type="text"
-                        required
-                        value={certInstructor}
-                        onChange={(e) => setCertInstructor(e.target.value)}
-                        className="w-full px-3.5 py-2.5 rounded-xl bg-slate-950 border border-white/10 text-white text-xs focus:outline-none focus:border-uniao-500"
-                      />
+                  {/* Assinaturas configuráveis por pessoa, turma e modelo */}
+                  <section className="space-y-3 rounded-2xl border border-teal-500/25 bg-slate-950/70 p-4">
+                    <div className="flex flex-wrap items-center justify-between gap-2">
+                      <div>
+                        <h4 className="text-xs font-bold text-teal-300">Assinaturas e responsáveis ({certSigners.filter(person => person.enabled).length})</h4>
+                        <p className="mt-1 text-[11px] text-slate-400">Um instrutor que também é diretor técnico assina apenas uma vez.</p>
+                      </div>
+                      <button type="button" onClick={() => setCertSigners(prev => [...prev, {
+                        id: crypto.randomUUID(), name: '', role: '', registration: '', isInstructor: true,
+                        isTechnicalDirector: false, enabled: true, signaturePath: null,
+                      }])} className="inline-flex items-center gap-1.5 rounded-lg bg-teal-500/15 px-3 py-2 text-[11px] font-bold text-teal-300 border border-teal-500/30">
+                        <Plus className="w-3.5 h-3.5" /> Adicionar responsável
+                      </button>
                     </div>
-                    <div className="space-y-1.5">
-                      <label className="text-xs font-semibold text-slate-300">Cargo / CRM</label>
-                      <input
-                        type="text"
-                        required
-                        value={certInstructorRole}
-                        onChange={(e) => setCertInstructorRole(e.target.value)}
-                        className="w-full px-3.5 py-2.5 rounded-xl bg-slate-950 border border-white/10 text-white text-xs focus:outline-none focus:border-uniao-500"
-                      />
-                    </div>
-                  </div>
-
-                  {/* CAMPO PARA SUBIR ASSINATURA DO INSTRUTOR */}
-                  <div className="p-3.5 rounded-2xl bg-slate-950/70 border border-teal-500/20 space-y-2">
-                    <div className="flex items-center justify-between">
-                      <label className="text-xs font-bold text-teal-300 flex items-center gap-1.5">
-                        <Upload className="w-3.5 h-3.5" />
-                        <span>Assinatura Digitalizada do Instrutor (PNG transparente)</span>
-                      </label>
-                      {instructorSigUrl && (
-                        <button
-                          type="button"
-                          onClick={() => { setInstructorSigUrl(''); setSigPosX(0); setSigPosY(0); setSigScale(1); }}
-                          className="text-[10px] text-red-400 hover:text-red-300 flex items-center gap-1"
-                        >
-                          <X className="w-3 h-3" />
-                          <span>Remover</span>
-                        </button>
-                      )}
-                    </div>
-
-                    <div className="flex flex-col sm:flex-row items-center gap-3">
-                      <label className="cursor-pointer inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-slate-900 border border-white/10 hover:border-teal-500/50 text-white text-xs font-semibold transition-all">
-                        <Upload className="w-3.5 h-3.5 text-teal-400" />
-                        <span>{instructorSigUrl ? 'Trocar Imagem da Assinatura' : 'Subir Arquivo de Assinatura'}</span>
-                        <input
-                          type="file"
-                          accept="image/png,image/jpeg,image/webp"
-                          onChange={handleSignatureUpload}
-                          className="hidden"
-                        />
-                      </label>
-
-                      {instructorSigUrl ? (
-                        <div className="flex items-center gap-3">
-                          <div className="h-8 px-2 py-0.5 rounded-lg bg-white/5 border border-white/10 flex items-center">
-                            <img src={instructorSigUrl} alt="Assinatura" className="h-full object-contain max-w-[100px]" />
+                    {certSigners.map((person, index) => (
+                      <div key={person.id} className="rounded-xl border border-white/10 bg-slate-900 p-3 space-y-3">
+                        <div className="flex items-center justify-between gap-2">
+                          <strong className="text-xs text-white">Responsável {index + 1}</strong>
+                          <div className="flex items-center gap-3">
+                            <label className="flex items-center gap-1.5 text-[11px] text-teal-300 cursor-pointer">
+                              <input type="checkbox" checked={person.enabled} onChange={event => updateCertSigner(person.id, { enabled: event.target.checked })} />
+                              Exibir no certificado
+                            </label>
+                            <button type="button" className="text-red-400 hover:text-red-300" onClick={() => setCertSigners(prev => prev.filter(item => item.id !== person.id))} title="Remover responsável"><Trash2 className="w-4 h-4" /></button>
                           </div>
-                          <span className="text-[11px] text-emerald-400 font-medium">Assinatura carregada e pronta</span>
                         </div>
-                      ) : (
-                        <span className="text-[11px] text-slate-400">Recomendado formato PNG com fundo transparente</span>
-                      )}
-                    </div>
-                  </div>
-
-                  <div className="space-y-1.5">
-                    <label className="text-xs font-semibold text-slate-300">Cargo da direção técnica / responsável</label>
-                    <input
-                      type="text"
-                      required
-                      value={certDirector}
-                      onChange={(e) => setCertDirector(e.target.value)}
-                      className="w-full px-3.5 py-2.5 rounded-xl bg-slate-950 border border-white/10 text-white text-xs focus:outline-none focus:border-uniao-500"
-                    />
-                  </div>
+                        <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
+                          <input type="text" value={person.name} placeholder="Nome completo" onChange={event => updateCertSigner(person.id, { name: event.target.value })} className="w-full rounded-lg bg-slate-950 border border-white/10 px-3 py-2 text-xs text-white" />
+                          <input type="text" value={person.role} placeholder="Cargo ou função" onChange={event => updateCertSigner(person.id, { role: event.target.value })} className="w-full rounded-lg bg-slate-950 border border-white/10 px-3 py-2 text-xs text-white" />
+                          <input type="text" value={person.registration} placeholder="Registro profissional (se houver)" onChange={event => updateCertSigner(person.id, { registration: event.target.value })} className="w-full rounded-lg bg-slate-950 border border-white/10 px-3 py-2 text-xs text-white" />
+                          <div className="flex items-center gap-3 px-1">
+                            <label className="flex items-center gap-1.5 text-[11px] text-slate-300"><input type="checkbox" checked={person.isInstructor} onChange={event => updateCertSigner(person.id, { isInstructor: event.target.checked })} /> Instrutor</label>
+                            <label className="flex items-center gap-1.5 text-[11px] text-slate-300">
+                              <input type="checkbox" checked={person.isTechnicalDirector} onChange={event => {
+                                const checked = event.target.checked;
+                                setCertSigners(prev => prev.map(item => ({ ...item,
+                                  isTechnicalDirector: item.id === person.id ? checked : checked ? false : item.isTechnicalDirector,
+                                })));
+                              }} /> Diretor técnico
+                            </label>
+                          </div>
+                        </div>
+                        <div className="flex flex-wrap items-center gap-3">
+                          <label className="inline-flex cursor-pointer items-center gap-2 rounded-lg border border-white/15 bg-slate-950 px-3 py-2 text-[11px] font-semibold text-white">
+                            <Upload className="w-3.5 h-3.5 text-teal-400" />
+                            {signatureUploadingId === person.id ? 'Enviando...' : person.signaturePath ? 'Substituir assinatura' : 'Enviar assinatura'}
+                            <input type="file" accept="image/png,image/jpeg,image/webp" disabled={!!signatureUploadingId} className="hidden" onChange={event => {
+                              void handleSignerSignatureUpload(person.id, event.target.files?.[0]);
+                              event.target.value = '';
+                            }} />
+                          </label>
+                          {person.signaturePath && signerImageUrls[person.id] && (
+                            <img src={signerImageUrls[person.id]} alt={`Assinatura de ${person.name}`} className="h-10 max-w-32 object-contain rounded bg-white/5 p-1" />
+                          )}
+                          {person.signaturePath && (
+                            <button type="button" onClick={() => updateCertSigner(person.id, { signaturePath: null })} className="inline-flex items-center gap-1 text-[11px] text-red-400"><X className="w-3.5 h-3.5" /> Tirar assinatura</button>
+                          )}
+                          <span className="text-[10px] text-slate-500">PNG transparente recomendado. Até 2 MB. Armazenamento privado.</span>
+                        </div>
+                      </div>
+                    ))}
+                  </section>
 
                 </div>
 
