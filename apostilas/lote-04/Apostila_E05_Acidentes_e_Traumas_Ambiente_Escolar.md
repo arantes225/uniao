@@ -72,7 +72,7 @@ Treine uma queda em escada e um caso de dente permanente avulsionado, com contat
 > **VISÃO RÁPIDA DE SOBREVIVÊNCIA**
 > 1. **Dente de leite versus dente permanente:** Se um dente permanente cair inteiro por batida (*avulsão dentária*), **NUNCA pegue pela raiz, não esfregue e não passe sabão**. Segure pela coroa branca, lave em soro ou leite e **armazene em copo com leite integral frio** até o dentista (janela de ouro de 60 minutos para reimplante). Dente de leite (decíduo) **nunca** se tenta reimplantar [1, 2].
 > 2. **O perigo do "galo na cabeça":** O inchaço externo na testa (*hematoma subgaleal*) é comum e melhora com gelo protegido. O perigo real é o sangramento interno: **vômitos em jato, sonolência profunda, pupilas de tamanhos diferentes ou choro contínuo inconsolável = SAMU 192 urgente** [3, 4].
-> 3. **Queda de brinquedo alto (> 1,5 a 2 metros):** Presuma traumatismo na coluna cervical. **Segure a cabeça e o pescoço da criança com as mãos alinhados** e não permita que ela se levante ou caminhe até a avaliação [3].
+> 3. **Queda com mecanismo relevante ou sinais neurológicos:** não force a criança a levantar nem faça movimentos desnecessários. Acione o resgate se houver alteração de consciência, dor cervical importante, formigamento, fraqueza, deformidade ou outro sinal de gravidade. A prioridade é via aérea, respiração e controle de hemorragia; não sacrifique essas medidas para manter a cabeça em posição fixa.
 > 4. **Sangramento no nariz (Epistaxe):** Sente a criança com a **cabeça ligeiramente inclinada para a FRENTE** e aperte as narinas com os dedos em pinça por 10 minutos ininterruptos. **JAMAIS jogue a cabeça da criança para trás** (isso faz o sangue descer pela garganta, causando engasgo e vômitos sanguinolentos) [4, 5].
 > 5. **Cortes no couro cabeludo sangram muito:** A cabeça infantil é ricamente vascularizada. Pressione firmemente o corte com gaze limpa por 5 minutos contínuos; o sangramento costuma estancar com compressão direta simples [5].
 > 6. **Comunicação obrigatória:** Todo trauma de crânio na escola, mesmo leve, deve ser comunicado formalmente aos pais por escrito para monitoramento em casa nas 24 horas seguintes [6].
@@ -117,9 +117,6 @@ O corpo da criança apresenta particularidades biométricas que alteram a distri
 - *O Hematoma Extradural Infantil:* Pequenos traumas temporais podem romper a artéria meníngea média. A criança chora, acalma-se, parece bem por algumas horas (o chamado **intervalo lúcido**), mas o sangue acumula-se sob pressão entre o osso e a dura-máter. Seis a oito horas depois, a criança entra em coma súbito em casa. Isso justifica a obrigatoriedade da vigilância pós-trauma nas primeiras 24 horas [3].
 
 
-![Figura 1 — Imobilização solidária (buddy taping) em trauma fechado de falanges.](../imagens/Buddy-taping-finger.png)
-*Figura 1 — Imobilização solidária (buddy taping) em trauma fechado de falanges. Crédito: Baedr-9439. Licença: CC0. Fonte: Wikimedia Commons.*
-
 ### 4.2 A Elasticidade Óssea: As Fraturas em "Galho Verde"
 Os ossos de crianças pequenas contêm maior teor de colágeno orgânico e menor mineralização de cálcio que os ossos adultos, além de possuírem um periósteo espesso e resistente [8].
 - Quando uma criança cai com a mão espalmada, o osso rádio ou a ulna frequentemente **não se quebra em duas partes separadas**; ele se curva e racha em apenas um dos lados, exatamente como um graveto de planta verde que é dobrado com as mãos (**fratura em galho verde**).
@@ -154,16 +151,21 @@ O parquinho escolar é o epicentro do trauma ortopédico infantil [1]:
 - **Quedas de Trepa-Trepa e Balanço:** A altura crítica de perigo para trauma grave em crianças é qualquer queda de **altura superior a 1,5 metro** (ou mais que o dobro da altura da própria criança) [3].
 - Se a criança despencar de um escorregador alto sobre piso duro de concreto:
   1. Ajoelhe-se imediatamente e comande: *"Não se levante, fique paradinho!"*.
-  2. **Segure a cabeça e o pescoço da criança com as duas mãos** alinhados em posição neutra.
+  2. Evite que a criança se levante ou faça movimentos desnecessários; não force alinhamento da cabeça. Priorize respiração, sangramento e acionamento do resgate.
   3. Avalie a consciência e a respiração.
   4. Inspecione braços e pernas procurando deformidades antes de permitir qualquer movimento. Se houver dor no pescoço, formigamento ou sonolência, mantenha a imobilização manual e acione o SAMU 192 [1, 3].
 
 ### 5.2 Traumatismo Cranioencefálico (TCE) Leve a Moderado
+
+![Figura 5 — Estabilização manual alinhada (in-line) da cabeça e coluna cervical no trauma.](../imagens/In-line-traction.png)
+*Figura 5 — Estabilização manual alinhada (in-line) da cabeça e coluna cervical no trauma. Crédito: Baedr-9439. Licença: CC0. Fonte: Wikimedia Commons.*
+
+
+![Figura 4 — Equimose periorbitária bilateral (sinal do guaxinim) sugestiva de fratura de base de crânio.](../imagens/Raccoon-eyes.jpg)
+*Figura 4 — Equimose periorbitária bilateral (sinal do guaxinim) sugestiva de fratura de base de crânio. Crédito: Another-anon-artist-234. Licença: CC0. Fonte: Wikimedia Commons.*
+
 Após uma pancada na cabeça, o educador deve aplicar a regra de observação clínica consolidada pelo protocolo **PECARN** (*Pediatric Emergency Care Applied Research Network*) [3]:
 
-
-![Figura 2 — Enfaixamento compressivo funcional em entorse articular de tornozelo.](../imagens/Ankle-wrap.png)
-*Figura 2 — Enfaixamento compressivo funcional em entorse articular de tornozelo. Crédito: Baedr-9439. Licença: CC0. Fonte: Wikimedia Commons.*
 
 #### Sinais de Alarme de TCE Grave (Ligar 192 Imediatamente):
 - **Vômitos repetidos:** Dois ou mais episódios de vômitos após a batida na cabeça (especialmente vômitos em jato sem náusea prévia).
@@ -188,7 +190,7 @@ Após uma pancada na cabeça, o educador deve aplicar a regra de observação cl
 
 ### 5.4 Lesões Dentárias Traumáticas e Avulsão Dentária
 
-![Proteção de dente permanente avulsionado e diferença em relação ao dente de leite](../../public/apostilas/imagens/usm-dente-avulsionado.svg)
+![Proteção de dente permanente avulsionado e diferença em relação ao dente de leite](../imagens/usm-dente-avulsionado.svg)
 *Figura complementar — Proteção de dente permanente avulsionado e diferença em relação ao dente de leite. Ilustração original União Serviços Médicos (2026), baseada em AHA/Cruz Vermelha 2024; não reproduz imagens de terceiros.*
 
 Colisões contra o chão ou contra a cabeça de outro colega frequentemente lesionam a arcada dentária frontal (dentes incisivos) [1, 2]:
@@ -211,6 +213,14 @@ Colisões contra o chão ou contra a cabeça de outro colega frequentemente lesi
   - Guarde a embalagem do produto e ligue imediatamente para o **Disque-Intoxicação da ANVISA: 0800-722-6001** ou SAMU 192 [4, 5].
 
 ### 5.6 Acidentes Durante Atividades Físicas e Esportivas
+
+![Figura 2 — Enfaixamento compressivo funcional em entorse articular de tornozelo.](../imagens/Ankle-wrap.png)
+*Figura 2 — Enfaixamento compressivo funcional em entorse articular de tornozelo. Crédito: Baedr-9439. Licença: CC0. Fonte: Wikimedia Commons.*
+
+
+![Figura 1 — Imobilização solidária (buddy taping) em trauma fechado de falanges.](../imagens/Buddy-taping-finger.png)
+*Figura 1 — Imobilização solidária (buddy taping) em trauma fechado de falanges. Crédito: Baedr-9439. Licença: CC0. Fonte: Wikimedia Commons.*
+
 Nas aulas de educação física e treinos de futebol/vôlei:
 - **Entorses de Tornozelo e Joelho:** Aplique o protocolo **PRICE**: repouso imediato (não force o aluno a continuar jogando), compressas de gelo protegido por pano por 20 minutos, compressão elástica suave e membro elevado [1, 4].
 - **Fraturas e Deformidades:** Imobilize provisoriamente com talas de papelão ou tala moldável da maleta da Lei Lucas, abrangendo a articulação acima e abaixo, mantendo os dedos visíveis para checar a circulação rosada [1].
@@ -230,7 +240,7 @@ Nas aulas de educação física e treinos de futebol/vôlei:
 | Lesão Encontrada | Sinais de Gravidade Imediata | Ação da Escola | Destino e Transporte |
 |---|---|---|---|
 | **Pancada na Cabeça (TCE)** | Vômitos em jato, sonolência anormal, pupila dilatada, perda de memória. | Ligar 192 pelo viva-voz; manter cabeça imóvel com as mãos. | **SAMU 192 com urgência máxima.** |
-| **Queda de Parquinho (> 1,5m)** | Dor forte nas costas ou pescoço, formigamento nos pés, incapacidade de mover membros. | Estabilizar a coluna cervical manualmente; não mover o corpo. | **Corpo de Bombeiros 193 / SAMU.** |
+| **Queda de Parquinho (> 1,5m)** | Dor forte nas costas ou pescoço, formigamento nos pés, incapacidade de mover membros. | Evitar movimentos desnecessários, não forçar posição e monitorar respiração/consciência. | **Corpo de Bombeiros 193 / SAMU.** |
 | **Avulsão de Dente Permanente** | Dente definitivo arrancado inteiro da gengiva por impacto. | Guardar no leite frio; não tocar na raiz; estancar gengiva. | **atendimento odontológico imediato.** |
 | **Suspeita de Fratura em Braço** | Deformidade óssea evidente, dor aguda, inchaço rápido. | Fazer tala provisória pegando cotovelo e punho; gelo local. | **Pronto-Socorro Ortopédico (com os pais).** |
 | **Sangramento Nasal (Epistaxe)** | Sangramento contínuo por mais de 15 a 20 minutos de compressão firme. | Manter cabeça para a frente e pinçar narinas; avisar pais. | **Pronto-Atendimento Infantil.** |
@@ -239,9 +249,6 @@ Nas aulas de educação física e treinos de futebol/vôlei:
 
 ### Quadro 6.2 — Checklist do Educador no Atendimento ao Aluno Ferido
 
-
-![Figura 4 — Equimose periorbitária bilateral (sinal do guaxinim) sugestiva de fratura de base de crânio.](../imagens/Raccoon-eyes.jpg)
-*Figura 4 — Equimose periorbitária bilateral (sinal do guaxinim) sugestiva de fratura de base de crânio. Crédito: Another-anon-artist-234. Licença: CC0. Fonte: Wikimedia Commons.*
 
 | Passo | Ação Obrigatória | Verificação Técnica |
 |:---:|---|---|
@@ -282,9 +289,6 @@ Nas aulas de educação física e treinos de futebol/vôlei:
 >    - *Por que é perigoso:* Traumatismos cranianos infantis podem evoluir com sangramento lento horas depois em casa.
 >    - *Conduta correta:* Avise a família com clareza e forneça o termo de orientação pós-TCE.
 
-
-![Figura 5 — Estabilização manual alinhada (in-line) da cabeça e coluna cervical no trauma.](../imagens/In-line-traction.png)
-*Figura 5 — Estabilização manual alinhada (in-line) da cabeça e coluna cervical no trauma. Crédito: Baedr-9439. Licença: CC0. Fonte: Wikimedia Commons.*
 
 ---
 
@@ -414,5 +418,5 @@ QUEDAS E PARQUINHOS              TRAUMA CRANIANO (TCE)            AVULSÃO DENT�
 | **Status:** | `Aguardando Aprovação Científica` |
 | **Data da Redação:** | 19 de outubro de 2026 |
 | **Versão:** | 1.0.0 |
-| **Validação Científica por IA:** | Conforme IADT Dental Traumatology, PECARN Head Trauma e SBP |
+| **Situação científica:** | Revisado editorialmente; requer homologação pediátrica antes do uso instrucional. |
 | **Próxima Revisão:** | Outubro de 2027 |
