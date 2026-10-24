@@ -70,3 +70,27 @@ Os gráficos abaixo são **originais da União Serviços Médicos**. Sua redaç�
 - CDC PHIL, questões de licença: https://wwwn.cdc.gov/PHIL/FAQ.aspx
 
 **Próxima exigência para homologação médica:** inspeção visual manual, em celular e desktop, de cada ilustração e conferência da legenda e licença de todas as 83 imagens históricas individualmente; a auditoria automática de existência não substitui isso.
+
+
+## Grupo C — Diagramas vetoriais originais USM (adicionados em 24/10/2026)
+
+As 14 figuras abaixo são **criações originais para uso editorial da União**, não reproduções de fotografias nem de gráficos proprietários de diretrizes. São esquemas educacionais e não substituem treino presencial nem validação por responsável técnico. Cada SVG está em `apostilas/imagens/` (fonte) e `public/apostilas/imagens/` (publicação).
+
+| Arquivo original | Conteúdo didático | Apostilas publicadas |
+| --- | --- | --- |
+| `usm-triade-vital-ilustrada.svg` | Integração pulmões, coração e cérebro | C01 |
+| `usm-rcp-adulto-maos-ilustrado.svg` | Posicionamento de mãos no adulto | C05 |
+| `usm-rcp-lactente-posicionamento-ilustrado.svg` | Técnicas pediátricas de 2025 | E02 |
+| `usm-desengasgo-lactente-posicoes.svg` | Alternância de pancadas dorsais e impulsos torácicos | C07, E03 |
+| `usm-compressao-direta-ilustrada.svg` | Compressão direta da ferida com gaze | C10, H03 |
+| `usm-sinais-sangramento-grave.svg` | Reconhecimento visual de hemorragia grave | H01, H02 |
+| `usm-acondicionamento-amputacao.svg` | Proteção e transporte de parte amputada sem contato direto com gelo | H06 |
+| `usm-intermacao-visual.svg` | Reconhecimento e resfriamento inicial na intermação | A04 |
+| `usm-resgate-aquatico-alcance-arremesso.svg` | Salvamento sem entrada em água | A05 |
+| `usm-planta-resposta-academia.svg` | Pontos de socorro e rotas em academia | A06 |
+| `usm-planta-resposta-escola.svg` | Pontos de socorro e rotas em escola | E07 |
+| `usm-evacuacao-rota-segura.svg` | Planta de evacuação em incêndio | T07 |
+| `usm-espaco-confinado-perigo-visual.svg` | Risco atmosférico e proibição de resgate improvisado | T06 |
+| `usm-cena-multiplas-vitimas.svg` | Organização inicial de cena complexa | T08 |
+
+**Fontes clínicas usadas para aferir a estrutura das legendas:** AHA/AAP 2025 (https://cpr.heart.org/en/resuscitation-science/cpr-and-ecc-guidelines), AHA/Cruz Vermelha 2024 (https://cpr.heart.org/en/resuscitation-science/2024-first-aid-guidelines), ACS STOP THE BLEED (https://www.stopthebleed.org/) e Ministério da Saúde/SAMU 192. Os desenhos não são certificados por essas entidades.
