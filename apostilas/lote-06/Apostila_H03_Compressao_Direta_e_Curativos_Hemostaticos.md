@@ -138,7 +138,7 @@ A pressão física é definida pela fórmula $P = \frac{F}{A}$ (Pressão = Forç
 
 ### 5.1 Princípios Fisiomecânicos da Compressão Direta
 
-![Passos essenciais da compressão direta sem interrupções](./apostilas/imagens/usm-compressao-direta.svg)
+![Passos essenciais da compressão direta sem interrupções](../../public/apostilas/imagens/usm-compressao-direta.svg)
 *Figura complementar — Passos essenciais da compressão direta sem interrupções. Ilustração original União Serviços Médicos (2026), baseada em AHA/Cruz Vermelha 2024; não reproduz imagens de terceiros.*
 
 
