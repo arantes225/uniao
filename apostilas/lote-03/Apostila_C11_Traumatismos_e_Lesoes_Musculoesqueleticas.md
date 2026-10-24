@@ -72,7 +72,7 @@ Simule fratura e possível lesão cervical: treine comunicação, estabilizaçã
 > 1. **Prioridade número um no trauma musculoesquelético:** Não causar dano secundário. Um osso quebrado pode cortar artérias profundas ou nervos motores se for movimentado de forma descuidada no socorro inicial [1].
 > 2. **Regra de ouro da imobilização:** Imobilize o membro na **posição exata em que foi encontrado**. Nunca tente "puxar para desentortar", alinhar à força ou empurrar o osso exposto de volta para dentro da carne [1, 2].
 > 3. **Abranger duas articulações:** A tala de imobilização provisória deve obrigatoriamente imobilizar a **articulação acima** e a **articulação abaixo** do ponto da fratura para anular o movimento dos fragmentos ósseos [3].
-> 4. **Suspeita universal de coluna cervical:** Em qualquer queda de altura superior à própria estatura, colisão veicular, atropelamento ou mergulho em água rasa, presuma lesão na coluna cervical. **Mantenha a cabeça e o pescoço imóveis com as mãos** alinhados em posição neutra [1, 4].
+> 4. **Suspeita de lesão de coluna:** mecanismo relevante e sinais como dor cervical intensa, formigamento, fraqueza, alteração de consciência ou déficit neurológico exigem acionamento do resgate e redução de movimentos desnecessários. Não force posição neutra nem atrase via aérea, respiração ou controle de hemorragia para tentar imobilização rígida [1, 4].
 > 5. **Sinais críticos de Traumatismo Craniano (TCE):** Vômitos em jato sem náusea prévia, pupilas com tamanhos diferentes (anisocoria), sangramento ou líquido claro transparente saindo pelo ouvido ou nariz (*líquor*), e sonolência progressiva com confusão mental [4].
 > 6. **Checagem de pulso e perfusão distal:** Antes e depois de amarrar qualquer tala ou curativo no braço ou perna, verifique se os dedos continuam quentes, sensíveis e se a cor rosada da unha retorna em menos de 2 segundos [1, 3].
 
@@ -97,9 +97,6 @@ Ao concluir o estudo deste módulo, você será capaz de:
 
 O traumatismo físico decorrente de acidentes de trânsito, acidentes de trabalho com máquinas, quedas de lajes, acidentes esportivos em academias e quedas recreativas no pátio escolar compõe uma das maiores demandas de atendimento pré-hospitalar em território brasileiro [1, 5].
 
-
-![Figura 1 — Manobra de rolamento em bloco mantendo o alinhamento do eixo cranioespinal.](../imagens/Rolling-a-patient.jpg)
-*Figura 1 — Manobra de rolamento em bloco mantendo o alinhamento do eixo cranioespinal. Crédito: Another-anon-artist-234. Licença: CC0. Fonte: Wikimedia Commons.*
 
 Ao abordar uma vítima de traumatismo, o socorrista capacitado não deve olhar apenas para o local que dói. A primeira avaliação clínica é a **análise da cinemática**:
 - *Qual foi a velocidade do impacto?*
@@ -149,8 +146,8 @@ A coluna vertebral humana é composta por 33 vértebras sobrepostas que protegem
 - *O mecanismo da lesão medular:* Se uma vítima sofre fratura ou luxação vertebral cervical, a movimentação descuidada da cabeça (dobrar ou girar o pescoço) esmaga a medula contra a vértebra fraturada. A vítima perde instantaneamente a sensibilidade e o movimento dos braços e pernas (**tetraplegia**) e, se a lesão for acima de C4, entra em **parada respiratória imediata por paralisia diafragmática** [1, 4].
 
 
-![Figura 3 — Aplicação técnica de colar cervical para restrição de movimento.](../imagens/Cervical-collar-application.png)
-*Figura 3 — Aplicação técnica de colar cervical para restrição de movimento. Crédito: Baedr-9439. Licença: CC0. Fonte: Wikimedia Commons.*
+![Figura 3 — Estabilização manual alinhada (in-line) da cabeça e coluna cervical no trauma.](../imagens/In-line-traction.png)
+*Figura 3 — Estabilização manual alinhada (in-line) da cabeça e coluna cervical no trauma. Crédito: Baedr-9439. Licença: CC0. Fonte: Wikimedia Commons.*
 
 ---
 
@@ -163,6 +160,10 @@ Toda abordagem a traumatismos inicia-se com a avaliação do mecanismo de lesão
 - **Mecanismo de Torção (Torsional):** Rotação brusca do corpo com o pé fixado ao solo (comum no futebol e artes marciais), produzindo fraturas em espiral nos ossos longos e rupturas ligamentares nos meniscos e ligamentos cruzados do joelho [3].
 
 ### 5.2 Fraturas Fechadas e Expostas: Reconhecimento e Conduta
+
+![Figura 7 — Imobilização de membro superior com tala moldável.](../imagens/Splinting-an-arm.png)
+*Figura 7 — Imobilização de membro superior com tala moldável. Crédito: Baedr-9439. Licença: CC0. Fonte: Wikimedia Commons.*
+
 - **Fratura Fechada:** A pele permanece íntegra sobre o foco de fratura.
   - *Sinais de Reconhecimento:* Dor intensa localizada que piora com o menor toque, inchaço acentuado (*edema*), coloração arroxeada (*equimose*), deformidade visível na anatomia normal do membro (angulação anormal ou encurtamento), perda de função motora (incapacidade de mover o membro) e ruído de atrito ósseo (*crepitação*) [1, 3].
 - **Fratura Exposta:** Há ruptura da pele e dos tecidos moles sobrejacentes, estabelecendo comunicação direta entre o osso fraturado e o meio externo ambiente.
@@ -188,6 +189,10 @@ Frequentemente confundidas no ambiente comunitário, essas lesões guardam difer
 *Figura 4 — Enfaixamento compressivo funcional em entorse articular de tornozelo. Crédito: Baedr-9439. Licença: CC0. Fonte: Wikimedia Commons.*
 
 ### 5.4 Traumatismo Cranioencefálico (TCE): Sinais de Alarme
+
+![Figura 8 — Mecanismo de fratura craniana com afundamento em traumatismo cranioencefálico (TCE).](../imagens/Depressed-skull-fracture.jpg)
+*Figura 8 — Mecanismo de fratura craniana com afundamento em traumatismo cranioencefálico (TCE). Crédito: Another-anon-artist-234. Licença: CC0. Fonte: Wikimedia Commons.*
+
 Qualquer impacto mecânico contra a cabeça (quedas, socos, pancadas de objetos, acidentes de moto ou carro) exige vigilância neurológica rigorosa nas primeiras 24 horas [1, 4]:
 
 ```
@@ -220,6 +225,10 @@ Qualquer impacto mecânico contra a cabeça (quedas, socos, pancadas de objetos,
 Identificando qualquer um desses sinais, o paciente deve ser transportado com urgência absoluta via SAMU 192 para tomografia de crânio e avaliação neurocirúrgica imediata [4].
 
 ### 5.5 Suspeita de Lesão Raquimedular (Trauma de Coluna Cervical)
+
+![Figura 6 — Aplicação técnica de colar cervical para restrição de movimento.](../imagens/Cervical-collar-application.png)
+*Figura 6 — Aplicação técnica de colar cervical para restrição de movimento. Crédito: Baedr-9439. Licença: CC0. Fonte: Wikimedia Commons.*
+
 O socorrista deve presumir lesão na coluna vertebral em qualquer ocorrência que envolva [1, 4]:
 - Acidente de trânsito envolvendo automóvel, motocicleta, bicicleta ou atropelamento.
 - Quedas de altura superior à própria estatura ou quedas de escadas.
@@ -230,14 +239,15 @@ O socorrista deve presumir lesão na coluna vertebral em qualquer ocorrência qu
 #### Como Executar a Estabilização Manual Neutra da Cabeça:
 1. Ajoelhe-se diretamente no topo da cabeça da vítima deitada de costas.
 2. Posicione as palmas das suas duas mãos espalmadas firmemente contra as laterais da cabeça da vítima (cobrindo as orelhas com os dedos estendidos ao longo da mandíbula).
-3. Traga suavemente a cabeça para a **posição neutra** (olhos apontando para a frente a 90 graus), **exceto se a vítima relatar piora súbita da dor, espasmo muscular severo ou se a cabeça estiver travada torta** (nesses casos, imobilize na posição em que ela estiver) [1, 4].
-4. Mantenha essa estabilização manual contínua sem afrouxar as mãos até que a equipe do SAMU/Bombeiros instale o colar cervical rígido e fixe a vítima na prancha longa.
+3. Não tente trazer a cabeça à posição neutra à força. Apoie a posição encontrada apenas se isso não comprometer via aérea e aguarde equipe habilitada.
+4. O socorrista leigo deve priorizar cena segura, via aérea, respiração e controle de hemorragia. Colar cervical e imobilização rígida são decisões de equipe treinada, não substituem a avaliação clínica [1, 4].
 
-
-![Figura 6 — Estabilização manual alinhada (in-line) da cabeça e coluna cervical no trauma.](../imagens/In-line-traction.png)
-*Figura 6 — Estabilização manual alinhada (in-line) da cabeça e coluna cervical no trauma. Crédito: Baedr-9439. Licença: CC0. Fonte: Wikimedia Commons.*
 
 ### 5.6 Cuidados com a Movimentação, Rolamento e Imobilização
+
+![Figura 1 — Manobra de rolamento em bloco mantendo o alinhamento do eixo cranioespinal.](../imagens/Rolling-a-patient.jpg)
+*Figura 1 — Manobra de rolamento em bloco mantendo o alinhamento do eixo cranioespinal. Crédito: Another-anon-artist-234. Licença: CC0. Fonte: Wikimedia Commons.*
+
 A movimentação de uma vítima de trauma só deve ser executada se houver perigo iminente de morte no local (incêndio, desabamento ou tráfego sem controle) ou para viabilizar manobras de ressuscitação cardiopulmonar em superfície rígida [1, 2]:
 - **Rolamento em Bloco de 90 Graus:** Exige no mínimo 3 a 4 socorristas operando sincronizadamente:
   - *Socorrista 1 (Líder):* Segura a cabeça e comanda a contagem verbal.
@@ -273,9 +283,6 @@ A movimentação de uma vítima de trauma só deve ser executada se houver perig
 | **5. Checagem Posterior** | **Reavaliar pulso e enchimento capilar dos dedos após amarrar a tala.** | Se o dedo ficou gelado ou dormente, a atadura está apertada demais. Solte um pouco! |
 
 
-![Figura 7 — Imobilização de membro superior com tala moldável.](../imagens/Splinting-an-arm.png)
-*Figura 7 — Imobilização de membro superior com tala moldável. Crédito: Baedr-9439. Licença: CC0. Fonte: Wikimedia Commons.*
-
 ---
 
 ## SEÇÃO 7 — ERROS FREQUENTES E CONDUTAS PROIBIDAS
@@ -306,9 +313,6 @@ A movimentação de uma vítima de trauma só deve ser executada se houver perig
 >    - *Por que não fazer:* O calor dilata os vasos sanguíneos rompidos, duplicando o inchaço e a formação de hematomas internos.
 >    - *Conduta correta:* Aplique exclusivamente compressas frias ou gelo protegido nas primeiras 48 horas.
 
-
-![Figura 8 — Mecanismo de fratura craniana com afundamento em traumatismo cranioencefálico (TCE).](../imagens/Depressed-skull-fracture.jpg)
-*Figura 8 — Mecanismo de fratura craniana com afundamento em traumatismo cranioencefálico (TCE). Crédito: Another-anon-artist-234. Licença: CC0. Fonte: Wikimedia Commons.*
 
 ---
 
@@ -442,5 +446,5 @@ COLUNA E CRÂNIO (TCE)            FRATURAS ÓSSEAS                    ARTICULAÇ
 | **Status:** | `Aguardando Aprovação Científica` |
 | **Data da Redação:** | 19 de outubro de 2026 |
 | **Versão:** | 1.0.0 |
-| **Validação Científica por IA:** | Conforme diretrizes ACS/PHTLS 10ª Ed. e Brain Trauma Foundation |
+| **Situação científica:** | Revisado editorialmente; requer homologação por profissional habilitado antes do uso instrucional. |
 | **Próxima Revisão:** | Outubro de 2027 |
