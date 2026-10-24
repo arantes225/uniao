@@ -97,9 +97,6 @@ Ao concluir o estudo deste módulo inaugural, o aluno e futuro operador de contr
 **LEITURA GUIADA — COMECE AQUI:** Um sangramento importante pode matar antes da chegada da ambulância. A pessoa que presencia o acidente não precisa distinguir veia de artéria: precisa reconhecer o volume, comprimir a ferida e acionar ajuda.
 
 
-![Figura 1 — Envoltório de isolamento térmico passivo e ativo para prevenção da hipotermia no trauma.](../imagens/Hypothermia-wrap.png)
-*Figura 1 — Envoltório de isolamento térmico passivo e ativo para prevenção da hipotermia no trauma. Crédito: Baedr-9439. Licença: CC0. Fonte: Wikimedia Commons.*
-
 O trauma físico é a principal causa de morte em indivíduos entre 1 e 44 anos em escala global. Dentro do universo de óbitos por trauma no ambiente pré-hospitalar, **a hemorragia exsanguinante não controlada é responsável por mais de 35% de todas as mortes pré-hospitalares e por mais de 80% das mortes potencialmente evitáveis** [1, 2].
 
 Historicamente, as doutrinas de primeiros socorros civis priorizavam rigidamente a mnemônica "A-B-C" (Vias Aéreas, Respiração e Circulação). No entanto, lições extraídas de conflitos militares modernos pelo Comitê de Cuidados Táticos a Vítimas de Combate (TCCC) e transpostas para o meio civil pelo American College of Surgeons (ACS) no programa *STOP THE BLEED®* e pelo PHTLS 10ª Edição comprovaram que **uma via aérea pérvia é inútil em um corpo cujo sangue vazou completamente pelo chão** [1, 3].
@@ -172,7 +169,7 @@ A hemostasia é o conjunto biológico de processos que interrompe o sangramento 
 2. **Hemostasia Primária (Tampão Plaquetário):** As plaquetas circulantes aderem ao colágeno subendotelial exposto, ativam-se e agregam-se umas às outras, formando um tampão frágil e instável.
 3. **Hemostasia Secundária (Cascata de Coagulação):** Fatores de coagulação plasmáticos ativam-se sequencialmente, convertendo o fibrinogênio solúvel em uma malha densa de **fibrina insolúvel**, que aprisiona hemácias e consolida o coágulo definitivo [3, 5].
 
-> **O Limite Biológico da Hemostasia:** Em ferimentos em artérias de médio e grande calibre (diâmetro > 3 mm), **a cascata de coagulação é totalmente incapaz de estancar o fluxo**. A força hidráulica da pressão arterial ejeta o tampão plaquetário repetidamente. O sangramento só cessa por **intervenção mecânica externa (compressão ou torniquete)** ou pela morte da vítima [1, 3].
+> **Limite da hemostasia espontânea:** sangramento externo grave pode superar a capacidade de coagulação do organismo e requer controle rápido. A primeira medida é pressão direta firme; para hemorragia ameaçadora à vida em extremidade, use torniquete se treinado e disponível. Não é possível inferir calibre arterial, volume perdido ou desfecho apenas pelo aspecto da ferida [1, 3].
 
 ---
 
@@ -183,19 +180,22 @@ O socorrista deve identificar a origem do sangramento em menos de 3 segundos de 
 | TIPO DE SANGRAMENTO | CARACTERÍSTICA VISUAL | COR DO SANGUE | DINÂMICA DO FLUXO | VELOCIDADE DE RISCO |
 | :--- | :--- | :--- | :--- | :--- |
 | **Arterial** | Sangramento pulsátil ritmado em esguicho ou jato forte. | Vermelho-vivo (rico em oxigênio). | Alta pressão; sobe em altura ou jorra com força. | **CRÍTICA: Morte em 2 a 4 minutos.** |
-| **Venoso** | Sangramento contínuo, laminar, constante e sem pulsação. | Vermelho-escuro (desoxigenado). | Baixa pressão; escorre em poça volumosa e densa. | **ALTA: Morte em 5 a 10 minutos se grande vaso.** |
+| **Venoso** | Sangramento contínuo, laminar, constante e sem pulsação. | Geralmente mais escuro. | Pode ser volumoso e grave, sobretudo em grandes vasos. | **ALTA: pode evoluir rapidamente; aplique pressão direta e acione o resgate.** |
 | **Capilar** | Sangramento em lençol superficial lento ("babação"). | Vermelho-intermediário. | Pressão microscópica; minando uniformemente da derme. | **BAIXA: Sem risco vital imediato.** |
 
 ---
 
 ### 5.5 Reconhecimento da Perda Sanguínea Grave e Velocidade de Esvaziamento
 
-![Reconhecimento do sangramento ameaçador à vida e compressão imediata](../../public/apostilas/imagens/usm-compressao-direta.svg)
+![Reconhecimento visual de hemorragia potencialmente fatal por tecido encharcado, fluxo intenso ou grande poça de sangue.](../imagens/usm-sinais-sangramento-grave.svg)
+*Ilustração autoral USM — apoio didático ao reconhecimento precoce de hemorragia grave.*
+
+
+![Reconhecimento do sangramento ameaçador à vida e compressão imediata](../imagens/usm-compressao-direta.svg)
 *Figura complementar — Reconhecimento do sangramento ameaçador à vida e compressão imediata. Ilustração original União Serviços Médicos (2026), baseada em AHA/Cruz Vermelha 2024; não reproduz imagens de terceiros.*
 
 
 No calor da ocorrência traumática, não é possível medir mililitros de sangue com recipientes graduados. O socorrista utiliza os **Indicadores Visuais de Gravidade do Programa STOP THE BLEED®** [1, 2]:
-
 
 
 ```
@@ -213,6 +213,14 @@ No calor da ocorrência traumática, não é possível medir mililitros de sangu
 ---
 
 ### 5.6 Sinais e Fisiopatologia do Choque Hemorrágico (A Tríade Letal)
+
+![Figura 4 — Pele mosqueada (livedo/vasoconstrição periférica) como sinal clínico precoce de hipoperfusão e choque.](../imagens/Mottled-skin.jpg)
+*Figura 4 — Pele mosqueada (livedo/vasoconstrição periférica) como sinal clínico precoce de hipoperfusão e choque. Crédito: Another-anon-artist-234. Licença: CC0. Fonte: Wikimedia Commons.*
+
+
+![Figura 1 — Envoltório de isolamento térmico passivo e ativo para prevenção da hipotermia no trauma.](../imagens/Hypothermia-wrap.png)
+*Figura 1 — Envoltório de isolamento térmico passivo e ativo para prevenção da hipotermia no trauma. Crédito: Baedr-9439. Licença: CC0. Fonte: Wikimedia Commons.*
+
 
 O choque hipovolêmico hemorrágico é a síndrome de colapso circulatório sistêmico decorrente de volume intravascular insuficiente para sustentar a oxigenação celular mínima [2, 3].
 
@@ -248,9 +256,6 @@ Em pacientes traumatizados com perda sanguínea maciça, três desordens metabó
 ### Classificação do Choque Hemorrágico (Padrão ATLS / American College of Surgeons)
 
 
-![Figura 4 — Pele mosqueada (livedo/vasoconstrição periférica) como sinal clínico precoce de hipoperfusão e choque.](../imagens/Mottled-skin.jpg)
-*Figura 4 — Pele mosqueada (livedo/vasoconstrição periférica) como sinal clínico precoce de hipoperfusão e choque. Crédito: Another-anon-artist-234. Licença: CC0. Fonte: Wikimedia Commons.*
-
 | PARÂMETRO CLÍNICO | CLASSE I (Compensado) | CLASSE II (Leve) | CLASSE III (Moderado) | CLASSE IV (Grave / Pré-terminal) |
 | :--- | :--- | :--- | :--- | :--- |
 | **Volume Perdido (ml)** | Até 750 ml | 750 a 1.500 ml | 1.500 a 2.000 ml | **Mais de 2.000 ml (> 40%)** |
@@ -259,7 +264,7 @@ Em pacientes traumatizados com perda sanguínea maciça, três desordens metabó
 | **Frequência Respiratória** | 14 a 20 rpm | 20 a 30 rpm | 30 a 40 rpm | **> 35 rpm (respiração suspirosa)** |
 | **Enchimento Capilar** | Normal (< 2 seg) | Aumentado (> 2 seg) | Muito lento (> 3 seg) | Extremamente lentificado ou ausente |
 | **Estado Mental / SNC** | Ligeiramente ansioso | Ansioso / Irritado | Confuso / Agitado | **Letárgico, sonolento ou em coma** |
-| **CONDUTA PRÉ-HOSPITALAR** | Curativo simples; monitorar. | Compressão direta firme; hidratar. | **Torniquete / Wound packing + 192 urgente.** | **Controle mecânico fulminante + Aquecer + UTI.** |
+| **CONDUTA PRÉ-HOSPITALAR** | Curativo simples; monitorar. | Compressão direta firme; manter em repouso e acionar ajuda se persistir. | **Controle de sangramento + 192 urgente.** | **Controle de sangramento, aquecer e transporte urgente.** |
 
 ---
 
@@ -295,7 +300,7 @@ Imediatamente, um jato vigoroso de sangue vermelho-vivo espirra a mais de 80 cm 
 4. **Instalação do Torniquete Comercial:**
    - Vanderlei entrega o torniquete de molinete em 25 segundos.
    - Flávio aplica a fita do torniquete 5 cm acima da ferida (ou alto na raiz da coxa), passa a tira de velcro pela fivela, puxa o excesso de fita com força máxima e gira o molinete de alumínio por 3 voltas completas.
-   - O sangramento residual na ferida é 100% estancado. Trava o molinete no clipe e anota o horário da aplicação: "14h42min".
+   - Reavalia a ferida: se o sangramento persistir, ajusta a estratégia conforme treinamento e informa o resgate. Registra o horário da aplicação: "14h42min".
 5. **Combate à Tríade Letal:**
    - Flávio envolve Roberto com a manta térmica aluminizada impermeável para impedir a hipotermia, mantendo o membro elevado suavemente.
    - Roberto apresenta palidez e taquicardia (FC 125 bpm - Choque Classe II/III), mas permanece consciente e orientado.
@@ -307,9 +312,9 @@ Imediatamente, um jato vigoroso de sangue vermelho-vivo espirra a mais de 80 cm 
 
 > **MACETES OPERACIONAIS DE SOBREVIVÊNCIA NO CONTROLE DE SANGRAMENTO**
 >
-> 1. **A Estimativa da "Mão Cheia de Sangue":** Um volume de sangue correspondente ao tamanho de uma mão espalmada da própria vítima no piso representa aproximadamente **150 a 200 ml**. Se você observar uma poça que equivale visualmente a 5 a 6 mãos espalmadas, a vítima já perdeu mais de 1 litro de sangue (Classe II/III de choque) e precisa de contenção e resfriamento prevenidos com urgência [2, 3].
-> 2. **A Posição do Joelho na Artéria Femoral:** Se você estiver sozinho sem materiais nem luvas diante de um sangramento femoral arterial volumoso, ajoelhe-se diretamente sobre a virilha da vítima (ponto de pulso femoral), descarregando o peso do seu corpo através do seu próprio joelho contra o osso ilíaco. A compressão óssea estanca a femoral em segundos enquanto você usa as duas mãos livres para pegar o celular ou improvisar amarrações [1, 4].
-> 3. **O Espelho da Manta Térmica:** Ao envolver a vítima com a manta térmica laminada de mylar (aluminizada), lembre-se: o lado **prateado e brilhante deve ficar voltado para dentro (em contato visual com o corpo)** para refletir a radiação infravermelha térmica emitida pelo paciente de volta para si mesmo [3, 5].
+> 1. **Não estime volume pela poça:** aparência e tamanho de uma poça não quantificam com segurança a perda de sangue. Considere grave o sangramento que é pulsátil, contínuo, encharca rapidamente o material, forma poça crescente ou acompanha sinais de choque.
+> 2. **Priorize pressão direta, não joelho na virilha:** não ajoelhe sobre a vítima nem tente compressão de pontos arteriais profundos. Aplique pressão manual diretamente na ferida com barreira/proteção e acione o resgate.
+> 3. **Manta térmica:** cubra a vítima para reduzir perda de calor, seguindo as instruções do produto. A proteção térmica não depende de uma orientação universal de lado “prateado” e não substitui o controle do sangramento.
 
 ---
 
@@ -340,9 +345,9 @@ Pulsátil     Laminar       Minando                                   Taquicardi
 
 ## SEÇÃO 11 — O QUE VOCÊ PRECISA LEMBRAR
 
-- Hemorragia arterial grave mata em menos de 3 a 5 minutos; o controle do sangramento ("X") precede a via aérea.
+- Hemorragia externa ameaçadora à vida exige controle imediato; cuide também da via aérea e respiração, sem assumir um tempo universal até colapso.
 - Sangue arterial é vermelho-vivo e pulsátil; sangue venoso é vermelho-escuro e contínuo.
-- A cascata de coagulação biológica é incapaz de estancar lesões em artérias de grande calibre sem compressão mecânica externa.
+- Sangramento grave pode superar a hemostasia espontânea; pressão direta e, quando indicado, torniquete treinado são intervenções de primeiros socorros.
 - A Tríade Letal do trauma é formada por Hipotermia, Coagulopatia e Acidose; aqueça a vítima que sangra.
 - Choque hemorrágico é a incapacidade de perfundir órgãos nobres com oxigênio, manifestando-se por palidez, taquicardia e confusão mental.
 - O tempo de intervenção define a sobrevida: comprima diretamente a ferida sem hesitar.
