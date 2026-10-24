@@ -309,9 +309,15 @@ const parseMarkdown = (markdown: string): React.ReactNode[] => {
             </div>
           )}
           <div className="space-y-3 text-[15px] leading-[1.85]">
-            {quoteLines.map((ql, qIdx) => (
-              <p key={qIdx}>{renderInline(ql)}</p>
-            ))}
+            {quoteLines.map((ql, qIdx) => {
+              const listItem = ql.match(/^\s*(?:[-*]|\d+\.)\s+(.+)$/);
+              return listItem ? (
+                <div key={qIdx} className="flex items-start gap-3 pl-1">
+                  <span aria-hidden="true" className="mt-1 shrink-0 text-teal-600 dark:text-teal-300">•</span>
+                  <span>{renderInline(listItem[1])}</span>
+                </div>
+              ) : <p key={qIdx}>{renderInline(ql)}</p>;
+            })}
           </div>
         </aside>
       );
@@ -398,13 +404,30 @@ const parseMarkdown = (markdown: string): React.ReactNode[] => {
       continue;
     }
 
-    // Regular Paragraph
+    // Soft-wrapped Markdown lines are part of one paragraph until a blank
+    // line or another block starts. This prevents text from fragmenting.
+    const paragraphStart = i;
+    const paragraphLines = [line.trim()];
+    i++;
+    while (i < lines.length) {
+      const next = lines[i];
+      const trimmed = next.trim();
+      if (
+        !trimmed ||
+        /^(?:#{1,4}\s|>|\||```)/.test(trimmed) ||
+        IMG_REGEX.test(trimmed) ||
+        HR_REGEX.test(trimmed) ||
+        UNORDERED_LIST_REGEX.test(next) ||
+        ORDERED_LIST_REGEX.test(next)
+      ) break;
+      paragraphLines.push(trimmed);
+      i++;
+    }
     elements.push(
-      <p key={`p-${i}`} className="my-5 text-[15px] sm:text-base leading-[1.9] text-slate-700 dark:text-slate-300">
-        {renderInline(line)}
+      <p key={`p-${paragraphStart}`} className="my-5 text-[15px] sm:text-base leading-[1.9] text-slate-700 dark:text-slate-300">
+        {renderInline(paragraphLines.join(' '))}
       </p>
     );
-    i++;
   }
 
   return elements;
