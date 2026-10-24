@@ -223,12 +223,7 @@ Adotado pelos principais consensos mundiais de trauma (PHTLS 10ª Edição e com
 ```
 
 > [!IMPORTANT]
-> **ENTENDA O PORQUÊ: O "X" ANTES DO "A" SALVA VIDAS NO TRAUMA**
-> Historicamente, o protocolo iniciava-se no "A" (Vias Aéreas). Todavia, a experiência clínica e militar com traumas severos comprovou que um paciente com secção da artéria femoral ou braquial perde 1 litro de sangue a cada 40 segundos. Se o socorrista gastar 2 minutos estabilizando o pescoço e abrindo a boca antes de comprimir a artéria que jorra sangue, o paciente morrerá exsanguinado com a via aérea perfeitamente limpa. O sangue que sai não pode ser reposto no APH; portanto, **estanque o sangue em jato primeiro** [5].
-
-
-![Figura 3 — Tração da mandíbula (jaw thrust) para abertura de via aérea no trauma.](../imagens/Jaw_thrust.jpg)
-*Figura 3 — Tração da mandíbula (jaw thrust) para abertura de via aérea no trauma. Crédito: Department of the Army (EUA). Licença: Domínio público. Fonte: Wikimedia Commons.*
+> **Por que priorizar um sangramento ameaçador à vida?** Uma hemorragia externa intensa pode comprometer rapidamente a circulação. Faça compressão direta sem demora, peça ajuda e acione 192. Não atrase o controle do sangramento para executar procedimentos de via aérea que exigem treinamento específico.
 
 ### 5.5 Identificação de Sinais Clínicos de Gravidade
 Além das ameaças diretas, o socorrista deve estar atento a indicadores de deterioração iminente que exigem comunicação imediata ao médico do SAMU:
