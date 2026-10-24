@@ -8,6 +8,7 @@ export interface SimulationStep {
     circulation: string;
     bleeding: string;
   };
+  bleedingFocus?: BleedingFocus;
   options: {
     id: string;
     text: string;
@@ -17,7 +18,17 @@ export interface SimulationStep {
   }[];
 }
 
-export type SimulationEnvironment = 'academia' | 'escola' | 'empresa';
+export interface BleedingFocus {
+  x: number;
+  y: number;
+  size: number;
+  kind: 'arterial' | 'venous' | 'junctional' | 'controlled';
+  title: string;
+  appearance: string;
+  action: string;
+}
+
+export type SimulationEnvironment = 'academia' | 'escola' | 'empresa' | 'stop-the-bleed';
 export interface SimulationCase {
   id: string;
   title: string;
@@ -25,3 +36,4 @@ export interface SimulationCase {
   characterId: string;
   steps: SimulationStep[];
 }
+
