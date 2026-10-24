@@ -122,9 +122,6 @@ O encéfalo humano consome cerca de 120 gramas de glicose por dia. Diferente do 
 - O cérebro dispara um sinal de alarme simpático maciço (adrenalina), gerando tremores, taquicardia, palidez e suor frio. Se a glicose não for reposta de imediato, a disfunção atinge o córtex motor e o tronco encefálico, desencadeando crises convulsivas, coma e morte neuronal irreversível [4, 7].
 
 
-![Figura 1 — Aplicação intramuscular de autoinjetor de adrenalina na face anterolateral da coxa.](../imagens/Epinephrine-injection.png)
-*Figura 1 — Aplicação intramuscular de autoinjetor de adrenalina na face anterolateral da coxa. Crédito: Baedr-9439. Licença: CC0. Fonte: Wikimedia Commons.*
-
 ### 4.3 A Tempestade de Mediadores da Anafilaxia
 A anafilaxia é uma reação de hipersensibilidade imunológica sistêmica imediata (Tipo I, mediada por anticorpos IgE).
 - Ao entrar em contato com um alérgeno potente (ex.: amendoim, frutos do mar, dipirona, anti-inflamatórios, contraste radiológico ou veneno de abelhas e vespas), mastócitos e basófilos desgranulam maciçamente em todo o corpo, liberando **histamina, leucotrienos e prostaglandinas** na circulação.
@@ -172,6 +169,14 @@ O desconforto respiratório deve ser triado através de sinais visuais objetivos
 - **Posição Ortopneica ("Posição de Tripé"):** O paciente recusa-se terminantemente a ficar deitado; ele senta-se inclinado para a frente, apoiando as duas mãos sobre os próprios joelhos ou na borda da cadeira para fixar a cintura escapular e recrutar os músculos peitorais para expandir o tórax [3].
 
 ### 5.2 Crise de Asma Grave e Broncoespasmo Agudo
+
+![Figura 5 — Fisiopatologia da crise asmática: broncoespasmo, edema de mucosa e hipersecreção.](../imagens/Asthma-bronchial-tube-cross-section.png)
+*Figura 5 — Fisiopatologia da crise asmática: broncoespasmo, edema de mucosa e hipersecreção. Crédito: Baedr-9439. Licença: CC0. Fonte: Wikimedia Commons.*
+
+
+![Figura 4 — Inalador pressurizado dosimetrado para crise de broncoespasmo.](../imagens/AsthmaInhaler.jpg)
+*Figura 4 — Inalador pressurizado dosimetrado para crise de broncoespasmo. Crédito: Wikimedia Commons (Mendel, assumido). Licença: Domínio público. Fonte: Wikimedia Commons.*
+
 Durante o ataque asmático, a prioridade é acalmar a vítima, posicioná-la sentada e viabilizar a inalação do broncodilatador de alívio rápido (geralmente **Sulfato de Salbutamol / Fenoterol** em aerossol dosimetrado) [3]:
 
 #### Técnica Correta de Auxílio ao Inalador Dosimetrado (*Bombinha*):
@@ -191,9 +196,6 @@ A hipoglicemia é a complicação aguda mais frequente em portadores de diabetes
 - **Sinais Clínicos Iniciais (Adrenérgicos):** Fome súbita insaciável, tremores finos nas mãos, sudorese fria abundante, pele pálida e taquicardia palpável.
 - **Sinais Avançados (Neuroglicopênicos):** Alteração súbita de comportamento (agressividade inexplicável, choro, confusão mental semelhante a estado de embriaguez alcoólica), fala arrastada, visão dupla, convulsões motoras e perda total da consciência (coma hipoglicêmico) [4, 7].
 
-
-![Figura 2 — Sinais e sintomas sistêmicos da reação anafilática.](../imagens/Signs_and_symptoms_of_anaphylaxis.png)
-*Figura 2 — Sinais e sintomas sistêmicos da reação anafilática. Crédito: Mikael HÃ¤ggstrÃ¶m. Licença: CC0. Fonte: Wikimedia Commons.*
 
 #### Conduta Prática Dividida pelo Nível de Consciência:
 - **Vítima CONSCIENTE e capaz de engolir:**
@@ -218,6 +220,14 @@ Diferente da hipoglicemia que se instala em minutos, a **hiperglicemia severa** 
 - **Conduta no APH:** Não aplique insulina por conta própria. Mantenha a vítima hidratada apenas se estiver lúcida e acione o serviço médico para transporte hospitalar.
 
 ### 5.5 Anafilaxia e Choque Anafilático: A Emergência Alérgica Máxima
+
+![Figura 2 — Sinais e sintomas sistêmicos da reação anafilática.](../imagens/Signs_and_symptoms_of_anaphylaxis.png)
+*Figura 2 — Sinais e sintomas sistêmicos da reação anafilática. Crédito: Mikael HÃ¤ggstrÃ¶m. Licença: CC0. Fonte: Wikimedia Commons.*
+
+
+![Figura 1 — Aplicação intramuscular de autoinjetor de adrenalina na face anterolateral da coxa.](../imagens/Epinephrine-injection.png)
+*Figura 1 — Aplicação intramuscular de autoinjetor de adrenalina na face anterolateral da coxa. Crédito: Baedr-9439. Licença: CC0. Fonte: Wikimedia Commons.*
+
 A anafilaxia é definida pela Organização Mundial de Alergia (WAO) como uma reação de hipersensibilidade sistêmica grave, de início rápido, potencialmente fatal [1, 2].
 
 #### Critérios de Reconhecimento Imediato da Anafilaxia:
@@ -259,9 +269,6 @@ Suspeite e aja se a vítima apresentar sintomas de início súbito (segundos a m
 ---
 
 
-![Figura 4 — Inalador pressurizado dosimetrado para crise de broncoespasmo.](../imagens/AsthmaInhaler.jpg)
-*Figura 4 — Inalador pressurizado dosimetrado para crise de broncoespasmo. Crédito: Wikimedia Commons (Mendel, assumido). Licença: Domínio público. Fonte: Wikimedia Commons.*
-
 ### Quadro 6.2 — Escala de Gravidade da Crise de Asma no APH
 
 | Sinais Avaliados | Crise Leve a Moderada | Crise Grave (Ameaça Imediata) | Parada Respiratória Iminente |
@@ -284,7 +291,7 @@ Suspeite e aja se a vítima apresentar sintomas de início súbito (segundos a m
 > ### CATÁLOGO DE ERROS CRÍTICOS EM EMERGÊNCIAS METABÓLICAS E ALÉRGICAS
 > 
 > 1. **Aplicar insulina por conta própria em pessoa desacordada sem saber o valor da glicemia:**
->    - *Por que não fazer:* Em mais de 90% das perdas súbitas de consciência no diabético, o problema é a **hipoglicemia severa**. Se você aplicar insulina em uma pessoa com hipoglicemia, o nível de açúcar cairá a zero, causando parada cardíaca e morte encefálica imediata.
+>    - *Por que não fazer:* perda de consciência em pessoa com diabetes tem várias causas e exige avaliação urgente. Não administre insulina como primeiros socorros: ela deve ser usada apenas conforme prescrição/plano individual e por pessoa autorizada. Se a pessoa estiver inconsciente ou não conseguir engolir, não ofereça alimento ou bebida; acione o 192 e proteja a via aérea.
 >    - *Conduta correta:* O socorrista leigo nunca aplica insulina. Em caso de dúvida e vítima acordada, forneça açúcar; o açúcar na hipoglicemia salva a vida, e se for hiperglicemia, um pouco mais de açúcar não trará dano imediato adicional.
 > 
 > 2. **Tentar dar água com açúcar ou comida para pessoa diabética desacordada:**
@@ -303,9 +310,6 @@ Suspeite e aja se a vítima apresentar sintomas de início súbito (segundos a m
 >    - *Por que não fazer:* Deitar de costas empurra as vísceras abdominais contra o diafragma, diminuindo o espaço torácico em mais de 20% e piorando a sensação de asfixia.
 >    - *Conduta correta:* Mantenha o asmático sentado inclinado para a frente em posição de tripé.
 
-
-![Figura 5 — Fisiopatologia da crise asmática: broncoespasmo, edema de mucosa e hipersecreção.](../imagens/Asthma-bronchial-tube-cross-section.png)
-*Figura 5 — Fisiopatologia da crise asmática: broncoespasmo, edema de mucosa e hipersecreção. Crédito: Baedr-9439. Licença: CC0. Fonte: Wikimedia Commons.*
 
 ---
 
@@ -437,5 +441,5 @@ CRISE DE ASMA GRAVE              HIPOGLICEMIA SEVERA              ANAFILAXIA / C
 | **Status:** | `Aguardando Aprovação Científica` |
 | **Data da Redação:** | 19 de outubro de 2026 |
 | **Versão:** | 1.0.0 |
-| **Validação Científica por IA:** | Conforme diretrizes WAO, GINA, ADA e ILCOR First Aid |
+| **Situação científica:** | Revisado editorialmente; requer homologação por profissional habilitado antes do uso instrucional. |
 | **Próxima Revisão:** | Outubro de 2027 |
