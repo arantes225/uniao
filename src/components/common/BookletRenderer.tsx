@@ -523,7 +523,7 @@ export const BookletRenderer: React.FC<BookletRendererProps> = React.memo(({ mar
                 {renderInline(section.heading ?? '')}
               </h2>
             </div>
-            <div className="min-w-0 px-6 py-7 sm:px-10 sm:py-10">
+            <div className="booklet-chapter-content min-w-0 px-6 py-7 sm:px-10 sm:py-10">
               {parseMarkdown(section.markdown)}
             </div>
           </section>
