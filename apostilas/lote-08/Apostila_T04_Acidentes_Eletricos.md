@@ -170,7 +170,11 @@ A desenergização elétrica não consiste apenas em "apagar o interruptor". Um 
 
 ### 5.3. Segurança Absoluta Antes de Abordar a Vítima
 
-![Sequência segura em acidente elétrico antes de tocar na vítima](../../public/apostilas/imagens/usm-risco-eletrico.svg)
+![Figura 4 — Sinalização de advertência para risco de choque elétrico e arco voltaico.](../imagens/High_voltage_warning_sign_Beromuenster.JPG)
+*Figura 4 — Sinalização de advertência para risco de choque elétrico e arco voltaico. Crédito: Timberwind. Licença: Domínio público. Fonte: Wikimedia Commons.*
+
+
+![Sequência segura em acidente elétrico antes de tocar na vítima](../imagens/usm-risco-eletrico.svg)
 *Figura complementar — Sequência segura em acidente elétrico antes de tocar na vítima. Ilustração original União Serviços Médicos (2026), baseada em NR-10 e orientações de emergência; não reproduz imagens de terceiros.*
 
 
@@ -224,6 +228,10 @@ As lesões térmicas em acidentes com eletricidade distinguem-se radicalmente da
 
 ### 5.5. Complicações Cardiovasculares e Arritmias Cardíacas
 
+![Figura 5 — Posicionamento anterolateral padrão das pás adesivas do DEA no tórax desnudo.](../imagens/Aed-electrode-placement.png)
+*Figura 5 — Posicionamento anterolateral padrão das pás adesivas do DEA no tórax desnudo. Crédito: Baedr-9439. Licença: CC0. Fonte: Wikimedia Commons.*
+
+
 O miocárdio opera através de pulsos eletrofisiológicos milimétricos gerados pelo nó sinoatrial. A invasão de uma corrente elétrica exógena desorganiza violentamente essa harmonia:
 
 ```
@@ -260,7 +268,7 @@ Se o choque elétrico induzir PCR:
 
 O atendimento pré-hospitalar ao acidentado elétrico deve seguir uma metodologia padronizada de trauma:
 
-1. **Suspeita de Lesão de Coluna Cervical e Traumas Ocultos:** A contração muscular violenta tetânica por si só é capaz de fraturar vértebras e ossos longos ou provocar luxação de ombro. Além disso, muitas vítimas são arremessadas ao chão ou caem de escadas e andaimes. **Assuma que toda vítima de choque elétrico com ejeção ou queda é portadora de lesão na coluna vertebral.** Estabilize a cabeça e o pescoço em posição neutra alinhada, evitando rotações e flexões desnecessárias.
+1. **Suspeita de trauma associado:** após ejeção ou queda, considere lesões associadas. Evite movimentos desnecessários e não force posição neutra. Priorize segurança da cena, via aérea, respiração, controle de hemorragia e acionamento de equipe habilitada.
 2. **Monitoramento Neurológico e Respiratório:** Observe o nível de consciência. A passagem da corrente pelo cérebro ou tronco encefálico pode desencadear convulsões pós-choque, amnésia transitória, agitação psicomotora ou apneia central por paralisia do centro respiratório bulbar.
 3. **Avaliação da Circulação Periférica:** Monitore pulsos distais (radial e pedioso), tempo de enchimento capilar e coloração das extremidades para identificar precocemente o desenvolvimento de isquemia de membros por síndrome compartimental.
 4. **Transporte e Comunicação com o Suporte Avançado:** Toda e qualquer vítima de choque elétrico que tenha apresentado perda de consciência, formigamento persistente em membros, queimadura cutânea visível ou choque sob tensão superior a 110V deve ser formalmente encaminhada a uma unidade hospitalar com suporte de emergência para realização de eletrocardiograma (ECG) de 12 derivações e dosagem sérica de enzimas musculares (creatinoquinase - CK total e CK-MB) e eletrólitos.
@@ -313,11 +321,8 @@ O atendimento pré-hospitalar ao acidentado elétrico deve seguir uma metodologi
 2. **Utilizar Objetos Úmidos ou Inadequados para Afastamento:** Tentar remover fios utilizando cabos de vassoura sujos, pedaços de madeira úmida ou ferramentas manuais sem isolamento dielétrico certificado. Materiais porosos ou molhados conduzem eletricidade facilmente em tensões industriais.
 3. **Liberar a Vítima sem Avaliação Médica ("Foi só um susto"):** O trabalhador que sofreu um choque moderado, recupera a consciência e diz estar "apenas com o braço dolorido" é liberado para voltar ao posto ou ir para casa. Horas depois, durante a noite, ele evolui para fibrilação ventricular tardia ou parada cardíaca durante o sono, ou desenvolve insuficiência renal por rabdomiólise não diagnosticada. **Todo choque com perda transitória de consciência ou passagem transtorácica exige avaliação hospitalar e ECG.**
 4. **Desperdiçar Tempo com Medidas Populares:** Enterrar os pés da vítima na terra para "descarregar a energia do corpo" ou dar sal e água com açúcar para beber. Essas crenças populares retardam o início da RCP e a desfibrilação pelo DEA, que são as únicas medidas capazes de salvar a vida do paciente em parada.
-5. **Esquecer o Risco de Queda de Altura:** Tratar a ocorrência apenas como choque elétrico e esquecer que a vítima estava trabalhando sobre uma escada a 3 metros de altura e despencou após o choque, omitindo a imobilização cervical e a triagem de hemorragias internas decorrentes da queda.
+5. **Esquecer o Risco de Queda de Altura:** Tratar a ocorrência apenas como choque elétrico e esquecer que a vítima caiu após o choque. Reduza movimentos desnecessários, avalie via aérea/respiração e hemorragia, e comunique o mecanismo da queda à equipe de emergência.
 
-
-![Figura 4 — Sinalização de advertência para risco de choque elétrico e arco voltaico.](../imagens/High_voltage_warning_sign_Beromuenster.JPG)
-*Figura 4 — Sinalização de advertência para risco de choque elétrico e arco voltaico. Crédito: Timberwind. Licença: Domínio público. Fonte: Wikimedia Commons.*
 
 ---
 
@@ -342,9 +347,6 @@ O operador líder e brigadista industrial Cláudio estava na bancada a 5 metros 
 7. **Choque do DEA e Retorno da Circulação:** O DEA emitiu o comando: *"Analisando o ritmo cardíaco... Não toque no paciente!"*. Cláudio ergueu as mãos e ordenou afastamento. O aparelho declarou: *"Choque recomendado! Carregando... Pressione o botão piscante agora!"*. O brigadista disparou o choque. Imediatamente após a descarga, Cláudio reiniciou as compressões torácicas contínuas. Durante o segundo ciclo de RCP, Rodrigo esboçou tosse, inspirou profundamente e movimentou o braço direito, recuperando a respiração espontânea.
 8. **Estabilização Pós-PCR e Alinhamento:** Cláudio suspendeu as massagens, manteve Rodrigo deitado de costas com alinhamento neutro da cabeça para proteger a coluna cervical (devido ao impacto da queda no chão) e monitorou a respiração até a chegada da Unidade de Suporte Avançado (USA) do SAMU aos 12 minutos do chamado.
 
-
-![Figura 5 — Posicionamento anterolateral padrão das pás adesivas do DEA no tórax desnudo.](../imagens/Aed-electrode-placement.png)
-*Figura 5 — Posicionamento anterolateral padrão das pás adesivas do DEA no tórax desnudo. Crédito: Baedr-9439. Licença: CC0. Fonte: Wikimedia Commons.*
 
 ### Desfecho Clínico
 No hospital geral de referência, o eletrocardiograma pós-reanimação revelou ritmo sinusal com taquicardia compensatória. Rodrigo apresentava uma queimadura elétrica profunda de terceiro grau de 2 cm na polpa digital do indicador direito (ponto de entrada) e uma lesão exsudativa no antebraço esquerdo (ponto de saída). Permaneceu internado na UTI por 48 horas sob monitorização cardíaca e hidratação venosa vigorosa com soro fisiológico e bicarbonato para prevenir lesão renal por mioglobinúria. Graças à disciplina do brigadista Cláudio — que priorizou a desenergização rápida antes de tocar na vítima, iniciou a RCP sem hesitação e utilizou o DEA nos primeiros minutos —, Rodrigo sobreviveu sem nenhum déficit neurológico e teve alta hospitalar plenamente recuperado.
