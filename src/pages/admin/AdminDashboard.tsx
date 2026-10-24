@@ -392,27 +392,44 @@ export const AdminDashboard: React.FC = () => {
     setIsSendCertificatesOpen(false);
   };
 
-  // Ajuste responsivo de tamanho de fonte para acomodar qualquer tamanho de nome sem estourar o layout
-  const getInstructorFontSizeClass = (name: string) => {
-    const len = (name || '').trim().length;
-    if (len > 32) return 'text-[9px] leading-tight';
-    if (len > 24) return 'text-[10px] leading-tight';
-    if (len > 18) return 'text-xs leading-normal';
-    return 'text-xs font-bold leading-normal';
+  const updateCertSigner = (id: string, update: Partial<CertificateSignatory>) => {
+    setCertSigners(prev => prev.map(person => person.id === id ? { ...person, ...update } : person));
   };
 
-  const handleSignatureUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const file = e.target.files?.[0];
-    if (file) {
-      const reader = new FileReader();
-      reader.onload = (loadEvent) => {
-        if (loadEvent.target?.result) {
-          setInstructorSigUrl(loadEvent.target.result as string);
-        }
-      };
-      reader.readAsDataURL(file);
+  const handleSignerSignatureUpload = async (id: string, file?: File) => {
+    if (!file) return;
+    if (!['image/png', 'image/jpeg', 'image/webp'].includes(file.type) || file.size > 2 * 1024 * 1024) {
+      alert('Envie uma imagem PNG, JPG ou WebP de até 2 MB.');
+      return;
     }
+    const extension = file.type === 'image/png' ? 'png' : file.type === 'image/webp' ? 'webp' : 'jpg';
+    const filePath = `${selectedCertCohortId}/${crypto.randomUUID()}.${extension}`;
+    setSignatureUploadingId(id);
+    const { error } = await supabase.storage.from('certificate-signatures').upload(filePath, file, {
+      contentType: file.type, cacheControl: '3600', upsert: false,
+    });
+    setSignatureUploadingId(null);
+    if (error) {
+      alert('Falha ao enviar assinatura. Entre como administrador autorizado: ' + error.message);
+      return;
+    }
+    updateCertSigner(id, { signaturePath: filePath });
   };
+
+  const signerPathKey = certSigners.map(person => `${person.id}:${person.signaturePath || ''}`).join('|');
+  useEffect(() => {
+    let cancelled = false;
+    const refresh = async () => {
+      const images = await Promise.all(certSigners.filter(person => person.signaturePath).map(async person => {
+        const { data } = await supabase.storage.from('certificate-signatures').createSignedUrl(person.signaturePath!, 3600);
+        return { id: person.id, url: data?.signedUrl || '' };
+      }));
+      if (!cancelled) setSignerImageUrls(Object.fromEntries(images.map(item => [item.id, item.url])));
+    };
+    void refresh();
+    return () => { cancelled = true; };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [signerPathKey]);
 
   const handlePinSubmit = (e: React.FormEvent) => {
     e.preventDefault();
