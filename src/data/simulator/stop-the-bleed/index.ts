@@ -1,127 +1,70 @@
-import type { SimulationCase } from '../types';
+import type { SimulationCase, BleedingFocus, SimulationStep } from '../types';
 
-const caseOne: SimulationCase = {
-  id: 'stb-coxa-pulsatil',
-  title: 'Sangramento pulsátil na coxa',
-  description: 'Identifique o sangramento grave em uma extremidade e escolha o controle imediato.',
-  characterId: 'homem-branco-deitado',
-  steps: [
-    {
-      id: 1,
-      phase: 'Etapa 1: localizar o sangramento',
-      scenarioText: 'A cena está segura. A vítima está consciente e há sangue se acumulando rapidamente próximo à coxa direita.',
-      vitalSigns: { consciousness: 'Consciente e ansioso', breathing: '24 rpm', circulation: 'Pulso rápido', bleeding: 'Ativo e pulsátil' },
-      bleedingFocus: {
-        x: 78, y: 83, size: 11, kind: 'arterial', title: 'Sangramento arterial pulsátil',
-        appearance: 'O sangue aparece em jatos ou pulsos, com grande volume e progressão rápida.',
-        action: 'Acione o socorro, aplique pressão imediata e prepare um torniquete para a extremidade se o sangramento não ceder.'
-      },
-      options: [
-        { id: 'stb1-a', text: 'Verificar a segurança, pedir ajuda e pressionar diretamente a ferida.', type: 'essential', feedback: 'Boa sequência: segurança, acionamento do socorro e pressão imediata reduzem a perda de sangue.', score: 30 },
-        { id: 'stb1-b', text: 'Afastar-se e aguardar porque o sangramento parece muito intenso.', type: 'critical_error', feedback: 'Em hemorragia grave, esperar sem intervir permite perda rápida de sangue.', score: -30 },
-        { id: 'stb1-c', text: 'Lavar a ferida antes de fazer qualquer compressão.', type: 'incorrect', feedback: 'A prioridade é controlar a hemorragia; a limpeza pode esperar a equipe treinada.', score: -15 }
-      ]
-    },
-    {
-      id: 2,
-      phase: 'Etapa 2: controle da extremidade',
-      scenarioText: 'A pressão inicial não controla o fluxo. O kit possui um torniquete comercial e gaze.',
-      vitalSigns: { consciousness: 'Pálido, responde adequadamente', breathing: '26 rpm', circulation: 'Pulso radial fino', bleeding: 'Pulsátil, não controlado' },
-      bleedingFocus: {
-        x: 78, y: 83, size: 11, kind: 'arterial', title: 'Foco arterial ainda ativo',
-        appearance: 'O fluxo continua apesar da pressão inicial, sinal de hemorragia que exige escalada rápida.',
-        action: 'Aplique o torniquete na extremidade, acima da lesão e fora de articulações, até o sangramento cessar.'
-      },
-      options: [
-        { id: 'stb1-d', text: 'Aplicar o torniquete acima da lesão, apertar até cessar o sangramento e anotar o horário.', type: 'essential', feedback: 'Conduta adequada: o torniquete deve permanecer apertado e o horário deve ser informado ao socorro.', score: 40 },
-        { id: 'stb1-e', text: 'Colocar o torniquete frouxo diretamente sobre o joelho.', type: 'critical_error', feedback: 'Não coloque o torniquete sobre articulações nem o deixe frouxo.', score: -35 },
-        { id: 'stb1-f', text: 'Retirar a pressão para observar melhor a ferida.', type: 'incorrect', feedback: 'Interromper o controle sem uma alternativa pronta aumenta a perda de sangue.', score: -20 }
-      ]
-    }
-  ]
+type CaseSpec = {
+  id: string;
+  caseTitle: string;
+  description: string;
+  characterId: string;
+  focus: Omit<BleedingFocus, 'title' | 'appearance' | 'action'>;
+  focusTitle: string;
+  pattern: string;
+  location: string;
+  action: string;
+  escalation: string;
 };
 
-const caseTwo: SimulationCase = {
-  id: 'stb-ferida-profunda-virilha',
-  title: 'Ferida profunda em região de junção',
-  description: 'Aprenda a reconhecer quando uma ferida não pode ser tratada com torniquete de extremidade.',
-  characterId: 'mulher-negra-deitada',
-  steps: [
-    {
-      id: 1,
-      phase: 'Etapa 1: reconhecer a localização',
-      scenarioText: 'A vítima tem uma ferida profunda na região da virilha após uma queda. O sangramento é contínuo e não há espaço seguro para colocar um torniquete de extremidade.',
-      vitalSigns: { consciousness: 'Consciente, muito assustada', breathing: '23 rpm', circulation: 'Pulso rápido', bleeding: 'Contínuo, profundo' },
-      bleedingFocus: {
-        x: 52, y: 78, size: 10, kind: 'junctional', title: 'Sangramento de junção',
-        appearance: 'A ferida está na transição entre tronco e membro, onde um torniquete comum não consegue envolver a região.',
-        action: 'Mantenha pressão e preencha a cavidade com gaze até o atendimento profissional.'
-      },
-      options: [
-        { id: 'stb2-a', text: 'Acionar o socorro, manter pressão firme e preparar gaze para preencher a ferida.', type: 'essential', feedback: 'A localização exige pressão e preenchimento da ferida, além do acionamento imediato do socorro.', score: 35 },
-        { id: 'stb2-b', text: 'Tentar colocar um torniquete em volta do abdome.', type: 'critical_error', feedback: 'Um torniquete de extremidade não deve ser improvisado no tronco ou no abdome.', score: -35 },
-        { id: 'stb2-c', text: 'Cobrir a ferida com um curativo sem pressionar.', type: 'incorrect', feedback: 'Cobrir sem pressão não controla uma hemorragia profunda.', score: -15 }
-      ]
+const buildCase = (spec: CaseSpec): SimulationCase => {
+  const focusOne: BleedingFocus = {
+    ...spec.focus,
+    title: spec.focusTitle,
+    appearance: `Observe o foco marcado: ${spec.pattern} em ${spec.location}. A máscara separa a área da lesão do restante da cena para facilitar a leitura.`,
+    action: spec.action,
+  };
+  const focusTwo: BleedingFocus = {
+    ...spec.focus,
+    title: `${spec.focusTitle} após a primeira intervenção`,
+    appearance: 'O foco permanece visível e deve ser reavaliado sem retirar o material que está controlando o fluxo.',
+    action: spec.escalation,
+  };
+  const step = (id: number, phase: string, scenarioText: string, bleeding: string, focus: BleedingFocus, options: SimulationStep['options']): SimulationStep => ({
+    id, phase, scenarioText,
+    vitalSigns: {
+      consciousness: id === 1 ? 'Consciente e ansioso' : 'Pálido, responde adequadamente',
+      breathing: id === 1 ? '22 rpm' : '25 rpm',
+      circulation: id === 1 ? 'Pulso rápido' : 'Pulso fino e acelerado',
+      bleeding,
     },
-    {
-      id: 2,
-      phase: 'Etapa 2: preencher e manter pressão',
-      scenarioText: 'A gaze está disponível. O sangramento diminui quando você mantém pressão firme no ponto de origem.',
-      vitalSigns: { consciousness: 'Consciente e orientada', breathing: '21 rpm', circulation: 'Pulso ainda acelerado', bleeding: 'Reduzido sob pressão' },
-      bleedingFocus: {
-        x: 52, y: 78, size: 10, kind: 'junctional', title: 'Ferida profunda preenchida',
-        appearance: 'O foco permanece coberto e o fluxo está reduzido enquanto a pressão é mantida.',
-        action: 'Não retire a gaze para conferir. Mantenha pressão contínua e entregue a informação à equipe de emergência.'
-      },
-      options: [
-        { id: 'stb2-d', text: 'Manter a gaze no local, continuar pressionando e monitorar a vítima.', type: 'essential', feedback: 'A gaze deve permanecer no local enquanto a pressão é mantida até a chegada do socorro.', score: 35 },
-        { id: 'stb2-e', text: 'Puxar a gaze para verificar se o sangramento parou.', type: 'critical_error', feedback: 'Remover o material pode desfazer o coágulo e reiniciar a hemorragia.', score: -30 },
-        { id: 'stb2-f', text: 'Deixar a vítima sozinha para buscar mais materiais.', type: 'incorrect', feedback: 'Peça que outra pessoa busque materiais enquanto você mantém o controle do sangramento.', score: -15 }
-      ]
-    }
-  ]
+    bleedingFocus: focus,
+    options,
+  });
+
+  return {
+    id: spec.id,
+    title: spec.caseTitle,
+    description: spec.description,
+    characterId: spec.characterId,
+    patientKind: 'stop-the-bleed',
+    steps: [
+      step(1, 'Etapa 1: reconhecer o foco', spec.location, spec.pattern, focusOne, [
+        { id: `${spec.id}-a`, text: 'Verificar a segurança, pedir ajuda e aplicar pressão imediata no foco marcado.', type: 'essential', feedback: 'A sequência prioriza a segurança da cena, o acionamento do socorro e o controle da perda de sangue.', score: 35 },
+        { id: `${spec.id}-b`, text: 'Aguardar para observar se o sangramento diminui sozinho.', type: 'critical_error', feedback: 'Uma hemorragia grave não deve ser observada passivamente.', score: -35 },
+        { id: `${spec.id}-c`, text: 'Lavar a lesão antes de iniciar a compressão.', type: 'incorrect', feedback: 'O controle da hemorragia vem antes da limpeza.', score: -15 },
+      ]),
+      step(2, 'Etapa 2: manter o controle', `A pressão inicial foi iniciada. ${spec.escalation}`, 'Ativo, sob pressão', focusTwo, [
+        { id: `${spec.id}-d`, text: 'Manter pressão firme, preparar o recurso adequado e informar o horário ao socorro.', type: 'essential', feedback: 'Mantenha o controle sem interromper para conferir o foco e faça a passagem clara do caso.', score: 40 },
+        { id: `${spec.id}-e`, text: 'Retirar o material para verificar a ferida a cada poucos segundos.', type: 'critical_error', feedback: 'Interromper a pressão pode desfazer o coágulo e reiniciar a hemorragia.', score: -30 },
+        { id: `${spec.id}-f`, text: 'Deixar a vítima sozinha para buscar materiais.', type: 'incorrect', feedback: 'Peça que outra pessoa busque materiais enquanto você mantém a pressão.', score: -15 },
+      ]),
+    ],
+  };
 };
 
-const caseThree: SimulationCase = {
-  id: 'stb-corte-venoso-braco',
-  title: 'Corte com sangramento contínuo no braço',
-  description: 'Diferencie um fluxo contínuo de menor pressão e pratique a pressão direta sustentada.',
-  characterId: 'idoso-negro-sentado',
-  steps: [
-    {
-      id: 1,
-      phase: 'Etapa 1: observar o padrão',
-      scenarioText: 'Após um acidente com vidro, a vítima apresenta um corte no antebraço. O sangue escorre de maneira contínua, sem jatos, mas molha rapidamente o curativo.',
-      vitalSigns: { consciousness: 'Consciente e falando', breathing: '18 rpm', circulation: 'Pulso palpável', bleeding: 'Contínuo, sem pulsos' },
-      bleedingFocus: {
-        x: 18, y: 64, size: 9, kind: 'venous', title: 'Sangramento venoso contínuo',
-        appearance: 'O fluxo é constante e escorre pela superfície, sem o padrão pulsátil de uma artéria.',
-        action: 'Aplique pressão direta firme e contínua com gaze ou tecido limpo, sem interromper para conferir.'
-      },
-      options: [
-        { id: 'stb3-a', text: 'Aplicar pressão direta firme e contínua no local.', type: 'essential', feedback: 'Pressão direta sustentada é a primeira resposta para esse padrão de sangramento.', score: 35 },
-        { id: 'stb3-b', text: 'Fazer vários curativos leves e trocar sempre que molharem.', type: 'incorrect', feedback: 'Trocar o curativo repetidamente remove o material que está ajudando a formar o coágulo.', score: -15 },
-        { id: 'stb3-c', text: 'Usar um torniquete imediatamente em qualquer corte.', type: 'incorrect', feedback: 'A técnica deve ser proporcional ao sangramento; comece com pressão direta quando ela for suficiente.', score: -10 }
-      ]
-    },
-    {
-      id: 2,
-      phase: 'Etapa 2: reavaliar sem perder o controle',
-      scenarioText: 'Depois de alguns minutos de pressão contínua, o curativo está úmido, mas o sangramento desacelerou e a vítima permanece estável.',
-      vitalSigns: { consciousness: 'Consciente e cooperativa', breathing: '17 rpm', circulation: 'Pulso estável', bleeding: 'Controlado sob pressão' },
-      bleedingFocus: {
-        x: 18, y: 64, size: 9, kind: 'controlled', title: 'Sangramento controlado',
-        appearance: 'O fluxo deixou de avançar e o curativo permanece no lugar, ainda sob pressão.',
-        action: 'Mantenha o curativo, observe a vítima e faça a passagem do caso ao serviço de emergência.'
-      },
-      options: [
-        { id: 'stb3-d', text: 'Manter o curativo no lugar e acompanhar a vítima até a chegada do socorro.', type: 'essential', feedback: 'Continue observando e não remova o curativo que está controlando o fluxo.', score: 30 },
-        { id: 'stb3-e', text: 'Retirar tudo assim que o sangue diminuir.', type: 'critical_error', feedback: 'Remover o curativo pode reiniciar o sangramento.', score: -30 },
-        { id: 'stb3-f', text: 'Encerrar a ajuda sem informar o que foi feito.', type: 'incorrect', feedback: 'A equipe precisa saber o que aconteceu e quais medidas foram tomadas.', score: -10 }
-      ]
-    }
-  ]
-};
-
-export const stopTheBleedCases: SimulationCase[] = [caseOne, caseTwo, caseThree];
+export const stopTheBleedCases: SimulationCase[] = [
+  buildCase({ id: 'stb-rua-ciclista-coxa', caseTitle: 'Ciclista: hemorragia arterial na coxa', description: 'Acidente de trânsito com sangramento grave em uma extremidade.', characterId: 'stb-rua-ciclista-coxa', focus: { x: 63, y: 75, size: 12, kind: 'arterial', mask: 'arterial.svg' }, focusTitle: 'Sangramento arterial na coxa', pattern: 'fluxo vermelho vivo, pulsátil e rápido', location: 'um ciclista caído na faixa após colisão', action: 'Aplique pressão direta e prepare um torniquete comercial acima da lesão se a pressão não controlar o fluxo.', escalation: 'O fluxo continua apesar da pressão. Posicione o torniquete acima da lesão, fora de articulações, até cessar o sangramento.' }),
+  buildCase({ id: 'stb-rua-vidro-antebraco', caseTitle: 'Ponto de ônibus: corte venoso no antebraço', description: 'Acidente com vidro e sangramento contínuo em uma extremidade.', characterId: 'stb-rua-vidro-antebraco', focus: { x: 47, y: 52, size: 10, kind: 'venous', mask: 'venous.svg' }, focusTitle: 'Sangramento venoso no antebraço', pattern: 'fluxo contínuo, sem jatos, que encharca o tecido', location: 'o antebraço de um pedestre junto ao abrigo de ônibus', action: 'Aplique pressão direta firme e contínua com gaze ou tecido limpo.', escalation: 'O tecido está úmido, mas o fluxo desacelerou. Reforce a pressão e acrescente material por cima sem retirar a primeira camada.' }),
+  buildCase({ id: 'stb-rua-juncao-virilha', caseTitle: 'Obra viária: ferida de junção', description: 'Queda em obra com ferida profunda na transição entre tronco e membro.', characterId: 'stb-rua-juncao-virilha', focus: { x: 64, y: 63, size: 12, kind: 'junctional', mask: 'junctional.svg' }, focusTitle: 'Sangramento de junção na virilha', pattern: 'ferida profunda em região onde o torniquete de extremidade não alcança', location: 'a parte alta da coxa de um trabalhador protegido por roupa', action: 'Mantenha pressão e prepare gaze para preencher a ferida enquanto o socorro é acionado.', escalation: 'A pressão reduz o fluxo. Preencha a cavidade com gaze, mantenha pressão contínua e não remova o material.' }),
+  buildCase({ id: 'stb-clube-braco', caseTitle: 'Clube de tiro: hemorragia no braço', description: 'Acidente de equipamento em estande supervisionado com arma descarregada e guardada.', characterId: 'stb-clube-braco', focus: { x: 40, y: 42, size: 10, kind: 'arterial', mask: 'arterial.svg' }, focusTitle: 'Sangramento arterial no braço', pattern: 'fluxo pulsátil na parte superior do braço', location: 'um participante sentado no piso de segurança do estande', action: 'Pressione a ferida e prepare um torniquete comercial acima dela, sem cobrir articulação.', escalation: 'O instrutor confirmou que as armas estão seguras. Aplique o torniquete até controlar o sangramento e registre o horário.' }),
+  buildCase({ id: 'stb-clube-perna', caseTitle: 'Clube de tiro: corte na perna', description: 'Acidente com borda metálica junto à linha de tiro, com resposta de segurança já iniciada.', characterId: 'stb-clube-perna', focus: { x: 53, y: 72, size: 11, kind: 'venous', mask: 'venous.svg' }, focusTitle: 'Sangramento venoso na perna', pattern: 'fluxo contínuo pela parte inferior da perna', location: 'um participante deitado no tapete de segurança', action: 'Faça pressão direta firme com gaze e mantenha a perna imóvel.', escalation: 'A pressão está funcionando. Reforce o curativo sem retirar o primeiro material e aguarde a equipe de emergência.' }),
+  buildCase({ id: 'stb-clube-axila', caseTitle: 'Clube de tiro: ferida na axila', description: 'Acidente de equipamento em aula segura, com ferida de junção na região axilar.', characterId: 'stb-clube-axila', focus: { x: 31, y: 38, size: 11, kind: 'junctional', mask: 'junctional.svg' }, focusTitle: 'Sangramento de junção na axila', pattern: 'ferida profunda na transição entre tórax e braço', location: 'uma participante apoiada contra a parede acolchoada', action: 'Mantenha pressão firme e preencha a ferida com gaze até a chegada do socorro.', escalation: 'O fluxo diminuiu com a pressão. Não retire a gaze; mantenha o preenchimento e monitore a respiração.' }),
+];
 
