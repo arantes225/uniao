@@ -174,7 +174,7 @@ O Comitê de TCCC (CoTCCC) do Departamento de Defesa dos EUA testa e homologa an
 
 ### 5.4 Protocolo Operacional de Aplicação Prática em Braços e Pernas
 
-![Posicionamento, verificação do efeito e registro do torniquete](./apostilas/imagens/usm-torniquete-seguranca.svg)
+![Posicionamento, verificação do efeito e registro do torniquete](../../public/apostilas/imagens/usm-torniquete-seguranca.svg)
 *Figura complementar — Posicionamento, verificação do efeito e registro do torniquete. Ilustração original União Serviços Médicos (2026), baseada em AHA/Cruz Vermelha 2024; não reproduz imagens de terceiros.*
 
 
