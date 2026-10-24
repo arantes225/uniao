@@ -149,6 +149,10 @@ Em adultos assintomáticos acima de 35 anos, a principal causa de colapso súbit
 
 ### 5.1 Mapeamento e Análise de Riscos em Ambientes de Treinamento
 
+![Mapa ilustrativo de academia com áreas de treino, saída e pontos possíveis de DEA e primeiros socorros.](../imagens/usm-planta-resposta-academia.svg)
+*Ilustração autoral USM — exemplo para localizar e inspecionar riscos; substitua pela planta real da instituição.*
+
+
 A segurança em academias inicia-se pela identificação espacial das zonas críticas de risco [1, 2]:
 
 ```
