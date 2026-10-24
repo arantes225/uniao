@@ -1923,8 +1923,9 @@ export const AdminDashboard: React.FC = () => {
 
                 {/* CERTIFICADO EM SI (DESIGN OFICIAL UNIÃO SERVIÇOS MÉDICOS — FORMATO A4 HORIZONTAL) */}
                 <div className="w-full flex items-center justify-center overflow-x-auto py-2">
-                  <div 
-                    className="w-full max-w-5xl mx-auto aspect-[1.414/1] bg-slate-950 text-slate-100 rounded-3xl p-6 sm:p-10 md:p-12 shadow-2xl border-4 border-teal-500/30 relative overflow-hidden font-sans select-none flex flex-col justify-between"
+                  <FittedCertificate zoom={certificateZoom}>
+<div 
+                    id="certificate-integrated-page" className="w-[1123px] h-[794px] max-w-none bg-slate-950 text-slate-100 rounded-3xl p-6 sm:p-10 md:p-12 shadow-2xl border-4 border-teal-500/30 relative overflow-hidden font-sans select-none flex flex-col justify-between"
                 >
                   
                   {/* Marca d'água no Fundo */}
@@ -2063,6 +2064,7 @@ export const AdminDashboard: React.FC = () => {
 
                   </div>
                 </div>
+</FittedCertificate>
               </div>
 
             </div>
@@ -2692,7 +2694,8 @@ export const AdminDashboard: React.FC = () => {
             {/* O CERTIFICADO EM SI (DESIGN OFICIAL UNIÃO SERVIÇOS MÉDICOS — FORMATO A4 HORIZONTAL) */}
             {/* ============================================================= */}
             <div className="w-full flex items-center justify-center overflow-x-auto py-2">
-              <div className="w-full max-w-5xl mx-auto aspect-[1.414/1] bg-slate-950 text-slate-100 rounded-3xl p-6 sm:p-10 md:p-12 shadow-2xl border-4 border-teal-500/30 relative overflow-hidden font-sans flex flex-col justify-between">
+              <FittedCertificate zoom={1}>
+<div id="certificate-modal-page" className="w-[1123px] h-[794px] max-w-none bg-slate-950 text-slate-100 rounded-3xl p-6 sm:p-10 md:p-12 shadow-2xl border-4 border-teal-500/30 relative overflow-hidden font-sans flex flex-col justify-between">
               
               {/* Efeito de Marca d'água de Alta Resolução no Fundo */}
               <div className="absolute right-0 bottom-0 opacity-5 translate-x-12 translate-y-12 pointer-events-none">
@@ -2830,6 +2833,7 @@ export const AdminDashboard: React.FC = () => {
 
               </div>
             </div>
+</FittedCertificate>
           </div>
 
             <div className="flex justify-end gap-3 pt-2">
@@ -3027,7 +3031,8 @@ export const AdminDashboard: React.FC = () => {
                 </div>
 
                 {/* Container do Certificado em Formato A4 Horizontal */}
-                <div className="w-full max-w-5xl mx-auto aspect-[1.414/1] bg-slate-950 text-slate-100 rounded-2xl p-4 sm:p-6 shadow-2xl border-2 border-teal-500/30 relative overflow-hidden font-sans select-none flex flex-col justify-between">
+                <FittedCertificate zoom={1}>
+<div id="certificate-cohort-page" className="w-[1123px] h-[794px] max-w-none bg-slate-950 text-slate-100 rounded-2xl p-4 sm:p-6 shadow-2xl border-2 border-teal-500/30 relative overflow-hidden font-sans select-none flex flex-col justify-between">
                   
                   {/* Marca d'água */}
                   <div className="absolute right-0 bottom-0 opacity-5 translate-x-10 translate-y-10 pointer-events-none">
@@ -3134,6 +3139,7 @@ export const AdminDashboard: React.FC = () => {
 
                   </div>
                 </div>
+</FittedCertificate>
               </div>
 
               {/* COLUNA DIREITA: GESTÃO DE ALUNOS QUE IRÃO RECEBER O CERTIFICADO (Cols 5) */}
