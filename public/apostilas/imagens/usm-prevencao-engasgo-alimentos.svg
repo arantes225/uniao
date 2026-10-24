@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="710" viewBox="0 0 1200 710" role="img" aria-labelledby="ttl desc">
+<title id="ttl">Prevenção de engasgos na escola: uvas e salsichas devem ser adaptadas à idade</title>
+<desc id="desc">Quadro comparativo educativo: uva inteira versus cortada longitudinalmente em quatro partes pequenas; salsicha em rodelas circulares versus cortada no sentido do comprimento e depois em pequenos pedaços. Mostrar exemplos de formas, não tamanhos reais. Supervisione a alimentação e respeite a idade e o desenvolvimento da criança.</desc>
+<rect width="1200" height="710" fill="#f3f8f6"/>
+<rect width="1200" height="95" fill="#096b65"/>
+<g font-family="Arial, sans-serif">
+<text x="38" y="49" fill="#fff" font-size="32" font-weight="bold">Prevenção: prepare alimentos para reduzir engasgos</text>
+<text x="38" y="78" fill="#d6f9ef" font-size="18">Exemplos de cortes • adapte textura e tamanho à idade e ao desenvolvimento</text>
+<rect x="35" y="126" width="540" height="439" rx="23" fill="#fff" stroke="#e8afa6" stroke-width="3"/>
+<rect x="625" y="126" width="540" height="439" rx="23" fill="#fff" stroke="#9dcaad" stroke-width="3"/>
+<rect x="35" y="126" width="540" height="61" rx="22" fill="#fff0ee"/>
+<rect x="625" y="126" width="540" height="61" rx="22" fill="#e5f5eb"/>
+<text x="304" y="166" text-anchor="middle" font-size="24" fill="#9f433b" font-weight="bold">NÃO OFEREÇA ASSIM</text>
+<text x="894" y="166" text-anchor="middle" font-size="24" fill="#247653" font-weight="bold">EXEMPLOS DE ADAPTAÇÃO</text>
+<text x="304" y="224" text-anchor="middle" font-size="23" fill="#365a54">Uva inteira e redonda</text>
+<ellipse cx="224" cy="294" rx="41" ry="57" fill="#7d519c" stroke="#5b317f" stroke-width="5"/>
+<ellipse cx="319" cy="294" rx="41" ry="57" fill="#7d519c" stroke="#5b317f" stroke-width="5"/>
+<path d="M240 234Q251 219 263 217" fill="none" stroke="#4d8d64" stroke-width="8"/>
+<circle cx="393" cy="271" r="24" fill="#bf4a46"/><path d="M383 261L403 281M403 261L383 281" stroke="#fff" stroke-width="6" stroke-linecap="round"/>
+<text x="885" y="224" text-anchor="middle" font-size="22" fill="#365a54">Uva cortada no comprimento</text>
+<path d="M806 243Q779 296 811 338Q836 329 838 291Q835 263 806 243Z" fill="#9873ae" stroke="#684a88" stroke-width="4"/>
+<path d="M850 243Q820 295 855 338Q882 329 881 291Q878 262 850 243Z" fill="#9873ae" stroke="#684a88" stroke-width="4"/>
+<path d="M903 243Q876 296 908 338Q934 329 936 291Q933 263 903 243Z" fill="#9873ae" stroke="#684a88" stroke-width="4"/>
+<path d="M947 243Q917 295 952 338Q978 329 978 291Q975 262 947 243Z" fill="#9873ae" stroke="#684a88" stroke-width="4"/>
+<path d="M809 288L824 288M854 288L867 288M909 288L925 288M951 288L966 288" stroke="#e3d1eb" stroke-width="4"/>
+<circle cx="1038" cy="281" r="23" fill="#24895b"/><path d="M1027 280L1035 291L1051 270" fill="none" stroke="white" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M68 366H540M655 366H1129" stroke="#dce5df" stroke-width="3"/>
+<text x="303" y="401" text-anchor="middle" font-size="22" fill="#365a54">Salsicha em rodelas</text>
+<circle cx="220" cy="472" r="44" fill="#d17d6d" stroke="#9c4b47" stroke-width="5"/>
+<circle cx="318" cy="472" r="44" fill="#d17d6d" stroke="#9c4b47" stroke-width="5"/>
+<circle cx="220" cy="472" r="21" fill="#e7a393"/><circle cx="318" cy="472" r="21" fill="#e7a393"/>
+<circle cx="393" cy="456" r="24" fill="#bf4a46"/><path d="M383 446L403 466M403 446L383 466" stroke="#fff" stroke-width="6" stroke-linecap="round"/>
+<text x="892" y="401" text-anchor="middle" font-size="22" fill="#365a54">Corte longitudinal e pedaços pequenos</text>
+<path d="M780 438H992V469H780Z" fill="#d17d6d" stroke="#9c4b47" stroke-width="4"/>
+<path d="M780 485H992V515H780Z" fill="#d17d6d" stroke="#9c4b47" stroke-width="4"/>
+<path d="M821 438V515M868 438V515M915 438V515M961 438V515" stroke="#f6e5dc" stroke-width="9"/>
+<circle cx="1040" cy="474" r="23" fill="#24895b"/><path d="M1029 474L1037 485L1053 464" fill="none" stroke="white" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="35" y="583" width="1130" height="103" rx="19" fill="#e6f4ee" stroke="#85bca3" stroke-width="3"/>
+<text x="600" y="618" text-anchor="middle" font-size="22" fill="#215d46" font-weight="bold">Evite alimentos redondos e duros, ou adapte sua preparação.</text>
+<text x="600" y="648" text-anchor="middle" font-size="19" fill="#416d57">Criança sentada e supervisionada • preparo adequado à fase de desenvolvimento</text>
+<text x="600" y="673" text-anchor="middle" font-size="15" fill="#547665">Referências: Ministério da Saúde, Guia Alimentar da Criança (2019); Sociedade Brasileira de Pediatria</text>
+</g></svg>
