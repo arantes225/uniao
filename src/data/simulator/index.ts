@@ -7,5 +7,5 @@ export const simulationFolders: { id: SimulationEnvironment; name: string; descr
   { id: 'academia', name: 'Academia', description: 'Atendimento no ambiente de atividade física.', cases: gymCases },
   { id: 'escola', name: 'Escola', description: 'Atendimento no ambiente escolar.', cases: schoolCases },
   { id: 'empresa', name: 'Empresa', description: 'Atendimento no ambiente de trabalho.', cases: companyCases },
-  { id: 'stop-the-bleed', name: 'Stop the Bleed', description: 'Reconhecimento visual e controle imediato de hemorragias graves.', cases: stopTheBleedCases },
+  { id: 'stop-the-bleed', name: 'Stop the Bleed', description: 'Reconhecimento visual e controle imediato de hemorragias graves. Clique no foco vermelho para ampliar.', cases: stopTheBleedCases },
 ];
