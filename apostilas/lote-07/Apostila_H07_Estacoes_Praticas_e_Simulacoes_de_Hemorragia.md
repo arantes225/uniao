@@ -111,9 +111,6 @@ A habilidade de usar torniquete exige prática repetida em simuladores. Nunca ap
 ---
 
 
-![Figura 1 — Esquema técnico de aplicação circunferencial e ajuste do molinete do torniquete.](../imagens/Tourniquet.png)
-*Figura 1 — Esquema técnico de aplicação circunferencial e ajuste do molinete do torniquete. Crédito: Baedr-9439. Licença: CC0. Fonte: Wikimedia Commons.*
-
 ## SEÇÃO 4 — PSICOFISIOLOGIA DO DESEMPENHO HUMANO EM AMBIENTES CRÍTICOS
 
 > [!NOTE]
@@ -176,7 +173,11 @@ A segunda estação foca na conversão da compressão manual em estabilização 
 
 ### 5.3 Estação Prática 3: Preenchimento de Feridas Cavitárias (Wound Packing)
 
-![Treinamento de wound packing apenas em simulador e por orientação habilitada](../../public/apostilas/imagens/usm-packing-somente-treinado.svg)
+![Figura 4 — Prática em simulador de preenchimento de feridas (wound packing) e pressão direta.](../imagens/Defenders_participate_in_TCCC_Combat_Lifesaver_training_9464952_.jpg)
+*Figura 4 — Prática em simulador de preenchimento de feridas (wound packing) e pressão direta. Crédito: U.S. Air Force, Tech. Sgt. Kristen Pittman. Licença: Domínio público. Fonte: Wikimedia Commons.*
+
+
+![Treinamento de wound packing apenas em simulador e por orientação habilitada](../imagens/usm-packing-somente-treinado.svg)
 *Figura complementar — Treinamento de wound packing apenas em simulador e por orientação habilitada. Ilustração original União Serviços Médicos (2026), baseada em AHA/Cruz Vermelha 2024; não reproduz imagens de terceiros.*
 
 
@@ -193,6 +194,10 @@ Esta é a estação de maior exigência técnica e tática do programa de contro
 ---
 
 ### 5.4 Estação Prática 4: Aplicação de Torniquetes Comerciais de Molinete
+
+![Figura 1 — Esquema técnico de aplicação circunferencial e ajuste do molinete do torniquete.](../imagens/Tourniquet.png)
+*Figura 1 — Esquema técnico de aplicação circunferencial e ajuste do molinete do torniquete. Crédito: Baedr-9439. Licença: CC0. Fonte: Wikimedia Commons.*
+
 
 A estação de torniquetes desenvolve a memória muscular em membros superiores e inferiores [1, 3]:
 - **Modalidades de Treino:**
@@ -275,9 +280,6 @@ O fechamento pedagógico do módulo segue o modelo internacional de Exame Clíni
 4. **Aliviar a Pressão aos 2 Minutos para Conferir:** No teste prático de 3 minutos, a ansiedade faz o aluno espiar a ferida aos 2 minutos e meio. Qualquer alívio anula o coágulo e zera o cronômetro [1, 4].
 5. **Esquecer de Destravar as Vias de Acesso da Maca:** Focar 100% no torniquete e não designar ninguém para liberar o portão e aguardar a ambulância [2, 6].
 
-
-![Figura 4 — Prática em simulador de preenchimento de feridas (wound packing) e pressão direta.](../imagens/Defenders_participate_in_TCCC_Combat_Lifesaver_training_9464952_.jpg)
-*Figura 4 — Prática em simulador de preenchimento de feridas (wound packing) e pressão direta. Crédito: U.S. Air Force, Tech. Sgt. Kristen Pittman. Licença: Domínio público. Fonte: Wikimedia Commons.*
 
 ---
 
@@ -389,6 +391,9 @@ A sirene de emergência soou e a brigada industrial voluntária foi acionada.
 ---
 
 ### Metadados Editoriais Institucionais
+
+> [!IMPORTANT]
+> **Pré-requisito de estação prática:** treinamento de torniquete e *wound packing* exige instrutor habilitado, manequim e protocolo atualizado. Não avalie nem ensine *wound packing* em pescoço, tórax ou abdome; em criança, siga protocolo pediátrico específico.
 
 | CAMPO | ESPECIFICAÇÃO TÉCNICA |
 | :--- | :--- |
