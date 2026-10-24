@@ -70,7 +70,7 @@ Separe modelos de braço, virilha e tórax e peça ao aluno escolher apenas medi
 
 > **VISÃO RÁPIDA DE SOBREVIVÊNCIA EM CENÁRIOS COMPLEXOS**
 > 1. **Crianças têm pouco sangue:** Uma criança pequena de 15 kg possui apenas cerca de **1,2 litro de sangue**. A perda de uma simples xícara de sangue (250 ml) já representa mais de 20% da sua volemia total, desabando-a em choque descompensado grave [1, 2].
-> 2. **Torniquetes em crianças:** O torniquete comercial para adultos (CAT / SOFTT) **deve ser usado em crianças**. Se a circunferência da coxa ou braço for muito fina e a fita não der aperto mecânico, faça preenchimento com gaze hemostática (*wound packing*) e compressão contínua [1, 3].
+> 2. **Hemorragia pediátrica:** em criança, a prioridade é pressão direta firme e acionamento imediato do resgate. Torniquete pediátrico ou comercial pode ser considerado apenas por socorrista treinado, quando houver hemorragia de extremidade ameaçadora à vida e o dispositivo conseguir controlar o sangramento. Não improvise *wound packing* em criança sem treinamento específico [1, 3].
 > 3. **Preservação de membro amputado:** NUNCA coloque a parte decepada diretamente em contato com gelo ou dentro de água fria (congelamento queima os tecidos e inviabiliza o reimplante). **Envolva a parte em gaze estéril seca, feche em saco plástico vedado e coloque o saco dentro de recipiente com gelo e água** [2, 4].
 > 4. **Ferimento em nádega e períneo:** Regiões de difícil compressão por apresentarem grandes massas musculares e vasos profundos da pelve (artérias glúteas). Exigem **empacotamento cavitário agressivo (*wound packing*)** contra a asa do osso ilíaco [3, 5].
 > 5. **Idosos em uso de anticoagulantes:** Praticantes da terceira idade frequentemente usam varfarina, rivaroxabana ou AAS. Sangramentos mínimos não estancam espontaneamente; o uso de **gazes com Quitosana** é a salvação, pois atuam por atração eletrostática independente da cascata de coagulação [5, 6].
@@ -146,7 +146,7 @@ A resposta cardiovascular ao sangramento varia drasticamente nos extremos da ida
 
 Lesões provocadas por armas brancas de lâmina longa, explosões ou fragmentos de acidentes automobilísticos frequentemente criam trajetos profundos em zigue-zague através de múltiplos planos fasciais e musculares [2, 3]:
 - **O Fenômeno do Trajeto Falso:** O ponto de entrada da faca na pele pode estar 10 cm distante do ponto onde a artéria foi lacerada no fundo da carne.
-- **Técnica de Exploração Digital:** Com a mão enluvada, o socorrista deve introduzir os dedos explorando a cavidade no sentido do sangramento ativo até localizar a ruptura vascular profunda contra o osso, antes de iniciar o empacotamento com gaze [3, 4].
+- **Não explore a ferida com os dedos:** Não tente localizar vasos ou sondar o trajeto. Faça compressão direta, chame 192 e só considere preenchimento de ferida em região apropriada se houver treinamento prático específico e indicação aplicável. O objetivo é comprimir o ponto de sangramento, não procurar estruturas profundas.
 
 ---
 
@@ -170,6 +170,10 @@ Determinadas regiões anatômicas desafiam as regras convencionais do controle d
 
 ### 5.3 Amputações Traumáticas: Manejo Hemostático e Preservação do Coto e Segmento
 
+![Etapas visuais de proteção e acondicionamento de segmento amputado, sem contato direto com gelo.](../imagens/usm-acondicionamento-amputacao.svg)
+*Ilustração autoral USM — sequência de acondicionamento do segmento amputado. Primeiro controle a hemorragia e acione o SAMU 192; confirme as orientações recebidas da equipe.*
+
+
 A amputação traumática de extremidades impõe duas missões simultâneas e interdependentes ao socorrista: **salvar a vida da vítima através da hemostasia imediata do coto** e **preservar a viabilidade biológica do membro amputado para viabilizar o reimplante microcirúrgico** [2, 4]:
 
 #### 1. Manejo do Coto Amputado:
@@ -179,9 +183,6 @@ A amputação traumática de extremidades impõe duas missões simultâneas e in
 
 #### 2. Preservação Correta do Segmento Decepado (A Regra dos Três Recipientes):
 
-
-![Figura 3 — Proteção com curativo úmido e oclusivo em ferimento abdominal aberto.](../imagens/Open-abdominal-wound-dressed.png)
-*Figura 3 — Proteção com curativo úmido e oclusivo em ferimento abdominal aberto. Crédito: Baedr-9439. Licença: CC0. Fonte: Wikimedia Commons.*
 
 ```
 +---------------------------------------------------------------------------------+
@@ -217,13 +218,10 @@ Em incidentes com múltiplos ferimentos na mesma vítima (ex.: estilhaços de ex
 A adaptação técnica para perfis populacionais específicos salva vidas que seriam perdidas pela rigidez doutrinária [1, 5]:
 
 #### O Uso de Torniquetes em Crianças:
-- As diretrizes internacionais do *Pediatric Trauma Society* e do *PHTLS* estabelecem que **torniquetes comerciais modernos de adultos (como o CAT Gen 7) podem e devem ser utilizados com segurança em crianças e lactentes** quando há sangramento arterial com ameaça à vida.
+- Hemorragia ameaçadora à vida em criança requer atendimento urgente. Um torniquete pode ser usado em extremidade por quem foi treinado e consegue obter controle do sangramento; escolha, tamanho, técnica e uso em lactentes dependem de protocolo pediátrico e do dispositivo, não de uma regra universal.
 - Em crianças maiores de 2 anos, a fita do CAT oclui perfeitamente a artéria femoral ou braquial.
 - *Cenário Crítico (Membro Muito Fino):* Se a perna de um bebê for tão fina que a fita dê duas voltas completas e a fivela bata na base plástica sem conseguir apertar, a solução mandatória é **abandonar o torniquete e aplicar Compressão Direta Contínua com Gaze Hemostática ou Wound Packing com a ponta do dedo polegar** [1, 3].
 
-
-![Figura 4 — Apresentação clínica de trauma abdominal aberto com evisceração antes da proteção úmida.](../imagens/Open-abdominal-wound-exposed.png)
-*Figura 4 — Apresentação clínica de trauma abdominal aberto com evisceração antes da proteção úmida. Crédito: Baedr-9439. Licença: CC0. Fonte: Wikimedia Commons.*
 
 #### Gestantes com Hemorragia Grave:
 - A volemia da mulher grávida no terceiro trimestre aumenta em até 50%. A perda de sangue afeta inicialmente o fluxo placentário antes de alterar a pressão da mãe.
@@ -276,7 +274,7 @@ Ao chegar a equipe de Suporte Avançado do SAMU 192 ou ao desembarcar na sala de
 
 1. **Colocar membro amputado diretamente sobre pedras de gelo:** A temperatura de zero grau congela a água intracelular das células vasculares, formando cristais de gelo que rasgam a membrana dos vasos e impedem que o cirurgião consiga suturar as artérias no microscópio [2, 4].
 2. **Lavar o coto de amputação com álcool, iodo ou sabão:** A aplicação de substâncias químicas em carne viva causa necrose celular química massiva, matando os tecidos que o cirurgião precisará utilizar para o fechamento cirúrgico [2, 4].
-3. **Não usar torniquete em criança por medo de lesão vascular:** As artérias infantis são mais elásticas e toleram o torniquete com extrema segurança. Deixar uma criança sangrar até a morte por preconceito contra o torniquete é erro grave e indesculpável [1, 3].
+3. **Adiar controle de hemorragia pediátrica:** não deixe sangramento grave sem controle por medo de agir. Aplique pressão direta, acione o resgate e use torniquete em extremidade somente se houver indicação clara, treinamento e dispositivo efetivo; não prometa segurança absoluta [1, 3].
 4. **Remover facas ou objetos empalados em áreas de difícil acesso:** Puxar um vergalhão cravado na nádega ou coxa drena a volemia imediatamente. O objeto deve ser imobilizado no lugar [2, 4].
 5. **Esquecer de aquecer o paciente com ferimentos múltiplos:** Em politraumatizados graves, a hipotermia se instala em menos de 10 minutos no asfalto. Mantenha a manta térmica aluminizada como prioridade absoluta paralela ao controle do sangramento [3, 5].
 
@@ -297,25 +295,20 @@ Ao chegar, Renata depara-se com duas vítimas graves caídas no solo:
 ### Aplicação da Gestão Estratégica de Situações Especiais USM:
 1. **Triagem Rápida e Comando de Cena:** Renata avalia as duas crianças em 5 segundos. As duas possuem hemorragias com risco de morte iminente. Ela grita para um comerciante que correu ao local: *"Chame o 192 e o 193 imediatamente! Diga que temos duas crianças com amputação e ferimento juncional grave por atropelamento!"*.
 2. **Atendimento Prioritário à Vítima 1 (Lucas - Amputação Pediátrica):**
-   - Renata retira o torniquete CAT Gen 7 da bolsa.
-   - Posiciona a fita na coxa esquerda de Lucas, 8 cm acima do coto de amputação.
-   - Puxa o velcro com força máxima: a fita ajusta-se perfeitamente à circunferência da coxa infantil.
-   - Gira a haste do molinete por duas voltas completas: o sangramento arterial estanca 100%. Trava no clipe e anota o horário ("12h12").
-   - Pede a uma professora da escola que chegou ao local para segurar o coto protegido com gaze estéril e cobrir Lucas com a manta térmica aluminizada da sua bolsa.
+   - Renata inicia pressão direta no coto, aciona o SAMU e verifica se o dispositivo disponível é adequado ao membro.
+   - Como possui treinamento específico e a hemorragia ameaça a vida, aplica torniquete no membro, reavalia se o sangramento foi controlado, registra o horário e mantém o dispositivo visível.
+   - Pede a uma professora que mantenha a proteção térmica e não permita que o dispositivo seja afrouxado.
 3. **Atendimento Imediato à Vítima 2 (Sofia - Ferimento Juncional em Virilha):**
-   - Renata desloca-se para Sofia aos 45 segundos do início do socorro.
-   - Identifica que a lesão na virilha é juncional (onde o torniquete não cabe).
-   - Introduz os dois polegares no interior da ferida da virilha, sentindo o feixe vascular femoral profundo contra a borda do osso ilíaco. A compressão digital estanca o fluxo no fundo da lesão.
-   - Com a mão livre, abre um pacote de gaze hemostática com quitosana (*Celox Z-Fold*) e alimenta a cavidade com a técnica "dedo sobre dedo", compactando a gaze até o fundo e formando um montículo externo firme.
-   - Descarrega o peso do tronco sobre a virilha de Sofia e mantém compressão contínua por 3 minutos ininterruptos.
-   - O sangramento é contido com sucesso. Aplica bandagem elástica cruzada em "oito" ao redor da bacia para estabilizar a pressão mecânica.
+   - Renata identifica lesão juncional e mantém pressão direta firme sobre a ferida enquanto aguarda atendimento avançado.
+   - Preenchimento de ferida só poderia ser feito por integrante treinado nessa técnica e conforme protocolo local; o caso não é instrução para introduzir dedos ou gaze profundamente em criança.
+   - A prioridade é controle externo possível, proteção térmica, vigilância e transporte urgente.
 4. **Preservação da Perna Amputada:**
    - Renata orienta o comerciante a recolher a perna decepada de Lucas.
    - O membro é envolvido em gazes estéreis limpas, colocado dentro de um saco plástico vedado e o saco é posicionado sobre uma bacia com gelo e água trazida da padaria.
 5. **Desfecho e Passagem de Caso:**
    - As viaturas do SAMU e do Corpo de Bombeiros chegam em 9 minutos.
    - Renata faz a passagem estruturada pelo protocolo MIST aos médicos socorristas.
-   - Lucas e Sofia são conduzidos ao centro cirúrgico do Hospital Universitário Infantil. Lucas foi submetido a reimplante microcirúrgico da perna com sucesso; Sofia teve a veia femoral reparada sem déficits. As duas crianças sobreviveram sem sequelas cerebrais graças à priorização técnica em múltiplos ferimentos pediátricos.
+   - A equipe de emergência assume o cuidado e define o tratamento cirúrgico. O caso demonstra prioridades de primeiros socorros e não permite prever reimplante, reparo vascular ou ausência de sequelas.
 
 ---
 
@@ -357,7 +350,7 @@ Ao chegar, Renata depara-se com duas vítimas graves caídas no solo:
 ## SEÇÃO 11 — O QUE VOCÊ PRECISA LEMBRAR
 
 - Crianças possuem volemia reduzida; perdas volêmicas pequenas já desencadeiam choque descompensado grave.
-- Torniquetes comerciais para adultos devem ser usados em crianças; se o membro for excessivamente fino, use compressão manual com gaze hemostática.
+- Em hemorragia pediátrica, inicie pressão direta e acione ajuda. Torniquete em extremidade é medida para ameaça à vida por pessoa treinada; se o dispositivo não funciona, mantenha pressão direta e transporte urgente.
 - No membro amputado, envolva em gaze estéril seca, lacre em saco plástico e coloque o saco em gelo com água (nunca no gelo direto).
 - Lesões em nádegas e períneo exigem preenchimento de ferida (*wound packing*) agressivo contra o osso ilíaco.
 - Em idosos e pacientes anticoagulados, utilize preferencialmente gazes com Quitosana pela independência da cascata de coagulação.
