@@ -414,11 +414,11 @@ export const IntegratedLessonPage: React.FC = () => {
                   </button>
                 </header>
 
-                <div className="flex-1 overflow-y-auto px-3 py-4 sm:px-8 sm:py-8">
-                  <div className={`mx-auto max-w-4xl rounded-xl border p-5 shadow-lg sm:p-12 ${
-                    theme === 'dark' ? 'border-slate-700 bg-slate-900 text-slate-100' : 'border-slate-200 bg-white text-slate-900'
+                <div className="min-h-0 flex-1 overflow-y-auto bg-slate-100/90 px-3 py-6 dark:bg-slate-950/85 sm:px-8 sm:py-10">
+                  <div className={`mx-auto max-w-5xl ${
+                    theme === 'dark' ? 'text-slate-100' : 'text-slate-900'
                   }`}>
-                    <div className="mb-5 flex justify-end">
+                    <div className="mb-5 flex justify-end px-1">
                       <TextHighlightToolbar />
                     </div>
                     {bookletMd ? (
