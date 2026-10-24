@@ -358,6 +358,15 @@ export const AdminDashboard: React.FC = () => {
   const [sentCohorts, setSentCohorts] = useState<Record<string, number>>({});
 
   const handleOpenCohortCertModal = (cohort: any) => {
+    // A prévia da turma deve carregar seus próprios responsáveis, não os da última turma editada.
+    setSelectedCertCohortId(cohort.id);
+    const courseTitle = courseOptions.find(course => course.id === cohort.course_id)?.title || '';
+    const description = (courseTitle + ' ' + (cohort.name || '')).toLocaleLowerCase('pt-BR');
+    const presetId = /stop.?the.?bleed/.test(description) ? 'stop-the-bleed'
+      : /lei lucas|escola/.test(description) ? 'lei-lucas'
+      : /academia|clube|sbv|dea/.test(description) ? 'sbv-dea-academias'
+      : 'aph-padrao';
+    handleApplyPreset(presetId);
     setActiveCertCohort(cohort);
     setCohortCertSide('front');
     const firstStudent = students.find(s => s.cohortId === cohort.id);
