@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Stop the Bleed · Vítimas</title>
+  <style>
+    :root{color-scheme:dark;font-family:Inter,ui-sans-serif,system-ui,sans-serif;background:#07111f;color:#e5edf7}
+    *{box-sizing:border-box}body{margin:0;background:radial-gradient(circle at 50% -10%,#17345a,#07111f 65%);min-height:100vh;padding:28px}
+    main{max-width:1180px;margin:auto}.eyebrow{color:#fb7185;font-size:.72rem;font-weight:800;letter-spacing:.16em;text-transform:uppercase}.intro{margin-bottom:22px}.intro h1{margin:.35rem 0 .45rem;font-size:clamp(1.7rem,4vw,2.8rem)}.intro p{margin:0;color:#9fb1c9;max-width:720px;line-height:1.55}
+    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(310px,1fr));gap:16px}.card{overflow:hidden;border:1px solid #263c59;border-radius:18px;background:#0e1c30;box-shadow:0 16px 40px #02081280}.scene{position:relative;aspect-ratio:16/9;overflow:hidden}.scene>img:first-child{width:100%;height:100%;display:block;object-fit:cover}.mask{position:absolute;transform:translate(-50%,-50%);width:24%;height:24%;object-fit:contain;filter:drop-shadow(0 0 14px #fb718588);pointer-events:none}.hotspot{position:absolute;transform:translate(-50%,-50%);width:12%;aspect-ratio:1;border-radius:999px;border:2px solid #fee2e2;background:#ef444455;box-shadow:0 0 26px #ef444499;cursor:pointer}.hotspot:focus-visible{outline:3px solid #fff;outline-offset:3px}.tag{position:absolute;left:10px;bottom:10px;padding:5px 9px;border-radius:999px;background:#07111fd9;color:#f8fafc;font-size:.7rem;font-weight:700}.body{padding:15px}.body h2{font-size:1rem;margin:0 0 6px}.body p{font-size:.82rem;color:#9fb1c9;min-height:38px;margin:0 0 13px;line-height:1.45}.button{border:1px solid #fb7185;background:#be123c;color:#fff;border-radius:10px;padding:9px 12px;font-weight:800;cursor:pointer}.button:hover{background:#e11d48}.context{font-size:.68rem;text-transform:uppercase;letter-spacing:.12em;color:#94a3b8;font-weight:800}
+    dialog{width:min(920px,calc(100vw - 32px));border:1px solid #405777;border-radius:18px;background:#0b1729;color:#e5edf7;padding:0;box-shadow:0 30px 100px #000b}.modal{padding:20px}.modal-head{display:flex;justify-content:space-between;gap:18px;align-items:flex-start}.modal-head h2{margin:5px 0 0}.close{border:1px solid #334b6c;background:transparent;color:#dbeafe;border-radius:9px;padding:7px 10px;cursor:pointer}.zoom{position:relative;margin-top:16px;aspect-ratio:4/3;overflow:hidden;border-radius:14px;background:#020812}.zoom img:first-child{position:absolute;width:300%;height:auto;max-width:none;left:50%;top:50%;transform:translate(-50%,-50%)}.zoom .mask{left:50%!important;top:50%!important;width:38%;height:38%}.note{margin:14px 0 0;color:#9fb1c9;line-height:1.55;font-size:.86rem}
+    @media (max-width:600px){body{padding:16px}.grid{grid-template-columns:1fr}}
+  </style>
+</head>
+<body>
+  <main>
+    <section class="intro"><div class="eyebrow">Stop the Bleed · vítimas</div><h1>Seis personagens para reconhecer a hemorragia</h1><p>Escolha uma vítima, observe a máscara de corte e abra o foco para conferir o padrão do sangramento. As cenas mostram apenas a vítima, sem outros personagens.</p></section>
+    <section id="cards" class="grid" aria-label="Vítimas do simulador"></section>
+  </main>
+  <dialog id="detail"><div class="modal"><div class="modal-head"><div><div class="eyebrow">Máscara de corte · foco ampliado</div><h2 id="detailTitle"></h2></div><button class="close" id="close" type="button">Fechar</button></div><div class="zoom"><img id="detailImage" alt="" /><img id="detailMask" class="mask" alt="Máscara ampliada" /></div><p id="detailText" class="note"></p></div></dialog>
+  <script>
+    const base='./';
+    const cases=[
+      {title:'Ciclista · coxa',context:'Rua',image:'stb-rua-ciclista-coxa.jpg',mask:'arterial.svg',x:63,y:75,kind:'Sangramento arterial',text:'Fluxo vermelho vivo e pulsátil. Aplique pressão direta e prepare um torniquete acima da lesão se a pressão não controlar o fluxo.'},
+      {title:'Pedestre · antebraço',context:'Rua',image:'stb-rua-vidro-antebraco.jpg',mask:'venous.svg',x:47,y:52,kind:'Sangramento venoso',text:'Fluxo contínuo, sem jatos. Faça pressão direta firme e contínua com gaze ou tecido limpo.'},
+      {title:'Trabalhador · virilha',context:'Rua',image:'stb-rua-juncao-virilha.jpg',mask:'junctional.svg',x:64,y:63,kind:'Sangramento de junção',text:'Ferida profunda em região onde o torniquete de extremidade não alcança. Mantenha pressão e prepare gaze para preencher.'},
+      {title:'Participante · braço',context:'Clube de tiro',image:'stb-clube-braco.jpg',mask:'arterial.svg',x:40,y:42,kind:'Sangramento arterial',text:'Acidente em estande seguro. Pressione a ferida e prepare o torniquete acima dela, sem cobrir articulações.'},
+      {title:'Participante · perna',context:'Clube de tiro',image:'stb-clube-perna.jpg',mask:'venous.svg',x:53,y:72,kind:'Sangramento venoso',text:'Corte na parte inferior da perna. Faça pressão direta firme e mantenha o membro imóvel.'},
+      {title:'Participante · axila',context:'Clube de tiro',image:'stb-clube-axila.jpg',mask:'junctional.svg',x:31,y:38,kind:'Sangramento de junção',text:'Ferida na transição entre tórax e braço. Mantenha pressão e preencha com gaze até o socorro.'}
+    ];
+    const cards=document.querySelector('#cards'); const detail=document.querySelector('#detail'); const close=document.querySelector('#close');
+    function card(c){const el=document.createElement('article');el.className='card';el.innerHTML=`<div class="scene"><img src="${base}${c.image}" alt="Vítima: ${c.title}"><img class="mask" src="${base}masks/${c.mask}" alt="Máscara educativa da lesão" style="left:${c.x}%;top:${c.y}%"><button class="hotspot" type="button" aria-label="Abrir ${c.kind} em ${c.title}" style="left:${c.x}%;top:${c.y}%"></button><span class="tag">${c.kind}</span></div><div class="body"><div class="context">${c.context}</div><h2>${c.title}</h2><p>${c.text}</p><button class="button" type="button">Abrir foco</button></div>`;el.querySelector('.hotspot').addEventListener('click',()=>open(c));el.querySelector('.button').addEventListener('click',()=>open(c));return el}
+    function open(c){document.querySelector('#detailTitle').textContent=c.kind+' · '+c.title;document.querySelector('#detailImage').src=base+c.image;document.querySelector('#detailImage').alt='Zoom da vítima '+c.title;document.querySelector('#detailMask').src=base+'masks/'+c.mask;document.querySelector('#detailText').textContent=c.text;detail.showModal()}
+    close.addEventListener('click',()=>detail.close());detail.addEventListener('click',e=>{if(e.target===detail)detail.close()});cases.forEach(c=>cards.appendChild(card(c)));
+  </script>
+</body>
+</html>
