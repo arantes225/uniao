@@ -1,4 +1,4 @@
-import React, { useEffect, useMemo, useState } from 'react';
+import React, { useEffect, useMemo, useRef, useState } from 'react';
 import { Highlighter, Eraser } from 'lucide-react';
 
 interface BookletRendererProps {
@@ -460,26 +460,139 @@ const splitBookletSections = (markdown: string): BookletSection[] => {
   });
 };
 
+
+interface BookletSubtopic {
+  heading: string | null;
+  markdown: string;
+}
+
+/** Split only direct Markdown h3 headings, never lines inside code fences. */
+const splitBookletSubtopics = (markdown: string): BookletSubtopic[] => {
+  const groups: Array<{ heading: string | null; lines: string[] }> = [{ heading: null, lines: [] }];
+  let fenced = false;
+  for (const line of markdown.replace(/\r\n/g, '\n').split('\n')) {
+    if (line.trim().startsWith(String.fromCharCode(96).repeat(3))) fenced = !fenced;
+    const match = !fenced && line.match(/^### (.+)$/);
+    if (match) groups.push({ heading: match[1], lines: [] });
+    else groups[groups.length - 1].lines.push(line);
+  }
+  return groups.filter(group => group.heading || group.lines.some(line => line.trim())).map(group => ({
+    heading: group.heading,
+    markdown: group.lines.join('\n'),
+  }));
+};
+
+const chapterTitle = (heading: string) =>
+  heading.replace(/^(?:SEÇÃO\s+)?\d{1,2}\s*(?:[.—-]\s*|\s+)/i, '').trim() || heading;
+
+/** Separate long thematic chapters into legible, independently framed lessons. */
+const BookletChapterBody: React.FC<{ markdown: string }> = ({ markdown }) => {
+  const topics = useMemo(() => splitBookletSubtopics(markdown), [markdown]);
+  const multipleTopics = topics.filter(topic => topic.heading).length >= 2;
+  if (!multipleTopics) {
+    return <div className="booklet-chapter-content min-w-0 px-6 py-7 sm:px-10 sm:py-10">{parseMarkdown(markdown)}</div>;
+  }
+  return (
+    <div className="min-w-0 px-5 py-7 sm:px-9 sm:py-10">
+      {topics.map((topic, index) =>
+        topic.heading ? (
+          <section
+            key={index}
+            aria-labelledby={slugify(topic.heading)}
+            className="booklet-subtopic my-6 rounded-2xl border border-slate-200/80 bg-slate-50/65 px-5 py-6 dark:border-slate-700/70 dark:bg-slate-800/30 sm:my-8 sm:px-7 sm:py-8"
+          >
+            <h3
+              id={slugify(topic.heading)}
+              className="scroll-mt-28 mb-5 border-b border-slate-200/90 pb-4 text-lg font-bold leading-snug text-slate-900 dark:border-slate-700 dark:text-slate-100 sm:text-xl"
+            >
+              {renderInline(topic.heading)}
+            </h3>
+            <div className="booklet-chapter-content min-w-0">{parseMarkdown(topic.markdown)}</div>
+          </section>
+        ) : (
+          <div key={index} className="booklet-chapter-content px-1 pb-3 sm:px-2">
+            {parseMarkdown(topic.markdown)}
+          </div>
+        ),
+      )}
+    </div>
+  );
+};
+
+/** Keep the cover quiet while retaining the full source's editorial metadata. */
+const BookletCover: React.FC<{ markdown: string }> = ({ markdown }) => {
+  const lines = markdown.split('\n');
+  const institution = lines.find(line => line.startsWith('# '))?.slice(2) || 'UNIÃO SERVIÇOS MÉDICOS';
+  const moduleLine = lines.find(line => /^\*\*M[ÓO]DULO\b/i.test(line) || /^\*\*M[óo]dulo:\*\*/i.test(line));
+  const subtitle = lines.find(line => line.startsWith('## '))?.slice(3);
+  const metadata = lines
+    .filter(line => line.trim() && !/^#{1,2} /.test(line) && !/^---+\s*$/.test(line) && line !== moduleLine)
+    .join('\n');
+
+  return (
+    <header className="overflow-hidden rounded-[28px] border border-teal-200/70 bg-gradient-to-br from-teal-50 via-white to-slate-50 px-6 py-8 dark:border-teal-900/60 dark:from-slate-900 dark:via-slate-900 dark:to-teal-950/40 sm:px-10 sm:py-10">
+      <span className="mb-4 inline-block rounded-full bg-teal-600/10 px-3 py-1.5 text-[11px] font-bold uppercase tracking-[0.15em] text-teal-700 dark:text-teal-300">
+        União • Biblioteca de primeiros socorros
+      </span>
+      <p className="text-xs font-semibold uppercase tracking-[0.11em] text-slate-500 dark:text-slate-400">{institution}</p>
+      <h1 className="mt-4 max-w-3xl text-2xl font-extrabold leading-tight tracking-tight text-slate-900 dark:text-white sm:text-3xl">
+        {moduleLine ? renderInline(moduleLine) : 'Apostila de formação'}
+      </h1>
+      {subtitle && <p className="mt-4 max-w-2xl text-sm leading-relaxed text-slate-600 dark:text-slate-400">{subtitle}</p>}
+      {metadata.trim() && (
+        <details className="group mt-6 border-t border-teal-200/60 pt-4 dark:border-teal-900/70">
+          <summary className="flex cursor-pointer list-none items-center justify-between gap-3 text-sm font-semibold text-teal-700 dark:text-teal-300 [&::-webkit-details-marker]:hidden">
+            <span>Ficha técnica, público-alvo e dados editoriais</span>
+            <span aria-hidden="true" className="transition-transform group-open:rotate-180">⌄</span>
+          </summary>
+          <div className="booklet-cover-metadata mt-5 border-t border-teal-100 pt-4 dark:border-slate-700">
+            {parseMarkdown(metadata)}
+          </div>
+        </details>
+      )}
+    </header>
+  );
+};
+
 /** Shared, chapter-based reading design for the Materials and Lesson views. */
 export const BookletRenderer: React.FC<BookletRendererProps> = React.memo(({ markdown }) => {
   const sections = useMemo(() => splitBookletSections(markdown), [markdown]);
+  const chapterSections = useMemo(() => sections.filter(section => section.kind === 'chapter'), [sections]);
+  const articleRef = useRef<HTMLElement>(null);
+  const jumpTo = (heading?: string | null) => {
+    if (!heading) return;
+    articleRef.current?.querySelector<HTMLElement>('#' + slugify(heading))?.scrollIntoView({ behavior: 'auto', block: 'start' });
+  };
 
   return (
-    <article className="mx-auto w-full max-w-4xl space-y-7 pb-6 sm:space-y-10">
+    <article ref={articleRef} className="mx-auto w-full max-w-4xl space-y-7 pb-6 sm:space-y-10">
+      {chapterSections.length > 0 && (
+        <nav aria-label="Navegação rápida entre capítulos" className="sticky top-0 z-20 -mx-1 rounded-2xl border border-slate-200/90 bg-white/95 px-4 py-3 shadow-sm backdrop-blur-md dark:border-slate-700 dark:bg-slate-900/95 sm:px-5">
+          <div className="mb-2 flex items-center justify-between gap-3">
+            <span className="text-xs font-bold uppercase tracking-[0.12em] text-slate-600 dark:text-slate-300">Navegar por capítulos</span>
+            <button type="button" onClick={() => articleRef.current?.scrollIntoView({ behavior: 'auto', block: 'start' })} className="text-xs font-semibold text-teal-700 hover:underline dark:text-teal-300">Voltar ao início</button>
+          </div>
+          <div className="flex gap-2 overflow-x-auto pb-1" role="group" aria-label="Selecionar capítulo">
+            {chapterSections.map((chapter, index) => (
+              <button
+                key={'nav-' + index}
+                type="button"
+                onClick={() => jumpTo(chapter.heading)}
+                title={chapter.heading ?? ''}
+                className="inline-flex max-w-[15rem] shrink-0 items-center gap-2 rounded-full border border-slate-200 bg-slate-50 px-3.5 py-2 text-left text-xs font-medium text-slate-700 transition-colors hover:border-teal-300 hover:bg-teal-50 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-teal-600 dark:border-slate-700 dark:bg-slate-800 dark:text-slate-200 dark:hover:border-teal-700 dark:hover:bg-teal-950/60"
+              >
+                <span className="font-extrabold text-teal-700 dark:text-teal-300">{(chapter.chapterNumber ?? String(index + 1)).padStart(2, '0')}</span>
+                <span className="truncate">{chapterTitle(chapter.heading ?? '')}</span>
+              </button>
+            ))}
+          </div>
+        </nav>
+      )}
       {sections.map((section, index) => {
         const headingId = section.heading ? slugify(section.heading) : undefined;
 
         if (section.kind === 'cover') {
-          return (
-            <header key={`cover-${index}`} className="overflow-hidden rounded-[28px] border border-teal-200/70 bg-gradient-to-br from-teal-50 via-white to-slate-50 px-6 py-8 sm:px-10 sm:py-10 dark:border-teal-900/60 dark:from-slate-900 dark:via-slate-900 dark:to-teal-950/40">
-              <span className="mb-5 inline-block rounded-full bg-teal-600/10 px-3 py-1.5 text-[11px] font-bold uppercase tracking-[0.15em] text-teal-700 dark:text-teal-300">
-                União • Material de estudo
-              </span>
-              <div className="booklet-masthead">
-                {parseMarkdown(section.markdown)}
-              </div>
-            </header>
-          );
+          return <BookletCover key={'cover-' + index} markdown={section.markdown} />;
         }
 
         if (section.kind === 'index') {
@@ -523,9 +636,7 @@ export const BookletRenderer: React.FC<BookletRendererProps> = React.memo(({ mar
                 {renderInline(section.heading ?? '')}
               </h2>
             </div>
-            <div className="booklet-chapter-content min-w-0 px-6 py-7 sm:px-10 sm:py-10">
-              {parseMarkdown(section.markdown)}
-            </div>
+            <BookletChapterBody markdown={section.markdown} />
           </section>
         );
       })}
