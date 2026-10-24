@@ -176,6 +176,10 @@ A segunda estação foca na conversão da compressão manual em estabilização 
 
 ### 5.3 Estação Prática 3: Preenchimento de Feridas Cavitárias (Wound Packing)
 
+![Treinamento de wound packing apenas em simulador e por orientação habilitada](./apostilas/imagens/usm-packing-somente-treinado.svg)
+*Figura complementar — Treinamento de wound packing apenas em simulador e por orientação habilitada. Ilustração original União Serviços Médicos (2026), baseada em AHA/Cruz Vermelha 2024; não reproduz imagens de terceiros.*
+
+
 Esta é a estação de maior exigência técnica e tática do programa de controle de hemorragias [1, 4]:
 - **Montagem da Estação:** Simuladores de ferida em bloco de silicone denso (*Wound Packing Trainers*) com cavidades profundas irregulares reproduzindo o trajeto de projéteis em virilhas e axilas, acoplados a tubos de fluido sob pressão.
 - **Roteiro da Habilidade:**

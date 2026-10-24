@@ -159,6 +159,10 @@ Desenvolvido pela Academia Americana de Pediatria (AAP), o **Triângulo de Avali
 ## SEÇÃO 5 — DESENVOLVIMENTO DOS SUBTEMAS
 
 ### 5.1 Convulsões Febris e Crises Convulsivas Pediátricas
+
+![Ações iniciais durante crise convulsiva e sinais para chamar emergência](./apostilas/imagens/usm-convulsao-primeiros-socorros.svg)
+*Figura complementar — Ações iniciais durante crise convulsiva e sinais para chamar emergência. Ilustração original União Serviços Médicos (2026), baseada em AHA/Cruz Vermelha 2024; não reproduz imagens de terceiros.*
+
 Quando uma criança apresentar movimentos involuntários espasmódicos e perda de consciência na sala de aula ou berçário [1, 2]:
 1. **Mantenha a calma e afaste o pânico:** A aparência da convulsão é assustadora, mas o pânico dos adultos ao redor só atrapalha o atendimento.
 2. **Amorteça o solo:** Coloque uma almofada, toalha dobrada ou sua própria mochila sob o crânio da criança para que os abalos não batam a cabeça no chão duro.

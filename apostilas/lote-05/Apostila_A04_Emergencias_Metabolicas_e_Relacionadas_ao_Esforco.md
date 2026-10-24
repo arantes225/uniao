@@ -200,6 +200,10 @@ Incapacidade do sistema cardiovascular de manter o débito cardíaco adequado pa
 
 ### 5.4 Hipertermia Grave e Intermação (*Exertional Heat Stroke*): Emergência Letal
 
+![Resposta imediata à suspeita de intermação durante exercício](./apostilas/imagens/usm-intermacao-resfriamento.svg)
+*Figura complementar — Resposta imediata à suspeita de intermação durante exercício. Ilustração original União Serviços Médicos (2026), baseada em AHA/Cruz Vermelha 2024; não reproduz imagens de terceiros.*
+
+
 A **Intermação por Esforço (*Exertional Heat Stroke - EHS*)** é uma emergência médica de altíssima letalidade caracterizada por colapso catastrófico da termorregulação corporal [2, 3]:
 
 ```

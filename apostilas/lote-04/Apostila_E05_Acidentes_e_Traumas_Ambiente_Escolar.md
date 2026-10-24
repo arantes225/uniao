@@ -187,35 +187,21 @@ Após uma pancada na cabeça, o educador deve aplicar a regra de observação cl
   5. Coloque uma compressa fria ou gelo protegido na testa ou na nuca para estimular a vasoconstrição reflexa [4, 5].
 
 ### 5.4 Lesões Dentárias Traumáticas e Avulsão Dentária
+
+![Proteção de dente permanente avulsionado e diferença em relação ao dente de leite](./apostilas/imagens/usm-dente-avulsionado.svg)
+*Figura complementar — Proteção de dente permanente avulsionado e diferença em relação ao dente de leite. Ilustração original União Serviços Médicos (2026), baseada em AHA/Cruz Vermelha 2024; não reproduz imagens de terceiros.*
+
 Colisões contra o chão ou contra a cabeça de outro colega frequentemente lesionam a arcada dentária frontal (dentes incisivos) [1, 2]:
 - **Diferença Vital: Dente de Leite versus Dente Permanente:**
   - *Dente de Leite (Decíduo — crianças até 5 ou 6 anos):* **NUNCA tente reimplantar um dente de leite no alvéolo da gengiva.** O reimplante do dente decíduo pode infectar e lesionar permanentemente o germe do dente permanente definitivo que está crescendo logo abaixo na gengiva. Apenas estanque o sangue com gaze úmida [2].
-  - *Dente Permanente (Definitivo — a partir de 6 a 7 anos):* Se o dente permanente sair inteiro com a raiz por traumatismo (**Avulsão Dentária**), trata-se de uma **emergência odontológica com janela de ouro de 60 minutos** para salvar a raiz [1, 2]!
+  - *Dente Permanente (Definitivo — a partir de 6 a 7 anos):* Se o dente permanente sair inteiro com a raiz por traumatismo (**Avulsão Dentária**), trata-se de uma **emergência odontológica: procure assistência profissional imediatamente, pois o tempo fora do alvéolo influencia o prognóstico [1, 2].
 
-```
-+---------------------------------------------------------------------------------+
-|                       PROTOCOLO DE SALVAMENTO DO DENTE PERMANENTE               |
-|                                                                                 |
-|  1. LOCALIZAR O DENTE NO CHÃO E SEGURAR PELA COROA:                             |
-|     - Pegue o dente EXCLUSIVAMENTE pela parte branca da coroa.                  |
-|     - JAMAIS toque, aperte ou esfregue a raiz amarelada com os dedos!           |
-|                                                                                 |
-|  2. LIMPEZA RÁPIDA E SUAVE:                                                     |
-|     - Se o dente estiver sujo de terra, passe-o sob jato suave de SORO          |
-|       FISIOLÓGICO ou LEITE FRIO por apenas 5 segundos.                          |
-|     - NÃO raspe, não esfregue e não passe sabão, álcool ou escova!              |
-|                                                                                 |
-|  3. ARMAZENAMENTO E MEIO DE TRANSPORTE LÍQUIDO:                                 |
-|     - Coloque o dente imediatamente em um copinho plástico contendo:            |
-|       * 1ª Opção: LEITE INTEGRAL FRIO (mantém as células da raiz vivas por 6h). |
-|       * 2ª Opção: SORO FISIOLÓGICO a 0,9%.                                      |
-|       * 3ª Opção: Saliva da própria criança (cuspir no copo) ou água limpa.    |
-|     - NUNCA transporte o dente embrulhado em guardanapo ou papel seco!          |
-|                                                                                 |
-|  4. TRANSPORTE URGENTE AO DENTISTA (LIMITE: 60 MINUTOS):                        |
-|     - Encaminhe a criança e o copinho ao consultório odontológico imediatamente.|
-+---------------------------------------------------------------------------------+
-```
+**Como proteger um dente permanente avulsionado — passos simples**
+
+1. Segure o dente apenas pela **coroa branca**, sem tocar ou esfregar a raiz.
+2. Se houver sujeira visível, faça uma lavagem breve e delicada com solução apropriada ou soro; não use sabão nem escova.
+3. Procure atendimento odontológico **imediatamente**. O reimplante precoce pode ser indicado para dente permanente; siga orientação profissional e não tente recolocar um dente de leite.
+4. Se não for possível reimplantar de imediato, prefira solução de conservação odontológica. Na ausência, leite ou saliva podem ser alternativas temporárias. **Não guarde o dente em água de torneira nem o deixe secar.**
 
 ### 5.5 Queimaduras Térmicas e Intoxicações no Perímetro Escolar
 - **Queimaduras Térmicas em Cantinas e Feiras de Ciências:** Resfrie imediatamente em água corrente fria por 10 a 15 minutos. Cubra com plástico filme limpo ou gaze úmida. Proibido pomadas e pastas de dente [1].
@@ -245,7 +231,7 @@ Nas aulas de educação física e treinos de futebol/vôlei:
 |---|---|---|---|
 | **Pancada na Cabeça (TCE)** | Vômitos em jato, sonolência anormal, pupila dilatada, perda de memória. | Ligar 192 pelo viva-voz; manter cabeça imóvel com as mãos. | **SAMU 192 com urgência máxima.** |
 | **Queda de Parquinho (> 1,5m)** | Dor forte nas costas ou pescoço, formigamento nos pés, incapacidade de mover membros. | Estabilizar a coluna cervical manualmente; não mover o corpo. | **Corpo de Bombeiros 193 / SAMU.** |
-| **Avulsão de Dente Permanente** | Dente definitivo arrancado inteiro da gengiva por impacto. | Guardar no leite frio; não tocar na raiz; estancar gengiva. | **Consultório Odontológico em < 60 min.** |
+| **Avulsão de Dente Permanente** | Dente definitivo arrancado inteiro da gengiva por impacto. | Guardar no leite frio; não tocar na raiz; estancar gengiva. | **atendimento odontológico imediato.** |
 | **Suspeita de Fratura em Braço** | Deformidade óssea evidente, dor aguda, inchaço rápido. | Fazer tala provisória pegando cotovelo e punho; gelo local. | **Pronto-Socorro Ortopédico (com os pais).** |
 | **Sangramento Nasal (Epistaxe)** | Sangramento contínuo por mais de 15 a 20 minutos de compressão firme. | Manter cabeça para a frente e pinçar narinas; avisar pais. | **Pronto-Atendimento Infantil.** |
 
