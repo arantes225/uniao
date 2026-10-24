@@ -138,6 +138,10 @@ A pressão física é definida pela fórmula $P = \frac{F}{A}$ (Pressão = Forç
 
 ### 5.1 Princípios Fisiomecânicos da Compressão Direta
 
+![Passos essenciais da compressão direta sem interrupções](./apostilas/imagens/usm-compressao-direta.svg)
+*Figura complementar — Passos essenciais da compressão direta sem interrupções. Ilustração original União Serviços Médicos (2026), baseada em AHA/Cruz Vermelha 2024; não reproduz imagens de terceiros.*
+
+
 A compressão direta manual consiste na aplicação de força mecânica externa contínua sobre a origem vascular do sangramento para interromper o extravasamento de sangue e permitir o tempo biológico necessário para a formação do trombo primário [1, 2]:
 - **Focalidade:** A pressão não deve ser distribuída aleatoriamente ao redor do membro, mas sim direcionada milimetricamente para a boca do vaso que está sangrando.
 - **Continuidade Ininterrupta:** A pressão não pode oscilar. Aliviar a compressão a cada 30 segundos "para conferir se já parou" quebra as pontes de fibrina microscópicas em formação e reinicia a perda volêmica.

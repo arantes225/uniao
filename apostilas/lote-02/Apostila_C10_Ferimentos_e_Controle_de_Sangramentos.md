@@ -211,6 +211,10 @@ A velocidade de intervenção baseia-se na identificação da dinâmica do sangr
 ```
 
 ### 5.4 A Técnica Padrão Ouro: Compressão Direta Contínua
+
+![Sequência de compressão manual contínua em ferida com sangramento grave](./apostilas/imagens/usm-compressao-direta.svg)
+*Figura complementar — Sequência de compressão manual contínua em ferida com sangramento grave. Ilustração original União Serviços Médicos (2026), baseada em AHA/Cruz Vermelha 2024; não reproduz imagens de terceiros.*
+
 A compressão manual direta sobre a ferida é a conduta universal inicial mais eficaz e recomendada pelas diretrizes mundiais (AHA, ILCOR, ACS) para a grande maioria das hemorragias [1, 4]:
 
 1. **Paramentação de Biossegurança:** Calce suas luvas de nitrila ou látex descartáveis e óculos de proteção antes de tocar no sangue da vítima.

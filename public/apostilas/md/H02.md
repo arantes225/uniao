@@ -204,6 +204,10 @@ A primeira regra inegociável de qualquer atendimento pré-hospitalar é a prese
 
 ### 5.4 Priorização Dinâmica de Medidas de Contenção de Sangramento
 
+![Primeira decisão diante de perda sanguínea intensa](./apostilas/imagens/usm-compressao-direta.svg)
+*Figura complementar — Primeira decisão diante de perda sanguínea intensa. Ilustração original União Serviços Médicos (2026), baseada em AHA/Cruz Vermelha 2024; não reproduz imagens de terceiros.*
+
+
 O operador de controle de sangramento deve categorizar visualmente a localização anatômica da ferida para escolher a ferramenta adequada em questão de segundos [1, 4]:
 
 ```

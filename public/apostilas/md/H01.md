@@ -190,6 +190,10 @@ O socorrista deve identificar a origem do sangramento em menos de 3 segundos de 
 
 ### 5.5 Reconhecimento da Perda Sanguínea Grave e Velocidade de Esvaziamento
 
+![Reconhecimento do sangramento ameaçador à vida e compressão imediata](./apostilas/imagens/usm-compressao-direta.svg)
+*Figura complementar — Reconhecimento do sangramento ameaçador à vida e compressão imediata. Ilustração original União Serviços Médicos (2026), baseada em AHA/Cruz Vermelha 2024; não reproduz imagens de terceiros.*
+
+
 No calor da ocorrência traumática, não é possível medir mililitros de sangue com recipientes graduados. O socorrista utiliza os **Indicadores Visuais de Gravidade do Programa STOP THE BLEED®** [1, 2]:
 
 
