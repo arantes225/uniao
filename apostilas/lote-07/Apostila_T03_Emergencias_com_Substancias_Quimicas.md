@@ -210,8 +210,8 @@ A inalação de compostos tóxicos apresenta alta letalidade devido à rápida a
 4. **Vítima Inconsciente:** Em caso de parada cardiorrespiratória associada a gases como cianeto ou organofosforados, **é proibida a ventilação boca a boca direta**; use exclusivamente bolsa-válvula-máscara (ambu) com filtro.
 
 
-![Figura 3 — Máscara respiratória facial inteira com filtro químico para ambientes contaminados.](../imagens/Full-face-respirator.jpg)
-*Figura 3 — Máscara respiratória facial inteira com filtro químico para ambientes contaminados. Crédito: Another-anon-artist-234. Licença: CC0. Fonte: Wikimedia Commons.*
+![Figura 3 — Respirador filtrante requer indicação específica conforme contaminante e concentração de oxigênio.](../imagens/Full-face-respirator.jpg)
+*Figura 3 — Respirador filtrante requer indicação específica conforme contaminante e concentração de oxigênio. Crédito: Another-anon-artist-234. Licença: CC0. Fonte: Wikimedia Commons.*
 
 ---
 
@@ -312,8 +312,8 @@ No serviço oftalmológico especializado, a avaliação com fluoresceína diagno
 > **5. Entregue a FDS Impressa ao SAMU:** Entregar a ficha de segurança com o nome exato e CAS do produto economiza tempo valioso da equipe médica no pronto-socorro.
 
 
-![Figura 6 — Dispositivo bolsa-válvula-máscara (ambu) para ventilação de resgate.](../imagens/Bag-valve-mask.jpg)
-*Figura 6 — Dispositivo bolsa-válvula-máscara (ambu) para ventilação de resgate. Crédito: Another-anon-artist-234. Licença: CC0. Fonte: Wikimedia Commons.*
+![Figura 6 — Equipamento de ventilação utilizado por profissionais capacitados, não para uso espontâneo de leigos.](../imagens/Bag-valve-mask.jpg)
+*Figura 6 — Equipamento de ventilação utilizado por profissionais capacitados, não para uso espontâneo de leigos. Crédito: Another-anon-artist-234. Licença: CC0. Fonte: Wikimedia Commons.*
 
 ---
 
