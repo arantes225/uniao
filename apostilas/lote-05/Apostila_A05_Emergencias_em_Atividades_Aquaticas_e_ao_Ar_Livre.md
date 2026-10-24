@@ -171,12 +171,12 @@ O aprisionamento em ralos de fundo de piscinas é um mecanismo devastador de afo
 
 ### 5.3 Resposta Inicial ao Afogamento: Cadeia de Sobrevivência e Ventilação
 
+![Posicionamento das mãos na metade inferior do esterno e postura correta nas compressões torácicas do adulto.](../imagens/usm-rcp-adulto-maos-ilustrado.svg)
+*Ilustração autoral USM — referência de compressões na RCP. No afogamento, as ventilações são especialmente importantes para pessoas treinadas; acione o resgate.*
+
+
 ![Esquema de resgate aquático a partir da borda por alcance de haste ou arremesso de boia com corda.](../imagens/usm-resgate-aquatico-alcance-arremesso.svg)
 *Ilustração autoral USM — segurança no alcance e arremesso de flutuação; nunca entrar na água sem preparo específico.*
-
-
-![Figura 4 — Posicionamento para compressões torácicas no adulto.](../imagens/Cardiopulmonary_Resuscitation_Adult.jpg)
-*Figura 4 — Posicionamento para compressões torácicas no adulto. Crédito: Illinois Waterway Visitor Center, US Army Corps of Engineers. Licença: Domínio público. Fonte: Wikimedia Commons.*
 
 
 ![Alcance, arremesso de flutuação e resposta segura após afogamento](../imagens/usm-resgate-aquatico-seguro.svg)
