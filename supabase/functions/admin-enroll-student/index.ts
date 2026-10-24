@@ -45,9 +45,18 @@ Deno.serve(async (request) => {
     .from('cohorts').select('id, max_students').eq('id', cohortId).maybeSingle();
   if (cohortError || !cohort) return json({ error: 'Turma não encontrada' }, 404);
 
-  const { data: users, error: usersError } = await admin.auth.admin.listUsers({ page: 1, perPage: 1000 });
-  if (usersError) return json({ error: 'Não foi possível consultar os usuários' }, 500);
-  const user = users.users.find((candidate) => candidate.email?.toLowerCase() === email) ?? null;
+  // O perfil é a fonte de associação entre o e-mail administrativo e a conta Auth.
+  // Evitamos listUsers: além de trazer todos os usuários, esse endpoint administrativo
+  // pode falhar por paginação/limite mesmo com uma sessão de admin válida.
+  const { data: profileMatch, error: profileLookupError } = await admin
+    .from('profiles')
+    .select('id, full_name, email, cpf')
+    .ilike('email', email)
+    .limit(1)
+    .maybeSingle();
+  if (profileLookupError) return json({ error: 'Não foi possível localizar a conta pelo e-mail' }, 500);
+
+  const user = profileMatch ? { id: profileMatch.id } : null;
 
   if (!user) {
     const { count: activeCount } = await admin
