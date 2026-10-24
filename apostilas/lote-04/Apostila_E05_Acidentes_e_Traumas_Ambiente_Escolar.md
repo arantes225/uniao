@@ -188,7 +188,7 @@ Após uma pancada na cabeça, o educador deve aplicar a regra de observação cl
 
 ### 5.4 Lesões Dentárias Traumáticas e Avulsão Dentária
 
-![Proteção de dente permanente avulsionado e diferença em relação ao dente de leite](./apostilas/imagens/usm-dente-avulsionado.svg)
+![Proteção de dente permanente avulsionado e diferença em relação ao dente de leite](../../public/apostilas/imagens/usm-dente-avulsionado.svg)
 *Figura complementar — Proteção de dente permanente avulsionado e diferença em relação ao dente de leite. Ilustração original União Serviços Médicos (2026), baseada em AHA/Cruz Vermelha 2024; não reproduz imagens de terceiros.*
 
 Colisões contra o chão ou contra a cabeça de outro colega frequentemente lesionam a arcada dentária frontal (dentes incisivos) [1, 2]:
