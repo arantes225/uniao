@@ -71,7 +71,7 @@ Pratique 2 minutos em manequim com avaliação de ritmo, profundidade, retorno d
 ## SEÇÃO 1 — EM 30 SEGUNDOS
 
 > **VISÃO RÁPIDA DE SOBREVIVÊNCIA**
-> 1. **Parada Cardiorrespiratória (PCR):** Cessação abrupta da atividade mecânica cardíaca e do fluxo sanguíneo sistêmico. A cada minuto transcorrido sem RCP de qualidade, a probabilidade de sobrevida da vítima cai de 7% a 10% [1].
+> 1. **Parada Cardiorrespiratória (PCR):** Cessação da atividade mecânica cardíaca efetiva e do fluxo sanguíneo sistêmico. A RCP e a desfibrilação precoces aumentam a chance de sobrevida; o efeito do tempo varia conforme causa, ritmo inicial e sistema de resposta, portanto não use um percentual único como previsão individual [1].
 > 2. **Critério diagnóstico simplificado para leigos:** Vítima inconsciente (não responde ao estímulo nos ombros) associada à ausência de respiração ou presença de respiração agônica (*gasping*). **Não perca tempo checando pulso carotídeo** [2].
 > 3. **Métrica padrão ouro das compressões torácicas:**
 >    - *Frequência:* 100 a 120 compressões por minuto (ritmo da música *"Stayin' Alive"*).
@@ -103,7 +103,7 @@ Ao concluir o estudo teórico e a prática deste módulo, o participante deverá
 
 A parada cardiorrespiratória (PCR) pode ocorrer em casa, na rua, na escola ou no trabalho. Nessa situação, a pessoa perde a capacidade de manter circulação suficiente e deixa de respirar normalmente. O socorro imediato envolve reconhecer a parada, chamar o serviço de emergência, iniciar RCP e utilizar o DEA quando disponível. Não é necessário conhecer uma estimativa nacional exata de casos para decidir agir [1, 6].
 
-Na imensa maioria dos casos em adultos (mais de 75%), a parada cardíaca súbita decorre de uma arritmia letal ventricular originada por isquemia miocárdica aguda (infarto agudo do miocárdio). Os ritmos colapsantes predominantes no primeiro minuto são a **Fibrilação Ventricular (FV)** e a **Taquicardia Ventricular sem Pulso (TVSP)** [1, 7].
+Em adultos, as causas de PCR são heterogêneas: podem ser cardíacas, respiratórias, traumáticas, tóxicas ou metabólicas. FV e TV sem pulso são ritmos chocáveis importantes, mas não devem ser presumidos pela aparência da vítima. Por isso, o DEA deve ser instalado assim que disponível e sua análise deve orientar a indicação de choque [1, 7].
 
 Na fibrilação ventricular, o músculo cardíaco não se contrai de forma coordenada; ele "treme" caoticamente a mais de 400 vezes por minuto, incapaz de ejetar um único mililitro de sangue para a circulação sistêmica. O débito cardíaco cai instantaneamente a zero. O indivíduo desaba inconsciente em segundos.
 
@@ -132,7 +132,7 @@ Mesmo quando executada com perfeição técnica milimétrica por socorristas de 
 ### 4.2 A Pressão de Perfusão Coronariana (PPC) e a Curva de Decaimento
 O miocárdio (músculo cardíaco) não recebe sangue durante a sístole; ele é perfundido exclusivamente durante a **diástole** (fase de relaxamento), impulsionado pela diferença entre a pressão aórtica diastólica e a pressão no átrio direito. Essa diferença é a chamada **Pressão de Perfusão Coronariana (PPC)** [7].
 
-Estudos hemodinâmicos demonstram que são necessárias de **10 a 15 compressões ininterruptas de alta qualidade** para que a PPC atinja o limiar mínimo de 15 a 20 mmHg necessário para nutrir o miocárdio e permitir o retorno da circulação espontânea (ROSC) [1, 7].
+Compressões de alta qualidade geram fluxo limitado, porém clinicamente relevante. Interrupções reduzem a perfusão obtida com as compressões; por isso, mantenha a frequência de 100–120/min, profundidade aproximada de 5 cm e evite exceder 6 cm, permitindo retorno completo do tórax e minimizando pausas [1, 7].
 
 ```
 +---------------------------------------------------------------------------------+
@@ -165,9 +165,6 @@ Ao final de cada compressão para baixo, o socorrista deve permitir que o tórax
 - Se o socorrista permanecer debruçado apoiando parte do seu peso sobre o esterno entre as compressões (*leaning*), o coração não se enche de sangue. E um coração que não se enche não tem sangue para ejetar na próxima compressão [1, 3].
 
 
-![Figura 2 — Posicionamento correto das mãos na metade inferior do esterno durante a RCP.](../imagens/Chest-compression-hand-placement.jpg)
-*Figura 2 — Posicionamento correto das mãos na metade inferior do esterno durante a RCP. Crédito: Another-anon-artist-234. Licença: CC0. Fonte: Wikimedia Commons.*
-
 ---
 
 ## SEÇÃO 5 — DESENVOLVIMENTO DOS SUBTEMAS
@@ -183,7 +180,7 @@ Para que a RCP tenha eficácia, o tempo de diagnóstico deve ser inferior a **10
 
 > [!WARNING]
 > **DIRETRIZ DA AHA: NÃO PERCA TEMPO PROCURANDO PULSO**
-> A checagem de pulso carotídeo é formally **eliminada** para socorristas leigos e não médicos. Avaliações científicas comprovaram que socorristas leigos e até profissionais sob estresse levam de 30 a 60 segundos procurando pulso, erram em 45% dos casos (acreditando sentir pulso em vítimas paradas ou não sentindo pulso em vítimas que tinham circulação fraca). A regra é taxativa: **Inconsciente + sem respiração normal = INICIAR RCP IMEDIATAMENTE** [1, 2].
+> Socorristas leigos não devem atrasar a RCP para procurar pulso. Profissionais treinados podem checá-lo por, no máximo, 10 segundos. Para leigos, a regra prática é: **vítima irresponsiva e sem respiração normal, ou apenas com gasping = acionar emergência e iniciar RCP** [1, 2].
 
 ### 5.2 A Cadeia de Sobrevivência Extra-Hospitalar
 A American Heart Association sintetiza as etapas indispensáveis para o sucesso na ressuscitação através dos seis elos da **Cadeia de Sobrevivência Extra-Hospitalar (PCREH)** [1]:
@@ -215,6 +212,14 @@ A American Heart Association sintetiza as etapas indispensáveis para o sucesso 
 Se qualquer um dos três primeiros elos comunitários falhar, a taxa de sobrevivência neurológica cai para menos de 5%.
 
 ### 5.3 Métrica e Qualidade das Compressões Torácicas
+
+![Esquema anatômico do tórax adulto com mãos sobrepostas na metade inferior do esterno e postura do socorrista.](../imagens/usm-rcp-adulto-maos-ilustrado.svg)
+*Ilustração autoral USM — apoio visual à RCP em adultos conforme diretrizes atuais. Treinamento prático em manequim é indispensável.*
+
+
+![Figura 2 — Posicionamento correto das mãos na metade inferior do esterno durante a RCP.](../imagens/Chest-compression-hand-placement.jpg)
+*Figura 2 — Posicionamento correto das mãos na metade inferior do esterno durante a RCP. Crédito: Another-anon-artist-234. Licença: CC0. Fonte: Wikimedia Commons.*
+
 Para que as compressões torácicas manuais gerem débito hemodinâmico mensurável, todos os cinco parâmetros abaixo devem ser cumpridos rigorosamente [1, 3]:
 
 
@@ -248,6 +253,14 @@ Para que as compressões torácicas manuais gerem débito hemodinâmico mensurá
    - Qualquer interrupção das manobras deve durar **menos de 10 segundos** (tempo estritamente necessário para o DEA analisar o ritmo ou aplicar choque elétrico) [1].
 
 ### 5.4 Ventilações Conforme o Nível de Treinamento
+
+![Figura 6 — Máscara de bolso (pocket mask) com válvula unidirecional para ventilação segura.](../imagens/Cpr-pocket-mask.jpg)
+*Figura 6 — Máscara de bolso (pocket mask) com válvula unidirecional para ventilação segura. Crédito: Another-anon-artist-234. Licença: CC0. Fonte: Wikimedia Commons.*
+
+
+![Figura 5 — Técnica de pinça E-C para vedação hermética da máscara facial na ventilação.](../imagens/Ec-grip.jpg)
+*Figura 5 — Técnica de pinça E-C para vedação hermética da máscara facial na ventilação. Crédito: Another-anon-artist-234. Licença: CC0. Fonte: Wikimedia Commons.*
+
 A conduta ventilatória no suporte básico foi modernizada pelas diretrizes internacionais para priorizar o fluxo cerebral e evitar a relutância de testemunhas em socorrer [1, 2]:
 
 #### Modalidade 1: RCP Apenas com as Mãos (*Hands-Only CPR*)
@@ -311,9 +324,6 @@ Nenhuma pessoa aprende a comprimir o tórax com eficácia apenas lendo manuais t
 | **Segurança Biológica** | Risco biológico nulo (sem contato oronasal) | Alta segurança desde que use Pocket Mask com filtro |
 
 
-![Figura 5 — Técnica de pinça E-C para vedação hermética da máscara facial na ventilação.](../imagens/Ec-grip.jpg)
-*Figura 5 — Técnica de pinça E-C para vedação hermética da máscara facial na ventilação. Crédito: Another-anon-artist-234. Licença: CC0. Fonte: Wikimedia Commons.*
-
 ---
 
 ## SEÇÃO 7 — ERROS FREQUENTES E CONDUTAS PROIBIDAS
@@ -344,9 +354,6 @@ Nenhuma pessoa aprende a comprimir o tórax com eficácia apenas lendo manuais t
 >    - *Por que não fazer:* O socorrista que flete os cotovelos utiliza a força muscular dos braços (tríceps e deltoides). Essa musculatura cansa-se em menos de 1 minuto, e as compressões tornam-se progressivamente mais rasas e lentas sem que o operador perceba.
 >    - *Conduta correta:* Trave os cotovelos em extensão completa e projete o peso do seu quadril e tronco para comprimir o esterno.
 
-
-![Figura 6 — Máscara de bolso (pocket mask) com válvula unidirecional para ventilação segura.](../imagens/Cpr-pocket-mask.jpg)
-*Figura 6 — Máscara de bolso (pocket mask) com válvula unidirecional para ventilação segura. Crédito: Another-anon-artist-234. Licença: CC0. Fonte: Wikimedia Commons.*
 
 ---
 
@@ -461,7 +468,7 @@ RECONHECIMENTO (0-10s)            CADEIA DE SOBREVIVÊNCIA             MÉTRICA 
 
 ### Referências Consultadas (Padrão ABNT NBR 6023)
 
-[1] AMERICAN HEART ASSOCIATION (AHA). **2020 American Heart Association Guidelines for Cardiopulmonary Resuscitation and Emergency Cardiovascular Care**. *Circulation*, Dallas, v. 142, n. 16, supl. 2, p. S366-S468, 2020. DOI: https://doi.org/10.1161/CIR.0000000000000916. [Com atualizações e alinhamentos científicos interinos ILCOR 2021-2025].
+[1] AMERICAN HEART ASSOCIATION (AHA). **Part 7: Adult Basic Life Support: 2025 American Heart Association Guidelines for Cardiopulmonary Resuscitation and Emergency Cardiovascular Care**. *Circulation*, 2025. Disponível em: https://cpr.heart.org/en/resuscitation-science/cpr-and-ecc-guidelines/adult-basic-life-support.
 
 [2] INTERNATIONAL LIAISON COMMITTEE ON RESUSCITATION (ILCOR). **Consensus on Science and Treatment Recommendations for Basic Life Support**. *Resuscitation*, v. 156, p. A1-A240, 2020. Disponível em: https://www.ilcor.org.
 
@@ -486,5 +493,5 @@ RECONHECIMENTO (0-10s)            CADEIA DE SOBREVIVÊNCIA             MÉTRICA 
 | **Status:** | `Aguardando Aprovação Científica` |
 | **Data da Redação:** | 19 de outubro de 2026 |
 | **Versão:** | 1.0.0 |
-| **Validação Científica por IA:** | Conforme diretrizes AHA/ILCOR/ERC e Diretriz SBC |
+| **Situação científica:** | Revisado editorialmente; requer homologação por profissional habilitado antes do uso instrucional. |
 | **Próxima Revisão:** | Outubro de 2027 |
