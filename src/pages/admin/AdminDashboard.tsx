@@ -1912,52 +1912,19 @@ export const AdminDashboard: React.FC = () => {
                       </button>
                     </div>
 
-                    {/* Reset de Posição da Assinatura */}
-                    {instructorSigUrl && (
-                      <button
-                        type="button"
-                        onClick={() => { setSigPosX(0); setSigPosY(0); setSigScale(1); }}
-                        className="px-3 py-1.5 rounded-xl bg-slate-900 border border-white/10 hover:border-teal-500/50 text-[11px] font-semibold text-slate-300 hover:text-white transition-all flex items-center gap-1"
-                        title="Restaurar posição original da assinatura"
-                      >
-                        <RotateCcw className="w-3.5 h-3.5 text-teal-400" />
-                        <span>Resetar Posição</span>
-                      </button>
-                    )}
+                    <button type="button" onClick={() => setCertificateZoom(1)} className="px-3 py-1.5 rounded-lg border border-white/10 text-xs text-slate-300 inline-flex items-center gap-1">
+                      <RotateCcw className="w-3 h-3" /> Ajustar
+                    </button>
+                    <button type="button" onClick={() => setCertificateZoom(value => Math.max(0.75, value - 0.25))} className="px-3 py-1.5 rounded-lg border border-white/10 text-xs text-slate-300">−</button>
+                    <button type="button" onClick={() => setCertificateZoom(value => Math.min(2, value + 0.25))} className="px-3 py-1.5 rounded-lg border border-white/10 text-xs text-slate-300">+</button>
+                    <button type="button" onClick={() => void printCertificate("certificate-integrated-page")} className="px-3 py-1.5 rounded-lg bg-teal-500 text-xs font-bold text-slate-950">Imprimir / Salvar PDF</button>
                   </div>
                 </div>
-
-                {/* Dica de Interatividade da Assinatura */}
-                {instructorSigUrl && previewSide === 'front' && (
-                  <div className="p-3 rounded-xl bg-teal-500/10 border border-teal-500/20 text-xs text-teal-300 flex items-center justify-between gap-3">
-                    <div className="flex items-center gap-2">
-                      <Move className="w-4 h-4 text-teal-400 animate-pulse shrink-0" />
-                      <span>
-                        <strong>Ajuste de Assinatura Ativo:</strong> Clique e arraste a assinatura sobre a linha do instrutor para posicionar no local exato desejado.
-                      </span>
-                    </div>
-                    <div className="flex items-center gap-2 shrink-0 font-mono text-[11px] text-slate-300">
-                      <span>X: {sigPosX}px</span>
-                      <span>Y: {sigPosY}px</span>
-                    </div>
-                  </div>
-                )}
 
                 {/* CERTIFICADO EM SI (DESIGN OFICIAL UNIÃO SERVIÇOS MÉDICOS — FORMATO A4 HORIZONTAL) */}
                 <div className="w-full flex items-center justify-center overflow-x-auto py-2">
                   <div 
                     className="w-full max-w-5xl mx-auto aspect-[1.414/1] bg-slate-950 text-slate-100 rounded-3xl p-6 sm:p-10 md:p-12 shadow-2xl border-4 border-teal-500/30 relative overflow-hidden font-sans select-none flex flex-col justify-between"
-                  onMouseMove={(e) => {
-                    if (isDraggingSig) {
-                      const dx = e.clientX - dragStart.x;
-                      const dy = e.clientY - dragStart.y;
-                      setSigPosX((prev) => prev + dx);
-                      setSigPosY((prev) => prev + dy);
-                      setDragStart({ x: e.clientX, y: e.clientY });
-                    }
-                  }}
-                  onMouseUp={() => setIsDraggingSig(false)}
-                  onMouseLeave={() => setIsDraggingSig(false)}
                 >
                   
                   {/* Marca d'água no Fundo */}
