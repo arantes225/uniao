@@ -179,7 +179,7 @@ Nunca aplique vinagre ou limão sobre queimaduras por álcalis, nem bicarbonato 
 
 ### 5.4. Contaminação Cutânea e Ocular: Chuveiros de Emergência e Lava-Olhos
 
-![Condutas de primeiros socorros diante de exposição química ocular](./apostilas/imagens/usm-lavagem-ocular.svg)
+![Condutas de primeiros socorros diante de exposição química ocular](../../public/apostilas/imagens/usm-lavagem-ocular.svg)
 *Figura complementar — Condutas de primeiros socorros diante de exposição química ocular. Ilustração original União Serviços Médicos (2026), baseada em AHA/Cruz Vermelha 2024; não reproduz imagens de terceiros.*
 
 
