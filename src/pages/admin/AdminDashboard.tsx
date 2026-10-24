@@ -2023,76 +2023,9 @@ export const AdminDashboard: React.FC = () => {
                           </p>
                         </div>
 
-                        {/* BLOCO DE ASSINATURAS DOS RESPONSÁVEIS (ESPAÇO FIXO + FONTE AUTO-AJUSTÁVEL) */}
-                        <div className="grid grid-cols-2 gap-8 pt-6 border-t border-white/10 mt-6">
-                          
-                          {/* INSTRUTOR RESPONSÁVEL COM ASSINATURA ARRASTÁVEL E ESPAÇO FIXO */}
-                          <div className="text-center flex flex-col items-center justify-end h-28 relative">
-                            {/* Assinatura Digitalizada Interativa / Movível */}
-                            {instructorSigUrl ? (
-                              <div
-                                style={{
-                                  transform: `translate(${sigPosX}px, ${sigPosY}px) scale(${sigScale})`,
-                                  cursor: isDraggingSig ? 'grabbing' : 'grab',
-                                }}
-                                onMouseDown={(e) => {
-                                  e.preventDefault();
-                                  setIsDraggingSig(true);
-                                  setDragStart({ x: e.clientX, y: e.clientY });
-                                }}
-                                className="absolute bottom-10 z-10 p-1 group select-none touch-none"
-                                title="Clique e arraste para posicionar a assinatura"
-                              >
-                                <img
-                                  src={instructorSigUrl}
-                                  alt="Assinatura do Instrutor"
-                                  className="h-16 max-w-[200px] object-contain drop-shadow-md pointer-events-none"
-                                  draggable={false}
-                                />
-                                <div className="opacity-0 group-hover:opacity-100 transition-opacity absolute -top-5 left-1/2 -translate-x-1/2 bg-slate-900 border border-teal-500 text-[9px] text-teal-300 px-1.5 py-0.5 rounded shadow pointer-events-none whitespace-nowrap flex items-center gap-1">
-                                  <Move className="w-2.5 h-2.5" />
-                                  <span>Arraste para mover</span>
-                                </div>
-                              </div>
-                            ) : (
-                              <div className="font-serif italic text-base sm:text-lg text-teal-300 font-bold pb-1 w-48 border-b border-white/20">
-                                {certInstructor}
-                              </div>
-                            )}
-
-                            {/* Linha de Assinatura Fixa */}
-                            {instructorSigUrl && (
-                              <div className="w-48 border-b border-white/20 mb-1" />
-                            )}
-
-                            {/* Espaço de Nome Fixo: tamanho da fonte se adapta automaticamente à quantidade de letras */}
-                            <div className="w-56 h-9 flex flex-col justify-center items-center overflow-hidden px-1">
-                              <div className={`${getInstructorFontSizeClass(certInstructor)} text-white font-bold truncate max-w-full`}>
-                                {certInstructor}
-                              </div>
-                              <div className="text-[10px] text-slate-400 truncate max-w-full mt-0.5">
-                                {certInstructorRole}
-                              </div>
-                            </div>
-                          </div>
-
-                          {/* DIRETOR TÉCNICO MÉDICO COM ESPAÇO FIXO E FONTE ADAPTATIVA */}
-                          <div className="text-center flex flex-col items-center justify-end h-28 relative">
-                            <div className="font-serif italic text-base sm:text-lg text-teal-300 font-bold pb-1 w-48 border-b border-white/20">
-                              {certDirector.split('-')[0]}
-                            </div>
-
-                            {/* Espaço de Nome Fixo do Diretor Técnico */}
-                            <div className="w-56 h-9 flex flex-col justify-center items-center overflow-hidden px-1">
-                              <div className={`${getInstructorFontSizeClass(certDirector)} text-white font-bold truncate max-w-full`}>
-                                {certDirector}
-                              </div>
-                              <div className="text-[10px] text-slate-400 truncate max-w-full mt-0.5">
-                                Diretoria Técnica • CRM-SP
-                              </div>
-                            </div>
-                          </div>
-
+                        {/* Assinaturas selecionadas no editor */}
+                        <div className="border-t border-white/10 mt-4 pt-2">
+                          <CertificateSignatures signers={certSigners} imageUrls={signerImageUrls} />
                         </div>
 
                         {/* Rodapé com Código de Autenticidade, Link de Verificação e QR Code */}
@@ -2857,23 +2790,9 @@ export const AdminDashboard: React.FC = () => {
                       </p>
                     </div>
 
-                    {/* Assinaturas dos Responsáveis */}
-                    <div className="grid grid-cols-2 gap-8 pt-6 border-t border-white/10 mt-6">
-                      <div className="text-center space-y-1">
-                        <div className="font-serif italic text-base sm:text-lg text-teal-300 font-bold border-b border-white/20 pb-1 w-48 mx-auto">
-                          {certInstructor}
-                        </div>
-                        <div className="text-xs font-bold text-white">{certInstructor}</div>
-                        <div className="text-[10px] text-slate-400">{certInstructorRole}</div>
-                      </div>
-
-                      <div className="text-center space-y-1">
-                        <div className="font-serif italic text-base sm:text-lg text-teal-300 font-bold border-b border-white/20 pb-1 w-48 mx-auto">
-                          {certDirector.split('-')[0]}
-                        </div>
-                        <div className="text-xs font-bold text-white">{certDirector}</div>
-                        <div className="text-[10px] text-slate-400">Diretoria Técnica • CRM-SP</div>
-                      </div>
+                    {/* Assinaturas selecionadas no editor */}
+                    <div className="border-t border-white/10 mt-4 pt-2">
+                      <CertificateSignatures signers={certSigners} imageUrls={signerImageUrls} />
                     </div>
 
                     {/* Rodapé com Código de Autenticidade, Link de Verificação e QR Code */}
@@ -3192,22 +3111,9 @@ export const AdminDashboard: React.FC = () => {
                           </p>
                         </div>
 
-                        {/* Assinaturas */}
-                        <div className="grid grid-cols-2 gap-4 pt-3 border-t border-white/10 text-center">
-                          <div>
-                            <div className="font-serif italic text-xs text-teal-300 font-bold pb-0.5 border-b border-white/20 w-32 mx-auto">
-                              {certInstructor}
-                            </div>
-                            <div className="text-[10px] font-bold text-white mt-0.5">{certInstructor}</div>
-                            <div className="text-[8px] text-slate-400">{certInstructorRole}</div>
-                          </div>
-                          <div>
-                            <div className="font-serif italic text-xs text-teal-300 font-bold pb-0.5 border-b border-white/20 w-32 mx-auto">
-                              {certDirector.split('-')[0]}
-                            </div>
-                            <div className="text-[10px] font-bold text-white mt-0.5">{certDirector}</div>
-                            <div className="text-[8px] text-slate-400">Diretoria Técnica • CRM-SP</div>
-                          </div>
+                        {/* Assinaturas selecionadas no editor */}
+                        <div className="border-t border-white/10 mt-2 pt-1">
+                          <CertificateSignatures signers={certSigners} imageUrls={signerImageUrls} compact />
                         </div>
 
                         {/* Rodapé */}
