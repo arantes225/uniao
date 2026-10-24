@@ -142,6 +142,9 @@ Para intervir com eficácia, a equipe de segurança corporativa deve compreender
 
 ### 5.1 Identificação e Classificação dos Riscos Ocupacionais (Físicos, Químicos, Biológicos, Ergonômicos e Acidentes)
 
+![Figura 3 — Respirador semifacial filtrante (PFF2/N95) para biossegurança respiratória.](../imagens/Filtering-half-mask-respirator.jpg)
+*Figura 3 — Respirador semifacial filtrante (PFF2/N95) para biossegurança respiratória. Crédito: Another-anon-artist-234. Licença: CC0. Fonte: Wikimedia Commons.*
+
 
 ![Figura 1 — Procedimento de bloqueio e etiquetagem de energias perigosas (LOTO).](../imagens/Lockout_Tagout_14853353063_.jpg)
 *Figura 1 — Procedimento de bloqueio e etiquetagem de energias perigosas (LOTO). Crédito: NAVFAC (U.S. Navy). Licença: Domínio público. Fonte: Wikimedia Commons.*
@@ -242,9 +245,6 @@ A montagem e manutenção de materiais de primeiros socorros na empresa deve ate
 
 ### 5.6 Responsabilidades Legais, Éticas e Limites de Atuação do Socorrista de Empresa
 
-
-![Figura 3 — Respirador semifacial filtrante (PFF2/N95) para biossegurança respiratória.](../imagens/Filtering-half-mask-respirator.jpg)
-*Figura 3 — Respirador semifacial filtrante (PFF2/N95) para biossegurança respiratória. Crédito: Another-anon-artist-234. Licença: CC0. Fonte: Wikimedia Commons.*
 
 O socorrista corporativo e a liderança empresarial respondem legalmente pelas suas condutas ou omissões no ambiente de trabalho [3, 6]:
 - **Omissão de Socorro (Art. 135 do Código Penal Brasileiro):** Deixar de prestar assistência, quando possível fazê-lo sem risco pessoal, à pessoa ferida ou em perigo iminente é crime punível com detenção e multa. Na empresa, os brigadistas designados possuem o dever formal de agir imediatamente.
@@ -389,6 +389,9 @@ O supervisor do setor aproximou-se e disse: *"Ainda bem que você deu sorte e n�
 ---
 
 ### Metadados Editoriais Institucionais
+
+> [!IMPORTANT]
+> **Limite científico:** segurança ocupacional começa por eliminar o risco de cena. Primeiros socorros não autorizam entrada em área insegura, remoção de vítima sem plano ou intervenção clínica além do treinamento.
 
 | CAMPO | ESPECIFICAÇÃO TÉCNICA |
 | :--- | :--- |
