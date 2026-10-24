@@ -115,13 +115,6 @@ export const LoginPage: React.FC = () => {
     }
 
     try {
-      const { data: lookup, error: lookupError } = await supabase.functions.invoke('student-access-lookup', {
-        body: { email: normalizedEmail },
-      });
-      if (lookupError || !lookup?.authorized) {
-        throw new Error('E-mail não autorizado pela administração.');
-      }
-
       const { error: accessError } = await supabase.auth.signInWithOtp({
         email: normalizedEmail,
         options: {
