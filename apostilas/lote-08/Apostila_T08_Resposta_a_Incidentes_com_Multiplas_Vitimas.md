@@ -153,6 +153,10 @@ Nenhum atendimento pode começar se a cena não oferecer segurança aos socorris
 
 ### 5.3. Organização Espacial da Cena e Posto de Comando
 
+![Organização de uma ocorrência com múltiplas vítimas, área de risco, corredor de acesso especializado e posto de comando.](../imagens/usm-cena-multiplas-vitimas.svg)
+*Ilustração autoral USM — esquema didático de segurança da cena. Leigos não devem realizar triagem formal nem entrar em área de risco sem treinamento e autorização.*
+
+
 O espaço físico do desastre deve ser dividido com precisão milimétrica para evitar a anarquia operacional:
 
 ```
@@ -170,9 +174,6 @@ O espaço físico do desastre deve ser dividido com precisão milimétrica para 
 └──────────────────┘    └──────────────────┘          └──────────────────┘
 ```
 
-
-![Figura 2 — Manobra de Rautek para extração rápida de vítima inconsciente em risco iminente.](../imagens/Rautek-maneuver.png)
-*Figura 2 — Manobra de Rautek para extração rápida de vítima inconsciente em risco iminente. Crédito: Baedr-9439. Licença: CC0. Fonte: Wikimedia Commons.*
 
 1. **Posto de Comando (PC):** Ponto único e claramente identificado (bandeira ou luz estroboscópica) onde fica o Comandante do Incidente (líder da brigada ou oficial dos Bombeiros), coordenando comunicações e recursos.
 2. **Posto Médico Avançado (PMA) / Área de Tratamento:** Área limpa e segura na Zona Fria dividida em 4 setores visuais com **lonas coloridas estendidas no chão**:
@@ -248,9 +249,6 @@ Durante a execução da triagem START, o socorrista não perde tempo imobilizand
 2. **Controle de hemorragia exanguinante em jato:** Aplicação de torniquete comercial ou compressão direta rápida com curativo de emergência.
 
 
-![Figura 3 — Tração da mandíbula (jaw thrust) para abertura de via aérea no trauma.](../imagens/Jaw_thrust.jpg)
-*Figura 3 — Tração da mandíbula (jaw thrust) para abertura de via aérea no trauma. Crédito: Department of the Army (EUA). Licença: Domínio público. Fonte: Wikimedia Commons.*
-
 ---
 
 ### 5.5. Comunicação Integrada e Apoio aos Serviços Públicos (SAMU 192 e Bombeiros 193)
@@ -291,10 +289,6 @@ A teoria sem treinamento sob estresse real é inútil em catástrofes:
 | **Não Atende a Comandos** | Inconsciente ou confuso; não aperta a mão. | **VERMELHO** | Estabilização cervical; proteção de via aérea; encaminhamento imediato. |
 | **Parâmetros Estáveis** | Respiração < 30, perfusão < 2s, atende comandos, mas não anda (fratura fechada). | **AMARELO** | Alocar na lona amarela; imobilização provisória; aguarda evacuação secundária. |
 
-
-![Figura 4 — Transporte de apoio por dois socorristas para remoção controlada da zona de risco.](../imagens/Two-person-carry.png)
-*Figura 4 — Transporte de apoio por dois socorristas para remoção controlada da zona de risco. Crédito: Baedr-9439. Licença: CC0. Fonte: Wikimedia Commons.*
-
 ---
 
 ## 7. ERROS FREQUENTES E CONDUTAS PROIBIDAS EM DESASTRES INDUSTRIAIS
@@ -322,9 +316,10 @@ A teoria sem treinamento sob estresse real é inútil em catástrofes:
 
 1. **Tentar Reanimar Paradas Cardíacas na Triagem:** É o erro mais comum e emocionalmente doloroso do socorrista inexperiente. Em um IMV, cada minuto gasto massageando um paciente em parada traumática representa a morte de outro trabalhador que só precisava de um torniquete.
 2. **Atender Primeiro Quem Mais Grita:** Pacientes que gritam e choram possuem vias aéreas pérvias e pulmões funcionando; são geralmente pacientes verdes ou amarelos com dor. As vítimas mais graves (vermelhas) costumam estar silenciosas, inconscientes ou com choque profundo e respiração débil.
-3. **Transporte Caótico em Veículos Particulares ("Scoop and Run" Descontrolado):** Colocar vítimas graves no banco de trás de picapes e carros particulares e correr para o hospital. Isso provoca paralisia por falta de imobilização cervical, mortes por choque no caminho e deságua dezenas de feridos graves na porta de um hospital local que entra em colapso, enquanto outros hospitais maiores da região ficam vazios.
+3. **Transporte Caótico em Veículos Particulares ("Scoop and Run" Descontrolado):** movimentar vítimas graves sem coordenação pode atrasar controle de hemorragia, comprometer via aérea e desorganizar a distribuição de recursos. Em incidente com múltiplas vítimas, siga comando de cena, regulação e transporte definido pelas equipes habilitadas; não atribua risco de paralisia a uma regra isolada de imobilização cervical.
 4. **Ausência de Triagem na Entrada do PMA:** Permitir que as vítimas resgatadas dos escombros sejam depositadas sem triagem nas lonas, misturando pacientes leves com graves e impedindo a identificação dos casos críticos.
 5. **Esquecer a Contenção de Trânsito Interno:** Deixar que ambulâncias e carros de bombeiros entrem no mesmo portão estreito da fábrica sem rota de saída circular estabelecida, gerando um bloqueio mecânico onde nenhuma ambulância consegue sair com as vítimas vermelhas.
+
 
 ---
 
@@ -337,10 +332,6 @@ A teoria sem treinamento sob estresse real é inútil em catástrofes:
 Em uma planta de processamento agroindustrial em Rio Verde/GO, a explosão de uma caldeira a vapor provocou a destruição da parede lateral do galpão de empacotamento e o desabamento de um mezanino metálico sobre o turno da tarde, deixando 16 operários soterrados e feridos sob ferragens e alvenaria em meio a vapor quente e poeira densa.
 
 O barulho da detonação ecoou por toda a fábrica. O técnico de segurança do trabalho e comandante da brigada de emergência Marcos (39 anos) correu para o setor e deparou-se com o cenário de destruição generalizada: escombros caídos, gritos de socorro, vapor sibilando e múltiplos trabalhadores ensanguentados no chão.
-
-
-![Figura 5 — Aplicação de torniquete tático em treinamento prático.](../imagens/Tourniquet_application.jpg)
-*Figura 5 — Aplicação de torniquete tático em treinamento prático. Crédito: U.S. Navy, MC2 Barry R. Hirayama. Licença: Domínio público. Fonte: Wikimedia Commons.*
 
 ### A Gestão Tática e Aplicação da Triagem START
 Marcos não se precipitou para dentro dos escombros. Atuando com frieza técnica:
@@ -356,6 +347,10 @@ Marcos não se precipitou para dentro dos escombros. Atuando com frieza técnica
    - As demais vítimas foram rapidamente triadas em menos de 8 minutos, totalizando: **7 Verdes, 3 Vermelhos, 5 Amarelos e 1 Preto**.
 5. **Transporte e Fluxo Hospitalar Integrado:** Ao chegarem as primeiras 4 ambulâncias do SAMU e 2 viaturas de resgate do Corpo de Bombeiros, Marcos apresentou o mapa de triagem ao médico regulador do SAMU: *"Temos 3 vítimas vermelhas estabilizadas com torniquete e vias aéreas na lona vermelha prontas para transporte imediato"*. As 3 vítimas vermelhas foram embarcadas nas primeiras viaturas com destino ao hospital de trauma regional. Em seguida, os bombeiros iniciaram a evacuação das vítimas amarelas.
 
+
+![Figura 5 — Aplicação de torniquete tático em treinamento prático.](../imagens/Tourniquet_application.jpg)
+*Figura 5 — Aplicação de torniquete tático em treinamento prático. Crédito: U.S. Navy, MC2 Barry R. Hirayama. Licença: Domínio público. Fonte: Wikimedia Commons.*
+
 ### Desfecho Clínico
 O operário que recebeu o torniquete arterial imediato na triagem chegou ao centro cirúrgico com pressão arterial estável, foi submetido a reparo vascular da artéria femoral e sobreviveu sem sequelas motoras. A triagem START permitiu que todas as 3 vítimas com risco de morte fossem transportadas na primeira meia hora do evento, sem nenhuma morte adicional no local. A auditoria técnica do Corpo de Bombeiros e do Ministério Público do Trabalho homologou o plano de resposta da empresa como padrão de excelência em gestão de crises e primeiros socorros industriais.
 
@@ -366,7 +361,7 @@ O operário que recebeu o torniquete arterial imediato na triagem chegou ao cent
 > [!TIP]
 > **1. Use a Voz para Limpar Metade da Cena:** O primeiro comando verbal (*"Quem consegue andar, venha até mim!"*) remove instantaneamente 50% a 70% dos ocupantes da cena do desastre. Ao retirar os feridos leves da confusão, você enxerga imediatamente quem realmente está morrendo no chão sem gastar um segundo de tempo.
 > 
-> **2. Dois Dedos na Mandíbula Decidem a Morte:** Se uma vítima caída não estiver respirando, posicione seus dedos indicadores nos ângulos da mandíbula e empurre a mandíbula para cima e para frente. Se a língua estava colada na garganta, ela vai soltar um suspiro profundo de alívio e voltar a respirar (vira Vermelho). Se não esboçar nenhuma respiração, é Preto: aceite o limite da situação e passe para o próximo vivo.
+> **2. Triagem não é diagnóstico individual:** em incidente com múltiplas vítimas, a classificação deve seguir o protocolo adotado pelo comando e por pessoal treinado. Não declare morte, nem deixe de iniciar medidas básicas, com base em uma única manobra de mandíbula. Proteja a via aérea quando possível, controle hemorragia ameaçadora e siga a orientação da equipe de resposta.
 > 
 > **3. Torniquete sem Frescura:** Em desastres com máquinas e explosões, não perca tempo tentando fazer curativos compressivos que vazam sangue em amputações. Aplique o torniquete comercial alto e apertado na raiz do membro imediatamente. O torniquete é a única ferramenta que salva a vida de uma vítima vermelha em 20 segundos na triagem.
 > 
