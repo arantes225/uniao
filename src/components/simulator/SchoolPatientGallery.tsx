@@ -13,8 +13,8 @@ const schoolPatients = [
     color: 'teal',
     poses: {
       sentada: {
-        open: '/simulador/personagens/escola-horizontal-v20261023/professora-sentada.png?v=face-awake-2',
-        closed: '/simulador/personagens/escola-horizontal-v20261023/blink/professora-sentada-olhos-fechados.png?v=face-awake-2',
+        open: '/simulador/personagens/escola-horizontal-v20261023/professora-sentada.png?v=face-awake-3',
+        closed: '/simulador/personagens/escola-horizontal-v20261023/blink/professora-sentada-olhos-fechados.png?v=face-awake-3',
         chest: { x: 49, y: 48, rx: 12, ry: 10 }, eyes: { left: { x: 48.7, y: 25.4 }, right: { x: 51.7, y: 25.7 }, rx: 2.5, ry: 2.4 }
       },
       deitada: {
