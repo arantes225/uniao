@@ -1,0 +1,484 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Antebraço · Estudo de sangramento</title>
+  <style>
+    :root { color-scheme:dark; font-family:system-ui,-apple-system,"Segoe UI",sans-serif; color:#edf2ee; background:#0a100e; }
+    * { box-sizing:border-box; }
+    body { margin:0; background:radial-gradient(ellipse at 80% 0%,#20382a66,transparent 60%),#0a100e; }
+    main { max-width:1320px; margin:auto; padding:32px 28px 24px; }
+    header { display:flex; align-items:flex-end; justify-content:space-between; gap:24px; margin-bottom:24px; }
+    .eyebrow { font-size:11px; font-weight:650; letter-spacing:.18em; color:#aec5ad; text-transform:uppercase; margin:0 0 10px; }
+    h1 { font-size:clamp(25px,3vw,39px); letter-spacing:-.045em; margin:0; font-weight:550; }
+    .intro { margin:9px 0 0; color:#a1ada5; font-size:14px; line-height:1.6; }
+    .case-id { border:1px solid #33463a; border-radius:6px; color:#bbc7bf; padding:9px 12px; font-size:11px; white-space:nowrap; letter-spacing:.12em; }
+    .viewer { background:#111b15; border:1px solid #334137; border-radius:16px; overflow:hidden; box-shadow:0 20px 60px #0005; }
+    .viewbar { display:flex; align-items:center; justify-content:space-between; padding:11px 14px; gap:12px; }
+    .viewbar strong { font-size:12px; font-weight:500; color:#c3d1c7; }
+    .switch { display:flex; flex-wrap:wrap; gap:3px; padding:3px; background:#080f0b; border:1px solid #2c3b31; border-radius:9px; }
+    button { font:inherit; cursor:pointer; border:1px solid #35473c; color:#d8e4dc; background:#18271e; padding:10px 15px; border-radius:7px; font-size:12px; font-weight:550; transition:background .15s; }
+    button:hover { background:#294132; }
+    button:focus-visible, input:focus-visible, a:focus-visible { outline:2px solid #c6eab2; outline-offset:3px; }
+    .switch button { border-color:transparent; background:transparent; padding:8px 12px; color:#9cafa2; }
+    .switch button[aria-pressed="true"] { background:#304937; color:#f0f6ed; }
+    .stage { position:relative; aspect-ratio:16/9; background:#131916; overflow:hidden; }
+    canvas { width:100%; height:100%; display:block; cursor:zoom-in; }
+    canvas.close-view { cursor:zoom-out; }
+    .stamp { pointer-events:none; position:absolute; top:18px; left:18px; color:#fff; text-shadow:0 1px 4px #000; font-size:10px; letter-spacing:.17em; text-transform:uppercase; }
+    .load { position:absolute; inset:0; display:grid; place-items:center; background:#152019; font-size:14px; color:#c8d5cb; padding:30px; text-align:center; }
+    .load[hidden] { display:none; }
+    .controls { display:flex; flex-wrap:wrap; align-items:center; gap:16px 24px; padding:18px; border-top:1px solid #344439; }
+    .control-label { display:block; color:#9aad9f; text-transform:uppercase; letter-spacing:.13em; font-size:9px; margin-bottom:8px; }
+    .intensity { min-width:160px; flex:1; max-width:240px; }
+    .range { display:flex; align-items:center; gap:12px; }
+    input[type="range"] { width:100%; accent-color:#c4d8a7; cursor:pointer; }
+    output { font-size:12px; font-variant-numeric:tabular-nums; color:#d8e4d9; min-width:31px; }
+    .actions { display:flex; align-self:flex-end; gap:7px; margin-left:auto; }
+    .actions button { min-width:92px; }
+    .treatment { padding:16px 18px; border-bottom:1px solid #344439; background:#14251b; }
+    .treatment-buttons { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:9px; }
+    .treatment-buttons button { text-align:left; padding:12px 14px; }
+    .treatment-buttons button strong { display:block; font-size:13px; font-weight:600; }
+    .treatment-buttons button small { display:block; color:#9fb4a5; margin-top:5px; font-size:11px; font-weight:400; }
+    .treatment-buttons button[aria-pressed="true"] { border-color:#a8c28f; background:#304b36; }
+    button:disabled { cursor:default; opacity:.65; }
+    .treatment-info { display:flex; gap:14px; justify-content:space-between; margin-top:10px; font-size:11px; color:#b5cbb9; line-height:1.5; }
+    .treatment-info span:last-child { color:#95aa9b; }
+    .clinical-note { font-size:11px; color:#91a698; margin-top:4px; line-height:1.6; }
+    .clinical-note a { color:#bdd2ba; }
+    .below { display:flex; justify-content:space-between; gap:20px; padding:15px 3px; font-size:12px; color:#94a89b; line-height:1.6; }
+    .below p { margin:0; }
+    .below a { color:#bbceb9; text-decoration:none; white-space:nowrap; }
+    .indicator { display:inline-block; width:6px; height:6px; border-radius:50%; background:#b6d6a2; margin-right:6px; vertical-align:1px; }
+    @media(max-width:700px) { main{padding:18px 12px;} header{display:block;} .case-id{display:none;} .viewbar{flex-wrap:wrap;} .viewbar strong{font-size:11px;} .controls{padding:13px;gap:17px;} .actions{margin-left:0;} .intensity{max-width:none;} .below{flex-direction:column;gap:8px;} .stamp{top:10px;left:10px;font-size:8px;} }
+    @media(max-width:1000px) { .treatment-buttons{grid-template-columns:repeat(2,minmax(0,1fr));} }
+    @media(max-width:600px) { .treatment{padding:12px;} .treatment-buttons{grid-template-columns:1fr;} .treatment-info{display:block;} .treatment-info span{display:block;} }
+  </style>
+</head>
+<body>
+<main>
+  <header>
+    <div><p class="eyebrow">Stop the Bleed · Prévia visual</p><h1>O sangramento, de perto.</h1><p class="intro">Ferimento no antebraço. Alterne o fluxo e observe o movimento sobre a pele.</p></div>
+    <span class="case-id">CASO 01 / RUA</span>
+  </header>
+  <section class="viewer" aria-label="Prévia do ferimento e do sangramento">
+    <div class="viewbar"><strong>Pedestre · acidente com vidro</strong><div class="switch" role="group" aria-label="Enquadramento"><button id="wide" type="button" aria-pressed="false">Cena inteira</button><button id="closeup" type="button" aria-pressed="true">Ferida de perto</button></div></div>
+    <div class="treatment">
+      <span class="control-label">Ações na cena</span>
+      <div class="treatment-buttons" role="group" aria-label="Aplicar materiais e compressão">
+        <button id="pack" type="button" aria-pressed="false" disabled><strong id="packLabel">Preencher com atadura</strong><small>Atadura de gaze em tira contínua</small></button>
+        <button id="bandage" type="button" aria-pressed="false" disabled><strong id="bandageLabel">Enfaixar</strong><small>Curativo por cima da ferida</small></button>
+        <button id="pressure" type="button" aria-pressed="false" disabled><strong id="pressureLabel">Comprimir manualmente</strong><small>Mão com luva pressionando o local</small></button>
+        <button id="tourniquet" type="button" aria-pressed="false" disabled><strong id="tourniquetLabel">Aplicar torniquete</strong><small id="tourniquetDetail">Cinta, haste e trava no braço</small></button>
+      </div>
+      <div class="treatment-info"><span id="treatmentStatus" role="status">Escolha uma ação para visualizar.</span><span>Reiniciar limpa a cena e todos os materiais.</span></div>
+    </div>
+    <div class="stage" id="stage">
+      <canvas id="scene" class="close-view" width="1600" height="900" role="img" aria-label="Vítima sentada em um ponto de ônibus, com ferimento e sangue animado no antebraço. Use os botões para ampliar e pausar."></canvas>
+      <span class="stamp" id="stamp">Antebraço / detalhe</span>
+      <div id="loading" class="load" role="status">Preparando a cena…</div>
+    </div>
+    <div class="controls">
+      <div><span class="control-label">Padrão do movimento</span><div class="switch" role="group" aria-label="Padrão visual do sangramento"><button id="continuous" type="button" aria-pressed="true">Escorrimento</button><button id="pulse" type="button" aria-pressed="false">Jato pulsátil</button></div></div>
+      <label class="intensity"><span class="control-label">Intensidade visual</span><span class="range"><input id="intensity" type="range" min="20" max="100" value="70" aria-label="Intensidade visual"><output id="amount" for="intensity">70%</output></span></label>
+      <div class="actions"><button id="pause" type="button" aria-pressed="false">Pausar</button><button id="reset" type="button">Reiniciar</button></div>
+    </div>
+  </section>
+  <div class="below"><p><span class="indicator"></span><span id="status" aria-live="polite">Escorrimento contínuo</span> · Clique na imagem para alternar a aproximação.</p><div style="display:flex;gap:16px"><a href="perna-realista.html">Próximo caso: Perna / Coxa →</a><a href="todos.html">Galeria de casos</a></div></div>
+  <details class="clinical-note"><summary>Sobre estas ações</summary><p>“Atadura” representa aqui uma tira de gaze para preenchimento, não uma atadura elástica. Em feridas profundas apropriadas, o material ocupa a cavidade desde a fonte do sangramento, mantendo pressão; depois do preenchimento, a compressão continua. Não é uma indicação para qualquer corte. <a href="https://www.stopthebleed.org/media/pkpnanvp/acs-stop-the-bleed-version-30-instructor-guide.pdf" target="_blank" rel="noopener noreferrer">Referência: ACS Stop the Bleed.</a></p><p>O torniquete é uma opção para hemorragia com risco de vida em braços ou pernas, sem exigir preenchimento prévio. Deve ficar entre a lesão e o coração, cerca de 5–7 cm acima da ferida e fora de articulações; quando essa posição alcançaria o cotovelo, deve ficar acima dele. Registra-se o horário; não se afrouxa nem se retira até o atendimento profissional. <a href="https://www.redcross.org/take-a-class/resources/articles/how-to-apply-a-tourniquet" target="_blank" rel="noopener noreferrer">Referência: Cruz Vermelha Americana.</a></p><p>Esta prévia demonstra materiais e movimentos. A velocidade das animações e a resposta visual do sangue não calculam eficácia clínica, pressão aplicada ou perda sanguínea.</p></details>
+</main>
+<script>
+(() => {
+  'use strict';
+  const $ = id => document.getElementById(id);
+  const canvas = $('scene'), ctx = canvas.getContext('2d', {alpha:false});
+  const photo = new Image(), handPhoto = new Image();
+  let handReady = false;
+  const W = 1200, H = 675;
+  // Adapted from the supplied Gemini ellipse; coordinates calibrated to this photo.
+  const ferida = { x:836, y:348, raioX:22, raioY:2.7, rotacao:Math.PI/6 };
+  const state = { mode:'continuous', strength:.7, time:0, paused:false, ready:false, close:true };
+  const treatment = {pack:0,bandage:0,hand:0,tourniquet:0,packTarget:false,bandageTarget:false,handTarget:false,tourniquetTarget:false,tourniquetTime:null,soak:0};
+  let flow = 1, filmTime = 0;
+  const reducedMotion = matchMedia('(prefers-reduced-motion: reduce)');
+  state.paused = reducedMotion.matches;
+  let raf = 0, previous = null, accumulator = 0, emission = 0, dripClock = 0;
+  let seed = 7043;
+  const random = () => { seed = (1664525*seed+1013904223)>>>0; return seed/4294967296; };
+  const clamp = (n,a,b) => Math.max(a,Math.min(b,n));
+  const smooth = (a,b,n) => { const v=clamp((n-a)/(b-a),0,1); return v*v*(3-2*v); };
+  let drops = [], splashes = [];
+  const surface = new Path2D('M778 281 C798 286 823 290 835 310 C851 338 863 369 878 399 C886 414 908 425 909 443 C909 462 883 487 866 477 C849 468 847 440 839 418 C820 392 808 367 797 340 C784 312 779 294 778 281 Z');
+  // Skin above the elbow, calibrated independently from the forearm wound mask.
+  const upperArm = new Path2D('M765 232 C766 254 774 276 778 294 C782 311 789 326 797 340 L845 340 C840 316 836 294 830 271 C826 251 824 238 822 226 Z');
+  const tqSite = {x:801,y:263,angle:-.28};
+  const rivulets = [
+    {p:[[839,350],[840,359],[845,373],[850,387],[855,406],[868,427],[879,444],[885,466]],width:1.5,delay:0},
+    {p:[[847,355],[850,365],[854,381],[861,396],[867,413],[881,435],[892,454]],width:.72,delay:1.2},
+    {p:[[825,343],[826,352],[830,367],[836,382],[839,395]],width:.5,delay:2.6},
+    {p:[[840,359],[838,370],[839,380],[845,391]],width:.26,delay:3.8}
+  ];
+  const woundLayer=document.createElement('canvas'); woundLayer.width=W*2; woundLayer.height=H*2;
+  const woundCtx=woundLayer.getContext('2d'); woundCtx.scale(2,2);
+  const stains=[];
+  for(let i=0;i<135;i++) stains.push({x:random()*49-24.5,y:(random()+random()-1)*15,r:.1+random()*.75,a:.04+random()*.16});
+  const cutTop=[],cutBottom=[];
+  for(let i=0;i<=44;i++){const x=i-22,taper=Math.pow(Math.max(0,1-(x/22)**2),.65);cutTop.push([x,-taper*(2.1+random()*.75)+Math.sin(i*1.9)*.25*taper]);cutBottom.push([x,taper*(1.45+random()*.9)+Math.sin(i*1.6)*.3*taper]);}
+  function ellipse(c,x,y,rx,ry,angle=0) { c.beginPath(); c.ellipse(x,y,rx,ry,angle,0,Math.PI*2); }
+  function cutPath(c,scale=1) {
+    c.beginPath();c.moveTo(-22*scale,0);
+    for(const [x,y] of cutTop)c.lineTo(x*scale,y*scale);
+    for(let i=cutBottom.length-1;i>=0;i--)c.lineTo(cutBottom[i][0]*scale,cutBottom[i][1]*scale);
+    c.closePath();
+  }
+  function desenharFerida(c) {
+    c.save(); c.translate(ferida.x,ferida.y);c.rotate(ferida.rotacao);
+    // Fine translucent staining retains the photographed pores underneath.
+    let halo=c.createRadialGradient(0,0,2,0,0,28);
+    halo.addColorStop(0,'#813b2b31');halo.addColorStop(.5,'#8c3d2826');halo.addColorStop(1,'#7d281c00');
+    c.save();c.scale(1,.38);c.fillStyle=halo;ellipse(c,0,0,30,30);c.fill();c.restore();
+    for(const s of stains){c.fillStyle=`rgba(93,22,13,${s.a})`;ellipse(c,s.x,s.y,s.r,s.r*.5);c.fill();}
+    c.shadowColor='#47191345';c.shadowBlur=1.1;c.shadowOffsetY=.25;
+    c.fillStyle='#76312499';cutPath(c,1.06);c.fill();c.shadowColor='transparent';
+    let rim=c.createLinearGradient(0,-4,0,4);rim.addColorStop(0,'#bd897466');rim.addColorStop(.35,'#a0523c99');rim.addColorStop(.6,'#68221999');rim.addColorStop(1,'#cc958366');
+    c.strokeStyle=rim;c.lineWidth=.65;cutPath(c);c.stroke();
+    // Irregular edges derived from the Gemini ellipse, kept narrow against the skin.
+    c.fillStyle='#4f100ccf';cutPath(c,.97);c.fill();
+    c.save();cutPath(c,.97);c.clip();
+    const blood=c.createLinearGradient(0,-3,0,3);blood.addColorStop(0,'#521c13ed');blood.addColorStop(.40,'#320d0ae8');blood.addColorStop(.75,'#6e1f14e0');blood.addColorStop(1,'#94523acc');
+    c.fillStyle=blood;c.fillRect(-23,-7,46,14);
+    for(let i=0;i<125;i++){c.fillStyle=i%3?'#20080428':'#bf705024';ellipse(c,random()*43-21,random()*6-3,.12+random()*.4,.1+random()*.2);c.fill();}
+    c.strokeStyle='#d2a48a44';c.lineWidth=.25;c.beginPath();c.moveTo(-9,1.3);c.lineTo(-7,1.5);c.moveTo(5,1.6);c.lineTo(7,1.1);c.stroke();c.restore();
+    c.strokeStyle='#c28c7140';c.lineWidth=.35;c.beginPath();c.moveTo(-19,-1.1);c.lineTo(-16,-1.8);c.moveTo(-8,-2.1);c.lineTo(-6,-2.4);c.stroke();
+    c.restore();
+  }
+  function sample(r,t) {
+    const f=clamp(t,0,1)*(r.p.length-1),i=Math.min(r.p.length-2,Math.floor(f)),u=f-i;
+    const a=r.p[Math.max(0,i-1)],b=r.p[i],c=r.p[i+1],d=r.p[Math.min(r.p.length-1,i+2)];
+    const k=(j)=>.5*((2*b[j])+(-a[j]+c[j])*u+(2*a[j]-5*b[j]+4*c[j]-d[j])*u*u+(-a[j]+3*b[j]-3*c[j]+d[j])*u*u*u);
+    return {x:k(0),y:k(1)};
+  }
+  function film(c,r,t,width) {
+    const end=clamp((t-r.delay)/7,0,1);if(end<=0)return;
+    const left=[],right=[],n=Math.ceil(120*end);
+    for(let i=0;i<=n;i++){
+      const p=i/n*end,v=sample(r,p),next=sample(r,Math.min(1,p+.006));
+      let dx=next.x-v.x,dy=next.y-v.y,len=Math.hypot(dx,dy)||1;
+      const wave=.85+.24*Math.sin(p*39+r.delay)+.12*Math.sin(p*137+1.1)+.08*Math.sin(p*251);
+      const front=.5+.5*smooth(0,.04,end-p);
+      const bolus=Math.exp(-Math.pow((p-((t*.12+r.delay*.1)%1))/.045,2));
+      const w=width*wave*front*(1-.32*p)*(1+.2*bolus);
+      left.push([v.x-dy/len*w,v.y+dx/len*w]);right.push([v.x+dy/len*w,v.y-dx/len*w]);
+    }
+    c.beginPath();c.moveTo(...left[0]);for(const p of left)c.lineTo(...p);for(const p of right.reverse())c.lineTo(...p);c.closePath();
+    const g=c.createLinearGradient(r.p[0][0]-6,0,r.p[0][0]+40,0);g.addColorStop(0,'#773528bf');g.addColorStop(.30,'#831f16d9');g.addColorStop(.62,'#a23521b8');g.addColorStop(1,'#60170fb0');
+    c.save();c.globalCompositeOperation='multiply';c.fillStyle=g;c.fill();c.strokeStyle='#7a2c1e32';c.lineWidth=.65;c.stroke();c.restore();
+    // Broken, short reflections replace the long white outlines of the old overlay.
+    c.save();c.clip();
+    for(let i=0;i<n;i++){
+      const p=i/n*end,v=sample(r,p),alpha=.07+.07*Math.sin(p*167);
+      c.fillStyle=`rgba(39,7,3,${alpha})`;ellipse(c,v.x,v.y,.25+width*.25,.3);c.fill();
+      if(i%9===0){c.fillStyle='#efba8c28';ellipse(c,v.x-width*.25,v.y,.18,.4,-.3);c.fill();}
+    }
+    c.restore();
+    for(let k=0;k<2;k++){
+      const u=(t*.075+k*.29+r.delay*.1)%1;if(u>end)continue;const p=sample(r,u);
+      c.fillStyle='#e5bd9e38';ellipse(c,p.x-width*.3,p.y,.18,.55,-.33);c.fill();
+    }
+    const tip=sample(r,end),size=width*(end===1?.45+.35*dripClock:.8);
+    c.fillStyle='#65180dcc';ellipse(c,tip.x,tip.y,size*.7,size*1.15,-.25);c.fill();
+    c.fillStyle='#edc4a637';ellipse(c,tip.x-.25,tip.y-.35,.16,.25);c.fill();
+  }
+  function drawPool(c) {
+    for(const s of splashes){c.fillStyle=`rgba(85,12,9,${s.a})`;ellipse(c,s.x,s.y,s.rx,s.ry,s.rot);c.fill();if(s.rx>2){c.strokeStyle='#d5845c24';c.lineWidth=.5;c.stroke();}}
+  }
+  function bloodBead(c,x,y,r,vx,vy,opacity=1) {
+    c.save();c.translate(x,y);c.rotate(Math.atan2(vy,vx)-Math.PI/2);c.globalAlpha=opacity;
+    const stretch=1+Math.min(1.7,Math.hypot(vx,vy)/170);
+    const g=c.createRadialGradient(-r*.27,-r*.2,.03,0,0,r*1.4);g.addColorStop(0,'#953b23');g.addColorStop(.45,'#711b10');g.addColorStop(1,'#4e1009');
+    c.fillStyle=g;ellipse(c,0,0,r,r*stretch);c.fill();c.fillStyle='#e6baa02e';ellipse(c,-r*.28,-r*.35,r*.15,r*.23);c.fill();c.restore();
+  }
+  function wovenCloth(c,x,y,w,h) {
+    const g=c.createLinearGradient(x,y,x+w,y+h);
+    g.addColorStop(0,'#dddccf');g.addColorStop(.38,'#f1eee4');g.addColorStop(.72,'#e5e1d4');g.addColorStop(1,'#c4c3b8');
+    c.fillStyle=g;c.fillRect(x,y,w,h);
+    c.lineWidth=.17;
+    c.strokeStyle='#8b8e7e70';c.beginPath();
+    for(let i=x;i<x+w;i+=.9){c.moveTo(i,y);c.lineTo(i+.3,y+h);}c.stroke();
+    c.strokeStyle='#ffffff94';c.beginPath();
+    for(let j=y;j<y+h;j+=.8){c.moveTo(x,j);c.lineTo(x+w,j+.2);}c.stroke();
+  }
+  function clothStrip(c,points,width,travel=0) {
+    const normals=points.map((v,i)=>{
+      const next=points[Math.min(points.length-1,i+1)],prev=points[Math.max(0,i-1)];
+      const dx=next.x-prev.x,dy=next.y-prev.y,len=Math.hypot(dx,dy)||1;
+      return {x:-dy/len,y:dx/len};
+    });
+    const edge=(i,side)=>{
+      const v=points[i],n=normals[i],w=width*(.46+.05*Math.sin(i*.35+travel));
+      return [v.x+n.x*w*side,v.y+n.y*w*side];
+    };
+    c.save();c.lineJoin='round';c.lineCap='round';
+    c.beginPath();c.moveTo(...edge(0,-1));
+    for(let i=1;i<points.length;i++)c.lineTo(...edge(i,-1));
+    for(let i=points.length-1;i>=0;i--)c.lineTo(...edge(i,1));c.closePath();
+    c.shadowColor='#26231855';c.shadowBlur=.8;c.shadowOffsetY=.65;c.fillStyle='#e6e1d3';c.fill();c.shadowColor='transparent';c.clip();
+    // Longitudinal fibres stay continuous. Cross-weave travels toward the cavity.
+    for(let s=-4;s<=4;s++){
+      c.strokeStyle=s<0?'#fffdf1b5':'#9c9b8666';c.lineWidth=.23;c.beginPath();
+      points.forEach((v,i)=>{const n=normals[i],x=v.x+n.x*s*width/9,y=v.y+n.y*s*width/9;i?c.lineTo(x,y):c.moveTo(x,y);});c.stroke();
+    }
+    c.strokeStyle='#777d6759';c.lineWidth=.2;
+    const phase=travel%1;
+    for(let i=0;i<points.length-1;i++){
+      const a=points[i],b=points[i+1],n=normals[i],x=a.x+(b.x-a.x)*phase,y=a.y+(b.y-a.y)*phase;
+      c.beginPath();c.moveTo(x-n.x*width/2,y-n.y*width/2);c.lineTo(x+n.x*width/2,y+n.y*width/2);c.stroke();
+    }
+    c.restore();
+  }
+  function drawPacking(c) {
+    const p=treatment.pack;if(p<=0)return;
+    c.save();c.translate(ferida.x,ferida.y);c.rotate(ferida.rotacao);
+    c.save();cutPath(c,.96);c.clip();
+    // Successive folds accumulate from the recessed base to the wound opening.
+    // Every fold remains in place when the next length of the same strip is fed in.
+    for(let layer=0;layer<3;layer++){
+      const filled=clamp(p*3-layer,0,1);if(!filled)continue;
+      const extent=21*filled,points=[];
+      for(let i=0;i<=80;i++){
+        const x=-extent+i/80*extent*2;
+        points.push({x,y:1.8-layer*.8+Math.sin(x*1.4+layer*2)*1.4});
+      }
+      c.globalAlpha=.55+layer*.22;clothStrip(c,points,2.1+layer*.25);
+    }
+    c.globalAlpha=1;c.globalCompositeOperation='multiply';
+    const stain=c.createRadialGradient(3,.7,.2,3,.7,15);
+    stain.addColorStop(0,`rgba(122,35,25,${.3+Math.min(.32,treatment.soak*.012)})`);stain.addColorStop(1,'#87291e00');
+    c.fillStyle=stain;c.fillRect(-23,-5,46,10);c.restore();
+    if(p<1){
+      const remaining=1-smooth(.80,1,p),extent=3+Math.min(14,p*18);
+      const tip={x:Math.sin(p*Math.PI*12)*extent,y:.8};
+      const source={x:tip.x+104*remaining,y:tip.y-64*remaining};
+      const points=[];
+      for(let i=0;i<=100;i++){
+        const u=i/100,v=1-u;
+        // A taut strip curves down into the cavity at its leading end.
+        points.push({x:v*v*v*source.x+3*v*v*u*(source.x-28*remaining)+3*v*u*u*(tip.x+12*remaining)+u*u*u*tip.x,
+          y:v*v*v*source.y+3*v*v*u*(source.y+8*remaining)+3*v*u*u*(tip.y-12*remaining)+u*u*u*tip.y});
+      }
+      clothStrip(c,points,4.2,p*96);
+      // The near lip hides the tip, making insertion read as depth rather than a patch.
+      c.strokeStyle='#713727d9';c.lineWidth=.65;c.beginPath();c.moveTo(tip.x-2,2);c.quadraticCurveTo(tip.x,2.6,tip.x+2,2);c.stroke();
+    }
+    c.restore();
+  }
+  function drawBandage(c) {
+    const progress=treatment.bandage;if(progress<=0)return;
+    c.save();c.clip(surface);c.translate(ferida.x,ferida.y);c.rotate(-.35);
+    const pad=Math.min(1,progress/.26);
+    c.save();c.translate(0,(1-pad)*-7);c.globalAlpha=pad;
+    c.shadowColor='#211f1750';c.shadowBlur=2;c.shadowOffsetY=1;
+    c.fillStyle='#e0e1d7';c.beginPath();c.roundRect(-27,-20,54,40,3);c.fill();c.shadowColor='transparent';
+    c.beginPath();c.roundRect(-27,-20,54,40,3);c.clip();wovenCloth(c,-27,-20,54,40);c.restore();
+    for(let i=0;i<4;i++){
+      const p=clamp((progress-.22-i*.16)/.30,0,1);if(!p)continue;
+      const y=-26+i*14;
+      c.save();c.beginPath();c.rect(-39,y,78*p,21);c.clip();
+      const ribbon=new Path2D(`M-39 ${y+3} Q0 ${y-3} 39 ${y+1} L39 ${y+18} Q0 ${y+15} -39 ${y+21}Z`);
+      c.save();c.clip(ribbon);wovenCloth(c,-39,y-3,78,26);
+      const shade=c.createLinearGradient(-30,0,23,0);shade.addColorStop(0,'#343a2c95');shade.addColorStop(.2,'#484a302b');shade.addColorStop(.43,'#ffffff08');shade.addColorStop(.7,'#524d3320');shade.addColorStop(1,'#38392799');c.fillStyle=shade;c.fillRect(-39,y-4,78,28);c.restore();
+      c.strokeStyle='#858e7b80';c.lineWidth=.5;c.beginPath();c.moveTo(-39,y+20);c.quadraticCurveTo(0,y+14,39,y+17);c.stroke();
+      c.strokeStyle='#ffffff90';c.lineWidth=.5;c.beginPath();c.moveTo(-38,y+3);c.quadraticCurveTo(0,y-3,38,y+1);c.stroke();c.restore();
+    }
+    if(progress>.6){
+      const stainRadius=3+Math.min(9,treatment.soak*.13);
+      const stain=c.createRadialGradient(0,0,.3,0,0,stainRadius);
+      stain.addColorStop(0,`rgba(122,34,25,${Math.min(.42,treatment.soak*.014)})`);stain.addColorStop(.65,`rgba(147,66,48,${Math.min(.15,treatment.soak*.005)})`);stain.addColorStop(1,'#8c3e3100');
+      c.fillStyle=stain;c.fillRect(-16,-16,32,32);
+    }
+    c.restore();
+  }
+  function drawTourniquet(c) {
+    const p=treatment.tourniquet;if(p<=0)return;
+    const wrap=smooth(0,.32,p),tight=smooth(.32,.80,p),lock=smooth(.84,1,p);
+    c.save();c.clip(upperArm);c.translate(tqSite.x,tqSite.y);c.rotate(tqSite.angle);
+    c.save();c.beginPath();c.rect(-49,-13,98*wrap,28);c.clip();
+    c.shadowColor='#1b110caf';c.shadowBlur=1.4;c.shadowOffsetY=1.4;
+    c.beginPath();c.moveTo(-49,-9);c.quadraticCurveTo(0,-15,49,-8);c.lineTo(49,13);c.quadraticCurveTo(0,8,-49,14);c.closePath();
+    const nylon=c.createLinearGradient(-36,0,34,0);nylon.addColorStop(0,'#080b0c');nylon.addColorStop(.38,'#303636');nylon.addColorStop(.65,'#202626');nylon.addColorStop(1,'#050809');c.fillStyle=nylon;c.fill();c.shadowColor='transparent';c.clip();
+    c.lineWidth=.18;
+    for(let y=-15;y<16;y+=.6){c.strokeStyle=y%2?'#78817a28':'#02060899';c.beginPath();c.moveTo(-49,y);c.quadraticCurveTo(0,y-3,49,y+1);c.stroke();}
+    for(let x=-49;x<49;x+=.8){c.strokeStyle='#a3aa9b13';c.beginPath();c.moveTo(x,-15);c.lineTo(x+.2,16);c.stroke();}
+    c.setLineDash([.8,.8]);c.strokeStyle='#78817988';c.lineWidth=.32;
+    for(const y of [-8,10]){c.beginPath();c.moveTo(-46,y);c.quadraticCurveTo(0,y-3,46,y);c.stroke();}c.setLineDash([]);
+    c.restore();c.restore();
+    c.save();c.translate(tqSite.x,tqSite.y);c.rotate(tqSite.angle);c.globalAlpha=smooth(.18,.35,p);
+    // Buckle and pulled nylon tail, without changing the photographed arm's shape.
+    c.fillStyle='#0b1112';c.strokeStyle='#616c68';c.lineWidth=.6;c.beginPath();c.roundRect(-24,-9,9,18,1.5);c.fill();c.stroke();
+    c.fillStyle='#343b36';c.fillRect(-22,-7,4,13);
+    const tail=25*(1-tight)+7;c.fillStyle='#141b1b';c.beginPath();c.moveTo(9,-5);c.lineTo(24+tail,-3);c.lineTo(24+tail,5);c.lineTo(9,5);c.fill();
+    c.fillStyle='#9c332c';c.fillRect(20+tail,-3,4,8);c.strokeStyle='#df97815c';c.strokeRect(20+tail,-3,4,8);
+    // Windlass cradle and rotating rod. Animation duration is presentational only.
+    c.shadowColor='#0008';c.shadowBlur=1.1;c.shadowOffsetY=.7;c.fillStyle='#141b1c';c.strokeStyle='#727d78';c.lineWidth=.5;
+    c.beginPath();c.roundRect(-10,-19,19,38,2.2);c.fill();c.stroke();c.shadowColor='transparent';
+    c.fillStyle='#363f3e';c.beginPath();c.roundRect(-7,-16,13,31,1.5);c.fill();
+    c.save();c.rotate(Math.PI/2+tight*Math.PI*4);
+    const rod=c.createLinearGradient(0,-2.6,0,2.6);rod.addColorStop(0,'#a1aaa4');rod.addColorStop(.25,'#485553');rod.addColorStop(.65,'#1c2626');rod.addColorStop(1,'#080d0d');
+    c.fillStyle=rod;c.beginPath();c.roundRect(-19,-2.6,38,5.2,1.6);c.fill();
+    for(const end of [-17,17]){c.fillStyle='#252e2d';c.beginPath();c.roundRect(end-2,-3.6,4,7.2,1);c.fill();c.strokeStyle='#8b979144';c.lineWidth=.3;for(let j=-1;j<=1;j++){c.beginPath();c.moveTo(end+j,-3);c.lineTo(end+j,3);c.stroke();}}
+    c.restore();
+    c.strokeStyle='#080e0f';c.lineWidth=2.2;for(const y of [-16,16]){c.beginPath();c.moveTo(-7,y-2);c.lineTo(-7,y+3);c.lineTo(5,y+3);c.lineTo(5,y-2);c.stroke();}
+    if(lock>0){
+      c.save();c.globalAlpha=lock;c.fillStyle='#dbddcd';c.beginPath();c.roundRect(-8,9,15,7,1);c.fill();
+      c.fillStyle='#3d453d';c.font='2.5px system-ui';c.textAlign='center';c.fillText('HORA',-.5,11.7);
+      c.font='bold 3.2px system-ui';c.fillText(treatment.tourniquetTime||'—',-.5,15);c.restore();
+    }
+    c.restore();
+  }
+  function drawPressure(c) {
+    const p=treatment.hand;if(p<=0||!handReady)return;
+    const eased=p*p*(3-2*p),arrival=1-eased;
+    c.save();c.globalAlpha=eased*.23;c.fillStyle='#111811';ellipse(c,ferida.x+3,ferida.y+4,30,14,.6);c.fill();c.restore();
+    // One steady press: no periodic pumping. Palm centre stays registered to the wound.
+    c.save();c.translate(ferida.x+arrival*62,ferida.y-arrival*27);c.scale(1+arrival*.07,1+arrival*.07);c.globalAlpha=Math.min(1,p*2);
+    c.drawImage(handPhoto,-73,-43,148,148*handPhoto.naturalHeight/handPhoto.naturalWidth);c.restore();
+  }
+  function advanceTreatments(dt) {
+    let finished=false;
+    if(treatment.packTarget&&treatment.pack<1){treatment.pack=Math.min(1,treatment.pack+dt/6.8);finished=treatment.pack===1;}
+    if(treatment.bandageTarget&&treatment.bandage<1){treatment.bandage=Math.min(1,treatment.bandage+dt/2.3);finished=treatment.bandage===1||finished;}
+    if(treatment.tourniquetTarget&&treatment.tourniquet<1){
+      treatment.tourniquet=Math.min(1,treatment.tourniquet+dt/5.2);
+      if(treatment.tourniquet===1){recordTourniquetTime();finished=true;}
+    }
+    const target=treatment.handTarget?1:0;
+    if(treatment.hand!==target){const step=dt/.65;treatment.hand=target?Math.min(1,treatment.hand+step):Math.max(0,treatment.hand-step);finished=treatment.hand===target||finished;}
+    // Visual response only; these weights do not model clinical success or blood loss.
+    const targetFlow=visualFlow();
+    flow=Math.abs(targetFlow-flow)<.0005?targetFlow:flow+(targetFlow-flow)*Math.min(1,dt*6);
+    if(treatment.pack||treatment.bandage)treatment.soak+=dt*flow;
+    if(finished)sync();
+  }
+  function visualFlow(){return (1-.30*treatment.pack)*(1-.18*treatment.bandage)*(1-.92*treatment.hand)*(1-smooth(.48,.90,treatment.tourniquet));}
+  function recordTourniquetTime(){if(!treatment.tourniquetTime)treatment.tourniquetTime=new Date().toLocaleTimeString('pt-BR',{hour:'2-digit',minute:'2-digit'});}
+  function update(dt) {
+    state.time+=dt;advanceTreatments(dt);filmTime+=dt*flow;const t=state.time;
+    const beat=(t%1.02)/1.02;
+    const pulse=Math.pow(Math.max(0,Math.sin((beat/.32)*Math.PI)),2)*(beat<.32?1:0);
+    if(state.mode==='pulse'){
+      emission+=dt*(pulse>0.04?250*pulse:0)*flow*(1-treatment.bandage);
+      while(emission>=1){emission--;
+        const speed=(95+175*state.strength)*(.82+.18*pulse);
+        drops.push({x:ferida.x+5,y:ferida.y+3,px:ferida.x+5,py:ferida.y+3,vx:speed*(.96+random()*.025),vy:-speed*(.36+random()*.035),r:.22+random()*.42,age:0,jet:true,ground:535+random()*12});
+      }
+    }
+    if(filmTime>7){dripClock+=dt*(.5+state.strength*1.2)*flow;if(dripClock>=1){dripClock-=1;drops.push({x:885,y:466,px:885,py:466,vx:5+random()*4,vy:8,r:.65+random()*.35,age:0,jet:false,ground:536+random()*9});}}
+    for(let i=drops.length-1;i>=0;i--){const d=drops[i];d.age+=dt;d.px=d.x;d.py=d.y;d.vy+=235*dt;d.x+=d.vx*dt;d.y+=d.vy*dt;
+      if(d.y>d.ground){if(splashes.length<420){splashes.push({x:d.x,y:d.ground,rx:d.r*(1.6+random()*1.3),ry:d.r*(.45+random()*.45),rot:random()*.8-.4,a:.4+random()*.28});}drops.splice(i,1);}
+      else if(d.x>W+20||d.age>3)drops.splice(i,1);
+    }
+    if(drops.length>650)drops.splice(0,drops.length-650);
+  }
+  function camera(){return state.close?(treatment.tourniquetTarget?{x:610,y:218,w:540,h:303.75}:{x:630,y:272,w:480,h:270}):{x:0,y:0,w:W,h:H};}
+  function render() {
+    if(!state.ready)return;
+    const view=camera();ctx.setTransform(canvas.width/view.w,0,0,canvas.height/view.h,-view.x*canvas.width/view.w,-view.y*canvas.height/view.h);
+    ctx.drawImage(photo,0,0,W,H);drawPool(ctx);
+    ctx.save();ctx.clip(surface);
+    for(const r of rivulets)film(ctx,r,filmTime,r.width*(.60+state.strength*.65));
+    ctx.restore();
+    ctx.drawImage(woundLayer,0,0,W,H);
+    // The source glistens subtly without distorting the surrounding photograph.
+    ctx.fillStyle='#a03c2019';ellipse(ctx,ferida.x+4,ferida.y+3,2.1,.65,ferida.rotacao);ctx.fill();
+    let prev=null;
+    for(const d of drops){
+      if(d.jet&&prev&&Math.abs(prev.age-d.age)<.035&&Math.hypot(d.x-prev.x,d.y-prev.y)<12&&d.age<.48){
+        ctx.beginPath();ctx.moveTo(prev.x,prev.y);ctx.lineTo(d.x,d.y);ctx.lineWidth=(d.r+prev.r)*.9;ctx.strokeStyle='#781e13bf';ctx.lineCap='round';ctx.stroke();
+        ctx.beginPath();ctx.moveTo(prev.x-.2,prev.y-.2);ctx.lineTo(d.x-.2,d.y-.2);ctx.lineWidth=.19;ctx.strokeStyle='#d9a27b30';ctx.stroke();
+      }
+      if(d.age>.08){ctx.beginPath();ctx.moveTo(d.x-d.vx*.008,d.y-d.vy*.008);ctx.lineTo(d.x,d.y);ctx.strokeStyle='#67150c33';ctx.lineWidth=d.r*.9;ctx.stroke();}
+      bloodBead(ctx,d.x,d.y,d.r,d.vx,d.vy,Math.min(1,d.age*35+.3));prev=d;
+    }
+    drawPacking(ctx);drawBandage(ctx);drawTourniquet(ctx);drawPressure(ctx);
+    ctx.setTransform(1,0,0,1,0,0);
+  }
+  function frame(now){raf=0;if(!state.ready||state.paused||document.hidden){previous=null;return;}if(previous!==null)accumulator+=Math.min((now-previous)/1000,.05);previous=now;
+    while(accumulator>=1/120){update(1/120);accumulator-=1/120;}render();raf=requestAnimationFrame(frame);
+  }
+  function schedule(){if(!raf&&state.ready&&!state.paused&&!document.hidden)raf=requestAnimationFrame(frame);}
+  function sync(){
+    $('wide').setAttribute('aria-pressed',String(!state.close));$('closeup').setAttribute('aria-pressed',String(state.close));
+    $('continuous').setAttribute('aria-pressed',String(state.mode==='continuous'));$('pulse').setAttribute('aria-pressed',String(state.mode==='pulse'));
+    $('pause').setAttribute('aria-pressed',String(state.paused));$('pause').textContent=state.paused?'Continuar':'Pausar';
+    $('status').textContent=(state.mode==='pulse'?'Jato pulsátil':'Escorrimento contínuo')+(state.paused?' · Pausado':'');
+    $('stamp').textContent=state.close?(treatment.tourniquetTarget?'Braço / ferida e torniquete':'Antebraço / detalhe'):'Cena inteira / ponto de ônibus';canvas.classList.toggle('close-view',state.close);
+    const packing=treatment.packTarget&&treatment.pack<1,wrapping=treatment.bandageTarget&&treatment.bandage<1,applyingTq=treatment.tourniquetTarget&&treatment.tourniquet<1;
+    $('pack').setAttribute('aria-pressed',String(treatment.packTarget));$('bandage').setAttribute('aria-pressed',String(treatment.bandageTarget));$('pressure').setAttribute('aria-pressed',String(treatment.handTarget));
+    $('pack').disabled=!state.ready||treatment.packTarget||treatment.bandageTarget;
+    $('bandage').disabled=!state.ready||treatment.bandageTarget||packing;
+    $('pressure').disabled=!state.ready||!handReady||packing||wrapping;
+    $('tourniquet').setAttribute('aria-pressed',String(treatment.tourniquetTarget));
+    $('tourniquet').disabled=!state.ready||treatment.tourniquetTarget;
+    $('packLabel').textContent=packing?'Introduzindo atadura…':treatment.packTarget?'Ferida preenchida':'Preencher com atadura';
+    $('bandageLabel').textContent=wrapping?'Enfaixando…':treatment.bandageTarget?'Curativo aplicado':'Enfaixar';
+    $('pressureLabel').textContent=treatment.handTarget?'Soltar compressão':'Comprimir manualmente';
+    $('tourniquetLabel').textContent=applyingTq?'Ajustando torniquete…':treatment.tourniquetTarget?'Torniquete aplicado':'Aplicar torniquete';
+    $('tourniquetDetail').textContent=treatment.tourniquetTime?'Horário da aplicação: '+treatment.tourniquetTime:'Cinta, haste e trava no braço';
+    const statuses=[];
+    if(packing)statuses.push('Tira contínua entrando e se acomodando dentro da cavidade.');
+    else if(wrapping)statuses.push('Aplicando o curativo por cima.');
+    else if(treatment.handTarget)statuses.push('Mão mantendo pressão contínua.');
+    else if(treatment.bandageTarget)statuses.push('Curativo aplicado sobre a ferida.');
+    else if(treatment.packTarget)statuses.push('Cavidade preenchida com atadura de gaze. Mantenha compressão.');
+    if(applyingTq)statuses.push('Ajustando a cinta, girando a haste e fechando a trava.');
+    else if(treatment.tourniquetTime)statuses.push('Torniquete fixado às '+treatment.tourniquetTime+'. Reavalie o sangramento.');
+    $('treatmentStatus').textContent=statuses.join(' ')||'Escolha uma ação para visualizar.';
+  }
+  function restart(keepTreatment=false){
+    state.time=0;filmTime=0;seed=7043;emission=0;dripClock=0;accumulator=0;previous=null;drops=[];splashes=[];
+    if(!keepTreatment){Object.assign(treatment,{pack:0,bandage:0,hand:0,tourniquet:0,packTarget:false,bandageTarget:false,handTarget:false,tourniquetTarget:false,tourniquetTime:null,soak:0});flow=1;}
+    render();sync();schedule();
+  }
+  function setMode(mode){state.mode=mode;restart(true);}
+  function applyTreatment(action){
+    if(!state.ready)return;
+    if(action==='hand'){if(!handReady)return;treatment.handTarget=!treatment.handTarget;}
+    else if(action==='tourniquet'){
+      if(treatment.tourniquetTarget)return;
+      treatment.tourniquetTarget=true;
+    }else{
+      if(treatment.bandageTarget||action==='pack'&&treatment.packTarget)return;
+      treatment.handTarget=false;treatment[action+'Target']=true;
+    }
+    // When paused, a click shows the completed placement without resuming animation.
+    if(state.paused){treatment.pack=Number(treatment.packTarget);treatment.bandage=Number(treatment.bandageTarget);treatment.hand=Number(treatment.handTarget);treatment.tourniquet=Number(treatment.tourniquetTarget);if(treatment.tourniquetTarget)recordTourniquetTime();flow=visualFlow();}
+    sync();render();schedule();
+  }
+  $('wide').addEventListener('click',()=>{state.close=false;sync();render();});
+  $('closeup').addEventListener('click',()=>{state.close=true;sync();render();});
+  canvas.addEventListener('click',()=>{state.close=!state.close;sync();render();});
+  $('continuous').addEventListener('click',()=>setMode('continuous'));
+  $('pulse').addEventListener('click',()=>setMode('pulse'));
+  $('intensity').addEventListener('input',e=>{state.strength=Number(e.target.value)/100;$('amount').value=e.target.value+'%';render();});
+  $('pause').addEventListener('click',()=>{state.paused=!state.paused;previous=null;if(state.paused&&raf){cancelAnimationFrame(raf);raf=0;}sync();schedule();});
+  $('reset').addEventListener('click',()=>restart());
+  $('pack').addEventListener('click',()=>applyTreatment('pack'));
+  $('bandage').addEventListener('click',()=>applyTreatment('bandage'));
+  $('pressure').addEventListener('click',()=>applyTreatment('hand'));
+  $('tourniquet').addEventListener('click',()=>applyTreatment('tourniquet'));
+  document.addEventListener('visibilitychange',()=>{previous=null;if(document.hidden&&raf){cancelAnimationFrame(raf);raf=0;}else schedule();});
+  reducedMotion.addEventListener('change',e=>{if(e.matches){state.paused=true;if(raf)cancelAnimationFrame(raf);raf=0;previous=null;sync();}});
+  function resize(){const rect=canvas.getBoundingClientRect(),dpr=Math.min(devicePixelRatio||1,2);canvas.width=Math.max(1,Math.round(rect.width*dpr));canvas.height=Math.max(1,Math.round(rect.height*dpr));render();}
+  new ResizeObserver(resize).observe($('stage'));
+  photo.onload=()=>{desenharFerida(woundCtx);state.ready=true;$('loading').hidden=true;resize();sync();schedule();};
+  photo.onerror=()=>{$('loading').textContent='A imagem não foi encontrada. Mantenha este HTML na mesma pasta que antebraco-base-hd.png.';};
+  photo.src='antebraco-base-hd.png';sync();
+  handPhoto.onload=()=>{handReady=true;sync();render();};
+  handPhoto.onerror=()=>{handReady=false;sync();$('treatmentStatus').textContent='A imagem da mão não foi encontrada. Mantenha mao-compressao.png na mesma pasta do HTML.';};
+  handPhoto.src='mao-compressao.png';
+})();
+</script>
+</body>
+</html>

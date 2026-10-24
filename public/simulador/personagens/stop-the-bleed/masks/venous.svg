@@ -2,7 +2,6 @@
   <ellipse cx="160" cy="105" rx="90" ry="32" fill="#7f1d1d" opacity=".25"/>
   <path d="M78 109c19-15 36-9 54-15 20-7 34 5 51 0 20-6 35 8 52 2 19-7 35 5 49 15-17 16-39 20-62 14-20-5-39 6-57-1-20-7-40 2-58-4-12-4-20-7-29-11Z" fill="#991b1b" stroke="#fecaca" stroke-width="4"/>
   <path d="M111 112c19-7 39-7 59 0 15 5 30 4 43-2" stroke="#f87171" stroke-width="9" stroke-linecap="round"/>
-  <path d="M168 137c1 16 5 28 11 38" stroke="#b91c1c" stroke-width="9" stroke-linecap="round" opacity=".8"/>
-  <path d="M184 137c4 13 7 22 15 30" stroke="#ef4444" stroke-width="5" stroke-linecap="round" opacity=".75"/>
+  <path d="M168 137c1 16 5 28 11 38" stroke="#b91c1c" stroke-width="9" stroke-linecap="round" opacity=".8"><animate attributeName="opacity" values=".45;.9;.45" dur="2.2s" repeatCount="indefinite"/></path>
+  <path d="M184 137c4 13 7 22 15 30" stroke="#ef4444" stroke-width="5" stroke-linecap="round" opacity=".75"><animate attributeName="opacity" values=".3;.75;.3" dur="2.2s" repeatCount="indefinite"/></path>
 </svg>
-
