@@ -58,17 +58,14 @@ export const CertificateSignatures: React.FC<CertificateSignaturesProps> = ({ si
   }
   const columns = Math.min(visible.length, 4);
   return (
-    <div
-      className={`grid items-end justify-items-center gap-x-4 ${compact ? 'gap-y-2 py-2' : 'gap-y-3 py-3'}`}
-      style={{ gridTemplateColumns: `repeat(${columns}, minmax(0, 1fr))` }}
-    >
+    <div className={`flex flex-wrap items-end justify-center gap-x-4 ${compact ? 'gap-y-2 py-2' : 'gap-y-3 py-3'}`}>
       {visible.map(person => {
         const title = [
           person.isInstructor && 'Instrutor',
           person.isTechnicalDirector && 'Diretor Técnico',
         ].filter(Boolean).join(' e ');
         return (
-          <div key={person.id} className="w-full min-w-0 text-center flex flex-col items-center justify-end">
+          <div key={person.id} className="min-w-0 max-w-[340px] text-center flex flex-col items-center justify-end" style={{ width: `calc(${100 / columns}% - ${(columns - 1) * 16 / columns}px)` }}>
             <div className={`flex w-full items-end justify-center ${compact ? 'h-9' : 'h-12'}`}>
               {person.signaturePath && imageUrls[person.id] ? (
                 <img
@@ -143,7 +140,7 @@ export const printCertificate = async (elementId: string) => {
   const styles = Array.from(document.head.querySelectorAll('style,link[rel="stylesheet"]'))
     .map(style => style.outerHTML).join('\n');
   popup.document.open();
-  popup.document.write(`<!doctype html><html lang="pt-BR"><head><meta charset="UTF-8" /><title>Certificado - União Serviços Médicos</title>${styles}
+  popup.document.write(`<!doctype html><html lang="pt-BR"><head><meta charset="UTF-8" /><base href="${document.baseURI}" /><title>Certificado - União Serviços Médicos</title>${styles}
     <style>
       @page { size: A4 landscape; margin: 0; }
       html, body { margin: 0; padding: 0; width: 297mm; height: 210mm; background: #020617; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
@@ -151,6 +148,12 @@ export const printCertificate = async (elementId: string) => {
       #print-root > * { width: 297mm !important; height: 210mm !important; max-width: none !important; aspect-ratio: auto !important; box-shadow: none !important; border-radius: 0 !important; }
     </style></head><body><div id="print-root">${source.outerHTML}</div></body></html>`);
   popup.document.close();
+  await Promise.all(Array.from(popup.document.querySelectorAll<HTMLLinkElement>('link[rel="stylesheet"]')).map(link =>
+    link.sheet ? Promise.resolve() : new Promise<void>(resolve => {
+      link.onload = () => resolve(); link.onerror = () => resolve();
+    })
+  ));
+  await popup.document.fonts.ready;
   await Promise.all(Array.from(popup.document.images).map(img => img.complete
     ? Promise.resolve()
     : new Promise<void>(resolve => { img.onload = () => resolve(); img.onerror = () => resolve(); })));
