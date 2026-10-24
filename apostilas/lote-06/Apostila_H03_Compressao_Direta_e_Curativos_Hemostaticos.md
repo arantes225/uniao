@@ -72,9 +72,9 @@ Em simulador, realize pressão contínua por vários minutos e revise a postura 
 > **VISÃO RÁPIDA DE SOBREVIVÊNCIA NA COMPRESSÃO E HEMOSTÁTICOS**
 > 1. **A compressão direta é o primeiro gesto hemostático da humanidade:** Mais de 70% de todas as hemorragias externas traumáticas podem ser contidas com sucesso exclusivamente através da **pressão mecânica focal contínua e potente** sobre o ponto exato da lesão vascular [1, 2].
 > 2. **Pressione o osso, não o ar:** A compressão manual só funciona se o vaso sangrante for esmagado contra uma estrutura rígida de sustentação (geralmente o osso subjacente). Descarregue o peso do próprio corpo através dos braços retos estendidos a 90 graus [2, 3].
-> 3. **Nunca alivie a pressão para "espiar":** Se você comprimiu por 3 minutos e aliviar os dedos por 2 segundos para ver se o sangue parou, a pressão arterial expulsará o coágulo recém-formado e o cronômetro da hemostasia voltará ao zero [1, 4].
-> 4. **Agentes hemostáticos modernos não queimam:** As gazes hemostáticas contemporâneas utilizam **Quitosana** (biopolímero derivado de crustáceos que atrai hemácias por carga eletrostática independente da cascata de coagulação) ou **Caulim** (silicato mineral de alumínio que ativa o Fator XII da coagulação). São 100% seguros, estáveis e não geram calor exotérmico [5, 6].
-> 5. **Tempo mínimo de compressão:** Com gaze hemostática certificada, mantenha compressão contínua ininterrupta por **3 minutos**. Com gaze comum de algodão sem hemostático, o tempo mínimo de compressão manual é de **10 minutos inteiros** no relógio [1, 5].
+> 3. **Não interrompa pressão sem necessidade:** mantenha compressão contínua e adicione material sobre a primeira gaze se ela encharcar. Não há regra fisiológica de que uma breve reavaliação “zera” a coagulação; o ponto é não atrasar o controle efetivo da hemorragia [1, 4].
+> 4. **Agentes hemostáticos exigem treinamento:** gazes com quitosana ou caulim podem auxiliar no controle de algumas hemorragias quando usadas conforme fabricante e protocolo. Não substituem pressão direta, podem ter contraindicações/limitações e não devem ser apresentadas como 100% seguras ou eficazes [5, 6].
+> 5. **Tempo de compressão:** siga a instrução do produto/protocolo para gaze hemostática e mantenha pressão firme enquanto o resgate é acionado. Sangramento maciço de extremidade pode exigir torniquete treinado sem aguardar um tempo fixo [1, 5].
 > 6. **Bandagem elástica de emergência (Tipo Israelense):** Combina compressa estéril, barra de pressão mecânica rígida e clipe de travamento, transformando a pressão manual em pressão mecânica sustentada contínua [2, 7].
 
 ---
@@ -138,7 +138,7 @@ A pressão física é definida pela fórmula $P = \frac{F}{A}$ (Pressão = Forç
 
 ### 5.1 Princípios Fisiomecânicos da Compressão Direta
 
-![Passos essenciais da compressão direta sem interrupções](../../public/apostilas/imagens/usm-compressao-direta.svg)
+![Passos essenciais da compressão direta sem interrupções](../imagens/usm-compressao-direta.svg)
 *Figura complementar — Passos essenciais da compressão direta sem interrupções. Ilustração original União Serviços Médicos (2026), baseada em AHA/Cruz Vermelha 2024; não reproduz imagens de terceiros.*
 
 
@@ -150,6 +150,14 @@ A compressão direta manual consiste na aplicação de força mecânica externa 
 ---
 
 ### 5.2 Posicionamento Anatômico, Vetor de Força e Manutenção da Pressão
+
+![Esquema de compressão direta com gaze limpa e mão posicionada sobre local de sangramento.](../imagens/usm-compressao-direta-ilustrada.svg)
+*Ilustração autoral USM — apoio visual à pressão direta, com acionamento de emergência quando houver sangramento grave.*
+
+
+![Figura 2 — Rolo de gaze estéril para compressão direta e preenchimento de cavidades.](../imagens/Gauze_bandage.png)
+*Figura 2 — Rolo de gaze estéril para compressão direta e preenchimento de cavidades. Crédito: im_tau. Licença: CC BY 4.0 (https://creativecommons.org/licenses/by/4.0/). Fonte: Wikimedia Commons.*
+
 
 Manter uma força de 20 a 30 kgf com as mãos por 10 minutos exclusivamente através da força dos músculos dos braços (bíceps e tríceps) é fisiologicamente impossível para a maioria dos adultos devido à fadiga muscular precoce e ao acúmulo de ácido lático [2, 4]:
 
@@ -173,6 +181,10 @@ Manter uma força de 20 a 30 kgf com as mãos por 10 minutos exclusivamente atra
 ---
 
 ### 5.3 Curativos Compressivos e Bandagens Elásticas de Emergência (Tipo Israelense)
+
+![Figura 3 — Atadura autoaderente aplicada para fixação de curativo compressivo hemostático.](../imagens/Self-adhering-bandage.png)
+*Figura 3 — Atadura autoaderente aplicada para fixação de curativo compressivo hemostático. Crédito: Baedr-9439. Licença: CC0. Fonte: Wikimedia Commons.*
+
 
 Quando o socorrista precisa liberar as mãos para atender outra vítima, acionar o rádio de comunicação ou preparar a evacuação, a compressão manual direta deve ser convertida em um **Curativo Compressivo Estabilizado** [2, 7]:
 
@@ -240,9 +252,6 @@ O socorrista deve manter vigilância ininterrupta sobre a ferida após a aplica�
 ---
 
 
-![Figura 2 — Rolo de gaze estéril para compressão direta e preenchimento de cavidades.](../imagens/Gauze_bandage.png)
-*Figura 2 — Rolo de gaze estéril para compressão direta e preenchimento de cavidades. Crédito: im_tau. Licença: CC BY 4.0 (https://creativecommons.org/licenses/by/4.0/). Fonte: Wikimedia Commons.*
-
 ### Algoritmo Operacional da Compressão Direta e Transição
 
 ```
@@ -283,9 +292,6 @@ O socorrista deve manter vigilância ininterrupta sobre a ferida após a aplica�
 3. **"Curativo compressivo pode substituir o torniquete em sangramento arterial femoral":** Em artérias de altíssima pressão e fluxo maciço, bandagens compressivas externas frequentemente transbordam em 2 minutos. Extremidade com sangramento arterial em jato exige torniquete [1, 4].
 4. **"Colocar gelo dentro da ferida para estancar o sangue":** Aplicar gelo no sangue que vaza resfria localmente os fatores de coagulação, inibindo a hemostasia e acelerando a Tríade Letal [2, 3].
 
-
-![Figura 3 — Atadura autoaderente aplicada para fixação de curativo compressivo hemostático.](../imagens/Self-adhering-bandage.png)
-*Figura 3 — Atadura autoaderente aplicada para fixação de curativo compressivo hemostático. Crédito: Baedr-9439. Licença: CC0. Fonte: Wikimedia Commons.*
 
 ---
 
@@ -370,7 +376,7 @@ A serra causou uma laceração cortocontusa extensa de 10 centímetros de compri
 - A compressão direta focal é o método mais universal e eficaz para conter sangramentos externos.
 - Pressione o vaso contra a base óssea subjacente, descarregando o peso do tronco com os braços estendidos e bloqueados a 90 graus.
 - Nunca alivie a compressão manual para conferir se o sangramento parou antes do término do tempo mínimo.
-- Gaze com hemostático requer 3 minutos de compressão contínua; gaze cirúrgica comum exige 10 minutos ininterruptos.
+- O tempo de compressão de gaze hemostática deve seguir produto/protocolo; não retarde o controle de hemorragia ameaçadora à vida aguardando tempos rígidos.
 - Quitosana funciona por atração eletrostática e é eficaz mesmo em sangue frio (hipotérmico) ou em pacientes anticoagulados.
 - Se o curativo compressivo transbordar e falhar em um membro, aplique imediatamente o torniquete comercial acima da lesão.
 
