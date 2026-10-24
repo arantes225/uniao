@@ -147,9 +147,6 @@ As artérias coronárias irrigam as paredes musculares do miocárdio. Ao longo d
 ```
 
 
-![Figura 2 — Reconhecimento precoce do AVC pelo método FAST.](../imagens/Identify_the_symptoms_of_a_stroke_using_the_FAST_method.png)
-*Figura 2 — Reconhecimento precoce do AVC pelo método FAST. Crédito: U.S. Food and Drug Administration (vetor: Fvasconcellos). Licença: Domínio público. Fonte: Wikimedia Commons.*
-
 ### 4.2 Fisiopatologia do Acidente Vascular Cerebral (AVC)
 O AVC subdivide-se em dois tipos clínicos de mecanismos antagônicos [2, 4]:
 1. **AVC Isquêmico (Aproximadamente 85% dos casos):** Uma artéria cerebral é ocluída por um trombo local ou por um êmbolo originado no coração (frequente em portadores de fibrilação atrial). A área central do território arterial morre em minutos (**core isquêmico**), mas ao redor existe uma vasta região cerebral viva, porém paralisada por falta de energia (**área de penumbra isquêmica**). O socorro rápido visa restabelecer o sangue a tempo de salvar a penumbra com remédios trombolíticos hospitalares.
@@ -183,6 +180,14 @@ Diante de uma suspeita de infarto, a conduta do socorrista comunitário baseia-s
 4. **Prontidão com o DEA:** Em locais com grande circulação ou empresas, traga o Desfibrilador Externo Automático (DEA) para o lado da poltrona da vítima e deixe-o fechado, pronto para uso imediato. Quase 50% das paradas cardíacas por infarto ocorrem subitamente nos primeiros minutos por fibrilação ventricular na frente do socorrista [1].
 
 ### 5.3 Identificação Precoce do AVC (Escala SAMU / Cincinnati)
+
+![Figura 3 — Assimetria facial aguda (queda da rima labial) característica de Acidente Vascular Cerebral.](../imagens/Stroke-facial-droop.jpg)
+*Figura 3 — Assimetria facial aguda (queda da rima labial) característica de Acidente Vascular Cerebral. Crédito: Another-anon-artist-234. Licença: CC0. Fonte: Wikimedia Commons.*
+
+
+![Figura 2 — Reconhecimento precoce do AVC pelo método FAST.](../imagens/Identify_the_symptoms_of_a_stroke_using_the_FAST_method.png)
+*Figura 2 — Reconhecimento precoce do AVC pelo método FAST. Crédito: U.S. Food and Drug Administration (vetor: Fvasconcellos). Licença: Domínio público. Fonte: Wikimedia Commons.*
+
 Para que qualquer cidadão leigo memorize e aplique o exame de triagem neurológica rápida em menos de 60 segundos, o Ministério da Saúde consolidou a **Escala SAMU do AVC** (baseada na consagrada *Cincinnati Prehospital Stroke Scale*) [2, 4]:
 
 ```
@@ -256,9 +261,6 @@ A crise convulsiva decorre de uma descarga elétrica neuronal hipersincrônica, 
 | **Parada Cardíaca (PCR)** | Desabamento instantâneo inerte ao piso. | Inconsciente, **ausência de respiração normal** ou suspiros agônicos (*gasping*). | **Iniciar compressões torácicas imediatas** no centro do tórax; pedir DEA e 192. |
 
 
-![Figura 3 — Sinais de alerta do Acidente Vascular Cerebral (Act FAST).](../imagens/Act_FAST.png)
-*Figura 3 — Sinais de alerta do Acidente Vascular Cerebral (Act FAST). Crédito: U.S. CDC, NCCDPHP. Licença: Domínio público. Fonte: Wikimedia Commons.*
-
 ---
 
 ### Quadro 6.2 — Checklist da Passagem de Dados no AVC e IAM ao SAMU 192
@@ -300,10 +302,6 @@ A crise convulsiva decorre de uma descarga elétrica neuronal hipersincrônica, 
 > 5. **Tentar furar a ponta dos dedos com agulhas para "tirar sangue no AVC":**
 >    - *Por que não fazer:* Mito perigoso divulgado em redes sociais. Furar dedos gera dor aguda desnecessária que dispara a pressão arterial sistêmica e atrasa o acionamento do SAMU em dezenas de minutos preciosos dentro da janela trombolítica.
 >    - *Conduta correta:* Aplique a escala SAMU e disque 192 imediatamente.
-
-
-![Figura 4 — Assimetria facial aguda (queda da rima labial) característica de Acidente Vascular Cerebral.](../imagens/Stroke-facial-droop.jpg)
-*Figura 4 — Assimetria facial aguda (queda da rima labial) característica de Acidente Vascular Cerebral. Crédito: Another-anon-artist-234. Licença: CC0. Fonte: Wikimedia Commons.*
 
 ---
 
@@ -440,5 +438,5 @@ INFARTO AGUDO (IAM)             ACIDENTE VASCULAR (AVC)            CRISE CONVULS
 | **Status:** | `Aguardando Aprovação Científica` |
 | **Data da Redação:** | 19 de outubro de 2026 |
 | **Versão:** | 1.0.0 |
-| **Validação Científica por IA:** | Conforme diretrizes SBC, AHA/ASA Stroke e Liga Brasileira de Epilepsia |
+| **Situação científica:** | Revisado editorialmente; requer homologação por profissional habilitado antes do uso instrucional. |
 | **Próxima Revisão:** | Outubro de 2027 |
