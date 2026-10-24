@@ -198,9 +198,6 @@ Acidentes traumáticos em academias decorrem frequentemente de práticas operaci
 - **Piso e Armazenamento de Anilhas:** Anilhas e halteres devem ser devolvidos aos suportes apropriados imediatamente após a utilização. Halteres soltos pelo piso acarretam entorses de tornozelo e tropeços catastróficos [2, 6].
 
 
-![Figura 1 — Maleta e estação de primeiros socorros sinalizada e acessível.](../imagens/First_aid_kit_on_wall.png)
-*Figura 1 — Maleta e estação de primeiros socorros sinalizada e acessível. Crédito: Leigh Blackall. Licença: CC BY 2.0 (https://creativecommons.org/licenses/by/2.0/). Fonte: Wikimedia Commons.*
-
 ---
 
 ### 5.4 Protocolos de Inspeção Preventiva de Áreas, Equipamentos e Cabos
@@ -243,6 +240,14 @@ O educador físico e o instrutor de academia têm respaldo ético do Conselho Fe
 ---
 
 ### 5.6 Organização Institucional do Atendimento Emergencial e Prontidão do DEA
+
+![Figura 3 — Mochila padronizada de Atendimento Pré-Hospitalar (APH) organizada por compartimentos.](../imagens/EMS-medic-backpack.png)
+*Figura 3 — Mochila padronizada de Atendimento Pré-Hospitalar (APH) organizada por compartimentos. Crédito: Baedr-9439. Licença: CC0. Fonte: Wikimedia Commons.*
+
+
+![Figura 1 — Maleta e estação de primeiros socorros sinalizada e acessível.](../imagens/First_aid_kit_on_wall.png)
+*Figura 1 — Maleta e estação de primeiros socorros sinalizada e acessível. Crédito: Leigh Blackall. Licença: CC BY 2.0 (https://creativecommons.org/licenses/by/2.0/). Fonte: Wikimedia Commons.*
+
 
 O Plano de Ação de Emergência (EAP - *Emergency Action Plan*) em academias deve funcionar como uma engrenagem automática [1, 5, 9]:
 
@@ -296,9 +301,6 @@ O Plano de Ação de Emergência (EAP - *Emergency Action Plan*) em academias de
 > [!CAUTION]
 > **Erro que pode prejudicar a vítima:** Uma pessoa que caiu perto de um aparelho pode ser atingida por pesos ou peças em movimento. Garanta a segurança do local antes do contato. Se ela não responde e não respira normalmente, a prioridade é RCP e DEA, não investigar o motivo do desmaio.
 
-
-![Figura 3 — Mochila padronizada de Atendimento Pré-Hospitalar (APH) organizada por compartimentos.](../imagens/EMS-medic-backpack.png)
-*Figura 3 — Mochila padronizada de Atendimento Pré-Hospitalar (APH) organizada por compartimentos. Crédito: Baedr-9439. Licença: CC0. Fonte: Wikimedia Commons.*
 
 1. **Permitir que o aluno volte a treinar após "quase desmaiar":** O episódio de pré-síncope indica colapso circulatório ou arritmia transitória. Forçar o aluno a "completar a série para aquecer" pode precipitar uma parada cardíaca fatal [3, 4].
 2. **DEA guardado em sala trancada sob posse exclusiva da gerência:** Durante uma parada cardíaca, cada minuto sem choque reduz as chances de sobrevivência em 7% a 10%. Perder tempo caçando a chave da gerência é imperdoável [4, 5].
@@ -407,6 +409,9 @@ Dois outros alunos gritam: *"Professor, o rapaz caiu aqui! Tá tendo um ataque!"
 ---
 
 ### Metadados Editoriais Institucionais
+
+> [!IMPORTANT]
+> **Limite científico:** prevenção e resposta inicial não substituem avaliação médica. Sinais de desconforto torácico, síncope, dispneia importante ou alteração neurológica exigem interrupção da atividade e acionamento do serviço de emergência.
 
 | CAMPO | ESPECIFICAÇÃO TÉCNICA |
 | :--- | :--- |
