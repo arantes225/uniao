@@ -13,8 +13,8 @@ const schoolPatients = [
     color: 'teal',
     poses: {
       sentada: {
-        open: '/simulador/personagens/escola-horizontal-v20261023/professora-sentada.png',
-        closed: '/simulador/personagens/escola-horizontal-v20261023/blink/professora-sentada-olhos-fechados.png',
+        open: '/simulador/personagens/escola-horizontal-v20261023/professora-sentada.png?v=face-awake-2',
+        closed: '/simulador/personagens/escola-horizontal-v20261023/blink/professora-sentada-olhos-fechados.png?v=face-awake-2',
         chest: { x: 49, y: 48, rx: 12, ry: 10 }, eyes: { left: { x: 48.7, y: 25.4 }, right: { x: 51.7, y: 25.7 }, rx: 2.5, ry: 2.4 }
       },
       deitada: {
@@ -234,7 +234,7 @@ export function SchoolPatientGallery() {
               ))}
             </div>
             <a
-              href={selected.poses[pose].open.replace(/\.png$/, '.html')}
+              href={selected.poses[pose].open.replace(/\.png(?=\?|$)/, '.html')}
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex rounded-lg border border-emerald-400/50 px-3 py-2 text-xs font-bold text-emerald-200 hover:bg-emerald-400/10 focus-visible:outline focus-visible:outline-2 focus-visible:outline-emerald-400"
