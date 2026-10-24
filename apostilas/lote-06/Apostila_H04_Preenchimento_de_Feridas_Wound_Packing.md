@@ -208,7 +208,7 @@ O tipo de material empregado determina a velocidade da técnica e a eficácia bi
 
 ### 5.4 Demonstração Técnica e Prática Supervisionada do Empacotamento
 
-![Limites do primeiro respondedor e necessidade de treinamento no preenchimento de feridas](./apostilas/imagens/usm-packing-somente-treinado.svg)
+![Limites do primeiro respondedor e necessidade de treinamento no preenchimento de feridas](../../public/apostilas/imagens/usm-packing-somente-treinado.svg)
 *Figura complementar — Limites do primeiro respondedor e necessidade de treinamento no preenchimento de feridas. Ilustração original União Serviços Médicos (2026), baseada em AHA/Cruz Vermelha 2024; não reproduz imagens de terceiros.*
 
 
