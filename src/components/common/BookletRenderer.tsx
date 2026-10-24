@@ -561,7 +561,7 @@ export const BookletRenderer: React.FC<BookletRendererProps> = React.memo(({ mar
   const articleRef = useRef<HTMLElement>(null);
   const jumpTo = (heading?: string | null) => {
     if (!heading) return;
-    articleRef.current?.querySelector<HTMLElement>('#' + slugify(heading))?.scrollIntoView({ behavior: 'auto', block: 'start' });
+    articleRef.current?.querySelector<HTMLElement>('[id="' + slugify(heading) + '"]')?.scrollIntoView({ behavior: 'auto', block: 'start' });
   };
 
   return (
