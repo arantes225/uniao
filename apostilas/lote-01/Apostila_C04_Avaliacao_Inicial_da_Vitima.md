@@ -105,9 +105,6 @@ Para eliminar essa armadilha fatal, a doutrina mundial de emergência preconiza 
 ---
 
 
-![Figura 1 — Posição Lateral de Segurança (PLS) para proteção da via aérea em vítima inconsciente que respira.](../imagens/Coma_Position.jpg)
-*Figura 1 — Posição Lateral de Segurança (PLS) para proteção da via aérea em vítima inconsciente que respira. Crédito: Department of the Army (EUA). Licença: Domínio público. Fonte: Wikimedia Commons.*
-
 ## SEÇÃO 4 — FUNDAMENTAÇÃO FISIOLÓGICA DOS SINAIS VITAIS
 
 > [!NOTE]
@@ -168,18 +165,19 @@ Para graduar a integridade funcional do sistema nervoso central, o socorrista aj
 
 - **A — Alerta:** A vítima está de olhos abertos espontaneamente, acompanha seus movimentos com o olhar e responde de forma lúcida quando você se aproxima.
 - **V — Responde à Voz (Verbal):** A vítima está de olhos fechados ou sonolenta, mas abre os olhos, move a cabeça ou balbucia palavras quando você fala em tom firme: *"Olá! Você está me ouvindo? Abra os olhos!"*.
-- **D — Responde à Dor / Estímulo Tátil (Doloroso):** A vítima não responde à sua voz. O socorrista realiza estímulo tátil firme, batendo com vigor com as duas mãos sobre ambos os ombros da vítima e chamando em voz alta. Se não responder, aplica-se leve pressão no músculo trapézio (base do pescoço) ou na região supraorbital. A vítima move o braço, contrai o rosto ou emite gemido de dor.
+- **D — Responde a estímulo (D):** A vítima não responde à voz, mas reage a um estímulo firme e não lesivo, como chamar alto e tocar os ombros. Estímulos dolorosos e técnicas de avaliação neurológica são de competência de profissional treinado; não devem atrasar a avaliação da respiração e o acionamento do socorro.
 - **I — Inconsciente (Arresponsiva):** A vítima não apresenta qualquer reação motora, ocular ou verbal a estímulos táteis ou dolorosos. Encontra-se completamente flácida.
 
-
-![Figura 2 — Manobra de inclinação da cabeça e elevação do mento (head-tilt/chin-lift).](../imagens/Head-tilt-chin-lift-maneuver.jpg)
-*Figura 2 — Manobra de inclinação da cabeça e elevação do mento (head-tilt/chin-lift). Crédito: Another-anon-artist-234. Licença: CC0. Fonte: Wikimedia Commons.*
 
 > [!DANGER]
 > **ATENÇÃO: VÍTIMA "I" É UMA EMERGÊNCIA CRÍTICA IMEDIATA**
 > Toda vítima classificada como "I" (Inconsciente) tem alto risco de obstrução mecânica de via aérea pela língua e parada respiratória. Deve-se checar a respiração imediatamente e solicitar socorro avançado (192/193) com prioridade máxima [1, 3].
 
 ### 5.3 Avaliação Dinâmica da Respiração
+
+![Figura 2 — Manobra de inclinação da cabeça e elevação do mento (head-tilt/chin-lift).](../imagens/Head-tilt-chin-lift-maneuver.jpg)
+*Figura 2 — Manobra de inclinação da cabeça e elevação do mento (head-tilt/chin-lift). Crédito: Another-anon-artist-234. Licença: CC0. Fonte: Wikimedia Commons.*
+
 Em uma vítima inconsciente, o socorrista deve avaliar a respiração em **no mínimo 5 e no máximo 10 segundos** [1, 4].
 - **Como posicionar-se:** Ajoelhe-se ao lado do tórax da vítima. Aproxime seu rosto do nariz e boca dela enquanto fixa seu olhar diretamente na linha do tórax e abdome.
 - **O que observar:**
@@ -190,7 +188,7 @@ Em uma vítima inconsciente, o socorrista deve avaliar a respiração em **no m�
 #### Padrões Críticos de Respiração no APH:
 - **Respiração Normal (Eupneia):** Movimento rítmico, silencioso e constante (12 a 20 respirações por minuto no adulto).
 - **Apneia:** Ausência total de movimento torácico e de fluxo aéreo por mais de 10 segundos. A vítima está em parada respiratória/PCR [1].
-- **Respiração Agônica (Gasping):** O tórax ou o abdome movem-se de forma espasmódica, isolada e com ruído de suspiro sufocado a cada 10, 15 ou 20 segundos. **Gasping NÃO é respiração eficaz.** É um reflexo primitivo de morte encefálica. Trate como Parada Cardiorrespiratória e inicie compressões cardíacas imediatamente [1, 4].
+- **Respiração Agônica (Gasping):** O tórax ou o abdome podem mover-se de forma espasmódica, isolada e ruidosa. **Gasping não é respiração normal nem eficaz** e pode ocorrer no início de uma parada cardíaca; não é um sinal de morte encefálica. Em vítima irresponsiva, trate como ausência de respiração normal: acione o serviço de emergência e inicie RCP [1, 4].
 - **Respiração Ruidosa (Ronco ou Estridor):**
   - *Ronco:* Indica obstrução parcial da faringe pela queda da língua em vítimas rebaixadas. Requer alinhamento da cabeça ou abertura de via aérea.
   - *Estridor:* Som metálico agudo estridente na inspiração. Indica edema de glote por anafilaxia ou corpo estranho engasgado na laringe [2].
@@ -206,7 +204,9 @@ Adotado pelos principais consensos mundiais de trauma (PHTLS 10ª Edição e com
 |          Controle IMEDIATO com torniquete comercial ou compressão manual direta.|
 |                                                                                 |
 |  [ A ] - Via Aérea com Controle Cervical (Airway & Cervical spine):             |
-|          Abertura manual da via aérea mantendo a cabeça e pescoço alinhados.    |
+|          No trauma, tente inicialmente a tração da mandíbula. Se ela não abrir  |
+|          a via aérea, use inclinação da cabeça/elevação do mento: oxigenar tem  |
+|          prioridade. Evite movimentos desnecessários, sem atrasar a ventilação. |
 |                                                                                 |
 |  [ B ] - Boa Ventilação e Respiração (Breathing):                               |
 |          Verificação de expansão torácica e integridade da parede do tórax.     |
@@ -238,6 +238,10 @@ Além das ameaças diretas, o socorrista deve estar atento a indicadores de dete
 - **Respiração com uso de musculatura acessória:** Tiragem intercostal (pele afundando entre as costelas ao respirar) e batimento de asas nasais. Indicativo de falência respiratória exaustiva iminente [2].
 
 ### 5.6 Reavaliação Contínua e Monitoramento
+
+![Figura 1 — Posição Lateral de Segurança (PLS) para proteção da via aérea em vítima inconsciente que respira.](../imagens/Coma_Position.jpg)
+*Figura 1 — Posição Lateral de Segurança (PLS) para proteção da via aérea em vítima inconsciente que respira. Crédito: Department of the Army (EUA). Licença: Domínio público. Fonte: Wikimedia Commons.*
+
 A avaliação inicial não é uma foto estática tirada na chegada; ela é um filme em movimento. O estado de uma vítima de trauma ou clínica pode oscilar bruscamente em poucos minutos:
 - **Vítima Instável (Inconsciente, com choque ou dificuldade respiratória):** Reavalie a cada **2 minutos** ininterruptamente até a ambulância chegar.
 - **Vítima Estável (Consciente, orientada, sinais regulares):** Reavalie a cada **5 a 10 minutos** [2, 5].
@@ -265,10 +269,9 @@ A avaliação inicial não é uma foto estática tirada na chegada; ela é um fi
 | Classificação AVDI | Respiração Presente? | Diagnóstico Presuntivo | Conduta Imediata Obrigatória |
 |---|---|---|---|
 | **A (Alerta)** | Sim, normal | Vítima lúcida e estável | Manter em repouso confortável, colher histórico (SAMPLE), monitorar e proteger contra o frio. |
-| **V ou D (Rebaixado)** | Sim, normal | Trauma craniano, intoxicação, choque inicial ou hipoglicemia | Manter via aérea aberta, acionar SAMU 192, manter imobilização cervical se houve trauma. |
-| **I (Inconsciente)** | **SIM, normal** | Coma clínico, síncope profunda, concussão sem parada | **Posição Lateral de Segurança (PLS)** se não houver trauma; manter via aérea pérvia e chamar 192. |
+| **V ou D (Rebaixado)** | Sim, normal | Trauma craniano, intoxicação, choque inicial ou hipoglicemia | Manter via aérea aberta, acionar SAMU 192 e reduzir movimentos desnecessários se houver trauma; não forçar alinhamento cervical. |
+| **I (Inconsciente)** | **SIM, normal** | Coma clínico, síncope profunda, concussão sem parada | Manter via aérea pérvia, acionar 192 e evitar movimentação desnecessária. PLS é uma opção quando não há suspeita de trauma e a via aérea não pode ser mantida de outro modo. |
 | **I (Inconsciente)** | **NÃO ou Gasping** | **PARADA CARDIORRESPIRATÓRIA (PCR)** | **Iniciar RCP imediatamente (100 a 120 compressões/minuto)** e instalar o DEA com urgência máxima. |
-
 
 
 ---
@@ -301,9 +304,6 @@ A avaliação inicial não é uma foto estática tirada na chegada; ela é um fi
 >    - *Por que não fazer:* Choques hipovolêmicos por hemorragias internas ocultas demoram de 10 a 20 minutos para provocar o colapso hemodinâmico completo. Uma vítima que conversa no início pode entrar em parada cardíaca silenciosa minutos depois.
 >    - *Conduta correta:* Mantenha vigilância e monitoramento contínuo a cada 2 a 5 minutos até a entrega da ocorrência.
 
-
-![Figura 5 — Avaliação pupilar e inspeção ocular na abordagem primária.](../imagens/Medic-open-patients-eye-1.png)
-*Figura 5 — Avaliação pupilar e inspeção ocular na abordagem primária. Crédito: Baedr-9439. Licença: CC0. Fonte: Wikimedia Commons.*
 
 ---
 
@@ -428,5 +428,5 @@ IMPRESSÃO GERAL (0-5s)           PROTOCOLO XABCDE                  MONITORAMENT
 | **Status:** | `Aguardando Aprovação Científica` |
 | **Data da Redação:** | 19 de outubro de 2026 |
 | **Versão:** | 1.0.0 |
-| **Validação Científica por IA:** | Conforme diretrizes PHTLS 10ª Ed. e ILCOR/AHA |
+| **Situação científica:** | Revisado editorialmente; requer homologação por profissional habilitado antes do uso instrucional. |
 | **Próxima Revisão:** | Outubro de 2027 |
