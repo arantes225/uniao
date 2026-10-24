@@ -171,6 +171,10 @@ Antes de encostar as mãos na vítima, o socorrista deve fazer uma única pergun
 - **Conduta mandatória:** **AÇÃO IMEDIATA.** Iniciar manobras de desobstrução física sem hesitar.
 
 ### 5.3 Abordagem Sistemática no Adulto Consciente (Manobra de Heimlich)
+
+![Sequência atual de desengasgo no adulto: cinco pancadas dorsais e cinco compressões abdominais](./apostilas/imagens/usm-engasgo-adulto-2025.svg)
+*Figura complementar — Sequência atual de desengasgo no adulto: cinco pancadas dorsais e cinco compressões abdominais. Ilustração original União Serviços Médicos (2026), baseada em AHA 2025; não reproduz material gráfico de terceiros.*
+
 Na obstrução grave em adultos conscientes, as diretrizes AHA 2025 orientam alternar **5 pancadas firmes entre as escápulas** e **5 compressões abdominais**. Repita até a expulsão do objeto ou a perda de consciência. As instruções abaixo descrevem a etapa abdominal [1, 3]:
 
 
@@ -186,7 +190,7 @@ Na obstrução grave em adultos conscientes, as diretrizes AHA 2025 orientam alt
 4. **Execução das Compressões:**
    - Aplique uma série de compressões abdominais rápidas, vigorosas e individualizadas, em um movimento direcionado **para dentro e para cima** (movimento em forma de anzol ou "letra J") [1, 3].
    - Cada compressão deve ser um golpe isolado e com força suficiente para tentar expelir o corpo estranho.
-   - Continue até que o objeto seja expelido ou a vítima perca a consciência.
+   - Alterne os 5 golpes nas costas com 5 compressões abdominais até o objeto sair ou a vítima perder a consciência.
 
 > [!WARNING]
 > **VARIAÇÃO ANATÔMICA: GESTANTES AVANÇADAS E PESSOAS COM OBESIDADE MÓRBIDA**
@@ -195,6 +199,10 @@ Na obstrução grave em adultos conscientes, as diretrizes AHA 2025 orientam alt
 > - Posicione seus braços ao redor do tórax da vítima e aplique **Compressões Torácicas Subesternais** (no centro do osso esterno, na mesma área da massagem cardíaca da RCP), empurrando vigorosamente o tórax para trás em golpes secos [1, 3].
 
 ### 5.4 Particularidades Críticas: Manejo no Lactente e na Criança
+
+![Sequência de desengasgo em lactentes: cinco pancadas nas costas e cinco impulsos torácicos](./apostilas/imagens/usm-engasgo-lactente-2025.svg)
+*Figura complementar — Sequência de desengasgo em lactentes: cinco pancadas nas costas e cinco impulsos torácicos. Ilustração original União Serviços Médicos (2026), baseada em AHA/AAP 2025; não reproduz material gráfico de terceiros.*
+
 
 #### 5.4.1 Protocolo Oficial para Lactentes (Bebês < 1 ano):
 Se o bebê parar de chorar, não emitir som, apresentar tosse muda e ficar arroxeado (cianótico), aplique imediatamente o protocolo de **5 Pancadas Dorsais e 5 Compressões Torácicas** [1, 4]:
@@ -220,8 +228,7 @@ Se o bebê parar de chorar, não emitir som, apresentar tosse muda e ficar arrox
 |                                                                                 |
 | 4. CINCO COMPRESSÕES TORÁCICAS:                                                 |
 |    - No centro do tórax (metade inferior do esterno, entre os mamilos), aplique |
-|      5 compressões com a base de uma mão, deprimindo cerca    |
-|      de 4 cm de profundidade.                                                   |
+|      5 impulsos torácicos com a base de uma mão; não use a regra de profundidade da RCP para esta manobra.                                                   |
 |                                                                                 |
 | 5. CICLO CONTÍNUO:                                                              |
 |    - Repita: 5 pancadas nas costas / 5 compressões no peito até o bebê chorar,  |

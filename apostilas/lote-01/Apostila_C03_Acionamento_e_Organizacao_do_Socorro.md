@@ -166,6 +166,10 @@ Para evitar atrasos no despacho de viaturas, memorize a distinção operacional 
   - O 190 deve ser acionado sempre que a emergência envolver violência interpessoal (ferimentos por arma de fogo ou branca, espancamento, tentativas de agressão ou suspeita de suicídio violento), pois a equipe de saúde do SAMU só ingressa no local após a contenção policial da ameaça [4].
 
 ### 5.2 Informações Essenciais ao Chamado Telefônico
+
+![Informações essenciais ao telefonar para SAMU 192 e Bombeiros 193](./apostilas/imagens/usm-chamada-samu-bombeiros.svg)
+*Figura complementar — Informações essenciais ao telefonar para SAMU 192 e Bombeiros 193. Ilustração original União Serviços Médicos (2026), baseada em Ministério da Saúde — SAMU 192; não reproduz material gráfico de terceiros.*
+
 Ao ligar para o serviço de emergência, o socorrista deve falar de forma calma, clara e pausada. Organize o relato mentalmente segundo o mnemônico **O-N-D-E-V-A-I**:
 
 1. **O (Onde):** Cidade, bairro, rua, número do imóvel e um **ponto de referência inconfundível** (ex.: *"Rua das Palmeiras, 350, em frente à Farmácia Central, no pátio interno da Escola Municipal"*). Em áreas rurais ou rodovias, informe o quilômetro (km) e o sentido da pista.

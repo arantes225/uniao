@@ -160,6 +160,10 @@ A vulnerabilidade ao engasgo varia com a faixa etária [4, 5]:
 - **1 a 4 anos (Pré-escolar):** Fase de alta mobilidade, curiosidade e autonomia. A criança quer comer correndo pela sala de aula. É a faixa etária campeã de óbitos por aspiração alimentar de salsicha, balas duras, pipoca e nozes [2, 3].
 
 ### 5.2 Obstrução por Alimentos em Lactentes (0 a 12 meses)
+
+![Desengasgo grave em bebê com cabeça apoiada e alternância de cinco e cinco](./apostilas/imagens/usm-engasgo-lactente-2025.svg)
+*Figura complementar — Desengasgo grave em bebê com cabeça apoiada e alternância de cinco e cinco. Ilustração original União Serviços Médicos (2026), baseada em AHA/AAP 2025; não reproduz material gráfico de terceiros.*
+
 Quando um bebê engasga durante a amamentação ou ingestão de purês, a identificação inicial depende do olhar atento da educadora do berçário [1, 4]:
 - **Sinais:** O bebê para de mamar de repente, arregala os olhos com olhar aterrorizado, abre a boca sem conseguir emitir choro, tosse com som inaudível e a região perioral (ao redor dos lábios) começa a ficar arroxeada (*cianose perioral*).
 

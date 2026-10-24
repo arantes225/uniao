@@ -194,6 +194,10 @@ A biomecânica na criança equilibra força e delicadeza para deprimir o tórax 
 *Figura 3 — Técnica de ventilação com bolsa-válvula-máscara executada por dois socorristas. Crédito: Baedr-9439. Licença: CC0. Fonte: Wikimedia Commons.*
 
 ### 5.4 Técnica da Ressuscitação no Lactente (Bebês < 1 ano)
+
+![Posicionamento e etapas da RCP em bebê conforme atualização pediátrica](./apostilas/imagens/usm-rcp-lactente-2025.svg)
+*Figura complementar — Posicionamento e etapas da RCP em bebê conforme atualização pediátrica. Ilustração original União Serviços Médicos (2026), baseada em AHA/AAP 2025; não reproduz material gráfico de terceiros.*
+
 No lactente, a AHA/AAP 2025 recomenda compressões com dois polegares envolvendo o tórax ou com a base de uma mão. A técnica de dois dedos não é recomendada, pois pode não atingir a profundidade adequada [1, 2]:
 
 ```
