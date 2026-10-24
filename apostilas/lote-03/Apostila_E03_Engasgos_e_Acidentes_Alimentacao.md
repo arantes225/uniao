@@ -106,9 +106,6 @@ A perda de oxigenação cerebral em crianças instala-se com velocidade aterrado
 ---
 
 
-![Figura 1 — Manobra de inclinação da cabeça e elevação do mento (head-tilt/chin-lift).](../imagens/Head-tilt-chin-lift-maneuver.jpg)
-*Figura 1 — Manobra de inclinação da cabeça e elevação do mento (head-tilt/chin-lift). Crédito: Another-anon-artist-234. Licença: CC0. Fonte: Wikimedia Commons.*
-
 ## SEÇÃO 4 — FISIOLOGIA DO DESENVOLVIMENTO INFANTIL E MECANISMOS DA ASPIRAÇÃO
 
 > [!NOTE]
@@ -161,7 +158,11 @@ A vulnerabilidade ao engasgo varia com a faixa etária [4, 5]:
 
 ### 5.2 Obstrução por Alimentos em Lactentes (0 a 12 meses)
 
-![Desengasgo grave em bebê com cabeça apoiada e alternância de cinco e cinco](../../public/apostilas/imagens/usm-engasgo-lactente-2025.svg)
+![Esquema de bebê apoiado nas duas posições do desengasgo grave: pancadas nas costas e impulsos no tórax.](../imagens/usm-desengasgo-lactente-posicoes.svg)
+*Ilustração autoral USM — alternância de cinco pancadas dorsais e cinco impulsos torácicos conforme AHA/AAP 2025; requer treinamento prático.*
+
+
+![Desengasgo grave em bebê com cabeça apoiada e alternância de cinco e cinco](../imagens/usm-engasgo-lactente-2025.svg)
 *Figura complementar — Desengasgo grave em bebê com cabeça apoiada e alternância de cinco e cinco. Ilustração original União Serviços Médicos (2026), baseada em AHA/AAP 2025; não reproduz material gráfico de terceiros.*
 
 Quando um bebê engasga durante a amamentação ou ingestão de purês, a identificação inicial depende do olhar atento da educadora do berçário [1, 4]:
@@ -175,6 +176,10 @@ Quando um bebê engasga durante a amamentação ou ingestão de purês, a identi
 5. Repita o ciclo até o alimento ser golfado para fora ou a criança chorar. Se o bebê perder a consciência, inicie RCP imediata [1].
 
 ### 5.3 Obstrução em Crianças em Idade Pré-Escolar e Escolar
+
+![Figura 3 — Compressões abdominais em vítima consciente (manobra de Heimlich).](../imagens/Abdominal_thrusts_against_choking_cropped_.jpg)
+*Figura 3 — Compressões abdominais em vítima consciente (manobra de Heimlich). Crédito: US Army Medical Department Center and School. Licença: Domínio público. Fonte: Wikimedia Commons.*
+
 Em crianças maiores de 1 ano que já ficam em pé, o socorrista deve avaliar imediatamente a capacidade de tossir [1, 4]:
 - **Se a criança tossir forte e chorar alto:** Não bata nas costas. Incentive: *"Tussa com força, coloca para fora!"*. Apenas acompanhe.
 - **Se a criança colocar as mãos no pescoço, não conseguir falar e apresentar tosse muda:**
@@ -188,7 +193,6 @@ Em crianças maiores de 1 ano que já ficam em pé, o socorrista deve avaliar im
 A conduta perante engasgos por substâncias líquidas difere dos alimentos sólidos compactos [2, 5]:
 - **Engasgo com Líquidos / Leite Materno:** Na maioria das vezes, o bebê tosse e golfa espontaneamente. Coloque o bebê em pé encostado no seu ombro (posição de arrotar) e dê tapinhas suaves nas costas para ajudar o ar residual a subir. Só inicie o protocolo de 5 pancadas se o bebê apresentar bloqueio total da respiração e cianose.
 - **Alimentos pegajosos:** podem causar obstrução. Se a criança consegue tossir com força, estimule a tosse. Na obstrução grave, use as manobras para a idade. Se perder a consciência, inicie RCP. **Retire apenas objeto claramente visível; nunca explore a boca com os dedos.** [AHA/AAP 2025]
-
 
 
 ### 5.5 Protocolos de Prevenção e Preparação Segura de Alimentos em Creches
@@ -256,9 +260,6 @@ O plano de segurança escolar deve conter um **Protocolo de Resposta ao Engasgo 
 | **4. Alerta 192** | Segunda educadora liga 192 pelo viva-voz simultaneamente. | Informar asfixia por alimento na creche da escola. | **Em paralelo** |
 | **5. Suporte** | Se desmaiar: apoiar no solo e **iniciar compressões de RCP**. | Olhar a boca antes de tentar ventilar (sem varrer cego). | **Imediato** |
 
-
-![Figura 3 — Compressões abdominais em vítima consciente (manobra de Heimlich).](../imagens/Abdominal_thrusts_against_choking_cropped_.jpg)
-*Figura 3 — Compressões abdominais em vítima consciente (manobra de Heimlich). Crédito: US Army Medical Department Center and School. Licença: Domínio público. Fonte: Wikimedia Commons.*
 
 ---
 
@@ -414,7 +415,7 @@ VULNERABILIDADE INFANTIL         PREVENÇÃO E CORTE SEGURO          CONDUTA NA 
 | **Status:** | `Aguardando Aprovação Científica` |
 | **Data da Redação:** | 19 de outubro de 2026 |
 | **Versão:** | 1.0.0 |
-| **Validação Científica por IA:** | Conforme diretrizes SBP, AAP Pediatric Choking e MEC/PNAE |
+| **Situação científica:** | Revisado editorialmente; requer homologação pediátrica antes do uso instrucional. |
 | **Próxima Revisão:** | Outubro de 2027 |
 
 
