@@ -167,7 +167,7 @@ Para evitar atrasos no despacho de viaturas, memorize a distinção operacional 
 
 ### 5.2 Informações Essenciais ao Chamado Telefônico
 
-![Informações essenciais ao telefonar para SAMU 192 e Bombeiros 193](./apostilas/imagens/usm-chamada-samu-bombeiros.svg)
+![Informações essenciais ao telefonar para SAMU 192 e Bombeiros 193](../../public/apostilas/imagens/usm-chamada-samu-bombeiros.svg)
 *Figura complementar — Informações essenciais ao telefonar para SAMU 192 e Bombeiros 193. Ilustração original União Serviços Médicos (2026), baseada em Ministério da Saúde — SAMU 192; não reproduz material gráfico de terceiros.*
 
 Ao ligar para o serviço de emergência, o socorrista deve falar de forma calma, clara e pausada. Organize o relato mentalmente segundo o mnemônico **O-N-D-E-V-A-I**:
