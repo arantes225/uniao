@@ -69,11 +69,11 @@ Treine identificar, com fotos e simulação, quando pressão direta deve começa
 ## SEÇÃO 1 — EM 30 SEGUNDOS
 
 > **VISÃO RÁPIDA DE IDENTIFICAÇÃO DE SANGRAMENTO LETAL**
-> 1. **Reconheça antes de tocar:** O sangue que jorra em jato pulsátil, a poça que cresce a olhos vistos no chão e as roupas encharcadas de sangue vivo denunciam **sangramento potencialmente fatal que mata em 180 segundos** [1, 2].
+> 1. **Reconheça antes de tocar:** sangue que jorra, forma poça crescente, encharca roupas/curativos rapidamente ou acompanha palidez, confusão e fraqueza pode indicar hemorragia ameaçadora à vida. Controle-a sem demora e acione o resgate [1, 2].
 > 2. **A regra suprema da autoproteção:** *"Vítima viva não justifica socorrista ferido"*. Se a cena oferecer perigo iminente (vidros caindo, tráfego descontrolado, agressor armado ou maquinário ligado), não entre. Use Equipamentos de Proteção Individual (luvas) sempre [2, 3].
 > 3. **O "X" vem antes do "A":** Pare o sangramento exsanguinante primeiro. Se uma artéria femoral está jorrando, aplicar colar cervical ou checar a boca da vítima é perder os últimos mililitros vitais de sangue do paciente [1, 4].
-> 4. **Três locais anatômicos de sangramento:** Extremidades (braços e pernas = **Torniquete**); Junções (virilha, axila e pescoço = **Wound Packing / Preenchimento de ferida com compressão contínua**); Tronco (tórax e abdômen = **Transporte cirúrgico urgente, incompressível por socorristas**) [1, 2].
-> 5. **O sangue espalhado assusta, mas precisa de método analítico:** Um ferimento na testa sangra muito e parece catastrófico, mas raramente mata em poucos minutos. Por outro lado, uma perfuração profunda na virilha sangra para dentro e para fora de forma silenciosa e mata em menos de 3 minutos [3, 5].
+> 4. **Localização importa:** extremidades podem exigir pressão direta e, em hemorragia ameaçadora à vida, torniquete por pessoa treinada. Virilha e axila exigem pressão direta; *wound packing* é técnica de treinado. Pescoço, tórax e abdome não são locais para *wound packing* por leigos: cubra/proteja como apropriado e transporte urgente [1, 2].
+> 5. **Não subestime nem cronometre a hemorragia:** a aparência da ferida não permite prever volume perdido ou tempo até colapso. Trate sangramento persistente/importante e sinais de choque como urgência, independentemente da localização [3, 5].
 > 6. **Acione o 192 com dados precisos e estruturados:** Ao ligar para a regulação médica do SAMU, afirme taxativamente: *"Hemorragia grave ativa de grande vaso com torniquete aplicado e choque evidente"*. Isso garante o envio prioritário de Suporte Avançado de Vida (USA) tripulado por médico e com capacidade de reposição hemodinâmica [2, 6].
 
 ---
@@ -143,6 +143,14 @@ O sistema arterial funciona como uma rede de distribuição hidráulica de alta 
 
 ### 5.1 Identificação Imediata de Hemorragias com Ameaça à Vida
 
+![Três sinais exemplificativos de sangramento intenso: tecido encharcado, fluxo contínuo e poça crescente.](../imagens/usm-sinais-sangramento-grave.svg)
+*Ilustração autoral USM — sinais possíveis de hemorragia grave; não espere todos aparecerem para prestar socorro.*
+
+
+![Figura 3 — Pele mosqueada (livedo/vasoconstrição periférica) como sinal clínico precoce de hipoperfusão e choque.](../imagens/Mottled-skin.jpg)
+*Figura 3 — Pele mosqueada (livedo/vasoconstrição periférica) como sinal clínico precoce de hipoperfusão e choque. Crédito: Another-anon-artist-234. Licença: CC0. Fonte: Wikimedia Commons.*
+
+
 A doutrina do *American College of Surgeons Committee on Trauma* e do programa *STOP THE BLEED®* padronizou **quatro marcadores visuais universais** para que qualquer pessoa identifique uma hemorragia grave imediatamente [1, 2]:
 
 ```
@@ -204,7 +212,11 @@ A primeira regra inegociável de qualquer atendimento pré-hospitalar é a prese
 
 ### 5.4 Priorização Dinâmica de Medidas de Contenção de Sangramento
 
-![Primeira decisão diante de perda sanguínea intensa](../../public/apostilas/imagens/usm-compressao-direta.svg)
+![Figura 2 — Estação prática de controle de sangramentos ameaçadores Ã  vida.](../imagens/STOP_THE_BLEED_Course_8209645_.jpg)
+*Figura 2 — Estação prática de controle de sangramentos ameaçadores Ã  vida. Crédito: U.S. Air Force, Staff Sgt. Juan Paz. Licença: Domínio público. Fonte: Wikimedia Commons.*
+
+
+![Primeira decisão diante de perda sanguínea intensa](../imagens/usm-compressao-direta.svg)
 *Figura complementar — Primeira decisão diante de perda sanguínea intensa. Ilustração original União Serviços Médicos (2026), baseada em AHA/Cruz Vermelha 2024; não reproduz imagens de terceiros.*
 
 
@@ -261,9 +273,6 @@ O profissional treinado e o cidadão socorrista devem conhecer com clareza a fro
 - **PROIBIÇÃO 4: NUNCA afrouxe o torniquete periodicamente:** A antiga instrução errônea de "afrouxar o torniquete a cada 15 minutos para oxigenar o membro" foi banida da medicina moderna mundial. Afrouxar o dispositivo provoca perda sanguínea maciça, choque e óbito. O torniquete só deve ser manipulado por cirurgiões no bloco cirúrgico [1, 4].
 
 
-![Figura 2 — Estação prática de controle de sangramentos ameaçadores Ã  vida.](../imagens/STOP_THE_BLEED_Course_8209645_.jpg)
-*Figura 2 — Estação prática de controle de sangramentos ameaçadores Ã  vida. Crédito: U.S. Air Force, Staff Sgt. Juan Paz. Licença: Domínio público. Fonte: Wikimedia Commons.*
-
 ---
 
 ---
@@ -313,9 +322,6 @@ O profissional treinado e o cidadão socorrista devem conhecer com clareza a fro
 > [!CAUTION]
 > **Erro que pode prejudicar a vítima:** Nunca coloque torniquete no pescoço, no tronco ou sobre uma articulação. Em axila e virilha, mantenha pressão direta; preenchimento de feridas exige prática supervisionada e material adequado.
 
-
-![Figura 3 — Pele mosqueada (livedo/vasoconstrição periférica) como sinal clínico precoce de hipoperfusão e choque.](../imagens/Mottled-skin.jpg)
-*Figura 3 — Pele mosqueada (livedo/vasoconstrição periférica) como sinal clínico precoce de hipoperfusão e choque. Crédito: Another-anon-artist-234. Licença: CC0. Fonte: Wikimedia Commons.*
 
 1. **Assustar-se com sangue espalhado na face e esquecer as pernas:** Ferimentos no couro cabeludo ou nariz sangram profusamente pela alta vascularização dérmica, mas raramente causam choque em poucos minutos. Um corte puntiforme na coxa que atinge a artéria femoral profunda pode drenar 2 litros de sangue silenciosamente para dentro da roupa enquanto o socorrista limpa o rosto da vítima [2, 3].
 2. **Afrouxar o torniquete para "ver se o sangramento parou":** Soltar a pressão de um torniquete comercial após a sua fixação drena todo o sangue novo acumulado, desfaz os primeiros trombos fisiológicos e precipita o choque hipovolêmico irreversível. **O torniquete é mantido fechado até o cirurgião assumir o paciente** [1, 4].
