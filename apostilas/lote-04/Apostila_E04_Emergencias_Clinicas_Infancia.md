@@ -160,7 +160,7 @@ Desenvolvido pela Academia Americana de Pediatria (AAP), o **Triângulo de Avali
 
 ### 5.1 Convulsões Febris e Crises Convulsivas Pediátricas
 
-![Ações iniciais durante crise convulsiva e sinais para chamar emergência](../../public/apostilas/imagens/usm-convulsao-primeiros-socorros.svg)
+![Ações iniciais durante crise convulsiva e sinais para chamar emergência](../imagens/usm-convulsao-primeiros-socorros.svg)
 *Figura complementar — Ações iniciais durante crise convulsiva e sinais para chamar emergência. Ilustração original União Serviços Médicos (2026), baseada em AHA/Cruz Vermelha 2024; não reproduz imagens de terceiros.*
 
 Quando uma criança apresentar movimentos involuntários espasmódicos e perda de consciência na sala de aula ou berçário [1, 2]:
@@ -171,9 +171,6 @@ Quando uma criança apresentar movimentos involuntários espasmódicos e perda d
 5. **Cronometre o tempo no relógio:** Se a crise passar de **5 minutos contínuos**, trata-se de estado de mal convulsivo que exige aplicação de anticonvulsivante venoso pelo SAMU 192 [1, 2].
 6. **Pós-crise:** Quando os abalos cessarem, coloque a criança em **Posição Lateral de Segurança (PLS)** para que a saliva e secreções escorram suavemente pela boca.
 
-
-![Figura 2 — Aplicação intramuscular de autoinjetor de adrenalina na face anterolateral da coxa.](../imagens/Epinephrine-injection.png)
-*Figura 2 — Aplicação intramuscular de autoinjetor de adrenalina na face anterolateral da coxa. Crédito: Baedr-9439. Licença: CC0. Fonte: Wikimedia Commons.*
 
 ### 5.2 Crises Asmáticas e Broncoespasmo Agudo na Infância
 A crise de asma em crianças pequenas manifesta-se com tosse seca persistente que piora à noite ou após brincadeiras de correr, cansaço no peito e chiado sonoro [4]:
@@ -234,6 +231,10 @@ Desmaios em escolas ocorrem comumente durante formaturas em pé no sol quente, a
 - A criança costuma despertar em menos de 1 minuto. Mantenha-a deitada por mais 5 minutos antes de permitir que se sente devagar [6].
 
 ### 5.6 Reconhecimento Precoce de Situações de Emergência Pediátrica
+
+![Figura 2 — Aplicação intramuscular de autoinjetor de adrenalina na face anterolateral da coxa.](../imagens/Epinephrine-injection.png)
+*Figura 2 — Aplicação intramuscular de autoinjetor de adrenalina na face anterolateral da coxa. Crédito: Baedr-9439. Licença: CC0. Fonte: Wikimedia Commons.*
+
 O educador deve guiar-se pela seguinte regra de ouro da pediatria de emergência:
 - *Criança que chora, esperneia e grita:* Tem boa oxigenação cerebral, via aérea aberta e energia muscular. É uma situação controlável.
 - *Criança silenciosa, apática, molenga e de olhar vago:* Está em colapso compensatório iminente. O organismo infantil esgotou suas reservas de energia. Trate como prioridade máxima e acione o suporte médico do SAMU 192 [2, 3].
@@ -433,5 +434,5 @@ CONVULSÃO FEBRIL SIMPLES        CRISE DE ASMA INFANTIL           FEBRE COM ALAR
 | **Status:** | `Aguardando Aprovação Científica` |
 | **Data da Redação:** | 19 de outubro de 2026 |
 | **Versão:** | 1.0.0 |
-| **Validação Científica por IA:** | Conforme diretrizes SBP Neurologia, AAP PEPP e GINA Pediatric |
+| **Situação científica:** | Revisado editorialmente; requer homologação pediátrica antes do uso instrucional. |
 | **Próxima Revisão:** | Outubro de 2027 |
