@@ -1,12 +1,12 @@
 import { useState } from 'react';
-import { Building2, ChevronRight, Dumbbell, FolderOpen, School } from 'lucide-react';
+import { Building2, ChevronRight, Dumbbell, Droplets, FolderOpen, School } from 'lucide-react';
 import { useTheme } from '../../context/ThemeContext';
 import { simulationFolders } from '../../data/simulator';
 import type { SimulationCase, SimulationEnvironment } from '../../data/simulator/types';
 import { ClinicalScenario } from './ClinicalScenario';
 import { CharacterGallery } from './CharacterGallery';
 import { SchoolPatientGallery } from './SchoolPatientGallery';
-const environmentIcons = { academia: Dumbbell, escola: School, empresa: Building2 };
+const environmentIcons = { academia: Dumbbell, escola: School, empresa: Building2, 'stop-the-bleed': Droplets };
 export const SimulatorCatalog = () => {
   const { theme } = useTheme();
   const dark = theme === 'dark';
@@ -49,3 +49,4 @@ export const SimulatorCatalog = () => {
     </div>
   </div>;
 };
+
