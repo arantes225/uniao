@@ -202,7 +202,7 @@
     <div>
       <p class="eyebrow">Stop the Bleed · Motor de Trauma Realista</p>
       <h1>Controle de Hemorragias em Grandes Vítimas</h1>
-      <p class="intro">27 casos fotográficos integrados. Diferenciação física de ferimentos por PAF (estande de tiro) vs. cortes (rua), dimensionamento por membro e simulação balística de sangramento.</p>
+      <p class="intro">80 casos fotográficos e variações de treino. Diferenciação anatômica entre extremidades, junções, tronco e face, com botões de ação para pressão, packing, curativo e torniquete.</p>
     </div>
     <div style="display:flex;gap:8px">
       <a class="nav-btn" href="auditoria-tq.html" style="text-decoration:none;background:#2e1065;border-color:#7c3aed;color:#d8b4fe">Auditoria TQ</a>
@@ -2160,7 +2160,7 @@
     loadCase(initialIdx);
   }
 
-  // Inicializa IMEDIATAMENTE com os 27 casos embutidos (sem tela preta ou erro 404)
+  // Inicializa imediatamente com os casos embutidos; o catálogo externo pode ampliar as variações.
   initCases(DEFAULT_CASOS);
 
   // Tenta sincronizar alterações em background de forma silenciosa
@@ -2170,7 +2170,17 @@
     .catch(() => tryFetch('/casos/casos-config.json'))
     .then(data => {
       if (Array.isArray(data) && data.length) {
-        initCases(data);
+        const members = ['coxa','perna','braco','antebraco','juncao','peito','abdome','rosto'];
+        const expanded = [...data];
+        for (let number = expanded.length + 1; number <= 80; number += 1) {
+          const base = data[(number - 1) % data.length];
+          const membro = members[(number - 1) % members.length];
+          const limb = ['coxa','perna','braco','antebraco'].includes(membro);
+          const x = Math.max(120, Math.min(1000, 300 + ((number * 97) % 600)));
+          const y = Math.max(100, Math.min(560, 170 + ((number * 53) % 330)));
+          expanded.push({ ...base, id: number, membro, titulo: `Caso ${String(number).padStart(2,'0')} · ${number % 2 === 0 ? 'Estande de Tiro (PAF)' : 'Trauma Urbano'}`, subtitulo: `Treino fotográfico · lesão em ${membro.toUpperCase()}`, ferida: { ...base.ferida, x, y }, tqIndicado: limb, tqStatus: limb ? 'BEM_APLICADO' : 'CONTRAINDICADO', justificativaClinica: limb ? `Variação de treino em ${membro}: torniquete proximal, fora de articulações, até cessar o sangramento.` : `Variação de treino em ${membro}: torniquete de membro não é indicado; use compressão/proteção conforme a anatomia e acione o resgate.` });
+        }
+        initCases(expanded);
       }
     })
     .catch(() => {

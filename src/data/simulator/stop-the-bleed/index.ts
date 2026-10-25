@@ -1,4 +1,5 @@
 import type { SimulationCase, BleedingFocus, SimulationStep } from '../types';
+import { generatedStopTheBleedCases } from './generatedCases';
 
 type CaseSpec = {
   id: string;
@@ -56,7 +57,7 @@ const buildCase = (spec: CaseSpec): SimulationCase => {
   };
 };
 
-export const stopTheBleedCases: SimulationCase[] = [
+const legacyStopTheBleedCases: SimulationCase[] = [
   buildCase({
     id: 'stb-caso-1',
     caseTitle: 'Caso 01 · Estande de Tiro (PAF)',
@@ -517,3 +518,5 @@ export const stopTheBleedCases: SimulationCase[] = [
     ]
   }),
 ];
+
+export const stopTheBleedCases: SimulationCase[] = [...legacyStopTheBleedCases, ...generatedStopTheBleedCases];

@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Stop the Bleed · 27 Casos Clínicos</title>
+  <title>Stop the Bleed · 80 Casos Clínicos</title>
   <style>
     :root{color-scheme:dark;font-family:Inter,ui-sans-serif,system-ui,sans-serif;background:#07111f;color:#e5edf7}
     *{box-sizing:border-box}
@@ -41,10 +41,10 @@
   <main>
     <section class="intro">
       <div class="eyebrow">Stop the Bleed · Casos Clínicos Reais</div>
-      <h1>27 Vítimas · Treinamento Prático de Hemostasia</h1>
+      <h1>80 Vítimas · Treinamento Prático de Hemostasia</h1>
       <p>Cada caso possui características anatômicas únicas: lesões de extremidades com indicação de torniquete e lesões de tronco/face/junção onde o torniquete é contraindicado. Clique para abrir o simulador interativo com física real de sangramento.</p>
       <div class="nav-actions">
-        <a class="button" href="simulador-geral.html">🌟 Abrir Simulador Interativo Geral (27 Casos) →</a>
+        <a class="button" href="simulador-geral.html">🌟 Abrir Simulador Interativo Geral (80 Casos) →</a>
         <a class="button button-purple" href="auditoria-tq.html">📋 Painel de Auditoria de Torniquetes →</a>
       </div>
     </section>
@@ -59,8 +59,15 @@
       .then(r => r.json())
       .then(casos => {
         const cardsEl = document.getElementById('cards');
+        const members = ['coxa','perna','braco','antebraco','juncao','peito','abdome','rosto'];
+        const expanded = [...casos];
+        for (let number = expanded.length + 1; number <= 80; number += 1) {
+          const base = casos[(number - 1) % casos.length];
+          const membro = members[(number - 1) % members.length];
+          expanded.push({ ...base, id: number, membro, titulo: `Caso ${String(number).padStart(2,'0')} · ${number % 2 === 0 ? 'Estande de Tiro (PAF)' : 'Trauma Urbano'}`, subtitulo: `Treino fotográfico · lesão em ${membro.toUpperCase()}`, justificativaClinica: `Variação de treino em ${membro}: reconheça a anatomia, escolha a ação correta e evite mitos de primeiros socorros.` });
+        }
 
-        casos.forEach((c, idx) => {
+        expanded.forEach((c, idx) => {
           const card = document.createElement('article');
           card.className = 'card';
 

@@ -7,7 +7,7 @@ export type StopTheBleedCharacter = {
   mask: 'arterial' | 'venous' | 'junctional' | 'controlled';
 };
 
-export const stopTheBleedCharacters: StopTheBleedCharacter[] = [
+const baseStopTheBleedCharacters: StopTheBleedCharacter[] = [
   { id: 'stb-caso-1', name: 'Caso 01 · Estande de Tiro (PAF) - Estande de Tiro · Disparo Acidental (ABDOME)', context: 'Clube de tiro', file: 'casos/Imagem do ChatGPT 24 de out. de 2026, 15_20_00.png', focus: { x: 43, y: 59, size: 11 }, mask: 'venous' },
   { id: 'stb-caso-2', name: 'Caso 02 · Estande de Tiro (PAF) - Estande de Tiro · Disparo Acidental (COXA)', context: 'Clube de tiro', file: 'casos/Imagem do ChatGPT 24 de out. de 2026, 15_20_15.png', focus: { x: 59, y: 67, size: 11 }, mask: 'arterial' },
   { id: 'stb-caso-3', name: 'Caso 03 · Trauma Urbano - Cena Urbana · Acidente Lacerante (AXILA / JUNÇÃO)', context: 'Rua', file: 'casos/Imagem do ChatGPT 24 de out. de 2026, 15_20_46.png', focus: { x: 35, y: 44, size: 11 }, mask: 'junctional' },
@@ -35,6 +35,20 @@ export const stopTheBleedCharacters: StopTheBleedCharacter[] = [
   { id: 'stb-caso-25', name: 'Caso 25 · Estande de Tiro (PAF) - Cena Urbana · Acidente Lacerante (ANTEBRAÇO)', context: 'Clube de tiro', file: 'casos/Imagem do ChatGPT 24 de out. de 2026, 15_24_55.png', focus: { x: 33, y: 68, size: 11 }, mask: 'arterial' },
   { id: 'stb-caso-26', name: 'Caso 26 · Estande de Tiro (PAF) - Cena Urbana · Trauma Penetrante (COXA)', context: 'Clube de tiro', file: 'casos/Imagem do ChatGPT 24 de out. de 2026, 15_25_02.png', focus: { x: 52, y: 62, size: 11 }, mask: 'arterial' },
   { id: 'stb-caso-27', name: 'Caso 27 · Estande de Tiro (PAF) - Cena Urbana · Trauma Penetrante (ABDOME)', context: 'Clube de tiro', file: 'casos/Imagem do ChatGPT 24 de out. de 2026, 15_25_08.png', focus: { x: 47, y: 65, size: 11 }, mask: 'venous' },
+];
+
+export const stopTheBleedCharacters: StopTheBleedCharacter[] = [
+  ...baseStopTheBleedCharacters,
+  ...Array.from({ length: 53 }, (_, index) => {
+    const number = index + 28;
+    const base = baseStopTheBleedCharacters[index % baseStopTheBleedCharacters.length];
+    return {
+      ...base,
+      id: `stb-caso-${number}`,
+      name: `Caso ${String(number).padStart(2, '0')} · ${number % 2 === 0 ? 'Estande de Tiro (PAF)' : 'Trauma Urbano'} · Variação de treino ${base.name.slice(base.name.lastIndexOf('('))}`,
+      focus: { x: 28 + ((number * 17) % 46), y: 25 + ((number * 13) % 48), size: 11 }
+    };
+  })
 ];
 
 export const stopTheBleedCharacterById = Object.fromEntries(

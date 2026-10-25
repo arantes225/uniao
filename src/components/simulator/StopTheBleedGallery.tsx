@@ -25,7 +25,7 @@ export function StopTheBleedGallery({ onSelectCase }: { onSelectCase?: (index: n
       <div className="flex flex-wrap items-center justify-between gap-4 rounded-2xl border border-white/10 bg-slate-900/80 p-5 backdrop-blur-md">
         <div>
           <span className="text-[10px] font-black uppercase tracking-widest text-red-400">Ambiente Stop the Bleed</span>
-          <h3 id="stb-gallery-heading" className="text-xl font-bold text-white">Galeria dos 27 Cenários Clínicos</h3>
+          <h3 id="stb-gallery-heading" className="text-xl font-bold text-white">Galeria dos 80 Cenários Clínicos</h3>
           <p className="mt-1 text-sm text-slate-300">
             Casos fotográficos reais de estande de tiro e trauma urbano para treino de hemostasia rápida.
           </p>
@@ -71,41 +71,41 @@ export function StopTheBleedGallery({ onSelectCase }: { onSelectCase?: (index: n
           onClick={() => setFilter('todos')}
           className={`rounded-xl px-3.5 py-1.5 text-xs font-bold transition-all ${filter === 'todos' ? 'bg-red-600 text-white' : 'border border-white/10 bg-slate-900/60 text-slate-300 hover:bg-white/5'}`}
         >
-          Todos (27 casos)
+          Todos (80 casos)
         </button>
         <button
           type="button"
           onClick={() => setFilter('extremidade')}
           className={`rounded-xl px-3.5 py-1.5 text-xs font-bold transition-all ${filter === 'extremidade' ? 'bg-emerald-600 text-white' : 'border border-white/10 bg-slate-900/60 text-slate-300 hover:bg-white/5'}`}
         >
-          Extremidades (17 - Torniquete Indicado)
+          Extremidades (variações com torniquete)
         </button>
         <button
           type="button"
           onClick={() => setFilter('tronco')}
           className={`rounded-xl px-3.5 py-1.5 text-xs font-bold transition-all ${filter === 'tronco' ? 'bg-purple-600 text-white' : 'border border-white/10 bg-slate-900/60 text-slate-300 hover:bg-white/5'}`}
         >
-          Tórax & Abdome (7 - Selo / Compressão)
+          Tórax & Abdome (sem torniquete)
         </button>
         <button
           type="button"
           onClick={() => setFilter('rosto')}
           className={`rounded-xl px-3.5 py-1.5 text-xs font-bold transition-all ${filter === 'rosto' ? 'bg-rose-600 text-white' : 'border border-white/10 bg-slate-900/60 text-slate-300 hover:bg-white/5'}`}
         >
-          Rosto & Cervical (2 - Compressão Direta)
+          Rosto & Cervical (compressão focal)
         </button>
         <button
           type="button"
           onClick={() => setFilter('juncao')}
           className={`rounded-xl px-3.5 py-1.5 text-xs font-bold transition-all ${filter === 'juncao' ? 'bg-amber-600 text-white' : 'border border-white/10 bg-slate-900/60 text-slate-300 hover:bg-white/5'}`}
         >
-          Axila (1 - Wound Packing)
+          Axila / Virilha (packing treinado)
         </button>
       </div>
 
       {/* Grid com os 27 personagens */}
       <div className="grid gap-3.5 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
-        {filteredCharacters.map((c, i) => {
+        {filteredCharacters.map(c => {
           const isJuncao = c.mask === 'junctional';
           const isTronco = c.name.toLowerCase().includes('peito') || c.name.toLowerCase().includes('tórax') || c.name.toLowerCase().includes('abdome');
           const isRosto = c.name.toLowerCase().includes('rosto') || c.name.toLowerCase().includes('pescoço');
@@ -156,7 +156,7 @@ export function StopTheBleedGallery({ onSelectCase }: { onSelectCase?: (index: n
                 {onSelectCase && (
                   <button
                     type="button"
-                    onClick={() => onSelectCase(i)}
+                    onClick={() => onSelectCase(Number(c.id.replace(/\D/g, '')) - 1)}
                     className="mt-2 w-full rounded-xl bg-slate-800 hover:bg-slate-700 py-1.5 text-center text-xs font-bold text-slate-200 transition-colors"
                   >
                     Iniciar Caso →

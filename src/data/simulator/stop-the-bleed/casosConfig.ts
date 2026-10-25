@@ -1,3 +1,5 @@
+import { generatedStopTheBleedVisualCases } from './generatedVisualCases';
+
 export type CasoStopTheBleed = {
   id: number;
   file: string;
@@ -739,7 +741,8 @@ export const casosStopTheBleed: CasoStopTheBleed[] = [
     "tqIndicado": false,
     "tqStatus": "CONTRAINDICADO_ABDOME",
     "justificativaClinica": "Ferimento perfurante no ABDOME. O torniquete é completamente contraindicado para lesões de tronco. Conduta mandatória: Cobertura com curativo estéril, compressão direta cuidadosa sem invaginação de gaze em vísceras e rápida evacuação para centro cirúrgico."
-  }
+  },
+  ...generatedStopTheBleedVisualCases,
 ];
 
 export function getCasoById(id: number | string): CasoStopTheBleed {

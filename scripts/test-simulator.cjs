@@ -8,6 +8,7 @@ const { renderToStaticMarkup } = require('react-dom/server');
 const root = path.resolve(__dirname, '..');
 const hash = value => crypto.createHash('sha256').update(value).digest('hex');
 const manifest = require('./simulator-approved-assets.json');
+const schoolGallerySource = fs.readFileSync(path.join(root, 'src/components/simulator/SchoolPatientGallery.tsx'), 'utf8');
 
 for (const asset of manifest.assets) {
   assert.equal(hash(fs.readFileSync(path.join(root, asset.path))), asset.sha256, `Approved asset changed: ${asset.path}`);
@@ -25,7 +26,7 @@ buildSync({
 global.localStorage = { getItem: () => 'dark' };
 const { simulationFolders, SimulatorCatalog, ClinicalScenario, ThemeProvider } = require(bundle);
 assert.deepEqual(simulationFolders.map(folder => folder.id), ['academia', 'escola', 'empresa', 'stop-the-bleed']);
-assert.equal(simulationFolders[0].cases.length, 0, 'Do not invent gym cases');
+assert.equal(simulationFolders[0].cases.length, 120, 'Academia must expose 120 bleeding-control cases');
 const existingCase = simulationFolders[2].cases[0];
 assert.equal(hash(JSON.stringify(existingCase.steps)), manifest.originalCaseSha256, 'Existing clinical content must remain intact');
 assert.strictEqual(simulationFolders[1].cases[0], existingCase, 'Shared workshop case must have one canonical definition');
@@ -41,7 +42,15 @@ for (const character of characters) {
 }
 const render = component => renderToStaticMarkup(React.createElement(ThemeProvider, null, component));
 const stopTheBleedFolder = simulationFolders[3];
-assert.equal(stopTheBleedFolder.cases.length, 27);
+assert.equal(simulationFolders[1].cases.length, 120, 'Escola must expose 120 bleeding-control cases');
+assert(schoolGallerySource.includes('import.meta.env.BASE_URL'), 'School gallery must resolve assets from the deployed base path');
+assert(!schoolGallerySource.includes("open: '/simulador/"), 'School gallery must not use root-absolute asset paths');
+for (const file of [
+  'professora-sentada.png', 'professora-deitada.png', 'zelador-sentado.png', 'zelador-deitado.png',
+  'crianca-menina-sentada.png', 'crianca-menina-deitada.png', 'crianca-menino-sentado.png', 'crianca-menino-deitado.png',
+  'bebe-sentado.png', 'bebe-deitado.png',
+]) assert(fs.existsSync(path.join(root, 'public/simulador/personagens/escola-horizontal-v20261023', file)), `Missing school asset: ${file}`);
+assert.equal(stopTheBleedFolder.cases.length, 80, 'Stop the Bleed must expose 80 cases');
 assert(stopTheBleedFolder.cases.every(simulationCase => simulationCase.steps.every(step => step.bleedingFocus)), 'Stop the Bleed cases must expose a clickable bleeding focus');
 const catalog = render(React.createElement(SimulatorCatalog));
 for (const name of ['Academia', 'Escola', 'Empresa', 'Stop the Bleed', 'Personagens da academia']) assert(catalog.includes(name));
@@ -51,7 +60,10 @@ assert(scenario.includes('Voltar aos casos'));
 assert(scenario.includes('canvas'));
 const stopScenario = render(React.createElement(ClinicalScenario, { scenario: stopTheBleedFolder.cases[0], onBack() {} }));
 assert(stopScenario.includes('Stop the Bleed'));
-assert.equal(stopTheBleedFolder.cases.filter(simulationCase => simulationCase.patientKind === 'stop-the-bleed').length, 27);
+assert.equal(stopTheBleedFolder.cases.filter(simulationCase => simulationCase.patientKind === 'stop-the-bleed').length, 80);
+const sharedActionIds = new Set(stopTheBleedFolder.cases.flatMap(simulationCase => simulationCase.steps[0].options.map(option => option.id)));
+assert(sharedActionIds.has('shared-tourniquet-limb'));
+assert(sharedActionIds.has('shared-do-not-use-powder'));
 assert(fs.existsSync(path.join(root, 'public/simulador/personagens/stop-the-bleed/casos/casos-config.json')));
 for (const file of ['arterial.svg', 'venous.svg', 'junctional.svg']) assert(fs.existsSync(path.join(root, 'public/simulador/personagens/stop-the-bleed/masks', file)));
 assert(stopTheBleedFolder.cases[0].steps[0].bleedingFocus.title.includes('Caso 01'));

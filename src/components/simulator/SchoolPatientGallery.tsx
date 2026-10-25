@@ -5,6 +5,8 @@ type MotionRegion = { x: number; y: number; rx: number; ry: number };
 type EyeRegion = { left: { x: number; y: number }; right: { x: number; y: number }; rx: number; ry: number };
 type PatientPose = { open: string; closed: string; chest: MotionRegion; eyes: EyeRegion };
 
+const schoolAsset = (file: string) => `${import.meta.env.BASE_URL}simulador/personagens/escola-horizontal-v20261023/${file}`;
+
 const schoolPatients = [
   {
     id: 'professora',
@@ -13,13 +15,13 @@ const schoolPatients = [
     color: 'teal',
     poses: {
       sentada: {
-        open: '/simulador/personagens/escola-horizontal-v20261023/professora-sentada.png?v=face-awake-3',
-        closed: '/simulador/personagens/escola-horizontal-v20261023/blink/professora-sentada-olhos-fechados.png?v=face-awake-3',
+        open: schoolAsset('professora-sentada.png?v=face-awake-3'),
+        closed: schoolAsset('blink/professora-sentada-olhos-fechados.png?v=face-awake-3'),
         chest: { x: 49, y: 48, rx: 12, ry: 10 }, eyes: { left: { x: 48.7, y: 25.4 }, right: { x: 51.7, y: 25.7 }, rx: 2.5, ry: 2.4 }
       },
       deitada: {
-        open: '/simulador/personagens/escola-horizontal-v20261023/professora-deitada.png',
-        closed: '/simulador/personagens/escola-horizontal-v20261023/blink/professora-deitada-olhos-fechados.png',
+        open: schoolAsset('professora-deitada.png'),
+        closed: schoolAsset('blink/professora-deitada-olhos-fechados.png'),
         chest: { x: 47, y: 40, rx: 14, ry: 9 }, eyes: { left: { x: 42.5, y: 21.8 }, right: { x: 45.5, y: 20 }, rx: 2.6, ry: 2.5 }
       }
     }
@@ -31,13 +33,13 @@ const schoolPatients = [
     color: 'amber',
     poses: {
       sentada: {
-        open: '/simulador/personagens/escola-horizontal-v20261023/zelador-sentado.png',
-        closed: '/simulador/personagens/escola-horizontal-v20261023/blink/zelador-sentado-olhos-fechados.png',
+        open: schoolAsset('zelador-sentado.png'),
+        closed: schoolAsset('blink/zelador-sentado-olhos-fechados.png'),
         chest: { x: 49, y: 43, rx: 13, ry: 10 }, eyes: { left: { x: 46.3, y: 21 }, right: { x: 49, y: 20.7 }, rx: 2.5, ry: 2.5 }
       },
       deitada: {
-        open: '/simulador/personagens/escola-horizontal-v20261023/zelador-deitado.png',
-        closed: '/simulador/personagens/escola-horizontal-v20261023/blink/zelador-deitado-olhos-fechados.png',
+        open: schoolAsset('zelador-deitado.png'),
+        closed: schoolAsset('blink/zelador-deitado-olhos-fechados.png'),
         chest: { x: 49, y: 41, rx: 14, ry: 9 }, eyes: { left: { x: 44.2, y: 25.4 }, right: { x: 47.1, y: 24.4 }, rx: 3.5, ry: 3.2 }
       }
     }
@@ -49,13 +51,13 @@ const schoolPatients = [
     color: 'violet',
     poses: {
       sentada: {
-        open: '/simulador/personagens/escola-horizontal-v20261023/crianca-menina-sentada.png',
-        closed: '/simulador/personagens/escola-horizontal-v20261023/blink/crianca-menina-sentada-olhos-fechados.png',
+        open: schoolAsset('crianca-menina-sentada.png'),
+        closed: schoolAsset('blink/crianca-menina-sentada-olhos-fechados.png'),
         chest: { x: 50, y: 48, rx: 10, ry: 9 }, eyes: { left: { x: 48.3, y: 29.6 }, right: { x: 52, y: 29 }, rx: 2.5, ry: 2.5 }
       },
       deitada: {
-        open: '/simulador/personagens/escola-horizontal-v20261023/crianca-menina-deitada.png',
-        closed: '/simulador/personagens/escola-horizontal-v20261023/blink/crianca-menina-deitada-olhos-fechados.png',
+        open: schoolAsset('crianca-menina-deitada.png'),
+        closed: schoolAsset('blink/crianca-menina-deitada-olhos-fechados.png'),
         chest: { x: 50, y: 49, rx: 12, ry: 8 }, eyes: { left: { x: 45.9, y: 38.4 }, right: { x: 49.1, y: 36.5 }, rx: 2.6, ry: 2.6 }
       }
     }
@@ -67,13 +69,13 @@ const schoolPatients = [
     color: 'blue',
     poses: {
       sentada: {
-        open: '/simulador/personagens/escola-horizontal-v20261023/crianca-menino-sentado.png',
-        closed: '/simulador/personagens/escola-horizontal-v20261023/blink/crianca-menino-sentado-olhos-fechados.png',
+        open: schoolAsset('crianca-menino-sentado.png'),
+        closed: schoolAsset('blink/crianca-menino-sentado-olhos-fechados.png'),
         chest: { x: 49, y: 49, rx: 11, ry: 9 }, eyes: { left: { x: 48.7, y: 32.1 }, right: { x: 52.1, y: 32.4 }, rx: 2.5, ry: 2.4 }
       },
       deitada: {
-        open: '/simulador/personagens/escola-horizontal-v20261023/crianca-menino-deitado.png',
-        closed: '/simulador/personagens/escola-horizontal-v20261023/blink/crianca-menino-deitado-olhos-fechados.png',
+        open: schoolAsset('crianca-menino-deitado.png'),
+        closed: schoolAsset('blink/crianca-menino-deitado-olhos-fechados.png'),
         chest: { x: 46, y: 49, rx: 14, ry: 9 }, eyes: { left: { x: 39.9, y: 33.8 }, right: { x: 42.8, y: 32.3 }, rx: 2.6, ry: 2.5 }
       }
     }
@@ -85,13 +87,13 @@ const schoolPatients = [
     color: 'rose',
     poses: {
       sentada: {
-        open: '/simulador/personagens/escola-horizontal-v20261023/bebe-sentado.png',
-        closed: '/simulador/personagens/escola-horizontal-v20261023/blink/bebe-sentado-olhos-fechados.png',
+        open: schoolAsset('bebe-sentado.png'),
+        closed: schoolAsset('blink/bebe-sentado-olhos-fechados.png'),
         chest: { x: 50, y: 52, rx: 11, ry: 10 }, eyes: { left: { x: 45.4, y: 30.1 }, right: { x: 50, y: 29.2 }, rx: 2.9, ry: 2.7 }
       },
       deitada: {
-        open: '/simulador/personagens/escola-horizontal-v20261023/bebe-deitado.png',
-        closed: '/simulador/personagens/escola-horizontal-v20261023/blink/bebe-deitado-olhos-fechados.png',
+        open: schoolAsset('bebe-deitado.png'),
+        closed: schoolAsset('blink/bebe-deitado-olhos-fechados.png'),
         chest: { x: 50, y: 58, rx: 14, ry: 9 }, eyes: { left: { x: 42.8, y: 41.4 }, right: { x: 47.5, y: 39.8 }, rx: 2.9, ry: 2.7 }
       }
     }
@@ -164,7 +166,7 @@ export function SchoolPatientGallery() {
           10 variações
         </div>
         <a
-          href="/uniao/simulador/personagens/escola-horizontal-v20261023/todos.html"
+          href={`${import.meta.env.BASE_URL}simulador/personagens/escola-horizontal-v20261023/todos.html`}
           target="_blank"
           rel="noopener noreferrer"
           className="rounded-full border border-emerald-600/40 px-3 py-1 text-xs font-bold text-emerald-700 hover:bg-emerald-500/10 dark:text-emerald-300"
