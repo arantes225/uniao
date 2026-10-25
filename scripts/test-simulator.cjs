@@ -16,6 +16,7 @@ for (const asset of manifest.assets) {
 const bundle = path.join(root, 'node_modules/.cache/simulator-test.cjs');
 buildSync({
   stdin: { contents: `export { simulationFolders } from './src/data/simulator';
+    export { stopTheBleedCharacters } from './src/data/simulator/stop-the-bleed/characters';
     export { SimulatorCatalog } from './src/components/simulator/SimulatorCatalog';
     export { ClinicalScenario } from './src/components/simulator/ClinicalScenario';
     export { ThemeProvider } from './src/context/ThemeContext';`, resolveDir: root },
@@ -24,7 +25,7 @@ buildSync({
   define: { 'import.meta.env.BASE_URL': '"./"' },
 });
 global.localStorage = { getItem: () => 'dark' };
-const { simulationFolders, SimulatorCatalog, ClinicalScenario, ThemeProvider } = require(bundle);
+const { simulationFolders, stopTheBleedCharacters, SimulatorCatalog, ClinicalScenario, ThemeProvider } = require(bundle);
 assert.deepEqual(simulationFolders.map(folder => folder.id), ['academia', 'escola', 'empresa', 'stop-the-bleed']);
 assert.equal(simulationFolders[0].cases.length, 120, 'Academia must expose 120 bleeding-control cases');
 const existingCase = simulationFolders[2].cases[0];
@@ -42,9 +43,13 @@ for (const character of characters) {
 }
 const render = component => renderToStaticMarkup(React.createElement(ThemeProvider, null, component));
 const stopTheBleedFolder = simulationFolders[3];
+const stopTheBleedCharacterIds = new Set(stopTheBleedCharacters.map(character => character.id));
 assert.equal(simulationFolders[1].cases.length, 120, 'Escola must expose 120 bleeding-control cases');
 assert(simulationFolders[0].cases.every(simulationCase => simulationCase.patientKind === 'academia'), 'Academia cases must use only academy characters');
 assert(simulationFolders[1].cases.every(simulationCase => simulationCase.patientKind === 'escola'), 'School cases must use only school characters');
+assert(simulationFolders[0].cases.every(simulationCase => !stopTheBleedCharacterIds.has(simulationCase.characterId)), 'Academia cases must not use Stop the Bleed characters');
+assert(simulationFolders[1].cases.every(simulationCase => !stopTheBleedCharacterIds.has(simulationCase.characterId)), 'School cases must not use Stop the Bleed characters');
+assert(stopTheBleedFolder.cases.every(simulationCase => simulationCase.patientKind === 'stop-the-bleed' && stopTheBleedCharacterIds.has(simulationCase.characterId)), 'Stop the Bleed cases must use only Stop the Bleed characters');
 assert(simulationFolders[0].cases.every(simulationCase => simulationCase.id.startsWith('academia-hemorragia-')), 'Academia cases must not be Stop the Bleed cases');
 assert(simulationFolders[1].cases.every(simulationCase => simulationCase.id.startsWith('escola-hemorragia-')), 'School cases must not be Stop the Bleed cases');
 assert(simulationFolders[0].cases.every(simulationCase => simulationCase.steps.every(step => step.bleedingFocus?.skinExposed && step.bleedingFocus.visibleRegion)), 'Academia wounds must identify exposed skin');
