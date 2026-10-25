@@ -1,0 +1,12 @@
+## Keep the built-in detection rules. Suppress only two historically
+## verified public Supabase `anon` client JWTs (not privileged secrets).
+## These fingerprints identify exact old findings; do not ignore paths.
+[extend]
+useDefault = true
+
+[[allowlists]]
+description = "Verified intended public Supabase anon JWTs in two historical commits"
+fingerprints = [
+  "619710504fc04bd920241b19872360ba252db4ed:scripts/seedCurriculum.ts:jwt:5",
+  "260d1a10970beb05d4774ba68da8b593a4ae7cd8:src/services/supabase/client.ts:jwt:5"
+]
