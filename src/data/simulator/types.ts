@@ -40,6 +40,9 @@ export interface SimulationCase {
   description: string;
   characterId: string;
   patientKind?: 'default' | 'academia' | 'escola' | 'stop-the-bleed';
+  patientSex?: 'F' | 'M' | 'não especificado';
+  patientAgeRange?: 'lactente' | 'criança' | 'adolescente' | 'adulto' | 'adulto mais velho';
   steps: SimulationStep[];
 }
+
 
