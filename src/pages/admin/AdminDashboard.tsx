@@ -315,14 +315,15 @@ export const AdminDashboard: React.FC = () => {
     setIsCohortCertModalOpen(true);
   };
 
-  const handleReleaseCertificates = () => {
-    if (releasePassword !== ADMIN_PIN) {
-      setReleaseError(true);
-      return;
-    }
+  const handleReleaseCertificates = async () => {
+    if (!activeCertCohort) return;
+    if (!window.confirm('Emitir certificados oficiais desta turma? Confirme que os alunos concluíram os requisitos teóricos e presenciais.')) return;
+    const { data, error } = await supabase.rpc('issue_cohort_certificates', { p_cohort_id: activeCertCohort.id });
+    if (error) { alert('Emissão recusada pelo banco: ' + error.message); return; }
+    const count = Number(data || 0);
+    if (count === 0) { alert('Nenhum novo certificado. Confira as matrículas ou emissões anteriores.'); return; }
     setReleasedCohorts(prev => ({ ...prev, [activeCertCohort.id]: true }));
-    setReleasePassword('');
-    setReleaseError(false);
+    alert(count + ' certificado(s) registrados. Nenhum e-mail foi enviado.');
   };
 
   const handleSendCertificatesToAll = () => {
