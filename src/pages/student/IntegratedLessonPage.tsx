@@ -7,6 +7,7 @@ import {
 import { useTheme } from '../../context/ThemeContext';
 import { INITIAL_40_MODULES } from '../../data/curriculumData';
 import { StudentOutletContext } from '../../services/studentCurriculum';
+import { getSecureBooklet } from '../../services/secureBooklets';
 import { BookletRenderer, TextHighlightToolbar } from '../../components/common/BookletRenderer';
 
 interface Question {
@@ -70,12 +71,14 @@ export const IntegratedLessonPage: React.FC = () => {
   }, [lessonSlug]);
 
   useEffect(() => {
-    if (curriculumLoading || !allowedModuleIds.includes(selectedCode)) return;
-    fetch(`./apostilas/md/${selectedCode}.md`)
-      .then(res => (res.ok ? res.text() : ''))
-      .then(txt => setBookletMd(txt))
-      .catch(() => setBookletMd(''));
-  }, [selectedCode, allowedModuleIds, curriculumLoading]);
+    let active = true;
+    setBookletMd('');
+    if (curriculumLoading || curriculumError || !allowedModuleIds.includes(selectedCode)) return;
+    void getSecureBooklet(selectedCode)
+      .then(txt => { if (active) setBookletMd(txt); })
+      .catch(() => { if (active) setBookletMd('Apostila protegida: material indisponível ou não autorizado para esta turma.'); });
+    return () => { active = false; };
+  }, [selectedCode, allowedModuleIds, curriculumLoading, curriculumError]);
 
   // 5 Questões Objetivas Específicas da Aula
   const questions: Question[] = [
