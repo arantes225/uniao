@@ -1,0 +1,54 @@
+export type PatientSex = 'F' | 'M';
+
+export type StopTheBleedCaseType =
+  | 'estande_de_tiro'
+  | 'acidente_de_bicicleta'
+  | 'acidente_com_scooter'
+  | 'trauma_urbano'
+  | 'acidente_de_transito'
+  | 'acidente_domestico';
+
+export type StopTheBleedCaseMetadata = {
+  patientSex: PatientSex;
+  patientAgeRange: string;
+  caseType: StopTheBleedCaseType;
+  scene: string;
+  isStandDeTiro: boolean;
+  titulo: string;
+  subtitulo: string;
+};
+
+/**
+ * Conferência visual das imagens. A faixa etária é deliberadamente ampla:
+ * a fotografia não fornece idade civil exata e não deve ser usada para inferi-la.
+ */
+export const stopTheBleedCaseMetadata: Record<number, StopTheBleedCaseMetadata> = {
+  1: { patientSex: 'M', patientAgeRange: 'adulto mais velho (estimada)', caseType: 'trauma_urbano', scene: 'praça/parque', isStandDeTiro: false, titulo: 'Caso 01 · Trauma Urbano', subtitulo: 'Praça / parque · Trauma abdominal' },
+  2: { patientSex: 'M', patientAgeRange: 'adulto (estimada)', caseType: 'acidente_de_bicicleta', scene: 'via urbana com bicicleta', isStandDeTiro: false, titulo: 'Caso 02 · Acidente de Bicicleta', subtitulo: 'Cena urbana · Acidente ciclístico (COXA)' },
+  3: { patientSex: 'F', patientAgeRange: 'adulta (estimada)', caseType: 'estande_de_tiro', scene: 'estande de tiro', isStandDeTiro: true, titulo: 'Caso 03 · Estande de Tiro (PAF)', subtitulo: 'Estande de tiro · Ferimento por disparo (JUNÇÃO)' },
+  4: { patientSex: 'M', patientAgeRange: 'adulto (estimada)', caseType: 'acidente_de_bicicleta', scene: 'via urbana com bicicleta', isStandDeTiro: false, titulo: 'Caso 04 · Acidente de Bicicleta', subtitulo: 'Cena urbana · Acidente ciclístico (PERNA)' },
+  5: { patientSex: 'M', patientAgeRange: 'adulto (estimada)', caseType: 'estande_de_tiro', scene: 'estande de tiro', isStandDeTiro: true, titulo: 'Caso 05 · Estande de Tiro (PAF)', subtitulo: 'Estande de tiro · Ferimento por disparo (BRAÇO)' },
+  6: { patientSex: 'M', patientAgeRange: 'adulto (estimada)', caseType: 'estande_de_tiro', scene: 'estande de tiro', isStandDeTiro: true, titulo: 'Caso 06 · Estande de Tiro (PAF)', subtitulo: 'Estande de tiro · Ferimento por disparo (COXA)' },
+  7: { patientSex: 'M', patientAgeRange: 'adulto (estimada)', caseType: 'estande_de_tiro', scene: 'estande de tiro', isStandDeTiro: true, titulo: 'Caso 07 · Estande de Tiro (PAF)', subtitulo: 'Estande de tiro · Ferimento por disparo (TÓRAX)' },
+  8: { patientSex: 'F', patientAgeRange: 'adulta (estimada)', caseType: 'trauma_urbano', scene: 'calçada urbana', isStandDeTiro: false, titulo: 'Caso 08 · Trauma Urbano', subtitulo: 'Cena urbana · Trauma por vidro (ANTEBRAÇO)' },
+  9: { patientSex: 'M', patientAgeRange: 'adulto mais velho (estimada)', caseType: 'trauma_urbano', scene: 'praça/parque', isStandDeTiro: false, titulo: 'Caso 09 · Trauma Urbano', subtitulo: 'Praça / parque · Trauma abdominal' },
+  10: { patientSex: 'M', patientAgeRange: 'adulto jovem (estimada)', caseType: 'acidente_com_scooter', scene: 'via urbana com scooter', isStandDeTiro: false, titulo: 'Caso 10 · Acidente com Scooter', subtitulo: 'Cena urbana · Acidente com scooter (PERNA)' },
+  11: { patientSex: 'F', patientAgeRange: 'adulta mais velha (estimada)', caseType: 'trauma_urbano', scene: 'estacionamento', isStandDeTiro: false, titulo: 'Caso 11 · Trauma Urbano', subtitulo: 'Estacionamento · Trauma facial (ROSTO)' },
+  12: { patientSex: 'F', patientAgeRange: 'adulta (estimada)', caseType: 'trauma_urbano', scene: 'calçada urbana', isStandDeTiro: false, titulo: 'Caso 12 · Trauma Urbano', subtitulo: 'Cena urbana · Trauma torácico (PEITO)' },
+  13: { patientSex: 'M', patientAgeRange: 'adulto (estimada)', caseType: 'acidente_de_transito', scene: 'rodovia/via urbana', isStandDeTiro: false, titulo: 'Caso 13 · Acidente de Trânsito', subtitulo: 'Via urbana · Trauma abdominal' },
+  14: { patientSex: 'M', patientAgeRange: 'adulto mais velho (estimada)', caseType: 'acidente_domestico', scene: 'cozinha residencial', isStandDeTiro: false, titulo: 'Caso 14 · Acidente Doméstico', subtitulo: 'Casa · Queda/trauma abdominal' },
+  15: { patientSex: 'F', patientAgeRange: 'adulta (estimada)', caseType: 'acidente_domestico', scene: 'área de serviço residencial', isStandDeTiro: false, titulo: 'Caso 15 · Acidente Doméstico', subtitulo: 'Casa · Trauma por vidro (ANTEBRAÇO)' },
+  16: { patientSex: 'F', patientAgeRange: 'adulta (estimada)', caseType: 'acidente_domestico', scene: 'escada residencial', isStandDeTiro: false, titulo: 'Caso 16 · Acidente Doméstico', subtitulo: 'Casa · Queda na escada (PERNA)' },
+  17: { patientSex: 'M', patientAgeRange: 'adulto (estimada)', caseType: 'acidente_domestico', scene: 'cozinha residencial', isStandDeTiro: false, titulo: 'Caso 17 · Acidente Doméstico', subtitulo: 'Casa · Queda/trauma (ANTEBRAÇO)' },
+  18: { patientSex: 'M', patientAgeRange: 'adulto (estimada)', caseType: 'estande_de_tiro', scene: 'estande de tiro', isStandDeTiro: true, titulo: 'Caso 18 · Estande de Tiro (PAF)', subtitulo: 'Estande de tiro · Ferimento por disparo (BRAÇO)' },
+  19: { patientSex: 'F', patientAgeRange: 'adulta (estimada)', caseType: 'estande_de_tiro', scene: 'estande de tiro', isStandDeTiro: true, titulo: 'Caso 19 · Estande de Tiro (PAF)', subtitulo: 'Estande de tiro · Ferimento por disparo (ROSTO)' },
+  20: { patientSex: 'F', patientAgeRange: 'adulta (estimada)', caseType: 'estande_de_tiro', scene: 'estande de tiro', isStandDeTiro: true, titulo: 'Caso 20 · Estande de Tiro (PAF)', subtitulo: 'Estande de tiro · Ferimento por disparo (COXA)' },
+  21: { patientSex: 'M', patientAgeRange: 'adulto (estimada)', caseType: 'estande_de_tiro', scene: 'estande de tiro', isStandDeTiro: true, titulo: 'Caso 21 · Estande de Tiro (PAF)', subtitulo: 'Estande de tiro · Ferimento por disparo (PERNA)' },
+  22: { patientSex: 'F', patientAgeRange: 'adulta (estimada)', caseType: 'estande_de_tiro', scene: 'estande de tiro', isStandDeTiro: true, titulo: 'Caso 22 · Estande de Tiro (PAF)', subtitulo: 'Estande de tiro · Ferimento por disparo (ANTEBRAÇO)' },
+  23: { patientSex: 'M', patientAgeRange: 'adulto jovem (estimada)', caseType: 'estande_de_tiro', scene: 'estande de tiro', isStandDeTiro: true, titulo: 'Caso 23 · Estande de Tiro (PAF)', subtitulo: 'Estande de tiro · Ferimento por disparo (BRAÇO)' },
+  24: { patientSex: 'F', patientAgeRange: 'adulta (estimada)', caseType: 'acidente_domestico', scene: 'pátio residencial', isStandDeTiro: false, titulo: 'Caso 24 · Acidente Doméstico', subtitulo: 'Casa · Queda/trauma (PERNA)' },
+  25: { patientSex: 'F', patientAgeRange: 'adulta mais velha (estimada)', caseType: 'estande_de_tiro', scene: 'estande de tiro', isStandDeTiro: true, titulo: 'Caso 25 · Estande de Tiro (PAF)', subtitulo: 'Estande de tiro · Ferimento por disparo (ANTEBRAÇO)' },
+  26: { patientSex: 'M', patientAgeRange: 'adulto mais velho (estimada)', caseType: 'estande_de_tiro', scene: 'estande de tiro', isStandDeTiro: true, titulo: 'Caso 26 · Estande de Tiro (PAF)', subtitulo: 'Estande de tiro · Ferimento por disparo (COXA)' },
+  27: { patientSex: 'M', patientAgeRange: 'adulto (estimada)', caseType: 'estande_de_tiro', scene: 'estande de tiro', isStandDeTiro: true, titulo: 'Caso 27 · Estande de Tiro (PAF)', subtitulo: 'Estande de tiro · Ferimento por disparo (ABDOME)' },
+};
+
