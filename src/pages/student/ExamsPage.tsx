@@ -3,6 +3,7 @@ import { useOutletContext } from 'react-router-dom';
 import { HelpCircle, Clock, Award, CheckCircle2, ChevronRight, AlertTriangle, RotateCcw, XCircle, ArrowLeft, ShieldAlert } from 'lucide-react';
 import { useTheme } from '../../context/ThemeContext';
 import { StudentOutletContext } from '../../services/studentCurriculum';
+import { OfficialAssessmentPanel } from '../../components/OfficialAssessmentPanel';
 
 interface Question {
   id: number;
@@ -256,7 +257,7 @@ const mockQuestions: Question[] = [
 ];
 
 export const ExamsPage: React.FC = () => {
-  const { allowedModuleIds, curriculumLoading, curriculumError } = useOutletContext<StudentOutletContext>();
+  const { activeCohortId, allowedModuleIds, curriculumLoading, curriculumError } = useOutletContext<StudentOutletContext>();
   const { theme } = useTheme();
 
   // Estado da Prova Única Oficial (com regra de 3 chances e mínimo 70%)
@@ -444,12 +445,12 @@ export const ExamsPage: React.FC = () => {
         <span className={`text-xs font-bold uppercase tracking-wider ${
           theme === 'dark' ? 'text-uniao-400' : 'text-teal-700'
         }`}>
-          Avaliação Teórica Oficial
+          Área de provas e simulados
         </span>
         <h1 className={`text-2xl sm:text-3xl font-black ${
           theme === 'dark' ? 'text-white' : 'text-slate-900'
         }`}>
-          Prova
+          Provas e Simulados
         </h1>
         <p className={`text-xs sm:text-sm ${
           theme === 'dark' ? 'text-slate-400' : 'text-slate-600'
@@ -458,7 +459,8 @@ export const ExamsPage: React.FC = () => {
         </p>
       </div>
 
-      {/* TELA DE REALIZAÇÃO DA PROVA (QUANDO EM EXECUÇÃO) */}
+      <OfficialAssessmentPanel cohortId={activeCohortId} />
+            {/* TELA DE REALIZAÇÃO DA PROVA (QUANDO EM EXECUÇÃO) */}
       {isExamRunning ? (
         <div className="space-y-6">
           {/* Barra Superior Fixa da Prova com Temporizador e Contador */}
