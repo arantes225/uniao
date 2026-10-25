@@ -1,5 +1,6 @@
 import type { SimulationCase, BleedingFocus, SimulationStep } from '../types';
 import { generatedStopTheBleedCases } from './generatedCases';
+import { stopTheBleedCaseMetadata } from './caseMetadata';
 
 type CaseSpec = {
   id: string;
@@ -519,4 +520,9 @@ const legacyStopTheBleedCases: SimulationCase[] = [
   }),
 ];
 
-export const stopTheBleedCases: SimulationCase[] = [...legacyStopTheBleedCases, ...generatedStopTheBleedCases];
+export const stopTheBleedCases: SimulationCase[] = [...legacyStopTheBleedCases, ...generatedStopTheBleedCases].map((simulationCase) => {
+  const caseId = Number(simulationCase.id.match(/caso-(\d+)/)?.[1]);
+  const metadata = stopTheBleedCaseMetadata[caseId];
+  return metadata ? { ...simulationCase, title: metadata.titulo, description: metadata.subtitulo } : simulationCase;
+});
+
