@@ -29,4 +29,10 @@ jobs:
       - name: Scan all reachable Git history without exposing matched values
         shell: bash
         run: |
+          set +e
           "$RUNNER_TEMP/gitleaks" git --log-opts="--all" --redact --exit-code 1 --report-format json --report-path "$RUNNER_TEMP/gitleaks-history.json"
+          status=$?
+          set -e
+          # Report only filenames, abbreviated commit IDs and rule labels. Never print the detected values.
+          node -e 'const fs=require("fs");const p=process.env.RUNNER_TEMP+"/gitleaks-history.json";const a=fs.existsSync(p)?JSON.parse(fs.readFileSync(p,"utf8")):[];console.log("Security findings (metadata only):",JSON.stringify(a.map(x=>({path:x.File,commit:(x.Commit||"").slice(0,12),type:x.RuleID}))));'
+          exit "$status"
