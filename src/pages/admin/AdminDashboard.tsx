@@ -3151,60 +3151,11 @@ export const AdminDashboard: React.FC = () => {
       )}
 
       {isSendCertificatesOpen && activeCertCohort && (
-        <div className="fixed inset-0 z-[60] bg-slate-950/90 backdrop-blur-sm flex items-center justify-center p-4">
-          <div className="w-full max-w-md rounded-2xl border border-amber-400/40 bg-slate-900 p-6 shadow-2xl">
-            <div className="flex items-start gap-3">
-              <div className="rounded-xl bg-amber-400/15 p-2 text-amber-300">
-                <KeyRound className="h-5 w-5" />
-              </div>
-              <div>
-                <h3 className="text-base font-bold text-white">Confirmar envio para toda a turma</h3>
-                <p className="mt-1 text-xs leading-relaxed text-slate-400">
-                  Digite o PIN administrativo para confirmar o envio dos certificados de {students.filter(student => student.cohortId === activeCertCohort.id).length} aluno(s) de “{activeCertCohort.name}”.
-                </p>
-              </div>
-            </div>
-
-            <form
-              onSubmit={(event) => {
-                event.preventDefault();
-                handleSendCertificatesToAll();
-              }}
-              className="mt-5 space-y-3"
-            >
-              <label className="block text-xs font-semibold text-slate-300" htmlFor="send-certificates-admin-pin">
-                Senha/PIN de administrador
-              </label>
-              <input
-                id="send-certificates-admin-pin"
-                autoFocus
-                type="password"
-                inputMode="numeric"
-                value={sendCertificatesPassword}
-                onChange={(event) => {
-                  setSendCertificatesPassword(event.target.value);
-                  setSendCertificatesError(false);
-                }}
-                placeholder="Digite o PIN administrativo"
-                className="w-full rounded-xl border border-white/10 bg-slate-950 px-3 py-2.5 text-sm text-white outline-none focus:border-amber-400/60"
-              />
-              {sendCertificatesError && <p className="text-xs text-red-300">PIN incorreto. O envio não foi confirmado.</p>}
-              <div className="flex justify-end gap-2 pt-2">
-                <button
-                  type="button"
-                  onClick={() => setIsSendCertificatesOpen(false)}
-                  className="rounded-xl bg-slate-800 px-4 py-2 text-xs font-bold text-white hover:bg-slate-700"
-                >
-                  Cancelar
-                </button>
-                <button
-                  type="submit"
-                  className="rounded-xl bg-amber-400 px-4 py-2 text-xs font-black text-slate-950 hover:bg-amber-300"
-                >
-                  Confirmar envio
-                </button>
-              </div>
-            </form>
+        <div className="fixed inset-0 z-[60] bg-slate-950/90 flex items-center justify-center p-4">
+          <div className="max-w-md rounded-xl bg-slate-900 p-6 space-y-4 border border-white/10 text-white">
+            <h3 className="font-bold">Envio de certificados indisponível</h3>
+            <p className="text-sm text-slate-300">Certificados oficiais ficam registrados no banco. O disparo automático de e-mails ainda não está integrado.</p>
+            <button type="button" onClick={handleSendCertificatesToAll} className="rounded-xl bg-teal-400 px-4 py-2 text-slate-950 font-bold">Entendi</button>
           </div>
         </div>
       )}
