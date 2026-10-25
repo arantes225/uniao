@@ -300,6 +300,7 @@ export const AdminDashboard: React.FC = () => {
   const [cohortCertSide, setCohortCertSide] = useState<'front' | 'back'>('front');
   const [selectedStudentForCert, setSelectedStudentForCert] = useState<StudentRecord | null>(null);
   const [releasedCohorts, setReleasedCohorts] = useState<Record<string, boolean>>({});
+  const [issuedCodes, setIssuedCodes] = useState<Record<string, {code: string; issuedAt: string}>>({});
   const [isSendCertificatesOpen, setIsSendCertificatesOpen] = useState(false);
   const [sentCohorts] = useState<Record<string, number>>({});
 
@@ -327,7 +328,7 @@ export const AdminDashboard: React.FC = () => {
     if (error) { alert('Emissão recusada pelo banco: ' + error.message); return; }
     const count = Number(data || 0);
     if (count === 0) { alert('Nenhum novo certificado. Confira as matrículas ou emissões anteriores.'); return; }
-    setReleasedCohorts(prev => ({ ...prev, [activeCertCohort.id]: true }));
+    await loadData();
     alert(count + ' certificado(s) registrados. Nenhum e-mail foi enviado.');
   };
 
@@ -409,10 +410,16 @@ export const AdminDashboard: React.FC = () => {
       setCohortLessonSelections(mapping);
     }
     // Reflect certificates already issued across devices and sessions.
-    const { data: issuedCertificates } = await supabase.from('certificate_issuances').select('cohort_id');
+    const { data: issuedCertificates } = await supabase.from('certificate_issuances').select('cohort_id,user_id,verification_code,issued_at,revoked_at');
     if (issuedCertificates) {
       const byCohort: Record<string, boolean> = {};
-      issuedCertificates.forEach(item => { byCohort[item.cohort_id] = true; });
+      const codes: Record<string, {code: string; issuedAt: string}> = {};
+      issuedCertificates.forEach(item => {
+        if (item.revoked_at) return;
+        byCohort[item.cohort_id] = true;
+        codes[item.cohort_id + ':' + item.user_id] = {code: item.verification_code, issuedAt: item.issued_at};
+      });
+      setIssuedCodes(codes);
       setReleasedCohorts(byCohort);
     }
     // 2. Carregar turmas
@@ -1860,14 +1867,15 @@ export const AdminDashboard: React.FC = () => {
                         <div className="pt-4 flex flex-col sm:flex-row items-center justify-between text-[11px] text-slate-400 border-t border-white/10 gap-2 font-mono">
                           <div className="flex flex-wrap items-center gap-2">
                             <span className="text-slate-500">Chave:</span>
-                            <strong className="text-teal-400 font-bold">{selectedStudentForCert ? `USM-${selectedStudentForCert.id.slice(0, 8).toUpperCase()}` : 'USM-MODELO-0001'}</strong>
+                            <strong className="text-teal-400 font-bold">{selectedStudentForCert ? (issuedCodes[(activeCertCohort?.id || selectedCertCohortId) + ':' + selectedStudentForCert.id]?.code || 'NÃO EMITIDO') : 'MODELO — NÃO EMITIDO'}</strong>
                             <span className="text-slate-600">•</span>
                             <span className="text-teal-400 font-sans font-semibold">
                               uniao-servicos-medicos.com.br/validar-certificado
                             </span>
                           </div>
                           <div>Validade Técnica: <strong className="text-white">{certValidity} meses</strong></div>
-                          <div>Emissão: <strong className="text-white">{new Date().toLocaleDateString('pt-BR')}</strong></div>
+                          <div>Emissão: <strong className="text-white">{selectedStudentForCert && issuedCodes[activeCertCohort.id + ':' + selectedStudentForCert.id]
+  ? new Date(issuedCodes[activeCertCohort.id + ':' + selectedStudentForCert.id].issuedAt).toLocaleDateString('pt-BR') : 'Não emitido'}</strong></div>
                         </div>
 
                       </div>
@@ -2629,7 +2637,7 @@ export const AdminDashboard: React.FC = () => {
                     <div className="pt-4 flex flex-col sm:flex-row items-center justify-between text-[11px] text-slate-400 border-t border-white/10 gap-2 font-mono">
                       <div className="flex flex-wrap items-center gap-2">
                         <span className="text-slate-500">Chave:</span>
-                        <strong className="text-teal-400 font-bold">{selectedStudentForCert ? `USM-${selectedStudentForCert.id.slice(0, 8).toUpperCase()}` : 'USM-MODELO-0001'}</strong>
+                        <strong className="text-teal-400 font-bold">{selectedStudentForCert ? (issuedCodes[(activeCertCohort?.id || selectedCertCohortId) + ':' + selectedStudentForCert.id]?.code || 'NÃO EMITIDO') : 'MODELO — NÃO EMITIDO'}</strong>
                         <span className="text-slate-600">•</span>
                         <span className="text-teal-400 font-sans font-semibold">
                           uniao-servicos-medicos.com.br/validar-certificado
@@ -2846,7 +2854,10 @@ export const AdminDashboard: React.FC = () => {
                   </button>
                 </div>
 
-                <button type="button" onClick={() => void printCertificate('certificate-cohort-page')} className="px-3 py-2 rounded-xl text-xs font-bold bg-teal-500 text-slate-950">Imprimir / Salvar PDF</button>
+                <button type="button" onClick={() => void printCertificate('certificate-cohort-page')}
+                  disabled={!selectedStudentForCert || !issuedCodes[activeCertCohort.id + ':' + selectedStudentForCert.id]}
+                  title="Impressão disponível somente após emissão oficial"
+                  className="px-3 py-2 rounded-xl text-xs font-bold bg-teal-500 text-slate-950 disabled:opacity-40 disabled:cursor-not-allowed">Imprimir / Salvar PDF</button>
                 <button 
                   onClick={() => setIsCohortCertModalOpen(false)}
                   className="p-2 rounded-xl text-slate-400 hover:text-white hover:bg-white/5 transition-colors"
@@ -2945,7 +2956,7 @@ export const AdminDashboard: React.FC = () => {
 
                         {/* Rodapé */}
                         <div className="pt-2 border-t border-white/10 flex items-center justify-between text-[9px] text-slate-400 font-mono">
-                          <div>Chave: <strong className="text-teal-400">{selectedStudentForCert ? `USM-${selectedStudentForCert.id.slice(0, 8).toUpperCase()}` : 'USM-MODELO-0001'}</strong></div>
+                          <div>Chave: <strong className="text-teal-400">{selectedStudentForCert ? (issuedCodes[(activeCertCohort?.id || selectedCertCohortId) + ':' + selectedStudentForCert.id]?.code || 'NÃO EMITIDO') : 'MODELO — NÃO EMITIDO'}</strong></div>
                           <span className="text-teal-400 font-sans">
                             uniao-servicos-medicos.com.br/validar-certificado
                           </span>
@@ -2986,8 +2997,8 @@ export const AdminDashboard: React.FC = () => {
                         </div>
 
                         <div className="pt-2 border-t border-white/10 flex items-center justify-between text-[8px] text-slate-500 font-mono">
-                          <div>Código: <strong className="text-teal-400">{selectedStudentForCert ? `USM-${selectedStudentForCert.id.slice(0, 8).toUpperCase()}` : 'USM-MODELO-0001'}</strong></div>
-                          <div>Documento Oficial Autenticado</div>
+                          <div>Código: <strong className="text-teal-400">{selectedStudentForCert ? (issuedCodes[(activeCertCohort?.id || selectedCertCohortId) + ':' + selectedStudentForCert.id]?.code || 'NÃO EMITIDO') : 'MODELO — NÃO EMITIDO'}</strong></div>
+                          <div>{selectedStudentForCert && issuedCodes[activeCertCohort.id + ':' + selectedStudentForCert.id] ? 'Validável no portal' : 'PRÉVIA — NÃO VÁLIDA'}</div>
                         </div>
                       </div>
                     )}
