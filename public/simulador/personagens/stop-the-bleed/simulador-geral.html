@@ -923,7 +923,17 @@
     const mConfig = MEMBRO_CONFIGS[currentCase.membro] || MEMBRO_CONFIGS.perna;
     $('badgeContext').className = 'badge ' + (currentCase.isStandDeTiro ? 'badge-tiro' : 'badge-corte');
     $('badgeContext').textContent = currentCase.isStandDeTiro ? '🎯 Estande de Tiro (PAF Redondo)' : '🏙️ Trauma Cortante (Longitudinal)';
-    $('badgeMembro').textContent = 'Membro: ' + currentCase.membro.toUpperCase();
+    const membroMap = {
+      coxa: 'COXA (Extremidade)',
+      perna: 'PERNA (Extremidade)',
+      braco: 'BRAÇO (Extremidade)',
+      antebraco: 'ANTEBRAÇO (Extremidade)',
+      juncao: 'JUNÇÃO / AXILA',
+      peito: 'PEITO / TÓRAX',
+      abdome: 'ABDOME (Tronco)',
+      rosto: 'ROSTO / CERVICAL'
+    };
+    $('badgeMembro').textContent = 'Região: ' + (membroMap[currentCase.membro] || currentCase.membro.toUpperCase());
 
     $('selectShape').value = currentCase.woundShape;
     $('selectMembro').value = currentCase.membro;

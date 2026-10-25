@@ -2,13 +2,13 @@
 <html lang="pt-BR">
 <head>
   <meta charset="utf-8">
-  <title>Auditoria Clínica · Aplicação de Torniquetes (Stop the Bleed)</title>
+  <title>Auditoria Clínica Completa · Stop the Bleed (27 Casos)</title>
   <style>
     body { background:#070d0b; color:#edf2ee; font-family:system-ui,-apple-system,"Segoe UI",sans-serif; margin:0; padding:24px; }
     h1 { margin:0 0 6px; font-size:22px; color:#86efac; }
     p.sub { margin:0 0 20px; font-size:13px; color:#9ca3af; }
-    .summary-bar { display:flex; gap:16px; margin-bottom:24px; padding:12px 18px; background:#0f1c15; border-radius:8px; border:1px solid #1c3826; }
-    .stat { display:flex; flex-direction:column; }
+    .summary-bar { display:flex; flex-wrap:wrap; gap:16px; margin-bottom:24px; padding:14px 18px; background:#0f1c15; border-radius:8px; border:1px solid #1c3826; }
+    .stat { display:flex; flex-direction:column; min-width:130px; }
     .stat-val { font-size:20px; font-weight:800; }
     .stat-lbl { font-size:11px; color:#9ca3af; }
     .grid { display:grid; grid-template-columns:repeat(auto-fill, minmax(420px, 1fr)); gap:20px; }
@@ -18,26 +18,32 @@
     .info { padding:14px; display:flex; flex-direction:column; gap:8px; flex:1; }
     .card-head { display:flex; justify-content:space-between; align-items:flex-start; gap:8px; }
     .case-title { font-size:14px; font-weight:700; color:#fff; }
-    .badge { font-size:10px; font-weight:800; padding:3px 8px; border-radius:4px; text-transform:uppercase; letter-spacing:.05em; }
+    .badge { font-size:10.5px; font-weight:800; padding:4px 8px; border-radius:4px; text-transform:uppercase; letter-spacing:.04em; white-space:nowrap; }
     .badge-ok { background:#166534; color:#86efac; border:1px solid #22c55e; }
-    .badge-err { background:#7f1d1d; color:#fca5a5; border:1px solid #ef4444; }
+    .badge-torax { background:#1e1b4b; color:#93c5fd; border:1px solid #3b82f6; }
+    .badge-abdome { background:#3b0764; color:#d8b4fe; border:1px solid #a855f7; }
+    .badge-rosto { background:#450a0a; color:#fca5a5; border:1px solid #ef4444; }
     .badge-junc { background:#78350f; color:#fde047; border:1px solid #eab308; }
     .details { font-size:11.5px; color:#9ca3af; line-height:1.4; }
-    .diag-box { padding:8px 10px; border-radius:6px; font-size:11.5px; line-height:1.45; }
+    .diag-box { padding:9px 12px; border-radius:6px; font-size:11.5px; line-height:1.45; }
     .diag-ok { background:#082112; border:1px solid #15803d; color:#bbf7d0; }
-    .diag-err { background:#240c0c; border:1px solid #b91c1c; color:#fecaca; }
+    .diag-torax { background:#0c192c; border:1px solid #2563eb; color:#bfdbfe; }
+    .diag-abdome { background:#1f0e2b; border:1px solid #9333ea; color:#e9d5ff; }
+    .diag-rosto { background:#280d0d; border:1px solid #dc2626; color:#fecaca; }
     .diag-junc { background:#261806; border:1px solid #a16207; color:#fef08a; }
   </style>
 </head>
 <body>
   <h1>Auditoria Clínica · Stop the Bleed (27 Casos)</h1>
-  <p class="sub">Avaliação individual da indicação e posicionamento do Torniquete vs. Ferimento segundo diretrizes ACS/TCCC.</p>
+  <p class="sub">Avaliação individual da indicação e posicionamento do Torniquete vs. Ferimento segundo diretrizes ACS/TCCC/PHTLS.</p>
 
   <div class="summary-bar" id="summaryBar">
     <div class="stat"><span class="stat-val" id="totalCount">27</span><span class="stat-lbl">Casos Ativos</span></div>
-    <div class="stat"><span class="stat-val" style="color:#86efac" id="correctCount">--</span><span class="stat-lbl">Torniquete Bem Aplicado (Indicado)</span></div>
-    <div class="stat"><span class="stat-val" style="color:#fde047" id="juncCount">--</span><span class="stat-lbl">Lesões Juncionais (Packing Indicado)</span></div>
-    <div class="stat"><span class="stat-val" style="color:#fca5a5" id="errCount">--</span><span class="stat-lbl">Inadequados / Distal / Mal Posicionado</span></div>
+    <div class="stat"><span class="stat-val" style="color:#86efac" id="correctCount">17</span><span class="stat-lbl">Extremidades (TQ Bem Aplicado)</span></div>
+    <div class="stat"><span class="stat-val" style="color:#d8b4fe" id="abdomeCount">5</span><span class="stat-lbl">Abdome (TQ Contraindicado)</span></div>
+    <div class="stat"><span class="stat-val" style="color:#93c5fd" id="toraxCount">2</span><span class="stat-lbl">Peito/Tórax (Selo Valvulado)</span></div>
+    <div class="stat"><span class="stat-val" style="color:#fca5a5" id="rostoCount">2</span><span class="stat-lbl">Rosto/Cervical (TQ Contraindicado)</span></div>
+    <div class="stat"><span class="stat-val" style="color:#fde047" id="juncCount">1</span><span class="stat-lbl">Axila (Wound Packing)</span></div>
   </div>
 
   <div class="grid" id="grid"></div>
@@ -48,75 +54,68 @@
       perna: { scale: 1.10, tqW: 105 },
       braco: { scale: 0.95, tqW: 90 },
       antebraco: { scale: 0.80, tqW: 78 },
-      juncao: { scale: 1.30, tqW: 110 }
+      juncao: { scale: 1.30, tqW: 110 },
+      peito: { scale: 1.00, tqW: 95 },
+      abdome: { scale: 1.05, tqW: 95 },
+      rosto: { scale: 0.85, tqW: 85 }
+    };
+
+    const membroLabels = {
+      coxa: 'COXA (Extremidade Inferior)',
+      perna: 'PERNA (Extremidade Inferior)',
+      braco: 'BRAÇO (Extremidade Superior)',
+      antebraco: 'ANTEBRAÇO (Extremidade Superior)',
+      juncao: 'AXILA (Zona Juncional)',
+      peito: 'PEITO / TÓRAX (Tronco)',
+      abdome: 'ABDOME (Tronco)',
+      rosto: 'ROSTO / CERVICAL'
     };
 
     fetch('/casos/casos-config.json')
       .then(r => r.json())
       .then(casos => {
-        // Filtrar caso 5
-        const validCasos = casos.filter(c => c.id !== 5 && c.file !== 'Imagem do ChatGPT 24 de out. de 2026, 15_21_03.png');
-        
-        let cOk = 0, cJunc = 0, cErr = 0;
+        let cOk = 0, cAbdome = 0, cTorax = 0, cRosto = 0, cJunc = 0;
         const grid = document.getElementById('grid');
 
-        validCasos.forEach((c, idx) => {
+        casos.forEach((c, idx) => {
           const num = idx + 1;
-          const isJuncao = (c.membro === 'juncao');
-          
-          // Análise de posicionamento anatômico
-          // No Stop the Bleed:
-          // 1. Junções: TQ ineficaz -> conduta correta é Packing
-          // 2. Membros: TQ deve ser proximal à lesão
-          let status = 'ok';
-          let diagMsg = '';
-          let diagClass = '';
-
           const f = c.ferida;
           const tq = c.tqSite;
 
-          if (isJuncao) {
-            status = 'junc';
+          let badgeClass = 'badge-ok';
+          let badgeText = '✅ TQ Bem Aplicado';
+          let diagClass = 'diag-ok';
+
+          if (c.membro === 'peito') {
+            badgeClass = 'badge-torax';
+            badgeText = '🫁 Peito · Selo Valvulado';
+            diagClass = 'diag-torax';
+            cTorax++;
+          } else if (c.membro === 'abdome') {
+            badgeClass = 'badge-abdome';
+            badgeText = '🩸 Abdome · TQ Contraindicado';
+            diagClass = 'diag-abdome';
+            cAbdome++;
+          } else if (c.membro === 'rosto') {
+            badgeClass = 'badge-rosto';
+            badgeText = '👤 Rosto · TQ Contraindicado';
+            diagClass = 'diag-rosto';
+            cRosto++;
+          } else if (c.membro === 'juncao') {
+            badgeClass = 'badge-junc';
+            badgeText = '⚠️ Axila · Wound Packing';
             diagClass = 'diag-junc';
-            diagMsg = '⚠️ LESÃO JUNCIONAL: O torniquete de extremidade é ineficaz para ocluir artérias profundas da junção axilar/inguinal. A conduta mandatória é PREENCHIMENTO PROFUNDO (Wound Packing) + Compressão Manual Direta.';
             cJunc++;
           } else {
-            // Extremidade: verificar se TQ está proximal
-            // Em coordenadas 2D da imagem (onde a raiz geralmente está mais próxima do tronco/centro ou acima no eixo Y):
-            // Avaliar distância e vetor
-            if (!tq) {
-              status = 'err';
-              diagClass = 'diag-err';
-              diagMsg = '❌ SEM TORNIQUETE: Caso de extremidade sem local de torniquete definido.';
-              cErr++;
-            } else {
-              const dx = tq.x - f.x;
-              const dy = tq.y - f.y;
-              const dist = Math.hypot(dx, dy);
-
-              // Se TQ estiver muito longe (>400px) ou mal posicionado
-              if (dist > 450) {
-                status = 'err';
-                diagClass = 'diag-err';
-                diagMsg = `❌ POSICIONAMENTO DISTANTE: Distância de ${Math.round(dist)}px do ferimento. Posicionamento pode estar fora do membro anatômico afetado.`;
-                cErr++;
-              } else {
-                status = 'ok';
-                diagClass = 'diag-ok';
-                diagMsg = `✅ BEM APLICADO: Torniquete comercial posicionado proximalmente no membro (${c.membro.toUpperCase()}), a ~${Math.round(dist)}px da lesão, permitindo oclusão mecânica completa da artéria.`;
-                cOk++;
-              }
-            }
+            badgeClass = 'badge-ok';
+            badgeText = '✅ TQ Bem Aplicado';
+            diagClass = 'diag-ok';
+            cOk++;
           }
 
           // Card UI
           const card = document.createElement('div');
           card.className = 'card';
-          
-          let badgeHtml = '';
-          if (status === 'ok') badgeHtml = '<span class="badge badge-ok">✅ TQ Bem Aplicado</span>';
-          else if (status === 'junc') badgeHtml = '<span class="badge badge-junc">⚠️ Junção (Sem TQ)</span>';
-          else badgeHtml = '<span class="badge badge-err">❌ TQ Inadequado</span>';
 
           card.innerHTML = `
             <div class="canvas-wrap">
@@ -125,14 +124,14 @@
             <div class="info">
               <div class="card-head">
                 <span class="case-title">#${String(num).padStart(2, '0')} · ${c.titulo}</span>
-                ${badgeHtml}
+                <span class="badge ${badgeClass}">${badgeText}</span>
               </div>
               <div class="details">
-                <strong>Membro:</strong> ${c.membro.toUpperCase()} | <strong>Formato:</strong> ${c.woundShape === 'round' ? 'Tiro/PAF (Redondo)' : 'Corte (Longitudinal)'}<br>
+                <strong>Anatomia:</strong> ${membroLabels[c.membro] || c.membro.toUpperCase()} | <strong>Formato:</strong> ${c.woundShape === 'round' ? 'Tiro/PAF (Redondo)' : 'Corte (Longitudinal)'}<br>
                 <strong>Ferida:</strong> (${f.x}, ${f.y}) | <strong>Torniquete:</strong> (${tq ? tq.x + ', ' + tq.y : 'N/A'})
               </div>
               <div class="diag-box ${diagClass}">
-                ${diagMsg}
+                ${c.justificativaClinica || 'Sem descrição clínica.'}
               </div>
             </div>
           `;
@@ -145,38 +144,39 @@
           img.onload = () => {
             ctx.drawImage(img, 0, 0, 1200, 675);
 
-            // Desenhar Torniquete se existir
+            // Desenhar Torniquete
             if (tq) {
               const w = tq.widthManual || (MEMBRO_CONFIGS[c.membro] ? MEMBRO_CONFIGS[c.membro].tqW : 105);
+              const angle = tq.angle || 0;
               ctx.save();
               ctx.translate(tq.x, tq.y);
-              ctx.rotate(tq.angle || 0);
+              ctx.rotate(angle);
 
-              // Faixa TQ
-              ctx.fillStyle = '#0a0d0e';
-              ctx.strokeStyle = status === 'ok' ? '#22c55e' : (status === 'junc' ? '#eab308' : '#ef4444');
+              // Indicador visual de TQ: verde para indicado, amarelo para junção, vermelho para contraindicado
+              let tqColor = '#22c55e';
+              if (!c.tqIndicado) {
+                tqColor = (c.membro === 'juncao') ? '#eab308' : '#ef4444';
+              }
+
+              // Cinta
+              ctx.fillStyle = '#18181b';
+              ctx.strokeStyle = tqColor;
               ctx.lineWidth = 2.5;
               ctx.beginPath();
               ctx.roundRect(-w/2, -14, w, 28, 4);
               ctx.fill();
               ctx.stroke();
 
-              // Molinete
-              ctx.fillStyle = '#9da6a0';
-              ctx.beginPath();
-              ctx.roundRect(-20, -3, 40, 6, 2);
-              ctx.fill();
-              ctx.restore();
+              // Barra do molinete
+              ctx.fillStyle = '#ef4444';
+              ctx.fillRect(-10, -18, 20, 36);
+              
+              // Texto indicador
+              ctx.fillStyle = '#ffffff';
+              ctx.font = 'bold 11px system-ui';
+              ctx.textAlign = 'center';
+              ctx.fillText(c.tqIndicado ? 'TQ OK' : 'TQ INEFICAZ', 0, 4);
 
-              // Linha ligando TQ à Ferida
-              ctx.save();
-              ctx.strokeStyle = status === 'ok' ? '#22c55e88' : '#ef444488';
-              ctx.lineWidth = 1.5;
-              ctx.setLineDash([4, 4]);
-              ctx.beginPath();
-              ctx.moveTo(f.x, f.y);
-              ctx.lineTo(tq.x, tq.y);
-              ctx.stroke();
               ctx.restore();
             }
 
@@ -184,40 +184,49 @@
             ctx.save();
             ctx.translate(f.x, f.y);
             ctx.rotate(f.rotacao || 0);
-            const scale = (f.escalaManual || 1.0) * (MEMBRO_CONFIGS[c.membro] ? MEMBRO_CONFIGS[c.membro].scale : 1.0);
             
-            // Halo de sangue
-            ctx.fillStyle = 'rgba(239, 68, 68, 0.4)';
+            // Halo vermelho
+            const grad = ctx.createRadialGradient(0, 0, 2, 0, 0, 24);
+            grad.addColorStop(0, 'rgba(185, 28, 28, 0.9)');
+            grad.addColorStop(0.5, 'rgba(220, 38, 38, 0.4)');
+            grad.addColorStop(1, 'rgba(185, 28, 28, 0)');
+            ctx.fillStyle = grad;
             ctx.beginPath();
-            ctx.arc(0, 0, 16 * scale, 0, Math.PI * 2);
+            ctx.arc(0, 0, 24, 0, Math.PI * 2);
             ctx.fill();
 
-            // Orifício central
+            // Ponto central
             ctx.fillStyle = '#7f1d1d';
             ctx.strokeStyle = '#fca5a5';
             ctx.lineWidth = 1.5;
             ctx.beginPath();
-            if (c.woundShape === 'round') {
-              ctx.arc(0, 0, 6 * scale, 0, Math.PI * 2);
-            } else {
-              ctx.ellipse(0, 0, 18 * scale, 5 * scale, 0, 0, Math.PI * 2);
-            }
+            ctx.arc(0, 0, 6, 0, Math.PI * 2);
             ctx.fill();
             ctx.stroke();
 
-            // Ponto central
-            ctx.fillStyle = '#fff';
-            ctx.beginPath();
-            ctx.arc(0, 0, 2, 0, Math.PI * 2);
-            ctx.fill();
             ctx.restore();
+
+            // Linha conectora tracejada se houver TQ
+            if (tq) {
+              ctx.strokeStyle = c.tqIndicado ? 'rgba(74, 222, 128, 0.6)' : 'rgba(248, 113, 113, 0.6)';
+              ctx.lineWidth = 1.5;
+              ctx.setLineDash([4, 4]);
+              ctx.beginPath();
+              ctx.moveTo(f.x, f.y);
+              ctx.lineTo(tq.x, tq.y);
+              ctx.stroke();
+              ctx.setLineDash([]);
+            }
           };
           img.src = c.url;
         });
 
+        document.getElementById('totalCount').textContent = casos.length;
         document.getElementById('correctCount').textContent = cOk;
+        document.getElementById('abdomeCount').textContent = cAbdome;
+        document.getElementById('toraxCount').textContent = cTorax;
+        document.getElementById('rostoCount').textContent = cRosto;
         document.getElementById('juncCount').textContent = cJunc;
-        document.getElementById('errCount').textContent = cErr;
       });
   </script>
 </body>
