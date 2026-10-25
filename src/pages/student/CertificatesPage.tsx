@@ -1,106 +1,38 @@
-import React from 'react';
-import { CheckCircle2, Download, ShieldCheck, Clock } from 'lucide-react';
-import { useTheme } from '../../context/ThemeContext';
-
+import React, { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
+import { supabase } from '../../services/supabase/client';
+type Certificate = { id: string; title: string; workload_hours: number; issued_at: string; verification_code: string; revoked_at: string | null };
 export const CertificatesPage: React.FC = () => {
-  const { theme } = useTheme();
-  const dark = theme === 'dark';
-  const certificates = [
-    {
-      id: 'cert-aph-2026',
-      title: 'Atendimento Pré-Hospitalar (APH) & Suporte Básico de Vida',
-      cohort: 'Turma Presencial Outubro/2026',
-      hours: 40,
-      code: 'USM-APH-2026-X89A',
-      issuedAt: '19/10/2026',
-      status: 'ready',
-    },
-    {
-      id: 'cert-stb-2026',
-      title: 'Stop the Bleed — Controle Avançado de Hemorragias',
-      cohort: 'Turma Corporativa',
-      hours: 20,
-      status: 'pending',
-      requirement: 'Pendente: Simulado Prático Presencial (24/10/2026)'
-    }
-  ];
-
-  return (
-    <div className="p-6 sm:p-10 space-y-8 max-w-7xl mx-auto w-full">
-      <div className="space-y-1">
-        <span className="text-xs font-bold text-uniao-400 uppercase tracking-wider">
-          Certificação Oficial
-        </span>
-        <h1 className={`text-2xl sm:text-3xl font-black ${dark ? 'text-white' : 'text-slate-900'}`}>
-          Meus Certificados
-        </h1>
-        <p className={`text-xs sm:text-sm ${dark ? 'text-slate-400' : 'text-slate-600'}`}>
-          Certificados digitais autênticos emitidos com código identificador único e validação por QR Code.
-        </p>
-      </div>
-
-      <div className="space-y-4">
-        {certificates.map((cert) => (
-          <div
-            key={cert.id}
-            className={`rounded-3xl border p-6 sm:p-8 flex flex-col sm:flex-row sm:items-center justify-between gap-6 transition-all ${
-              cert.status === 'ready'
-                ? `${dark ? 'bg-slate-900' : 'bg-white'} border-emerald-500/30 shadow-xl`
-                : `${dark ? 'bg-slate-900/50 border-white/5' : 'bg-white/70 border-slate-200'} opacity-80`
-            }`}
-          >
-            <div className="space-y-3">
-              <div className="flex items-center gap-2">
-                {cert.status === 'ready' ? (
-                  <span className="inline-flex items-center gap-1 text-[10px] font-bold px-2.5 py-0.5 rounded-full bg-emerald-500/10 text-emerald-400 border border-emerald-500/30">
-                    <CheckCircle2 className="w-3.5 h-3.5" />
-                    <span>Certificado Emitido & Autenticado</span>
-                  </span>
-                ) : (
-                  <span className="inline-flex items-center gap-1 text-[10px] font-bold px-2.5 py-0.5 rounded-full bg-amber-500/10 text-amber-400 border border-amber-500/30">
-                    <Clock className="w-3.5 h-3.5" />
-                    <span>Requisitos Pendentes</span>
-                  </span>
-                )}
-              </div>
-
-              <div>
-                <h3 className={`text-lg font-bold ${dark ? 'text-white' : 'text-slate-900'}`}>{cert.title}</h3>
-                <p className={`text-xs mt-0.5 ${dark ? 'text-slate-400' : 'text-slate-600'}`}>{cert.cohort} • Carga Horária: {cert.hours} horas</p>
-              </div>
-
-              {cert.status === 'ready' && (
-                <div className="flex items-center gap-3 text-xs text-slate-300 font-mono">
-                  <span className={`${dark ? 'bg-slate-950 border-white/10' : 'bg-slate-50 border-slate-200'} px-3 py-1 rounded-lg border`}>
-                    Código: <strong className="text-uniao-400">{cert.code}</strong>
-                  </span>
-                  <span className={`flex items-center gap-1 font-sans ${dark ? 'text-slate-400' : 'text-slate-600'}`}>
-                    <ShieldCheck className="w-4 h-4 text-emerald-400" />
-                    <span>Autenticidade Verificada</span>
-                  </span>
-                </div>
-              )}
-
-              {cert.status === 'pending' && (
-                <div className="text-xs text-amber-300">
-                  {cert.requirement}
-                </div>
-              )}
-            </div>
-
-            <div>
-              {cert.status === 'ready' ? (
-                <button className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl font-bold text-slate-950 bg-gradient-to-r from-uniao-400 to-teal-300 hover:brightness-110 text-xs shadow">
-                  <Download className="w-4 h-4 text-slate-950" />
-                  <span>Baixar Certificado em PDF</span>
-                </button>
-              ) : (
-                <span className="text-xs text-slate-500 font-medium">Libera após o presencial</span>
-              )}
-            </div>
-          </div>
-        ))}
-      </div>
-    </div>
-  );
+  const [certificates, setCertificates] = useState<Certificate[]>([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState('');
+  useEffect(() => {
+    let alive = true;
+    supabase.from('certificate_issuances')
+      .select('id,title,workload_hours,issued_at,verification_code,revoked_at')
+      .order('issued_at', { ascending: false })
+      .then(({ data, error: failure }) => {
+        if (!alive) return;
+        setLoading(false);
+        if (failure) setError('Não foi possível carregar seus certificados.');
+        else setCertificates((data || []) as Certificate[]);
+      });
+    return () => { alive = false; };
+  }, []);
+  return <main className="mx-auto w-full max-w-5xl p-6 space-y-6">
+    <header className="rounded-2xl bg-slate-900 p-6 border border-white/10">
+      <h1 className="text-2xl font-bold text-white">Meus certificados</h1>
+      <p className="text-sm text-slate-400">Somente certificados oficialmente emitidos aparecem aqui.</p>
+    </header>
+    {loading && <p className="text-slate-400">Consultando certificados…</p>}
+    {error && <p role="alert" className="text-amber-300">{error}</p>}
+    {!loading && !error && certificates.length === 0 && <p className="text-slate-400">Nenhum certificado foi emitido para sua conta ainda.</p>}
+    {certificates.map(cert => <article key={cert.id} className="rounded-2xl bg-slate-900 p-6 border border-white/10 space-y-3">
+      <h2 className="text-lg font-bold text-white">{cert.title}</h2>
+      <p className="text-slate-300 text-sm">{cert.workload_hours} horas · Emissão: {new Date(cert.issued_at).toLocaleDateString('pt-BR')}</p>
+      <p className="font-mono text-xs break-all text-slate-400">{cert.verification_code}</p>
+      {cert.revoked_at ? <p className="text-amber-300">Certificado revogado</p> :
+        <Link className="inline-block rounded-xl bg-teal-400 text-slate-950 px-4 py-2 font-bold" to={`/validar-certificado/${cert.verification_code}`}>Verificar autenticidade</Link>}
+    </article>)}
+  </main>;
 };
