@@ -1,0 +1,749 @@
+export type CasoStopTheBleed = {
+  id: number;
+  file: string;
+  url: string;
+  isStandDeTiro: boolean;
+  woundShape: 'round' | 'longitudinal';
+  membro: 'coxa' | 'perna' | 'braco' | 'antebraco' | 'juncao' | 'peito' | 'abdome' | 'rosto';
+  titulo: string;
+  subtitulo: string;
+  ferida: {
+    x: number;
+    y: number;
+    raio: number;
+    raioY: number;
+    rotacao: number;
+    escalaManual?: number;
+  };
+  tqSite?: {
+    x: number;
+    y: number;
+    angle: number;
+    widthManual?: number;
+  };
+  tqIndicado: boolean;
+  tqStatus: string;
+  justificativaClinica: string;
+};
+
+export const casosStopTheBleed: CasoStopTheBleed[] = [
+  {
+    "id": 1,
+    "file": "Imagem do ChatGPT 24 de out. de 2026, 15_20_00.png",
+    "url": "casos/Imagem do ChatGPT 24 de out. de 2026, 15_20_00.png",
+    "isStandDeTiro": true,
+    "woundShape": "longitudinal",
+    "membro": "abdome",
+    "titulo": "Caso 01 · Estande de Tiro (PAF)",
+    "subtitulo": "Estande de Tiro · Disparo Acidental (ABDOME)",
+    "ferida": {
+      "x": 511,
+      "y": 399,
+      "raio": 5.2,
+      "raioY": 5.2,
+      "rotacao": 0
+    },
+    "tqSite": {
+      "x": 263,
+      "y": 406,
+      "angle": -3.01941960595019,
+      "widthManual": 90
+    },
+    "tqIndicado": false,
+    "tqStatus": "CONTRAINDICADO_ABDOME",
+    "justificativaClinica": "Ferimento perfurante no ABDOME (flanco). O torniquete de extremidades é totalmente ineficaz para hemorragias cavitárias de tronco. Conduta mandatória: Compressão direta com cobertura estéril superficial e rápida evacuação para centro cirúrgico. NUNCA realizar preenchimento (packing) em cavidade abdominal com vísceras."
+  },
+  {
+    "id": 2,
+    "file": "Imagem do ChatGPT 24 de out. de 2026, 15_20_15.png",
+    "url": "casos/Imagem do ChatGPT 24 de out. de 2026, 15_20_15.png",
+    "isStandDeTiro": true,
+    "woundShape": "longitudinal",
+    "membro": "coxa",
+    "titulo": "Caso 02 · Estande de Tiro (PAF)",
+    "subtitulo": "Estande de Tiro · Disparo Acidental (COXA)",
+    "ferida": {
+      "x": 711,
+      "y": 454,
+      "raio": 5.2,
+      "raioY": 5.2,
+      "rotacao": 0.41887902047863906,
+      "escalaManual": 1.21
+    },
+    "tqSite": {
+      "x": 650,
+      "y": 425,
+      "angle": 2.007128639793479,
+      "widthManual": 164
+    },
+    "tqIndicado": true,
+    "tqStatus": "BEM_APLICADO",
+    "justificativaClinica": "Torniquete de extremidade posicionado na COXA proximalmente à lesão com rotação completa da haste do molinete, garantindo oclusão mecânica circunferencial da artéria femoral."
+  },
+  {
+    "id": 3,
+    "file": "Imagem do ChatGPT 24 de out. de 2026, 15_20_46.png",
+    "url": "casos/Imagem do ChatGPT 24 de out. de 2026, 15_20_46.png",
+    "isStandDeTiro": false,
+    "woundShape": "round",
+    "membro": "juncao",
+    "titulo": "Caso 03 · Trauma Urbano",
+    "subtitulo": "Cena Urbana · Acidente Lacerante (AXILA / JUNÇÃO)",
+    "ferida": {
+      "x": 418,
+      "y": 298,
+      "raio": 5.2,
+      "raioY": 5.2,
+      "rotacao": 0.35,
+      "escalaManual": 0.4
+    },
+    "tqSite": {
+      "x": 441,
+      "y": 199,
+      "angle": -2.792526803190927,
+      "widthManual": 81
+    },
+    "tqIndicado": false,
+    "tqStatus": "CONTRAINDICADO_JUNCAO",
+    "justificativaClinica": "Ferimento em ZONA JUNCIONAL (Axila). O torniquete de extremidades é ineficaz para oclusão de artérias profundas na raiz do tronco (artéria axilar/subclávia proximal). Conduta mandatória: Preenchimento Profundo da Cavidade (Wound Packing) com gaze hemostática + Compressão Manual Direta contínua por no mínimo 3 minutos."
+  },
+  {
+    "id": 4,
+    "file": "Imagem do ChatGPT 24 de out. de 2026, 15_20_54.png",
+    "url": "casos/Imagem do ChatGPT 24 de out. de 2026, 15_20_54.png",
+    "isStandDeTiro": true,
+    "woundShape": "longitudinal",
+    "membro": "perna",
+    "titulo": "Caso 04 · Estande de Tiro (PAF)",
+    "subtitulo": "Estande de Tiro · Disparo Acidental (PERNA)",
+    "ferida": {
+      "x": 829,
+      "y": 434,
+      "raio": 5.2,
+      "raioY": 5.2,
+      "rotacao": 0.2617993877991494
+    },
+    "tqSite": {
+      "x": 667,
+      "y": 367,
+      "angle": 1.7976891295541593,
+      "widthManual": 110
+    },
+    "tqIndicado": true,
+    "tqStatus": "BEM_APLICADO",
+    "justificativaClinica": "Torniquete posicionado no membro inferior acima da lesão na PERNA, promovendo hemostasia e cessação imediata do sangramento pulsátil."
+  },
+  {
+    "id": 5,
+    "file": "Imagem do ChatGPT 24 de out. de 2026, 15_21_11.png",
+    "url": "casos/Imagem do ChatGPT 24 de out. de 2026, 15_21_11.png",
+    "isStandDeTiro": false,
+    "woundShape": "round",
+    "membro": "braco",
+    "titulo": "Caso 05 · Trauma Urbano",
+    "subtitulo": "Estande de Tiro · Disparo Acidental (BRAÇO)",
+    "ferida": {
+      "x": 391,
+      "y": 280,
+      "raio": 5.2,
+      "raioY": 5.2,
+      "rotacao": 0.35,
+      "escalaManual": 0.95
+    },
+    "tqSite": {
+      "x": 351,
+      "y": 263,
+      "angle": -0.3141592653589793,
+      "widthManual": 114
+    },
+    "tqIndicado": true,
+    "tqStatus": "BEM_APLICADO",
+    "justificativaClinica": "Torniquete posicionado no BRAÇO, 5 a 7 cm proximal ao ferimento perfurocontuso, interrompendo com sucesso o fluxo da artéria braquial."
+  },
+  {
+    "id": 6,
+    "file": "Imagem do ChatGPT 24 de out. de 2026, 15_21_17.png",
+    "url": "casos/Imagem do ChatGPT 24 de out. de 2026, 15_21_17.png",
+    "isStandDeTiro": false,
+    "woundShape": "round",
+    "membro": "coxa",
+    "titulo": "Caso 06 · Trauma Urbano",
+    "subtitulo": "Cena Urbana · Ferimento Contuso (COXA)",
+    "ferida": {
+      "x": 715,
+      "y": 215,
+      "raio": 5.2,
+      "raioY": 5.2,
+      "rotacao": 0.35,
+      "escalaManual": 0.6
+    },
+    "tqSite": {
+      "x": 684,
+      "y": 277,
+      "angle": 0.7330382858376184,
+      "widthManual": 118
+    },
+    "tqIndicado": true,
+    "tqStatus": "BEM_APLICADO",
+    "justificativaClinica": "Torniquete de membro aplicado na COXA acima da lesão com pressão circunferencial adequada sobre a artéria femoral."
+  },
+  {
+    "id": 7,
+    "file": "Imagem do ChatGPT 24 de out. de 2026, 15_21_28.png",
+    "url": "casos/Imagem do ChatGPT 24 de out. de 2026, 15_21_28.png",
+    "isStandDeTiro": false,
+    "woundShape": "round",
+    "membro": "peito",
+    "titulo": "Caso 07 · Trauma Urbano",
+    "subtitulo": "Cena Urbana · Trauma Penetrante (PEITO / TÓRAX)",
+    "ferida": {
+      "x": 827,
+      "y": 299,
+      "raio": 5.2,
+      "raioY": 5.2,
+      "rotacao": 0.35,
+      "escalaManual": 0.4
+    },
+    "tqSite": {
+      "x": 921,
+      "y": 324,
+      "angle": -0.3141592653589793,
+      "widthManual": 97
+    },
+    "tqIndicado": false,
+    "tqStatus": "CONTRAINDICADO_TORAX",
+    "justificativaClinica": "Ferimento penetrante no PEITO / TÓRAX esquerdo. Torniquete de membro é totalmente contraindicado e ineficaz (colocá-lo no membro não afeta vasos intratorácicos). Conduta padrão Stop the Bleed: Curativo Oclusivo/Valvulado (Selo de Tórax / Chest Seal) para prevenir pneumotórax hipertensivo + compressão direta. NUNCA realizar preenchimento (packing) intratorácico."
+  },
+  {
+    "id": 8,
+    "file": "Imagem do ChatGPT 24 de out. de 2026, 15_21_35.png",
+    "url": "casos/Imagem do ChatGPT 24 de out. de 2026, 15_21_35.png",
+    "isStandDeTiro": false,
+    "woundShape": "longitudinal",
+    "membro": "antebraco",
+    "titulo": "Caso 08 · Trauma Urbano",
+    "subtitulo": "Cena Urbana · Acidente Lacerante (ANTEBRAÇO)",
+    "ferida": {
+      "x": 798,
+      "y": 466,
+      "raio": 5.2,
+      "raioY": 5.2,
+      "rotacao": 0.35,
+      "escalaManual": 1.03
+    },
+    "tqSite": {
+      "x": 748,
+      "y": 389,
+      "angle": -0.4363323129985824,
+      "widthManual": 74
+    },
+    "tqIndicado": true,
+    "tqStatus": "BEM_APLICADO",
+    "justificativaClinica": "Torniquete de extremidade posicionado no braço proximalmente à laceração arterial no ANTEBRAÇO, alcançando controle hemostático definitivo."
+  },
+  {
+    "id": 9,
+    "file": "Imagem do ChatGPT 24 de out. de 2026, 15_21_42.png",
+    "url": "casos/Imagem do ChatGPT 24 de out. de 2026, 15_21_42.png",
+    "isStandDeTiro": true,
+    "woundShape": "longitudinal",
+    "membro": "abdome",
+    "titulo": "Caso 09 · Estande de Tiro (PAF)",
+    "subtitulo": "Cena Urbana · Trauma Penetrante (ABDOME)",
+    "ferida": {
+      "x": 629,
+      "y": 362,
+      "raio": 5.2,
+      "raioY": 5.2,
+      "rotacao": 0,
+      "escalaManual": 0.83
+    },
+    "tqSite": {
+      "x": 268,
+      "y": 414,
+      "angle": 0.2617993877991494,
+      "widthManual": 87
+    },
+    "tqIndicado": false,
+    "tqStatus": "CONTRAINDICADO_ABDOME",
+    "justificativaClinica": "Ferimento penetrante no ABDOME (região periumbilical). O torniquete é contraindicado por se tratar de lesão do tronco. Conduta mandatória: Compressão direta com gaze/campo estéril superficial e transporte imediato."
+  },
+  {
+    "id": 10,
+    "file": "Imagem do ChatGPT 24 de out. de 2026, 15_22_00.png",
+    "url": "casos/Imagem do ChatGPT 24 de out. de 2026, 15_22_00.png",
+    "isStandDeTiro": true,
+    "woundShape": "longitudinal",
+    "membro": "perna",
+    "titulo": "Caso 10 · Estande de Tiro (PAF)",
+    "subtitulo": "Cena Urbana · Acidente Traumático (PERNA)",
+    "ferida": {
+      "x": 817,
+      "y": 498,
+      "raio": 5.2,
+      "raioY": 5.2,
+      "rotacao": -2.792526803190927,
+      "escalaManual": 1.15
+    },
+    "tqSite": {
+      "x": 721,
+      "y": 443,
+      "angle": -1.5009831567151233,
+      "widthManual": 97
+    },
+    "tqIndicado": true,
+    "tqStatus": "BEM_APLICADO",
+    "justificativaClinica": "Torniquete aplicado acima da ferida na PERNA com oclusão das artérias tibial e fibular."
+  },
+  {
+    "id": 11,
+    "file": "Imagem do ChatGPT 24 de out. de 2026, 15_22_07.png",
+    "url": "casos/Imagem do ChatGPT 24 de out. de 2026, 15_22_07.png",
+    "isStandDeTiro": false,
+    "woundShape": "longitudinal",
+    "membro": "rosto",
+    "titulo": "Caso 11 · Trauma Urbano",
+    "subtitulo": "Estande de Tiro · Disparo / Ferimento (ROSTO / TESTA)",
+    "ferida": {
+      "x": 510,
+      "y": 87,
+      "raio": 5.2,
+      "raioY": 5.2,
+      "rotacao": -0.3141592653589793,
+      "escalaManual": 0.48
+    },
+    "tqSite": {
+      "x": 369,
+      "y": 405,
+      "angle": 0.03490658503988659,
+      "widthManual": 77
+    },
+    "tqIndicado": false,
+    "tqStatus": "CONTRAINDICADO_ROSTO",
+    "justificativaClinica": "Ferimento no ROSTO / CABEÇA (região frontal/testa). O torniquete é TERMINANTEMENTE CONTRAINDICADO (letal se aplicado no pescoço; inútil no braço para sangramento craniofacial). Conduta mandatória: Compressão manual direta contínua e firme com compressa limpa, mantendo a via aérea desobstruída e alinhamento da coluna cervical."
+  },
+  {
+    "id": 12,
+    "file": "Imagem do ChatGPT 24 de out. de 2026, 15_22_14.png",
+    "url": "casos/Imagem do ChatGPT 24 de out. de 2026, 15_22_14.png",
+    "isStandDeTiro": false,
+    "woundShape": "longitudinal",
+    "membro": "peito",
+    "titulo": "Caso 12 · Trauma Urbano",
+    "subtitulo": "Cena Urbana · Trauma Penetrante (PEITO / TÓRAX SUPERIOR)",
+    "ferida": {
+      "x": 606,
+      "y": 290,
+      "raio": 5.2,
+      "raioY": 5.2,
+      "rotacao": 0.03490658503988659
+    },
+    "tqSite": {
+      "x": 437,
+      "y": 416,
+      "angle": -0.20943951023931953,
+      "widthManual": 84
+    },
+    "tqIndicado": false,
+    "tqStatus": "CONTRAINDICADO_TORAX",
+    "justificativaClinica": "Ferimento penetrante no PEITO / TÓRAX superior (infraclavicular). Torniquetes de extremidades são ineficazes e contraindicados. Conduta padrão: Curativo oclusivo/valvulado e compressão manual direta estéril. Não realizar preenchimento profundo de cavidade torácica."
+  },
+  {
+    "id": 13,
+    "file": "Imagem do ChatGPT 24 de out. de 2026, 15_22_21.png",
+    "url": "casos/Imagem do ChatGPT 24 de out. de 2026, 15_22_21.png",
+    "isStandDeTiro": true,
+    "woundShape": "longitudinal",
+    "membro": "abdome",
+    "titulo": "Caso 13 · Estande de Tiro (PAF)",
+    "subtitulo": "Cena Urbana · Trauma Penetrante (ABDOME)",
+    "ferida": {
+      "x": 521,
+      "y": 411,
+      "raio": 5.2,
+      "raioY": 5.2,
+      "rotacao": -3.141592653589793,
+      "escalaManual": 1.23
+    },
+    "tqSite": {
+      "x": 163,
+      "y": 434,
+      "angle": -0.08726646259971647,
+      "widthManual": 131
+    },
+    "tqIndicado": false,
+    "tqStatus": "CONTRAINDICADO_ABDOME",
+    "justificativaClinica": "Ferimento penetrante no ABDOME. Torniquetes de membros são contraindicados e ineficazes para conter sangramento abdominal. Conduta mandatória: Compressão direta estéril superficial e rápida evacuação cirúrgica."
+  },
+  {
+    "id": 14,
+    "file": "Imagem do ChatGPT 24 de out. de 2026, 15_22_27.png",
+    "url": "casos/Imagem do ChatGPT 24 de out. de 2026, 15_22_27.png",
+    "isStandDeTiro": false,
+    "woundShape": "longitudinal",
+    "membro": "abdome",
+    "titulo": "Caso 14 · Trauma Urbano",
+    "subtitulo": "Cena Urbana · Trauma Penetrante (ABDOME / EPIGÁSTRIO)",
+    "ferida": {
+      "x": 638,
+      "y": 304,
+      "raio": 5.2,
+      "raioY": 5.2,
+      "rotacao": -0.3141592653589793,
+      "escalaManual": 1.34
+    },
+    "tqSite": {
+      "x": 425,
+      "y": 370,
+      "angle": 0.5061454830783556
+    },
+    "tqIndicado": false,
+    "tqStatus": "CONTRAINDICADO_ABDOME",
+    "justificativaClinica": "Ferimento penetrante no ABDOME SUPERIOR (epigástrio). Torniquete de membros é contraindicado. Conduta mandatória: Compressão direta com curativo estéril sem empacotamento visceral profundo."
+  },
+  {
+    "id": 15,
+    "file": "Imagem do ChatGPT 24 de out. de 2026, 15_22_34.png",
+    "url": "casos/Imagem do ChatGPT 24 de out. de 2026, 15_22_34.png",
+    "isStandDeTiro": true,
+    "woundShape": "longitudinal",
+    "membro": "antebraco",
+    "titulo": "Caso 15 · Estande de Tiro (PAF)",
+    "subtitulo": "Cena Urbana · Acidente Lacerante (PUNHO / ANTEBRAÇO)",
+    "ferida": {
+      "x": 924,
+      "y": 583,
+      "raio": 5.2,
+      "raioY": 5.2,
+      "rotacao": 0.03490658503988659,
+      "escalaManual": 0.83
+    },
+    "tqSite": {
+      "x": 805,
+      "y": 377,
+      "angle": -0.3141592653589793,
+      "widthManual": 87
+    },
+    "tqIndicado": true,
+    "tqStatus": "BEM_APLICADO",
+    "justificativaClinica": "Torniquete de extremidade posicionado no braço proximalmente ao ferimento arterial no ANTEBRAÇO/PUNHO, garantindo controle hemostático pré-hospitalar."
+  },
+  {
+    "id": 16,
+    "file": "Imagem do ChatGPT 24 de out. de 2026, 15_23_47.png",
+    "url": "casos/Imagem do ChatGPT 24 de out. de 2026, 15_23_47.png",
+    "isStandDeTiro": false,
+    "woundShape": "longitudinal",
+    "membro": "perna",
+    "titulo": "Caso 16 · Trauma Urbano",
+    "subtitulo": "Cena Urbana · Acidente Lacerante (PERNA)",
+    "ferida": {
+      "x": 819,
+      "y": 517,
+      "raio": 5.2,
+      "raioY": 5.2,
+      "rotacao": 0.35
+    },
+    "tqSite": {
+      "x": 759,
+      "y": 457,
+      "angle": -0.7853981633974483,
+      "widthManual": 111
+    },
+    "tqIndicado": true,
+    "tqStatus": "BEM_APLICADO",
+    "justificativaClinica": "Torniquete posicionado proximalmente ao ferimento na PERNA com cessação da perda volêmica arterial."
+  },
+  {
+    "id": 17,
+    "file": "Imagem do ChatGPT 24 de out. de 2026, 15_23_57.png",
+    "url": "casos/Imagem do ChatGPT 24 de out. de 2026, 15_23_57.png",
+    "isStandDeTiro": false,
+    "woundShape": "longitudinal",
+    "membro": "antebraco",
+    "titulo": "Caso 17 · Trauma Urbano",
+    "subtitulo": "Cena Urbana · Ferimento Lacerante (ANTEBRAÇO)",
+    "ferida": {
+      "x": 838,
+      "y": 504,
+      "raio": 5.2,
+      "raioY": 5.2,
+      "rotacao": 0.35
+    },
+    "tqSite": {
+      "x": 765,
+      "y": 394,
+      "angle": -0.5585053606381855,
+      "widthManual": 84
+    },
+    "tqIndicado": true,
+    "tqStatus": "BEM_APLICADO",
+    "justificativaClinica": "Torniquete comercial posicionado no braço acima da lesão no ANTEBRAÇO, interrompendo a hemorragia das artérias radial e ulnar."
+  },
+  {
+    "id": 18,
+    "file": "Imagem do ChatGPT 24 de out. de 2026, 15_24_05.png",
+    "url": "casos/Imagem do ChatGPT 24 de out. de 2026, 15_24_05.png",
+    "isStandDeTiro": false,
+    "woundShape": "round",
+    "membro": "braco",
+    "titulo": "Caso 18 · Trauma Urbano",
+    "subtitulo": "Cena Urbana · Trauma Penetrante (BRAÇO)",
+    "ferida": {
+      "x": 817,
+      "y": 370,
+      "raio": 5.2,
+      "raioY": 5.2,
+      "rotacao": 0.35
+    },
+    "tqSite": {
+      "x": 757,
+      "y": 310,
+      "angle": -0.5585053606381855,
+      "widthManual": 114
+    },
+    "tqIndicado": true,
+    "tqStatus": "BEM_APLICADO",
+    "justificativaClinica": "Torniquete posicionado no BRAÇO, 5 a 7 cm proximal à lesão exsanguinante com aperto suficiente para ausência de pulso distal."
+  },
+  {
+    "id": 19,
+    "file": "Imagem do ChatGPT 24 de out. de 2026, 15_24_13.png",
+    "url": "casos/Imagem do ChatGPT 24 de out. de 2026, 15_24_13.png",
+    "isStandDeTiro": true,
+    "woundShape": "round",
+    "membro": "rosto",
+    "titulo": "Caso 19 · Estande de Tiro (PAF)",
+    "subtitulo": "Cena Urbana · Trauma Penetrante (ROSTO / PESCOÇO LATERAL)",
+    "ferida": {
+      "x": 559,
+      "y": 158,
+      "raio": 5.2,
+      "raioY": 5.2,
+      "rotacao": 0
+    },
+    "tqSite": {
+      "x": 402,
+      "y": 385,
+      "angle": -0.08726646259971647,
+      "widthManual": 104
+    },
+    "tqIndicado": false,
+    "tqStatus": "CONTRAINDICADO_ROSTO",
+    "justificativaClinica": "Ferimento na região MANDIBULAR / CERVICAL / ROSTO. Torniquetes são TERMINANTEMENTE CONTRAINDICADOS (aplicação cervical leva a asfixia mecânica, isquemia cerebral aguda e óbito imediato; aplicação em membros não reduz fluxo cervical). Conduta obrigatória: Compressão manual direta seletiva sobre o ponto de sangramento com gaze hemostática sem ocluir a via aérea contralateral ou comprimir ambas as carótidas."
+  },
+  {
+    "id": 20,
+    "file": "Imagem do ChatGPT 24 de out. de 2026, 15_24_20.png",
+    "url": "casos/Imagem do ChatGPT 24 de out. de 2026, 15_24_20.png",
+    "isStandDeTiro": true,
+    "woundShape": "round",
+    "membro": "coxa",
+    "titulo": "Caso 20 · Estande de Tiro (PAF)",
+    "subtitulo": "Cena Urbana · Trauma Penetrante (COXA)",
+    "ferida": {
+      "x": 620,
+      "y": 420,
+      "raio": 5.2,
+      "raioY": 5.2,
+      "rotacao": 0
+    },
+    "tqSite": {
+      "x": 579,
+      "y": 415,
+      "angle": -1.2566370614359172,
+      "widthManual": 128
+    },
+    "tqIndicado": true,
+    "tqStatus": "BEM_APLICADO",
+    "justificativaClinica": "Torniquete comercial posicionado na raiz da COXA proximal ao ferimento exsanguinante, com rotação completa da barra do molinete."
+  },
+  {
+    "id": 21,
+    "file": "Imagem do ChatGPT 24 de out. de 2026, 15_24_27.png",
+    "url": "casos/Imagem do ChatGPT 24 de out. de 2026, 15_24_27.png",
+    "isStandDeTiro": true,
+    "woundShape": "round",
+    "membro": "perna",
+    "titulo": "Caso 21 · Estande de Tiro (PAF)",
+    "subtitulo": "Cena Urbana · Trauma Penetrante (PERNA)",
+    "ferida": {
+      "x": 745,
+      "y": 468,
+      "raio": 5.2,
+      "raioY": 5.2,
+      "rotacao": 0
+    },
+    "tqSite": {
+      "x": 700,
+      "y": 403,
+      "angle": -0.6806784082777885,
+      "widthManual": 97
+    },
+    "tqIndicado": true,
+    "tqStatus": "BEM_APLICADO",
+    "justificativaClinica": "Torniquete posicionado proximalmente na extremidade inferior, controlando com segurança o sangramento na PERNA."
+  },
+  {
+    "id": 22,
+    "file": "Imagem do ChatGPT 24 de out. de 2026, 15_24_34.png",
+    "url": "casos/Imagem do ChatGPT 24 de out. de 2026, 15_24_34.png",
+    "isStandDeTiro": false,
+    "woundShape": "round",
+    "membro": "antebraco",
+    "titulo": "Caso 22 · Trauma Urbano",
+    "subtitulo": "Cena Urbana · Ferimento Lacerante (ANTEBRAÇO)",
+    "ferida": {
+      "x": 737,
+      "y": 407,
+      "raio": 5.2,
+      "raioY": 5.2,
+      "rotacao": 0.35,
+      "escalaManual": 0.44
+    },
+    "tqSite": {
+      "x": 705,
+      "y": 344,
+      "angle": -0.3141592653589793,
+      "widthManual": 77
+    },
+    "tqIndicado": true,
+    "tqStatus": "BEM_APLICADO",
+    "justificativaClinica": "Torniquete de membro aplicado no braço acima da lesão no ANTEBRAÇO, interrompendo o sangramento arterial."
+  },
+  {
+    "id": 23,
+    "file": "Imagem do ChatGPT 24 de out. de 2026, 15_24_43.png",
+    "url": "casos/Imagem do ChatGPT 24 de out. de 2026, 15_24_43.png",
+    "isStandDeTiro": false,
+    "woundShape": "longitudinal",
+    "membro": "braco",
+    "titulo": "Caso 23 · Trauma Urbano",
+    "subtitulo": "Cena Urbana · Trauma Penetrante (BRAÇO)",
+    "ferida": {
+      "x": 795,
+      "y": 432,
+      "raio": 5.2,
+      "raioY": 5.2,
+      "rotacao": 0.35
+    },
+    "tqSite": {
+      "x": 759,
+      "y": 381,
+      "angle": -0.4363323129985824,
+      "widthManual": 101
+    },
+    "tqIndicado": true,
+    "tqStatus": "BEM_APLICADO",
+    "justificativaClinica": "Torniquete aplicado no BRAÇO proximal à ferida exsanguinante com controle eficaz da artéria braquial."
+  },
+  {
+    "id": 24,
+    "file": "Imagem do ChatGPT 24 de out. de 2026, 15_24_49.png",
+    "url": "casos/Imagem do ChatGPT 24 de out. de 2026, 15_24_49.png",
+    "isStandDeTiro": false,
+    "woundShape": "longitudinal",
+    "membro": "perna",
+    "titulo": "Caso 24 · Trauma Urbano",
+    "subtitulo": "Cena Urbana · Acidente Traumático (PERNA / TORNOZELO)",
+    "ferida": {
+      "x": 872,
+      "y": 528,
+      "raio": 5.2,
+      "raioY": 5.2,
+      "rotacao": 0.35
+    },
+    "tqSite": {
+      "x": 747,
+      "y": 474,
+      "angle": -1.0297442586766543,
+      "widthManual": 94
+    },
+    "tqIndicado": true,
+    "tqStatus": "BEM_APLICADO",
+    "justificativaClinica": "Torniquete de extremidade posicionado acima da lesão distal na PERNA, cessando a perda volêmica."
+  },
+  {
+    "id": 25,
+    "file": "Imagem do ChatGPT 24 de out. de 2026, 15_24_55.png",
+    "url": "casos/Imagem do ChatGPT 24 de out. de 2026, 15_24_55.png",
+    "isStandDeTiro": true,
+    "woundShape": "round",
+    "membro": "antebraco",
+    "titulo": "Caso 25 · Estande de Tiro (PAF)",
+    "subtitulo": "Cena Urbana · Acidente Lacerante (ANTEBRAÇO)",
+    "ferida": {
+      "x": 390,
+      "y": 456,
+      "raio": 5.2,
+      "raioY": 5.2,
+      "rotacao": 0,
+      "escalaManual": 0.4
+    },
+    "tqSite": {
+      "x": 405,
+      "y": 392,
+      "angle": 0.15707963267948966,
+      "widthManual": 84
+    },
+    "tqIndicado": true,
+    "tqStatus": "BEM_APLICADO",
+    "justificativaClinica": "Torniquete aplicado no braço proximalmente à lesão no ANTEBRAÇO, conduta recomendada pelo Stop the Bleed."
+  },
+  {
+    "id": 26,
+    "file": "Imagem do ChatGPT 24 de out. de 2026, 15_25_02.png",
+    "url": "casos/Imagem do ChatGPT 24 de out. de 2026, 15_25_02.png",
+    "isStandDeTiro": true,
+    "woundShape": "round",
+    "membro": "coxa",
+    "titulo": "Caso 26 · Estande de Tiro (PAF)",
+    "subtitulo": "Cena Urbana · Trauma Penetrante (COXA)",
+    "ferida": {
+      "x": 620,
+      "y": 420,
+      "raio": 5.2,
+      "raioY": 5.2,
+      "rotacao": 0
+    },
+    "tqSite": {
+      "x": 569,
+      "y": 409,
+      "angle": -1.2566370614359172
+    },
+    "tqIndicado": true,
+    "tqStatus": "BEM_APLICADO",
+    "justificativaClinica": "Torniquete posicionado no membro inferior (COXA proximal), ocluindo com eficácia os ramos da artéria femoral."
+  },
+  {
+    "id": 27,
+    "file": "Imagem do ChatGPT 24 de out. de 2026, 15_25_08.png",
+    "url": "casos/Imagem do ChatGPT 24 de out. de 2026, 15_25_08.png",
+    "isStandDeTiro": true,
+    "woundShape": "round",
+    "membro": "abdome",
+    "titulo": "Caso 27 · Estande de Tiro (PAF)",
+    "subtitulo": "Cena Urbana · Trauma Penetrante (ABDOME)",
+    "ferida": {
+      "x": 568,
+      "y": 436,
+      "raio": 5.2,
+      "raioY": 5.2,
+      "rotacao": 0
+    },
+    "tqSite": {
+      "x": 278,
+      "y": 477,
+      "angle": -0.20943951023931953
+    },
+    "tqIndicado": false,
+    "tqStatus": "CONTRAINDICADO_ABDOME",
+    "justificativaClinica": "Ferimento perfurante no ABDOME. O torniquete é completamente contraindicado para lesões de tronco. Conduta mandatória: Cobertura com curativo estéril, compressão direta cuidadosa sem invaginação de gaze em vísceras e rápida evacuação para centro cirúrgico."
+  }
+];
+
+export function getCasoById(id: number | string): CasoStopTheBleed {
+  const num = typeof id === 'number' ? id : parseInt(id.replace(/\D/g, ''), 10);
+  const found = casosStopTheBleed.find(c => c.id === num);
+  return found || casosStopTheBleed[0];
+}
