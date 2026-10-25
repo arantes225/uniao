@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { 
-  ShieldAlert, School, LogOut, Camera, 
+  School, LogOut, Camera, 
   Trash2, CheckCircle2, RefreshCw, Award, Users, 
   Settings, Clock, BookOpen, FileText, Check, Plus,
   UserPlus, UserMinus, Eye, Filter, Sparkles, X,
@@ -133,7 +133,7 @@ const PRESET_MODELS: CertificatePreset[] = [
 // Mantém o mesmo PIN administrativo usado pelo painel e pela liberação da turma.
 // A autenticação da rota continua sendo a barreira principal; este PIN é uma
 // confirmação adicional para ações irreversíveis dentro do modal.
-const ADMIN_PIN = '1926';
+// Server-side platform_staff authorization replaces the exposed PIN.
 
 interface StudentRecord {
   id: string;
@@ -152,10 +152,25 @@ interface StudentRecord {
 }
 
 export const AdminDashboard: React.FC = () => {
-  // Controle de Acesso por PIN de Segurança
-  const [pinEntered, setPinEntered] = useState('');
   const [pinAuthorized, setPinAuthorized] = useState(false);
-  const [pinError, setPinError] = useState(false);
+  const [adminChecked, setAdminChecked] = useState(false);
+  useEffect(() => {
+    let active = true;
+    (async () => {
+      const { data: { user }, error } = await supabase.auth.getUser();
+      if (!active) return;
+      if (error || !user) { setPinAuthorized(false); setAdminChecked(true); return; }
+      const { data: staff, error: staffError } = await supabase.from('platform_staff')
+        .select('user_id').eq('user_id', user.id).maybeSingle();
+      if (!active) return;
+      setPinAuthorized(!staffError && !!staff);
+      setAdminChecked(true);
+    })();
+    const { data: { subscription } } = supabase.auth.onAuthStateChange(event => {
+      if (event === 'SIGNED_OUT' && active) setPinAuthorized(false);
+    });
+    return () => { active = false; subscription.unsubscribe(); };
+  }, []);
 
   // Navegação Interna por Abas
   const [activeTab, setActiveTab] = useState<'dashboard' | 'turmas' | 'conteudos' | 'prompter' | 'certificados' | 'galeria'>('dashboard');
@@ -193,83 +208,7 @@ export const AdminDashboard: React.FC = () => {
 
   // Alunos e Filtro por Turma
   const [cohortFilter, setCohortFilter] = useState<string>('all');
-  const [students, setStudents] = useState<StudentRecord[]>([
-    {
-      id: '1',
-      name: 'Dr. Lucas Arantes',
-      email: 'aluno.uniao@gmail.com',
-      cpf: '123.456.789-00',
-      cohortId: '22222222-2222-2222-2222-222222222222',
-      cohortName: 'Turma de Capacitação APH 2026',
-      progress: 40,
-      lessonsCompleted: 4,
-      totalLessons: 12,
-      scoreQuiz: 95,
-      simFinished: true,
-      practicalAuthorized: true,
-      daysRemaining: 89,
-    },
-    {
-      id: '2',
-      name: 'Dra. Mariana Costa Silva',
-      email: 'mariana.costa@samu.sp.gov.br',
-      cpf: '234.567.890-11',
-      cohortId: '22222222-2222-2222-2222-222222222222',
-      cohortName: 'Turma de Capacitação APH 2026',
-      progress: 75,
-      lessonsCompleted: 9,
-      totalLessons: 12,
-      scoreQuiz: 90,
-      simFinished: true,
-      practicalAuthorized: true,
-      daysRemaining: 89,
-    },
-    {
-      id: '3',
-      name: 'Enf. Roberto Albuquerque',
-      email: 'roberto.albuquerque@hospital.med.br',
-      cpf: '345.678.901-22',
-      cohortId: '22222222-2222-2222-2222-222222222222',
-      cohortName: 'Turma de Capacitação APH 2026',
-      progress: 20,
-      lessonsCompleted: 2,
-      totalLessons: 12,
-      scoreQuiz: 80,
-      simFinished: false,
-      practicalAuthorized: false,
-      daysRemaining: 89,
-    },
-    {
-      id: '4',
-      name: 'Bombeiro Carlos Eduardo',
-      email: 'carlos.edu@resgate.gov.br',
-      cpf: '456.789.012-33',
-      cohortId: '33333333-3333-3333-3333-333333333333',
-      cohortName: 'Turma Stop the Bleed Tático',
-      progress: 100,
-      lessonsCompleted: 8,
-      totalLessons: 8,
-      scoreQuiz: 100,
-      simFinished: true,
-      practicalAuthorized: true,
-      daysRemaining: 45,
-    },
-    {
-      id: '5',
-      name: 'Profa. Fernanda Oliveira',
-      email: 'fernanda.oliveira@escolaobjetivo.com.br',
-      cpf: '567.890.123-44',
-      cohortId: '44444444-4444-4444-4444-444444444444',
-      cohortName: 'Turma Colégio Objetivo (Lei Lucas 13.722)',
-      progress: 60,
-      lessonsCompleted: 6,
-      totalLessons: 10,
-      scoreQuiz: 88,
-      simFinished: true,
-      practicalAuthorized: true,
-      daysRemaining: 115,
-    },
-  ]);
+  const [students, setStudents] = useState<StudentRecord[]>([]);
 
   // Modal para Criar Nova Turma
   const [isCreateCohortOpen, setIsCreateCohortOpen] = useState(false);
@@ -301,7 +240,7 @@ export const AdminDashboard: React.FC = () => {
   // =========================================================================
   // MÓDULO DE CERTIFICADOS & EMENTAS
   // =========================================================================
-  const [selectedCertCohortId, setSelectedCertCohortId] = useState<string>('22222222-2222-2222-2222-222222222222');
+  const [selectedCertCohortId, setSelectedCertCohortId] = useState<string>('');
   const [selectedPresetId, setSelectedPresetId] = useState<string>('aph-padrao');
   
   // Dados do Modelo Editável Atual
@@ -350,12 +289,8 @@ export const AdminDashboard: React.FC = () => {
   const [cohortCertSide, setCohortCertSide] = useState<'front' | 'back'>('front');
   const [selectedStudentForCert, setSelectedStudentForCert] = useState<StudentRecord | null>(null);
   const [releasedCohorts, setReleasedCohorts] = useState<Record<string, boolean>>({});
-  const [releasePassword, setReleasePassword] = useState('');
-  const [releaseError, setReleaseError] = useState(false);
   const [isSendCertificatesOpen, setIsSendCertificatesOpen] = useState(false);
-  const [sendCertificatesPassword, setSendCertificatesPassword] = useState('');
-  const [sendCertificatesError, setSendCertificatesError] = useState(false);
-  const [sentCohorts, setSentCohorts] = useState<Record<string, number>>({});
+  const [sentCohorts] = useState<Record<string, number>>({});
 
   const handleOpenCohortCertModal = (cohort: any) => {
     // A prévia da turma deve carregar seus próprios responsáveis, não os da última turma editada.
@@ -371,37 +306,26 @@ export const AdminDashboard: React.FC = () => {
     setCohortCertSide('front');
     const firstStudent = students.find(s => s.cohortId === cohort.id);
     setSelectedStudentForCert(firstStudent || null);
-    setReleasePassword('');
-    setReleaseError(false);
     setIsCohortCertModalOpen(true);
   };
 
-  const handleReleaseCertificates = () => {
-    if (releasePassword !== ADMIN_PIN) {
-      setReleaseError(true);
-      return;
-    }
+  const handleReleaseCertificates = async () => {
+    if (!activeCertCohort) return;
+    if (!window.confirm('Emitir certificados oficiais desta turma? Confirme que os alunos concluíram os requisitos teóricos e presenciais.')) return;
+    const { data, error } = await supabase.rpc('issue_cohort_certificates', { p_cohort_id: activeCertCohort.id });
+    if (error) { alert('Emissão recusada pelo banco: ' + error.message); return; }
+    const count = Number(data || 0);
+    if (count === 0) { alert('Nenhum novo certificado. Confira as matrículas ou emissões anteriores.'); return; }
     setReleasedCohorts(prev => ({ ...prev, [activeCertCohort.id]: true }));
-    setReleasePassword('');
-    setReleaseError(false);
+    alert(count + ' certificado(s) registrados. Nenhum e-mail foi enviado.');
   };
 
   const handleSendCertificatesToAll = () => {
-    if (!activeCertCohort) return;
-
-    if (sendCertificatesPassword !== ADMIN_PIN) {
-      setSendCertificatesError(true);
-      return;
-    }
-
-    const eligibleStudents = students.filter(student => student.cohortId === activeCertCohort.id);
-    setSentCohorts(prev => ({ ...prev, [activeCertCohort.id]: eligibleStudents.length }));
-    setSendCertificatesPassword('');
-    setSendCertificatesError(false);
     setIsSendCertificatesOpen(false);
+    alert('O envio por e-mail ainda não está integrado. Nenhuma mensagem foi enviada.');
   };
 
-  const updateCertSigner = (id: string, update: Partial<CertificateSignatory>) => {
+    const updateCertSigner = (id: string, update: Partial<CertificateSignatory>) => {
     setCertSigners(prev => prev.map(person => person.id === id ? { ...person, ...update } : person));
   };
 
@@ -440,16 +364,6 @@ export const AdminDashboard: React.FC = () => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [signerPathKey]);
 
-  const handlePinSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    if (pinEntered === ADMIN_PIN) {
-      setPinAuthorized(true);
-      setPinError(false);
-    } else {
-      setPinError(true);
-    }
-  };
-
   const loadData = async () => {
     // 1. Carregar galeria
     const { data: gal } = await supabase
@@ -482,6 +396,13 @@ export const AdminDashboard: React.FC = () => {
       const mapping: Record<string, string[]> = {};
       (accessResponse.data || []).forEach(row => { (mapping[row.cohort_id] ||= []).push(row.lesson_id); });
       setCohortLessonSelections(mapping);
+    }
+    // Reflect certificates already issued across devices and sessions.
+    const { data: issuedCertificates } = await supabase.from('certificate_issuances').select('cohort_id');
+    if (issuedCertificates) {
+      const byCohort: Record<string, boolean> = {};
+      issuedCertificates.forEach(item => { byCohort[item.cohort_id] = true; });
+      setReleasedCohorts(byCohort);
     }
     // 2. Carregar turmas
     const { data: coh } = await supabase
@@ -690,51 +611,11 @@ export const AdminDashboard: React.FC = () => {
   };
 
   // Importar Alunos em Lote via PDF / Excel
-  const handleImportStudents = (cohortId: string) => {
-    const cohort = cohorts.find(c => c.id === cohortId);
-    // Simula importação automatizada de 3 alunos da planilha/documento
-    const importedEntries: StudentRecord[] = [
-      {
-        id: Date.now().toString() + '-1',
-        name: 'Dra. Beatriz Santos Nogueira',
-        email: 'beatriz.santos@hospitaluniao.med.br',
-        cpf: '789.012.345-55',
-        cohortId: cohortId,
-        cohortName: cohort ? cohort.name : 'Turma Importada',
-        progress: 0,
-        lessonsCompleted: 0,
-        totalLessons: 12,
-        scoreQuiz: 0,
-        simFinished: false,
-        practicalAuthorized: false,
-        daysRemaining: cohort ? (cohort.access_days_limit || 90) : 90,
-      },
-      {
-        id: Date.now().toString() + '-2',
-        name: 'Socorrista Thiago Lemos Ramos',
-        email: 'thiago.lemos@resgateurgente.com.br',
-        cpf: '890.123.456-66',
-        cohortId: cohortId,
-        cohortName: cohort ? cohort.name : 'Turma Importada',
-        progress: 0,
-        lessonsCompleted: 0,
-        totalLessons: 12,
-        scoreQuiz: 0,
-        simFinished: false,
-        practicalAuthorized: false,
-        daysRemaining: cohort ? (cohort.access_days_limit || 90) : 90,
-      },
-    ];
-
-    setStudents([...importedEntries, ...students]);
-    alert(`Sucesso! ${importedEntries.length} alunos importados e matriculados na turma.`);
-    setIsAddStudentOpen(false);
-    setIsCreateCohortOpen(false);
-    setStudentImportFile(null);
-    setCohortImportFile(null);
+  const handleImportStudents = (_cohortId: string) => {
+    alert('Importação em lote ainda não está conectada ao servidor. Nenhum aluno foi matriculado; cadastre-os pelo formulário individual.');
   };
 
-  // Criar turma com curso de referência, instituição e currículo.
+    // Criar turma com curso de referência, instituição e currículo.
   const handleCreateCohort = async (e: React.FormEvent) => {
     e.preventDefault();
     if (savingCohort || !newCohortName.trim()) return;
@@ -858,6 +739,7 @@ export const AdminDashboard: React.FC = () => {
       .from('certificate_templates')
       .upsert({
         title: certTitle,
+        course_id: currentCertCohort.course_id,
         workload_hours: Number(certWorkload),
         validity_months: Number(certValidity),
         legal_framework: certLegal,
@@ -897,54 +779,12 @@ export const AdminDashboard: React.FC = () => {
   const currentCertCohort = cohorts.find(c => c.id === selectedCertCohortId);
 
   if (!pinAuthorized) {
-    return (
-      <div className="min-h-screen bg-slate-950 flex flex-col items-center justify-center p-4">
-        <div className="w-full max-w-md bg-slate-900 border border-slate-800 rounded-2xl p-8 text-center space-y-6 shadow-2xl">
-          <div className="w-14 h-14 rounded-2xl bg-amber-500/10 border border-amber-500/30 text-amber-400 flex items-center justify-center mx-auto">
-            <ShieldAlert className="w-7 h-7" />
-          </div>
-
-          <div>
-            <h2 className="text-xl font-bold text-white">Confirmação de Segurança Administrativa</h2>
-            <p className="text-xs text-slate-400 mt-1.5 leading-relaxed">
-              O acesso aos módulos de gestão acadêmica, turmas, certificados e upload requer o PIN de gestão.
-            </p>
-          </div>
-
-          <form onSubmit={handlePinSubmit} className="space-y-4">
-            <div>
-              <input
-                type="password"
-                maxLength={6}
-                value={pinEntered}
-                onChange={(e) => setPinEntered(e.target.value)}
-                placeholder="••••"
-                className="w-36 text-center tracking-[0.5em] text-2xl font-mono py-2.5 px-4 rounded-xl bg-slate-950 border border-slate-700 text-white focus:outline-none focus:border-uniao-500"
-              />
-            </div>
-
-            {pinError && (
-              <div className="text-xs text-red-400 font-medium">
-                PIN de segurança incorreto. Tente novamente (Dica: 1926).
-              </div>
-            )}
-
-            <button
-              type="submit"
-              className="w-full py-3 rounded-xl font-bold text-white bg-uniao-600 hover:bg-uniao-500 text-sm transition-all shadow"
-            >
-              Validar Acesso Administrativo
-            </button>
-          </form>
-
-          <Link to="/" className="text-xs text-slate-500 hover:text-slate-300 block">
-            ← Retornar ao site público
-          </Link>
-        </div>
-      </div>
-    );
+    return <div className="min-h-screen bg-slate-950 flex flex-col items-center justify-center p-6 text-center space-y-4">
+      <h1 className="text-xl text-white font-bold">Acesso administrativo restrito</h1>
+      <p className="text-slate-300">{adminChecked ? 'Entre com uma conta de equipe autorizada para acessar o painel.' : 'Verificando acesso…'}</p>
+      {adminChecked && <Link to="/login" className="rounded-xl bg-teal-400 text-slate-950 px-4 py-2 font-bold">Entrar como administrador</Link>}
+    </div>;
   }
-
   return (
     <div className="min-h-screen bg-slate-950 text-slate-100 flex flex-col font-sans">
       
@@ -3014,16 +2854,12 @@ export const AdminDashboard: React.FC = () => {
                 <KeyRound className={`w-5 h-5 ${releasedCohorts[activeCertCohort.id] ? 'text-emerald-400' : 'text-amber-400'}`} />
                 <div>
                   <strong className="block text-xs text-white">{releasedCohorts[activeCertCohort.id] ? 'Certificados liberados para esta turma' : 'Certificados bloqueados para emissão'}</strong>
-                  <span className="text-[10px] text-slate-400">A liberação exige uma nova confirmação do PIN administrativo.</span>
+                  <span className="text-[10px] text-slate-400">A emissão é confirmada e registrada pelo servidor.</span>
                 </div>
               </div>
               {!releasedCohorts[activeCertCohort.id] && (
-                <form onSubmit={(event) => { event.preventDefault(); handleReleaseCertificates(); }} className="flex items-center gap-2">
-                  <input type="password" value={releasePassword} onChange={event => setReleasePassword(event.target.value)} placeholder="PIN admin" aria-label="PIN para liberar certificados" className="w-28 rounded-lg border border-white/10 bg-slate-950 px-3 py-2 text-xs text-white" />
-                  <button type="submit" className="rounded-lg bg-amber-400 px-3 py-2 text-xs font-black text-slate-950 hover:bg-amber-300">Liberar certificados</button>
-                </form>
+                <button type="button" onClick={() => void handleReleaseCertificates()} className="rounded-lg bg-amber-400 px-3 py-2 text-xs font-bold text-slate-950">Emitir certificados oficiais</button>
               )}
-              {releaseError && <span className="text-[10px] text-red-300">PIN incorreto.</span>}
             </div>
 
             {/* Layout em 2 Colunas: Esquerda (Visualizador A4) / Direita (Gestão de Alunos com Adicionar/Remover) */}
@@ -3240,8 +3076,6 @@ export const AdminDashboard: React.FC = () => {
                   <button
                     type="button"
                     onClick={() => {
-                      setSendCertificatesPassword('');
-                      setSendCertificatesError(false);
                       setIsSendCertificatesOpen(true);
                     }}
                     disabled={!releasedCohorts[activeCertCohort.id] || students.filter(student => student.cohortId === activeCertCohort.id).length === 0 || sentCohorts[activeCertCohort.id] !== undefined}
@@ -3277,60 +3111,11 @@ export const AdminDashboard: React.FC = () => {
       )}
 
       {isSendCertificatesOpen && activeCertCohort && (
-        <div className="fixed inset-0 z-[60] bg-slate-950/90 backdrop-blur-sm flex items-center justify-center p-4">
-          <div className="w-full max-w-md rounded-2xl border border-amber-400/40 bg-slate-900 p-6 shadow-2xl">
-            <div className="flex items-start gap-3">
-              <div className="rounded-xl bg-amber-400/15 p-2 text-amber-300">
-                <KeyRound className="h-5 w-5" />
-              </div>
-              <div>
-                <h3 className="text-base font-bold text-white">Confirmar envio para toda a turma</h3>
-                <p className="mt-1 text-xs leading-relaxed text-slate-400">
-                  Digite o PIN administrativo para confirmar o envio dos certificados de {students.filter(student => student.cohortId === activeCertCohort.id).length} aluno(s) de “{activeCertCohort.name}”.
-                </p>
-              </div>
-            </div>
-
-            <form
-              onSubmit={(event) => {
-                event.preventDefault();
-                handleSendCertificatesToAll();
-              }}
-              className="mt-5 space-y-3"
-            >
-              <label className="block text-xs font-semibold text-slate-300" htmlFor="send-certificates-admin-pin">
-                Senha/PIN de administrador
-              </label>
-              <input
-                id="send-certificates-admin-pin"
-                autoFocus
-                type="password"
-                inputMode="numeric"
-                value={sendCertificatesPassword}
-                onChange={(event) => {
-                  setSendCertificatesPassword(event.target.value);
-                  setSendCertificatesError(false);
-                }}
-                placeholder="Digite o PIN administrativo"
-                className="w-full rounded-xl border border-white/10 bg-slate-950 px-3 py-2.5 text-sm text-white outline-none focus:border-amber-400/60"
-              />
-              {sendCertificatesError && <p className="text-xs text-red-300">PIN incorreto. O envio não foi confirmado.</p>}
-              <div className="flex justify-end gap-2 pt-2">
-                <button
-                  type="button"
-                  onClick={() => setIsSendCertificatesOpen(false)}
-                  className="rounded-xl bg-slate-800 px-4 py-2 text-xs font-bold text-white hover:bg-slate-700"
-                >
-                  Cancelar
-                </button>
-                <button
-                  type="submit"
-                  className="rounded-xl bg-amber-400 px-4 py-2 text-xs font-black text-slate-950 hover:bg-amber-300"
-                >
-                  Confirmar envio
-                </button>
-              </div>
-            </form>
+        <div className="fixed inset-0 z-[60] bg-slate-950/90 flex items-center justify-center p-4">
+          <div className="max-w-md rounded-xl bg-slate-900 p-6 space-y-4 border border-white/10 text-white">
+            <h3 className="font-bold">Envio de certificados indisponível</h3>
+            <p className="text-sm text-slate-300">Certificados oficiais ficam registrados no banco. O disparo automático de e-mails ainda não está integrado.</p>
+            <button type="button" onClick={handleSendCertificatesToAll} className="rounded-xl bg-teal-400 px-4 py-2 text-slate-950 font-bold">Entendi</button>
           </div>
         </div>
       )}
