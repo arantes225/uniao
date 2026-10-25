@@ -2892,16 +2892,12 @@ export const AdminDashboard: React.FC = () => {
                 <KeyRound className={`w-5 h-5 ${releasedCohorts[activeCertCohort.id] ? 'text-emerald-400' : 'text-amber-400'}`} />
                 <div>
                   <strong className="block text-xs text-white">{releasedCohorts[activeCertCohort.id] ? 'Certificados liberados para esta turma' : 'Certificados bloqueados para emissão'}</strong>
-                  <span className="text-[10px] text-slate-400">A liberação exige uma nova confirmação do PIN administrativo.</span>
+                  <span className="text-[10px] text-slate-400">A emissão é confirmada e registrada pelo servidor.</span>
                 </div>
               </div>
               {!releasedCohorts[activeCertCohort.id] && (
-                <form onSubmit={(event) => { event.preventDefault(); handleReleaseCertificates(); }} className="flex items-center gap-2">
-                  <input type="password" value={releasePassword} onChange={event => setReleasePassword(event.target.value)} placeholder="PIN admin" aria-label="PIN para liberar certificados" className="w-28 rounded-lg border border-white/10 bg-slate-950 px-3 py-2 text-xs text-white" />
-                  <button type="submit" className="rounded-lg bg-amber-400 px-3 py-2 text-xs font-black text-slate-950 hover:bg-amber-300">Liberar certificados</button>
-                </form>
+                <button type="button" onClick={() => void handleReleaseCertificates()} className="rounded-lg bg-amber-400 px-3 py-2 text-xs font-bold text-slate-950">Emitir certificados oficiais</button>
               )}
-              {releaseError && <span className="text-[10px] text-red-300">PIN incorreto.</span>}
             </div>
 
             {/* Layout em 2 Colunas: Esquerda (Visualizador A4) / Direita (Gestão de Alunos com Adicionar/Remover) */}
