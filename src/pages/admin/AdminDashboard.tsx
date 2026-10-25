@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { 
-  ShieldAlert, School, LogOut, Camera, 
+  School, LogOut, Camera, 
   Trash2, CheckCircle2, RefreshCw, Award, Users, 
   Settings, Clock, BookOpen, FileText, Check, Plus,
   UserPlus, UserMinus, Eye, Filter, Sparkles, X,
@@ -290,7 +290,7 @@ export const AdminDashboard: React.FC = () => {
   const [selectedStudentForCert, setSelectedStudentForCert] = useState<StudentRecord | null>(null);
   const [releasedCohorts, setReleasedCohorts] = useState<Record<string, boolean>>({});
   const [isSendCertificatesOpen, setIsSendCertificatesOpen] = useState(false);
-  const [sentCohorts, setSentCohorts] = useState<Record<string, number>>({});
+  const [sentCohorts] = useState<Record<string, number>>({});
 
   const handleOpenCohortCertModal = (cohort: any) => {
     // A prévia da turma deve carregar seus próprios responsáveis, não os da última turma editada.
