@@ -1,0 +1,4 @@
+# Historical public Supabase anon JWTs verified to have role=anon.
+# Suppress only these exact committed findings (not the whole files or JWT rule).
+619710504fc04bd920241b19872360ba252db4ed:scripts/seedCurriculum.ts:jwt:5
+260d1a10970beb05d4774ba68da8b593a4ae7cd8:src/services/supabase/client.ts:jwt:5
