@@ -24,6 +24,9 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
+      - name: Prevent public booklets and fake attendance
+        run: node scripts/check-secure-content.cjs
+
       - name: Run TypeScript Check & Production Build
         run: npm run build
 

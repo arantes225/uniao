@@ -5,6 +5,7 @@ import { INITIAL_LIBRARIES, INITIAL_40_MODULES, LearningModule } from '../../dat
 import { BookletRenderer, TextHighlightToolbar } from '../../components/common/BookletRenderer';
 import { useTheme } from '../../context/ThemeContext';
 import { StudentOutletContext } from '../../services/studentCurriculum';
+import { getSecureBooklet } from '../../services/secureBooklets';
 
 export const MaterialsPage: React.FC = () => {
   const { theme } = useTheme();
@@ -31,15 +32,10 @@ export const MaterialsPage: React.FC = () => {
     setActiveModule(mod);
     setLoadingMd(true);
     try {
-      const res = await fetch(`./apostilas/md/${mod.code}.md`);
-      if (res.ok) {
-        const text = await res.text();
-        setMarkdownContent(text);
-      } else {
-        setMarkdownContent(`# ${mod.code} — ${mod.title}\n\nApostila em carregamento...`);
-      }
-    } catch {
-      setMarkdownContent(`# ${mod.code} — ${mod.title}\n\nErro ao carregar o arquivo da apostila.`);
+      setMarkdownContent(await getSecureBooklet(mod.code));
+    } catch (error) {
+      const message = error instanceof Error ? error.message : 'Falha ao consultar o material protegido.';
+      setMarkdownContent(`# Acesso ao material\n\n${message}`);
     } finally {
       setLoadingMd(false);
     }
