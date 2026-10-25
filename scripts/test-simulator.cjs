@@ -29,7 +29,7 @@ assert.deepEqual(simulationFolders.map(folder => folder.id), ['academia', 'escol
 assert.equal(simulationFolders[0].cases.length, 120, 'Academia must expose 120 bleeding-control cases');
 const existingCase = simulationFolders[2].cases[0];
 assert.equal(hash(JSON.stringify(existingCase.steps)), manifest.originalCaseSha256, 'Existing clinical content must remain intact');
-assert.strictEqual(simulationFolders[1].cases[0], existingCase, 'Shared workshop case must have one canonical definition');
+assert.notStrictEqual(simulationFolders[1].cases[0], existingCase, 'School cases must remain separate from company cases');
 const characters = require('../src/data/simulator/characters.json');
 assert.equal(characters.length, 8);
 assert.equal(new Set(characters.map(character => character.id)).size, 8);
@@ -43,6 +43,12 @@ for (const character of characters) {
 const render = component => renderToStaticMarkup(React.createElement(ThemeProvider, null, component));
 const stopTheBleedFolder = simulationFolders[3];
 assert.equal(simulationFolders[1].cases.length, 120, 'Escola must expose 120 bleeding-control cases');
+assert(simulationFolders[0].cases.every(simulationCase => simulationCase.patientKind === 'academia'), 'Academia cases must use only academy characters');
+assert(simulationFolders[1].cases.every(simulationCase => simulationCase.patientKind === 'escola'), 'School cases must use only school characters');
+assert(simulationFolders[0].cases.every(simulationCase => simulationCase.id.startsWith('academia-hemorragia-')), 'Academia cases must not be Stop the Bleed cases');
+assert(simulationFolders[1].cases.every(simulationCase => simulationCase.id.startsWith('escola-hemorragia-')), 'School cases must not be Stop the Bleed cases');
+assert(simulationFolders[0].cases.every(simulationCase => simulationCase.steps.every(step => step.bleedingFocus?.skinExposed && step.bleedingFocus.visibleRegion)), 'Academia wounds must identify exposed skin');
+assert(simulationFolders[1].cases.every(simulationCase => simulationCase.steps.every(step => step.bleedingFocus?.skinExposed && step.bleedingFocus.visibleRegion)), 'School wounds must identify exposed skin');
 assert(schoolGallerySource.includes('import.meta.env.BASE_URL'), 'School gallery must resolve assets from the deployed base path');
 assert(!schoolGallerySource.includes("open: '/simulador/"), 'School gallery must not use root-absolute asset paths');
 for (const file of [
@@ -58,6 +64,12 @@ assert.equal((catalog.match(/aria-controls="simulation-folder"/g) || []).length,
 const scenario = render(React.createElement(ClinicalScenario, { scenario: existingCase, onBack() {} }));
 assert(scenario.includes('Voltar aos casos'));
 assert(scenario.includes('canvas'));
+const academyScenario = render(React.createElement(ClinicalScenario, { scenario: simulationFolders[0].cases[0], onBack() {} }));
+assert(academyScenario.includes('Personagem da academia'));
+assert(academyScenario.includes('face exposta') || academyScenario.includes('pele exposta'));
+const schoolScenario = render(React.createElement(ClinicalScenario, { scenario: simulationFolders[1].cases[0], onBack() {} }));
+assert(schoolScenario.includes('Personagem escolar'));
+assert(schoolScenario.includes('pele exposta'));
 const stopScenario = render(React.createElement(ClinicalScenario, { scenario: stopTheBleedFolder.cases[0], onBack() {} }));
 assert(stopScenario.includes('Stop the Bleed'));
 assert.equal(stopTheBleedFolder.cases.filter(simulationCase => simulationCase.patientKind === 'stop-the-bleed').length, 80);

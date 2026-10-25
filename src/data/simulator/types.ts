@@ -27,6 +27,9 @@ export interface BleedingFocus {
   appearance: string;
   action: string;
   mask?: string;
+  woundShape?: 'laceration' | 'puncture' | 'controlled';
+  visibleRegion?: string;
+  skinExposed?: boolean;
 }
 
 export type SimulationEnvironment = 'academia' | 'escola' | 'empresa' | 'stop-the-bleed';
@@ -35,7 +38,7 @@ export interface SimulationCase {
   title: string;
   description: string;
   characterId: string;
-  patientKind?: 'default' | 'stop-the-bleed';
+  patientKind?: 'default' | 'academia' | 'escola' | 'stop-the-bleed';
   steps: SimulationStep[];
 }
 

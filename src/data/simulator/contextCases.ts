@@ -65,9 +65,26 @@ const gymTemplates: ContextTemplate[] = [
   { incident: 'ferida na axila após queda', scene: 'Uma praticante cai sobre a lateral de uma estrutura e apresenta ferida profunda na axila, com sangramento que não é alcançado por faixa comum.', location: 'axila', mechanism: 'sangramento juncional', kind: 'junctional', primary: 'packing-junction', primaryDistractors: ['do-not-tourniquet-trunk', 'do-not-use-powder', 'do-not-elevate'], variant: 'sala de musculação' }
 ];
 
-const characterIds = [
+const academyCharacterIds = [
   'homem-branco-sentado', 'mulher-negra-sentada', 'homem-branco-deitado', 'mulher-negra-deitada',
   'idoso-negro-sentado', 'idoso-negro-deitado', 'idosa-branca-sentada', 'idosa-branca-deitada'
+];
+
+const schoolCharacterIds = [
+  'professora-sentada', 'professora-deitada', 'zelador-sentado', 'zelador-deitado',
+  'menina-sentada', 'menina-deitada', 'menino-sentado', 'menino-deitado',
+  'bebe-sentado', 'bebe-deitado'
+];
+
+const visibleRegions = [
+  { label: 'face exposta', x: 50, y: 24, woundShape: 'laceration' as const },
+  { label: 'antebraço exposto', x: 38, y: 63, woundShape: 'laceration' as const },
+  { label: 'mão exposta', x: 58, y: 68, woundShape: 'laceration' as const },
+  { label: 'couro cabeludo exposto', x: 50, y: 13, woundShape: 'laceration' as const },
+  { label: 'antebraço exposto', x: 63, y: 63, woundShape: 'laceration' as const },
+  { label: 'bochecha exposta', x: 45, y: 25, woundShape: 'laceration' as const },
+  { label: 'mão exposta', x: 42, y: 68, woundShape: 'puncture' as const },
+  { label: 'antebraço exposto', x: 58, y: 60, woundShape: 'laceration' as const }
 ];
 
 function makeStep(id: number, phase: string, scenarioText: string, bleeding: string, focus: BleedingFocus, correct: SharedActionKey, distractors: SharedActionKey[]): SimulationStep {
@@ -88,30 +105,37 @@ function makeStep(id: number, phase: string, scenarioText: string, bleeding: str
 
 function makeContextCase(folder: 'escola' | 'academia', number: number, template: ContextTemplate): SimulationCase {
   const prefix = folder === 'escola' ? 'Escola' : 'Academia';
+  const visibleRegion = visibleRegions[(number - 1) % visibleRegions.length];
+  const characterId = (folder === 'escola' ? schoolCharacterIds : academyCharacterIds)[(number - 1) % (folder === 'escola' ? schoolCharacterIds.length : academyCharacterIds.length)];
+  const exposedWoundText = `A lesão de referência está em ${visibleRegion.label}, com a pele totalmente exposta e sem roupa, faixa ou equipamento cobrindo o ferimento.`;
   const focus: BleedingFocus = {
-    x: 28 + ((number * 17) % 46),
-    y: 30 + ((number * 11) % 38),
-    size: 9,
+    x: visibleRegion.x,
+    y: visibleRegion.y,
+    size: visibleRegion.woundShape === 'puncture' ? 8 : 10,
     kind: template.kind,
-    title: `${prefix} · Caso ${String(number).padStart(3, '0')} · ${template.location}`,
-    appearance: `${template.mechanism}. Observe o foco vermelho, a velocidade do fluxo e sinais de hipoperfusão; a cor do sangue isoladamente não decide a gravidade.`,
+    title: `${prefix} · Caso ${String(number).padStart(3, '0')} · ${visibleRegion.label}`,
+    appearance: `${template.mechanism}. ${exposedWoundText} Observe o corte/ferida, a velocidade do fluxo e sinais de hipoperfusão; a cor do sangue isoladamente não decide a gravidade.`,
     action: SHARED_ACTIONS[template.primary].text,
-    mask: template.kind
+    mask: template.kind,
+    woundShape: visibleRegion.woundShape,
+    visibleRegion: visibleRegion.label,
+    skinExposed: true
   };
-  const caseId = `${folder}-stb-${String(number).padStart(3, '0')}`;
+  const caseId = `${folder}-hemorragia-${String(number).padStart(3, '0')}`;
   const secondCorrect = template.primary === 'tourniquet-limb' ? 'continue-pressure' : template.primary === 'packing-junction' ? 'continue-pressure' : 'pressure-dressing';
   const secondDistractors: SharedActionKey[] = template.primary === 'tourniquet-limb'
     ? ['do-not-loosen', 'do-not-use-powder', 'do-not-wash-first']
     : ['do-not-loosen', 'do-not-use-powder', 'do-not-elevate'];
   return {
     id: caseId,
-    title: `${prefix} · ${String(number).padStart(3, '0')} · ${template.incident}`,
-    description: `${template.variant} · treino de controle de hemorragia baseado nas apostilas H01–H07 e nos módulos ${folder === 'escola' ? 'E01–E07' : 'A01–A06'}.`,
-    characterId: characterIds[(number - 1) % characterIds.length],
+    title: `${prefix} · ${String(number).padStart(3, '0')} · ${template.incident} · ${visibleRegion.label}`,
+    description: `${template.variant} · ${exposedWoundText} Treino baseado nas apostilas H01–H07 e nos módulos ${folder === 'escola' ? 'E01–E07' : 'A01–A06'}.`,
+    characterId,
+    patientKind: folder,
     steps: [
-      makeStep(1, 'Etapa 1: Segurança, reconhecimento e primeira ação', template.scene, `${template.mechanism}; risco de deterioração se não for controlado`, focus, template.primary, template.primaryDistractors),
-      makeStep(2, 'Etapa 2: Hemostasia sustentada', `A equipe já identificou a fonte. O fluxo diminui quando a conduta é executada, mas retorna quando alguém interrompe a pressão. Escolha a ação que mantém o controle em ${template.location}.`, 'Sangramento parcialmente controlado; reavaliar continuamente', { ...focus, title: `${focus.title} · manutenção`, kind: 'controlled', appearance: 'A contenção inicial foi feita. A próxima ameaça é perder o coágulo, deixar a vítima esfriar ou não reconhecer retorno do sangramento.', action: SHARED_ACTIONS[secondCorrect].text }, secondCorrect, secondDistractors),
-      makeStep(3, 'Etapa 3: Reavaliação e transferência', 'O resgate foi acionado. A vítima permanece vulnerável e precisa ser observada até a transferência, com relato claro do mecanismo e do horário das medidas.', 'Controlado sob observação; risco de recorrência', { ...focus, title: `${focus.title} · transferência`, kind: 'controlled', appearance: 'A ferida está protegida, mas o caso ainda é uma emergência. Monitore a vítima e não desfaça a intervenção eficaz.', action: SHARED_ACTIONS['warm-monitor'].text }, 'warm-monitor', ['do-not-loosen', 'do-not-use-powder', 'do-not-ice-directly'])
+      makeStep(1, 'Etapa 1: Segurança, reconhecimento e primeira ação', `${template.scene} ${exposedWoundText}`, `${template.mechanism}; risco de deterioração se não for controlado`, focus, template.primary, template.primaryDistractors),
+      makeStep(2, 'Etapa 2: Hemostasia sustentada', `A equipe já identificou a fonte em ${visibleRegion.label}. O fluxo diminui quando a conduta é executada, mas retorna quando alguém interrompe a pressão. ${exposedWoundText}`, 'Sangramento parcialmente controlado; reavaliar continuamente', { ...focus, title: `${focus.title} · manutenção`, kind: 'controlled', woundShape: 'controlled', appearance: `A contenção inicial foi feita em ${visibleRegion.label}. A próxima ameaça é perder o coágulo, deixar a vítima esfriar ou não reconhecer retorno do sangramento.`, action: SHARED_ACTIONS[secondCorrect].text }, secondCorrect, secondDistractors),
+      makeStep(3, 'Etapa 3: Reavaliação e transferência', `O resgate foi acionado. A vítima permanece vulnerável e precisa ser observada até a transferência. A área de ${visibleRegion.label} continua acessível para reavaliação, sem roupa cobrindo a lesão.`, 'Controlado sob observação; risco de recorrência', { ...focus, title: `${focus.title} · transferência`, kind: 'controlled', woundShape: 'controlled', appearance: `A ferida está protegida em ${visibleRegion.label}, mas o caso ainda é uma emergência. Monitore a vítima e não desfaça a intervenção eficaz.`, action: SHARED_ACTIONS['warm-monitor'].text }, 'warm-monitor', ['do-not-loosen', 'do-not-use-powder', 'do-not-ice-directly'])
     ]
   };
 }

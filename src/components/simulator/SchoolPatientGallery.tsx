@@ -1,13 +1,13 @@
 import { type CSSProperties, useState } from 'react';
 
-type Pose = 'sentada' | 'deitada';
+export type Pose = 'sentada' | 'deitada';
 type MotionRegion = { x: number; y: number; rx: number; ry: number };
 type EyeRegion = { left: { x: number; y: number }; right: { x: number; y: number }; rx: number; ry: number };
 type PatientPose = { open: string; closed: string; chest: MotionRegion; eyes: EyeRegion };
 
 const schoolAsset = (file: string) => `${import.meta.env.BASE_URL}simulador/personagens/escola-horizontal-v20261023/${file}`;
 
-const schoolPatients = [
+export const schoolPatients = [
   {
     id: 'professora',
     label: 'Professora',
@@ -108,7 +108,7 @@ const dotClass: Record<typeof schoolPatients[number]['color'], string> = {
   rose: 'bg-rose-400'
 };
 
-function AnimatedPatientPhoto({
+export function SchoolPatientPhoto({
   pose,
   label,
   delay,
@@ -147,6 +147,12 @@ function AnimatedPatientPhoto({
       />
     </div>
   );
+}
+
+export function getSchoolPatient(characterId: string) {
+  const patient = schoolPatients.find(item => characterId.startsWith(`${item.id}-`));
+  const pose: Pose = characterId.endsWith('-deitada') ? 'deitada' : 'sentada';
+  return patient ? { patient, pose, index: schoolPatients.indexOf(patient) } : null;
 }
 
 export function SchoolPatientGallery() {
@@ -201,7 +207,7 @@ export function SchoolPatientGallery() {
 
         <article className="mx-auto max-w-5xl overflow-hidden rounded-2xl border border-slate-300/30 bg-slate-950 shadow-xl" data-patient-card={selected.id}>
           <div className="aspect-[1672/941] bg-slate-950">
-            <AnimatedPatientPhoto
+            <SchoolPatientPhoto
               key={`${selected.id}-${pose}`}
               pose={selected.poses[pose]}
               label={`${selected.label}, posição ${pose}`}
