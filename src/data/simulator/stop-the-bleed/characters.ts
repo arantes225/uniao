@@ -2,10 +2,14 @@ export type StopTheBleedCharacter = {
   id: string;
   name: string;
   context: 'Rua' | 'Clube de tiro';
+  patientSex?: 'F' | 'M';
+  patientAgeRange?: string;
   file: string;
   focus: { x: number; y: number; size: number };
   mask: 'arterial' | 'venous' | 'junctional' | 'controlled';
 };
+
+import { stopTheBleedCaseMetadata } from './caseMetadata';
 
 const baseStopTheBleedCharacters: StopTheBleedCharacter[] = [
   { id: 'stb-caso-1', name: 'Caso 01 · Estande de Tiro (PAF) - Estande de Tiro · Disparo Acidental (ABDOME)', context: 'Clube de tiro', file: 'casos/Imagem do ChatGPT 24 de out. de 2026, 15_20_00.png', focus: { x: 43, y: 59, size: 11 }, mask: 'venous' },
@@ -38,7 +42,13 @@ const baseStopTheBleedCharacters: StopTheBleedCharacter[] = [
 ];
 
 export const stopTheBleedCharacters: StopTheBleedCharacter[] = [
-  ...baseStopTheBleedCharacters,
+  ...baseStopTheBleedCharacters.map((character) => {
+    const caseId = Number(character.id.replace(/\D/g, ''));
+    const metadata = stopTheBleedCaseMetadata[caseId];
+    return metadata
+      ? { ...character, name: `${metadata.titulo} - ${metadata.subtitulo}`, context: (metadata.isStandDeTiro ? 'Clube de tiro' : 'Rua') as 'Rua' | 'Clube de tiro', patientSex: metadata.patientSex, patientAgeRange: metadata.patientAgeRange }
+      : character;
+  }),
   ...Array.from({ length: 53 }, (_, index) => {
     const number = index + 28;
     const base = baseStopTheBleedCharacters[index % baseStopTheBleedCharacters.length];
@@ -54,3 +64,4 @@ export const stopTheBleedCharacters: StopTheBleedCharacter[] = [
 export const stopTheBleedCharacterById = Object.fromEntries(
   stopTheBleedCharacters.map(character => [character.id, character])
 ) as Record<string, StopTheBleedCharacter>;
+
