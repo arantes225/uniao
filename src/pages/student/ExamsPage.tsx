@@ -454,7 +454,7 @@ export const ExamsPage: React.FC = () => {
         <p className={`text-xs sm:text-sm ${
           theme === 'dark' ? 'text-slate-400' : 'text-slate-600'
         }`}>
-          Avaliação formal composta por <strong>20 questões de múltipla escolha</strong>. Tempo máximo de <strong>45 minutos</strong> por tentativa. Você terá <strong>3 chances</strong> para acertar pelo menos <strong>70% da prova</strong> para ser aprovado.
+          Simulado local de treinamento, sem valor de certificação, composto por <strong>20 questões de múltipla escolha</strong>. Tempo máximo de <strong>45 minutos</strong> por tentativa. Você terá <strong>3 chances</strong> para acertar pelo menos <strong>70% da prova</strong> para ser aprovado.
         </p>
       </div>
 
@@ -480,7 +480,7 @@ export const ExamsPage: React.FC = () => {
                 <ArrowLeft className="w-4 h-4" />
               </button>
               <div>
-                <h2 className="text-base font-bold">Prova Geral de Certificação Pré-Hospitalar (20 Questões)</h2>
+                <h2 className="text-base font-bold">Simulado de treinamento (20 questões)</h2>
                 <span className={`text-xs ${theme === 'dark' ? 'text-slate-400' : 'text-slate-500'}`}>
                   Tentativa {examFinished ? attemptsUsed : attemptsUsed + 1} de {maxAttempts} • Meta de aprovação: {minPassingScore}% (14 acertos)
                 </span>
@@ -554,14 +554,14 @@ export const ExamsPage: React.FC = () => {
                 </div>
                 <div>
                   <h3 className="text-xl font-black">
-                    {lastScore >= minPassingScore ? 'Parabéns! Você foi APROVADO na Prova!' : 'Nota Insuficiente nesta Tentativa'}
+                    {lastScore >= minPassingScore ? 'Excelente resultado no simulado de treinamento!' : 'Nota Insuficiente nesta Tentativa'}
                   </h3>
                   <p className="text-xs sm:text-sm opacity-90 mt-1">
                     Aproveitamento: <strong>{lastScore}%</strong> ({Math.round((lastScore / 100) * mockQuestions.length)} de {mockQuestions.length} acertos) • Nota mínima exigida: {minPassingScore}%
                   </p>
                   <p className="text-xs mt-1 font-semibold">
                     {lastScore >= minPassingScore 
-                      ? 'Critério pedagógico atingido com sucesso. Sua presença no treinamento presencial está liberada.' 
+                      ? 'Este resultado é demonstrativo e não valida presença nem habilita a emissão de certificado.' 
                       : attemptsRemaining > 0 
                       ? `Você ainda tem ${attemptsRemaining} ${attemptsRemaining === 1 ? 'chance restante' : 'chances restantes'} para atingir 70%.` 
                       : 'Você esgotou as 3 chances desta prova. Procure a coordenação pedagógica da União para liberação de novo ciclo.'}
@@ -696,7 +696,10 @@ export const ExamsPage: React.FC = () => {
       ) : (
         /* PAINEL INICIAL DA PROVA */
         <div className="space-y-6">
-          {/* Card Principal de Status e Regras da Prova */}
+          <div role="note" className="rounded-2xl border border-amber-500/40 bg-amber-500/10 p-4 text-sm text-amber-300">
+        <strong>Simulado de treinamento:</strong> estas questões são corrigidas localmente. Elas não constituem prova oficial, não liberam presença e não produzem registro para certificação. A prova oficial exige avaliação publicada e correção validada no servidor.
+      </div>
+            {/* Card Principal de Status e Regras da Prova */}
           <div className={`rounded-3xl border p-6 sm:p-8 flex flex-col md:flex-row items-start md:items-center justify-between gap-6 shadow-xl transition-all ${
             isApproved
               ? theme === 'dark' ? 'bg-slate-900 border-emerald-500/40' : 'bg-white border-emerald-300 shadow-emerald-50'
@@ -735,7 +738,7 @@ export const ExamsPage: React.FC = () => {
 
               <div>
                 <h2 className={`text-xl font-black ${theme === 'dark' ? 'text-white' : 'text-slate-900'}`}>
-                  Prova Teórica Geral de Certificação Pré-Hospitalar (20 Questões)
+                  Simulado teórico demonstrativo (20 questões)
                 </h2>
               </div>
 
@@ -787,7 +790,7 @@ export const ExamsPage: React.FC = () => {
               ) : isApproved ? (
                 <div className="text-center md:text-right space-y-2">
                   <div className="px-5 py-2.5 rounded-2xl bg-emerald-500/10 border border-emerald-500/30 text-emerald-600 dark:text-emerald-400 text-xs font-bold">
-                    ✓ Aprovado com {bestScore}% (Maior Nota Registrada)
+                    ✓ Aprovado com {bestScore}% (Melhor nota neste treino)
                   </div>
                   <button
                     onClick={handleStartExam}
@@ -827,7 +830,7 @@ export const ExamsPage: React.FC = () => {
                   Suas 3 Chances da Prova
                 </h3>
                 <p className={`text-xs ${theme === 'dark' ? 'text-slate-400' : 'text-slate-500'}`}>
-                  Para aprovação é necessário atingir 70% ou mais (14 acertos em 20 questões). A maior nota obtida entre as tentativas é a que fica oficialmente registrada.
+                  Para aprovação é necessário atingir 70% ou mais (14 acertos em 20 questões). Os resultados deste simulado permanecem apenas nesta sessão, não são notas oficiais.
                 </p>
               </div>
               <span className={`text-xs font-bold px-3 py-1 rounded-full border ${
