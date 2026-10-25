@@ -611,51 +611,11 @@ export const AdminDashboard: React.FC = () => {
   };
 
   // Importar Alunos em Lote via PDF / Excel
-  const handleImportStudents = (cohortId: string) => {
-    const cohort = cohorts.find(c => c.id === cohortId);
-    // Simula importação automatizada de 3 alunos da planilha/documento
-    const importedEntries: StudentRecord[] = [
-      {
-        id: Date.now().toString() + '-1',
-        name: 'Dra. Beatriz Santos Nogueira',
-        email: 'beatriz.santos@hospitaluniao.med.br',
-        cpf: '789.012.345-55',
-        cohortId: cohortId,
-        cohortName: cohort ? cohort.name : 'Turma Importada',
-        progress: 0,
-        lessonsCompleted: 0,
-        totalLessons: 12,
-        scoreQuiz: 0,
-        simFinished: false,
-        practicalAuthorized: false,
-        daysRemaining: cohort ? (cohort.access_days_limit || 90) : 90,
-      },
-      {
-        id: Date.now().toString() + '-2',
-        name: 'Socorrista Thiago Lemos Ramos',
-        email: 'thiago.lemos@resgateurgente.com.br',
-        cpf: '890.123.456-66',
-        cohortId: cohortId,
-        cohortName: cohort ? cohort.name : 'Turma Importada',
-        progress: 0,
-        lessonsCompleted: 0,
-        totalLessons: 12,
-        scoreQuiz: 0,
-        simFinished: false,
-        practicalAuthorized: false,
-        daysRemaining: cohort ? (cohort.access_days_limit || 90) : 90,
-      },
-    ];
-
-    setStudents([...importedEntries, ...students]);
-    alert(`Sucesso! ${importedEntries.length} alunos importados e matriculados na turma.`);
-    setIsAddStudentOpen(false);
-    setIsCreateCohortOpen(false);
-    setStudentImportFile(null);
-    setCohortImportFile(null);
+  const handleImportStudents = (_cohortId: string) => {
+    alert('Importação em lote ainda não está conectada ao servidor. Nenhum aluno foi matriculado; cadastre-os pelo formulário individual.');
   };
 
-  // Criar turma com curso de referência, instituição e currículo.
+    // Criar turma com curso de referência, instituição e currículo.
   const handleCreateCohort = async (e: React.FormEvent) => {
     e.preventDefault();
     if (savingCohort || !newCohortName.trim()) return;
