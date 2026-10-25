@@ -270,17 +270,28 @@ export const AdminDashboard: React.FC = () => {
   // Gerador de Código de Presença Presencial para Turmas
   const [presenceCodeModalOpen, setPresenceCodeModalOpen] = useState(false);
   const [activePresenceCohort, setActivePresenceCohort] = useState<any | null>(null);
-  const [generatedPresenceCode, setGeneratedPresenceCode] = useState('APH-2026');
+  const [generatedPresenceCode, setGeneratedPresenceCode] = useState('');
+  const [presenceCodeExpiresAt, setPresenceCodeExpiresAt] = useState('');
+  const [presenceCodeLoading, setPresenceCodeLoading] = useState(false);
   const [presenceCodeCopied, setPresenceCodeCopied] = useState(false);
 
+  const generatePresenceCode = async (cohort: any) => {
+    if (!cohort?.id) return;
+    setPresenceCodeLoading(true);
+    setGeneratedPresenceCode('');
+    const { data, error } = await supabase.rpc('create_presence_session', { p_cohort_id: cohort.id });
+    setPresenceCodeLoading(false);
+    if (error || !Array.isArray(data) || !data[0]?.code) {
+      alert('Não foi possível gerar o código da turma. Verifique sua autorização administrativa.');
+      return;
+    }
+    setGeneratedPresenceCode(data[0].code);
+    setPresenceCodeExpiresAt(data[0].expires_at || '');
+  };
   const handleOpenPresenceGenerator = (cohort: any) => {
     setActivePresenceCohort(cohort);
-    // Gera código dinâmico único baseado na turma ou timestamp
-    const randomSuffix = Math.floor(1000 + Math.random() * 9000);
-    const code = `${cohort.name.includes('Stop') ? 'STB' : 'APH'}-${randomSuffix}`;
-    setGeneratedPresenceCode(code);
-    localStorage.setItem('usm_presence_code_aph', code);
     setPresenceCodeModalOpen(true);
+    void generatePresenceCode(cohort);
   };
 
   // Modal de Certificação por Turma (Visualizar Certificado Frente/Verso + Gerenciar Alunos Aptos)
@@ -2732,11 +2743,12 @@ export const AdminDashboard: React.FC = () => {
               </span>
 
               <div className="text-4xl sm:text-5xl font-black font-mono tracking-[0.25em] text-white selection:bg-teal-500 selection:text-slate-950">
-                {generatedPresenceCode}
+                {presenceCodeLoading ? 'Gerando…' : generatedPresenceCode || 'Indisponível'}
               </div>
 
               <p className="text-xs text-slate-400 max-w-sm mx-auto">
                 Projete este código no telão ou informe aos alunos presentes para que validem o check-in no menu <strong>Presença Presencial</strong> do portal.
+                {presenceCodeExpiresAt && <span className="block mt-2 text-amber-300">Válido até {new Date(presenceCodeExpiresAt).toLocaleTimeString('pt-BR', {hour:'2-digit',minute:'2-digit'})}.</span>}
               </p>
             </div>
 
@@ -2744,7 +2756,8 @@ export const AdminDashboard: React.FC = () => {
               <button
                 type="button"
                 onClick={() => {
-                  navigator.clipboard.writeText(generatedPresenceCode);
+                  if (!generatedPresenceCode) return;
+                  void navigator.clipboard.writeText(generatedPresenceCode);
                   setPresenceCodeCopied(true);
                   setTimeout(() => setPresenceCodeCopied(false), 2500);
                 }}
@@ -2756,12 +2769,7 @@ export const AdminDashboard: React.FC = () => {
 
               <button
                 type="button"
-                onClick={() => {
-                  const randomSuffix = Math.floor(1000 + Math.random() * 9000);
-                  const code = `${activePresenceCohort.name.includes('Stop') ? 'STB' : 'APH'}-${randomSuffix}`;
-                  setGeneratedPresenceCode(code);
-                  localStorage.setItem('usm_presence_code_aph', code);
-                }}
+                onClick={() => void generatePresenceCode(activePresenceCohort)}
                 className="py-3 px-4 rounded-xl font-bold bg-teal-500/20 hover:bg-teal-500/30 border border-teal-500/40 text-teal-300 flex items-center justify-center gap-2 transition-colors"
               >
                 <RefreshCw className="w-4 h-4 text-teal-400" />
