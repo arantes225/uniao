@@ -397,6 +397,13 @@ export const AdminDashboard: React.FC = () => {
       (accessResponse.data || []).forEach(row => { (mapping[row.cohort_id] ||= []).push(row.lesson_id); });
       setCohortLessonSelections(mapping);
     }
+    // Reflect certificates already issued across devices and sessions.
+    const { data: issuedCertificates } = await supabase.from('certificate_issuances').select('cohort_id');
+    if (issuedCertificates) {
+      const byCohort: Record<string, boolean> = {};
+      issuedCertificates.forEach(item => { byCohort[item.cohort_id] = true; });
+      setReleasedCohorts(byCohort);
+    }
     // 2. Carregar turmas
     const { data: coh } = await supabase
       .from('cohorts')
@@ -772,6 +779,7 @@ export const AdminDashboard: React.FC = () => {
       .from('certificate_templates')
       .upsert({
         title: certTitle,
+        course_id: currentCertCohort.course_id,
         workload_hours: Number(certWorkload),
         validity_months: Number(certValidity),
         legal_framework: certLegal,
