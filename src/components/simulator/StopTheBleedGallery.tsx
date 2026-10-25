@@ -153,6 +153,7 @@ export function StopTheBleedGallery({ onSelectCase }: { onSelectCase?: (index: n
                   <span>Foco: ({c.focus.x}%, {c.focus.y}%)</span>
                 </div>
                 <h4 className="text-xs font-bold text-white line-clamp-2">{c.name}</h4>
+                <p className="text-[10px] text-slate-400">Paciente: {c.patientSex === 'F' ? 'feminino' : c.patientSex === 'M' ? 'masculino' : 'não informado'} · {c.patientAgeRange || 'faixa não informada'}</p>
                 {onSelectCase && (
                   <button
                     type="button"
@@ -170,3 +171,4 @@ export function StopTheBleedGallery({ onSelectCase }: { onSelectCase?: (index: n
     </section>
   );
 }
+
