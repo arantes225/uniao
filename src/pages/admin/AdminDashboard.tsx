@@ -133,7 +133,7 @@ const PRESET_MODELS: CertificatePreset[] = [
 // Mantém o mesmo PIN administrativo usado pelo painel e pela liberação da turma.
 // A autenticação da rota continua sendo a barreira principal; este PIN é uma
 // confirmação adicional para ações irreversíveis dentro do modal.
-const ADMIN_PIN = '1926';
+// Server-side platform_staff authorization replaces the exposed PIN.
 
 interface StudentRecord {
   id: string;
@@ -152,10 +152,25 @@ interface StudentRecord {
 }
 
 export const AdminDashboard: React.FC = () => {
-  // Controle de Acesso por PIN de Segurança
-  const [pinEntered, setPinEntered] = useState('');
   const [pinAuthorized, setPinAuthorized] = useState(false);
-  const [pinError, setPinError] = useState(false);
+  const [adminChecked, setAdminChecked] = useState(false);
+  useEffect(() => {
+    let active = true;
+    (async () => {
+      const { data: { user }, error } = await supabase.auth.getUser();
+      if (!active) return;
+      if (error || !user) { setPinAuthorized(false); setAdminChecked(true); return; }
+      const { data: staff, error: staffError } = await supabase.from('platform_staff')
+        .select('user_id').eq('user_id', user.id).maybeSingle();
+      if (!active) return;
+      setPinAuthorized(!staffError && !!staff);
+      setAdminChecked(true);
+    })();
+    const { data: { subscription } } = supabase.auth.onAuthStateChange(event => {
+      if (event === 'SIGNED_OUT' && active) setPinAuthorized(false);
+    });
+    return () => { active = false; subscription.unsubscribe(); };
+  }, []);
 
   // Navegação Interna por Abas
   const [activeTab, setActiveTab] = useState<'dashboard' | 'turmas' | 'conteudos' | 'prompter' | 'certificados' | 'galeria'>('dashboard');
@@ -193,83 +208,7 @@ export const AdminDashboard: React.FC = () => {
 
   // Alunos e Filtro por Turma
   const [cohortFilter, setCohortFilter] = useState<string>('all');
-  const [students, setStudents] = useState<StudentRecord[]>([
-    {
-      id: '1',
-      name: 'Dr. Lucas Arantes',
-      email: 'aluno.uniao@gmail.com',
-      cpf: '123.456.789-00',
-      cohortId: '22222222-2222-2222-2222-222222222222',
-      cohortName: 'Turma de Capacitação APH 2026',
-      progress: 40,
-      lessonsCompleted: 4,
-      totalLessons: 12,
-      scoreQuiz: 95,
-      simFinished: true,
-      practicalAuthorized: true,
-      daysRemaining: 89,
-    },
-    {
-      id: '2',
-      name: 'Dra. Mariana Costa Silva',
-      email: 'mariana.costa@samu.sp.gov.br',
-      cpf: '234.567.890-11',
-      cohortId: '22222222-2222-2222-2222-222222222222',
-      cohortName: 'Turma de Capacitação APH 2026',
-      progress: 75,
-      lessonsCompleted: 9,
-      totalLessons: 12,
-      scoreQuiz: 90,
-      simFinished: true,
-      practicalAuthorized: true,
-      daysRemaining: 89,
-    },
-    {
-      id: '3',
-      name: 'Enf. Roberto Albuquerque',
-      email: 'roberto.albuquerque@hospital.med.br',
-      cpf: '345.678.901-22',
-      cohortId: '22222222-2222-2222-2222-222222222222',
-      cohortName: 'Turma de Capacitação APH 2026',
-      progress: 20,
-      lessonsCompleted: 2,
-      totalLessons: 12,
-      scoreQuiz: 80,
-      simFinished: false,
-      practicalAuthorized: false,
-      daysRemaining: 89,
-    },
-    {
-      id: '4',
-      name: 'Bombeiro Carlos Eduardo',
-      email: 'carlos.edu@resgate.gov.br',
-      cpf: '456.789.012-33',
-      cohortId: '33333333-3333-3333-3333-333333333333',
-      cohortName: 'Turma Stop the Bleed Tático',
-      progress: 100,
-      lessonsCompleted: 8,
-      totalLessons: 8,
-      scoreQuiz: 100,
-      simFinished: true,
-      practicalAuthorized: true,
-      daysRemaining: 45,
-    },
-    {
-      id: '5',
-      name: 'Profa. Fernanda Oliveira',
-      email: 'fernanda.oliveira@escolaobjetivo.com.br',
-      cpf: '567.890.123-44',
-      cohortId: '44444444-4444-4444-4444-444444444444',
-      cohortName: 'Turma Colégio Objetivo (Lei Lucas 13.722)',
-      progress: 60,
-      lessonsCompleted: 6,
-      totalLessons: 10,
-      scoreQuiz: 88,
-      simFinished: true,
-      practicalAuthorized: true,
-      daysRemaining: 115,
-    },
-  ]);
+  const [students, setStudents] = useState<StudentRecord[]>([]);
 
   // Modal para Criar Nova Turma
   const [isCreateCohortOpen, setIsCreateCohortOpen] = useState(false);
@@ -301,7 +240,7 @@ export const AdminDashboard: React.FC = () => {
   // =========================================================================
   // MÓDULO DE CERTIFICADOS & EMENTAS
   // =========================================================================
-  const [selectedCertCohortId, setSelectedCertCohortId] = useState<string>('22222222-2222-2222-2222-222222222222');
+  const [selectedCertCohortId, setSelectedCertCohortId] = useState<string>('');
   const [selectedPresetId, setSelectedPresetId] = useState<string>('aph-padrao');
   
   // Dados do Modelo Editável Atual
@@ -439,16 +378,6 @@ export const AdminDashboard: React.FC = () => {
     return () => { cancelled = true; };
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [signerPathKey]);
-
-  const handlePinSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    if (pinEntered === ADMIN_PIN) {
-      setPinAuthorized(true);
-      setPinError(false);
-    } else {
-      setPinError(true);
-    }
-  };
 
   const loadData = async () => {
     // 1. Carregar galeria
@@ -897,54 +826,12 @@ export const AdminDashboard: React.FC = () => {
   const currentCertCohort = cohorts.find(c => c.id === selectedCertCohortId);
 
   if (!pinAuthorized) {
-    return (
-      <div className="min-h-screen bg-slate-950 flex flex-col items-center justify-center p-4">
-        <div className="w-full max-w-md bg-slate-900 border border-slate-800 rounded-2xl p-8 text-center space-y-6 shadow-2xl">
-          <div className="w-14 h-14 rounded-2xl bg-amber-500/10 border border-amber-500/30 text-amber-400 flex items-center justify-center mx-auto">
-            <ShieldAlert className="w-7 h-7" />
-          </div>
-
-          <div>
-            <h2 className="text-xl font-bold text-white">Confirmação de Segurança Administrativa</h2>
-            <p className="text-xs text-slate-400 mt-1.5 leading-relaxed">
-              O acesso aos módulos de gestão acadêmica, turmas, certificados e upload requer o PIN de gestão.
-            </p>
-          </div>
-
-          <form onSubmit={handlePinSubmit} className="space-y-4">
-            <div>
-              <input
-                type="password"
-                maxLength={6}
-                value={pinEntered}
-                onChange={(e) => setPinEntered(e.target.value)}
-                placeholder="••••"
-                className="w-36 text-center tracking-[0.5em] text-2xl font-mono py-2.5 px-4 rounded-xl bg-slate-950 border border-slate-700 text-white focus:outline-none focus:border-uniao-500"
-              />
-            </div>
-
-            {pinError && (
-              <div className="text-xs text-red-400 font-medium">
-                PIN de segurança incorreto. Tente novamente (Dica: 1926).
-              </div>
-            )}
-
-            <button
-              type="submit"
-              className="w-full py-3 rounded-xl font-bold text-white bg-uniao-600 hover:bg-uniao-500 text-sm transition-all shadow"
-            >
-              Validar Acesso Administrativo
-            </button>
-          </form>
-
-          <Link to="/" className="text-xs text-slate-500 hover:text-slate-300 block">
-            ← Retornar ao site público
-          </Link>
-        </div>
-      </div>
-    );
+    return <div className="min-h-screen bg-slate-950 flex flex-col items-center justify-center p-6 text-center space-y-4">
+      <h1 className="text-xl text-white font-bold">Acesso administrativo restrito</h1>
+      <p className="text-slate-300">{adminChecked ? 'Entre com uma conta de equipe autorizada para acessar o painel.' : 'Verificando acesso…'}</p>
+      {adminChecked && <Link to="/login" className="rounded-xl bg-teal-400 text-slate-950 px-4 py-2 font-bold">Entrar como administrador</Link>}
+    </div>;
   }
-
   return (
     <div className="min-h-screen bg-slate-950 text-slate-100 flex flex-col font-sans">
       
