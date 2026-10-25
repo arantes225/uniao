@@ -1,4 +1,5 @@
 import { generatedStopTheBleedVisualCases } from './generatedVisualCases';
+import { stopTheBleedCaseMetadata, type PatientSex, type StopTheBleedCaseType } from './caseMetadata';
 
 export type CasoStopTheBleed = {
   id: number;
@@ -26,9 +27,13 @@ export type CasoStopTheBleed = {
   tqIndicado: boolean;
   tqStatus: string;
   justificativaClinica: string;
+  patientSex?: PatientSex;
+  patientAgeRange?: string;
+  caseType?: StopTheBleedCaseType;
+  scene?: string;
 };
 
-export const casosStopTheBleed: CasoStopTheBleed[] = [
+const baseCasosStopTheBleed: Omit<CasoStopTheBleed, 'patientSex' | 'patientAgeRange' | 'caseType' | 'scene'>[] = [
   {
     "id": 1,
     "file": "Imagem do ChatGPT 24 de out. de 2026, 15_20_00.png",
@@ -745,8 +750,14 @@ export const casosStopTheBleed: CasoStopTheBleed[] = [
   ...generatedStopTheBleedVisualCases,
 ];
 
+export const casosStopTheBleed: CasoStopTheBleed[] = baseCasosStopTheBleed.map((caso) => ({
+  ...caso,
+  ...stopTheBleedCaseMetadata[caso.id],
+}));
+
 export function getCasoById(id: number | string): CasoStopTheBleed {
   const num = typeof id === 'number' ? id : parseInt(id.replace(/\D/g, ''), 10);
   const found = casosStopTheBleed.find(c => c.id === num);
   return found || casosStopTheBleed[0];
 }
+
