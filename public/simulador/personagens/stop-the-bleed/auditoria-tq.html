@@ -71,7 +71,9 @@
       rosto: 'ROSTO / CERVICAL'
     };
 
-    fetch('/casos/casos-config.json')
+    fetch('casos/casos-config.json')
+      .catch(() => fetch('./casos/casos-config.json'))
+      .catch(() => fetch('/casos/casos-config.json'))
       .then(r => r.json())
       .then(casos => {
         let cOk = 0, cAbdome = 0, cTorax = 0, cRosto = 0, cJunc = 0;
@@ -218,7 +220,7 @@
               ctx.setLineDash([]);
             }
           };
-          img.src = c.url;
+          img.src = c.url.startsWith('/') ? c.url.slice(1) : c.url;
         });
 
         document.getElementById('totalCount').textContent = casos.length;

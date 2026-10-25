@@ -3,59 +3,103 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Stop the Bleed · Vítimas</title>
+  <title>Stop the Bleed · 27 Casos Clínicos</title>
   <style>
     :root{color-scheme:dark;font-family:Inter,ui-sans-serif,system-ui,sans-serif;background:#07111f;color:#e5edf7}
-    *{box-sizing:border-box}body{margin:0;background:radial-gradient(circle at 50% -10%,#17345a,#07111f 65%);min-height:100vh;padding:28px}
-    main{max-width:1180px;margin:auto}.eyebrow{color:#fb7185;font-size:.72rem;font-weight:800;letter-spacing:.16em;text-transform:uppercase}.intro{margin-bottom:22px}.intro h1{margin:.35rem 0 .45rem;font-size:clamp(1.7rem,4vw,2.8rem)}.intro p{margin:0;color:#9fb1c9;max-width:720px;line-height:1.55}
-    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(310px,1fr));gap:16px}.card{overflow:hidden;border:1px solid #263c59;border-radius:18px;background:#0e1c30;box-shadow:0 16px 40px #02081280}.scene{position:relative;aspect-ratio:16/9;overflow:hidden}.scene>img:first-child{width:100%;height:100%;display:block;object-fit:cover}.mask{position:absolute;transform:translate(-50%,-50%);width:24%;height:24%;object-fit:contain;filter:drop-shadow(0 0 14px #fb718588);pointer-events:none;z-index:2}.hotspot{position:absolute;transform:translate(-50%,-50%);width:12%;aspect-ratio:1;border-radius:999px;border:2px solid #fee2e2;background:#ef444455;box-shadow:0 0 26px #ef444499;cursor:pointer;z-index:4}.hotspot:focus-visible{outline:3px solid #fff;outline-offset:3px}.tag{position:absolute;left:10px;bottom:10px;padding:5px 9px;border-radius:999px;background:#07111fd9;color:#f8fafc;font-size:.7rem;font-weight:700;z-index:5}.body{padding:15px}.body h2{font-size:1rem;margin:0 0 6px}.body p{font-size:.82rem;color:#9fb1c9;min-height:38px;margin:0 0 13px;line-height:1.45}.button{border:1px solid #fb7185;background:#be123c;color:#fff;border-radius:10px;padding:9px 12px;font-weight:800;cursor:pointer}.button:hover{background:#e11d48}.context{font-size:.68rem;text-transform:uppercase;letter-spacing:.12em;color:#94a3b8;font-weight:800}
-    .blood-fx{position:absolute;inset:0;z-index:3;pointer-events:none;overflow:hidden;mix-blend-mode:multiply}.blood-fx span{position:absolute;display:block}.blood-core{left:var(--x);top:var(--y);width:8%;height:5%;transform:translate(-50%,-50%);border-radius:50%;background:radial-gradient(ellipse at 50% 45%,#ffb4a5 0 8%,#ef4444 26%,#7f1d1d 68%,#3f0b12 100%);filter:drop-shadow(0 2px 3px #35070b99);animation:corePulse 1.15s ease-in-out infinite}.blood-stream{left:var(--x);top:calc(var(--y) + 2%);width:1.8%;height:25%;transform-origin:top center;border-radius:999px;background:linear-gradient(90deg,#5b0b17,#b91c1c 42%,#ef4444 55%,#7f1d1d);filter:blur(.25px) drop-shadow(0 3px 2px #35070b66)}.blood-stream.a{transform:translateX(-50%) rotate(var(--angle,-7deg));animation:arterialStream 1.15s cubic-bezier(.35,.02,.65,1) infinite}.blood-stream.b{left:calc(var(--x) + 2.2%);height:20%;opacity:.7;transform:rotate(8deg);animation:arterialStreamB 1.15s ease-in-out .12s infinite}.blood-drop{width:1.9%;aspect-ratio:.75;border-radius:68% 32% 60% 40% / 52% 55% 45% 48%;background:linear-gradient(135deg,#ef4444,#7f1d1d 75%);filter:drop-shadow(0 2px 2px #35070b80);opacity:0}.arterial .drop-a{left:calc(var(--x) - 4%);top:calc(var(--y) + 4%);animation:dropFlight 1.15s ease-out .1s infinite}.arterial .drop-b{left:calc(var(--x) + 3%);top:calc(var(--y) + 3%);transform:scale(.72);animation:dropFlight 1.15s ease-out .38s infinite}.arterial .drop-c{left:calc(var(--x) + 6%);top:calc(var(--y) + 5%);transform:scale(.55);animation:dropFlight 1.15s ease-out .66s infinite}.venous .blood-stream{height:34%;opacity:.78;transform:translateX(-50%) rotate(5deg);animation:venousRun 2.8s ease-in-out infinite}.venous .blood-stream.b{left:calc(var(--x) + 2.3%);height:28%;opacity:.5;animation-delay:.55s}.venous .drop-a{left:calc(var(--x) + 1%);top:calc(var(--y) + 29%);transform:scale(.85);animation:venousDrop 2.8s ease-in .8s infinite}.junctional .blood-core{width:11%;height:7%;animation:corePulse 1.8s ease-in-out infinite}.junctional .blood-stream{height:30%;opacity:.7;transform:translateX(-50%) rotate(12deg);animation:junctionalRun 1.8s ease-in-out infinite}.junctional .blood-stream.b{left:calc(var(--x) + 3%);height:24%;opacity:.5;animation-delay:.35s}.junctional .drop-a{left:calc(var(--x) + 5%);top:calc(var(--y) + 24%);animation:venousDrop 1.8s ease-in .4s infinite}.junctional .drop-b{left:calc(var(--x) - 3%);top:calc(var(--y) + 19%);transform:scale(.7);animation:venousDrop 1.8s ease-in 1.05s infinite}@keyframes corePulse{0%,100%{transform:translate(-50%,-50%) scale(.86);opacity:.72}48%{transform:translate(-50%,-50%) scale(1.08);opacity:1}}@keyframes arterialStream{0%,100%{height:8%;opacity:.35}17%{height:29%;opacity:1}33%{height:14%;opacity:.55}52%{height:34%;opacity:1}72%{height:11%;opacity:.42}}@keyframes arterialStreamB{0%,100%{height:5%;opacity:.12}22%{height:25%;opacity:.85}58%{height:12%;opacity:.4}}@keyframes dropFlight{0%{opacity:0;transform:translate(0,0) scale(.35)}16%{opacity:.95}100%{opacity:0;transform:translate(var(--dx,12px),var(--dy,38px)) scale(.75)}}@keyframes venousRun{0%,100%{height:24%;opacity:.48}50%{height:39%;opacity:.92}}@keyframes venousDrop{0%{opacity:0;transform:translateY(-5px) scale(.45)}20%{opacity:.85}100%{opacity:0;transform:translateY(32px) scale(.9)}}@keyframes junctionalRun{0%,100%{height:18%;opacity:.38}50%{height:35%;opacity:.8}}@media (prefers-reduced-motion:reduce){.blood-fx *{animation:none!important}}
-    dialog{width:min(920px,calc(100vw - 32px));border:1px solid #405777;border-radius:18px;background:#0b1729;color:#e5edf7;padding:0;box-shadow:0 30px 100px #000b}.modal{padding:20px}.modal-head{display:flex;justify-content:space-between;gap:18px;align-items:flex-start}.modal-head h2{margin:5px 0 0}.close{border:1px solid #334b6c;background:transparent;color:#dbeafe;border-radius:9px;padding:7px 10px;cursor:pointer}.zoom{position:relative;margin-top:16px;aspect-ratio:4/3;overflow:hidden;border-radius:14px;background:#020812}.zoom img:first-child{position:absolute;width:300%;height:auto;max-width:none;left:50%;top:50%;transform:translate(-50%,-50%)}.zoom .mask{left:50%!important;top:50%!important;width:38%;height:38%}.note{margin:14px 0 0;color:#9fb1c9;line-height:1.55;font-size:.86rem}
-    @media (max-width:600px){body{padding:16px}.grid{grid-template-columns:1fr}}
+    *{box-sizing:border-box}
+    body{margin:0;background:radial-gradient(circle at 50% -10%,#17345a,#07111f 65%);min-height:100vh;padding:28px}
+    main{max-width:1200px;margin:auto}
+    .eyebrow{color:#34d399;font-size:.72rem;font-weight:800;letter-spacing:.16em;text-transform:uppercase}
+    .intro{margin-bottom:24px}
+    .intro h1{margin:.35rem 0 .45rem;font-size:clamp(1.7rem,4vw,2.5rem);color:#fff}
+    .intro p{margin:0;color:#9fb1c9;max-width:780px;line-height:1.55;font-size:14px}
+    .nav-actions{margin-top:18px;display:flex;gap:12px;flex-wrap:wrap}
+    .button{display:inline-flex;align-items:center;gap:6px;border:1px solid #10b981;background:#059669;color:#fff;border-radius:10px;padding:9px 15px;font-weight:700;font-size:13px;text-decoration:none;cursor:pointer;transition:background 0.2s}
+    .button:hover{background:#10b981}
+    .button-purple{border-color:#8b5cf6;background:#7c3aed}
+    .button-purple:hover{background:#8b5cf6}
+    .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(330px,1fr));gap:20px}
+    .card{overflow:hidden;border:1px solid #1e314b;border-radius:16px;background:#0b1728;box-shadow:0 12px 32px #02081280;display:flex;flex-direction:column;transition:transform .2s,border-color .2s}
+    .card:hover{transform:translateY(-3px);border-color:#38bdf8}
+    .scene{position:relative;aspect-ratio:16/9;overflow:hidden;background:#000}
+    .scene img{width:100%;height:100%;display:block;object-fit:cover}
+    .tag{position:absolute;left:10px;top:10px;padding:4px 9px;border-radius:6px;font-size:.7rem;font-weight:800;text-transform:uppercase;letter-spacing:.03em;z-index:5}
+    .tag-ok{background:#14532de6;color:#86efac;border:1px solid #22c55e}
+    .tag-warn{background:#78350fe6;color:#fde047;border:1px solid #eab308}
+    .tag-danger{background:#7f1d1de6;color:#fca5a5;border:1px solid #ef4444}
+    .body{padding:16px;display:flex;flex-direction:column;gap:8px;flex:1}
+    .context{font-size:.68rem;text-transform:uppercase;letter-spacing:.12em;color:#94a3b8;font-weight:800}
+    .body h2{font-size:1rem;margin:0;color:#fff}
+    .body p{font-size:.82rem;color:#9fb1c9;line-height:1.45;margin:0 0 10px;flex:1}
+    .card-footer{display:flex;gap:8px;margin-top:auto}
+    .btn-action{flex:1;text-align:center;padding:8px 12px;border-radius:8px;font-size:12px;font-weight:700;text-decoration:none;border:1px solid #334e68;background:#13243a;color:#e2e8f0;transition:all .2s}
+    .btn-action:hover{background:#059669;border-color:#10b981;color:#fff}
+    @media(max-width:600px){body{padding:16px}.grid{grid-template-columns:1fr}}
   </style>
 </head>
 <body>
   <main>
-    <section class="intro"><div class="eyebrow">Stop the Bleed · 27 Casos Fotográficos</div><h1>27 Cenários Clínicos · Stop the Bleed</h1><p>Escolha uma vítima, observe a máscara de corte e abra o foco para conferir o padrão do sangramento. As cenas mostram apenas a vítima, sem outros personagens.</p><p style="margin-top:18px;display:flex;gap:12px;flex-wrap:wrap"><a class="button" style="display:inline-block;text-decoration:none;background:#059669;border-color:#10b981;font-size:14px" href="simulador-geral.html">🌟 Abrir Novo Simulador Multi-Casos (27 Cenários) →</a><a class="button" style="display:inline-block;text-decoration:none;background:#7c3aed;border-color:#8b5cf6;font-size:14px" href="auditoria-tq.html">📋 Auditoria Clínica de Torniquetes →</a><a class="button" style="display:inline-block;text-decoration:none" href="antebraco-realista.html">Caso 01 · Antebraço →</a><a class="button" style="display:inline-block;text-decoration:none;background:#2563eb;border-color:#60a5fa" href="perna-realista.html">Caso 02 · Perna / Coxa →</a></p></section>
+    <section class="intro">
+      <div class="eyebrow">Stop the Bleed · Casos Clínicos Reais</div>
+      <h1>27 Vítimas · Treinamento Prático de Hemostasia</h1>
+      <p>Cada caso possui características anatômicas únicas: lesões de extremidades com indicação de torniquete e lesões de tronco/face/junção onde o torniquete é contraindicado. Clique para abrir o simulador interativo com física real de sangramento.</p>
+      <div class="nav-actions">
+        <a class="button" href="simulador-geral.html">🌟 Abrir Simulador Interativo Geral (27 Casos) →</a>
+        <a class="button button-purple" href="auditoria-tq.html">📋 Painel de Auditoria de Torniquetes →</a>
+      </div>
+    </section>
+
     <section id="cards" class="grid" aria-label="Vítimas do simulador"></section>
   </main>
-  <dialog id="detail"><div class="modal"><div class="modal-head"><div><div class="eyebrow">Máscara de corte · foco ampliado</div><h2 id="detailTitle"></h2></div><button class="close" id="close" type="button">Fechar</button></div><div class="zoom"><img id="detailImage" alt="" /><div id="detailFx" class="blood-fx arterial" style="--x:50%;--y:50%" aria-hidden="true"><span class="blood-core"></span><span class="blood-stream a"></span><span class="blood-stream b"></span><span class="blood-drop drop-a"></span><span class="blood-drop drop-b"></span><span class="blood-drop drop-c"></span></div><img id="detailMask" class="mask" alt="Máscara ampliada" /></div><p id="detailText" class="note"></p></div></dialog>
+
   <script>
-    const base='./';
-    const cases=[
-      {title:'Caso 01 · Estande de Tiro (PAF)',context:'Estande de Tiro',image:'casos/Imagem do ChatGPT 24 de out. de 2026, 15_20_00.png',mask:'venous.svg',effect:'venous',x:43,y:59,kind:'Lesão de ABDOME (TQ Contraindicado)',text:'Ferimento perfurante no ABDOME (flanco). O torniquete de extremidades é totalmente ineficaz para hemorragias cavitárias de tronco. Conduta mandatória: Compressão direta com cobertura estéril superficial e rápida evacuação para centro cirúrgico. NUNCA realizar preenchimento (packing) em cavidade abdominal com vísceras.'},
-      {title:'Caso 02 · Estande de Tiro (PAF)',context:'Estande de Tiro',image:'casos/Imagem do ChatGPT 24 de out. de 2026, 15_20_15.png',mask:'arterial.svg',effect:'arterial',x:59,y:67,kind:'Hemorragia de Extremidade (TQ Indicado)',text:'Torniquete de extremidade posicionado na COXA proximalmente à lesão com rotação completa da haste do molinete, garantindo oclusão mecânica circunferencial da artéria femoral.'},
-      {title:'Caso 03 · Trauma Urbano',context:'Trauma Urbano',image:'casos/Imagem do ChatGPT 24 de out. de 2026, 15_20_46.png',mask:'junctional.svg',effect:'junctional',x:35,y:44,kind:'Lesão de JUNCAO (TQ Contraindicado)',text:'Ferimento em ZONA JUNCIONAL (Axila). O torniquete de extremidades é ineficaz para oclusão de artérias profundas na raiz do tronco (artéria axilar/subclávia proximal). Conduta mandatória: Preenchimento Profundo da Cavidade (Wound Packing) com gaze hemostática + Compressão Manual Direta contínua por no mínimo 3 minutos.'},
-      {title:'Caso 04 · Estande de Tiro (PAF)',context:'Estande de Tiro',image:'casos/Imagem do ChatGPT 24 de out. de 2026, 15_20_54.png',mask:'arterial.svg',effect:'arterial',x:69,y:64,kind:'Hemorragia de Extremidade (TQ Indicado)',text:'Torniquete posicionado no membro inferior acima da lesão na PERNA, promovendo hemostasia e cessação imediata do sangramento pulsátil.'},
-      {title:'Caso 05 · Trauma Urbano',context:'Trauma Urbano',image:'casos/Imagem do ChatGPT 24 de out. de 2026, 15_21_11.png',mask:'arterial.svg',effect:'arterial',x:33,y:41,kind:'Hemorragia de Extremidade (TQ Indicado)',text:'Torniquete posicionado no BRAÇO, 5 a 7 cm proximal ao ferimento perfurocontuso, interrompendo com sucesso o fluxo da artéria braquial.'},
-      {title:'Caso 06 · Trauma Urbano',context:'Trauma Urbano',image:'casos/Imagem do ChatGPT 24 de out. de 2026, 15_21_17.png',mask:'arterial.svg',effect:'arterial',x:60,y:32,kind:'Hemorragia de Extremidade (TQ Indicado)',text:'Torniquete de membro aplicado na COXA acima da lesão com pressão circunferencial adequada sobre a artéria femoral.'},
-      {title:'Caso 07 · Trauma Urbano',context:'Trauma Urbano',image:'casos/Imagem do ChatGPT 24 de out. de 2026, 15_21_28.png',mask:'venous.svg',effect:'venous',x:69,y:44,kind:'Lesão de PEITO (TQ Contraindicado)',text:'Ferimento penetrante no PEITO / TÓRAX esquerdo. Torniquete de membro é totalmente contraindicado e ineficaz (colocá-lo no membro não afeta vasos intratorácicos). Conduta padrão Stop the Bleed: Curativo Oclusivo/Valvulado (Selo de Tórax / Chest Seal) para prevenir pneumotórax hipertensivo + compressão direta. NUNCA realizar preenchimento (packing) intratorácico.'},
-      {title:'Caso 08 · Trauma Urbano',context:'Trauma Urbano',image:'casos/Imagem do ChatGPT 24 de out. de 2026, 15_21_35.png',mask:'arterial.svg',effect:'arterial',x:67,y:69,kind:'Hemorragia de Extremidade (TQ Indicado)',text:'Torniquete de extremidade posicionado no braço proximalmente à laceração arterial no ANTEBRAÇO, alcançando controle hemostático definitivo.'},
-      {title:'Caso 09 · Estande de Tiro (PAF)',context:'Estande de Tiro',image:'casos/Imagem do ChatGPT 24 de out. de 2026, 15_21_42.png',mask:'venous.svg',effect:'venous',x:52,y:54,kind:'Lesão de ABDOME (TQ Contraindicado)',text:'Ferimento penetrante no ABDOME (região periumbilical). O torniquete é contraindicado por se tratar de lesão do tronco. Conduta mandatória: Compressão direta com gaze/campo estéril superficial e transporte imediato.'},
-      {title:'Caso 10 · Estande de Tiro (PAF)',context:'Estande de Tiro',image:'casos/Imagem do ChatGPT 24 de out. de 2026, 15_22_00.png',mask:'arterial.svg',effect:'arterial',x:68,y:74,kind:'Hemorragia de Extremidade (TQ Indicado)',text:'Torniquete aplicado acima da ferida na PERNA com oclusão das artérias tibial e fibular.'},
-      {title:'Caso 11 · Trauma Urbano',context:'Trauma Urbano',image:'casos/Imagem do ChatGPT 24 de out. de 2026, 15_22_07.png',mask:'venous.svg',effect:'venous',x:43,y:13,kind:'Lesão de ROSTO (TQ Contraindicado)',text:'Ferimento no ROSTO / CABEÇA (região frontal/testa). O torniquete é TERMINANTEMENTE CONTRAINDICADO (letal se aplicado no pescoço; inútil no braço para sangramento craniofacial). Conduta mandatória: Compressão manual direta contínua e firme com compressa limpa, mantendo a via aérea desobstruída e alinhamento da coluna cervical.'},
-      {title:'Caso 12 · Trauma Urbano',context:'Trauma Urbano',image:'casos/Imagem do ChatGPT 24 de out. de 2026, 15_22_14.png',mask:'venous.svg',effect:'venous',x:51,y:43,kind:'Lesão de PEITO (TQ Contraindicado)',text:'Ferimento penetrante no PEITO / TÓRAX superior (infraclavicular). Torniquetes de extremidades são ineficazes e contraindicados. Conduta padrão: Curativo oclusivo/valvulado e compressão manual direta estéril. Não realizar preenchimento profundo de cavidade torácica.'},
-      {title:'Caso 13 · Estande de Tiro (PAF)',context:'Estande de Tiro',image:'casos/Imagem do ChatGPT 24 de out. de 2026, 15_22_21.png',mask:'venous.svg',effect:'venous',x:43,y:61,kind:'Lesão de ABDOME (TQ Contraindicado)',text:'Ferimento penetrante no ABDOME. Torniquetes de membros são contraindicados e ineficazes para conter sangramento abdominal. Conduta mandatória: Compressão direta estéril superficial e rápida evacuação cirúrgica.'},
-      {title:'Caso 14 · Trauma Urbano',context:'Trauma Urbano',image:'casos/Imagem do ChatGPT 24 de out. de 2026, 15_22_27.png',mask:'venous.svg',effect:'venous',x:53,y:45,kind:'Lesão de ABDOME (TQ Contraindicado)',text:'Ferimento penetrante no ABDOME SUPERIOR (epigástrio). Torniquete de membros é contraindicado. Conduta mandatória: Compressão direta com curativo estéril sem empacotamento visceral profundo.'},
-      {title:'Caso 15 · Estande de Tiro (PAF)',context:'Estande de Tiro',image:'casos/Imagem do ChatGPT 24 de out. de 2026, 15_22_34.png',mask:'arterial.svg',effect:'arterial',x:77,y:86,kind:'Hemorragia de Extremidade (TQ Indicado)',text:'Torniquete de extremidade posicionado no braço proximalmente ao ferimento arterial no ANTEBRAÇO/PUNHO, garantindo controle hemostático pré-hospitalar.'},
-      {title:'Caso 16 · Trauma Urbano',context:'Trauma Urbano',image:'casos/Imagem do ChatGPT 24 de out. de 2026, 15_23_47.png',mask:'arterial.svg',effect:'arterial',x:68,y:77,kind:'Hemorragia de Extremidade (TQ Indicado)',text:'Torniquete posicionado proximalmente ao ferimento na PERNA com cessação da perda volêmica arterial.'},
-      {title:'Caso 17 · Trauma Urbano',context:'Trauma Urbano',image:'casos/Imagem do ChatGPT 24 de out. de 2026, 15_23_57.png',mask:'arterial.svg',effect:'arterial',x:70,y:75,kind:'Hemorragia de Extremidade (TQ Indicado)',text:'Torniquete comercial posicionado no braço acima da lesão no ANTEBRAÇO, interrompendo a hemorragia das artérias radial e ulnar.'},
-      {title:'Caso 18 · Trauma Urbano',context:'Trauma Urbano',image:'casos/Imagem do ChatGPT 24 de out. de 2026, 15_24_05.png',mask:'arterial.svg',effect:'arterial',x:68,y:55,kind:'Hemorragia de Extremidade (TQ Indicado)',text:'Torniquete posicionado no BRAÇO, 5 a 7 cm proximal à lesão exsanguinante com aperto suficiente para ausência de pulso distal.'},
-      {title:'Caso 19 · Estande de Tiro (PAF)',context:'Estande de Tiro',image:'casos/Imagem do ChatGPT 24 de out. de 2026, 15_24_13.png',mask:'venous.svg',effect:'venous',x:47,y:23,kind:'Lesão de ROSTO (TQ Contraindicado)',text:'Ferimento na região MANDIBULAR / CERVICAL / ROSTO. Torniquetes são TERMINANTEMENTE CONTRAINDICADOS (aplicação cervical leva a asfixia mecânica, isquemia cerebral aguda e óbito imediato; aplicação em membros não reduz fluxo cervical). Conduta obrigatória: Compressão manual direta seletiva sobre o ponto de sangramento com gaze hemostática sem ocluir a via aérea contralateral ou comprimir ambas as carótidas.'},
-      {title:'Caso 20 · Estande de Tiro (PAF)',context:'Estande de Tiro',image:'casos/Imagem do ChatGPT 24 de out. de 2026, 15_24_20.png',mask:'arterial.svg',effect:'arterial',x:52,y:62,kind:'Hemorragia de Extremidade (TQ Indicado)',text:'Torniquete comercial posicionado na raiz da COXA proximal ao ferimento exsanguinante, com rotação completa da barra do molinete.'},
-      {title:'Caso 21 · Estande de Tiro (PAF)',context:'Estande de Tiro',image:'casos/Imagem do ChatGPT 24 de out. de 2026, 15_24_27.png',mask:'arterial.svg',effect:'arterial',x:62,y:69,kind:'Hemorragia de Extremidade (TQ Indicado)',text:'Torniquete posicionado proximalmente na extremidade inferior, controlando com segurança o sangramento na PERNA.'},
-      {title:'Caso 22 · Trauma Urbano',context:'Trauma Urbano',image:'casos/Imagem do ChatGPT 24 de out. de 2026, 15_24_34.png',mask:'arterial.svg',effect:'arterial',x:61,y:60,kind:'Hemorragia de Extremidade (TQ Indicado)',text:'Torniquete de membro aplicado no braço acima da lesão no ANTEBRAÇO, interrompendo o sangramento arterial.'},
-      {title:'Caso 23 · Trauma Urbano',context:'Trauma Urbano',image:'casos/Imagem do ChatGPT 24 de out. de 2026, 15_24_43.png',mask:'arterial.svg',effect:'arterial',x:66,y:64,kind:'Hemorragia de Extremidade (TQ Indicado)',text:'Torniquete aplicado no BRAÇO proximal à ferida exsanguinante com controle eficaz da artéria braquial.'},
-      {title:'Caso 24 · Trauma Urbano',context:'Trauma Urbano',image:'casos/Imagem do ChatGPT 24 de out. de 2026, 15_24_49.png',mask:'arterial.svg',effect:'arterial',x:73,y:78,kind:'Hemorragia de Extremidade (TQ Indicado)',text:'Torniquete de extremidade posicionado acima da lesão distal na PERNA, cessando a perda volêmica.'},
-      {title:'Caso 25 · Estande de Tiro (PAF)',context:'Estande de Tiro',image:'casos/Imagem do ChatGPT 24 de out. de 2026, 15_24_55.png',mask:'arterial.svg',effect:'arterial',x:33,y:68,kind:'Hemorragia de Extremidade (TQ Indicado)',text:'Torniquete aplicado no braço proximalmente à lesão no ANTEBRAÇO, conduta recomendada pelo Stop the Bleed.'},
-      {title:'Caso 26 · Estande de Tiro (PAF)',context:'Estande de Tiro',image:'casos/Imagem do ChatGPT 24 de out. de 2026, 15_25_02.png',mask:'arterial.svg',effect:'arterial',x:52,y:62,kind:'Hemorragia de Extremidade (TQ Indicado)',text:'Torniquete posicionado no membro inferior (COXA proximal), ocluindo com eficácia os ramos da artéria femoral.'},
-      {title:'Caso 27 · Estande de Tiro (PAF)',context:'Estande de Tiro',image:'casos/Imagem do ChatGPT 24 de out. de 2026, 15_25_08.png',mask:'venous.svg',effect:'venous',x:47,y:65,kind:'Lesão de ABDOME (TQ Contraindicado)',text:'Ferimento perfurante no ABDOME. O torniquete é completamente contraindicado para lesões de tronco. Conduta mandatória: Cobertura com curativo estéril, compressão direta cuidadosa sem invaginação de gaze em vísceras e rápida evacuação para centro cirúrgico.'}
-    ];
-    const cards=document.querySelector('#cards'); const detail=document.querySelector('#detail'); const close=document.querySelector('#close');
-    function bloodFx(c){return `<div class="blood-fx ${c.effect}" style="--x:${c.x}%;--y:${c.y}%" aria-hidden="true"><span class="blood-core"></span><span class="blood-stream a"></span><span class="blood-stream b"></span><span class="blood-drop drop-a"></span><span class="blood-drop drop-b"></span><span class="blood-drop drop-c"></span></div>`}
-    function card(c){const el=document.createElement('article');el.className='card';el.innerHTML=`<div class="scene"><img src="${base}${c.image}" alt="Vítima: ${c.title}">${bloodFx(c)}<img class="mask" src="${base}masks/${c.mask}" alt="Máscara educativa da lesão" style="left:${c.x}%;top:${c.y}%"><button class="hotspot" type="button" aria-label="Abrir ${c.kind} em ${c.title}" style="left:${c.x}%;top:${c.y}%"></button><span class="tag">${c.kind}</span></div><div class="body"><div class="context">${c.context}</div><h2>${c.title}</h2><p>${c.text}</p><button class="button" type="button">Abrir foco</button></div>`;el.querySelector('.hotspot').addEventListener('click',()=>open(c));el.querySelector('.button').addEventListener('click',()=>open(c));return el}
-    function open(c){document.querySelector('#detailTitle').textContent=c.kind+' · '+c.title;document.querySelector('#detailImage').src=base+c.image;document.querySelector('#detailImage').alt='Zoom da vítima '+c.title;document.querySelector('#detailMask').src=base+'masks/'+c.mask;const detailFx=document.querySelector('#detailFx');detailFx.className='blood-fx '+c.effect;document.querySelector('#detailText').textContent=c.text;detail.showModal()}
-    close.addEventListener('click',()=>detail.close());detail.addEventListener('click',e=>{if(e.target===detail)detail.close()});cases.forEach(c=>cards.appendChild(card(c)));
+    fetch('casos/casos-config.json')
+      .catch(() => fetch('./casos/casos-config.json'))
+      .catch(() => fetch('/casos/casos-config.json'))
+      .then(r => r.json())
+      .then(casos => {
+        const cardsEl = document.getElementById('cards');
+
+        casos.forEach((c, idx) => {
+          const card = document.createElement('article');
+          card.className = 'card';
+
+          let tagClass = 'tag-ok';
+          let tagText = '✅ TQ Indicado';
+
+          if (c.membro === 'peito') {
+            tagClass = 'tag-danger';
+            tagText = '🫁 Tórax (Sem TQ)';
+          } else if (c.membro === 'abdome') {
+            tagClass = 'tag-danger';
+            tagText = '🩸 Abdome (Sem TQ)';
+          } else if (c.membro === 'rosto') {
+            tagClass = 'tag-danger';
+            tagText = '👤 Face (Sem TQ)';
+          } else if (c.membro === 'juncao') {
+            tagClass = 'tag-warn';
+            tagText = '⚠️ Axila (Packing)';
+          }
+
+          const cleanUrl = c.url.startsWith('/') ? c.url.slice(1) : c.url;
+
+          card.innerHTML = `
+            <div class="scene">
+              <img src="${cleanUrl}" alt="${c.titulo}" loading="lazy" onerror="this.src='casos/${c.file}'">
+              <span class="tag ${tagClass}">${tagText}</span>
+            </div>
+            <div class="body">
+              <div class="context">${c.isStandDeTiro ? 'Estande de Tiro' : 'Trauma Urbano'} · ${c.membro.toUpperCase()}</div>
+              <h2>${c.titulo}</h2>
+              <p>${c.justificativaClinica}</p>
+              <div class="card-footer">
+                <a class="btn-action" href="simulador-geral.html?caso=${c.id}">🎯 Iniciar Simulação #${String(c.id).padStart(2, '0')} →</a>
+              </div>
+            </div>
+          `;
+          cardsEl.appendChild(card);
+        });
+      });
   </script>
 </body>
 </html>

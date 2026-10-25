@@ -50,7 +50,7 @@ const scenario = render(React.createElement(ClinicalScenario, { scenario: existi
 assert(scenario.includes('Voltar aos casos'));
 assert(scenario.includes('canvas'));
 const stopScenario = render(React.createElement(ClinicalScenario, { scenario: stopTheBleedFolder.cases[0], onBack() {} }));
-assert(stopScenario.includes('Clique na máscara de corte para ampliar'));
+assert(stopScenario.includes('Simulador Stop the Bleed'));
 assert.equal(stopTheBleedFolder.cases.filter(simulationCase => simulationCase.patientKind === 'stop-the-bleed').length, 27);
 assert(fs.existsSync(path.join(root, 'public/simulador/personagens/stop-the-bleed/casos/casos-config.json')));
 for (const file of ['arterial.svg', 'venous.svg', 'junctional.svg']) assert(fs.existsSync(path.join(root, 'public/simulador/personagens/stop-the-bleed/masks', file)));

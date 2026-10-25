@@ -123,10 +123,6 @@ export function StopTheBleedGallery({ onSelectCase }: { onSelectCase?: (index: n
                   loading="lazy"
                   className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
                 />
-                <span
-                  className="absolute -translate-x-1/2 -translate-y-1/2 rounded-full border-2 border-red-300 bg-red-600/50 shadow-[0_0_12px_rgba(239,68,68,0.8)]"
-                  style={{ left: `${c.focus.x}%`, top: `${c.focus.y}%`, width: `${c.focus.size * 1.8}%`, height: `${c.focus.size * 1.8}%` }}
-                />
                 <div className="absolute top-2 left-2 flex gap-1">
                   {isExtremidade && (
                     <span className="flex items-center gap-1 rounded-md bg-emerald-950/90 border border-emerald-500/40 px-2 py-0.5 text-[10px] font-bold text-emerald-200">

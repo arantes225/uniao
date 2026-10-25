@@ -165,6 +165,35 @@
       .treatment-buttons { grid-template-columns:1fr; }
       .nav-cases { flex-direction:column; align-items:stretch; }
     }
+  
+    body.is-embedded {
+      padding: 0 !important;
+      margin: 0 !important;
+      background: #020805 !important;
+      min-height: auto !important;
+      height: 100vh !important;
+      overflow: hidden !important;
+    }
+    body.is-embedded header {
+      padding: 6px 12px !important;
+      background: #09130e !important;
+    }
+    body.is-embedded header h1 {
+      font-size: 13px !important;
+    }
+    body.is-embedded .controls-bar {
+      padding: 8px 12px !important;
+    }
+    body.is-embedded .custom-bar {
+      display: none !important;
+    }
+    body.is-embedded .clinical-note {
+      display: none !important;
+    }
+    body.is-embedded main {
+      height: calc(100vh - 46px) !important;
+    }
+
   </style>
 </head>
 <body>
@@ -1092,7 +1121,8 @@
     photo.onerror = () => {
       $('loading').textContent = 'Erro ao carregar ' + currentCase.url;
     };
-    photo.src = currentCase.url;
+    const cleanPhotoUrl = currentCase.url.startsWith('/') ? currentCase.url.slice(1) : currentCase.url;
+    photo.src = cleanPhotoUrl;
   }
 
   // Tratamentos com Avaliação e Penalização do Aluno
