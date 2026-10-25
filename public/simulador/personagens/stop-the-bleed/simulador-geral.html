@@ -2160,18 +2160,31 @@
     loadCase(initialIdx);
   }
 
-  // Inicializa imediatamente com os casos embutidos; o catálogo externo pode ampliar as variações.
+  const applyCaseMetadata = (cases, metadata) => cases.map((item) => {
+    const correction = metadata[String(item.id)];
+    return correction ? { ...item, ...correction } : item;
+  });
+
+  // Inicializa imediatamente; a correção visual/descrita é aplicada assim que o manifesto é lido.
   initCases(DEFAULT_CASOS);
 
-  // Tenta sincronizar alterações em background de forma silenciosa
+  // Sincroniza o catálogo e o manifesto de revisão em background.
   const tryFetch = (url) => fetch(url).then(r => { if (!r.ok) throw new Error('404'); return r.json(); });
-  tryFetch('casos/casos-config.json')
+  const tryFetchMetadata = () => tryFetch('casos/casos-metadata.json')
+    .catch(() => tryFetch('./casos/casos-metadata.json'))
+    .catch(() => tryFetch('/casos/casos-metadata.json'))
+    .catch(() => ({}));
+  const tryFetchCases = () => tryFetch('casos/casos-config.json')
     .catch(() => tryFetch('./casos/casos-config.json'))
-    .catch(() => tryFetch('/casos/casos-config.json'))
-    .then(data => {
+    .catch(() => tryFetch('/casos/casos-config.json'));
+  tryFetchMetadata().then(metadata => {
+      initCases(applyCaseMetadata(DEFAULT_CASOS, metadata));
+      return tryFetchCases().then(data => ({ data, metadata }));
+    })
+    .then(({ data, metadata }) => {
       if (Array.isArray(data) && data.length) {
         const members = ['coxa','perna','braco','antebraco','juncao','peito','abdome','rosto'];
-        const expanded = [...data];
+        const expanded = applyCaseMetadata(data, metadata);
         for (let number = expanded.length + 1; number <= 80; number += 1) {
           const base = data[(number - 1) % data.length];
           const membro = members[(number - 1) % members.length];
@@ -2195,3 +2208,4 @@
 </script>
 </body>
 </html>
+
