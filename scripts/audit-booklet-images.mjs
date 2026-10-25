@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 /**
  * Quality gate for USM booklet illustrations.
- * Checks the actual 40 published Markdown files, their authoring mirrors,
+ * Checks the 40 private/source Markdown booklets before controlled Supabase import,
  * image references, captions and basic image metadata.
  *
  * Run: node scripts/audit-booklet-images.mjs
@@ -11,7 +11,6 @@ import fs from 'node:fs';
 import path from 'node:path';
 
 const root = process.cwd();
-const pubDir = path.join(root, 'public', 'apostilas', 'md');
 const assetDir = path.join(root, 'public', 'apostilas', 'imagens');
 const sourceDir = path.join(root, 'apostilas');
 const isImage = (file) => /\.(?:png|jpe?g|svg|webp)$/i.test(file);
@@ -67,16 +66,11 @@ if (codes.length !== 40) errors.push('Manifest expected 40 modules, found '+code
 if (sourceByCode.size !== codes.length) errors.push('Published/source module count mismatch');
 
 for (const code of codes) {
-  const file = path.join(pubDir,code+'.md');
-  if (!fs.existsSync(file)) { errors.push(code+': published Markdown missing'); continue; }
-  const raw = fs.readFileSync(file,'utf8').replace(/\r\n/g,'\n');
-  const authoring = sourceByCode.get(code);
-  if (!authoring || !fs.existsSync(authoring)) {
-    errors.push(code+': authoring source missing');
-  } else {
-    const localSource = fs.readFileSync(authoring,'utf8').replace(/\r\n/g,'\n').replaceAll('../imagens/','./apostilas/imagens/');
-    if (localSource !== raw) errors.push(code+': published and source versions diverged');
-  }
+  // Never require public Markdown: originals stay in the authoring directory.
+  const file = sourceByCode.get(code);
+  if (!file || !fs.existsSync(file)) { errors.push(code+': authoring Markdown missing'); continue; }
+  const raw = fs.readFileSync(file, 'utf8').replace(/\r\n/g, '\n')
+    .replaceAll('../imagens/', './apostilas/imagens/');
   const lines = raw.split('\n');
   let firstPercent = null;
   const assets = [];
