@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import {
   ArrowLeft, CheckCircle2,
   XCircle, ChevronRight, RotateCcw,
-  Stethoscope,
+  Stethoscope, ClipboardList, SearchCheck, PlayCircle, MessageCircle,
   Maximize2, Volume2, Sparkles, HeartPulse
 } from 'lucide-react';
 import { useTheme } from '../../context/ThemeContext';
@@ -14,12 +14,36 @@ import { ContextWoundScene } from './ContextWoundScene';
 import { ContextPatientScene } from './ContextPatientScene';
 import { StopTheBleedScene } from './StopTheBleedScene';
 
+type DecisionMode = 'anamnese' | 'exame-fisico' | 'agir';
+type AuxiliaryOption = {
+  id: string;
+  text: string;
+  correct: boolean;
+  feedback: string;
+};
+
+const auxiliaryOptions: Record<Exclude<DecisionMode, 'agir'>, AuxiliaryOption[]> = {
+  anamnese: [
+    { id: 'anamnesis-event', text: 'Perguntar o que aconteceu, quando começou e se houve piora dos sintomas.', correct: true, feedback: 'Boa pergunta: mecanismo e evolução ajudam a priorizar a resposta.' },
+    { id: 'anamnesis-history', text: 'Confirmar condições de saúde, medicamentos, alergias e plano individual de emergência.', correct: true, feedback: 'Essas informações orientam uma conduta segura e a passagem para a equipe.' },
+    { id: 'anamnesis-dismiss', text: 'Assumir que é apenas um mal-estar e evitar perguntas para não deixar a pessoa nervosa.', correct: false, feedback: 'Ignorar a história pode esconder sinais de gravidade e atrasar o acionamento correto.' }
+  ],
+  'exame-fisico': [
+    { id: 'exam-primary', text: 'Avaliar resposta, respiração e sinais imediatos de deterioração antes de continuar.', correct: true, feedback: 'A avaliação inicial deve identificar rapidamente ameaças à vida.' },
+    { id: 'exam-reassess', text: 'Observar a evolução dos sinais e reavaliar depois de cada intervenção.', correct: true, feedback: 'Reavaliação contínua mostra se a medida funcionou ou se a pessoa piorou.' },
+    { id: 'exam-force', text: 'Forçar movimentos, levantar a pessoa ou testar a região dolorosa repetidamente.', correct: false, feedback: 'Testes forçados podem agravar a condição e não substituem uma avaliação profissional.' }
+  ]
+};
+
 export const ClinicalScenario: React.FC<{ scenario: SimulationCase; onBack: () => void }> = ({ scenario, onBack }) => {
   const { theme } = useTheme();
   const dark = theme === 'dark';
   const steps = scenario.steps;
   const [currentStepIdx, setCurrentStepIdx] = useState(0);
   const [selectedOptionId, setSelectedOptionId] = useState<string | null>(null);
+  const [decisionMode, setDecisionMode] = useState<DecisionMode>('agir');
+  const [auxiliaryFeedback, setAuxiliaryFeedback] = useState<{ option: AuxiliaryOption; mode: Exclude<DecisionMode, 'agir'> } | null>(null);
+  const [investigationHistory, setInvestigationHistory] = useState<string[]>([]);
   const [decisionHistory, setDecisionHistory] = useState<any[]>([]);
   const [simulationCompleted, setSimulationCompleted] = useState(false);
 
@@ -27,6 +51,11 @@ export const ClinicalScenario: React.FC<{ scenario: SimulationCase; onBack: () =
 
   const handleSelectOption = (opt: any) => {
     setSelectedOptionId(opt.id);
+  };
+
+  const handleAuxiliaryOption = (option: AuxiliaryOption, mode: Exclude<DecisionMode, 'agir'>) => {
+    setAuxiliaryFeedback({ option, mode });
+    if (option.correct) setInvestigationHistory(history => [...history, option.text]);
   };
 
   const handleConfirmDecision = () => {
@@ -39,6 +68,7 @@ export const ClinicalScenario: React.FC<{ scenario: SimulationCase; onBack: () =
       ...decisionHistory,
       {
         step: currentStep.phase,
+        category: 'agir',
         chosen: chosenOption.text,
         type: chosenOption.type,
         feedback: chosenOption.feedback,
@@ -64,6 +94,9 @@ export const ClinicalScenario: React.FC<{ scenario: SimulationCase; onBack: () =
     setCurrentStepIdx(0);
     setSelectedOptionId(null);
     setDecisionHistory([]);
+    setDecisionMode('agir');
+    setAuxiliaryFeedback(null);
+    setInvestigationHistory([]);
     setSimulationCompleted(false);
   };
 
@@ -200,60 +233,60 @@ export const ClinicalScenario: React.FC<{ scenario: SimulationCase; onBack: () =
               </div>
             </div>
 
-            {/* BASE / HUD INFERIOR: CONDUTAS CLÍNICAS & TOMADA DE DECISÃO */}
+            {/* PAINEL DE DECISÃO: ANAMNESE, EXAME FÍSICO E AÇÃO */}
             <div className="space-y-3">
               <div className="flex items-center justify-between px-1">
                 <span className="text-xs font-bold text-slate-300 uppercase tracking-wider flex items-center gap-2">
                   <Stethoscope className="w-4 h-4 text-teal-400" />
-                  <span>Selecione a conduta médica prioritária:</span>
+                  <span>Painel de decisão clínica:</span>
                 </span>
                 <span className="text-[11px] text-slate-500">
-                  {currentStep.options.length} alternativas disponíveis
+                  {decisionMode === 'agir' ? `${currentStep.options.length} ações disponíveis` : 'investigue antes de agir'}
                 </span>
               </div>
 
-              {/* Lista de Alternativas Estilo Luria */}
-              <div className="grid grid-cols-1 gap-2.5">
-                {currentStep.options.map((opt, oIdx) => {
-                  const isSelected = selectedOptionId === opt.id;
-                  return (
-                    <button
-                      key={opt.id}
-                      type="button"
-                      onClick={() => handleSelectOption(opt)}
-                      className={`w-full text-left p-4 rounded-xl border transition-all text-xs sm:text-sm flex items-center gap-3.5 ${
-                        isSelected
-                          ? 'bg-teal-950/80 border-teal-400 text-white shadow-[0_0_20px_rgba(20,184,166,0.25)] ring-1 ring-teal-400'
-                          : 'bg-slate-900/80 backdrop-blur-md border-white/10 text-slate-300 hover:bg-slate-800/90 hover:border-white/20'
-                      }`}
-                    >
-                      <div className={`w-6 h-6 rounded-lg border flex items-center justify-center shrink-0 font-bold text-xs ${
-                        isSelected
-                          ? 'border-teal-400 bg-teal-500 text-slate-950'
-                          : 'border-white/20 bg-slate-800 text-slate-400'
-                      }`}>
-                        {String.fromCharCode(65 + oIdx)}
-                      </div>
-                      <span className="leading-relaxed flex-1">{opt.text}</span>
-                    </button>
-                  );
+              <div className="grid grid-cols-3 gap-2 rounded-2xl border border-white/10 bg-slate-950/70 p-2" role="tablist" aria-label="Etapas de decisão">
+                {([
+                  { id: 'anamnese' as const, label: 'Anamnese', hint: 'Perguntar', icon: MessageCircle },
+                  { id: 'exame-fisico' as const, label: 'Exame físico', hint: 'Observar', icon: SearchCheck },
+                  { id: 'agir' as const, label: 'Agir', hint: 'Executar', icon: PlayCircle }
+                ]).map(tab => {
+                  const Icon = tab.icon;
+                  const active = decisionMode === tab.id;
+                  return <button key={tab.id} type="button" role="tab" aria-selected={active} onClick={() => { setDecisionMode(tab.id); setAuxiliaryFeedback(null); setSelectedOptionId(null); }} className={`flex min-h-16 flex-col items-center justify-center gap-1 rounded-xl border px-2 py-2 text-center transition-all ${active ? 'border-teal-400 bg-teal-500/15 text-teal-200 shadow-[0_0_18px_rgba(20,184,166,0.15)]' : 'border-transparent text-slate-400 hover:border-white/10 hover:bg-white/5 hover:text-slate-200'}`}>
+                    <Icon className="h-4 w-4" aria-hidden="true" />
+                    <span className="text-[11px] font-black uppercase tracking-wide">{tab.label}</span>
+                    <span className="text-[10px] opacity-70">{tab.hint}</span>
+                  </button>;
                 })}
               </div>
+
+              {decisionMode === 'agir' ? <div className="grid grid-cols-1 gap-2.5" role="tabpanel" aria-label="Ações disponíveis">
+                {currentStep.options.map((opt, oIdx) => {
+                  const isSelected = selectedOptionId === opt.id;
+                  return <button key={opt.id} type="button" onClick={() => handleSelectOption(opt)} className={`w-full text-left p-4 rounded-xl border transition-all text-xs sm:text-sm flex items-center gap-3.5 ${isSelected ? 'bg-teal-950/80 border-teal-400 text-white shadow-[0_0_20px_rgba(20,184,166,0.25)] ring-1 ring-teal-400' : 'bg-slate-900/80 backdrop-blur-md border-white/10 text-slate-300 hover:bg-slate-800/90 hover:border-white/20'}`}>
+                    <div className={`w-6 h-6 rounded-lg border flex items-center justify-center shrink-0 font-bold text-xs ${isSelected ? 'border-teal-400 bg-teal-500 text-slate-950' : 'border-white/20 bg-slate-800 text-slate-400'}`}>{String.fromCharCode(65 + oIdx)}</div>
+                    <span className="leading-relaxed flex-1">{opt.text}</span>
+                  </button>;
+                })}
+              </div> : <div className="space-y-2.5" role="tabpanel" aria-label={decisionMode === 'anamnese' ? 'Perguntas de anamnese' : 'Exame físico'}>
+                {auxiliaryOptions[decisionMode].map((option, index) => <button key={option.id} type="button" onClick={() => handleAuxiliaryOption(option, decisionMode)} className="flex w-full items-start gap-3 rounded-xl border border-white/10 bg-slate-900/80 p-4 text-left text-xs text-slate-300 transition-all hover:border-teal-400/60 hover:bg-slate-800/90 sm:text-sm">
+                  <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-lg border border-white/20 bg-slate-800 text-xs font-bold text-slate-400">{index + 1}</span>
+                  <span className="leading-relaxed">{option.text}</span>
+                </button>)}
+                {auxiliaryFeedback && <div className={`rounded-xl border p-3 text-xs leading-relaxed ${auxiliaryFeedback.option.correct ? 'border-emerald-500/40 bg-emerald-950/30 text-emerald-100' : 'border-red-500/40 bg-red-950/30 text-red-100'}`} role="status">
+                  <strong>{auxiliaryFeedback.option.correct ? 'Achado útil registrado.' : 'Reveja esta abordagem.'}</strong> {auxiliaryFeedback.option.feedback}
+                </div>}
+              </div>}
+
+              {investigationHistory.length > 0 && <div className="flex flex-wrap items-center gap-2 rounded-xl border border-teal-500/20 bg-teal-950/20 p-3 text-[11px] text-teal-100"><ClipboardList className="h-4 w-4 shrink-0 text-teal-300" aria-hidden="true" /><span className="font-bold uppercase tracking-wide text-teal-300">Achados registrados:</span><span>{investigationHistory.length} investigação(ões) útil(eis)</span></div>}
 
               {/* Barra de Ação Inferior */}
               <div className="pt-2 flex items-center justify-between">
                 <span className="text-[11px] text-slate-500 hidden sm:inline">
-                  Decisões clínicas inadequadas ou atrasadas geram penalidade na aprovação prática.
+                  {decisionMode === 'agir' ? 'As ações corretas e erradas ficam misturadas: leia o cenário antes de executar.' : 'Use a investigação para organizar o raciocínio; a etapa avança quando uma ação for executada.'}
                 </span>
-                <button
-                  type="button"
-                  disabled={!selectedOptionId}
-                  onClick={handleConfirmDecision}
-                  className="w-full sm:w-auto ml-auto px-8 py-3 rounded-xl font-bold text-slate-950 bg-gradient-to-r from-teal-400 to-teal-300 hover:brightness-110 disabled:opacity-40 transition-all text-xs sm:text-sm shadow-lg flex items-center justify-center gap-2"
-                >
-                  <span>Executar Conduta Selecionada</span>
-                  <ChevronRight className="w-4 h-4" />
-                </button>
+                {decisionMode === 'agir' && <button type="button" disabled={!selectedOptionId} onClick={handleConfirmDecision} className="w-full sm:w-auto ml-auto px-8 py-3 rounded-xl font-bold text-slate-950 bg-gradient-to-r from-teal-400 to-teal-300 hover:brightness-110 disabled:opacity-40 transition-all text-xs sm:text-sm shadow-lg flex items-center justify-center gap-2"><span>Executar ação</span><ChevronRight className="w-4 h-4" /></button>}
               </div>
             </div>
 

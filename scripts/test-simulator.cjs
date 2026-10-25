@@ -77,6 +77,7 @@ assert(scenario.includes('canvas'));
 const academyScenario = render(React.createElement(ClinicalScenario, { scenario: simulationFolders[0].cases[0], onBack() {} }));
 assert(academyScenario.includes('Personagem da academia'));
 assert(academyScenario.includes('Condição atual'));
+for (const label of ['Anamnese', 'Exame físico', 'Agir', 'Executar ação']) assert(academyScenario.includes(label), `Simulator must expose the Luria decision panel: ${label}`);
 const schoolScenario = render(React.createElement(ClinicalScenario, { scenario: simulationFolders[1].cases[0], onBack() {} }));
 assert(schoolScenario.includes('Personagem escolar'));
 assert(schoolScenario.includes('Condição atual'));
