@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState, useCallback } from 'react';
-import { Play, Pause, RotateCcw, ZoomIn, ZoomOut, ShieldCheck, AlertTriangle, CheckCircle2 } from 'lucide-react';
+import { Play, Pause, RotateCcw, ZoomIn, ZoomOut, ShieldCheck, AlertTriangle, CheckCircle2, Activity, Droplet } from 'lucide-react';
 import { getCasoById, type CasoStopTheBleed } from '../../data/simulator/stop-the-bleed/casosConfig';
 
 const baseAssets = `${import.meta.env.BASE_URL}simulador/personagens/stop-the-bleed/`;
@@ -49,6 +49,7 @@ export function StopTheBleedSimulator({ caseId }: { caseId: number | string }) {
   const [errorMsg, setErrorMsg] = useState<string | null>(null);
   const [isPaused, setIsPaused] = useState(false);
   const [isCloseup, setIsCloseup] = useState(true);
+  const [bleedMode, setBleedMode] = useState<'pulse' | 'continuous'>('pulse');
   const [feedback, setFeedback] = useState<FeedbackState>(null);
 
   // Estados dos tratamentos
@@ -76,8 +77,8 @@ export function StopTheBleedSimulator({ caseId }: { caseId: number | string }) {
   const flowRef = useRef(1);
   const filmTimeRef = useRef(0);
   const stateRef = useRef({
-    mode: 'continuous' as 'continuous' | 'pulse',
-    strength: 0.75,
+    mode: 'pulse' as 'continuous' | 'pulse',
+    strength: 0.85,
     time: 0,
     paused: false,
     close: true
@@ -140,6 +141,110 @@ export function StopTheBleedSimulator({ caseId }: { caseId: number | string }) {
       c.lineTo(cutBottomRef.current[i][0] * scale, cutBottomRef.current[i][1] * scale);
     }
     c.closePath();
+  };
+
+  // Reset de tratamentos e física ao mudar de caso
+  useEffect(() => {
+    treatmentRef.current = {
+      pack: 0,
+      bandage: 0,
+      hand: 0,
+      tourniquet: 0,
+      packTarget: false,
+      bandageTarget: false,
+      handTarget: false,
+      tourniquetTarget: false,
+      tourniquetTime: null,
+      soak: 0
+    };
+    dropsRef.current = [];
+    flowRef.current = 1;
+    filmTimeRef.current = 0;
+    stateRef.current.time = 0;
+    setTreatmentState({
+      packActive: false,
+      bandageActive: false,
+      handActive: false,
+      tqActive: false,
+      tqTime: null
+    });
+    setFeedback(null);
+  }, [currentCase.id]);
+
+  // Caminhos de escorrimento de sangue (Rivulets) da ferida para baixo
+  const getRivulets = useCallback(() => {
+    if (!currentCase) return [];
+    const f = currentCase.ferida;
+    const mConfig = MEMBRO_CONFIGS[currentCase.membro] || MEMBRO_CONFIGS.perna;
+    const ground = mConfig.groundY || 560;
+    const dy = Math.max(25, (ground - f.y) * 0.75);
+    const mult = f.escalaManual !== undefined ? f.escalaManual : 1.0;
+    const r = (currentCase.woundShape === 'round' ? 5.2 : 18) * mConfig.scale * mult;
+
+    if (currentCase.woundShape === 'round') {
+      return [
+        { p: [[f.x, f.y + r * 0.8], [f.x + 1, f.y + r * 1.5 + dy * 0.25], [f.x + 3, f.y + dy * 0.65], [f.x + 4, f.y + dy]], width: 1.8, delay: 0 },
+        { p: [[f.x + r * 0.5, f.y + r * 0.6], [f.x + r * 0.8 + 4, f.y + dy * 0.3], [f.x + 12, f.y + dy * 0.7], [f.x + 16, f.y + dy * 1.05]], width: 1.1, delay: 0.6 },
+        { p: [[f.x - r * 0.4, f.y + r * 0.7], [f.x - 4, f.y + dy * 0.28], [f.x - 3, f.y + dy * 0.6], [f.x - 1, f.y + dy * 0.95]], width: 0.8, delay: 1.4 }
+      ];
+    }
+
+    return [
+      { p: [[f.x - 2, f.y + 2], [f.x, f.y + dy * 0.3], [f.x + 3, f.y + dy * 0.65], [f.x + 5, f.y + dy]], width: 2.2, delay: 0 },
+      { p: [[f.x + 6, f.y + 3], [f.x + 12, f.y + dy * 0.35], [f.x + 22, f.y + dy * 0.7], [f.x + 32, f.y + dy * 1.05]], width: 1.3, delay: 0.5 },
+      { p: [[f.x - 8, f.y + 1], [f.x - 10, f.y + dy * 0.3], [f.x - 8, f.y + dy * 0.6], [f.x - 5, f.y + dy * 0.95]], width: 0.9, delay: 1.2 }
+    ];
+  }, [currentCase]);
+
+  const sampleRivulet = (r: { p: number[][] }, t: number) => {
+    const f = clamp(t, 0, 1) * (r.p.length - 1);
+    const i = Math.min(r.p.length - 2, Math.floor(f));
+    const u = f - i;
+    const a = r.p[Math.max(0, i - 1)];
+    const b = r.p[i];
+    const c = r.p[i + 1];
+    const d = r.p[Math.min(r.p.length - 1, i + 2)];
+    const k = (j: number) => 0.5 * (2 * b[j] + (-a[j] + c[j]) * u + (2 * a[j] - 5 * b[j] + 4 * c[j] - d[j]) * u * u + (-a[j] + 3 * b[j] - 3 * c[j] + d[j]) * u * u * u);
+    return { x: k(0), y: k(1) };
+  };
+
+  const drawFilm = (c: CanvasRenderingContext2D, r: { p: number[][]; delay: number }, t: number, width: number) => {
+    const end = clamp((t - r.delay) / 6, 0, 1);
+    if (end <= 0) return;
+    const left: [number, number][] = [];
+    const right: [number, number][] = [];
+    const n = Math.ceil(100 * end);
+    for (let i = 0; i <= n; i++) {
+      const p = (i / n) * end;
+      const v = sampleRivulet(r, p);
+      const next = sampleRivulet(r, Math.min(1, p + 0.006));
+      const dx = next.x - v.x;
+      const dy = next.y - v.y;
+      const len = Math.hypot(dx, dy) || 1;
+      const wave = 0.85 + 0.24 * Math.sin(p * 39 + r.delay);
+      const front = 0.5 + 0.5 * smooth(0, 0.04, end - p);
+      const w = width * wave * front * (1 - 0.3 * p);
+      left.push([v.x - (dy / len) * w, v.y + (dx / len) * w]);
+      right.push([v.x + (dy / len) * w, v.y - (dx / len) * w]);
+    }
+    c.beginPath();
+    c.moveTo(...left[0]);
+    for (const p of left) c.lineTo(...p);
+    for (const p of right.reverse()) c.lineTo(...p);
+    c.closePath();
+    const g = c.createLinearGradient(r.p[0][0] - 6, 0, r.p[0][0] + 30, 0);
+    g.addColorStop(0, '#773528bf');
+    g.addColorStop(0.35, '#831f16d9');
+    g.addColorStop(0.7, '#a23521b8');
+    g.addColorStop(1, '#60170fb0');
+    c.save();
+    c.globalCompositeOperation = 'multiply';
+    c.fillStyle = g;
+    c.fill();
+    c.strokeStyle = '#7a2c1e44';
+    c.lineWidth = 0.75;
+    c.stroke();
+    c.restore();
   };
 
   // Desenho da ferida hiper-realista
@@ -422,19 +527,21 @@ export function StopTheBleedSimulator({ caseId }: { caseId: number | string }) {
       const beat = (stateRef.current.time % 1.02) / 1.02;
       const pulse = Math.pow(Math.max(0, Math.sin((beat / 0.32) * Math.PI)), 2) * (beat < 0.32 ? 1 : 0);
 
+      // 🩸 1. JATO PULSÁTIL ARTERIAL (Spurting sincronizado com a sístole cardíaca)
       if (stateRef.current.mode === 'pulse') {
-        emission += dt * (pulse > 0.04 ? 260 * pulse : 0) * flowRef.current * (1 - tr.bandage);
+        emission += dt * (pulse > 0.03 ? 280 * pulse : 0) * flowRef.current * (1 - tr.bandage);
         while (emission >= 1) {
           emission--;
-          const speed = (85 + 165 * stateRef.current.strength) * (0.8 + 0.2 * pulse);
+          const speed = (95 + 175 * stateRef.current.strength) * (0.8 + 0.25 * pulse);
+          const dirX = f.x > 950 ? -0.85 : 0.85;
           dropsRef.current.push({
             x: f.x + 1,
             y: f.y + 1,
             px: f.x + 1,
             py: f.y + 1,
-            vx: speed * (0.88 + random() * 0.12),
-            vy: -speed * 0.18 + (random() - 0.5) * 15,
-            r: 0.25 + random() * 0.45,
+            vx: speed * (dirX + (random() - 0.5) * 0.18),
+            vy: -speed * 0.32 + (random() - 0.5) * 16,
+            r: 0.95 + random() * 1.1,
             age: 0,
             maxAge: 1.8 + random() * 0.4,
             jet: true
@@ -442,19 +549,41 @@ export function StopTheBleedSimulator({ caseId }: { caseId: number | string }) {
         }
       }
 
-      if (filmTimeRef.current > 5) {
-        dripClock += dt * (0.6 + stateRef.current.strength * 1.3) * flowRef.current;
-        if (dripClock >= 1) {
-          dripClock -= 1;
-          const dy = Math.max(60, (H - f.y) * 0.7);
+      // 🩸 2. FLUXO CONTÍNUO (Hemorragia venosa ou cavitária profusa que jorra e escorre)
+      if (stateRef.current.mode === 'continuous') {
+        emission += dt * (38 + 75 * stateRef.current.strength) * flowRef.current * (1 - tr.bandage);
+        while (emission >= 1) {
+          emission--;
+          const speed = 50 + 85 * stateRef.current.strength;
           dropsRef.current.push({
             x: f.x + (random() - 0.5) * 8,
-            y: f.y + dy,
+            y: f.y + 2,
             px: f.x,
-            py: f.y + dy,
-            vx: (random() - 0.5) * 4,
-            vy: 25 + random() * 30,
-            r: 0.6 + random() * 0.35,
+            py: f.y + 2,
+            vx: (random() - 0.5) * 28,
+            vy: speed * 0.45 + random() * 25,
+            r: 1.1 + random() * 0.95,
+            age: 0,
+            maxAge: 1.6 + random() * 0.4,
+            jet: false
+          });
+        }
+      }
+
+      // 🩸 3. GOTAS DE ESCORRIMENTO (Vertem da lesão em direção ao solo desde os primeiros segundos)
+      if (filmTimeRef.current > 0.3) {
+        dripClock += dt * (0.8 + stateRef.current.strength * 1.8) * flowRef.current * (1 - tr.bandage * 0.75);
+        if (dripClock >= 1) {
+          dripClock -= 1;
+          const dy = Math.max(50, (H - f.y) * 0.65);
+          dropsRef.current.push({
+            x: f.x + (random() - 0.5) * 12,
+            y: f.y + dy * Math.min(1, filmTimeRef.current / 3.5),
+            px: f.x,
+            py: f.y + dy * Math.min(1, filmTimeRef.current / 3.5),
+            vx: (random() - 0.5) * 6,
+            vy: 35 + random() * 40,
+            r: 1.3 + random() * 0.9,
             age: 0,
             maxAge: 2.2,
             jet: false
@@ -491,22 +620,28 @@ export function StopTheBleedSimulator({ caseId }: { caseId: number | string }) {
       // 1. Imagem fotográfica de fundo
       ctx.drawImage(photoRef.current, 0, 0, W, H);
 
-      // 2. Camada da ferida hiper-realista
+      // 2. Escorrimento de sangue ao longo da pele (Rivulets)
+      const rivs = getRivulets();
+      for (const r of rivs) {
+        drawFilm(ctx, r, filmTimeRef.current, r.width * (0.8 + stateRef.current.strength * 0.7));
+      }
+
+      // 3. Camada da ferida hiper-realista
       if (woundLayerRef.current) {
         ctx.drawImage(woundLayerRef.current, 0, 0, W, H);
       }
 
-      // 3. Gotas e jatos de sangue
+      // 4. Jatos e gotas balísticas de sangue
       let prev: Drop | null = null;
       for (const d of dropsRef.current) {
         const fade = clamp((d.maxAge - d.age) / 0.35, 0, 1);
         const alpha = Math.min(1, d.age * 30 + 0.3) * fade;
-        if (d.jet && prev && Math.abs(prev.age - d.age) < 0.035 && Math.hypot(d.x - prev.x, d.y - prev.y) < 16 && d.age < 0.5) {
+        if (d.jet && prev && Math.abs(prev.age - d.age) < 0.035 && Math.hypot(d.x - prev.x, d.y - prev.y) < 26 && d.age < 0.6) {
           ctx.beginPath();
           ctx.moveTo(prev.x, prev.y);
           ctx.lineTo(d.x, d.y);
-          ctx.lineWidth = (d.r + prev.r) * 0.95;
-          ctx.strokeStyle = `rgba(120, 28, 18, ${0.85 * fade})`;
+          ctx.lineWidth = (d.r + prev.r) * 1.5;
+          ctx.strokeStyle = `rgba(135, 22, 14, ${0.9 * fade})`;
           ctx.lineCap = 'round';
           ctx.stroke();
         }
@@ -515,11 +650,11 @@ export function StopTheBleedSimulator({ caseId }: { caseId: number | string }) {
         ctx.translate(d.x, d.y);
         ctx.rotate(Math.atan2(d.vy, d.vx) - Math.PI / 2);
         ctx.globalAlpha = alpha;
-        const stretch = 1 + Math.min(1.7, Math.hypot(d.vx, d.vy) / 170);
+        const stretch = 1 + Math.min(1.8, Math.hypot(d.vx, d.vy) / 160);
         const g = ctx.createRadialGradient(-d.r * 0.27, -d.r * 0.2, 0.03, 0, 0, d.r * 1.4);
-        g.addColorStop(0, '#953b23');
-        g.addColorStop(0.45, '#711b10');
-        g.addColorStop(1, '#4e1009');
+        g.addColorStop(0, '#ab2818');
+        g.addColorStop(0.45, '#78150a');
+        g.addColorStop(1, '#470b04');
         ctx.fillStyle = g;
         ellipse(ctx, 0, 0, d.r, d.r * stretch);
         ctx.fill();
@@ -528,43 +663,99 @@ export function StopTheBleedSimulator({ caseId }: { caseId: number | string }) {
         prev = d;
       }
 
-      // 4. Desenho de Tratamentos
+      // 5. Desenho de Tratamentos
       const tr = treatmentRef.current;
       const f = currentCase.ferida;
       const mConfig = MEMBRO_CONFIGS[currentCase.membro] || MEMBRO_CONFIGS.perna;
+      const mult = f.escalaManual !== undefined ? f.escalaManual : 1.0;
+      const escala = mConfig.scale * mult;
 
-      // Packing
+      // Packing (Preenchimento com gaze)
       if (tr.pack > 0) {
         ctx.save();
         ctx.translate(f.x, f.y);
         ctx.rotate(f.rotacao);
-        const r = 5.2 * mConfig.scale * (f.escalaManual || 1);
-        const layers = Math.floor(tr.pack * 5);
-        for (let l = 0; l <= layers; l++) {
-          const radius = r * (0.4 + 0.65 * (l / 5));
-          ctx.beginPath();
-          ctx.arc(0, 0, radius, 0, Math.PI * 2);
-          ctx.fillStyle = l % 2 === 0 ? '#e4ded0' : '#d2cbba';
-          ctx.fill();
+
+        if (currentCase.woundShape === 'round') {
+          const r = 5.2 * escala;
+          const layers = Math.floor(tr.pack * 5);
+          for (let l = 0; l <= layers; l++) {
+            const radius = r * (0.4 + 0.65 * (l / 5));
+            ctx.beginPath();
+            ctx.arc(0, 0, radius, 0, Math.PI * 2);
+            ctx.fillStyle = l % 2 === 0 ? '#e4ded0' : '#d2cbba';
+            ctx.fill();
+            ctx.strokeStyle = '#96907d77';
+            ctx.lineWidth = 0.5;
+            ctx.stroke();
+          }
+        } else {
+          cutPath(ctx, 0.95 * escala);
+          ctx.clip();
+          for (let layer = 0; layer < 3; layer++) {
+            const filled = clamp(tr.pack * 3 - layer, 0, 1);
+            if (!filled) continue;
+            const extent = 21 * filled * escala;
+            ctx.fillStyle = '#e6e1d3';
+            ctx.beginPath();
+            ctx.ellipse(0, 1.8 - layer * 0.8, extent, 4 * escala, 0, 0, Math.PI * 2);
+            ctx.fill();
+          }
         }
+
+        // Absorção de sangue na gaze
+        ctx.globalCompositeOperation = 'multiply';
+        const stainRadius = (currentCase.woundShape === 'round' ? 7.5 : 16) * escala;
+        const stain = ctx.createRadialGradient(0, 0, 1, 0, 0, stainRadius);
+        stain.addColorStop(0, `rgba(122, 35, 25, ${0.35 + Math.min(0.35, tr.soak * 0.015)})`);
+        stain.addColorStop(1, '#87291e00');
+        ctx.fillStyle = stain;
+        ctx.beginPath();
+        ctx.arc(0, 0, stainRadius, 0, Math.PI * 2);
+        ctx.fill();
         ctx.restore();
       }
 
-      // Bandage
+      // Bandage (Curativo compressivo)
       if (tr.bandage > 0) {
         ctx.save();
         ctx.translate(f.x, f.y);
         ctx.rotate(f.rotacao - 0.2);
         const bw = mConfig.bandW;
         const bh = bw * 0.7;
+        const pad = Math.min(1, tr.bandage / 0.25);
+        ctx.globalAlpha = pad;
         ctx.fillStyle = '#e5e4d8';
         ctx.beginPath();
         ctx.roundRect(-bw / 2, -bh / 2, bw, bh, 4);
         ctx.fill();
+        ctx.strokeStyle = '#bebdb0';
+        ctx.lineWidth = 1;
+        ctx.stroke();
+
+        // Faixas sobrepostas
+        for (let i = 0; i < 3; i++) {
+          const p = clamp((tr.bandage - 0.25 - i * 0.2) / 0.25, 0, 1);
+          if (!p) continue;
+          ctx.fillStyle = '#dcdad0';
+          ctx.fillRect(-bw / 2, -bh / 2 + i * (bh / 3), bw * p, bh / 3.5);
+        }
+
+        // Mancha de absorção se continuar sangrando
+        if (tr.bandage > 0.6) {
+          const sRad = 4 + Math.min(12, tr.soak * 0.15);
+          const bStain = ctx.createRadialGradient(0, 0, 1, 0, 0, sRad);
+          bStain.addColorStop(0, `rgba(130, 30, 20, ${Math.min(0.5, tr.soak * 0.015)})`);
+          bStain.addColorStop(1, '#8c3e3100');
+          ctx.fillStyle = bStain;
+          ctx.beginPath();
+          ctx.arc(0, 0, sRad, 0, Math.PI * 2);
+          ctx.fill();
+        }
         ctx.restore();
       }
 
-      // Tourniquet
+      // Tourniquet (Torniquete de molinete)
       if (tr.tourniquet > 0 && currentCase.tqSite) {
         const tq = currentCase.tqSite;
         const tw = tq.widthManual || mConfig.tqW;
@@ -610,7 +801,7 @@ export function StopTheBleedSimulator({ caseId }: { caseId: number | string }) {
         ctx.restore();
       }
 
-      // Mão de compressão
+      // Mão de compressão manual direta
       if (tr.hand > 0 && handRef.current) {
         const p = tr.hand;
         const hScale = mConfig.handScale;
@@ -630,6 +821,7 @@ export function StopTheBleedSimulator({ caseId }: { caseId: number | string }) {
     const frame = (now: number) => {
       if (stateRef.current.paused) {
         previousTime = null;
+        rafId = requestAnimationFrame(frame);
         return;
       }
       if (previousTime !== null) {
@@ -647,7 +839,7 @@ export function StopTheBleedSimulator({ caseId }: { caseId: number | string }) {
 
     rafId = requestAnimationFrame(frame);
     return () => cancelAnimationFrame(rafId);
-  }, [loading, errorMsg, currentCase, random]);
+  }, [loading, errorMsg, currentCase, random, getRivulets]);
 
   // Ações de socorro
   const handleApplyTourniquet = () => {
@@ -768,6 +960,11 @@ export function StopTheBleedSimulator({ caseId }: { caseId: number | string }) {
     setIsCloseup(stateRef.current.close);
   };
 
+  const handleSetMode = (mode: 'pulse' | 'continuous') => {
+    stateRef.current.mode = mode;
+    setBleedMode(mode);
+  };
+
   return (
     <div className="space-y-4">
       {/* 1. Barra de Telemetria e Controles do Simulador Real */}
@@ -785,7 +982,37 @@ export function StopTheBleedSimulator({ caseId }: { caseId: number | string }) {
           </div>
         </div>
 
-        <div className="flex items-center gap-2">
+        <div className="flex flex-wrap items-center gap-2">
+          {/* Padrão Hemodinâmico */}
+          <div className="flex items-center rounded-xl border border-white/10 bg-slate-800/80 p-0.5">
+            <button
+              type="button"
+              onClick={() => handleSetMode('pulse')}
+              className={`inline-flex items-center gap-1.5 rounded-lg px-2.5 py-1.5 text-xs font-semibold transition-all ${
+                bleedMode === 'pulse'
+                  ? 'bg-red-600 text-white shadow-sm'
+                  : 'text-slate-300 hover:text-white hover:bg-slate-700/50'
+              }`}
+              title="Sangramento arterial pulsátil sincronizado com o batimento cardíaco"
+            >
+              <Activity className="h-3.5 w-3.5" />
+              <span>Jato Arterial</span>
+            </button>
+            <button
+              type="button"
+              onClick={() => handleSetMode('continuous')}
+              className={`inline-flex items-center gap-1.5 rounded-lg px-2.5 py-1.5 text-xs font-semibold transition-all ${
+                bleedMode === 'continuous'
+                  ? 'bg-red-600 text-white shadow-sm'
+                  : 'text-slate-300 hover:text-white hover:bg-slate-700/50'
+              }`}
+              title="Sangramento profuso contínuo"
+            >
+              <Droplet className="h-3.5 w-3.5" />
+              <span>Fluxo Contínuo</span>
+            </button>
+          </div>
+
           <button
             type="button"
             onClick={handleToggleZoom}
