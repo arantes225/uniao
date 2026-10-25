@@ -327,21 +327,11 @@ export const AdminDashboard: React.FC = () => {
   };
 
   const handleSendCertificatesToAll = () => {
-    if (!activeCertCohort) return;
-
-    if (sendCertificatesPassword !== ADMIN_PIN) {
-      setSendCertificatesError(true);
-      return;
-    }
-
-    const eligibleStudents = students.filter(student => student.cohortId === activeCertCohort.id);
-    setSentCohorts(prev => ({ ...prev, [activeCertCohort.id]: eligibleStudents.length }));
-    setSendCertificatesPassword('');
-    setSendCertificatesError(false);
     setIsSendCertificatesOpen(false);
+    alert('O envio por e-mail ainda não está integrado. Nenhuma mensagem foi enviada.');
   };
 
-  const updateCertSigner = (id: string, update: Partial<CertificateSignatory>) => {
+    const updateCertSigner = (id: string, update: Partial<CertificateSignatory>) => {
     setCertSigners(prev => prev.map(person => person.id === id ? { ...person, ...update } : person));
   };
 
