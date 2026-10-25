@@ -6,7 +6,10 @@ import type { SimulationCase, SimulationEnvironment } from '../../data/simulator
 import { ClinicalScenario } from './ClinicalScenario';
 import { CharacterGallery } from './CharacterGallery';
 import { SchoolPatientGallery } from './SchoolPatientGallery';
+import { StopTheBleedGallery } from './StopTheBleedGallery';
+
 const environmentIcons = { academia: Dumbbell, escola: School, empresa: Building2, 'stop-the-bleed': Droplets };
+
 export const SimulatorCatalog = () => {
   const { theme } = useTheme();
   const dark = theme === 'dark';
@@ -21,7 +24,7 @@ export const SimulatorCatalog = () => {
         <h1 className="text-2xl font-bold sm:text-3xl">Simulador</h1>
         <p className="mt-2 text-sm opacity-70">Escolha o ambiente para acessar os casos.</p>
       </header>
-      <nav className="grid gap-3 sm:grid-cols-3" aria-label="Pastas de casos do simulador">
+      <nav className="grid gap-3 sm:grid-cols-2 lg:grid-cols-4" aria-label="Pastas de casos do simulador">
         {simulationFolders.map(item => {
           const Icon = environmentIcons[item.id];
           const selected = item.id === environment;
@@ -46,7 +49,7 @@ export const SimulatorCatalog = () => {
       </section>
       {environment === 'academia' && <CharacterGallery />}
       {environment === 'escola' && <SchoolPatientGallery />}
+      {environment === 'stop-the-bleed' && <StopTheBleedGallery onSelectCase={(idx) => setActiveCase(folder.cases[idx])} />}
     </div>
   </div>;
 };
-

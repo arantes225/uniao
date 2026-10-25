@@ -59,7 +59,10 @@ export function StopTheBleedScene({ characterId, focus }: { characterId: string;
         <img src={`${base}${character.file}`} alt={`${character.name}, cenário de ${character.context}`} className="absolute inset-0 h-full w-full object-cover" />
         <img src={mask} alt="Máscara educativa da lesão" className="pointer-events-none absolute -translate-x-1/2 -translate-y-1/2 object-contain drop-shadow-[0_0_18px_rgba(248,113,113,0.55)]" style={{ left: `${focus.x}%`, top: `${focus.y}%`, width: `${Math.max(focus.size * 2.4, 16)}%`, height: `${Math.max(focus.size * 2.4, 16)}%` }} />
         {hotspot}
-        <div className="absolute bottom-3 left-3 rounded-full border border-white/15 bg-slate-950/80 px-3 py-1 text-[11px] font-semibold text-slate-100">Lesão marcada para leitura visual</div>
+        <div className="absolute bottom-3 left-3 flex flex-wrap items-center gap-2">
+          <div className="rounded-full border border-white/15 bg-slate-950/80 px-3 py-1 text-[11px] font-semibold text-slate-100">Lesão marcada para leitura visual</div>
+          <a href={`${base}simulador-geral.html`} target="_blank" rel="noopener noreferrer" className="rounded-full border border-emerald-500/40 bg-emerald-950/85 hover:bg-emerald-900 px-3 py-1 text-[11px] font-bold text-emerald-200 transition-colors">🎯 Abrir no Simulador Interativo 3D (Torniquete & Packing) ↗</a>
+        </div>
       </div>
     </div>
 
