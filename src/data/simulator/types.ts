@@ -6,7 +6,8 @@ export interface SimulationStep {
     consciousness: string;
     breathing: string;
     circulation: string;
-    bleeding: string;
+    bleeding?: string;
+    status?: string;
   };
   bleedingFocus?: BleedingFocus;
   options: {

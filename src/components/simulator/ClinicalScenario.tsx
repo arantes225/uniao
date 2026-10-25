@@ -11,6 +11,7 @@ import type { SimulationCase } from '../../data/simulator/types';
 import { AnimatedPatient } from './AnimatedPatient';
 import { BleedingScene } from './BleedingScene';
 import { ContextWoundScene } from './ContextWoundScene';
+import { ContextPatientScene } from './ContextPatientScene';
 import { StopTheBleedScene } from './StopTheBleedScene';
 
 export const ClinicalScenario: React.FC<{ scenario: SimulationCase; onBack: () => void }> = ({ scenario, onBack }) => {
@@ -131,13 +132,15 @@ export const ClinicalScenario: React.FC<{ scenario: SimulationCase; onBack: () =
         {!simulationCompleted ? (
           <div className="relative z-10 flex-1 flex flex-col max-w-6xl w-full mx-auto p-4 sm:p-6 justify-between gap-6">
 
-            {currentStep.bleedingFocus
-              ? scenario.patientKind === 'stop-the-bleed'
-                ? <StopTheBleedScene characterId={scenario.characterId} focus={currentStep.bleedingFocus} />
-                : scenario.patientKind === 'escola' || scenario.patientKind === 'academia'
+            {scenario.patientKind === 'stop-the-bleed' && currentStep.bleedingFocus
+              ? <StopTheBleedScene characterId={scenario.characterId} focus={currentStep.bleedingFocus} />
+              : scenario.patientKind === 'escola' || scenario.patientKind === 'academia'
+                ? currentStep.bleedingFocus
                   ? <ContextWoundScene characterId={scenario.characterId} patientKind={scenario.patientKind} respiratoryRate={Number(currentStep.vitalSigns.breathing.match(/\d+/)?.[0] || 0)} focus={currentStep.bleedingFocus} />
-                  : <BleedingScene characterId={scenario.characterId} respiratoryRate={Number(currentStep.vitalSigns.breathing.match(/\d+/)?.[0] || 0)} focus={currentStep.bleedingFocus} />
-              : <AnimatedPatient characterId={scenario.characterId} respiratoryRate={Number(currentStep.vitalSigns.breathing.match(/\d+/)?.[0] || 0)} />}
+                  : <ContextPatientScene characterId={scenario.characterId} patientKind={scenario.patientKind} respiratoryRate={Number(currentStep.vitalSigns.breathing.match(/\d+/)?.[0] || 0)} />
+                : currentStep.bleedingFocus
+                  ? <BleedingScene characterId={scenario.characterId} respiratoryRate={Number(currentStep.vitalSigns.breathing.match(/\d+/)?.[0] || 0)} focus={currentStep.bleedingFocus} />
+                  : <AnimatedPatient characterId={scenario.characterId} respiratoryRate={Number(currentStep.vitalSigns.breathing.match(/\d+/)?.[0] || 0)} />}
             {/* TOPO: PAINEL DE MONITORAMENTO CLÍNICO / TELEMETRIA DO PACIENTE */}
             <div className="rounded-2xl bg-slate-900/85 backdrop-blur-xl border border-white/10 shadow-2xl p-4 sm:p-5 space-y-4">
               <div className="flex items-center justify-between border-b border-white/10 pb-3">
@@ -175,10 +178,10 @@ export const ClinicalScenario: React.FC<{ scenario: SimulationCase; onBack: () =
                     {currentStep.vitalSigns.circulation}
                   </span>
                 </div>
-                <div className="bg-slate-950/70 p-3 rounded-xl border border-red-500/30 bg-red-950/10 space-y-1">
-                  <span className="text-[10px] uppercase font-bold text-red-400 block">Sangramento Ativo</span>
-                  <span className="text-xs sm:text-sm font-bold text-red-300 block truncate">
-                    {currentStep.vitalSigns.bleeding}
+                <div className={`p-3 rounded-xl border space-y-1 ${currentStep.vitalSigns.status ? 'border-amber-500/30 bg-amber-950/10' : 'border-red-500/30 bg-red-950/10'}`}>
+                  <span className={`text-[10px] uppercase font-bold block ${currentStep.vitalSigns.status ? 'text-amber-400' : 'text-red-400'}`}>{currentStep.vitalSigns.status ? 'Condição atual' : 'Sangramento Ativo'}</span>
+                  <span className={`text-xs sm:text-sm font-bold block truncate ${currentStep.vitalSigns.status ? 'text-amber-200' : 'text-red-300'}`}>
+                    {currentStep.vitalSigns.status ?? currentStep.vitalSigns.bleeding}
                   </span>
                 </div>
               </div>

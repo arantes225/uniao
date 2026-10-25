@@ -1,1 +1,1 @@
-export { gymCases } from '../contextCases';
+export { gymCases } from '../contextCasesV2';

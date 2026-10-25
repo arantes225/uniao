@@ -50,10 +50,15 @@ assert(simulationFolders[1].cases.every(simulationCase => simulationCase.patient
 assert(simulationFolders[0].cases.every(simulationCase => !stopTheBleedCharacterIds.has(simulationCase.characterId)), 'Academia cases must not use Stop the Bleed characters');
 assert(simulationFolders[1].cases.every(simulationCase => !stopTheBleedCharacterIds.has(simulationCase.characterId)), 'School cases must not use Stop the Bleed characters');
 assert(stopTheBleedFolder.cases.every(simulationCase => simulationCase.patientKind === 'stop-the-bleed' && stopTheBleedCharacterIds.has(simulationCase.characterId)), 'Stop the Bleed cases must use only Stop the Bleed characters');
-assert(simulationFolders[0].cases.every(simulationCase => simulationCase.id.startsWith('academia-hemorragia-')), 'Academia cases must not be Stop the Bleed cases');
-assert(simulationFolders[1].cases.every(simulationCase => simulationCase.id.startsWith('escola-hemorragia-')), 'School cases must not be Stop the Bleed cases');
-assert(simulationFolders[0].cases.every(simulationCase => simulationCase.steps.every(step => step.bleedingFocus?.skinExposed && step.bleedingFocus.visibleRegion)), 'Academia wounds must identify exposed skin');
-assert(simulationFolders[1].cases.every(simulationCase => simulationCase.steps.every(step => step.bleedingFocus?.skinExposed && step.bleedingFocus.visibleRegion)), 'School wounds must identify exposed skin');
+assert(simulationFolders[0].cases.every(simulationCase => simulationCase.id.startsWith('academia-emergencia-')), 'Academia cases must not be Stop the Bleed cases');
+assert(simulationFolders[1].cases.every(simulationCase => simulationCase.id.startsWith('escola-emergencia-')), 'School cases must not be Stop the Bleed cases');
+assert(simulationFolders[0].cases.every(simulationCase => simulationCase.steps.every(step => !step.bleedingFocus)), 'Academia cases must not contain bleeding or wound scenes');
+assert(simulationFolders[1].cases.every(simulationCase => simulationCase.steps.every(step => !step.bleedingFocus)), 'School cases must not contain bleeding or wound scenes');
+const contextCaseText = [...simulationFolders[0].cases, ...simulationFolders[1].cases]
+  .flatMap(simulationCase => [simulationCase.title, simulationCase.description, ...simulationCase.steps.flatMap(step => [step.scenarioText, step.vitalSigns.status ?? '', ...step.options.map(option => `${option.text} ${option.feedback}`)])])
+  .join(' ');
+assert(!/\b(sangramento|sangramentos|hemorragia|hemorragias|corte|cortes)\b/i.test(contextCaseText), 'Academia and School cases must not mention bleeding or cuts');
+assert(!/\b(sangramento|sangramentos|hemorragia|hemorragias|corte|cortes)\b/i.test(`${simulationFolders[0].description} ${simulationFolders[1].description}`), 'Academia and School folders must not advertise bleeding or cuts');
 assert(schoolGallerySource.includes('import.meta.env.BASE_URL'), 'School gallery must resolve assets from the deployed base path');
 assert(!schoolGallerySource.includes("open: '/simulador/"), 'School gallery must not use root-absolute asset paths');
 for (const file of [
@@ -71,10 +76,10 @@ assert(scenario.includes('Voltar aos casos'));
 assert(scenario.includes('canvas'));
 const academyScenario = render(React.createElement(ClinicalScenario, { scenario: simulationFolders[0].cases[0], onBack() {} }));
 assert(academyScenario.includes('Personagem da academia'));
-assert(academyScenario.includes('face exposta') || academyScenario.includes('pele exposta'));
+assert(academyScenario.includes('Condição atual'));
 const schoolScenario = render(React.createElement(ClinicalScenario, { scenario: simulationFolders[1].cases[0], onBack() {} }));
 assert(schoolScenario.includes('Personagem escolar'));
-assert(schoolScenario.includes('pele exposta'));
+assert(schoolScenario.includes('Condição atual'));
 const stopScenario = render(React.createElement(ClinicalScenario, { scenario: stopTheBleedFolder.cases[0], onBack() {} }));
 assert(stopScenario.includes('Stop the Bleed'));
 assert.equal(stopTheBleedFolder.cases.filter(simulationCase => simulationCase.patientKind === 'stop-the-bleed').length, 80);
