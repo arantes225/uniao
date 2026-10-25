@@ -289,11 +289,7 @@ export const AdminDashboard: React.FC = () => {
   const [cohortCertSide, setCohortCertSide] = useState<'front' | 'back'>('front');
   const [selectedStudentForCert, setSelectedStudentForCert] = useState<StudentRecord | null>(null);
   const [releasedCohorts, setReleasedCohorts] = useState<Record<string, boolean>>({});
-  const [releasePassword, setReleasePassword] = useState('');
-  const [releaseError, setReleaseError] = useState(false);
   const [isSendCertificatesOpen, setIsSendCertificatesOpen] = useState(false);
-  const [sendCertificatesPassword, setSendCertificatesPassword] = useState('');
-  const [sendCertificatesError, setSendCertificatesError] = useState(false);
   const [sentCohorts, setSentCohorts] = useState<Record<string, number>>({});
 
   const handleOpenCohortCertModal = (cohort: any) => {
@@ -310,8 +306,6 @@ export const AdminDashboard: React.FC = () => {
     setCohortCertSide('front');
     const firstStudent = students.find(s => s.cohortId === cohort.id);
     setSelectedStudentForCert(firstStudent || null);
-    setReleasePassword('');
-    setReleaseError(false);
     setIsCohortCertModalOpen(true);
   };
 
@@ -3114,8 +3108,6 @@ export const AdminDashboard: React.FC = () => {
                   <button
                     type="button"
                     onClick={() => {
-                      setSendCertificatesPassword('');
-                      setSendCertificatesError(false);
                       setIsSendCertificatesOpen(true);
                     }}
                     disabled={!releasedCohorts[activeCertCohort.id] || students.filter(student => student.cohortId === activeCertCohort.id).length === 0 || sentCohorts[activeCertCohort.id] !== undefined}
