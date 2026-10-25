@@ -1,153 +1,97 @@
-import React, { useState, useEffect } from 'react';
-import { useParams } from 'react-router-dom';
+import React, { useEffect, useState } from 'react';
+import { Link, useParams } from 'react-router-dom';
 import { Navbar } from '../../components/layout/Navbar';
 import { Footer } from '../../components/layout/Footer';
-import { Search, Award, CheckCircle2, XCircle, ShieldCheck } from 'lucide-react';
+import { Award, CheckCircle2, XCircle, Search, ShieldCheck } from 'lucide-react';
+import { supabase } from '../../services/supabase/client';
 
+type CertificateResult = {
+  valid: boolean;
+  student_name: string | null;
+  course_title: string | null;
+  hours: number | null;
+  issued_on: string | null;
+  certificate_status: 'valid' | 'revoked' | 'not_found' | 'invalid';
+};
+
+/**
+ * A certificate is verified only against a server-issued, unguessable registry code.
+ * Never recognize client-side prefixes, demo tokens, or locally generated certificates.
+ */
 export const CertificateValidationPage: React.FC = () => {
   const { code: urlCode } = useParams<{ code?: string }>();
   const [code, setCode] = useState(urlCode || '');
-  const [loading, setLoading] = useState(false);
-  const [result, setResult] = useState<any | null>(null);
+  const [result, setResult] = useState<CertificateResult | null>(null);
   const [searched, setSearched] = useState(false);
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState<string | null>(null);
 
-  const validateCode = (searchCode: string) => {
-    const clean = searchCode.toUpperCase().trim();
-    if (!clean) return;
-
-    setLoading(true);
+  const validateCode = async (input: string) => {
+    const normalized = input.trim().toUpperCase();
     setSearched(true);
     setResult(null);
-
-    // Validações simuladas e oficiais
-    setTimeout(() => {
-      if (
-        clean === 'USM-2026-X89A-99F' || 
-        clean.includes('X89A') || 
-        clean === 'USM-DEMO-2026' || 
-        clean === 'USM-APH-2026-X89A'
-      ) {
-        setResult({
-          valid: true,
-          student_name: 'Dr. Lucas Arantes',
-          course_title: 'Atendimento Pré-Hospitalar (APH) & Suporte Básico de Vida',
-          hours: 40,
-          issued_at: new Date().toLocaleDateString('pt-BR'),
-          institution: 'União Serviços Médicos',
-          code: clean
-        });
-      } else {
-        setResult({ valid: false });
-      }
+    setError(null);
+    // Fast local shape validation reduces accidental queries; database is authority.
+    if (!/^USM-[0-9A-F]{32}$/.test(normalized)) {
+      setResult({ valid: false, student_name: null, course_title: null, hours: null, issued_on: null, certificate_status: 'invalid' });
+      return;
+    }
+    setLoading(true);
+    try {
+      const { data, error: rpcError } = await supabase.rpc('verify_uniao_certificate', { p_code: normalized });
+      if (rpcError) throw rpcError;
+      const item = Array.isArray(data) ? data[0] : null;
+      setResult(item || { valid: false, student_name: null, course_title: null, hours: null, issued_on: null, certificate_status: 'not_found' });
+    } catch {
+      setError('Não foi possível consultar o registro oficial agora. Tente novamente.');
+    } finally {
       setLoading(false);
-    }, 400);
+    }
   };
 
   useEffect(() => {
-    if (urlCode) {
-      setCode(urlCode);
-      validateCode(urlCode);
-    }
+    setCode(urlCode || '');
+    if (urlCode) void validateCode(urlCode);
+    else { setResult(null); setSearched(false); setError(null); }
   }, [urlCode]);
-
-  const handleValidate = (e: React.FormEvent) => {
-    e.preventDefault();
-    validateCode(code);
-  };
 
   return (
     <div className="landing-dark certificate-page min-h-screen flex flex-col bg-slate-950 text-white">
       <Navbar />
       <main className="flex-1 py-28 sm:py-32 bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950">
-        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-          
-          <div className="text-center space-y-3 mb-10 reveal is-visible">
-            <div className="w-16 h-16 rounded-2xl bg-teal-500/15 text-teal-300 flex items-center justify-center mx-auto mb-4 border border-teal-400/30 shadow-[0_0_30px_rgba(20,184,166,0.12)]">
-              <Award className="w-8 h-8" />
-            </div>
-            <h1 className="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">
-              Validação de Certificado
-            </h1>
-            <p className="text-base text-slate-300 max-w-lg mx-auto">
-              Verifique a autenticidade de certificados emitidos pela <strong>União Serviços Médicos</strong> através do código identificador único ou QR Code.
-            </p>
+        <div className="max-w-2xl mx-auto px-4 sm:px-6">
+          <div className="text-center space-y-3 mb-10">
+            <div className="mx-auto w-16 h-16 rounded-2xl bg-teal-500/15 flex items-center justify-center text-teal-300"><Award className="w-8 h-8" /></div>
+            <h1 className="text-3xl sm:text-4xl font-extrabold">Validação de Certificado</h1>
+            <p className="text-slate-300">Confirme a emissão de um certificado da União Serviços Médicos por meio do código de verificação.</p>
           </div>
-
-          {/* Input Form */}
-          <div className="bg-slate-900/85 rounded-2xl p-6 sm:p-8 border border-white/10 shadow-2xl backdrop-blur-xl reveal is-visible" style={{ animationDelay: '120ms' }}>
-            <form onSubmit={handleValidate} className="flex flex-col sm:flex-row gap-3">
-              <div className="relative flex-1">
-                <div className="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-slate-500">
-                  <Search className="w-5 h-5" />
-                </div>
-                <input
-                  type="text"
-                  required
-                  value={code}
-                  onChange={(e) => setCode(e.target.value)}
-                  placeholder="Ex: USM-APH-2026-X89A"
-                  className="w-full pl-11 pr-4 py-3 rounded-xl border border-white/10 bg-slate-950/80 text-white uppercase font-mono tracking-wider placeholder:text-slate-600 focus:outline-none focus:ring-2 focus:ring-teal-500/40 focus:border-teal-400 text-sm"
-                />
-              </div>
-              <button
-                type="submit"
-                disabled={loading}
-                className="px-6 py-3 rounded-xl font-bold text-slate-950 bg-gradient-to-r from-uniao-400 to-teal-300 hover:brightness-110 transition-all shadow disabled:opacity-50 text-sm whitespace-nowrap"
-              >
-                {loading ? 'Consultando...' : 'Verificar Autenticidade'}
+          <div className="rounded-2xl border border-white/10 bg-slate-900 p-6 sm:p-8 space-y-6">
+            <form onSubmit={event => { event.preventDefault(); void validateCode(code); }} className="flex flex-col sm:flex-row gap-3">
+              <input aria-label="Código de verificação" autoComplete="off" spellCheck={false} maxLength={36} value={code} onChange={event => setCode(event.target.value)}
+                placeholder="USM-XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
+                className="flex-1 min-w-0 rounded-xl border border-white/20 bg-slate-950 px-4 py-3 text-white text-sm uppercase focus:outline-none focus:border-teal-500" />
+              <button type="submit" disabled={loading || !code.trim()} className="inline-flex items-center justify-center gap-2 rounded-xl bg-teal-400 px-5 py-3 text-slate-950 font-bold disabled:opacity-50">
+                <Search className="w-4 h-4" /> {loading ? 'Consultando…' : 'Verificar'}
               </button>
             </form>
-
-            <div className="mt-3 text-xs text-slate-400 flex items-center gap-1.5">
-              <ShieldCheck className="w-4 h-4 text-teal-400" />
-              <span>Validação pública criptográfica. Dados pessoais sensíveis são resguardados pela LGPD.</span>
-            </div>
+            {error && <div role="alert" className="rounded-xl border border-amber-400/40 bg-amber-400/10 p-4 text-amber-200">{error}</div>}
+            {searched && !loading && result && (
+              result.valid && result.certificate_status === 'valid' ?
+              <div className="rounded-xl border border-emerald-400/30 bg-emerald-500/10 p-5 space-y-3">
+                <h2 className="flex items-center gap-2 text-emerald-300 font-bold"><CheckCircle2 className="w-5 h-5" /> Certificado registrado e válido</h2>
+                <p><strong>Aluno:</strong> {result.student_name}</p>
+                <p><strong>Curso:</strong> {result.course_title}</p>
+                <p><strong>Carga horária:</strong> {result.hours ?? 0} horas</p>
+                <p><strong>Emissão:</strong> {result.issued_on ? new Date(result.issued_on + 'T12:00:00').toLocaleDateString('pt-BR') : '—'}</p>
+              </div> :
+              <div role="status" className="rounded-xl border border-amber-400/30 bg-amber-400/10 p-5 text-amber-200 flex items-start gap-3">
+                <XCircle className="w-5 h-5 shrink-0" />
+                <p>{result.certificate_status === 'revoked' ? 'Este certificado foi revogado e não é válido.' : 'Não foi encontrado certificado oficial válido para esse código.'}</p>
+              </div>
+            )}
+            <p className="flex items-center gap-2 text-xs text-slate-400"><ShieldCheck className="w-4 h-4" /> Consulta baseada no registro oficial, não em códigos de demonstração.</p>
           </div>
-
-          {/* Result Presentation */}
-          {searched && (
-            <div className="mt-8 reveal is-visible" style={{ animationDelay: '180ms' }}>
-              {result && result.valid ? (
-                <div className="rounded-2xl border border-emerald-500/30 bg-emerald-950/30 p-6 sm:p-8 space-y-4 shadow-xl">
-                  <div className="flex items-center gap-3 text-emerald-300">
-                    <CheckCircle2 className="w-7 h-7 text-emerald-400 shrink-0" />
-                    <div>
-                      <h3 className="text-lg font-bold">Certificado Válido e Autêntico</h3>
-                      <p className="text-xs text-emerald-300">Registro oficial localizado no banco de dados da USM.</p>
-                    </div>
-                  </div>
-
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-4 border-t border-emerald-500/30 text-sm text-slate-300">
-                    <div>
-                      <span className="text-xs text-slate-500 block">Aluno:</span>
-                      <strong className="text-white">{result.student_name}</strong>
-                    </div>
-                    <div>
-                      <span className="text-xs text-slate-500 block">Treinamento:</span>
-                      <strong className="text-white">{result.course_title}</strong>
-                    </div>
-                    <div>
-                      <span className="text-xs text-slate-500 block">Carga Horária:</span>
-                      <strong className="text-white">{result.hours} horas</strong>
-                    </div>
-                    <div>
-                      <span className="text-xs text-slate-500 block">Data de Emissão:</span>
-                      <strong className="text-white">{result.issued_at}</strong>
-                    </div>
-                  </div>
-                </div>
-              ) : (
-                <div className="rounded-2xl border border-red-500/30 bg-red-950/30 p-6 sm:p-8 text-center space-y-2">
-                  <XCircle className="w-8 h-8 text-red-500 mx-auto" />
-                  <h3 className="text-base font-bold text-red-300">Certificado Não Encontrado</h3>
-                  <p className="text-xs text-red-300 max-w-md mx-auto">
-                    Não encontramos nenhum registro correspondente ao código informado. Verifique se os caracteres foram digitados corretamente ou entre em contato com a instituição emissora.
-                  </p>
-                </div>
-              )}
-            </div>
-          )}
-
+          <div className="text-center mt-6"><Link to="/" className="text-teal-300 text-sm hover:underline">Voltar ao site</Link></div>
         </div>
       </main>
       <Footer />
