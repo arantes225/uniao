@@ -4,8 +4,10 @@ import type { SimulationCase } from '../types';
 export const workshopBleeding: SimulationCase = {
   id: 'hemorragia-oficina',
   title: 'Hemorragia exanguinante e choque hipovolêmico',
-  description: 'Atendimento de uma pessoa com sangramento intenso em uma oficina.',
+  description: 'Atendimento de um homem adulto com sangramento intenso em uma oficina.',
   characterId: 'homem-branco-deitado',
+  patientSex: 'M',
+  patientAgeRange: 'adulto',
   steps: [
     {
       id: 1,
@@ -104,3 +106,4 @@ export const workshopBleeding: SimulationCase = {
     }
   ],
 };
+
