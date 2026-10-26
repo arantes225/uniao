@@ -54,7 +54,7 @@ Deno.serve(async (request) => {
   const cpf = typeof payload?.cpf === 'string' && payload.cpf.trim() ? payload.cpf.trim() : null;
   const cohortId = typeof payload?.cohort_id === 'string' ? payload.cohort_id : '';
   if (name.length < 2 || name.length > 200 || email.length > 254 ||
-      !/^[^\\s@]+@[^\\s@]+\\.[^\\s@]+$/.test(email) ||
+      !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email) ||
       !/^[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}$/.test(cohortId)) {
     return json({ error: 'Informe nome, e-mail e turma válidos' }, 400);
   }
