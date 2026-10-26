@@ -118,6 +118,11 @@ export const ClinicalScenario: React.FC<{ scenario: SimulationCase; onBack: () =
             <span className="text-[10px] font-black uppercase px-2 py-0.5 rounded bg-teal-500/20 text-teal-300 border border-teal-500/30 tracking-wider">
               Simulador Clínico
             </span>
+            {scenario.patientKind === 'stop-the-bleed' && (
+              <span className="text-[10px] font-black uppercase tracking-wider text-red-300 hidden sm:inline">
+                Stop the Bleed
+              </span>
+            )}
             <span className="text-xs font-bold text-white hidden md:inline truncate max-w-md">
               {scenario.title}
             </span>
@@ -406,4 +411,5 @@ export const ClinicalScenario: React.FC<{ scenario: SimulationCase; onBack: () =
     </div>
   );
 };
+
 
