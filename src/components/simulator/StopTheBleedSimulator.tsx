@@ -1044,8 +1044,8 @@ export function StopTheBleedSimulator({ caseId }: { caseId: number | string }) {
       </div>
 
       {/* 2. Personagem ao centro e comandos laterais no padrão LURIA */}
-      <div className="grid items-start gap-4" style={{ width: 'min(100%, calc(100vw - 280px))', gridTemplateColumns: 'minmax(0, 1fr) minmax(190px, 220px)' }}>
-        <div className="relative min-w-0 aspect-[16/9] w-full overflow-hidden rounded-3xl border border-white/15 bg-slate-950 shadow-2xl">
+      <div className="relative min-w-0 w-full" style={{ maxWidth: 'calc(100vw - 300px)' }}>
+        <div className="relative min-w-0 aspect-[16/9] overflow-hidden rounded-3xl border border-white/15 bg-slate-950 shadow-2xl" style={{ width: 'calc(100% - 230px)' }}>
           <canvas ref={canvasRef} width={W} height={H} className="h-full w-full object-contain block" />
 
           {loading && (
@@ -1062,7 +1062,7 @@ export function StopTheBleedSimulator({ caseId }: { caseId: number | string }) {
           )}
         </div>
 
-        <aside className="rounded-2xl border border-white/10 bg-slate-900/90 p-3 shadow-xl backdrop-blur-md" aria-label="Comandos clínicos">
+        <aside className="absolute right-0 top-0 w-[214px] rounded-2xl border border-white/10 bg-slate-900/95 p-3 shadow-xl backdrop-blur-md" aria-label="Comandos clínicos">
           <div className="mb-2 px-1">
             <span className="text-[10px] font-black uppercase tracking-wider text-slate-300">Comandos clínicos</span>
             <p className="mt-1 text-[11px] leading-relaxed text-slate-500">Abra uma categoria para ver as opções do caso.</p>
