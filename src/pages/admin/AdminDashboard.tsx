@@ -303,7 +303,7 @@ export const AdminDashboard: React.FC = () => {
   const [cohortCertSide, setCohortCertSide] = useState<'front' | 'back'>('front');
   const [selectedStudentForCert, setSelectedStudentForCert] = useState<StudentRecord | null>(null);
   const [releasedCohorts, setReleasedCohorts] = useState<Record<string, boolean>>({});
-  const [issuedCodes, setIssuedCodes] = useState<Record<string, {id: string; code: string; issuedAt: string}>>({});
+  const [issuedCodes, setIssuedCodes] = useState<Record<string, {id: string; code: string; issuedAt: string; studentName: string}>>({});
   const [completedCurriculum, setCompletedCurriculum] = useState<Record<string, boolean>>({});
   const [isSendCertificatesOpen, setIsSendCertificatesOpen] = useState(false);
   const [sentCohorts] = useState<Record<string, number>>({});
@@ -440,14 +440,14 @@ export const AdminDashboard: React.FC = () => {
       setCohortLessonSelections(mapping);
     }
     // Reflect certificates already issued across devices and sessions.
-    const { data: issuedCertificates } = await supabase.from('certificate_issuances').select('id,cohort_id,user_id,verification_code,issued_at,revoked_at');
+    const { data: issuedCertificates } = await supabase.from('certificate_issuances').select('id,cohort_id,user_id,verification_code,issued_at,revoked_at,student_name_snapshot');
     if (issuedCertificates) {
       const byCohort: Record<string, boolean> = {};
-      const codes: Record<string, {id: string; code: string; issuedAt: string}> = {};
+      const codes: Record<string, {id: string; code: string; issuedAt: string; studentName: string}> = {};
       issuedCertificates.forEach(item => {
         if (item.revoked_at) return;
         byCohort[item.cohort_id] = true;
-        codes[item.cohort_id + ':' + item.user_id] = {id: item.id, code: item.verification_code, issuedAt: item.issued_at};
+        codes[item.cohort_id + ':' + item.user_id] = {id: item.id, code: item.verification_code, issuedAt: item.issued_at, studentName: item.student_name_snapshot};
       });
       setIssuedCodes(codes);
       setReleasedCohorts(byCohort);
@@ -2989,7 +2989,7 @@ export const AdminDashboard: React.FC = () => {
                         <div className="py-1">
                           <p className="text-[11px] text-slate-300 font-light">Certificamos que</p>
                           <div className="my-1 text-base sm:text-lg font-black text-white underline decoration-teal-400 decoration-2 underline-offset-4">
-                            {selectedStudentForCert ? selectedStudentForCert.name : previewStudentName}
+                            {selectedStudentForCert ? (issuedCodes[(activeCertCohort?.id || selectedCertCohortId) + ':' + selectedStudentForCert.id]?.studentName || 'PRÉVIA — NÃO EMITIDO') : previewStudentName}
                           </div>
                           <p className="text-[10px] text-slate-300 font-light max-w-lg mx-auto leading-relaxed">
                             concluiu a formação técnica em saúde com simulação clínica e prática presencial realizada em <strong className="text-teal-300 font-bold">{activeCertCohort.practical_date || certPracticalDate}</strong>, totalizando <strong className="text-teal-300 font-bold">{certWorkload} horas</strong>.
