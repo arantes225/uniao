@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState, useCallback } from 'react';
-import { Play, Pause, RotateCcw, ZoomIn, ZoomOut, ShieldCheck, AlertTriangle, CheckCircle2, Activity, Droplet, MessageCircle, SearchCheck, PlayCircle } from 'lucide-react';
+import { Play, Pause, RotateCcw, ZoomIn, ZoomOut, ShieldCheck, AlertTriangle, CheckCircle2, MessageCircle, SearchCheck, PlayCircle } from 'lucide-react';
 import { getCasoById, type CasoStopTheBleed } from '../../data/simulator/stop-the-bleed/casosConfig';
 
 const baseAssets = `${import.meta.env.BASE_URL}simulador/personagens/stop-the-bleed/`;
@@ -50,8 +50,7 @@ export function StopTheBleedSimulator({ caseId }: { caseId: number | string }) {
   const [loading, setLoading] = useState(true);
   const [errorMsg, setErrorMsg] = useState<string | null>(null);
   const [isPaused, setIsPaused] = useState(false);
-  const [isCloseup, setIsCloseup] = useState(true);
-  const [bleedMode, setBleedMode] = useState<'pulse' | 'continuous'>('pulse');
+  const [isCloseup, setIsCloseup] = useState(false);
   const [feedback, setFeedback] = useState<FeedbackState>(null);
   const [decisionPanel, setDecisionPanel] = useState<DecisionPanel>('acoes');
   // Estados dos tratamentos
@@ -79,11 +78,11 @@ export function StopTheBleedSimulator({ caseId }: { caseId: number | string }) {
   const flowRef = useRef(1);
   const filmTimeRef = useRef(0);
   const stateRef = useRef({
-    mode: 'pulse' as 'continuous' | 'pulse',
+    mode: currentCase.woundShape === 'round' ? 'pulse' as const : 'continuous' as const,
     strength: 0.85,
     time: 0,
     paused: false,
-    close: true
+    close: false
   });
 
   const dropsRef = useRef<Drop[]>([]);
@@ -163,6 +162,9 @@ export function StopTheBleedSimulator({ caseId }: { caseId: number | string }) {
     flowRef.current = 1;
     filmTimeRef.current = 0;
     stateRef.current.time = 0;
+    stateRef.current.mode = currentCase.woundShape === 'round' ? 'pulse' : 'continuous';
+    stateRef.current.close = false;
+    setIsCloseup(false);
     setTreatmentState({
       packActive: false,
       bandageActive: false,
@@ -962,11 +964,6 @@ export function StopTheBleedSimulator({ caseId }: { caseId: number | string }) {
     setIsCloseup(stateRef.current.close);
   };
 
-  const handleSetMode = (mode: 'pulse' | 'continuous') => {
-    stateRef.current.mode = mode;
-    setBleedMode(mode);
-  };
-
   return (
     <div className="space-y-4">
       {/* 1. Barra de Telemetria e Controles do Simulador Real */}
@@ -981,48 +978,18 @@ export function StopTheBleedSimulator({ caseId }: { caseId: number | string }) {
               <span className="text-[11px] text-slate-400">· {currentCase.patientAgeRange || 'idade estimada'} · sexo {currentCase.patientSex || 'não informado'}</span>
             </div>
             <h3 className="text-sm font-bold text-white sm:text-base">{currentCase.titulo}</h3>
-            <p className="text-[11px] text-slate-400">{currentCase.subtitulo} · {currentCase.tqIndicado ? 'torniquete indicado' : 'torniquete não indicado'}</p>
+            <p className="text-[11px] text-slate-300">Ocorrência: {currentCase.subtitulo}. Vítima em {currentCase.scene ?? 'cena do caso'}; lesão em {currentCase.membro}. {currentCase.tqIndicado ? 'Há indicação de torniquete.' : 'Torniquete não é indicado nesta região.'}</p>
           </div>
         </div>
 
         <div className="flex flex-wrap items-center gap-2">
-          {/* Padrão Hemodinâmico */}
-          <div className="flex items-center rounded-xl border border-white/10 bg-slate-800/80 p-0.5">
-            <button
-              type="button"
-              onClick={() => handleSetMode('pulse')}
-              className={`inline-flex items-center gap-1.5 rounded-lg px-2.5 py-1.5 text-xs font-semibold transition-all ${
-                bleedMode === 'pulse'
-                  ? 'bg-red-600 text-white shadow-sm'
-                  : 'text-slate-300 hover:text-white hover:bg-slate-700/50'
-              }`}
-              title="Sangramento arterial pulsátil sincronizado com o batimento cardíaco"
-            >
-              <Activity className="h-3.5 w-3.5" />
-              <span>Jato Arterial</span>
-            </button>
-            <button
-              type="button"
-              onClick={() => handleSetMode('continuous')}
-              className={`inline-flex items-center gap-1.5 rounded-lg px-2.5 py-1.5 text-xs font-semibold transition-all ${
-                bleedMode === 'continuous'
-                  ? 'bg-red-600 text-white shadow-sm'
-                  : 'text-slate-300 hover:text-white hover:bg-slate-700/50'
-              }`}
-              title="Sangramento profuso contínuo"
-            >
-              <Droplet className="h-3.5 w-3.5" />
-              <span>Fluxo Contínuo</span>
-            </button>
-          </div>
-
           <button
             type="button"
             onClick={handleToggleZoom}
             className="inline-flex items-center gap-1.5 rounded-xl border border-white/10 bg-slate-800/80 px-3 py-1.5 text-xs font-semibold text-slate-200 transition-colors hover:bg-slate-700"
           >
             {isCloseup ? <ZoomOut className="h-3.5 w-3.5" /> : <ZoomIn className="h-3.5 w-3.5" />}
-            {isCloseup ? 'Cena Inteira' : 'Zoom na Lesão'}
+            {isCloseup ? 'Ver cena inteira' : 'Detalhar lesão'}
           </button>
           <button
             type="button"
@@ -1045,7 +1012,44 @@ export function StopTheBleedSimulator({ caseId }: { caseId: number | string }) {
 
       {/* 2. Personagem ao centro e comandos laterais no padrão LURIA */}
       <div className="relative min-w-0 w-full" style={{ maxWidth: 'calc(100vw - 300px)' }}>
-        <div className="relative min-w-0 aspect-[16/9] overflow-hidden rounded-3xl border border-white/15 bg-slate-950 shadow-2xl" style={{ width: 'calc(100% - 230px)' }}>
+        <aside className="absolute left-0 top-0 z-10 w-[354px] rounded-2xl border border-white/10 bg-slate-900/95 p-3 shadow-xl backdrop-blur-md" aria-label="Comandos clínicos">
+          <div className="mb-2 px-1">
+            <span className="text-[10px] font-black uppercase tracking-wider text-slate-300">Comandos clínicos</span>
+            <p className="mt-1 text-[11px] leading-relaxed text-slate-500">Escolha uma categoria e veja as opções ao lado.</p>
+          </div>
+
+          <div className="grid grid-cols-[88px_minmax(0,1fr)] gap-2">
+            <div className="space-y-1.5" role="tablist" aria-label="Categorias de comandos">
+              {([
+                { id: 'perguntas' as const, label: 'Perguntas', hint: 'Investigar', icon: MessageCircle },
+                { id: 'exames' as const, label: 'Exames', hint: 'Observar', icon: SearchCheck },
+                { id: 'acoes' as const, label: 'Ações', hint: 'Intervir', icon: PlayCircle }
+              ]).map((tab) => {
+                const Icon = tab.icon;
+                const active = decisionPanel === tab.id;
+                return <button key={tab.id} type="button" role="tab" aria-selected={active} onClick={() => setDecisionPanel(tab.id)} className={`flex w-full flex-col items-center gap-1 rounded-xl border px-1.5 py-2.5 text-center transition-all ${active ? 'border-teal-400 bg-teal-500/15 text-teal-100' : 'border-white/10 bg-slate-950/50 text-slate-400 hover:border-white/20 hover:text-white'}`}>
+                  <Icon className="h-4 w-4 shrink-0" aria-hidden="true" />
+                  <span><strong className="block text-[9px] font-black uppercase tracking-wide">{tab.label}</strong><small className="block text-[9px] opacity-70">{tab.hint}</small></span>
+                </button>;
+              })}
+            </div>
+
+            <div className="max-h-[330px] min-h-[178px] space-y-2 overflow-y-auto pr-1" role="tabpanel" aria-label={decisionPanel === 'perguntas' ? 'Perguntas do caso' : decisionPanel === 'exames' ? 'Exames e observações' : 'Ações de socorro'}>
+              {decisionPanel === 'perguntas' && ['O que aconteceu e há quanto tempo?', 'A vítima responde e consegue falar?', 'O sangramento aumentou ou diminuiu?'].map((question) => <button key={question} type="button" onClick={() => setFeedback({ type: 'success', title: 'Pergunta registrada', description: question, recommendation: 'Use a resposta para priorizar segurança, acionamento do resgate e controle da hemorragia.' })} className="w-full rounded-xl border border-white/10 bg-slate-950/70 p-2.5 text-left text-[10px] leading-relaxed text-slate-300 transition hover:border-teal-400/60 hover:text-white">{question}</button>)}
+
+              {decisionPanel === 'exames' && ['Avaliar consciência e respiração', 'Identificar a região anatômica da lesão', 'Verificar padrão e intensidade do sangramento'].map((exam) => <button key={exam} type="button" onClick={() => setFeedback({ type: 'success', title: 'Avaliação registrada', description: exam, recommendation: currentCase.justificativaClinica })} className="w-full rounded-xl border border-white/10 bg-slate-950/70 p-2.5 text-left text-[10px] leading-relaxed text-slate-300 transition hover:border-amber-400/60 hover:text-white">{exam}</button>)}
+
+              {decisionPanel === 'acoes' && <>
+                <button type="button" onClick={handleApplyTourniquet} disabled={treatmentState.tqActive} className={`w-full rounded-xl border p-2.5 text-left transition-all ${treatmentState.tqActive ? 'border-emerald-500/50 bg-emerald-950/50 text-emerald-200' : 'border-white/10 bg-slate-950/70 text-white hover:border-emerald-400'}`}><span className="block text-[10px] font-bold">🩹 Aplicar torniquete</span><span className="mt-1 block text-[9px] text-slate-400">{treatmentState.tqActive ? `Aplicado às ${treatmentState.tqTime}` : currentCase.tqIndicado ? 'Indicado para esta extremidade' : 'Não indicado neste caso'}</span></button>
+                <button type="button" onClick={handleApplyPacking} disabled={treatmentState.packActive} className={`w-full rounded-xl border p-2.5 text-left transition-all ${treatmentState.packActive ? 'border-emerald-500/50 bg-emerald-950/50 text-emerald-200' : 'border-white/10 bg-slate-950/70 text-white hover:border-emerald-400'}`}><span className="block text-[10px] font-bold">🧻 Preencher com gaze</span><span className="mt-1 block text-[9px] text-slate-400">{treatmentState.packActive ? 'Cavidade preenchida' : 'Packing profundo quando indicado'}</span></button>
+                <button type="button" onClick={handleApplyBandage} disabled={treatmentState.bandageActive} className={`w-full rounded-xl border p-2.5 text-left transition-all ${treatmentState.bandageActive ? 'border-emerald-500/50 bg-emerald-950/50 text-emerald-200' : 'border-white/10 bg-slate-950/70 text-white hover:border-emerald-400'}`}><span className="block text-[10px] font-bold">🩹 Aplicar bandagem</span><span className="mt-1 block text-[9px] text-slate-400">{treatmentState.bandageActive ? 'Curativo aplicado' : 'Curativo compressivo'}</span></button>
+                <button type="button" onClick={handleTogglePressure} className={`w-full rounded-xl border p-2.5 text-left transition-all ${treatmentState.handActive ? 'border-emerald-500/50 bg-emerald-950/50 text-emerald-200' : 'border-white/10 bg-slate-950/70 text-white hover:border-emerald-400'}`}><span className="block text-[10px] font-bold">✋ Comprimir manualmente</span><span className="mt-1 block text-[9px] text-slate-400">{treatmentState.handActive ? 'Soltar compressão' : 'Pressão direta firme'}</span></button>
+              </>}
+            </div>
+          </div>
+        </aside>
+
+        <div className="relative ml-[370px] aspect-[16/9] overflow-hidden rounded-3xl border border-white/15 bg-slate-950 shadow-2xl">
           <canvas ref={canvasRef} width={W} height={H} className="h-full w-full object-contain block" />
 
           {loading && (
@@ -1062,7 +1066,8 @@ export function StopTheBleedSimulator({ caseId }: { caseId: number | string }) {
           )}
         </div>
 
-        <aside className="absolute right-0 top-0 w-[214px] rounded-2xl border border-white/10 bg-slate-900/95 p-3 shadow-xl backdrop-blur-md" aria-label="Comandos clínicos">
+        {/* Painel de comandos fica à esquerda; a cena permanece à direita. */}
+        <div className="hidden">
           <div className="mb-2 px-1">
             <span className="text-[10px] font-black uppercase tracking-wider text-slate-300">Comandos clínicos</span>
             <p className="mt-1 text-[11px] leading-relaxed text-slate-500">Abra uma categoria para ver as opções do caso.</p>
@@ -1097,7 +1102,7 @@ export function StopTheBleedSimulator({ caseId }: { caseId: number | string }) {
             <button type="button" onClick={handleApplyBandage} disabled={treatmentState.bandageActive} className={`w-full rounded-xl border p-3 text-left transition-all ${treatmentState.bandageActive ? 'border-emerald-500/50 bg-emerald-950/50 text-emerald-200' : 'border-white/10 bg-slate-950/70 text-white hover:border-emerald-400'}`}><span className="block text-[11px] font-bold">🩹 Aplicar bandagem</span><span className="mt-1 block text-[10px] text-slate-400">{treatmentState.bandageActive ? 'Curativo aplicado' : 'Curativo compressivo'}</span></button>
             <button type="button" onClick={handleTogglePressure} className={`w-full rounded-xl border p-3 text-left transition-all ${treatmentState.handActive ? 'border-emerald-500/50 bg-emerald-950/50 text-emerald-200' : 'border-white/10 bg-slate-950/70 text-white hover:border-emerald-400'}`}><span className="block text-[11px] font-bold">✋ Comprimir manualmente</span><span className="mt-1 block text-[10px] text-slate-400">{treatmentState.handActive ? 'Soltar compressão' : 'Pressão direta firme'}</span></button>
           </div>}
-        </aside>
+        </div>
       </div>
 
       {/* 3. Banner de Avaliação Clínica e Pontuação */}
