@@ -11,11 +11,14 @@ import {
 } from 'lucide-react';
 import { supabase } from '../../services/supabase/client';
 import { ContentManagerTab } from './ContentManagerTab';
+import { OfficialExamAdmin } from './OfficialExamAdmin';
+import { AdminMFA } from './AdminMFA';
 import { PrompterTab } from './PrompterTab';
 import { CurriculumService } from '../../services/CurriculumService';
 import { LearningModule } from '../../data/curriculumData';
 import { CohortCurriculumSelector, CurriculumLessonOption } from '../../components/admin/CohortCurriculumSelector';
 import { CertificateSignatory, CertificateSignatures, defaultCertificateSigners, FittedCertificate, printCertificate } from '../../components/admin/CertificateComponents';
+import { CertificateQR, certificateVerificationUrl } from '../../components/admin/CertificateQR';
 
 const normalizeDate = (input: string): string | null => {
   if (!input.trim()) return null;
@@ -173,7 +176,7 @@ export const AdminDashboard: React.FC = () => {
   }, []);
 
   // Navegação Interna por Abas
-  const [activeTab, setActiveTab] = useState<'dashboard' | 'turmas' | 'conteudos' | 'prompter' | 'certificados' | 'galeria'>('dashboard');
+  const [activeTab, setActiveTab] = useState<'dashboard' | 'turmas' | 'conteudos' | 'provas' | 'prompter' | 'certificados' | 'galeria'>('dashboard');
 
   // Módulo de Gerenciamento da Galeria de Treinamentos
   const [galleryImages, setGalleryImages] = useState<any[]>([]);
@@ -300,7 +303,8 @@ export const AdminDashboard: React.FC = () => {
   const [cohortCertSide, setCohortCertSide] = useState<'front' | 'back'>('front');
   const [selectedStudentForCert, setSelectedStudentForCert] = useState<StudentRecord | null>(null);
   const [releasedCohorts, setReleasedCohorts] = useState<Record<string, boolean>>({});
-  const [issuedCodes, setIssuedCodes] = useState<Record<string, {code: string; issuedAt: string}>>({});
+  const [issuedCodes, setIssuedCodes] = useState<Record<string, {id: string; code: string; issuedAt: string}>>({});
+  const [completedCurriculum, setCompletedCurriculum] = useState<Record<string, boolean>>({});
   const [isSendCertificatesOpen, setIsSendCertificatesOpen] = useState(false);
   const [sentCohorts] = useState<Record<string, number>>({});
 
@@ -330,6 +334,32 @@ export const AdminDashboard: React.FC = () => {
     if (count === 0) { alert('Nenhum novo certificado. Confira as matrículas ou emissões anteriores.'); return; }
     await loadData();
     alert(count + ' certificado(s) registrados. Nenhum e-mail foi enviado.');
+  };
+
+  const handleAttestCurriculum = async (cohortId: string, studentId: string, studentName: string) => {
+    const evidence = window.prompt(
+      `Descreva a evidência da conclusão teórica de ${studentName}. Confira aulas e atividades antes de atestar (mínimo 10 caracteres):`,
+      ''
+    );
+    if (!evidence) return;
+    const { error } = await supabase.rpc('attest_curriculum_completion', {
+      p_cohort_id: cohortId, p_user_id: studentId, p_evidence: evidence.trim(),
+    });
+    if (error) { alert('Não foi possível registrar a conclusão: ' + error.message); return; }
+    setCompletedCurriculum(prev => ({ ...prev, [cohortId + ':' + studentId]: true }));
+    alert('Conclusão atestada e registrada no servidor.');
+  };
+
+  const handleRevokeCertificate = async (issuanceId: string, name: string) => {
+    const reason = window.prompt(`Motivo da revogação do certificado de ${name} (mínimo 5 caracteres):`, '');
+    if (!reason) return;
+    if (!window.confirm('Esta ação invalidará imediatamente o certificado oficial. Confirmar revogação?')) return;
+    const {data, error} = await supabase.rpc('revoke_uniao_certificate', {
+      p_issuance_id: issuanceId, p_reason: reason.trim(),
+    });
+    if (error || !data) { alert(error?.message || 'O certificado não pôde ser revogado.'); return; }
+    await loadData();
+    alert('Certificado revogado e evento registrado. O código antigo não será considerado válido.');
   };
 
   const handleSendCertificatesToAll = () => {
@@ -410,17 +440,23 @@ export const AdminDashboard: React.FC = () => {
       setCohortLessonSelections(mapping);
     }
     // Reflect certificates already issued across devices and sessions.
-    const { data: issuedCertificates } = await supabase.from('certificate_issuances').select('cohort_id,user_id,verification_code,issued_at,revoked_at');
+    const { data: issuedCertificates } = await supabase.from('certificate_issuances').select('id,cohort_id,user_id,verification_code,issued_at,revoked_at');
     if (issuedCertificates) {
       const byCohort: Record<string, boolean> = {};
-      const codes: Record<string, {code: string; issuedAt: string}> = {};
+      const codes: Record<string, {id: string; code: string; issuedAt: string}> = {};
       issuedCertificates.forEach(item => {
         if (item.revoked_at) return;
         byCohort[item.cohort_id] = true;
-        codes[item.cohort_id + ':' + item.user_id] = {code: item.verification_code, issuedAt: item.issued_at};
+        codes[item.cohort_id + ':' + item.user_id] = {id: item.id, code: item.verification_code, issuedAt: item.issued_at};
       });
       setIssuedCodes(codes);
       setReleasedCohorts(byCohort);
+    }
+    const {data: completions} = await supabase.from('curriculum_attestations').select('cohort_id,user_id');
+    if (completions) {
+      const checked: Record<string,boolean> = {};
+      completions.forEach(entry => { checked[entry.cohort_id + ':' + entry.user_id] = true; });
+      setCompletedCurriculum(checked);
     }
     // 2. Carregar turmas
     const { data: coh } = await supabase
@@ -877,6 +913,14 @@ export const AdminDashboard: React.FC = () => {
             <span>Gestão de Conteúdos (40 Módulos)</span>
           </button>
 
+          <button onClick={() => setActiveTab('provas')}
+            className={`flex items-center gap-2 px-4 py-2.5 rounded-xl text-xs font-bold transition-all whitespace-nowrap ${
+              activeTab === 'provas' ? 'bg-uniao-600 text-white shadow-md' : 'text-slate-400 hover:text-white hover:bg-white/5'
+            }`}>
+            <CheckCircle2 className="w-4 h-4" />
+            <span>Provas Oficiais</span>
+          </button>
+
           <button
             onClick={() => setActiveTab('prompter')}
             className={`flex items-center gap-2 px-4 py-2.5 rounded-xl text-xs font-bold transition-all whitespace-nowrap ${
@@ -924,6 +968,7 @@ export const AdminDashboard: React.FC = () => {
         {/* ========================================================================= */}
         {activeTab === 'dashboard' && (
           <div className="space-y-8">
+            <AdminMFA />
             
             {/* Métricas do Dashboard */}
             <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
@@ -1430,6 +1475,8 @@ export const AdminDashboard: React.FC = () => {
           <ContentManagerTab />
         )}
 
+        {activeTab === 'provas' && (<OfficialExamAdmin courses={courseOptions} />)}
+
         {activeTab === 'prompter' && (
           <PrompterTab />
         )}
@@ -1784,7 +1831,7 @@ export const AdminDashboard: React.FC = () => {
                     </button>
                     <button type="button" onClick={() => setCertificateZoom(value => Math.max(0.75, value - 0.25))} className="px-3 py-1.5 rounded-lg border border-white/10 text-xs text-slate-300">−</button>
                     <button type="button" onClick={() => setCertificateZoom(value => Math.min(2, value + 0.25))} className="px-3 py-1.5 rounded-lg border border-white/10 text-xs text-slate-300">+</button>
-                    <button type="button" onClick={() => void printCertificate("certificate-integrated-page")} className="px-3 py-1.5 rounded-lg bg-teal-500 text-xs font-bold text-slate-950">Imprimir / Salvar PDF</button>
+                    <button type="button" disabled title="Modelo de demonstração: utilize a emissão oficial da turma para imprimir um certificado válido" className="px-3 py-1.5 rounded-lg bg-slate-700 text-xs font-bold text-slate-300 opacity-50 cursor-not-allowed">Modelo — somente prévia</button>
                   </div>
                 </div>
 
@@ -1870,12 +1917,12 @@ export const AdminDashboard: React.FC = () => {
                             <strong className="text-teal-400 font-bold">{selectedStudentForCert ? (issuedCodes[(activeCertCohort?.id || selectedCertCohortId) + ':' + selectedStudentForCert.id]?.code || 'NÃO EMITIDO') : 'MODELO — NÃO EMITIDO'}</strong>
                             <span className="text-slate-600">•</span>
                             <span className="text-teal-400 font-sans font-semibold">
-                              uniao-servicos-medicos.com.br/validar-certificado
+                              Verifique pelo código no portal oficial
                             </span>
                           </div>
                           <div>Validade Técnica: <strong className="text-white">{certValidity} meses</strong></div>
-                          <div>Emissão: <strong className="text-white">{selectedStudentForCert && issuedCodes[activeCertCohort.id + ':' + selectedStudentForCert.id]
-  ? new Date(issuedCodes[activeCertCohort.id + ':' + selectedStudentForCert.id].issuedAt).toLocaleDateString('pt-BR') : 'Não emitido'}</strong></div>
+                          <div>Emissão: <strong className="text-white">{selectedStudentForCert && issuedCodes[(activeCertCohort?.id || selectedCertCohortId) + ':' + selectedStudentForCert.id]
+  ? new Date(issuedCodes[(activeCertCohort?.id || selectedCertCohortId) + ':' + selectedStudentForCert.id].issuedAt).toLocaleDateString('pt-BR') : 'Não emitido'}</strong></div>
                         </div>
 
                       </div>
@@ -2640,7 +2687,7 @@ export const AdminDashboard: React.FC = () => {
                         <strong className="text-teal-400 font-bold">{selectedStudentForCert ? (issuedCodes[(activeCertCohort?.id || selectedCertCohortId) + ':' + selectedStudentForCert.id]?.code || 'NÃO EMITIDO') : 'MODELO — NÃO EMITIDO'}</strong>
                         <span className="text-slate-600">•</span>
                         <span className="text-teal-400 font-sans font-semibold">
-                          uniao-servicos-medicos.com.br/validar-certificado
+                          Verifique pelo código no portal oficial
                         </span>
                       </div>
                       <div>Validade Técnica: <strong className="text-white">{certValidity} meses</strong></div>
@@ -2705,7 +2752,7 @@ export const AdminDashboard: React.FC = () => {
           </div>
 
             <div className="flex justify-end gap-3 pt-2">
-              <button type="button" onClick={() => void printCertificate('certificate-modal-page')} className="px-5 py-2.5 rounded-xl text-xs font-bold bg-teal-500 text-slate-950">Imprimir / Salvar PDF</button>
+              <button type="button" disabled title="Modelo de demonstração: emissão real somente na turma" className="px-5 py-2.5 rounded-xl text-xs font-bold bg-slate-700 opacity-50 text-slate-300 cursor-not-allowed">Modelo — somente prévia</button>
               <button
                 type="button"
                 onClick={() => setIsPreviewOpen(false)}
@@ -2855,7 +2902,7 @@ export const AdminDashboard: React.FC = () => {
                 </div>
 
                 <button type="button" onClick={() => void printCertificate('certificate-cohort-page')}
-                  disabled={!selectedStudentForCert || !issuedCodes[activeCertCohort.id + ':' + selectedStudentForCert.id]}
+                  disabled={!selectedStudentForCert || !issuedCodes[(activeCertCohort?.id || selectedCertCohortId) + ':' + selectedStudentForCert.id]}
                   title="Impressão disponível somente após emissão oficial"
                   className="px-3 py-2 rounded-xl text-xs font-bold bg-teal-500 text-slate-950 disabled:opacity-40 disabled:cursor-not-allowed">Imprimir / Salvar PDF</button>
                 <button 
@@ -2956,9 +3003,12 @@ export const AdminDashboard: React.FC = () => {
 
                         {/* Rodapé */}
                         <div className="pt-2 border-t border-white/10 flex items-center justify-between text-[9px] text-slate-400 font-mono">
-                          <div>Chave: <strong className="text-teal-400">{selectedStudentForCert ? (issuedCodes[(activeCertCohort?.id || selectedCertCohortId) + ':' + selectedStudentForCert.id]?.code || 'NÃO EMITIDO') : 'MODELO — NÃO EMITIDO'}</strong></div>
+                          <div className="flex items-center gap-3"><CertificateQR size={82} code={selectedStudentForCert ? issuedCodes[activeCertCohort.id + ':' + selectedStudentForCert.id]?.code : null}/>
+                          <div className="space-y-1"><div>Chave: <strong className="text-teal-400">{selectedStudentForCert ? (issuedCodes[(activeCertCohort?.id || selectedCertCohortId) + ':' + selectedStudentForCert.id]?.code || 'NÃO EMITIDO') : 'MODELO — NÃO EMITIDO'}</strong></div>
+                            {selectedStudentForCert && issuedCodes[activeCertCohort.id + ':' + selectedStudentForCert.id] && <div><a className="text-teal-300 underline" href={certificateVerificationUrl(issuedCodes[activeCertCohort.id + ':' + selectedStudentForCert.id].code)}>Verificar autenticidade online</a></div>}
+                          </div></div>
                           <span className="text-teal-400 font-sans">
-                            uniao-servicos-medicos.com.br/validar-certificado
+                            Verifique pelo código no portal oficial
                           </span>
                           <div>Emissão: <strong className="text-white">{new Date().toLocaleDateString('pt-BR')}</strong></div>
                         </div>
@@ -2997,8 +3047,8 @@ export const AdminDashboard: React.FC = () => {
                         </div>
 
                         <div className="pt-2 border-t border-white/10 flex items-center justify-between text-[8px] text-slate-500 font-mono">
-                          <div>Código: <strong className="text-teal-400">{selectedStudentForCert ? (issuedCodes[(activeCertCohort?.id || selectedCertCohortId) + ':' + selectedStudentForCert.id]?.code || 'NÃO EMITIDO') : 'MODELO — NÃO EMITIDO'}</strong></div>
-                          <div>{selectedStudentForCert && issuedCodes[activeCertCohort.id + ':' + selectedStudentForCert.id] ? 'Validável no portal' : 'PRÉVIA — NÃO VÁLIDA'}</div>
+                          <div className="flex items-center gap-3"><CertificateQR size={70} code={selectedStudentForCert ? issuedCodes[activeCertCohort.id + ':' + selectedStudentForCert.id]?.code : null}/><div>Código: <strong className="text-teal-400">{selectedStudentForCert ? (issuedCodes[(activeCertCohort?.id || selectedCertCohortId) + ':' + selectedStudentForCert.id]?.code || 'NÃO EMITIDO') : 'MODELO — NÃO EMITIDO'}</strong></div></div>
+                          <div>{selectedStudentForCert && issuedCodes[(activeCertCohort?.id || selectedCertCohortId) + ':' + selectedStudentForCert.id] ? 'Validável no portal' : 'PRÉVIA — NÃO VÁLIDA'}</div>
                         </div>
                       </div>
                     )}
@@ -3015,7 +3065,7 @@ export const AdminDashboard: React.FC = () => {
                   <div>
                     <h4 className="font-bold text-white text-xs sm:text-sm flex items-center gap-1.5">
                       <Users className="w-4 h-4 text-teal-400" />
-                      <span>Alunos que Irão Receber ({students.filter(s => s.cohortId === activeCertCohort.id).length})</span>
+                      <span>Alunos matriculados ({students.filter(s => s.cohortId === activeCertCohort.id).length})</span>
                     </h4>
                     <p className="text-[10px] text-slate-400">
                       Clique no aluno para visualizá-lo no certificado
@@ -3066,9 +3116,21 @@ export const AdminDashboard: React.FC = () => {
                               )}
                             </div>
                             <div className="text-[10px] text-slate-400 truncate">{student.email} • CPF: {student.cpf}</div>
-                            <div className="text-[10px] text-teal-400">Progresso: {student.progress}% • Nota: {student.scoreQuiz}%</div>
+                            <div className="text-[10px] text-teal-400">
+  Conclusão teórica: {completedCurriculum[activeCertCohort.id + ':' + student.id] ? 'Atestada' : 'Pendente'} • Certificado: {issuedCodes[activeCertCohort.id + ':' + student.id] ? 'Emitido' : 'Não emitido'}
+</div>
                           </div>
 
+                          <div className="flex flex-col gap-1 shrink-0">
+                            {!completedCurriculum[activeCertCohort.id + ':' + student.id] && (
+                              <button type="button" onClick={event => { event.stopPropagation(); void handleAttestCurriculum(activeCertCohort.id,student.id,student.name); }}
+                                title="Confirmar manualmente as atividades exigidas" className="rounded bg-teal-500/15 px-2 py-1 text-[10px] text-teal-300">Atestar aulas</button>
+                            )}
+                            {issuedCodes[activeCertCohort.id + ':' + student.id] && (
+                              <button type="button" onClick={event => { event.stopPropagation(); void handleRevokeCertificate(issuedCodes[activeCertCohort.id + ':' + student.id].id,student.name); }}
+                                title="Revogar certificado e registrar justificativa" className="rounded bg-red-500/15 px-2 py-1 text-[10px] text-red-300">Revogar</button>
+                            )}
+                          </div>
                           {/* Botão de Remover Aluno */}
                           <button
                             type="button"
@@ -3101,10 +3163,10 @@ export const AdminDashboard: React.FC = () => {
                     className="w-full rounded-xl px-4 py-2.5 text-xs font-black flex items-center justify-center gap-2 transition-all bg-gradient-to-r from-teal-400 to-emerald-300 text-slate-950 hover:brightness-110 disabled:cursor-not-allowed disabled:opacity-40"
                   >
                     <Send className="w-3.5 h-3.5" />
-                    <span>{sentCohorts[activeCertCohort.id] !== undefined ? `Envio confirmado (${sentCohorts[activeCertCohort.id]} alunos)` : 'Enviar certificado para todos'}</span>
+                    <span>{sentCohorts[activeCertCohort.id] !== undefined ? `Envio confirmado (${sentCohorts[activeCertCohort.id]} alunos)` : 'Informações de envio (ainda indisponível)'}</span>
                   </button>
                   {!releasedCohorts[activeCertCohort.id] && (
-                    <p className="text-[10px] text-amber-300/80">Libere os certificados com o PIN acima antes de enviar para a turma.</p>
+                    <p className="text-[10px] text-amber-300/80">Certificados só são emitidos após a presença, conclusão teórica atestada e aprovação em provas oficiais. Não há envio automático por e-mail.</p>
                   )}
                   {sentCohorts[activeCertCohort.id] !== undefined && (
                     <p className="text-[10px] text-emerald-300/80">A confirmação foi registrada nesta sessão. O disparo de e-mail precisa estar conectado ao serviço de envio.</p>
