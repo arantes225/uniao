@@ -11,6 +11,7 @@ import {
 } from 'lucide-react';
 import { supabase } from '../../services/supabase/client';
 import { ContentManagerTab } from './ContentManagerTab';
+import { OfficialExamAdmin } from './OfficialExamAdmin';
 import { PrompterTab } from './PrompterTab';
 import { CurriculumService } from '../../services/CurriculumService';
 import { LearningModule } from '../../data/curriculumData';
@@ -174,7 +175,7 @@ export const AdminDashboard: React.FC = () => {
   }, []);
 
   // Navegação Interna por Abas
-  const [activeTab, setActiveTab] = useState<'dashboard' | 'turmas' | 'conteudos' | 'prompter' | 'certificados' | 'galeria'>('dashboard');
+  const [activeTab, setActiveTab] = useState<'dashboard' | 'turmas' | 'conteudos' | 'provas' | 'prompter' | 'certificados' | 'galeria'>('dashboard');
 
   // Módulo de Gerenciamento da Galeria de Treinamentos
   const [galleryImages, setGalleryImages] = useState<any[]>([]);
@@ -911,6 +912,14 @@ export const AdminDashboard: React.FC = () => {
             <span>Gestão de Conteúdos (40 Módulos)</span>
           </button>
 
+          <button onClick={() => setActiveTab('provas')}
+            className={`flex items-center gap-2 px-4 py-2.5 rounded-xl text-xs font-bold transition-all whitespace-nowrap ${
+              activeTab === 'provas' ? 'bg-uniao-600 text-white shadow-md' : 'text-slate-400 hover:text-white hover:bg-white/5'
+            }`}>
+            <CheckCircle2 className="w-4 h-4" />
+            <span>Provas Oficiais</span>
+          </button>
+
           <button
             onClick={() => setActiveTab('prompter')}
             className={`flex items-center gap-2 px-4 py-2.5 rounded-xl text-xs font-bold transition-all whitespace-nowrap ${
@@ -1463,6 +1472,8 @@ export const AdminDashboard: React.FC = () => {
         {activeTab === 'conteudos' && (
           <ContentManagerTab />
         )}
+
+        {activeTab === 'provas' && (<OfficialExamAdmin courses={courseOptions} />)}
 
         {activeTab === 'prompter' && (
           <PrompterTab />
