@@ -305,6 +305,8 @@ export const AdminDashboard: React.FC = () => {
   const [releasedCohorts, setReleasedCohorts] = useState<Record<string, boolean>>({});
   const [issuedCodes, setIssuedCodes] = useState<Record<string, {id: string; code: string; issuedAt: string; studentName: string}>>({});
   const [completedCurriculum, setCompletedCurriculum] = useState<Record<string, boolean>>({});
+  const [presenceCheckins, setPresenceCheckins] = useState<Record<string,boolean>>({});
+  const [approvedPresence, setApprovedPresence] = useState<Record<string,boolean>>({});
   const [isSendCertificatesOpen, setIsSendCertificatesOpen] = useState(false);
   const [sentCohorts] = useState<Record<string, number>>({});
 
@@ -334,6 +336,18 @@ export const AdminDashboard: React.FC = () => {
     if (count === 0) { alert('Nenhum novo certificado. Confira as matrículas ou emissões anteriores.'); return; }
     await loadData();
     alert(count + ' certificado(s) registrados. Nenhum e-mail foi enviado.');
+  };
+
+  const handleConfirmPresence = async (cohortId: string, studentId: string, studentName: string) => {
+    const note = window.prompt(`Confirme que ${studentName} realmente participou da atividade presencial. Descreva a evidência (10–500 caracteres):`, '');
+    if (!note) return;
+    if (!window.confirm('A presença foi conferida pessoalmente com o registro da turma?')) return;
+    const { data, error } = await supabase.rpc('confirm_practical_attendance',{
+      p_cohort_id:cohortId,p_student_id:studentId,p_note:note.trim(),
+    });
+    if(error || !data) {alert(error?.message || 'Falha ao confirmar presença.'); return;}
+    setApprovedPresence(previous=>({...previous,[cohortId+':'+studentId]:true}));
+    alert('Comparecimento presencial validado e registrado.');
   };
 
   const handleAttestCurriculum = async (cohortId: string, studentId: string, studentName: string) => {
@@ -457,6 +471,18 @@ export const AdminDashboard: React.FC = () => {
       const checked: Record<string,boolean> = {};
       completions.forEach(entry => { checked[entry.cohort_id + ':' + entry.user_id] = true; });
       setCompletedCurriculum(checked);
+    }
+    const { data: recordedPresence } = await supabase.from('verified_attendance').select('cohort_id,user_id,confirmed_at');
+    if (recordedPresence) {
+      const seen: Record<string,boolean> = {};
+      const approved: Record<string,boolean> = {};
+      recordedPresence.forEach(row=>{
+        const key=row.cohort_id + ':' + row.user_id;
+        seen[key]=true;
+        if(row.confirmed_at) approved[key]=true;
+      });
+      setPresenceCheckins(seen);
+      setApprovedPresence(approved);
     }
     // 2. Carregar turmas
     const { data: coh } = await supabase
@@ -3117,11 +3143,19 @@ export const AdminDashboard: React.FC = () => {
                             </div>
                             <div className="text-[10px] text-slate-400 truncate">{student.email} • CPF: {student.cpf}</div>
                             <div className="text-[10px] text-teal-400">
-  Conclusão teórica: {completedCurriculum[activeCertCohort.id + ':' + student.id] ? 'Atestada' : 'Pendente'} • Certificado: {issuedCodes[activeCertCohort.id + ':' + student.id] ? 'Emitido' : 'Não emitido'}
+  Presença: {approvedPresence[activeCertCohort.id + ':' + student.id] ? 'Confirmada' : presenceCheckins[activeCertCohort.id + ':' + student.id] ? 'Código registrado — aguardando instrutor' : 'Aguardando código'} • Conclusão teórica: {completedCurriculum[activeCertCohort.id + ':' + student.id] ? 'Atestada' : 'Pendente'} • Certificado: {issuedCodes[activeCertCohort.id + ':' + student.id] ? 'Emitido' : 'Não emitido'}
 </div>
                           </div>
 
                           <div className="flex flex-col gap-1 shrink-0">
+                            {presenceCheckins[activeCertCohort.id + ':' + student.id] && !approvedPresence[activeCertCohort.id + ':' + student.id] && (
+                              <button type="button"
+                                onClick={event=>{event.stopPropagation();void handleConfirmPresence(activeCertCohort.id,student.id,student.name);}}
+                                className="rounded bg-blue-500/15 px-2 py-1 text-[10px] text-blue-200"
+                                title="Conferir pessoalmente a presença do aluno">
+                                Confirmar presencial
+                              </button>
+                            )}
                             {!completedCurriculum[activeCertCohort.id + ':' + student.id] && (
                               <button type="button" onClick={event => { event.stopPropagation(); void handleAttestCurriculum(activeCertCohort.id,student.id,student.name); }}
                                 title="Confirmar manualmente as atividades exigidas" className="rounded bg-teal-500/15 px-2 py-1 text-[10px] text-teal-300">Atestar aulas</button>
@@ -3166,7 +3200,7 @@ export const AdminDashboard: React.FC = () => {
                     <span>{sentCohorts[activeCertCohort.id] !== undefined ? `Envio confirmado (${sentCohorts[activeCertCohort.id]} alunos)` : 'Informações de envio (ainda indisponível)'}</span>
                   </button>
                   {!releasedCohorts[activeCertCohort.id] && (
-                    <p className="text-[10px] text-amber-300/80">Certificados só são emitidos após a presença, conclusão teórica atestada e aprovação em provas oficiais. Não há envio automático por e-mail.</p>
+                    <p className="text-[10px] text-amber-300/80">Certificados só são emitidos após código de presença, conferência presencial pelo instrutor, conclusão teórica atestada e aprovação em provas oficiais. Não há envio automático por e-mail.</p>
                   )}
                   {sentCohorts[activeCertCohort.id] !== undefined && (
                     <p className="text-[10px] text-emerald-300/80">A confirmação foi registrada nesta sessão. O disparo de e-mail precisa estar conectado ao serviço de envio.</p>
