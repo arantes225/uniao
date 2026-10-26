@@ -1044,7 +1044,7 @@ export function StopTheBleedSimulator({ caseId }: { caseId: number | string }) {
       </div>
 
       {/* 2. Personagem ao centro e comandos laterais no padrão LURIA */}
-      <div className="grid items-start gap-4" style={{ gridTemplateColumns: 'minmax(0, 1fr) minmax(190px, 220px)' }}>
+      <div className="grid items-start gap-4" style={{ width: 'min(100%, calc(100vw - 280px))', gridTemplateColumns: 'minmax(0, 1fr) minmax(190px, 220px)' }}>
         <div className="relative min-w-0 aspect-[16/9] w-full overflow-hidden rounded-3xl border border-white/15 bg-slate-950 shadow-2xl">
           <canvas ref={canvasRef} width={W} height={H} className="h-full w-full object-contain block" />
 
