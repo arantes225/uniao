@@ -25,7 +25,7 @@ Do not put Cloudflare account keys, billing keys, service_role secrets or TOTP r
 
 ## Remaining manual security setting
 
-In Supabase Dashboard > Authentication > Settings (or the current password security panel), enable leaked-password protection if the project tier offers it. It is independent of application repository changes. All privileged staff should enroll TOTP MFA in Admin Dashboard before turning on server-enforced AAL2 for certificate operations.
+In Supabase Dashboard > Authentication > Settings (or the current password security panel), enable leaked-password protection if the project tier offers it. It is independent of application repository changes. Server-enforced AAL2 is now active for certificate issuance, certificate revocation and curriculum attestations. Staff must first complete TOTP enrollment on Admin Dashboard; requests at AAL1 are intentionally rejected. Presence-code generation still requires a staff session but does not currently enforce AAL2.
 
 ## Certification controls
 
