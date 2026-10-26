@@ -71,7 +71,7 @@ export const StudentNavbar: React.FC<StudentNavbarProps> = ({
 
   return (
     <>
-      <header className={`sticky top-0 z-50 transition-colors duration-200 border-b w-full shadow-sm ${
+      <header className={`fixed inset-x-0 top-0 z-[70] transition-colors duration-200 border-b w-full shadow-sm ${
         theme === 'dark' 
           ? 'bg-slate-900 border-white/10 text-white' 
           : 'bg-white border-slate-200 text-slate-800 shadow-slate-100'
@@ -387,4 +387,5 @@ export const StudentNavbar: React.FC<StudentNavbarProps> = ({
     </>
   );
 };
+
 
