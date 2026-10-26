@@ -170,15 +170,7 @@ export const ClinicalScenario: React.FC<{ scenario: SimulationCase; onBack: () =
         {!simulationCompleted ? (
           <div className="relative z-10 flex-1 flex flex-col max-w-6xl w-full mx-auto p-4 sm:p-6 justify-between gap-6">
 
-            {scenario.patientKind === 'stop-the-bleed'
-              ? <StopTheBleedScene characterId={scenario.characterId} focus={currentStep.bleedingFocus} />
-              : scenario.patientKind === 'escola' || scenario.patientKind === 'academia'
-                ? currentStep.bleedingFocus
-                  ? <ContextWoundScene characterId={scenario.characterId} patientKind={scenario.patientKind} respiratoryRate={Number(currentStep.vitalSigns.breathing.match(/\d+/)?.[0] || 0)} focus={currentStep.bleedingFocus} />
-                  : <ContextPatientScene characterId={scenario.characterId} patientKind={scenario.patientKind} respiratoryRate={Number(currentStep.vitalSigns.breathing.match(/\d+/)?.[0] || 0)} />
-                : currentStep.bleedingFocus
-                  ? <BleedingScene characterId={scenario.characterId} respiratoryRate={Number(currentStep.vitalSigns.breathing.match(/\d+/)?.[0] || 0)} focus={currentStep.bleedingFocus} />
-                  : <AnimatedPatient characterId={scenario.characterId} respiratoryRate={Number(currentStep.vitalSigns.breathing.match(/\d+/)?.[0] || 0)} />}
+            {scenario.patientKind === 'stop-the-bleed' && <StopTheBleedScene characterId={scenario.characterId} focus={currentStep.bleedingFocus} />}
             {scenario.patientKind !== 'stop-the-bleed' && <>
             {/* TOPO: PAINEL DE MONITORAMENTO CLÍNICO / TELEMETRIA DO PACIENTE */}
             <div className="rounded-2xl bg-slate-900/85 backdrop-blur-xl border border-white/10 shadow-2xl p-4 sm:p-5 space-y-4">
@@ -195,6 +187,10 @@ export const ClinicalScenario: React.FC<{ scenario: SimulationCase; onBack: () =
                     Emergência Nível 1
                   </span>
                 </div>
+              </div>
+
+              <div className="rounded-xl border border-teal-400/15 bg-teal-950/20 px-3 py-2 text-xs leading-relaxed text-slate-200">
+                <strong className="text-teal-300">{scenario.title}.</strong> Paciente {scenario.patientAgeRange ?? 'com faixa etária não informada'}, sexo {scenario.patientSex ?? 'não especificado'}. {scenario.description}
               </div>
 
               {/* Grid dos 4 Sinais Vitais em Cards HUD */}
@@ -239,9 +235,10 @@ export const ClinicalScenario: React.FC<{ scenario: SimulationCase; onBack: () =
               </div>
             </div>
 
-            {/* PAINEL DE DECISÃO: ANAMNESE, EXAME FÍSICO E AÇÃO */}
-            <div className="space-y-3">
-              <div className="flex items-center justify-between px-1">
+            <div className="grid gap-5 xl:grid-cols-[minmax(360px,0.8fr)_minmax(0,1.2fr)] xl:items-start">
+            {/* PAINEL DE DECISÃO: botões à esquerda e lista à direita */}
+            <div className="grid grid-cols-[110px_minmax(0,1fr)] gap-x-3 gap-y-3 rounded-2xl border border-white/10 bg-slate-950/45 p-3">
+              <div className="col-span-2 flex items-center justify-between px-1">
                 <span className="text-xs font-bold text-slate-300 uppercase tracking-wider flex items-center gap-2">
                   <Stethoscope className="w-4 h-4 text-teal-400" />
                   <span>Painel de decisão clínica:</span>
@@ -251,7 +248,7 @@ export const ClinicalScenario: React.FC<{ scenario: SimulationCase; onBack: () =
                 </span>
               </div>
 
-              <div className="grid grid-cols-3 gap-2 rounded-2xl border border-white/10 bg-slate-950/70 p-2" role="tablist" aria-label="Etapas de decisão">
+              <div className="row-span-3 flex flex-col gap-2" role="tablist" aria-label="Etapas de decisão">
                 {([
                   { id: 'anamnese' as const, label: 'Anamnese', hint: 'Perguntar', icon: MessageCircle },
                   { id: 'exame-fisico' as const, label: 'Exame físico', hint: 'Observar', icon: SearchCheck },
@@ -259,7 +256,7 @@ export const ClinicalScenario: React.FC<{ scenario: SimulationCase; onBack: () =
                 ]).map(tab => {
                   const Icon = tab.icon;
                   const active = decisionMode === tab.id;
-                  return <button key={tab.id} type="button" role="tab" aria-selected={active} onClick={() => { setDecisionMode(tab.id); setAuxiliaryFeedback(null); setSelectedOptionId(null); }} className={`flex min-h-16 flex-col items-center justify-center gap-1 rounded-xl border px-2 py-2 text-center transition-all ${active ? 'border-teal-400 bg-teal-500/15 text-teal-200 shadow-[0_0_18px_rgba(20,184,166,0.15)]' : 'border-transparent text-slate-400 hover:border-white/10 hover:bg-white/5 hover:text-slate-200'}`}>
+                  return <button key={tab.id} type="button" role="tab" aria-selected={active} onClick={() => { setDecisionMode(tab.id); setAuxiliaryFeedback(null); setSelectedOptionId(null); }} className={`flex min-h-16 flex-col items-center justify-center gap-1 rounded-xl border px-1 py-2 text-center transition-all ${active ? 'border-teal-400 bg-teal-500/15 text-teal-200 shadow-[0_0_18px_rgba(20,184,166,0.15)]' : 'border-transparent text-slate-400 hover:border-white/10 hover:bg-white/5 hover:text-slate-200'}`}>
                     <Icon className="h-4 w-4" aria-hidden="true" />
                     <span className="text-[11px] font-black uppercase tracking-wide">{tab.label}</span>
                     <span className="text-[10px] opacity-70">{tab.hint}</span>
@@ -285,15 +282,24 @@ export const ClinicalScenario: React.FC<{ scenario: SimulationCase; onBack: () =
                 </div>}
               </div>}
 
-              {investigationHistory.length > 0 && <div className="flex flex-wrap items-center gap-2 rounded-xl border border-teal-500/20 bg-teal-950/20 p-3 text-[11px] text-teal-100"><ClipboardList className="h-4 w-4 shrink-0 text-teal-300" aria-hidden="true" /><span className="font-bold uppercase tracking-wide text-teal-300">Achados registrados:</span><span>{investigationHistory.length} investigação(ões) útil(eis)</span></div>}
+              {investigationHistory.length > 0 && <div className="col-start-2 flex flex-wrap items-center gap-2 rounded-xl border border-teal-500/20 bg-teal-950/20 p-3 text-[11px] text-teal-100"><ClipboardList className="h-4 w-4 shrink-0 text-teal-300" aria-hidden="true" /><span className="font-bold uppercase tracking-wide text-teal-300">Achados registrados:</span><span>{investigationHistory.length} investigação(ões) útil(eis)</span></div>}
 
               {/* Barra de Ação Inferior */}
-              <div className="pt-2 flex items-center justify-between">
+              <div className="col-start-2 pt-2 flex items-center justify-between">
                 <span className="text-[11px] text-slate-500 hidden sm:inline">
                   {decisionMode === 'agir' ? 'As ações corretas e erradas ficam misturadas: leia o cenário antes de executar.' : 'Use a investigação para organizar o raciocínio; a etapa avança quando uma ação for executada.'}
                 </span>
                 {decisionMode === 'agir' && <button type="button" disabled={!selectedOptionId} onClick={handleConfirmDecision} className="w-full sm:w-auto ml-auto px-8 py-3 rounded-xl font-bold text-slate-950 bg-gradient-to-r from-teal-400 to-teal-300 hover:brightness-110 disabled:opacity-40 transition-all text-xs sm:text-sm shadow-lg flex items-center justify-center gap-2"><span>Executar ação</span><ChevronRight className="w-4 h-4" /></button>}
               </div>
+            </div>
+
+            {scenario.patientKind === 'escola' || scenario.patientKind === 'academia'
+              ? currentStep.bleedingFocus
+                ? <ContextWoundScene characterId={scenario.characterId} patientKind={scenario.patientKind} respiratoryRate={Number(currentStep.vitalSigns.breathing.match(/\d+/)?.[0] || 0)} focus={currentStep.bleedingFocus} />
+                : <ContextPatientScene characterId={scenario.characterId} patientKind={scenario.patientKind} respiratoryRate={Number(currentStep.vitalSigns.breathing.match(/\d+/)?.[0] || 0)} />
+              : currentStep.bleedingFocus
+                ? <BleedingScene characterId={scenario.characterId} respiratoryRate={Number(currentStep.vitalSigns.breathing.match(/\d+/)?.[0] || 0)} focus={currentStep.bleedingFocus} />
+                : <AnimatedPatient characterId={scenario.characterId} respiratoryRate={Number(currentStep.vitalSigns.breathing.match(/\d+/)?.[0] || 0)} />}
             </div>
             </>}
 
