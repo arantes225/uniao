@@ -51,7 +51,6 @@ export function StopTheBleedSimulator({ caseId }: { caseId: number | string }) {
   const [isCloseup, setIsCloseup] = useState(true);
   const [bleedMode, setBleedMode] = useState<'pulse' | 'continuous'>('pulse');
   const [feedback, setFeedback] = useState<FeedbackState>(null);
-
   // Estados dos tratamentos
   const treatmentRef = useRef({
     pack: 0,
@@ -1091,16 +1090,19 @@ export function StopTheBleedSimulator({ caseId }: { caseId: number | string }) {
         </div>
       )}
 
-      {/* 4. Ações de Socorro Integradas (Design System União) */}
-      <div className="rounded-2xl border border-white/10 bg-slate-900/80 p-4 backdrop-blur-md">
-        <div className="mb-3 flex items-center justify-between">
-          <span className="text-[10px] font-black uppercase tracking-wider text-slate-400">Ações de Socorro Imediatas (Stop the Bleed)</span>
-          <span className="text-[11px] text-slate-400">
-            {treatmentState.tqActive ? `Torniquete fixado (${treatmentState.tqTime})` : 'Escolha uma intervenção para estancar o sangramento'}
+      {/* 4. Barra de ação inferior no padrão LURIA */}
+      <div className="rounded-2xl border border-white/10 bg-slate-900/80 p-3.5 backdrop-blur-md sm:p-4">
+        <div className="mb-3 flex items-center justify-between gap-3">
+          <div className="flex items-center gap-2">
+            <ShieldCheck className="h-4 w-4 text-teal-400" />
+            <span className="text-[10px] font-black uppercase tracking-wider text-slate-300">Ações de socorro</span>
+          </div>
+          <span className="text-right text-[11px] text-slate-400">
+            {treatmentState.tqActive ? `Torniquete fixado (${treatmentState.tqTime})` : 'Selecione a conduta necessária'}
           </span>
         </div>
 
-        <div className="grid gap-2.5 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="grid gap-2.5 sm:grid-cols-2 lg:grid-cols-4" aria-label="Ações de socorro">
           <button
             type="button"
             onClick={handleApplyTourniquet}
@@ -1168,3 +1170,4 @@ export function StopTheBleedSimulator({ caseId }: { caseId: number | string }) {
     </div>
   );
 }
+
