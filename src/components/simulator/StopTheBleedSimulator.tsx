@@ -52,7 +52,9 @@ export function StopTheBleedSimulator({ caseId }: { caseId: number | string }) {
   const [isPaused, setIsPaused] = useState(false);
   const [isCloseup, setIsCloseup] = useState(false);
   const [feedback, setFeedback] = useState<FeedbackState>(null);
-  const [decisionPanel, setDecisionPanel] = useState<DecisionPanel>('acoes');
+  const [decisionPanel, setDecisionPanel] = useState<DecisionPanel | null>(null);
+  const [completedSteps, setCompletedSteps] = useState<string[]>([]);
+  const [showReview, setShowReview] = useState(false);
   // Estados dos tratamentos
   const treatmentRef = useRef({
     pack: 0,
@@ -74,6 +76,15 @@ export function StopTheBleedSimulator({ caseId }: { caseId: number | string }) {
     tqActive: false,
     tqTime: null as string | null
   });
+
+  const requiredSteps = ['seguranca', 'socorro', 'avaliacao', 'controle', 'reavaliacao'];
+  const markStep = (step: string) => setCompletedSteps(previous => previous.includes(step) ? previous : [...previous, step]);
+  const remainingSteps = requiredSteps.filter(step => !completedSteps.includes(step));
+  const treatmentReady = currentCase.tqIndicado
+    ? treatmentState.tqActive
+    : currentCase.membro === 'juncao'
+      ? treatmentState.packActive && treatmentState.handActive
+      : treatmentState.handActive || treatmentState.bandageActive;
 
   const flowRef = useRef(1);
   const filmTimeRef = useRef(0);
@@ -173,6 +184,9 @@ export function StopTheBleedSimulator({ caseId }: { caseId: number | string }) {
       tqTime: null
     });
     setFeedback(null);
+    setCompletedSteps([]);
+    setShowReview(false);
+    setDecisionPanel(null);
   }, [currentCase.id]);
 
   // Caminhos de escorrimento de sangue (Rivulets) da ferida para baixo
@@ -852,6 +866,7 @@ export function StopTheBleedSimulator({ caseId }: { caseId: number | string }) {
     treatmentRef.current.tourniquetTime = new Date().toLocaleTimeString('pt-BR', { hour: '2-digit', minute: '2-digit' });
 
     setTreatmentState(prev => ({ ...prev, tqActive: true, tqTime: treatmentRef.current.tourniquetTime }));
+    if (currentCase.tqIndicado) markStep('controle');
 
     if (currentCase.tqIndicado) {
       setFeedback({
@@ -891,6 +906,7 @@ export function StopTheBleedSimulator({ caseId }: { caseId: number | string }) {
     if (treatmentRef.current.packTarget) return;
     treatmentRef.current.packTarget = true;
     setTreatmentState(prev => ({ ...prev, packActive: true }));
+    if (currentCase.membro === 'juncao') markStep('controle');
 
     if (currentCase.membro === 'peito') {
       setFeedback({
@@ -920,11 +936,13 @@ export function StopTheBleedSimulator({ caseId }: { caseId: number | string }) {
     if (treatmentRef.current.bandageTarget) return;
     treatmentRef.current.bandageTarget = true;
     setTreatmentState(prev => ({ ...prev, bandageActive: true }));
+    if (!currentCase.tqIndicado && currentCase.membro !== 'juncao') markStep('controle');
   };
 
   const handleTogglePressure = () => {
     treatmentRef.current.handTarget = !treatmentRef.current.handTarget;
     setTreatmentState(prev => ({ ...prev, handActive: treatmentRef.current.handTarget }));
+    if (treatmentRef.current.handTarget && !currentCase.tqIndicado) markStep('controle');
   };
 
   const handleReset = () => {
@@ -952,6 +970,9 @@ export function StopTheBleedSimulator({ caseId }: { caseId: number | string }) {
       tqTime: null
     });
     setFeedback(null);
+    setCompletedSteps([]);
+    setShowReview(false);
+    setDecisionPanel(null);
   };
 
   const handleTogglePause = () => {
@@ -1010,46 +1031,50 @@ export function StopTheBleedSimulator({ caseId }: { caseId: number | string }) {
         </div>
       </div>
 
-      {/* 2. Personagem ao centro e comandos laterais no padrão LURIA */}
-      <div className="relative min-w-0 w-full" style={{ maxWidth: 'calc(100vw - 300px)' }}>
-        <aside className="absolute left-0 top-0 z-10 w-[354px] rounded-2xl border border-white/10 bg-slate-900/95 p-3 shadow-xl backdrop-blur-md" aria-label="Comandos clínicos">
-          <div className="mb-2 px-1">
-            <span className="text-[10px] font-black uppercase tracking-wider text-slate-300">Comandos clínicos</span>
-            <p className="mt-1 text-[11px] leading-relaxed text-slate-500">Escolha uma categoria e veja as opções ao lado.</p>
+      {/* 2. Cena inteira; os comandos são uma camada sobre a imagem. */}
+      <div className="relative min-w-0 w-full">
+        <aside className="absolute left-3 top-3 z-20 flex items-start gap-2" aria-label="Comandos clínicos">
+          <div className="w-[88px] rounded-2xl border border-white/10 bg-slate-900/95 p-2 shadow-xl backdrop-blur-md" role="tablist" aria-label="Categorias de comandos">
+            {([
+              { id: 'perguntas' as const, label: 'Perguntas', hint: 'Investigar', icon: MessageCircle },
+              { id: 'exames' as const, label: 'Exames', hint: 'Observar', icon: SearchCheck },
+              { id: 'acoes' as const, label: 'Ações', hint: 'Intervir', icon: PlayCircle }
+            ]).map((tab) => {
+              const Icon = tab.icon;
+              const active = decisionPanel === tab.id;
+              return <button key={tab.id} type="button" role="tab" aria-selected={active} onClick={() => setDecisionPanel(active ? null : tab.id)} className={`mb-1.5 flex w-full flex-col items-center gap-1 rounded-xl border px-1.5 py-2.5 text-center transition-all last:mb-0 ${active ? 'border-teal-400 bg-teal-500/15 text-teal-100' : 'border-white/10 bg-slate-950/50 text-slate-400 hover:border-white/20 hover:text-white'}`}>
+                <Icon className="h-4 w-4 shrink-0" aria-hidden="true" />
+                <span><strong className="block text-[9px] font-black uppercase tracking-wide">{tab.label}</strong><small className="block text-[9px] opacity-70">{tab.hint}</small></span>
+              </button>;
+            })}
           </div>
 
-          <div className="grid grid-cols-[88px_minmax(0,1fr)] gap-2">
-            <div className="space-y-1.5" role="tablist" aria-label="Categorias de comandos">
-              {([
-                { id: 'perguntas' as const, label: 'Perguntas', hint: 'Investigar', icon: MessageCircle },
-                { id: 'exames' as const, label: 'Exames', hint: 'Observar', icon: SearchCheck },
-                { id: 'acoes' as const, label: 'Ações', hint: 'Intervir', icon: PlayCircle }
-              ]).map((tab) => {
-                const Icon = tab.icon;
-                const active = decisionPanel === tab.id;
-                return <button key={tab.id} type="button" role="tab" aria-selected={active} onClick={() => setDecisionPanel(tab.id)} className={`flex w-full flex-col items-center gap-1 rounded-xl border px-1.5 py-2.5 text-center transition-all ${active ? 'border-teal-400 bg-teal-500/15 text-teal-100' : 'border-white/10 bg-slate-950/50 text-slate-400 hover:border-white/20 hover:text-white'}`}>
-                  <Icon className="h-4 w-4 shrink-0" aria-hidden="true" />
-                  <span><strong className="block text-[9px] font-black uppercase tracking-wide">{tab.label}</strong><small className="block text-[9px] opacity-70">{tab.hint}</small></span>
-                </button>;
-              })}
+          {decisionPanel && <section className="w-[min(330px,calc(100vw-140px))] rounded-2xl border border-white/10 bg-slate-900/95 p-3 shadow-xl backdrop-blur-md" role="tabpanel" aria-label={decisionPanel === 'perguntas' ? 'Perguntas do caso' : decisionPanel === 'exames' ? 'Exames e observações' : 'Ações de socorro'}>
+            <div className="mb-2 flex items-start justify-between gap-2">
+              <div><span className="text-[10px] font-black uppercase tracking-wider text-teal-300">{decisionPanel === 'perguntas' ? 'Perguntas simples' : decisionPanel === 'exames' ? 'Observações simples' : 'Passos do atendimento'}</span><p className="mt-0.5 text-[10px] text-slate-400">Progresso: {completedSteps.length}/{requiredSteps.length} passos essenciais.</p></div>
+              <button type="button" onClick={() => setDecisionPanel(null)} className="rounded p-1 text-slate-400 hover:bg-white/10 hover:text-white" aria-label="Fechar lista">×</button>
             </div>
+            <div className="max-h-[360px] space-y-1.5 overflow-y-auto pr-1">
+              {decisionPanel === 'perguntas' && ['O que aconteceu e há quanto tempo?', 'A vítima responde e consegue falar?', 'Onde está o sangramento mais importante?', 'O sangramento continua ativo?', 'Alguém já acionou o resgate?', 'Há alergias, doenças ou uso de anticoagulante conhecidos?'].map((question) => <button key={question} type="button" onClick={() => { markStep('avaliacao'); setFeedback({ type: 'success', title: 'Pergunta registrada', description: question, recommendation: 'Use as informações para confirmar segurança, priorizar o controle do sangramento e comunicar a equipe.' }); }} className="w-full rounded-xl border border-white/10 bg-slate-950/70 p-2.5 text-left text-[11px] leading-relaxed text-slate-300 transition hover:border-teal-400/60 hover:text-white">{question}</button>)}
 
-            <div className="max-h-[330px] min-h-[178px] space-y-2 overflow-y-auto pr-1" role="tabpanel" aria-label={decisionPanel === 'perguntas' ? 'Perguntas do caso' : decisionPanel === 'exames' ? 'Exames e observações' : 'Ações de socorro'}>
-              {decisionPanel === 'perguntas' && ['O que aconteceu e há quanto tempo?', 'A vítima responde e consegue falar?', 'O sangramento aumentou ou diminuiu?'].map((question) => <button key={question} type="button" onClick={() => setFeedback({ type: 'success', title: 'Pergunta registrada', description: question, recommendation: 'Use a resposta para priorizar segurança, acionamento do resgate e controle da hemorragia.' })} className="w-full rounded-xl border border-white/10 bg-slate-950/70 p-2.5 text-left text-[10px] leading-relaxed text-slate-300 transition hover:border-teal-400/60 hover:text-white">{question}</button>)}
-
-              {decisionPanel === 'exames' && ['Avaliar consciência e respiração', 'Identificar a região anatômica da lesão', 'Verificar padrão e intensidade do sangramento'].map((exam) => <button key={exam} type="button" onClick={() => setFeedback({ type: 'success', title: 'Avaliação registrada', description: exam, recommendation: currentCase.justificativaClinica })} className="w-full rounded-xl border border-white/10 bg-slate-950/70 p-2.5 text-left text-[10px] leading-relaxed text-slate-300 transition hover:border-amber-400/60 hover:text-white">{exam}</button>)}
+              {decisionPanel === 'exames' && ['Verificar se a cena está segura antes de se aproximar', 'Avaliar resposta e capacidade de falar', 'Observar respiração e esforço respiratório', 'Expor e localizar a lesão sem perder tempo', 'Identificar a região anatômica do sangramento', 'Verificar se o sangramento é intenso e persistente', 'Reavaliar a resposta após cada medida'].map((exam) => <button key={exam} type="button" onClick={() => { markStep('avaliacao'); setFeedback({ type: 'success', title: 'Avaliação registrada', description: exam, recommendation: currentCase.justificativaClinica }); }} className="w-full rounded-xl border border-white/10 bg-slate-950/70 p-2.5 text-left text-[11px] leading-relaxed text-slate-300 transition hover:border-amber-400/60 hover:text-white">{exam}</button>)}
 
               {decisionPanel === 'acoes' && <>
-                <button type="button" onClick={handleApplyTourniquet} disabled={treatmentState.tqActive} className={`w-full rounded-xl border p-2.5 text-left transition-all ${treatmentState.tqActive ? 'border-emerald-500/50 bg-emerald-950/50 text-emerald-200' : 'border-white/10 bg-slate-950/70 text-white hover:border-emerald-400'}`}><span className="block text-[10px] font-bold">🩹 Aplicar torniquete</span><span className="mt-1 block text-[9px] text-slate-400">{treatmentState.tqActive ? `Aplicado às ${treatmentState.tqTime}` : currentCase.tqIndicado ? 'Indicado para esta extremidade' : 'Não indicado neste caso'}</span></button>
-                <button type="button" onClick={handleApplyPacking} disabled={treatmentState.packActive} className={`w-full rounded-xl border p-2.5 text-left transition-all ${treatmentState.packActive ? 'border-emerald-500/50 bg-emerald-950/50 text-emerald-200' : 'border-white/10 bg-slate-950/70 text-white hover:border-emerald-400'}`}><span className="block text-[10px] font-bold">🧻 Preencher com gaze</span><span className="mt-1 block text-[9px] text-slate-400">{treatmentState.packActive ? 'Cavidade preenchida' : 'Packing profundo quando indicado'}</span></button>
-                <button type="button" onClick={handleApplyBandage} disabled={treatmentState.bandageActive} className={`w-full rounded-xl border p-2.5 text-left transition-all ${treatmentState.bandageActive ? 'border-emerald-500/50 bg-emerald-950/50 text-emerald-200' : 'border-white/10 bg-slate-950/70 text-white hover:border-emerald-400'}`}><span className="block text-[10px] font-bold">🩹 Aplicar bandagem</span><span className="mt-1 block text-[9px] text-slate-400">{treatmentState.bandageActive ? 'Curativo aplicado' : 'Curativo compressivo'}</span></button>
-                <button type="button" onClick={handleTogglePressure} className={`w-full rounded-xl border p-2.5 text-left transition-all ${treatmentState.handActive ? 'border-emerald-500/50 bg-emerald-950/50 text-emerald-200' : 'border-white/10 bg-slate-950/70 text-white hover:border-emerald-400'}`}><span className="block text-[10px] font-bold">✋ Comprimir manualmente</span><span className="mt-1 block text-[9px] text-slate-400">{treatmentState.handActive ? 'Soltar compressão' : 'Pressão direta firme'}</span></button>
+                <button type="button" onClick={() => { markStep('seguranca'); setFeedback({ type: 'success', title: 'Segurança confirmada', description: 'A aproximação foi condicionada a uma cena segura e ao uso de proteção disponível.', recommendation: 'Mantenha a própria segurança e peça apoio quando houver risco.' }); }} className="w-full rounded-xl border border-white/10 bg-slate-950/70 p-2.5 text-left text-[11px] text-slate-200 transition hover:border-teal-400"><strong className="block">Confirmar segurança da cena</strong><small className="text-slate-400">Primeiro passo antes do contato.</small></button>
+                <button type="button" onClick={() => { markStep('socorro'); setFeedback({ type: 'success', title: 'Ajuda acionada', description: 'O pedido de apoio e a localização foram incluídos no atendimento.', recommendation: 'Siga a orientação do serviço de emergência local.' }); }} className="w-full rounded-xl border border-white/10 bg-slate-950/70 p-2.5 text-left text-[11px] text-slate-200 transition hover:border-teal-400"><strong className="block">Acionar emergência e informar o local</strong><small className="text-slate-400">Não deixe o chamado para o fim.</small></button>
+                <button type="button" onClick={() => markStep('avaliacao')} className="w-full rounded-xl border border-white/10 bg-slate-950/70 p-2.5 text-left text-[11px] text-slate-200 transition hover:border-teal-400"><strong className="block">Expor e localizar o sangramento</strong><small className="text-slate-400">Identifique a área antes da técnica.</small></button>
+                <button type="button" onClick={handleApplyTourniquet} disabled={treatmentState.tqActive} className={`w-full rounded-xl border p-2.5 text-left transition-all ${treatmentState.tqActive ? 'border-emerald-500/50 bg-emerald-950/50 text-emerald-200' : 'border-white/10 bg-slate-950/70 text-white hover:border-emerald-400'}`}><strong className="block text-[11px]">Aplicar torniquete</strong><small className="text-slate-400">{treatmentState.tqActive ? `Aplicado às ${treatmentState.tqTime}` : currentCase.tqIndicado ? 'Indicado para esta extremidade' : 'Não indicado neste caso'}</small></button>
+                <button type="button" onClick={handleApplyPacking} disabled={treatmentState.packActive} className={`w-full rounded-xl border p-2.5 text-left transition-all ${treatmentState.packActive ? 'border-emerald-500/50 bg-emerald-950/50 text-emerald-200' : 'border-white/10 bg-slate-950/70 text-white hover:border-emerald-400'}`}><strong className="block text-[11px]">Preencher a ferida com gaze</strong><small className="text-slate-400">Medida específica quando indicada.</small></button>
+                <button type="button" onClick={handleTogglePressure} className={`w-full rounded-xl border p-2.5 text-left transition-all ${treatmentState.handActive ? 'border-emerald-500/50 bg-emerald-950/50 text-emerald-200' : 'border-white/10 bg-slate-950/70 text-white hover:border-emerald-400'}`}><strong className="block text-[11px]">Comprimir manualmente</strong><small className="text-slate-400">{treatmentState.handActive ? 'Compressão em curso' : 'Pressão direta firme'}</small></button>
+                <button type="button" onClick={handleApplyBandage} disabled={treatmentState.bandageActive} className={`w-full rounded-xl border p-2.5 text-left transition-all ${treatmentState.bandageActive ? 'border-emerald-500/50 bg-emerald-950/50 text-emerald-200' : 'border-white/10 bg-slate-950/70 text-white hover:border-emerald-400'}`}><strong className="block text-[11px]">Aplicar curativo compressivo</strong><small className="text-slate-400">Finalize quando fizer sentido para o caso.</small></button>
+                <button type="button" onClick={() => { if (treatmentReady) markStep('reavaliacao'); setFeedback({ type: treatmentReady ? 'success' : 'penalty', title: treatmentReady ? 'Reavaliação registrada' : 'Reavalie após controlar o sangramento', description: treatmentReady ? 'A resposta à intervenção foi conferida.' : 'Ainda falta uma medida de controle adequada para este caso.', recommendation: treatmentReady ? 'Mantenha a observação e entregue as informações à equipe.' : currentCase.justificativaClinica }); }} className="w-full rounded-xl border border-white/10 bg-slate-950/70 p-2.5 text-left text-[11px] text-slate-200 transition hover:border-teal-400"><strong className="block">Reavaliar a vítima e preparar a passagem</strong><small className="text-slate-400">Confira se a medida funcionou.</small></button>
               </>}
             </div>
-          </div>
+            <button type="button" onClick={() => setShowReview(true)} className="mt-3 w-full rounded-xl border border-teal-400/40 bg-teal-500/15 px-3 py-2 text-xs font-bold text-teal-100 transition hover:bg-teal-500/25">Conferir atendimento</button>
+          </section>}
         </aside>
 
-        <div className="relative ml-[370px] aspect-[16/9] overflow-hidden rounded-3xl border border-white/15 bg-slate-950 shadow-2xl">
+        <div className="relative aspect-[16/9] overflow-hidden rounded-3xl border border-white/15 bg-slate-950 shadow-2xl">
           <canvas ref={canvasRef} width={W} height={H} className="h-full w-full object-contain block" />
 
           {loading && (
@@ -1066,43 +1091,17 @@ export function StopTheBleedSimulator({ caseId }: { caseId: number | string }) {
           )}
         </div>
 
-        {/* Painel de comandos fica à esquerda; a cena permanece à direita. */}
-        <div className="hidden">
-          <div className="mb-2 px-1">
-            <span className="text-[10px] font-black uppercase tracking-wider text-slate-300">Comandos clínicos</span>
-            <p className="mt-1 text-[11px] leading-relaxed text-slate-500">Abra uma categoria para ver as opções do caso.</p>
+        {showReview && <section className={`mt-4 rounded-2xl border p-4 shadow-xl ${remainingSteps.length === 0 && treatmentReady ? 'border-emerald-500/40 bg-emerald-950/60 text-emerald-100' : 'border-amber-500/40 bg-amber-950/45 text-amber-50'}`} role="status">
+          <div className="flex flex-wrap items-start justify-between gap-3">
+            <div>
+              <span className="text-[10px] font-black uppercase tracking-wider">Conferência do atendimento</span>
+              <h4 className="mt-1 text-sm font-black">{remainingSteps.length === 0 && treatmentReady ? 'Você concluiu os passos essenciais deste cenário.' : 'Ainda há passos essenciais para conferir.'}</h4>
+              <p className="mt-1 text-xs leading-relaxed opacity-90">{remainingSteps.length === 0 && treatmentReady ? 'A sequência registrada inclui segurança, pedido de ajuda, avaliação, controle compatível e reavaliação.' : 'Volte às Ações e complete o percurso antes de encerrar o caso.'}</p>
+            </div>
+            <button type="button" onClick={() => setShowReview(false)} className="rounded-lg border border-white/15 px-2 py-1 text-xs hover:bg-white/10">Fechar</button>
           </div>
-
-          <div className="space-y-1.5" role="tablist" aria-label="Categorias de comandos">
-            {([
-              { id: 'perguntas' as const, label: 'Perguntas', hint: 'Investigar', icon: MessageCircle },
-              { id: 'exames' as const, label: 'Exames', hint: 'Observar', icon: SearchCheck },
-              { id: 'acoes' as const, label: 'Ações', hint: 'Intervir', icon: PlayCircle }
-            ]).map((tab) => {
-              const Icon = tab.icon;
-              const active = decisionPanel === tab.id;
-              return <button key={tab.id} type="button" role="tab" aria-selected={active} onClick={() => setDecisionPanel(tab.id)} className={`flex w-full items-center gap-3 rounded-xl border px-3 py-2.5 text-left transition-all ${active ? 'border-teal-400 bg-teal-500/15 text-teal-100' : 'border-white/10 bg-slate-950/50 text-slate-400 hover:border-white/20 hover:text-white'}`}>
-                <Icon className="h-4 w-4 shrink-0" aria-hidden="true" />
-                <span className="min-w-0"><strong className="block text-[11px] font-black uppercase tracking-wide">{tab.label}</strong><small className="block text-[10px] opacity-70">{tab.hint}</small></span>
-              </button>;
-            })}
-          </div>
-
-          {decisionPanel === 'perguntas' && <div className="mt-3 space-y-2" role="tabpanel" aria-label="Perguntas do caso">
-            {['O que aconteceu e há quanto tempo?', 'A vítima responde e consegue falar?', 'O sangramento aumentou ou diminuiu?'].map((question) => <button key={question} type="button" onClick={() => setFeedback({ type: 'success', title: 'Pergunta registrada', description: question, recommendation: 'Use a resposta para priorizar segurança, acionamento do resgate e controle da hemorragia.' })} className="w-full rounded-xl border border-white/10 bg-slate-950/70 p-3 text-left text-[11px] leading-relaxed text-slate-300 transition hover:border-teal-400/60 hover:text-white">{question}</button>)}
-          </div>}
-
-          {decisionPanel === 'exames' && <div className="mt-3 space-y-2" role="tabpanel" aria-label="Exames e observações">
-            {['Avaliar consciência e respiração', 'Identificar a região anatômica da lesão', 'Verificar padrão e intensidade do sangramento'].map((exam) => <button key={exam} type="button" onClick={() => setFeedback({ type: 'success', title: 'Avaliação registrada', description: exam, recommendation: currentCase.justificativaClinica })} className="w-full rounded-xl border border-white/10 bg-slate-950/70 p-3 text-left text-[11px] leading-relaxed text-slate-300 transition hover:border-amber-400/60 hover:text-white">{exam}</button>)}
-          </div>}
-
-          {decisionPanel === 'acoes' && <div className="mt-3 space-y-2" role="tabpanel" aria-label="Ações de socorro">
-            <button type="button" onClick={handleApplyTourniquet} disabled={treatmentState.tqActive} className={`w-full rounded-xl border p-3 text-left transition-all ${treatmentState.tqActive ? 'border-emerald-500/50 bg-emerald-950/50 text-emerald-200' : 'border-white/10 bg-slate-950/70 text-white hover:border-emerald-400'}`}><span className="block text-[11px] font-bold">🩹 Aplicar torniquete</span><span className="mt-1 block text-[10px] text-slate-400">{treatmentState.tqActive ? `Aplicado às ${treatmentState.tqTime}` : currentCase.tqIndicado ? 'Indicado para esta extremidade' : 'Não indicado neste caso'}</span></button>
-            <button type="button" onClick={handleApplyPacking} disabled={treatmentState.packActive} className={`w-full rounded-xl border p-3 text-left transition-all ${treatmentState.packActive ? 'border-emerald-500/50 bg-emerald-950/50 text-emerald-200' : 'border-white/10 bg-slate-950/70 text-white hover:border-emerald-400'}`}><span className="block text-[11px] font-bold">🧻 Preencher com gaze</span><span className="mt-1 block text-[10px] text-slate-400">{treatmentState.packActive ? 'Cavidade preenchida' : 'Packing profundo quando indicado'}</span></button>
-            <button type="button" onClick={handleApplyBandage} disabled={treatmentState.bandageActive} className={`w-full rounded-xl border p-3 text-left transition-all ${treatmentState.bandageActive ? 'border-emerald-500/50 bg-emerald-950/50 text-emerald-200' : 'border-white/10 bg-slate-950/70 text-white hover:border-emerald-400'}`}><span className="block text-[11px] font-bold">🩹 Aplicar bandagem</span><span className="mt-1 block text-[10px] text-slate-400">{treatmentState.bandageActive ? 'Curativo aplicado' : 'Curativo compressivo'}</span></button>
-            <button type="button" onClick={handleTogglePressure} className={`w-full rounded-xl border p-3 text-left transition-all ${treatmentState.handActive ? 'border-emerald-500/50 bg-emerald-950/50 text-emerald-200' : 'border-white/10 bg-slate-950/70 text-white hover:border-emerald-400'}`}><span className="block text-[11px] font-bold">✋ Comprimir manualmente</span><span className="mt-1 block text-[10px] text-slate-400">{treatmentState.handActive ? 'Soltar compressão' : 'Pressão direta firme'}</span></button>
-          </div>}
-        </div>
+          {remainingSteps.length > 0 && <div className="mt-3 rounded-xl border border-white/10 bg-slate-950/30 p-3 text-xs"><strong>Falta registrar:</strong> {remainingSteps.map(step => ({ seguranca: 'segurança da cena', socorro: 'acionamento de ajuda', avaliacao: 'avaliação inicial', controle: 'controle adequado do sangramento', reavaliacao: 'reavaliação final' }[step])).join(' · ')}</div>}
+        </section>}
       </div>
 
       {/* 3. Banner de Avaliação Clínica e Pontuação */}
