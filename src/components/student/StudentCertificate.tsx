@@ -9,6 +9,7 @@ export type IssuedCertificate = {
   issued_at: string;
   verification_code: string;
   revoked_at: string | null;
+  student_name_snapshot: string;
   template_snapshot?: {
     instructor_name?: string | null;
     instructor_role?: string | null;
