@@ -34,4 +34,12 @@ assert(certMigration.includes('REVOKE INSERT,UPDATE,DELETE ON public.assessment_
   'Tentativas oficiais não podem ser inseridas via REST pelo aluno');
 assert(certMigration.includes('student_name_snapshot'), 'Nome do titular precisa ser imutável');
 
+
+const enrollEdge=fs.readFileSync(path.join(root,'supabase/functions/admin-enroll-student/index.ts'),'utf8');
+const claimEdge=fs.readFileSync(path.join(root,'supabase/functions/complete-student-registration/index.ts'),'utf8');
+assert(enrollEdge.includes("sessionClaims.aal !== 'aal2'"),'Matrícula feita por admin deve exigir TOTP');
+assert(enrollEdge.includes("staff.role !== 'admin'"),'Matrícula não pode autorizar equipes não administrativas');
+assert(enrollEdge.includes(".eq('email', email)"),'Busca de e-mail exata; curingas ILIKE não autorizados');
+assert(claimEdge.includes('email_confirmed_at'),'A ativação de convite exige propriedade verificada do e-mail');
+
 console.log('Security guard: nenhum Markdown privado distribuído, presença delegada ao servidor.');
