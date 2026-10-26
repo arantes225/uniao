@@ -80,7 +80,7 @@ export const StudentLayout: React.FC = () => {
       />
 
       {/* Área principal: lateral no desktop e barra inferior fixa no mobile */}
-      <div className="flex-1 flex min-w-0 relative">
+      <div className="flex flex-1 min-h-0 min-w-0 relative pt-16">
         <div className={`hidden md:block md:shrink-0 ${sidebarCollapsed ? 'md:w-20' : 'md:w-64'}`}>
           <div className={`fixed left-0 top-16 bottom-0 z-30 ${sidebarCollapsed ? 'w-20' : 'w-64'}`}>
             <StudentSidebar collapsed={sidebarCollapsed} onToggle={() => setSidebarCollapsed(prev => !prev)}
@@ -89,7 +89,7 @@ export const StudentLayout: React.FC = () => {
         </div>
 
         {/* Espaço inferior evita que a barra móvel cubra o conteúdo. */}
-        <main className="flex-1 min-w-0 overflow-x-hidden overflow-y-auto pb-[calc(6rem+env(safe-area-inset-bottom))] md:pb-0">
+        <main className="flex-1 min-h-0 min-w-0 overflow-x-hidden overflow-y-auto scroll-pt-16 pb-[calc(6rem+env(safe-area-inset-bottom))] md:pb-0">
           <Outlet context={{ studentName, cohorts, activeCohortId, setActiveCohortId,
             allowedModuleIds, curriculumLoading, curriculumError }} />
         </main>
