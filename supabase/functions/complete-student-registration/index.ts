@@ -25,6 +25,10 @@ Deno.serve(async (request) => {
   );
   const { data: authData, error: authError } = await admin.auth.getUser(token);
   if (authError || !authData.user?.email) return json({ error: 'Sessão inválida' }, 401);
+  // Email alone is not ownership proof: the account must complete provider/email verification.
+  if (!authData.user.email_confirmed_at) {
+    return json({ error: 'Confirme seu e-mail antes de ativar uma matrícula' }, 403);
+  }
 
   const email = authData.user.email.trim().toLowerCase();
   const { data: pending, error: pendingError } = await admin
