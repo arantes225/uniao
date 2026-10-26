@@ -27,19 +27,37 @@ Deno.serve(async (request) => {
   const { data: caller, error: callerError } = await admin.auth.getUser(token);
   if (callerError || !caller.user) return json({ error: 'Sessão inválida' }, 401);
 
+  // getUser(token) verifies this token with Supabase Auth before its claims are inspected.
+  // AAL2 cannot be self-declared by a client: it must be present in the signed access token.
+  let sessionClaims: { sub?: string; aal?: string } = {};
+  try {
+    const part = token.split('.')[1];
+    if (!part) throw new Error('Invalid JWT');
+    sessionClaims = JSON.parse(atob(part.replace(/-/g, '+').replace(/_/g, '/')));
+  } catch {
+    return json({ error: 'Sessão JWT inválida' }, 401);
+  }
+  if (sessionClaims.sub !== caller.user.id || sessionClaims.aal !== 'aal2') {
+    return json({ error: 'Confirme a autenticação em duas etapas antes de matricular alunos' }, 403);
+  }
+
   const { data: staff, error: staffError } = await admin
     .from('platform_staff')
-    .select('user_id')
+    .select('user_id, role')
     .eq('user_id', caller.user.id)
     .maybeSingle();
-  if (staffError || !staff) return json({ error: 'Apenas a equipe autorizada pode matricular alunos' }, 403);
+  if (staffError || !staff || staff.role !== 'admin') return json({ error: 'Apenas administradores autorizados podem matricular alunos' }, 403);
 
   const payload = await request.json().catch(() => null);
   const name = typeof payload?.name === 'string' ? payload.name.trim() : '';
   const email = typeof payload?.email === 'string' ? payload.email.trim().toLowerCase() : '';
   const cpf = typeof payload?.cpf === 'string' && payload.cpf.trim() ? payload.cpf.trim() : null;
   const cohortId = typeof payload?.cohort_id === 'string' ? payload.cohort_id : '';
-  if (!name || !email || !cohortId) return json({ error: 'Nome, e-mail e turma são obrigatórios' }, 400);
+  if (name.length < 2 || name.length > 200 || email.length > 254 ||
+      !/^[^\\s@]+@[^\\s@]+\\.[^\\s@]+$/.test(email) ||
+      !/^[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}$/.test(cohortId)) {
+    return json({ error: 'Informe nome, e-mail e turma válidos' }, 400);
+  }
 
   const { data: cohort, error: cohortError } = await admin
     .from('cohorts').select('id, max_students').eq('id', cohortId).maybeSingle();
@@ -51,7 +69,7 @@ Deno.serve(async (request) => {
   const { data: profileMatch, error: profileLookupError } = await admin
     .from('profiles')
     .select('id, full_name, email, cpf')
-    .ilike('email', email)
+    .eq('email', email)
     .limit(1)
     .maybeSingle();
   if (profileLookupError) return json({ error: 'Não foi possível localizar a conta pelo e-mail' }, 500);
