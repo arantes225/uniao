@@ -890,7 +890,7 @@ export const AdminDashboard: React.FC = () => {
             Visão do Aluno →
           </Link>
           <button
-            onClick={() => setPinAuthorized(false)}
+            onClick={() => { void supabase.auth.signOut().then(({error}) => { if (error) alert('Não foi possível encerrar a sessão. Tente novamente.'); else setPinAuthorized(false); }); }}
             className="text-xs text-slate-400 hover:text-white flex items-center gap-1.5 px-3 py-1.5 rounded-lg hover:bg-white/5 transition-colors"
           >
             <LogOut className="w-4 h-4" />

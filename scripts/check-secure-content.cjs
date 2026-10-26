@@ -21,4 +21,17 @@ assert(presence.includes('redeem_presence_code'), 'A frequência deve ser gravad
 assert(admin.includes('create_presence_session'), 'Código de presença precisa ser gerado pelo servidor');
 assert(!presence.includes('usm_student_presence_validated'), 'A presença não pode depender de localStorage');
 assert(!admin.includes('usm_presence_code_aph'), 'PIN de presença local é proibido');
+
+const studentCertificates = fs.readFileSync(path.join(root, 'src/pages/student/CertificatesPage.tsx'), 'utf8');
+const certificateRenderer = fs.readFileSync(path.join(root, 'src/components/student/StudentCertificate.tsx'), 'utf8');
+const certMigration = fs.readFileSync(path.join(root, 'supabase/migrations/20261026080000_harden_certificate_snapshots_attempts.sql'), 'utf8');
+assert(admin.includes('supabase.auth.signOut()'), 'Bloquear painel precisa terminar a sessão no servidor');
+assert(!admin.includes('ADMIN_PIN'), 'Não inserir PIN administrativo no frontend');
+assert(admin.includes('confirm_practical_attendance'), 'Certificação exige conferência presencial por instrutor');
+assert(studentCertificates.includes('student_name_snapshot'), 'Nome do certificado deve ser congelado no momento da emissão');
+assert(certificateRenderer.includes('cert.verification_code'), 'Documento só pode incluir código do registro oficial');
+assert(certMigration.includes('REVOKE INSERT,UPDATE,DELETE ON public.assessment_attempts FROM authenticated'),
+  'Tentativas oficiais não podem ser inseridas via REST pelo aluno');
+assert(certMigration.includes('student_name_snapshot'), 'Nome do titular precisa ser imutável');
+
 console.log('Security guard: nenhum Markdown privado distribuído, presença delegada ao servidor.');
