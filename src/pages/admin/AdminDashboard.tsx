@@ -16,6 +16,7 @@ import { CurriculumService } from '../../services/CurriculumService';
 import { LearningModule } from '../../data/curriculumData';
 import { CohortCurriculumSelector, CurriculumLessonOption } from '../../components/admin/CohortCurriculumSelector';
 import { CertificateSignatory, CertificateSignatures, defaultCertificateSigners, FittedCertificate, printCertificate } from '../../components/admin/CertificateComponents';
+import { CertificateQR, certificateVerificationUrl } from '../../components/admin/CertificateQR';
 
 const normalizeDate = (input: string): string | null => {
   if (!input.trim()) return null;
@@ -1784,7 +1785,7 @@ export const AdminDashboard: React.FC = () => {
                     </button>
                     <button type="button" onClick={() => setCertificateZoom(value => Math.max(0.75, value - 0.25))} className="px-3 py-1.5 rounded-lg border border-white/10 text-xs text-slate-300">−</button>
                     <button type="button" onClick={() => setCertificateZoom(value => Math.min(2, value + 0.25))} className="px-3 py-1.5 rounded-lg border border-white/10 text-xs text-slate-300">+</button>
-                    <button type="button" onClick={() => void printCertificate("certificate-integrated-page")} className="px-3 py-1.5 rounded-lg bg-teal-500 text-xs font-bold text-slate-950">Imprimir / Salvar PDF</button>
+                    <button type="button" disabled title="Modelo de demonstração: utilize a emissão oficial da turma para imprimir um certificado válido" className="px-3 py-1.5 rounded-lg bg-slate-700 text-xs font-bold text-slate-300 opacity-50 cursor-not-allowed">Modelo — somente prévia</button>
                   </div>
                 </div>
 
@@ -1870,12 +1871,12 @@ export const AdminDashboard: React.FC = () => {
                             <strong className="text-teal-400 font-bold">{selectedStudentForCert ? (issuedCodes[(activeCertCohort?.id || selectedCertCohortId) + ':' + selectedStudentForCert.id]?.code || 'NÃO EMITIDO') : 'MODELO — NÃO EMITIDO'}</strong>
                             <span className="text-slate-600">•</span>
                             <span className="text-teal-400 font-sans font-semibold">
-                              uniao-servicos-medicos.com.br/validar-certificado
+                              Verifique pelo código no portal oficial
                             </span>
                           </div>
                           <div>Validade Técnica: <strong className="text-white">{certValidity} meses</strong></div>
-                          <div>Emissão: <strong className="text-white">{selectedStudentForCert && issuedCodes[activeCertCohort.id + ':' + selectedStudentForCert.id]
-  ? new Date(issuedCodes[activeCertCohort.id + ':' + selectedStudentForCert.id].issuedAt).toLocaleDateString('pt-BR') : 'Não emitido'}</strong></div>
+                          <div>Emissão: <strong className="text-white">{selectedStudentForCert && issuedCodes[(activeCertCohort?.id || selectedCertCohortId) + ':' + selectedStudentForCert.id]
+  ? new Date(issuedCodes[(activeCertCohort?.id || selectedCertCohortId) + ':' + selectedStudentForCert.id].issuedAt).toLocaleDateString('pt-BR') : 'Não emitido'}</strong></div>
                         </div>
 
                       </div>
@@ -2640,7 +2641,7 @@ export const AdminDashboard: React.FC = () => {
                         <strong className="text-teal-400 font-bold">{selectedStudentForCert ? (issuedCodes[(activeCertCohort?.id || selectedCertCohortId) + ':' + selectedStudentForCert.id]?.code || 'NÃO EMITIDO') : 'MODELO — NÃO EMITIDO'}</strong>
                         <span className="text-slate-600">•</span>
                         <span className="text-teal-400 font-sans font-semibold">
-                          uniao-servicos-medicos.com.br/validar-certificado
+                          Verifique pelo código no portal oficial
                         </span>
                       </div>
                       <div>Validade Técnica: <strong className="text-white">{certValidity} meses</strong></div>
@@ -2705,7 +2706,7 @@ export const AdminDashboard: React.FC = () => {
           </div>
 
             <div className="flex justify-end gap-3 pt-2">
-              <button type="button" onClick={() => void printCertificate('certificate-modal-page')} className="px-5 py-2.5 rounded-xl text-xs font-bold bg-teal-500 text-slate-950">Imprimir / Salvar PDF</button>
+              <button type="button" disabled title="Modelo de demonstração: emissão real somente na turma" className="px-5 py-2.5 rounded-xl text-xs font-bold bg-slate-700 opacity-50 text-slate-300 cursor-not-allowed">Modelo — somente prévia</button>
               <button
                 type="button"
                 onClick={() => setIsPreviewOpen(false)}
@@ -2855,7 +2856,7 @@ export const AdminDashboard: React.FC = () => {
                 </div>
 
                 <button type="button" onClick={() => void printCertificate('certificate-cohort-page')}
-                  disabled={!selectedStudentForCert || !issuedCodes[activeCertCohort.id + ':' + selectedStudentForCert.id]}
+                  disabled={!selectedStudentForCert || !issuedCodes[(activeCertCohort?.id || selectedCertCohortId) + ':' + selectedStudentForCert.id]}
                   title="Impressão disponível somente após emissão oficial"
                   className="px-3 py-2 rounded-xl text-xs font-bold bg-teal-500 text-slate-950 disabled:opacity-40 disabled:cursor-not-allowed">Imprimir / Salvar PDF</button>
                 <button 
@@ -2956,9 +2957,12 @@ export const AdminDashboard: React.FC = () => {
 
                         {/* Rodapé */}
                         <div className="pt-2 border-t border-white/10 flex items-center justify-between text-[9px] text-slate-400 font-mono">
-                          <div>Chave: <strong className="text-teal-400">{selectedStudentForCert ? (issuedCodes[(activeCertCohort?.id || selectedCertCohortId) + ':' + selectedStudentForCert.id]?.code || 'NÃO EMITIDO') : 'MODELO — NÃO EMITIDO'}</strong></div>
+                          <div className="flex items-center gap-3"><CertificateQR size={82} code={selectedStudentForCert ? issuedCodes[activeCertCohort.id + ':' + selectedStudentForCert.id]?.code : null}/>
+                          <div className="space-y-1"><div>Chave: <strong className="text-teal-400">{selectedStudentForCert ? (issuedCodes[(activeCertCohort?.id || selectedCertCohortId) + ':' + selectedStudentForCert.id]?.code || 'NÃO EMITIDO') : 'MODELO — NÃO EMITIDO'}</strong></div>
+                            {selectedStudentForCert && issuedCodes[activeCertCohort.id + ':' + selectedStudentForCert.id] && <div><a className="text-teal-300 underline" href={certificateVerificationUrl(issuedCodes[activeCertCohort.id + ':' + selectedStudentForCert.id].code)}>Verificar autenticidade online</a></div>}
+                          </div></div>
                           <span className="text-teal-400 font-sans">
-                            uniao-servicos-medicos.com.br/validar-certificado
+                            Verifique pelo código no portal oficial
                           </span>
                           <div>Emissão: <strong className="text-white">{new Date().toLocaleDateString('pt-BR')}</strong></div>
                         </div>
@@ -2997,8 +3001,8 @@ export const AdminDashboard: React.FC = () => {
                         </div>
 
                         <div className="pt-2 border-t border-white/10 flex items-center justify-between text-[8px] text-slate-500 font-mono">
-                          <div>Código: <strong className="text-teal-400">{selectedStudentForCert ? (issuedCodes[(activeCertCohort?.id || selectedCertCohortId) + ':' + selectedStudentForCert.id]?.code || 'NÃO EMITIDO') : 'MODELO — NÃO EMITIDO'}</strong></div>
-                          <div>{selectedStudentForCert && issuedCodes[activeCertCohort.id + ':' + selectedStudentForCert.id] ? 'Validável no portal' : 'PRÉVIA — NÃO VÁLIDA'}</div>
+                          <div className="flex items-center gap-3"><CertificateQR size={70} code={selectedStudentForCert ? issuedCodes[activeCertCohort.id + ':' + selectedStudentForCert.id]?.code : null}/><div>Código: <strong className="text-teal-400">{selectedStudentForCert ? (issuedCodes[(activeCertCohort?.id || selectedCertCohortId) + ':' + selectedStudentForCert.id]?.code || 'NÃO EMITIDO') : 'MODELO — NÃO EMITIDO'}</strong></div></div>
+                          <div>{selectedStudentForCert && issuedCodes[(activeCertCohort?.id || selectedCertCohortId) + ':' + selectedStudentForCert.id] ? 'Validável no portal' : 'PRÉVIA — NÃO VÁLIDA'}</div>
                         </div>
                       </div>
                     )}
