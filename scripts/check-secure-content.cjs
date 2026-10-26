@@ -41,5 +41,6 @@ assert(enrollEdge.includes("sessionClaims.aal !== 'aal2'"),'Matrícula feita por
 assert(enrollEdge.includes("staff.role !== 'admin'"),'Matrícula não pode autorizar equipes não administrativas');
 assert(enrollEdge.includes(".eq('email', email)"),'Busca de e-mail exata; curingas ILIKE não autorizados');
 assert(claimEdge.includes('email_confirmed_at'),'A ativação de convite exige propriedade verificada do e-mail');
+assert(!enrollEdge.includes(String.raw`\\\\s@`),'Email regex não pode usar dois escapes literais');
 
 console.log('Security guard: nenhum Markdown privado distribuído, presença delegada ao servidor.');
