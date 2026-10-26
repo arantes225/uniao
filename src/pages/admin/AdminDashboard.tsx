@@ -12,6 +12,7 @@ import {
 import { supabase } from '../../services/supabase/client';
 import { ContentManagerTab } from './ContentManagerTab';
 import { OfficialExamAdmin } from './OfficialExamAdmin';
+import { AdminMFA } from './AdminMFA';
 import { PrompterTab } from './PrompterTab';
 import { CurriculumService } from '../../services/CurriculumService';
 import { LearningModule } from '../../data/curriculumData';
@@ -967,6 +968,7 @@ export const AdminDashboard: React.FC = () => {
         {/* ========================================================================= */}
         {activeTab === 'dashboard' && (
           <div className="space-y-8">
+            <AdminMFA />
             
             {/* Métricas do Dashboard */}
             <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
