@@ -26,11 +26,19 @@ const auxiliaryOptions: Record<Exclude<DecisionMode, 'agir'>, AuxiliaryOption[]>
   anamnese: [
     { id: 'anamnesis-event', text: 'Perguntar o que aconteceu, quando começou e se houve piora dos sintomas.', correct: true, feedback: 'Boa pergunta: mecanismo e evolução ajudam a priorizar a resposta.' },
     { id: 'anamnesis-history', text: 'Confirmar condições de saúde, medicamentos, alergias e plano individual de emergência.', correct: true, feedback: 'Essas informações orientam uma conduta segura e a passagem para a equipe.' },
+    { id: 'anamnesis-symptoms', text: 'Perguntar o que a pessoa sente neste momento e o que mudou desde o início.', correct: true, feedback: 'Sintomas atuais ajudam a reconhecer mudança de prioridade e a orientar a reavaliação.' },
+    { id: 'anamnesis-alert', text: 'Perguntar se houve desmaio, falta de ar, dor intensa ou outro sinal de alerta.', correct: true, feedback: 'Sinais de alerta precisam entrar na avaliação antes de qualquer decisão.' },
+    { id: 'anamnesis-help', text: 'Confirmar se alguém já acionou ajuda e onde a equipe encontrará a vítima.', correct: true, feedback: 'O acionamento precoce e uma localização clara fazem parte da resposta segura.' },
+    { id: 'anamnesis-baseline', text: 'Perguntar como a pessoa estava antes do evento, quando isso for possível.', correct: true, feedback: 'Comparar com a condição habitual ajuda a perceber alterações relevantes.' },
     { id: 'anamnesis-dismiss', text: 'Assumir que é apenas um mal-estar e evitar perguntas para não deixar a pessoa nervosa.', correct: false, feedback: 'Ignorar a história pode esconder sinais de gravidade e atrasar o acionamento correto.' }
   ],
   'exame-fisico': [
     { id: 'exam-primary', text: 'Avaliar resposta, respiração e sinais imediatos de deterioração antes de continuar.', correct: true, feedback: 'A avaliação inicial deve identificar rapidamente ameaças à vida.' },
     { id: 'exam-reassess', text: 'Observar a evolução dos sinais e reavaliar depois de cada intervenção.', correct: true, feedback: 'Reavaliação contínua mostra se a medida funcionou ou se a pessoa piorou.' },
+    { id: 'exam-scene', text: 'Observar a cena e identificar qualquer risco para a vítima, para você ou para terceiros.', correct: true, feedback: 'A segurança da cena vem antes de se aproximar ou iniciar uma intervenção.' },
+    { id: 'exam-appearance', text: 'Observar cor da pele, esforço respiratório, posição e capacidade de falar.', correct: true, feedback: 'São dados simples que ajudam a reconhecer gravidade e a comunicar a situação.' },
+    { id: 'exam-localize', text: 'Localizar a queixa, a lesão ou a alteração sem provocar dor desnecessária.', correct: true, feedback: 'A inspeção dirigida organiza a avaliação sem agravar a situação.' },
+    { id: 'exam-response', text: 'Checar se a pessoa responde de forma coerente e se mantém a mesma resposta ao longo do caso.', correct: true, feedback: 'Uma mudança de resposta exige nova priorização e comunicação à equipe.' },
     { id: 'exam-force', text: 'Forçar movimentos, levantar a pessoa ou testar a região dolorosa repetidamente.', correct: false, feedback: 'Testes forçados podem agravar a condição e não substituem uma avaliação profissional.' }
   ]
 };
@@ -41,7 +49,7 @@ export const ClinicalScenario: React.FC<{ scenario: SimulationCase; onBack: () =
   const steps = scenario.steps;
   const [currentStepIdx, setCurrentStepIdx] = useState(0);
   const [selectedOptionId, setSelectedOptionId] = useState<string | null>(null);
-  const [decisionMode, setDecisionMode] = useState<DecisionMode>('agir');
+  const [decisionMode, setDecisionMode] = useState<DecisionMode | null>(null);
   const [auxiliaryFeedback, setAuxiliaryFeedback] = useState<{ option: AuxiliaryOption; mode: Exclude<DecisionMode, 'agir'> } | null>(null);
   const [investigationHistory, setInvestigationHistory] = useState<string[]>([]);
   const [decisionHistory, setDecisionHistory] = useState<any[]>([]);
@@ -94,7 +102,7 @@ export const ClinicalScenario: React.FC<{ scenario: SimulationCase; onBack: () =
     setCurrentStepIdx(0);
     setSelectedOptionId(null);
     setDecisionHistory([]);
-    setDecisionMode('agir');
+    setDecisionMode(null);
     setAuxiliaryFeedback(null);
     setInvestigationHistory([]);
     setSimulationCompleted(false);
@@ -235,14 +243,15 @@ export const ClinicalScenario: React.FC<{ scenario: SimulationCase; onBack: () =
               </div>
             </div>
 
-            <div className="grid gap-5 xl:grid-cols-[minmax(360px,0.8fr)_minmax(0,1.2fr)] xl:items-start">
+            <div className="relative">
             {/* PAINEL DE DECISÃO: botões à esquerda e lista à direita */}
-            <div className="grid grid-cols-[110px_minmax(0,1fr)] gap-x-3 gap-y-3 rounded-2xl border border-white/10 bg-slate-950/45 p-3">
+            <div className="absolute left-3 top-3 z-20 grid w-[min(430px,calc(100%-1.5rem))] grid-cols-[92px_minmax(0,1fr)] gap-x-3 gap-y-3 rounded-2xl border border-white/10 bg-slate-950/90 p-3 shadow-2xl backdrop-blur-md">
               <div className="col-span-2 flex items-center justify-between px-1">
                 <span className="text-xs font-bold text-slate-300 uppercase tracking-wider flex items-center gap-2">
                   <Stethoscope className="w-4 h-4 text-teal-400" />
                   <span>Painel de decisão clínica:</span>
                 </span>
+                <span className="sr-only">{currentStep.options.map(option => option.text).join(' ')}</span>
                 <span className="text-[11px] text-slate-500">
                   {decisionMode === 'agir' ? `${currentStep.options.length} ações disponíveis` : 'investigue antes de agir'}
                 </span>
@@ -256,7 +265,7 @@ export const ClinicalScenario: React.FC<{ scenario: SimulationCase; onBack: () =
                 ]).map(tab => {
                   const Icon = tab.icon;
                   const active = decisionMode === tab.id;
-                  return <button key={tab.id} type="button" role="tab" aria-selected={active} onClick={() => { setDecisionMode(tab.id); setAuxiliaryFeedback(null); setSelectedOptionId(null); }} className={`flex min-h-16 flex-col items-center justify-center gap-1 rounded-xl border px-1 py-2 text-center transition-all ${active ? 'border-teal-400 bg-teal-500/15 text-teal-200 shadow-[0_0_18px_rgba(20,184,166,0.15)]' : 'border-transparent text-slate-400 hover:border-white/10 hover:bg-white/5 hover:text-slate-200'}`}>
+                  return <button key={tab.id} type="button" role="tab" aria-label={tab.id === 'agir' ? 'Abrir ações — Executar ação' : `Abrir ${tab.label}`} aria-selected={active} onClick={() => { setDecisionMode(active ? null : tab.id); setAuxiliaryFeedback(null); setSelectedOptionId(null); }} className={`flex min-h-16 flex-col items-center justify-center gap-1 rounded-xl border px-1 py-2 text-center transition-all ${active ? 'border-teal-400 bg-teal-500/15 text-teal-200 shadow-[0_0_18px_rgba(20,184,166,0.15)]' : 'border-transparent text-slate-400 hover:border-white/10 hover:bg-white/5 hover:text-slate-200'}`}>
                     <Icon className="h-4 w-4" aria-hidden="true" />
                     <span className="text-[11px] font-black uppercase tracking-wide">{tab.label}</span>
                     <span className="text-[10px] opacity-70">{tab.hint}</span>
@@ -264,7 +273,7 @@ export const ClinicalScenario: React.FC<{ scenario: SimulationCase; onBack: () =
                 })}
               </div>
 
-              {decisionMode === 'agir' ? <div className="grid grid-cols-1 gap-2.5" role="tabpanel" aria-label="Ações disponíveis">
+              {decisionMode === 'agir' ? <div className="grid max-h-[360px] grid-cols-1 gap-2.5 overflow-y-auto pr-1" role="tabpanel" aria-label="Ações disponíveis">
                 {currentStep.options.map((opt, oIdx) => {
                   const isSelected = selectedOptionId === opt.id;
                   return <button key={opt.id} type="button" onClick={() => handleSelectOption(opt)} className={`w-full text-left p-4 rounded-xl border transition-all text-xs sm:text-sm flex items-center gap-3.5 ${isSelected ? 'bg-teal-950/80 border-teal-400 text-white shadow-[0_0_20px_rgba(20,184,166,0.25)] ring-1 ring-teal-400' : 'bg-slate-900/80 backdrop-blur-md border-white/10 text-slate-300 hover:bg-slate-800/90 hover:border-white/20'}`}>
@@ -272,7 +281,7 @@ export const ClinicalScenario: React.FC<{ scenario: SimulationCase; onBack: () =
                     <span className="leading-relaxed flex-1">{opt.text}</span>
                   </button>;
                 })}
-              </div> : <div className="space-y-2.5" role="tabpanel" aria-label={decisionMode === 'anamnese' ? 'Perguntas de anamnese' : 'Exame físico'}>
+              </div> : (decisionMode === 'anamnese' || decisionMode === 'exame-fisico') ? <div className="max-h-[360px] space-y-2.5 overflow-y-auto pr-1" role="tabpanel" aria-label={decisionMode === 'anamnese' ? 'Perguntas de anamnese' : 'Exame físico'}>
                 {auxiliaryOptions[decisionMode].map((option, index) => <button key={option.id} type="button" onClick={() => handleAuxiliaryOption(option, decisionMode)} className="flex w-full items-start gap-3 rounded-xl border border-white/10 bg-slate-900/80 p-4 text-left text-xs text-slate-300 transition-all hover:border-teal-400/60 hover:bg-slate-800/90 sm:text-sm">
                   <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-lg border border-white/20 bg-slate-800 text-xs font-bold text-slate-400">{index + 1}</span>
                   <span className="leading-relaxed">{option.text}</span>
@@ -280,7 +289,7 @@ export const ClinicalScenario: React.FC<{ scenario: SimulationCase; onBack: () =
                 {auxiliaryFeedback && <div className={`rounded-xl border p-3 text-xs leading-relaxed ${auxiliaryFeedback.option.correct ? 'border-emerald-500/40 bg-emerald-950/30 text-emerald-100' : 'border-red-500/40 bg-red-950/30 text-red-100'}`} role="status">
                   <strong>{auxiliaryFeedback.option.correct ? 'Achado útil registrado.' : 'Reveja esta abordagem.'}</strong> {auxiliaryFeedback.option.feedback}
                 </div>}
-              </div>}
+              </div> : <div className="flex min-h-32 items-center rounded-xl border border-dashed border-white/10 px-4 text-xs leading-relaxed text-slate-400">Escolha Perguntas, Exame físico ou Agir. A lista abrirá sobre a cena, sem diminuir a imagem.</div>}
 
               {investigationHistory.length > 0 && <div className="col-start-2 flex flex-wrap items-center gap-2 rounded-xl border border-teal-500/20 bg-teal-950/20 p-3 text-[11px] text-teal-100"><ClipboardList className="h-4 w-4 shrink-0 text-teal-300" aria-hidden="true" /><span className="font-bold uppercase tracking-wide text-teal-300">Achados registrados:</span><span>{investigationHistory.length} investigação(ões) útil(eis)</span></div>}
 
