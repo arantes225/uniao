@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState, useCallback } from 'react';
-import { Play, Pause, RotateCcw, ZoomIn, ZoomOut, ShieldCheck, AlertTriangle, CheckCircle2, Activity, Droplet } from 'lucide-react';
+import { Play, Pause, RotateCcw, ZoomIn, ZoomOut, ShieldCheck, AlertTriangle, CheckCircle2, Activity, Droplet, MessageCircle, SearchCheck, PlayCircle } from 'lucide-react';
 import { getCasoById, type CasoStopTheBleed } from '../../data/simulator/stop-the-bleed/casosConfig';
 
 const baseAssets = `${import.meta.env.BASE_URL}simulador/personagens/stop-the-bleed/`;
@@ -38,6 +38,8 @@ type FeedbackState = {
   recommendation: string;
 } | null;
 
+type DecisionPanel = 'perguntas' | 'exames' | 'acoes';
+
 export function StopTheBleedSimulator({ caseId }: { caseId: number | string }) {
   const currentCase: CasoStopTheBleed = getCasoById(caseId);
 
@@ -51,6 +53,7 @@ export function StopTheBleedSimulator({ caseId }: { caseId: number | string }) {
   const [isCloseup, setIsCloseup] = useState(true);
   const [bleedMode, setBleedMode] = useState<'pulse' | 'continuous'>('pulse');
   const [feedback, setFeedback] = useState<FeedbackState>(null);
+  const [decisionPanel, setDecisionPanel] = useState<DecisionPanel>('acoes');
   // Estados dos tratamentos
   const treatmentRef = useRef({
     pack: 0,
@@ -974,10 +977,11 @@ export function StopTheBleedSimulator({ caseId }: { caseId: number | string }) {
           </div>
           <div>
             <div className="flex items-center gap-2">
-              <span className="text-[10px] font-black uppercase tracking-wider text-emerald-400">Motor de Simulação Ativo</span>
-              <span className="text-[11px] text-slate-400">· {currentCase.isStandDeTiro ? 'Estande de Tiro (PAF)' : 'Trauma Urbano'}</span>
+              <span className="text-[10px] font-black uppercase tracking-wider text-emerald-400">Telemetria da vítima</span>
+              <span className="text-[11px] text-slate-400">· {currentCase.patientAgeRange || 'idade estimada'} · sexo {currentCase.patientSex || 'não informado'}</span>
             </div>
             <h3 className="text-sm font-bold text-white sm:text-base">{currentCase.titulo}</h3>
+            <p className="text-[11px] text-slate-400">{currentCase.subtitulo} · {currentCase.tqIndicado ? 'torniquete indicado' : 'torniquete não indicado'}</p>
           </div>
         </div>
 
@@ -1039,22 +1043,61 @@ export function StopTheBleedSimulator({ caseId }: { caseId: number | string }) {
         </div>
       </div>
 
-      {/* 2. Janela Canvas NATIVA do Simulador (Sem iframes, sem barras de edição, sem barras de rolagem) */}
-      <div className="relative aspect-[16/9] w-full overflow-hidden rounded-3xl border border-white/15 bg-slate-950 shadow-2xl">
-        <canvas ref={canvasRef} width={W} height={H} className="h-full w-full object-contain block" />
+      {/* 2. Personagem ao centro e comandos laterais no padrão LURIA */}
+      <div className="grid items-start gap-4 lg:grid-cols-[minmax(0,1fr)_250px]">
+        <div className="relative aspect-[16/9] w-full overflow-hidden rounded-3xl border border-white/15 bg-slate-950 shadow-2xl">
+          <canvas ref={canvasRef} width={W} height={H} className="h-full w-full object-contain block" />
 
-        {loading && (
-          <div className="absolute inset-0 flex items-center justify-center bg-slate-950/80 backdrop-blur-sm">
-            <span className="text-sm font-semibold text-emerald-400 animate-pulse">Carregando cenário clínico…</span>
-          </div>
-        )}
+          {loading && (
+            <div className="absolute inset-0 flex items-center justify-center bg-slate-950/80 backdrop-blur-sm">
+              <span className="text-sm font-semibold text-emerald-400 animate-pulse">Carregando cenário clínico…</span>
+            </div>
+          )}
 
-        {errorMsg && (
-          <div className="absolute inset-0 flex flex-col items-center justify-center bg-slate-950/90 p-6 text-center text-red-300">
-            <AlertTriangle className="h-8 w-8 text-red-400 mb-2" />
-            <p className="text-sm font-bold">{errorMsg}</p>
+          {errorMsg && (
+            <div className="absolute inset-0 flex flex-col items-center justify-center bg-slate-950/90 p-6 text-center text-red-300">
+              <AlertTriangle className="mb-2 h-8 w-8 text-red-400" />
+              <p className="text-sm font-bold">{errorMsg}</p>
+            </div>
+          )}
+        </div>
+
+        <aside className="rounded-2xl border border-white/10 bg-slate-900/90 p-3 shadow-xl backdrop-blur-md" aria-label="Comandos clínicos">
+          <div className="mb-2 px-1">
+            <span className="text-[10px] font-black uppercase tracking-wider text-slate-300">Comandos clínicos</span>
+            <p className="mt-1 text-[11px] leading-relaxed text-slate-500">Abra uma categoria para ver as opções do caso.</p>
           </div>
-        )}
+
+          <div className="space-y-1.5" role="tablist" aria-label="Categorias de comandos">
+            {([
+              { id: 'perguntas' as const, label: 'Perguntas', hint: 'Investigar', icon: MessageCircle },
+              { id: 'exames' as const, label: 'Exames', hint: 'Observar', icon: SearchCheck },
+              { id: 'acoes' as const, label: 'Ações', hint: 'Intervir', icon: PlayCircle }
+            ]).map((tab) => {
+              const Icon = tab.icon;
+              const active = decisionPanel === tab.id;
+              return <button key={tab.id} type="button" role="tab" aria-selected={active} onClick={() => setDecisionPanel(tab.id)} className={`flex w-full items-center gap-3 rounded-xl border px-3 py-2.5 text-left transition-all ${active ? 'border-teal-400 bg-teal-500/15 text-teal-100' : 'border-white/10 bg-slate-950/50 text-slate-400 hover:border-white/20 hover:text-white'}`}>
+                <Icon className="h-4 w-4 shrink-0" aria-hidden="true" />
+                <span className="min-w-0"><strong className="block text-[11px] font-black uppercase tracking-wide">{tab.label}</strong><small className="block text-[10px] opacity-70">{tab.hint}</small></span>
+              </button>;
+            })}
+          </div>
+
+          {decisionPanel === 'perguntas' && <div className="mt-3 space-y-2" role="tabpanel" aria-label="Perguntas do caso">
+            {['O que aconteceu e há quanto tempo?', 'A vítima responde e consegue falar?', 'O sangramento aumentou ou diminuiu?'].map((question) => <button key={question} type="button" onClick={() => setFeedback({ type: 'success', title: 'Pergunta registrada', description: question, recommendation: 'Use a resposta para priorizar segurança, acionamento do resgate e controle da hemorragia.' })} className="w-full rounded-xl border border-white/10 bg-slate-950/70 p-3 text-left text-[11px] leading-relaxed text-slate-300 transition hover:border-teal-400/60 hover:text-white">{question}</button>)}
+          </div>}
+
+          {decisionPanel === 'exames' && <div className="mt-3 space-y-2" role="tabpanel" aria-label="Exames e observações">
+            {['Avaliar consciência e respiração', 'Identificar a região anatômica da lesão', 'Verificar padrão e intensidade do sangramento'].map((exam) => <button key={exam} type="button" onClick={() => setFeedback({ type: 'success', title: 'Avaliação registrada', description: exam, recommendation: currentCase.justificativaClinica })} className="w-full rounded-xl border border-white/10 bg-slate-950/70 p-3 text-left text-[11px] leading-relaxed text-slate-300 transition hover:border-amber-400/60 hover:text-white">{exam}</button>)}
+          </div>}
+
+          {decisionPanel === 'acoes' && <div className="mt-3 space-y-2" role="tabpanel" aria-label="Ações de socorro">
+            <button type="button" onClick={handleApplyTourniquet} disabled={treatmentState.tqActive} className={`w-full rounded-xl border p-3 text-left transition-all ${treatmentState.tqActive ? 'border-emerald-500/50 bg-emerald-950/50 text-emerald-200' : 'border-white/10 bg-slate-950/70 text-white hover:border-emerald-400'}`}><span className="block text-[11px] font-bold">🩹 Aplicar torniquete</span><span className="mt-1 block text-[10px] text-slate-400">{treatmentState.tqActive ? `Aplicado às ${treatmentState.tqTime}` : currentCase.tqIndicado ? 'Indicado para esta extremidade' : 'Não indicado neste caso'}</span></button>
+            <button type="button" onClick={handleApplyPacking} disabled={treatmentState.packActive} className={`w-full rounded-xl border p-3 text-left transition-all ${treatmentState.packActive ? 'border-emerald-500/50 bg-emerald-950/50 text-emerald-200' : 'border-white/10 bg-slate-950/70 text-white hover:border-emerald-400'}`}><span className="block text-[11px] font-bold">🧻 Preencher com gaze</span><span className="mt-1 block text-[10px] text-slate-400">{treatmentState.packActive ? 'Cavidade preenchida' : 'Packing profundo quando indicado'}</span></button>
+            <button type="button" onClick={handleApplyBandage} disabled={treatmentState.bandageActive} className={`w-full rounded-xl border p-3 text-left transition-all ${treatmentState.bandageActive ? 'border-emerald-500/50 bg-emerald-950/50 text-emerald-200' : 'border-white/10 bg-slate-950/70 text-white hover:border-emerald-400'}`}><span className="block text-[11px] font-bold">🩹 Aplicar bandagem</span><span className="mt-1 block text-[10px] text-slate-400">{treatmentState.bandageActive ? 'Curativo aplicado' : 'Curativo compressivo'}</span></button>
+            <button type="button" onClick={handleTogglePressure} className={`w-full rounded-xl border p-3 text-left transition-all ${treatmentState.handActive ? 'border-emerald-500/50 bg-emerald-950/50 text-emerald-200' : 'border-white/10 bg-slate-950/70 text-white hover:border-emerald-400'}`}><span className="block text-[11px] font-bold">✋ Comprimir manualmente</span><span className="mt-1 block text-[10px] text-slate-400">{treatmentState.handActive ? 'Soltar compressão' : 'Pressão direta firme'}</span></button>
+          </div>}
+        </aside>
       </div>
 
       {/* 3. Banner de Avaliação Clínica e Pontuação */}
@@ -1090,83 +1133,6 @@ export function StopTheBleedSimulator({ caseId }: { caseId: number | string }) {
         </div>
       )}
 
-      {/* 4. Barra de ação inferior no padrão LURIA */}
-      <div className="rounded-2xl border border-white/10 bg-slate-900/80 p-3.5 backdrop-blur-md sm:p-4">
-        <div className="mb-3 flex items-center justify-between gap-3">
-          <div className="flex items-center gap-2">
-            <ShieldCheck className="h-4 w-4 text-teal-400" />
-            <span className="text-[10px] font-black uppercase tracking-wider text-slate-300">Ações de socorro</span>
-          </div>
-          <span className="text-right text-[11px] text-slate-400">
-            {treatmentState.tqActive ? `Torniquete fixado (${treatmentState.tqTime})` : 'Selecione a conduta necessária'}
-          </span>
-        </div>
-
-        <div className="grid gap-2.5 sm:grid-cols-2 lg:grid-cols-4" aria-label="Ações de socorro">
-          <button
-            type="button"
-            onClick={handleApplyTourniquet}
-            disabled={treatmentState.tqActive}
-            className={`flex flex-col items-start gap-1 rounded-xl border p-3 text-left transition-all ${
-              treatmentState.tqActive
-                ? 'border-emerald-500/50 bg-emerald-950/50 text-emerald-200 cursor-default'
-                : 'border-white/10 bg-slate-800 hover:border-emerald-500 hover:bg-slate-700/80 text-white'
-            }`}
-          >
-            <span className="text-xs font-bold">🩹 Aplicar Torniquete</span>
-            <span className="text-[11px] text-slate-400">
-              {treatmentState.tqActive ? `Aplicado às ${treatmentState.tqTime}` : 'Oclusão circunferencial com molinete'}
-            </span>
-          </button>
-
-          <button
-            type="button"
-            onClick={handleApplyPacking}
-            disabled={treatmentState.packActive}
-            className={`flex flex-col items-start gap-1 rounded-xl border p-3 text-left transition-all ${
-              treatmentState.packActive
-                ? 'border-emerald-500/50 bg-emerald-950/50 text-emerald-200 cursor-default'
-                : 'border-white/10 bg-slate-800 hover:border-emerald-500 hover:bg-slate-700/80 text-white'
-            }`}
-          >
-            <span className="text-xs font-bold">🧻 Preencher com Gaze</span>
-            <span className="text-[11px] text-slate-400">
-              {treatmentState.packActive ? 'Cavidade preenchida' : 'Wound Packing direto no vaso'}
-            </span>
-          </button>
-
-          <button
-            type="button"
-            onClick={handleApplyBandage}
-            disabled={treatmentState.bandageActive}
-            className={`flex flex-col items-start gap-1 rounded-xl border p-3 text-left transition-all ${
-              treatmentState.bandageActive
-                ? 'border-emerald-500/50 bg-emerald-950/50 text-emerald-200 cursor-default'
-                : 'border-white/10 bg-slate-800 hover:border-emerald-500 hover:bg-slate-700/80 text-white'
-            }`}
-          >
-            <span className="text-xs font-bold">🩹 Enfaixar (Bandage)</span>
-            <span className="text-[11px] text-slate-400">
-              {treatmentState.bandageActive ? 'Curativo aplicado' : 'Curativo compressivo estéril'}
-            </span>
-          </button>
-
-          <button
-            type="button"
-            onClick={handleTogglePressure}
-            className={`flex flex-col items-start gap-1 rounded-xl border p-3 text-left transition-all ${
-              treatmentState.handActive
-                ? 'border-emerald-500/50 bg-emerald-950/50 text-emerald-200'
-                : 'border-white/10 bg-slate-800 hover:border-emerald-500 hover:bg-slate-700/80 text-white'
-            }`}
-          >
-            <span className="text-xs font-bold">✋ Comprimir Manualmente</span>
-            <span className="text-[11px] text-slate-400">
-              {treatmentState.handActive ? 'Soltar compressão' : 'Manter pressão direta firme'}
-            </span>
-          </button>
-        </div>
-      </div>
     </div>
   );
 }
