@@ -170,7 +170,7 @@ export const ClinicalScenario: React.FC<{ scenario: SimulationCase; onBack: () =
         {!simulationCompleted ? (
           <div className="relative z-10 flex-1 flex flex-col max-w-6xl w-full mx-auto p-4 sm:p-6 justify-between gap-6">
 
-            {scenario.patientKind === 'stop-the-bleed' && currentStep.bleedingFocus
+            {scenario.patientKind === 'stop-the-bleed'
               ? <StopTheBleedScene characterId={scenario.characterId} focus={currentStep.bleedingFocus} />
               : scenario.patientKind === 'escola' || scenario.patientKind === 'academia'
                 ? currentStep.bleedingFocus
@@ -179,6 +179,7 @@ export const ClinicalScenario: React.FC<{ scenario: SimulationCase; onBack: () =
                 : currentStep.bleedingFocus
                   ? <BleedingScene characterId={scenario.characterId} respiratoryRate={Number(currentStep.vitalSigns.breathing.match(/\d+/)?.[0] || 0)} focus={currentStep.bleedingFocus} />
                   : <AnimatedPatient characterId={scenario.characterId} respiratoryRate={Number(currentStep.vitalSigns.breathing.match(/\d+/)?.[0] || 0)} />}
+            {scenario.patientKind !== 'stop-the-bleed' && <>
             {/* TOPO: PAINEL DE MONITORAMENTO CLÍNICO / TELEMETRIA DO PACIENTE */}
             <div className="rounded-2xl bg-slate-900/85 backdrop-blur-xl border border-white/10 shadow-2xl p-4 sm:p-5 space-y-4">
               <div className="flex items-center justify-between border-b border-white/10 pb-3">
@@ -294,6 +295,7 @@ export const ClinicalScenario: React.FC<{ scenario: SimulationCase; onBack: () =
                 {decisionMode === 'agir' && <button type="button" disabled={!selectedOptionId} onClick={handleConfirmDecision} className="w-full sm:w-auto ml-auto px-8 py-3 rounded-xl font-bold text-slate-950 bg-gradient-to-r from-teal-400 to-teal-300 hover:brightness-110 disabled:opacity-40 transition-all text-xs sm:text-sm shadow-lg flex items-center justify-center gap-2"><span>Executar ação</span><ChevronRight className="w-4 h-4" /></button>}
               </div>
             </div>
+            </>}
 
           </div>
         ) : (
