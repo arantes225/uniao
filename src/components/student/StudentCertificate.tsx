@@ -33,7 +33,7 @@ export const StudentCertificate: React.FC<{ certificate: IssuedCertificate; stud
         <h2 className="text-lg font-bold text-white">{cert.title}</h2>
         <p className="text-xs text-slate-300">Emitido em {issuedDate} · {cert.workload_hours} horas</p>
       </div>
-      <button type="button" disabled={!valid} onClick={()=>void printCertificate(printableId)}
+      <button type="button" disabled={!valid || !studentName.trim()} onClick={()=>void printCertificate(printableId)}
         className="rounded-xl bg-teal-400 px-4 py-3 font-bold text-slate-950 text-sm disabled:opacity-40">
         Imprimir / Salvar PDF
       </button>
@@ -50,7 +50,7 @@ export const StudentCertificate: React.FC<{ certificate: IssuedCertificate; stud
         </div>
         <div className="text-center max-w-4xl mx-auto space-y-5 relative">
           <p className="text-sm text-slate-300">Certificamos que</p>
-          <p className="text-3xl font-extrabold underline decoration-teal-400 underline-offset-8">{studentName || 'Aluno matriculado'}</p>
+          <p className="text-3xl font-extrabold underline decoration-teal-400 underline-offset-8">{studentName || 'NOME NÃO DISPONÍVEL'}</p>
           <p className="text-lg leading-relaxed text-slate-200">
             concluiu a capacitação acima indicada, com carga horária de <strong>{cert.workload_hours} horas</strong>,
             conforme registros de presença, aproveitamento e conclusão mantidos pela União Serviços Médicos.
