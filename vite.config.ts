@@ -60,9 +60,10 @@ export default defineConfig({
               request.destination === 'style' ||
               request.destination === 'script' ||
               request.destination === 'worker',
-            handler: 'StaleWhileRevalidate',
+            handler: 'NetworkFirst',
             options: {
               cacheName: 'static-resources',
+              networkTimeoutSeconds: 3,
             },
           },
           {
@@ -95,3 +96,4 @@ export default defineConfig({
     },
   },
 });
+
