@@ -301,7 +301,8 @@ export const AdminDashboard: React.FC = () => {
   const [cohortCertSide, setCohortCertSide] = useState<'front' | 'back'>('front');
   const [selectedStudentForCert, setSelectedStudentForCert] = useState<StudentRecord | null>(null);
   const [releasedCohorts, setReleasedCohorts] = useState<Record<string, boolean>>({});
-  const [issuedCodes, setIssuedCodes] = useState<Record<string, {code: string; issuedAt: string}>>({});
+  const [issuedCodes, setIssuedCodes] = useState<Record<string, {id: string; code: string; issuedAt: string}>>({});
+  const [completedCurriculum, setCompletedCurriculum] = useState<Record<string, boolean>>({});
   const [isSendCertificatesOpen, setIsSendCertificatesOpen] = useState(false);
   const [sentCohorts] = useState<Record<string, number>>({});
 
@@ -331,6 +332,32 @@ export const AdminDashboard: React.FC = () => {
     if (count === 0) { alert('Nenhum novo certificado. Confira as matrículas ou emissões anteriores.'); return; }
     await loadData();
     alert(count + ' certificado(s) registrados. Nenhum e-mail foi enviado.');
+  };
+
+  const handleAttestCurriculum = async (cohortId: string, studentId: string, studentName: string) => {
+    const evidence = window.prompt(
+      `Descreva a evidência da conclusão teórica de ${studentName}. Confira aulas e atividades antes de atestar (mínimo 10 caracteres):`,
+      ''
+    );
+    if (!evidence) return;
+    const { error } = await supabase.rpc('attest_curriculum_completion', {
+      p_cohort_id: cohortId, p_user_id: studentId, p_evidence: evidence.trim(),
+    });
+    if (error) { alert('Não foi possível registrar a conclusão: ' + error.message); return; }
+    setCompletedCurriculum(prev => ({ ...prev, [cohortId + ':' + studentId]: true }));
+    alert('Conclusão atestada e registrada no servidor.');
+  };
+
+  const handleRevokeCertificate = async (issuanceId: string, name: string) => {
+    const reason = window.prompt(`Motivo da revogação do certificado de ${name} (mínimo 5 caracteres):`, '');
+    if (!reason) return;
+    if (!window.confirm('Esta ação invalidará imediatamente o certificado oficial. Confirmar revogação?')) return;
+    const {data, error} = await supabase.rpc('revoke_uniao_certificate', {
+      p_issuance_id: issuanceId, p_reason: reason.trim(),
+    });
+    if (error || !data) { alert(error?.message || 'O certificado não pôde ser revogado.'); return; }
+    await loadData();
+    alert('Certificado revogado e evento registrado. O código antigo não será considerado válido.');
   };
 
   const handleSendCertificatesToAll = () => {
@@ -411,17 +438,23 @@ export const AdminDashboard: React.FC = () => {
       setCohortLessonSelections(mapping);
     }
     // Reflect certificates already issued across devices and sessions.
-    const { data: issuedCertificates } = await supabase.from('certificate_issuances').select('cohort_id,user_id,verification_code,issued_at,revoked_at');
+    const { data: issuedCertificates } = await supabase.from('certificate_issuances').select('id,cohort_id,user_id,verification_code,issued_at,revoked_at');
     if (issuedCertificates) {
       const byCohort: Record<string, boolean> = {};
-      const codes: Record<string, {code: string; issuedAt: string}> = {};
+      const codes: Record<string, {id: string; code: string; issuedAt: string}> = {};
       issuedCertificates.forEach(item => {
         if (item.revoked_at) return;
         byCohort[item.cohort_id] = true;
-        codes[item.cohort_id + ':' + item.user_id] = {code: item.verification_code, issuedAt: item.issued_at};
+        codes[item.cohort_id + ':' + item.user_id] = {id: item.id, code: item.verification_code, issuedAt: item.issued_at};
       });
       setIssuedCodes(codes);
       setReleasedCohorts(byCohort);
+    }
+    const {data: completions} = await supabase.from('curriculum_attestations').select('cohort_id,user_id');
+    if (completions) {
+      const checked: Record<string,boolean> = {};
+      completions.forEach(entry => { checked[entry.cohort_id + ':' + entry.user_id] = true; });
+      setCompletedCurriculum(checked);
     }
     // 2. Carregar turmas
     const { data: coh } = await supabase
@@ -3019,7 +3052,7 @@ export const AdminDashboard: React.FC = () => {
                   <div>
                     <h4 className="font-bold text-white text-xs sm:text-sm flex items-center gap-1.5">
                       <Users className="w-4 h-4 text-teal-400" />
-                      <span>Alunos que Irão Receber ({students.filter(s => s.cohortId === activeCertCohort.id).length})</span>
+                      <span>Alunos matriculados ({students.filter(s => s.cohortId === activeCertCohort.id).length})</span>
                     </h4>
                     <p className="text-[10px] text-slate-400">
                       Clique no aluno para visualizá-lo no certificado
@@ -3070,9 +3103,21 @@ export const AdminDashboard: React.FC = () => {
                               )}
                             </div>
                             <div className="text-[10px] text-slate-400 truncate">{student.email} • CPF: {student.cpf}</div>
-                            <div className="text-[10px] text-teal-400">Progresso: {student.progress}% • Nota: {student.scoreQuiz}%</div>
+                            <div className="text-[10px] text-teal-400">
+  Conclusão teórica: {completedCurriculum[activeCertCohort.id + ':' + student.id] ? 'Atestada' : 'Pendente'} • Certificado: {issuedCodes[activeCertCohort.id + ':' + student.id] ? 'Emitido' : 'Não emitido'}
+</div>
                           </div>
 
+                          <div className="flex flex-col gap-1 shrink-0">
+                            {!completedCurriculum[activeCertCohort.id + ':' + student.id] && (
+                              <button type="button" onClick={event => { event.stopPropagation(); void handleAttestCurriculum(activeCertCohort.id,student.id,student.name); }}
+                                title="Confirmar manualmente as atividades exigidas" className="rounded bg-teal-500/15 px-2 py-1 text-[10px] text-teal-300">Atestar aulas</button>
+                            )}
+                            {issuedCodes[activeCertCohort.id + ':' + student.id] && (
+                              <button type="button" onClick={event => { event.stopPropagation(); void handleRevokeCertificate(issuedCodes[activeCertCohort.id + ':' + student.id].id,student.name); }}
+                                title="Revogar certificado e registrar justificativa" className="rounded bg-red-500/15 px-2 py-1 text-[10px] text-red-300">Revogar</button>
+                            )}
+                          </div>
                           {/* Botão de Remover Aluno */}
                           <button
                             type="button"
@@ -3105,10 +3150,10 @@ export const AdminDashboard: React.FC = () => {
                     className="w-full rounded-xl px-4 py-2.5 text-xs font-black flex items-center justify-center gap-2 transition-all bg-gradient-to-r from-teal-400 to-emerald-300 text-slate-950 hover:brightness-110 disabled:cursor-not-allowed disabled:opacity-40"
                   >
                     <Send className="w-3.5 h-3.5" />
-                    <span>{sentCohorts[activeCertCohort.id] !== undefined ? `Envio confirmado (${sentCohorts[activeCertCohort.id]} alunos)` : 'Enviar certificado para todos'}</span>
+                    <span>{sentCohorts[activeCertCohort.id] !== undefined ? `Envio confirmado (${sentCohorts[activeCertCohort.id]} alunos)` : 'Informações de envio (ainda indisponível)'}</span>
                   </button>
                   {!releasedCohorts[activeCertCohort.id] && (
-                    <p className="text-[10px] text-amber-300/80">Libere os certificados com o PIN acima antes de enviar para a turma.</p>
+                    <p className="text-[10px] text-amber-300/80">Certificados só são emitidos após a presença, conclusão teórica atestada e aprovação em provas oficiais. Não há envio automático por e-mail.</p>
                   )}
                   {sentCohorts[activeCertCohort.id] !== undefined && (
                     <p className="text-[10px] text-emerald-300/80">A confirmação foi registrada nesta sessão. O disparo de e-mail precisa estar conectado ao serviço de envio.</p>
