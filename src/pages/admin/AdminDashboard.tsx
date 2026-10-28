@@ -14,6 +14,7 @@ import { ContentManagerTab } from './ContentManagerTab';
 import { OfficialExamAdmin } from './OfficialExamAdmin';
 import { AdminMFA } from './AdminMFA';
 import { PrompterTab } from './PrompterTab';
+import { InstructorsManagerTab } from '../../components/admin/InstructorsManagerTab';
 import { CurriculumService } from '../../services/CurriculumService';
 import { LearningModule } from '../../data/curriculumData';
 import { CohortCurriculumSelector, CurriculumLessonOption } from '../../components/admin/CohortCurriculumSelector';
@@ -176,7 +177,7 @@ export const AdminDashboard: React.FC = () => {
   }, []);
 
   // Navegação Interna por Abas
-  const [activeTab, setActiveTab] = useState<'dashboard' | 'turmas' | 'conteudos' | 'provas' | 'prompter' | 'certificados' | 'galeria'>('dashboard');
+  const [activeTab, setActiveTab] = useState<'dashboard' | 'turmas' | 'conteudos' | 'provas' | 'prompter' | 'certificados' | 'galeria' | 'instrutores'>('dashboard');
 
   // Módulo de Gerenciamento da Galeria de Treinamentos
   const [galleryImages, setGalleryImages] = useState<any[]>([]);
@@ -972,6 +973,18 @@ export const AdminDashboard: React.FC = () => {
           </button>
 
           <button
+            onClick={() => setActiveTab('instrutores')}
+            className={`flex items-center gap-2 px-4 py-2.5 rounded-xl text-xs font-bold transition-all whitespace-nowrap ${
+              activeTab === 'instrutores'
+                ? 'bg-uniao-600 text-white shadow-md'
+                : 'text-slate-400 hover:text-white hover:bg-white/5'
+            }`}
+          >
+            <FileText className="w-4 h-4" />
+            <span>Instrutores e Currículos (PDF)</span>
+          </button>
+
+          <button
             onClick={() => setActiveTab('galeria')}
             className={`flex items-center gap-2 px-4 py-2.5 rounded-xl text-xs font-bold transition-all whitespace-nowrap ${
               activeTab === 'galeria'
@@ -1500,6 +1513,8 @@ export const AdminDashboard: React.FC = () => {
         {activeTab === 'conteudos' && (
           <ContentManagerTab />
         )}
+
+        {activeTab === 'instrutores' && (<InstructorsManagerTab />)}
 
         {activeTab === 'provas' && (<OfficialExamAdmin courses={courseOptions} />)}
 
